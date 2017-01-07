@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>我的博客-详情</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!-- 判断低版本IE -->
+    <script>
+         if(!+[1,]){
+            window.location.href="beta.html";
+         }
+         // 判断移动设备
+         if (window.innerWidth<600) {
+            window.location.href="ios.html";
+         }
+    </script>
+<!-- www.weipxiu.com Baidu tongji analytics -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "//hm.baidu.com/hm.js?fd51d1d1b1d4f201dcd019d5969ecc27";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+    <body>
+    <!-- IE禁止页面快捷保存，导致盗窃 -->
+    <noscript><iframe src=*></iframe></noscript>
+    <!-- 头部start -->
+         <div class="header">
+                <div class="header-conter">
+                      <div class="topbar">
+                              <ul>
+                                  <li><a href="javascript:void (0)">前端工具箱</a></li>
+                                  <li><a href="javascript:void (0)">联系我们</a></li>
+                                  <li><a href="javascript:void (0)">友情链接</a></li>
+                                  <li><a href="thanks.html" target="_blank">特别鸣谢</a></li>
+                              </ul>
+                      </div>
+                      <div class="nav">
+                              <a href="http://www.weipxiu.com" class="t-logo" id="Logo">
+                                  <span class="logo"></span>
+                                  <ul id="dj">
+                                      <li></li>
+                                      <li></li>
+                                      <li></li>
+                                  </ul>
+                              </a>
+                              <div class="nav-left"></div>
+                              <div class="brand">
+                                  <p>关注前端开发</p>
+                                  <p>HTML5、CSS3、Javascript</p>
+                              </div>
+                              
+                              <ul class="music-nav">
+                                  <li detaName="do">
+                                      <a href="http://www.weipxiu.com">
+                                          <span>首页</span>
+                                          <span>首页</span>
+                                      </a>
+                                      <video src="mp3/do.mp3"></video>
+                                  </li>
+                                  <li detaName="re">
+                                      <a href="javascript:void ();">
+                                          <span>WordPress</span>
+                                          <span>WordPress</span>
+                                      </a>
+                                      <video src="mp3/do.mp3"></video>
+                                  </li>
+                                  <li detaName="mi">
+                                      <a href="javascript:void ();">
+                                          <span>前端开发<i class="fa fa-angle-down"></i></span>
+                                          <span>前端开发<i class="fa fa-angle-down"></i></span>
+                                      </a>
+                                      <video src="mp3/do.mp3"></video>
+                                  </li>
+                                  <li detaName="fa">
+                                      <a href="javascript:void ();">
+                                          <span>碎言碎语</span>
+                                          <span>碎言碎语</span>
+                                      </a>
+                                      <video src="mp3/do.mp3"></video>
+                                  </li>
+                                  <li detaName="sol">
+                                      <a href="javascript:void ();">
+                                          <span>作品案例<i class="fa fa-angle-down"></i></span>
+                                          <span>作品案例<i class="fa fa-angle-down"></i></span>
+                                      </a>
+                                      <video src="mp3/do.mp3"></video>
+                                  </li>
+                                  <li detaName="la">
+                                      <a href="javascript:void ();">
+                                          <span>给我留言</span>
+                                          <span>给我留言</span>
+                                      </a>
+                                      <video src="mp3/do.mp3"></video>
+                                  </li>
+                                  <li detaName="si">
+                                      <a href="javascript:void ();">
+                                          <span class="hover">关于我</span>
+                                          <span class="hover">关于我</span>
+                                      </a>
+                                      <video src="mp3/do.mp3"></video>
+                                  </li>
+                              </ul>
+                      </div>
+                </div>
+         </div>
+    <!-- 头部end -->
+
+    <!-- 正文区域start -->
+    <div class="continar">
+         <div class="continar-left" id="details">
+              <div class="nav-s">
+                    <a href="#" class="nav-index"><font class="iconfont"></font>首页</a>
+                    <a href="#">前端学习</a><a href="#">JS/Jquery</a><span class="ti">jquery append 动态添加的元素事件on 不起作用...</span>
+              </div>
+              <div class="xiaob">
+                  <h2 class="title">jquery append 动态添加的元素事件on 不起作用的解决方法</h2>
+                  <p class="data-l">
+                        <span><font class="iconfont"></font>2016年7月19日</span>
+                        <span><font class="iconfont"></font>梦想霞</span>
+                        <span><font class="iconfont"></font>415 次浏览</span>
+                        <span></span>
+                  </p>
+              </div>
+              <div class="log-text">
+    <p>
+         昨天，在做项目的时候，一直被一个问题困扰着，用append动态添加的元素，用 click事件的时候，竟然不起作用，后来就在标签里添加了onclick=”function()”,  实现了效果，这是一种方法。
+    </p>
+    <p>
+        百度了半天，都说用.on(“click”,function(){})就可以解决。但我还是没实现出来，今天偶然看到一篇文章，终于有了解决方法，赶紧记录下来。代码如下：
+    </p>
+    <div class="codecolorer-container php default" style="overflow:auto;white-space:nowrap;width:800px; height:300px; margin-left:20px">
+        <table cellspacing="0" cellpadding="0">
+        <tbody>
+        <tr>
+            <td class="line-numbers">
+                <div>
+                    1<br>
+                    2<br>
+                    3<br>
+                    4<br>
+                    5<br>
+                    6<br>
+                    7<br>
+                    8<br>
+                    9<br>
+                    10<br>
+                    11<br>
+                    12<br>
+                    13<br>
+                    14<br>
+                    15<br>
+                    16<br>
+                    17<br>
+                    18<br>
+                    19<br>
+                    20<br>
+                    21<br>
+                    22<br>
+                    23<br>
+                    24<br>
+                    25<br>
+                    26<br>
+                    27<br>
+                </div>
+            </td>
+            <td>
+                <div class="php codecolorer">
+                                    <span class="sy0">&lt;!</span>DOCTYPE html <span class="kw2">PUBLIC</span><span class="st0">"-//W3C//DTD HTML 4.01 Transitional//EN"</span><span class="st0">"http://www.w3.org/TR/html4/loose.dtd"</span><span class="sy0">&gt;</span><br>
+                                    <span class="sy0">&lt;</span>html<span class="sy0">&gt;</span><br>
+                                    <span class="sy0">&lt;</span>head<span class="sy0">&gt;</span><br>
+                                    <span class="sy0">&lt;</span>meta http<span class="sy0">-</span>equiv<span class="sy0">=</span><span class="st0">"Content-Type"</span> content<span class="sy0">=</span><span class="st0">"text/html; charset=UTF-8"</span><span class="sy0">&gt;</span><br>
+                                    <span class="sy0">&lt;</span>title<span class="sy0">&gt;</span>测试<span class="sy0">&lt;/</span>title<span class="sy0">&gt;</span><br>
+                                    <span class="sy0">&lt;</span>script type<span class="sy0">=</span><span class="st0">"text/javascript"</span><br>
+                src
+                                    <span class="sy0">=</span><span class="st0">"../resources/js/jquery-1.11.1.min.js"</span><span class="sy0">&gt;</span><span class="kw2">&lt;/script&gt;</span><br>
+                                    <span class="sy0">&lt;</span>script type<span class="sy0">=</span><span class="st0">"text/javascript"</span><span class="sy0">&gt;</span><br>
+                $
+                                    <span class="br0">(</span><span class="kw2">function</span><span class="br0">(</span><span class="br0">)</span><span class="br0">{</span><br>
+                                    <span class="co1">//动态添加</span><br>
+                $
+                                    <span class="br0">(</span><span class="st0">".add"</span><span class="br0">)</span><span class="sy0">.</span>on<span class="br0">(</span><span class="st0">"click"</span><span class="sy0">,</span><span class="kw2">function</span><span class="br0">(</span><span class="br0">)</span><span class="br0">{</span><br>
+                console
+                                    <span class="sy0">.</span><a href="#"><span class="kw3">log</span></a><span class="br0">(</span><span class="st0">"进来了"</span><span class="br0">)</span><span class="sy0">;</span><br>
+                $
+                                    <span class="br0">(</span><span class="st0">".info"</span><span class="br0">)</span><span class="sy0">.</span>append<span class="br0">(</span><span class="st_h">'&lt;div class="delete"&gt;&lt;h3&gt;单击我来删除我&lt;/h3&gt;&lt;/div&gt;'</span><span class="br0">)</span><span class="sy0">;</span><br>
+                                    <span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span><br>
+                &nbsp;
+                                    <span class="co1">//对动态添加的元素添加事件-删除</span><br>
+                $
+                                    <span class="br0">(</span><span class="st0">".info"</span><span class="br0">)</span><span class="sy0">.</span>on<span class="br0">(</span><span class="st0">"click"</span><span class="sy0">,</span><span class="st0">".delete"</span><span class="sy0">,</span><span class="kw2">function</span><span class="br0">(</span><span class="br0">)</span><span class="br0">{</span><br>
+                console
+                                    <span class="sy0">.</span><a href="#"><span class="kw3">log</span></a><span class="br0">(</span><span class="st0">"进来了Delete！"</span><span class="br0">)</span><span class="sy0">;</span><br>
+                $
+                                    <span class="br0">(</span>this<span class="br0">)</span><span class="sy0">.</span>remove<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span><br>
+                                    <span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span><br>
+                &nbsp;
+                                    <span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span><br>
+                                    <span class="kw2">&lt;/script&gt;</span><br>
+                &nbsp;
+                                    <span class="sy0">&lt;/</span>head<span class="sy0">&gt;</span><br>
+                                    <span class="sy0">&lt;</span>body<span class="sy0">&gt;</span><br>
+                &nbsp;
+                                    <span class="sy0">&lt;</span>h2 <span class="kw2">class</span><span class="sy0">=</span><span class="st_h">'add'</span><span class="sy0">&gt;</span>单击我添加动态元素<span class="sy0">&lt;/</span>h2<span class="sy0">&gt;</span><br>
+                &nbsp;
+                                    <span class="sy0">&lt;</span>div <span class="kw2">class</span><span class="sy0">=</span><span class="st0">"info"</span><span class="sy0">&gt;&lt;/</span>div<span class="sy0">&gt;</span><br>
+                &nbsp;
+                                    <span class="sy0">&lt;/</span>body<span class="sy0">&gt;</span><br>
+                                    <span class="sy0">&lt;/</span>html<span class="sy0">&gt;</span>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    <p>
+                        on方法中要先找到原选择器（如例.info),再找到动态添加的选择器（如列.delete)。完美解决我遇到的问题。
+                    </p>
+                    <p class="key-w">
+                        <font class="iconfont"></font>标签：<a href="#" rel="tag">jquery append</a><a href="#" rel="tag">on不起作用</a><a href="#" rel="tag">解决方法</a>
+                    </p>
+                    <p class="text-post">
+                        上一篇：
+                        <a title="CSS3技巧：利用css3径向渐变做一张优惠券" href="http://www.mxxia.com/384.html" rel="external nofollow" target="_blank">
+                            CSS3技巧：利用css3径向渐变做一张优惠券                     
+                        </a>
+                    </p>
+                    <p class="text-post">
+                        下一篇：
+                        没有了，已经是最新文章
+                    </p>
+                    <div class="ds-comments-info" id="#ds-reset">
+                        <div class="ds-sort">
+                            <a class="ds-order-desc ds-current">最新</a>
+                            <a class="ds-order-asc">最早</a>
+                            <a class="ds-order-hot">最热</a>
+                        </div>
+                        <ul class="ds-comments-tabs">
+                            <li class="ds-tab">
+                                <a class="ds-comments-tab-duoshuo ds-current" href="javascript:void(0);">
+                                    <span class="ds-highlight">
+                                       51
+                                    </span>
+                                    条评论
+                                </a>
+                            </li> 
+                         </ul>
+                    </div>
+                </div>
+                <!-- 评论内容开始 -->
+                <ul class="ds-comments">
+                    <li class="ds-post" data-post-id="6347926413047235330">
+                    <div class="ds-post-self" data-post-id="6347926413047235330" data-thread-id="6309055234240938754" data-root-id="0" data-source="duoshuo">
+                        <div class="ds-avatar" data-user-id="6334837159492600577">
+                            <a rel="nofollow author" target="_blank" href="http://m.suofeiya.com/" onclick="this.href='http://mxxia1.duoshuo.com/user-url/?user_id=6334837159492600577';" title="索菲亚m.suofeiya.com"><img src="http://q.qlogo.cn/qqapp/100229475/E0B8EACC2A21AF6CFBABD2C18C6CE906/100" alt="索菲亚m.suofeiya.com" data-bd-imgshare-binded="1"></a>
+                        </div>
+                        <div class="ds-comment-body">
+                            <div class="ds-comment-header">
+                                <a class="ds-user-name ds-highlight" data-qqt-account="" href="http://m.suofeiya.com/" onclick="this.href='http://mxxia1.duoshuo.com/user-url/?user_id=6334837159492600577';" rel="nofollow" target="_blank" data-user-id="6334837159492600577">索菲亚m.suofeiya.com</a>
+                            </div>
+                            <p>
+                                谢谢分享，写的非常好！ <img src="http://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/c9/geili_org.gif" alt="[给力]" title="[给力]" class="ds-smiley" data-bd-imgshare-binded="1">
+                            </p>
+                            <div class="ds-comment-footer ds-comment-actions">
+                                <span class="ds-time" datetime="2016-11-01T17:16:32+08:00" title="2016年11月1日 下午5:16:32">11月1日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a>
+                            </div>
+                        </div>
+                    </div>
+                    </li>
+                    <li class="ds-post" data-post-id="6347829193337733890">
+                    <div class="ds-post-self" data-post-id="6347829193337733890" data-thread-id="6309055234240938754" data-root-id="0" data-source="duoshuo">
+                        <div class="ds-avatar" data-user-id="6335260848059056898">
+                            <a rel="nofollow author" target="_blank" href="http://www.gkwo.net/" onclick="this.href='http://mxxia1.duoshuo.com/user-url/?user_id=6335260848059056898';" title="工控资料窝"><img src="http://q.qlogo.cn/qqapp/100229475/6F4407742A362A1C0247DDB57A3C695D/100" alt="工控资料窝" data-bd-imgshare-binded="1"></a>
+                        </div>
+                        <div class="ds-comment-body">
+                            <div class="ds-comment-header">
+                                <a class="ds-user-name ds-highlight" data-qqt-account="" href="http://www.gkwo.net/" onclick="this.href='http://mxxia1.duoshuo.com/user-url/?user_id=6335260848059056898';" rel="nofollow" target="_blank" data-user-id="6335260848059056898">工控资料窝</a>
+                            </div>
+                            <p>
+                                暂时还用不到 但是也要收藏起来
+                            </p>
+                            <div class="ds-comment-footer ds-comment-actions">
+                                <span class="ds-time" datetime="2016-11-01T10:59:16+08:00" title="2016年11月1日 上午10:59:16">11月1日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶(1)</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a>
+                            </div>
+                        </div>
+                    </div>
+                    </li>
+                    <li class="ds-post" data-post-id="6345849177733333761">
+                    <div class="ds-post-self" data-post-id="6345849177733333761" data-thread-id="6309055234240938754" data-root-id="0" data-source="duoshuo">
+                        <div class="ds-avatar">
+                            <a rel="nofollow author" target="_blank" href="http://www.3gwb.com" title="小易分享网"><img src="https://avatar.duoshuo.com/avatar-50/58/207483.jpg" alt="小易分享网" data-bd-imgshare-binded="1"></a>
+                        </div>
+                        <div class="ds-comment-body">
+                            <div class="ds-comment-header">
+                                <a class="ds-user-name ds-highlight" data-qqt-account="" href="http://www.3gwb.com" rel="nofollow" target="_blank">小易分享网</a>
+                            </div>
+                            <p>
+                                今天才发现你的博客，连着看了几篇呢  欢迎回访:http://www.3gwb.com
+                            </p>
+                            <div class="ds-comment-footer ds-comment-actions">
+                                <span class="ds-time" datetime="2016-10-27T02:55:48+08:00" title="2016年10月27日 上午2:55:48">10月27日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a>
+                            </div>
+                        </div>
+                    </div>
+                    </li>
+                    <li class="ds-post" data-post-id="6345030186127328002">
+                    <div class="ds-post-self" data-post-id="6345030186127328002" data-thread-id="6309055234240938754" data-root-id="0" data-source="duoshuo">
+                        <div class="ds-avatar" data-user-id="6343141046016295681">
+                            <a rel="nofollow author" target="_blank" href="http://www.77yidu.com/" onclick="this.href='http://mxxia1.duoshuo.com/user-url/?user_id=6343141046016295681';" title="77衣都穿衣打扮"><img src="https://avatar.duoshuo.com/avatar-50/681/267654.jpg" alt="77衣都穿衣打扮" data-bd-imgshare-binded="1"></a>
+                        </div>
+                        <div class="ds-comment-body">
+                            <div class="ds-comment-header">
+                                <a class="ds-user-name ds-highlight" data-qqt-account="" href="http://www.77yidu.com/" onclick="this.href='http://mxxia1.duoshuo.com/user-url/?user_id=6343141046016295681';" rel="nofollow" target="_blank" data-user-id="6343141046016295681">77衣都穿衣打扮</a>
+                            </div>
+                            <p>
+                                博主的博客好可爱哟，
+                            </p>
+                            <div class="ds-comment-footer ds-comment-actions">
+                                <span class="ds-time" datetime="2016-10-24T21:57:42+08:00" title="2016年10月24日 下午9:57:42">10月24日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a>
+                            </div>
+                        </div>
+                    </div>
+                    </li>
+                    <li class="ds-post" data-post-id="6344748522620846849">
+                    <div class="ds-post-self" data-post-id="6344748522620846849" data-thread-id="6309055234240938754" data-root-id="0" data-source="duoshuo">
+                        <div class="ds-avatar">
+                            <a rel="nofollow author" target="_blank" href="http://www.xevip.cn" title="小易分享网"><img src="https://avatar.duoshuo.com/avatar-50/58/207483.jpg" alt="小易分享网" data-bd-imgshare-binded="1"></a>
+                        </div>
+                        <div class="ds-comment-body">
+                            <div class="ds-comment-header">
+                                <a class="ds-user-name ds-highlight" data-qqt-account="" href="http://www.xevip.cn" rel="nofollow" target="_blank">小易分享网</a>
+                            </div>
+                            <p>
+                                哎呦，不错哦！欢迎互访，诚交友链！  欢迎回访:http://www.xiaoyivip.com
+                            </p>
+                            <div class="ds-comment-footer ds-comment-actions">
+                                <span class="ds-time" datetime="2016-10-24T03:44:42+08:00" title="2016年10月24日 上午3:44:42">10月24日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a>
+                            </div>
+                        </div>
+                    </div>
+                    </li>
+                    <li class="ds-post" data-post-id="6341229843782304513">
+                    <div class="ds-post-self" data-post-id="6341229843782304513" data-thread-id="6309055234240938754" data-root-id="0" data-source="duoshuo">
+                        <div class="ds-avatar" data-user-id="6334837159492600577">
+                            <a rel="nofollow author" target="_blank" href="http://m.suofeiya.com/" onclick="this.href='http://mxxia1.duoshuo.com/user-url/?user_id=6334837159492600577';" title="索菲亚m.suofeiya.com"><img src="http://q.qlogo.cn/qqapp/100229475/E0B8EACC2A21AF6CFBABD2C18C6CE906/100" alt="索菲亚m.suofeiya.com" data-bd-imgshare-binded="1"></a>
+                        </div>
+                        <div class="ds-comment-body">
+                            <div class="ds-comment-header">
+                                <a class="ds-user-name ds-highlight" data-qqt-account="" href="http://m.suofeiya.com/" onclick="this.href='http://mxxia1.duoshuo.com/user-url/?user_id=6334837159492600577';" rel="nofollow" target="_blank" data-user-id="6334837159492600577">索菲亚m.suofeiya.com</a>
+                            </div>
+                            <p>
+                                文章写得不错，支持楼主吃蓝瘦香菇！！
+                            </p>
+                            <div class="ds-comment-footer ds-comment-actions">
+                                <span class="ds-time" datetime="2016-10-14T16:10:26+08:00" title="2016年10月14日 下午4:10:26">10月14日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a>
+                            </div>
+                        </div>
+                    </div>
+                    </li>
+                </ul>
+                <!-- 评论内容结束 -->
+         </div>
+         <!-- 左侧区域结束 -->
+
+         <!-- 右侧区域开始 -->
+         <div class="continar-right">
+               <!-- 前端日报开始 -->
+               <div class="widget">
+                   <div class="daily-list">
+                        <h3 class="widget-title"><a href="#">前端日报</a></h3>
+                        <ul>
+                            <li><a rel="bookmark" href="#" title="20161030 前端开发日报"><span class="daily-title">20161030 前端开发日报</span>
+                            <h3 class="daily-desc">7个去伪存真的JavaScript面试题；手把手教你打造一个纯 CSS ...</h3>
+                            </a></li>
+                            <li><a rel="bookmark" href="#" title="20161030 前端开发周报"><span class="daily-title">20161030 前端开发周报</span>
+                            <h3 class="daily-desc">一道常被人轻视的前端 JS 面试题；微信小程序最新版102700：新增1...</h3>
+                            </a></li>
+                            <li><a rel="bookmark" href="#" title="20161029 前端开发日报"><span class="daily-title">20161029 前端开发日报</span>
+                            <h3 class="daily-desc">纯CSS的导航栏Tab切换方案；JS 闭包的2W1H；最详细的JavaS...</h3>
+                            </a></li>
+                            <li><a rel="bookmark" href="#" title="20161028 前端开发日报"><span class="daily-title">20161028 前端开发日报</span>
+                            <h3 class="daily-desc">微信小程序最新版102700：新增19个API；前端技术体系大局观；Ja...</h3>
+                            </a></li>
+                            <li><a rel="bookmark" href="#" title="20161027 前端开发日报"><span class="daily-title">20161027 前端开发日报</span>
+                            <h3 class="daily-desc">B 站出品的 HTML5 FLV 播放器；GitHub 指南汇集；为什么...</h3>
+                            </a></li>
+                            <li><a rel="bookmark" href="#" title="20161026 前端开发日报"><span class="daily-title">20161026 前端开发日报</span>
+                            <h3 class="daily-desc">常用的 Web 前端框架汇总；作为前端需要了解的B/S架构；聊聊微信小程...</h3>
+                            </a></li>
+                        </ul>
+                    </div>
+               </div>
+               <!-- 前端日报结束 -->
+
+               <!-- 技术分类开始 -->
+               <div class="classif">
+                   <h3>标签云</h3>
+                   <div class="items">
+                        <a href="#">前端技巧 (61)</a>
+                        <a href="#">CSS (52)</a>
+                        <a href="#">JavaScript (50)</a>
+                        <a href="#">用户体验 (46)</a>
+                        <a href="#">设计思路 (43)</a>
+                        <a href="#">HTML5 (40)</a>
+                        <a href="#">SEO (40)</a>
+                        <a href="#">网页设计 (40)</a>
+                        <a href="#">CSS3 (37)</a>
+                        <a href="#">职业 (34)</a>
+                        <a href="#">前端资源 (33)</a>
+                        <a href="#">唯品秀 (31)</a>
+                        <a href="#">企业公司 (30)</a>
+                        <a href="#">浏览器 (28)</a>
+                        <a href="#">站长必备 (27)</a>
+                        <a href="#">jQuery (22)</a>
+                        <a href="#">搜索引擎优化 (22)</a>
+                        <a href="#">web开发 (17)</a>
+                        <a href="#">兼容 (17)</a>
+                        <a href="#">HTML (16)</a>
+                        <a href="#">web标准 (16)</a>
+                        <a href="#">Google (15)</a>
+                        <a href="#">IE9 (15)</a>
+                        <a href="#">前端工具 (15)</a>
+                        <a href="#">浩子 (15)</a>
+                        <a href="#">IE6 (12)</a>
+                        <a href="#">网站公告 (12)</a>
+                        <a href="#">wordpress (11)</a>
+                        <a href="#">CSS3详解 (11)</a>
+                        <a href="#">搜索引擎 (10)</a>
+                    </div>
+               </div>
+               <!-- 技术分类开始 -->
+         </div>
+         <!-- 右侧区域结束 -->
+    </div>
+    <!-- 正文区域end -->
+
+    <!-- 底部区域开始 -->
+    <div class="footer">
+        <div class="container">
+            <p>
+                © 2010-2016 <a href="#">唯品秀</a> 国内更专业Wordpress主题解决方案 提供Wordpress主题定制开发 
+                <a target="_blank" href="#">网站地图</a>
+            </p>
+            <p>注：本站当前使用主题为唯品秀自有</p>
+        </div>
+    </div>
+    <!-- 底部区域结束 -->
+
+    <!-- 自定义右键菜单提示开始 -->
+    <div id="menu">
+         别看啦，宝宝好害羞 <span>*^_^*</span>
+    </div>
+    <!-- 自定义右键菜单提示结束 -->
+    
+    <!-- 首页背景音乐开始 -->
+    <audio src="http://sc1.111ttt.com/2015/1/04/01/97011918297.mp3" autoplay="autoplay" loop="loop" id="music"></audio>
+    <div class="control hover"></div>
+    <!-- 首页背景音乐结束 -->
+    
+
+    <!-- 小飞机start -->
+    <div class="aircraft"></div>
+    <audio src="mp3/h2.mp3" id="audio" loop="loop"></audio>
+    <audio src="mp3/h1.mp3" id="audio1"></audio>
+    <!-- 小飞机end -->
+
+</body>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script>
+         $("html").css("overflow","visible");
+    </script>
+</html>

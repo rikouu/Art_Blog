@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>移动端设备禁止</title>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<style>
+	/*移动端弹窗开始*/
+	html,body{width:100%; height:100%; overflow: hidden;}
+	*{margin:0; padding:0;font-family: "Microsoft YaHei";}
+	.popup{width:130px; height:147px; background: #555; position: fixed; border-radius:7px;
+	    top:0; left:0; right:0; bottom:0; margin:auto; z-index: 99; padding:15px; line-height: 20px}
+	.popup p{color:#fff; font-size:14px;}
+	.popup p:nth-child(1){text-align: center; margin-bottom:10px; font-size:16px}
+	.popup p:nth-child(2){line-height:30px}
+	/*移动端弹窗结束*/
+	h1{width:100%; line-height:22px; text-align:center; margin:30px auto 0; font-size:18px; color: #ed145b}
+	</style>
+<!-- www.weipxiu.com Baidu tongji analytics -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "//hm.baidu.com/hm.js?fd51d1d1b1d4f201dcd019d5969ecc27";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+    <h1>苹果设备<br>无法自动播放背景音乐，<br>请触摸下屏幕才能触发音乐播放!</h1>
+	<!-- 移动端弹窗开始 -->
+    <div class="popup">
+    	 <p>温馨提示 :</p>
+    	 <p>此网站暂仅支持PC端访问，稍后将为您播放背景MP3-"萌萌哒"，谢谢！</p>
+    </div>
+    <!-- 移动端弹窗结束 -->
+
+    <!-- 首页背景音乐开始 -->
+    <audio src="http://sc1.111ttt.com/2015/1/04/01/97011710436.mp3" loop="loop" id="music"></audio>
+    <div class="control hover"></div>
+    <!-- 首页背景音乐结束 -->
+
+</body>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script>
+    setInterval(function(){
+    	$("h1").fadeToggle();
+    },1500);
+    
+	//开场背景音乐
+    /*音乐部分start*/
+     var audi = $("#music").get(0);
+	 
+     $("#music").get(0).autoplay = "autoplay";//页面加载立即播放
+	// 由于 iOS Safari 限制不允许 audio autoplay, 必须用户主动交互(例如 click)后才能播放 audio,
+	// 因此我们通过一个用户交互事件来主动 play 一下 audio.
+	function log(info) {
+		console.log(info);
+		// alert(info);
+	}
+	function forceSafariPlayAudio() {
+	  audi.load(); // iOS 9   还需要额外的 load 一下, 否则直接 play 无效
+	  audi.play(); // iOS 7/8 仅需要 play 一下
+	}
+	// 不能自动播放时触发的事件是
+	// iPhone5  iOS 7.0.6 loadstart
+	// iPhone6s iOS 9.1   loadstart -> loadedmetadata -> loadeddata -> canplay
+	audi.addEventListener('loadstart', function() {
+		log('loadstart');
+	}, false);
+	audi.addEventListener('loadeddata', function() {
+		log('loadeddata');
+	}, false);
+	audi.addEventListener('loadedmetadata', function() {
+		log('loadedmetadata');
+	}, false);
+	audi.addEventListener('canplay', function() {
+		log('canplay');
+	}, false);
+	audi.addEventListener('play', function() {
+		log('play');
+		// 当 audio 能够播放后, 移除这个事件
+		window.removeEventListener('touchstart', forceSafariPlayAudio, false);
+	}, false);
+	audi.addEventListener('playing', function() {
+		log('playing');
+	}, false);
+	audi.addEventListener('pause', function() {
+		log('pause');
+	}, false);
+	window.addEventListener('touchstart', forceSafariPlayAudio, false);
+	audi.src = 'http://sc1.111ttt.com/2015/1/04/01/97011710436.mp3';
+	/*ios兼容结束*/
+</script>
+</html>
