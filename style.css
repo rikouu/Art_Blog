@@ -362,6 +362,7 @@ to {
 	margin:114px auto 0px;
 	border-bottom:1px solid #fff;
 	background: #fff;
+	z-index: 10;
 }
 /*轮播针对PC端大屏幕start*/
 #js_banner_1 {
@@ -381,7 +382,7 @@ to {
 	left:0;
 	margin-bottom:20px;
 	opacity:1;
-	z-index:0;
+	z-index:10;
 	transition:all 0.8s;
 	background: #fff;
     /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#d4d7db');

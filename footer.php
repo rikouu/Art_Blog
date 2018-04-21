@@ -206,7 +206,7 @@
 <!-- 判断用户当前是否登录 结束 -->
 
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/activate-power-mode.js"></script>
-<script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-1" count="99" src="<?php bloginfo('template_url'); ?>/js/canvas-nest.min.js"></script>
+<!-- <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-1" count="99" src="<?php bloginfo('template_url'); ?>/js/canvas-nest.min.js"></script> -->
 
 <script  defer="defer">
 	// 文字琴弦效果start
