@@ -3,12 +3,13 @@
     <video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload  width="328" height="185" style="margin-top:0"
         poster="<?php bloginfo('template_url'); ?>/images/s1.png" width="328" height="185" data-setup="{}">
         <source src="<?php bloginfo('template_url'); ?>/2018.mp4" type="video/mp4">
-        <p class="vjs-no-js"> To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a> </p>
+        <p class="vjs-no-js"> 要查看此视频，请启用JavaScript，并考虑升级到Web浏览器版本。 <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a> </p>
     </video>
-    <!-- <img src="<?php bloginfo('template_url'); ?>/images/s1.jpg" width="330" height="166" alt="" style="width:100%;display: block; margin-top:10px;"> -->
+    <img src="<?php bloginfo('template_url'); ?>/images/s1.png" width="328" height="185" alt="" style="width:100%;display: none; margin-top:10px;">
     <div class="textwidget">
         <p class="clearfix">
-            前端博客: weipxiu.com，我们关注Web前端开发技术，移动前端开发，前端资讯，同时分享前端资源和工具等，期待你的参与,<a rel="nofollow" target="_blank" href="/?cat=10">了解更多..</a>
+            唯品秀博客: weipxiu.com，一个关注Web前端开发技术、关注用户体验、坚持更多原创实战教程的个人网站，
+            愿景：成为宇宙中最具有代表性的前端博客，期待您的参与,<a rel="nofollow" target="_blank" href="/?cat=10">了解更多...</a>
         </p>
         <ul class="social">
             <ul class="social">
@@ -153,10 +154,6 @@
     <div class="daily-list">
         <h3 class="widget-title"><a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>站点统计</a></h3>
         <ul>
-            <li>更新：
-                <?php $last = $wpdb->get_results("SELECT MAX(post_modified) AS MAX_m FROM $wpdb->posts WHERE (post_type = 'post' OR post_type = 'page') AND (post_status = 'publish' OR post_status = 'private')");$last = date('Y年n月j日', strtotime($last[0]->MAX_m));echo $last; ?>
-            </li>
-            <li>总访问量：36,587,558次</li>
             <li>文章：
                 <?php $count_posts = wp_count_posts(); echo $published_posts = $count_posts->publish; ?> 篇</li>
             <li>分类：
@@ -166,6 +163,10 @@
             <!-- <li>链接：<?php $link = $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->links WHERE link_visible = 'Y'"); echo $link; ?> 个</li> -->
             <li>运行：
                 <?php echo floor((time()-strtotime("2016-12-15"))/86400);?>天</li>
+            <li>访问：6,587,558次</li>
+            <li>更新：
+                <?php $last = $wpdb->get_results("SELECT MAX(post_modified) AS MAX_m FROM $wpdb->posts WHERE (post_type = 'post' OR post_type = 'page') AND (post_status = 'publish' OR post_status = 'private')");$last = date('Y年n月j日', strtotime($last[0]->MAX_m));echo $last; ?>
+            </li>
             <!-- <li style="margin:0; line-height: 22px;">
                   <a href="<?php bloginfo('rss2_url'); ?>" title="RSS订阅本站">
                       <font class="iconfont icon-1" style="color:#666; font-size:16px;"></font>

@@ -249,12 +249,16 @@ add_action('after_wp_tiny_mce', 'add_button_mce');
 function add_button_mce($mce_settings) {//扩充发表文章编辑器的导航标签
 ?>
 <script type="text/javascript">
-    QTags.addButton( 'p', 'p', "\n<p>", "</p>\n" );
-    QTags.addButton( 'cc', 'cc', "\n[cc lang='php']", "[/cc]\n" );
-    QTags.addButton( 'h4', 'h4', "\n<h4>", "</h4>\n" );
-    QTags.addButton( 'h1', 'h1', "\n<h1>", "</h1>\n" );
-    QTags.addButton( 'secret', 'secret', "\n[secret key='123']\n", "[/secret]" );
-    QTags.addButton( 'embed', 'embed', "\n[embed]\n", "\n[/embed]\n" );
+    QTags.addButton( '注意', '注意', "<span class='beCareful'>", "</span>" );
+    QTags.addButton( 'a', 'a', "<a href=''>", "</a>" );
+    QTags.addButton( 'p', 'p', "\n<p>", "</p>" );
+    QTags.addButton( 'span', 'span', "\n<span>", "</span>" );
+    QTags.addButton( 'h1', 'h1', "\n<h1>", "</h1>" );
+    QTags.addButton( 'h4', 'h4', "\n<h4>", "</h4>" );
+    QTags.addButton( 'h5', 'h5', "\n<h5>", "</h5>" );
+    QTags.addButton( 'cc', 'cc', "\n[cc lang='php']", "[/cc]" );
+    QTags.addButton( 'secret', 'secret', "\n[secret key='123']", "[/secret]" );
+    QTags.addButton( 'embed', 'embed', "\n[embed]\n", "\n[/embed]" );
 </script>
 <?php
 }

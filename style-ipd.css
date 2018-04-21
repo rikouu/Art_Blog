@@ -51,6 +51,7 @@ img {
 /*初始化代码end*/
 
 /*swiper轮播start*/
+#js_banner{display: none}
 .swiper-pagination-bullet{width:0.6rem!important; border-radius: 0!important; height:1.5px!important; background: #fff!important;opacity: 1!important}
 .swiper-pagination-bullet-active{background:#45BCF9!important;}
 .swiper-container1,.swiper-wrapper {
@@ -80,7 +81,7 @@ img {
 }
 #mobil {
 	min-height:175px;
-	height:5rem;
+	height:8rem;
 	width:100%;
 	position:relative;
 }
@@ -585,10 +586,13 @@ img {
 /*左边区域start*/
  .continar .continar-left {
 	width:100%;
-	-webkit-transform:translateX(0px);
+	transform:translateX(0px);
 	-ms-transform:translateX(0px);
 	float:none;
 	padding:0 0.24rem
+}
+.continar .continar-left .mod-crumbs{
+	display:none;
 }
 .continar .continar-left-top {
 	width:100%;
@@ -1374,7 +1378,7 @@ to {
 	margin-bottom:0.15rem;
 }
 .continar-left .textwidget > p{line-height: 0.5rem; color:#666}
-.continar-left p.key-w,.continar-left p.text-post {
+.continar-left div.key-w,.continar-left p.text-post {
 	text-indent:0;
 }
 .continar-left p.text-post-top {
@@ -1418,13 +1422,16 @@ to {
 .continar-left p.l > span:nth-of-type(4) {
 	display:none;
 }
-p.key-w {
+div.key-w {
 	margin:10px 0;
 	font-size:14px;
 	padding-top:0.25rem;
 	clear:both;
 }
-p.key-w a {
+.continar-left div.key-w .single_lable {
+	display: inline-block
+}
+div.key-w a {
 	padding:5px 12px;
 	color:#fff;
 	border-radius:0.04rem;
@@ -1432,25 +1439,25 @@ p.key-w a {
 	font-size:14px;
 	line-height:17px;
 }
-p.key-w a:hover {
+div.key-w a:hover {
 	color:#fff
 }
-p.key-w a:nth-of-type(1) {
+div.key-w a:nth-of-type(1) {
 	background:#5cb85c
 }
-p.key-w a:nth-of-type(2) {
+div.key-w a:nth-of-type(2) {
 	background:#d9534f;
 }
-p.key-w a:nth-of-type(3) {
+div.key-w a:nth-of-type(3) {
 	background:#f0ad4e;
 }
-p.key-w a:nth-of-type(1):hover {
+div.key-w a:nth-of-type(1):hover {
 	background:#00a67c;
 }
-p.key-w a:nth-of-type(2):hover {
+div.key-w a:nth-of-type(2):hover {
 	background:#d9534f;
 }
-p.key-w a:nth-of-type(3):hover {
+div.key-w a:nth-of-type(3):hover {
 	background:#f0ad4e;
 }
 .continar-left>h2 {
@@ -1605,16 +1612,17 @@ div.nav-s a {
 	margin-right:40px;
 }
 h2.title {
-	font-size:18px;
-	font-weight:bold;
-	font-family:"微软雅黑";
-	text-align:center;
-	line-height:40px;
-	color:#333;
-	display:block;
-	white-space:nowrap;
-	overflow:hidden;
-	text-overflow:ellipsis;
+	font-size: 0.36rem;
+    font-weight: bold;
+    font-family: "微软雅黑";
+    text-align: center;
+    line-height: 0.7rem;
+    margin-top: 0.2rem;
+    color: #333;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 p.data-l {
 	width:100%;
@@ -1731,7 +1739,7 @@ p.text-post a{font-size:0.3rem;}
 .codecolorer .kw3,.codecolorer .kw4,.codecolorer .kw5,.codecolorer .re2 {
 	color:#FF1493;
 }
-p.key-w a {
+div.key-w a {
 	padding:5px 15px;
 	background:#F1F1F1;
 	margin:0 5px;
@@ -1832,6 +1840,17 @@ li.ds-post {
 /*详情页结束---------------------------------------------------------------------------------*/
 
 /*留言页面开始*/
+.nav-s1{
+	width: 100%;
+    margin: 0.5rem 0;
+    border-bottom: 1px dotted #ccc;
+    padding: 0 0px 0.5rem;
+    text-align: center;
+}
+.nav-s1 a{
+	font-size:0.5rem;
+	color:#333;
+}
 div.jy {
 	margin:20px 0px;
 	padding:20px;
@@ -2662,8 +2681,12 @@ span.post-like,.img-left span ul li a {
 	text-indent:0;
 	text-align:center;
 }
+.reward-p{
+	font-size: 0.36rem;
+    margin: 0.25rem 0;
+}
 .tooltip-item {
-	display:block;
+	display:none;
 }
 .reward-box-item {
 	float:left;

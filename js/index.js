@@ -2,6 +2,9 @@ $.noConflict();
 jQuery(function($) {
     if (window.location.href !== "http://www.weipxiu.com" && window.location.href !== "http://www.weipxiu.com/") {
         $("#js_banner,#js_banner_1").remove();
+        $(".continar-right .aside .video-js").remove();
+        $(".continar-right .aside .video-js").remove();
+        $(".continar-right .aside > img").css('display','block');
         //$(".continar .continar-left").css("WebkitTransform", "translateX(0px)");
         //$(".continar .continar-left").css("MsTransform", "translateX(0px)");
         //$(".continar .continar-left").css("transform", "translateX(0px)");
@@ -104,6 +107,7 @@ jQuery(function($) {
 	var musicObj = null;
 	var musicDown = $(".nav ul.music-nav li:not(.mod-header_music-icon)");
     $(".nav ul.music-nav li:not(.mod-header_music-icon)").hover(function(event) {
+        $(this).parents(".header").css("z-index","1");//默认下方轮播层级高于头部
 		$index = $(this).index();
         var deta = $(this).attr("detaName");
 		musicObj= $(".nav ul.music-nav li:not(.mod-header_music-icon)").eq($index).find('audio');
@@ -116,8 +120,8 @@ jQuery(function($) {
         event.stopPropagation();
     },
     function() {
+        $(this).parents(".header").css("z-index","0"); //避免在正常时候下方轮播分割旋转时候被遮盖       
 		$(this).removeClass("active");
-		//musicObj.get(0).src = "";
 	});
 
 	function musicdown(number){

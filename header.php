@@ -66,7 +66,7 @@
 						          		}
 					          	  	?>
 					          	</a>
-					          	<a href="http://www.weipxiu.com/wp-admin/" style="display: none; color:#fff" target="_blank"><i class="iconfont" style="color:#fff">&#xe654;</i>会员中心
+					          	<!-- <a href="http://www.weipxiu.com/wp-admin/" style="display: none; color:#fff" target="_blank"><i class="iconfont" style="color:#fff">&#xe654;</i>会员中心 -->
 					          	</a>
 			              </div>
 			              <div class="topbar">
@@ -80,7 +80,7 @@
 							  </div>
                               <ul class="last-ul">
                               	  <li class="github">
-                              	  		<a href="https://github.com/weipxiu" target="_blank" title="Github @weipxiu">
+                              	  		<a href="https://github.com/weipxiu/weipxiu.github.io" target="_blank" title="Github @weipxiu">
 											<i class="iconfont icon-icongithub"></i>
                               	  		</a>
                               	  </li>
@@ -257,8 +257,6 @@
     <!-- 移动端侧边栏导航结束 -->
 
     <!-- 移动端遮盖层，防止导航出现页面上下滑动导致bug开始 -->
-    <div class="cover">
-    	
-    </div>
+    <div class="cover"></div>
 	<!-- 移动端遮盖层，防止导航出现页面上下滑动导致bug结束 -->
 

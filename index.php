@@ -63,8 +63,8 @@
         </div>
     </section>
 
-	<section class="mod-banner" id="js_banner_1">
-	<!--轮播开始-->
+	<!--<section class="mod-banner" id="js_banner_1">
+	轮播开始
 			<div id="wowslider-container" class="foolishOut">
 				<div class="ws_images">
 					<ul>
@@ -101,8 +101,8 @@
 					</div>
 				</div>
 			</div>
-	<!--轮播结束-->
-	</section>
+	轮播结束
+	</section>-->
 	
 	<!-- 导航start -->
 	<!-- <div class="index-box">
@@ -353,8 +353,8 @@
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/javascript.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/swiper.min.js"></script>
 
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/img/engine/wowslider.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/img/engine/script.js"></script>
+<!-- <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/img/engine/wowslider.js"></script> -->
+<!-- <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/img/engine/script.js"></script> -->
 
 <!-- 轩枫轮播start -->
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/xfg_banner.js"></script>
@@ -375,13 +375,13 @@
 
                     url: 'http://www.weipxiu.com/wp-content/themes/boke/img/banner-1.jpg',
 
-                    link: 'javascript:;'
+                    link: 'http://www.weipxiu.com/?cat=29'
 
                 }, {
 
                     url: 'http://www.weipxiu.com/wp-content/themes/boke/img/banner-2.jpg',
 
-                    link: 'javascript:;'
+                    link: 'http://www.weipxiu.com/'
 
                 }, {
 
@@ -399,14 +399,14 @@
 
                     url: 'http://www.weipxiu.com/wp-content/themes/boke/img/banner-5.jpg',
 
-                    link: 'javascript:;'
+                    link: 'http://www.weipxiu.com/?cat=6'
 
                 },
                 {
 
                     url: 'http://www.weipxiu.com/wp-content/themes/boke/img/banner-6.jpg',
 
-                    link: 'javascript:;'
+                    link: 'http://www.weipxiu.com/?p=1313'
 
                 }
             ],
@@ -442,16 +442,6 @@
         $(".nav ul.music-nav li a span").eq(0).parents(".nav ul li").find("p").css("display","block");
 
         $(".continar-left > .text:nth-of-type(3)").remove();
-
-        //轮播针对PC端大屏幕start
-        if (window.location.href == "http://www.weipxiu.com" || window.location.href == "http://www.weipxiu.com/" && $(document).width() <= 1400) {
-        	$("#js_banner").show();
-        	$("#js_banner_1").remove();
-        }else if(window.location.href == "http://www.weipxiu.com" || window.location.href == "http://www.weipxiu.com/" && $(document).width() > 1400){
-        	$("#js_banner").remove();
-        	$("#js_banner_1").show();
-        }
-        //轮播针对PC端大屏幕end
 	})
 </script>
 </html>

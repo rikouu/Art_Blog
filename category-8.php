@@ -22,7 +22,7 @@
 	<!--头部文件引用结束-->
     
     <!-- 手风琴start -->
-    <div class="accordion" style="margin-top:108px;">
+    <div class="accordion" style="margin-top:118px;">
       <div class="accordion_center">
         <ul>
           <li class="accord_1">
@@ -136,18 +136,13 @@
     <!-- 正文区域start -->
     <div class="continar" style="margin-top:0">
          <div class="continar-left" id="details" style="border-top:1px solid transparent">
-              <div class="nav-s1" style="width:100%; margin:1rem auto 0; border-bottom:1px dotted #ccc; padding: 5px 0px 19px; text-align: center;">
-                    <a href="#" style="font-size:28px; color: #333">
+              <div class="nav-s1">
+                    <a href="#">
                           给我留言
                     </a>
               </div>
               <div class="jy">
-                  <p>
-                    在这个心灵的驿站里，让我们用真诚善良之心相聚于此，相约明天。我相信我们的明天：太阳会更灿烂、微风更柔和、空气更新鲜。在这个小小空间里，让网络传递着我们的真情，让我们今生共同珍惜来之不易的缘分，共同迎接那美好的明天。让我们一起放飞童真、放飞希望、放飞梦想。让我们对着自己的青春纪念碑，毫无羞愧说一声：青春万岁、理解万岁、友谊万岁。
-                  </p>
-                  <p>
-                    欢迎来到我的博客访问，可以尽情在这里留下您的脚印。。。
-                  </p>
+                  <p>有些话不一定要说出来，但一定要记录在某个地方！欢迎来到我的博客访问，可以尽情在这里留下您的脚印。。。</p>
               </div>
               <!-- 留言区域开始 -->
               <!-- 畅言公共JS代码 start (一个网页只需插入一次) -->

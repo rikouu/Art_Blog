@@ -1,16 +1,11 @@
     <!-- 底部区域开始 -->
     <div class="footer">
       	<div class="container">
-              <p>注：当前主题为"唯品秀"自主研发，版权所有！</p>
+              <p>注：当前主题为<a href="http://www.weipxiu.com/">"唯品秀"</a>自主研发，版权所有！</p>
 			  <p style="color: #28d0e9">该网站勉强运行 : <span id="htmer_time" style="color: #28d0e9;"></span></p>
 			  <p>
-                  © 2016-2017 唯品秀 本站主题由WEIPXIU.COM提供 鄂ICP备 16001853号-1
-              </p>
-              
-              <!-- <p>
-                  <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261688511'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261688511%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));
-                  </script>
-              </p> -->
+              © 2016-2018 <a href="http://www.weipxiu.com/">唯品秀</a> 本站主题由<a href="http://www.weipxiu.com/" class="highlight">WEIPXIU.COM</a>提供 鄂ICP备 16001853号-1
+        </p>
   		</div>
     </div>
     <!-- 底部区域结束 -->
