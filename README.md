@@ -1,3 +1,5 @@
+# 唯品秀博客 - Wordpress主题
+
 # http://www.weipxiu.com/
 
 > 一款基于jquery2.1.4开发的wordpress主题2.0版
