@@ -8,6 +8,7 @@
 
 ``` bash
 # 步骤
+
 1、将主题文件放在：/htdocs/wp-content/themes/目录下
 
 2、在wordpress后台安装WP-PageNavi插件
@@ -20,6 +21,8 @@
 将这个id设置替换给主题文件里的category-x的x，重新上传修改过名字的文件，如有其它问题，欢迎打扰
 
 6、如果喜欢，请多多打赏。
+
+<img src="weixin.png">
 ```
 ## 备注说明
 
