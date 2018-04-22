@@ -9,11 +9,16 @@
 ``` bash
 # 步骤
 1、将主题文件放在：/htdocs/wp-content/themes/目录下
+
 2、在wordpress后台安装WP-PageNavi插件
+
 3、删除首页index.php中的邮箱订阅php代码
+
 4、找到主题js文件下的index.js和javascript.js文件，改变if判断上的网址，设置为自己的域名地址
+
 5、在wordpress后台新建分类目录，新建后将鼠标放在分类名称上，在浏览器左下角出现链接，其中有个id=xx，
 将这个id设置替换给主题文件里的category-x的x，重新上传修改过名字的文件，如有其它问题，欢迎打扰
+
 6、如果喜欢，请多多打赏。
 ```
 ## 备注说明
