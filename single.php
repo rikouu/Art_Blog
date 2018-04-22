@@ -195,7 +195,7 @@
                                     <span class="tooltip-content">
 						  <span class="tooltip-text">
 							<span class="tooltip-inner">
-							  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃鸡腿<i class="icon icon-quo-right"></i></p>
+							  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃鸡腿*^_^*<i class="icon icon-quo-right"></i></p>
 							  <div class="reward-box"> 
 								<div class="reward-box-item">
 								  <img class="reward-img" src="<?php bloginfo('template_url'); ?>/images/alipay.png">

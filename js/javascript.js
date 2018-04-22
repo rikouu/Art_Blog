@@ -61,14 +61,14 @@ $( function() {
             } )();
 
             //初始化加载需要先缓冲到15%+才会播放，避免高清视频卡顿
-            delSetInterval = setInterval( function() {
+            /*delSetInterval = setInterval( function() {
                 howMuchIsDownloaded = myPlayer.bufferedPercent() //返回当前百分比缓冲0-1
                 //console.log(howMuchIsDownloaded*100 + '%')
                 if ( howMuchIsDownloaded > 0.15 ) {
                     clearInterval( delSetInterval )
                     myPlayer.play();
                 }
-            }, 1500 )
+            }, 1500 )*/
 
             //当视频播放完成后，重新加载渲染，随时准备第二次重播
             myPlayer.on( "ended", function() {
