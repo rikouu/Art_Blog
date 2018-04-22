@@ -23,7 +23,7 @@
 6、如果喜欢，请多多打赏。
 
 ```
-<img src="weixin.png">
+<img src="zhiwei.png">
 ## 备注说明
 
 > 1、wordpress主题制作有特别要求，例如主题根目录必须存在header.php、index.php、footer.php、style.css，否则是不认，无法加载的。因此不用觉得某些文件摆放不合理，存在必定有意义
