@@ -273,10 +273,4 @@ function getTop(obj)
     <?php get_footer()?>
 <!-- 底部引用区域结束 -->
 </body>
-<script>
-	$(".nav ul.music-nav li a span").removeClass("hover");
-    $(".nav ul.music-nav li p").css("display","none");
-    $(".nav ul.music-nav li a span").eq(6).addClass("hover");
-    $(".nav ul.music-nav li a span").eq(6).parents(".nav ul li").find("p").css("display","block");
-</script>
 </html>

@@ -493,7 +493,7 @@ to {
 	transition:all 1s;
 }
 .header.hover .nav ul.music-nav li.active p{
-	height:48px;
+	height:46px;
 }
 .topbar {
 	width:100%;
@@ -564,7 +564,7 @@ to {
 #username a {
 	display:none;
 	float:left;
-	padding:0 15px;
+	padding:0 10px;
 	color:#fff;
 	transition:all .35s;
 	font-size:12px;
@@ -701,10 +701,10 @@ to {
 	transform:rotateX(90deg);
 	-ms-transform:rotateX(90deg)
 }
-.nav ul li a span.hover {
+.nav ul li.action a span {
 	color:#19ACF7
 }
-.nav ul li a span.hover i {
+.nav ul li.action a span i {
 	color:#19ACF7
 }
 .nav ul li:hover a span {
@@ -3003,28 +3003,25 @@ div.jy p {
 }
 .wp-pagenavi a {
 	text-decoration:none;
-	background-color:#28e1bd;
+	background-color:#1abc9c;
 	color:#fff;
 	padding:5px 11px;
 	margin:0;
-	border-left:1px solid #ccc;
-	border-radius: 4px;	
 }
 .pages {
 	display:none
 }
 .wp-pagenavi a:hover,.wp-pagenavi span.current:hover {
 	color:#FFF;
-	background:#1abc9c
+	background:#28e1bd;
 }
 .wp-pagenavi span.current {
-	color: #FFF;
-    background: #1abc9c;
+    background: #fff;
 	text-decoration:none;
 	padding:5px 11px;
 	margin:00;
 	border:0;
-	border-radius: 4px;
+	color: #2c3e50;
 }
 .screen-reader-text {
 	display:none!important
@@ -3480,7 +3477,7 @@ to {
 ul.post-categories li {
 	display:none
 }
-ul.post-categories li:nth-child(1) {
+ul.post-categories li:first-child {
 	display:block
 }
 #domo {

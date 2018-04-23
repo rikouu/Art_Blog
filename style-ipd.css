@@ -746,8 +746,11 @@ img {
 	overflow:hidden;
 	text-overflow:ellipsis;
 }
-.text .text_right > h2 ul.post-categories li:nth-of-type(2){
-display:none
+ul.post-categories li {
+	display:none
+}
+ul.post-categories li:first-child {
+	display:block
 }
 .text_right h2 span:nth-child(1) {
 	color:#fff;

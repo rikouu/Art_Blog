@@ -143,8 +143,8 @@
                     <!-- 面包屑导航 -->
                     <div class="mod-crumbs">
                         <span class="mod-breadcrumb">
-						<?php wheatv_breadcrumbs(); ?>
-         	  		</span>
+							<?php wheatv_breadcrumbs(); ?>
+         	  			</span>
                     </div>
                     <div class="xiaob">
                         <h2 class="title">

@@ -115,32 +115,32 @@
 								  <p>关注前端开发</p>
 								  <p>HTML5、CSS3、Javascript</p>
 							  </div>
-						      <ul class="music-nav">
-								  <li detaName="do">
+							  <ul class="music-nav">
+							  		<li detaName="do" class="<?php if ( (is_category('9') || in_category('9')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="http://www.weipxiu.com">
 										  <span>首页</span>
 										  <span>首页</span>
 									  </a>
 									  <audio src="" autoplay="autoplay"></audio>
 									  <p></p>
-								  </li>
-								  <li detaName="re">
+									</li>
+									<li detaName="re" class="<?php if ( (is_category('2') || in_category('2')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="/?cat=2" target="_blank">
 										  <span>心情小镇</span>
 										  <span>心情小镇</span>
 									  </a>
 									  <audio src="" autoplay="autoplay"></audio>
 									  <p></p>
-								  </li>
-								  <li detaName="mi" class="front">
+									</li>
+									<li detaName="mi" class="front <?php if ( (is_category('3') || is_category('6') || is_category('5') || is_category('14') || is_category('22') || in_category('3')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="javascript:void(0);">
 										  <span>前端开发<i class="fa fa-angle-down"></i></span>
 										  <span>前端开发<i class="fa fa-angle-down"></i></span>
 									  </a>
 									  <audio src="" autoplay="autoplay"></audio>
 									  <p></p>
-								  </li>
-								  <li detaName="fa">
+									</li>
+									<li detaName="fa" class="<?php if ( (is_category('1') || in_category('1')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="/?cat=1" target="_blank">
 										  <span>时光机</span>
 										  <span></i>时光机</span>
@@ -148,46 +148,46 @@
 									  <audio src="" autoplay="autoplay"></audio>
 									  <!-- <img src="<?php bloginfo('template_url'); ?>/images/new.png" alt="" class="new"> -->
 									  <p></p>
-								  </li>
-								  <li detaName="sol" class="works">
+									</li>
+									<li detaName="sol" class="works <?php if ( (is_category('-1') || in_category('-1')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="javascript:void(0);">
 										  <span>作品欣赏<i class="fa fa-angle-down"></i></span>
 										  <span>作品欣赏<i class="fa fa-angle-down"></i></span>
 									  </a>
 									  <audio src="" autoplay="autoplay"></audio>
 									  <p></p>
-								  </li>
-								  <li detaName="la">
+									</li>
+									<li detaName="la" class="<?php if ( (is_category('8') || in_category('8')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="/?cat=8" target="_blank">
 										  <span>给我留言</span>
 										  <span>给我留言</span>
 									  </a>
 									  <audio src="" autoplay="autoplay"></audio>
 									  <p></p>
-								  </li>
-								  <li detaName="si">
+									</li>
+									<li detaName="si" class="<?php if ( (is_category('13') || in_category('13')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="/?cat=13" target="_blank">
 										  <span>技巧资源</span>
 										  <span>技巧资源</span>
 									  </a>
 									  <audio src="" autoplay="autoplay"></audio>
 									  <p></p>
-								  </li>
-								  <li detaName="dd">
+									</li>
+									<li detaName="dd" class="<?php if ( (is_category('10') || in_category('10')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="/?cat=10" target="_blank">
 										  <span>关于博客</span>
 										  <span>关于博客</span>
 									  </a>
 									  <audio src=""  autoplay="autoplay"></audio>
 									  <p></p>
-								  </li>
-								  <li class="js_piano_nav_icon mod-header_music-icon hover" title="钢琴节奏">
+									</li>
+									<li class="js_piano_nav_icon mod-header_music-icon hover" title="钢琴节奏">
 									  	<i></i>
 									  	<i></i>
 									  	<i></i>
 									  	<i></i>
 									  	<i></i>
-								  </li>
+								    </li>
 							  </ul>
 							  <div class="nav-min">
 								  	<a href="/?cat=3">DIV+CSS</a>

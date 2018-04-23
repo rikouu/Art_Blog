@@ -121,9 +121,4 @@
     <?php get_footer()?>
     <!-- 底部引用区域结束 -->
 </body>
-    <script>
-         $("html").css("overflow","visible");
-		 $(".nav ul li a span:eq(4),.nav ul li a span:eq(5)").addClass("hover");
-		 $(".nav ul.music-nav li:eq(2)").find("p").css("display","block").parent().siblings("li").find("p").css("display","none");
-    </script>
 </html>

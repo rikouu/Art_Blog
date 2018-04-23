@@ -171,13 +171,4 @@
     <!-- 底部引用区域结束 -->
 
 </body>
-    <script>
-        $(function(){
-            $("html").css("overflow","visible");
-            $(".nav ul.music-nav li a span").removeClass("hover");
-            $(".nav ul.music-nav li p").css("display","none");
-            $(".nav ul.music-nav li a span").eq(10).addClass("hover");
-            $(".nav ul.music-nav li a span").eq(11).parents(".nav ul li").find("p").css("display","block");
-        })
-    </script>
 </html>

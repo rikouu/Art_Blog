@@ -434,14 +434,4 @@
         });
 </script>
 <!-- 轩枫轮播end -->
-<script>
-	$(function(){
-		$(".nav ul.music-nav li a span").removeClass("hover");
-        $(".nav ul.music-nav li p").css("display","none");
-        $(".nav ul li a span:eq(0),.nav ul li a span:eq(1)").addClass("hover");
-        $(".nav ul.music-nav li a span").eq(0).parents(".nav ul li").find("p").css("display","block");
-
-        $(".continar-left > .text:nth-of-type(3)").remove();
-	})
-</script>
 </html>

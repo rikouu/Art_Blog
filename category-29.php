@@ -116,7 +116,4 @@
     <?php get_footer()?>
     <!-- 底部引用区域结束 -->
 </body>
-    <script>
-         $("html").css("overflow","visible");
-    </script>
 </html>

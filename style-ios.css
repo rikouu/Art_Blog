@@ -730,8 +730,11 @@ img {
 	overflow:hidden;
 	text-overflow:ellipsis;
 }
-.text .text_right > h2 ul.post-categories li:nth-of-type(2){
-display:none
+ul.post-categories li {
+	display:none
+}
+ul.post-categories li:first-child {
+	display:block
 }
 .text_right h2 span:nth-child(1) {
 	color:#fff;
@@ -2634,11 +2637,18 @@ span.post-like,.img-left span ul li a {
 	line-height:0.9rem;
 	background:#fbfbfb;
 	font-size:0.34rem;
-	text-indent:1.5em;
+	text-indent:0.5em;
 	display:block;
 	white-space:nowrap;
 	overflow:hidden;
 	text-overflow:ellipsis;
+}
+.continar-left .log-text h5{
+	text-indent: 0;
+    font-weight: normal;
+    font-size: 0.32rem;
+    border-bottom: 1px dashed #ccc;
+    padding: 0.1rem 0;
 }
 .log-text h4:nth-of-type(5n+1) {
 	border-left:4px solid #b9d329;

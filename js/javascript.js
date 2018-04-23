@@ -15,7 +15,13 @@ $( function() {
             }, 4500 );
             
             //删除移动端轮播DOM
-            $( "#mobil" ).remove();            
+            $( "#mobil" ).remove(); 
+            
+            //给首页增加默认高亮
+            $(".nav ul.music-nav li:eq(0)").addClass("action");
+
+            //去掉首页列表第一篇文章，避免同今日焦点栏目顶替文章重合
+		    $(".continar-left > .text:nth-of-type(3)").remove();
             
             //视频播放start
             var delSetInterval = null; //定时器

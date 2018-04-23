@@ -43,6 +43,7 @@ jQuery(function($) {
             return false
         }
     }*/
+    var searchShow = true;
     $(".navto-search a").click(function() {
         $(".site-search.active.pc").stop(true, true).slideToggle(150,function(){
             if($(this).is(":visible") && $(".nav ul.music-nav li>p").css("opacity") == 1){
@@ -53,6 +54,13 @@ jQuery(function($) {
                 return false;
             }
         });
+        if(searchShow){
+            $('.header').css('z-index','11');
+            searchShow = false;
+        }else{
+            $('.header').css('z-index','10');
+            searchShow = true;
+        }
         $(this).find("i").toggleClass("fa-search");
         $(this).find("i").toggleClass("fa-remove");
     });
@@ -120,7 +128,9 @@ jQuery(function($) {
         event.stopPropagation();
     },
     function() {
-        $(this).parents(".header").css("z-index","10"); //避免在正常时候下方轮播分割旋转时候被遮盖       
+    	if (searchShow) {
+    		$(this).parents(".header").css("z-index","10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
+    	}
 		$(this).removeClass("active");
 	});
 
@@ -280,7 +290,7 @@ jQuery(function($) {
     });
     //移动端禁止侧边导航上下滚动end
 
-	//移动端头部下拉搜索start
+    //移动端头部下拉搜索start
     $(".xis").on("touchstart",function(){
         $(".os-headertop .site-search").slideToggle(100);
         $(this).find("i").toggleClass("fa-search");
