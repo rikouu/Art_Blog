@@ -140,14 +140,13 @@
     	 <div class="continar-left" style="border:0; padding:0;background: transparent;">
     	    <div class="continar-left-top">
 			    <?php 
-					$post_num = 1; // 设置调用条数 
 					$args = array( 
-					‘post_password’ => ”, 
-					‘post_status’ => ‘publish’, // 只选公开的文章. 
-					‘post__not_in’ => array($post->ID),//排除当前文章 
-					‘caller_get_posts’ => 1, // 排除置顶文章. 
-					‘orderby’ => ‘comment_count’, // 依评论数排序. 
-					‘posts_per_page’ => $post_num 
+					  'post_password' => '',
+					  'post_status' => 'publish', // 只选公开的文章.
+					  //'post__not_in' => array($post->ID),//排除当前文章
+					  //'caller_get_posts' => 1, // 排除置頂文章.
+					  //'orderby' => 'rand', // 依評論數排序.
+					  'posts_per_page' => 1 // 设置调用条数
 					); 
 					$query_posts = new WP_Query(); 
 					$query_posts->query($args); 

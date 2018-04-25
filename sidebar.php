@@ -38,14 +38,13 @@
         <h3 class="widget-title"><a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>大家喜欢</a></h3>
         <ul>
             <?php
-              $post_num = 10; // 设置调用条数
               $args = array(
                   'post_password' => '',
                   'post_status' => 'publish', // 只选公开的文章.
                   'post__not_in' => array($post->ID),//排除当前文章
                   'caller_get_posts' => 1, // 排除置頂文章.
-                  'orderby' => 'comment_count', // 依評論數排序.
-                  'posts_per_page' => $post_num
+                  'orderby' => 'rand', // 依評論數排序.
+                  'posts_per_page' => 10 // 设置调用条数
               );
               $query_posts = new WP_Query();
               $query_posts->query($args);

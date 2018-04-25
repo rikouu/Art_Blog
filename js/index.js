@@ -96,6 +96,7 @@ jQuery(function($) {
     // 跳动音符start
     var off_y = true;
     $(".mod-header_music-icon").click(function(){
+        clearInterval(navMinHideSetTime);//清除鼠标离开li时候的定时器
         if(off_y){
            $(this).removeClass("hover"); 
            $(".nav ul.music-nav li > p").css("opacity","0");
@@ -112,7 +113,8 @@ jQuery(function($) {
 
 	//钢琴导航start
 	var $index = null;
-	var musicObj = null;
+    var musicObj = null;
+    var navMinHideSetTime = null;
 	var musicDown = $(".nav ul.music-nav li:not(.mod-header_music-icon)");
     $(".nav ul.music-nav li:not(.mod-header_music-icon)").hover(function(event) {
         $(this).parents(".header").css("z-index","11");//默认下方轮播层级高于头部
@@ -128,9 +130,13 @@ jQuery(function($) {
         event.stopPropagation();
     },
     function() {
-    	if (searchShow) {
-    		$(this).parents(".header").css("z-index","10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
-    	}
+        clearInterval(navMinHideSetTime);
+        navMinHideSetTime = setInterval(function(){//不断检测鼠标移开后下拉二级菜单是否完好影藏
+                if (searchShow && $(".nav-min").css("opacity") == 0) {
+                    $(".header").css("z-index","10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
+                    clearInterval(navMinHideSetTime);
+                }
+            },1000)
 		$(this).removeClass("active");
 	});
 

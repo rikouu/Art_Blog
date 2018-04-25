@@ -12,7 +12,7 @@ $( function() {
                     $( ".notice ul" ).append( node );
                     $( ".notice ul" ).css( "top", "0" );
                 } );
-            }, 4500 );
+            }, 5000 );
             
             //删除移动端轮播DOM
             $( "#mobil" ).remove(); 
