@@ -132,7 +132,8 @@
 									  <audio src="" autoplay="autoplay"></audio>
 									  <p></p>
 									</li>
-									<li detaName="mi" class="front <?php if ( (is_category('3') || is_category('6') || is_category('5') || is_category('14') || is_category('22') || in_category('3')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
+									<li detaName="mi" class="front 
+									  <?php if ( in_category(array('3', '5', '6', '14', '22')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="javascript:void(0);">
 										  <span>前端开发<i class="fa fa-angle-down"></i></span>
 										  <span>前端开发<i class="fa fa-angle-down"></i></span>
@@ -165,7 +166,7 @@
 									  <audio src="" autoplay="autoplay"></audio>
 									  <p></p>
 									</li>
-									<li detaName="si" class="<?php if ( (is_category('13') || in_category('13')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
+									<li detaName="si" class="<?php if ( in_category('13') && is_category('13') ) { echo 'action'; } ?>">
 									  <a href="/?cat=13" target="_blank">
 										  <span>技巧资源</span>
 										  <span>技巧资源</span>

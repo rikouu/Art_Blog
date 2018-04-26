@@ -132,7 +132,7 @@ jQuery(function($) {
     function() {
         clearInterval(navMinHideSetTime);
         navMinHideSetTime = setInterval(function(){//不断检测鼠标移开后下拉二级菜单是否完好影藏
-                if (searchShow && $(".nav-min").css("opacity") == 0) {
+                if (searchShow && $(".nav-min").eq(0).css("opacity") == 0 && $(".nav-min").eq(1).css("opacity") == 0) {
                     $(".header").css("z-index","10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
                     clearInterval(navMinHideSetTime);
                 }

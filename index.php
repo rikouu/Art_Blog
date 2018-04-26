@@ -46,7 +46,7 @@
             <div class="mod-banner__snow_1"></div>
             <div class="mod-banner__snow_2"></div>
         </div> -->
-        <a href="http://www.xuanfengge.com/category/web/img" target="_blank" class="mod-banner__img banner_1" id="banner_img" style="background: url(&quot;https://www.xuanfengge.com/wp-content/themes/lee3.0/dist/img/banner/6.c6b4ec87.jpg&quot;) center center no-repeat;"></a>
+        <a href="http://www.xuanfengge.com/category/web/img" target="_blank" class="mod-banner__img banner_1" id="banner_img" style="background: url(&quot;http://www.weipxiu.com/wp-content/themes/boke/img/banner-3.jpg&quot;) center center no-repeat;"></a>
         <div class="mod-banner__navi">
             <div class="js_banner_nav mod-banner_nav"></div>
             <span class="mod-banner__nav-dot"><canvas id="dotCanvas"></canvas></span>
@@ -358,78 +358,50 @@
 <!-- 轩枫轮播start -->
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/xfg_banner.js"></script>
 <script>
+		//turnEffect（翻转）boomEffect（爆炸）pageEffect（翻页）skewEffect（扭曲）cubeEffect（立方体）
+		var flippingMode = ['turnEffect', 'boomEffect', 'skewEffect']
+		var randomNum = Math.floor(Math.random()*3);
         var banner = new Banner({
-
             banner: '#banner_img',
-
             index: 0,
-
             autoplay: 8000,
-
             width: 1200,
-
             height: 300,
-
             images: [{
-
                     url: 'http://www.weipxiu.com/wp-content/themes/boke/img/banner-1.jpg',
-
                     link: 'http://www.weipxiu.com/?cat=29'
-
                 }, {
-
                     url: 'http://www.weipxiu.com/wp-content/themes/boke/img/banner-2.jpg',
-
                     link: 'http://www.weipxiu.com/'
-
                 }, {
-
                     url: 'http://www.weipxiu.com/wp-content/themes/boke/img/banner-3.jpg',
-
                     link: 'javascript:;'
-
                 }, {
-
                     url: 'http://www.weipxiu.com/wp-content/themes/boke/img/banner-4.jpg',
-
                     link: 'javascript:;'
-
                 }, {
-
                     url: 'http://www.weipxiu.com/wp-content/themes/boke/img/banner-5.jpg',
-
                     link: 'http://www.weipxiu.com/?cat=6'
-
                 },
                 {
-
                     url: 'http://www.weipxiu.com/wp-content/themes/boke/img/banner-6.jpg',
-
                     link: 'http://www.weipxiu.com/?p=1313'
-
                 }
             ],
 
-            preloadImages: true,
+            preloadImages: true,// 预加载所有图片
 
-            pagination: '.js_banner_nav',
-
-            paginationClick: true,
-
-            prevButton: '.js_banner_prev',
-
-			nextButton: '.js_banner_next',
-			
+			// 分页及控制
+			pagination: '.js_banner_nav',     // 分页dom
+			paginationClick: true,  // 分页是否可点击
+			prevButton: '.js_banner_prev',     // 下一张dom
+			nextButton: '.js_banner_next',     // 上一张dom
             Effects: {
-
+				//turnEffect（翻转）boomEffect（爆炸）pageEffect（翻页）skewEffect（扭曲）cubeEffect（立方体）
                 'prev': 'turnEffect',
-
                 'next': 'boomEffect',
-
                 'navi': 'pageEffect'
-
             },
-
         });
 </script>
 <!-- 轩枫轮播end -->
