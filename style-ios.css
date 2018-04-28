@@ -20,7 +20,6 @@ em,i {
 }
 input {
 	-webkit-appearance:none;
-	appearance:none;
 	-webkit-box-sizing:border-box;
 	box-sizing:border-box;
 }
@@ -158,7 +157,7 @@ img {
 	z-index:100;
 	height:80px;
 	opacity:1;
-	-webkit-animation:box .5s linear;
+	animation:box .5s linear;
 	-ms-animation:box .5s linear;
 	border-bottom:1px solid #45BCF9;
 	background:rgba(40,40,40,.9)
@@ -725,10 +724,12 @@ img {
 .text .text_right > h2 {
 	word-wrap:break-word;
 	height:0.88rem;
+	line-height: 0.88rem;
 	display:block;
 	white-space:nowrap;
 	overflow:hidden;
 	text-overflow:ellipsis;
+	text-align: center;
 }
 ul.post-categories li {
 	display:none
@@ -745,6 +746,7 @@ ul.post-categories li:first-child {
 	position:relative;
 	top:0;
 	margin-right:6px;
+	display: none;
 }
 .text_right h2 span:nth-child(1) i {
 	position:absolute;
@@ -765,10 +767,7 @@ ul.post-categories li:first-child {
 	font-weight:normal;
 	display:block;
 }
-.text h2 {
-	margin-bottom:10px;
-	padding-top:14px;
-}
+
 .text h2 a {
 	font-size:0.32rem;
 	font-weight:normal;
@@ -812,6 +811,7 @@ ul.post-categories li:first-child {
 	overflow:hidden;
 	width:5.1rem;
 	margin:0 auto 0.2rem;
+	text-align: center;
 }
 .entry-meta a {
 	color:#ea4c89;
@@ -866,9 +866,8 @@ aside h3 {
 	margin-bottom:0.2rem;
 	position:relative;
 	text-indent:0.2rem;
-	border-bottom:1px solid #bbb;
+	border-bottom:1px solid #eee;
 	padding-bottom:0.16rem;
-	box-shadow:0px 0.1rem 0.1rem -0.1rem #bbb;
 }
 aside h3:before {
 	content:"";
@@ -948,15 +947,15 @@ p.clearfix a {
 }
 .widget-title {
 	margin-bottom:0.26rem;
-	border-bottom:1px solid #bbb;
+	border-bottom:1px solid #eee;
 	padding-bottom:0.16rem;
-	box-shadow:0px 0.1rem 0.1rem -0.1rem #bbb;
 }
 .widget-title a {
 	font-size:0.32rem;
 	color:#666;
 	position:relative;
 	display:inline-block;
+	font-weight: normal
 }
 .daily-list > p {
 	color:#444;
@@ -1403,7 +1402,7 @@ to {
 	text-align:left;
 }
 .continar-left p.l > span:nth-of-type(2) {
-	width:27%;
+	width:26%;
 }
 .continar-left p.l > span:nth-of-type(3) {
 	width:30%;
@@ -2701,7 +2700,7 @@ span.post-like,.img-left span ul li a {
 	display: inline-block;
     text-indent: 0;
 }
-.map {
+.map,.post-actions {
 	display:none;
 }
 #player > span.cover {
@@ -2766,7 +2765,7 @@ span.post-like,.img-left span ul li a {
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background: url('<?php bloginfo('template_url'); ?>/images/snow1.png'),url('<?php bloginfo('template_url'); ?>/images/snow2.png');
+	/* background: url('<?php bloginfo('template_url'); ?>/images/snow1.png'),url('<?php bloginfo('template_url'); ?>/images/snow2.png'); */
 	animation: 10s snow linear infinite;
 	pointer-events: none;
 	z-index: 9999

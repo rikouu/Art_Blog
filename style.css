@@ -2184,10 +2184,14 @@ to {
 }
 .continar-left div.key-w .iconfont{font-size: 14px;}
 .continar-left div.key-w a {
-	background:#08c;
-	border-radius:4px;
-	text-indent:0;
-	font-size:12px;
+	display: inline-block;
+    padding: 0px 7px;
+    margin: 0 4px 4px 0;
+    color: #fff;
+    font-size: 12px;
+    background-color: #45B6F7;
+    opacity: 0.85;
+    line-height: 22px;
 }
 .continar-left>h2 {
 	color:#666
@@ -2416,6 +2420,9 @@ td.line-numbers {
 .continar-left .log-text ul li {
 	line-height:30px;
 	margin-bottom:15px;
+}
+.continar-left .log-text .copy{
+	margin-top:25px;
 }
 p.text-post {
 	width:100%;
@@ -3220,7 +3227,8 @@ iframe {
 	margin:0px 7.6923% 30px;
 	min-height:72px;
 	border-bottom:1px solid #ddd;
-	text-align:center
+	text-align:center;
+	display: none;
 }
 .page-reward .page-reward-btn {
 	position:relative;
@@ -3257,32 +3265,32 @@ iframe {
     color: #fff;
     font-size: 20px;
 }
-.page-reward .page-reward-btn .tooltip-item a span{color:#fff;font-size: 22px; }
-.page-reward .reward-box {
+.page-reward-btn .tooltip-item a span{color:#fff;font-size: 22px; }
+.reward-box {
 	display:-webkit-box;
 	display:-ms-flexbox;
 	display:flex;
 	-ms-flex-pack:distribute;
 	justify-content:space-around
 }
-.page-reward .reward-p {
+.log-text .reward-p {
 	color:#fff;
 	text-shadow:1px 1px 1px #45b9e0;
 	text-indent:0;
 	margin:0 0 25px;
 	font-size:16px;
 }
-.page-reward .reward-p .icon {
+.log-text .reward-p .icon {
 	margin:0 10px;
 	color:#ddd
 }
-.page-reward .reward-type {
+.reward-type {
 	font-size:16px;
 	display:block;
 	color:#4d4d4d;
 	margin:20px 0 0
 }
-.page-reward .reward-img {
+.reward-img {
 	width:130px;
 	height:130px;
 	border:6px solid #fff;
@@ -3316,7 +3324,8 @@ to {
 	-webkit-transform:scaleX(1);
 	transform:scaleX(1)
 }
-}.tooltip-left .tooltip-content {
+}
+.tooltip-left .tooltip-content {
 	position:absolute;
 	background:rgba(36,193,246,.9);
 	z-index:9999;
@@ -3401,35 +3410,37 @@ to {
 .tooltip-top .tooltip:hover:after {
 	pointer-events:auto
 }
-.tooltip-top .tooltip-content {
-	position:absolute;
-	z-index:9999;
-	width:370px;
-	left:50%;
-	top:-400px;
-	font-size:20px;
-	line-height:1.4;
-	text-align:center;
-	color:#4d4d4d;
-	background:0 0;
-	opacity:0;
-	margin:0 0 -10px -158px;
-	cursor:default;
-	pointer-events:none;
-	-webkit-font-smoothing:antialiased;
-	-webkit-transition:opacity .3s .3s;
-	transition:opacity .3s .3s;
+.tooltip-content {
+	position: absolute;
+    z-index: 9999;
+    width: 370px;
+	left: 14px;
+	top: -330px;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: center;
+    color: #4d4d4d;
+    background: 0 0;
+    opacity: 0;
+    margin: 0 0 -10px -158px;
+    cursor: default;
+    pointer-events: none;
+    -webkit-font-smoothing: antialiased;
+    -webkit-transition: opacity .3s .3s;
+    transition: opacity .3s .3s;
 }
-.tooltip-top .tooltip:hover .tooltip-content {
-	opacity:1;
-	pointer-events:auto;
+.tooltip-content span{
+	display:block
+}
+.tooltip-content {
+	opacity:0;
 	-webkit-transition-delay:0s;
 	transition-delay:0s
 }
-.tooltip-top .tooltip-content span {
+.reward-box span {
 	display:block
 }
-.tooltip-top .tooltip-text {
+.tooltip-text {
 	border-bottom:10px solid #4d4d4d;
 	overflow:hidden;
 	-webkit-transform:scaleX(0);
@@ -3439,13 +3450,13 @@ to {
 	transition:transform .3s .3s;
 	transition:transform .3s .3s,-webkit-transform .3s .3s
 }
-.tooltip-top .tooltip:hover .tooltip-text {
+.tooltip-top .tooltip:hover .tooltip-text,.post-actions .action-rewards:hover .tooltip-text{
 	-webkit-transition-delay:0s;
 	transition-delay:0s;
 	-webkit-transform:scaleX(1);
 	transform:scaleX(1)
 }
-.tooltip-top .tooltip-inner {
+.tooltip-inner {
 	background:rgba(36,193,246,.9);
 	padding:40px;
 	-webkit-transform:translate3d(0,100%,0);
@@ -3455,13 +3466,13 @@ to {
 	transition:transform .3s;
 	transition:transform .3s,-webkit-transform .3s
 }
-.tooltip-top .tooltip:hover .tooltip-inner {
+.tooltip:hover .tooltip-inner, .post-actions .action-rewards:hover .tooltip-inner {
 	-webkit-transition-delay:.3s;
 	transition-delay:.3s;
 	-webkit-transform:translateZ(0);
 	transform:translateZ(0)
 }
-.tooltip-top .tooltip-content:after {
+.tooltip-content:after {
 	content:'';
 	left:50%;
 	border:solid transparent;
@@ -3602,7 +3613,6 @@ ul.post-categories li:first-child {
 }
 #wuyousujian-kefuDv #navLog {
 	width:40px;
-	vertical-align:top;
 	height:1px;
 	display: block;
 }
@@ -4652,7 +4662,7 @@ code {
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background: url('<?php bloginfo('template_url'); ?>/images/snow1.png'),url('<?php bloginfo('template_url'); ?>/images/snow2.png');
+	/* background: url('<?php bloginfo('template_url'); ?>/images/snow1.png'),url('<?php bloginfo('template_url'); ?>/images/snow2.png'); */
 	animation: 10s snow linear infinite;
 	pointer-events: none;
 	z-index: 9999
@@ -4675,3 +4685,154 @@ code {
 	opacity:1!important;
 }
 /* video视频播放器插件自定义end */
+
+/* PC详情页打赏start */
+.post-actions {
+    text-align: center;
+	padding: 15px 0 30px;
+	margin:25px 0;
+    clear: both;
+}
+.post-actions .action-rewards{
+	position: relative;
+}
+.post-actions *{
+	color: #fff;
+}
+.post-actions > a{
+	color:#fff!important;
+}
+.post-actions .action.action-like {
+    background-color: #45B6F7;
+}
+.post-actions .action {
+    display: inline-block;
+    opacity: 0.8;
+    line-height: 1;
+    padding: 12px 20px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 14px;
+    background-color: #45B6F7;
+    margin: 0 7px;
+}
+.post-actions .action .fa {
+    font-size: 14px;
+    position: relative;
+    margin-right: 2px;
+}
+.post-actions .action-like .fa {
+    margin-right: 7px;
+    top: 0;
+}
+.post-actions .action {
+    display: inline-block;
+    opacity: 0.8;
+    line-height: 1;
+    padding: 12px 20px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 14px;
+    background-color: #45B6F7;
+    margin: 0 7px;
+}
+.post-actions .action.action-rewards {
+    background-color: #F7B10D;
+}
+.post-actions .action .fa {
+    font-size: 14px;
+    position: relative;
+    top: 1px;
+    margin-right: 2px;
+}
+.post-actions .action:hover {
+    opacity: 1;
+    color: #fff;
+}
+.post-actions .action.action-rewards:hover .tooltip-content {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+/* PC详情页打赏end */
+
+/* 面包屑导航start */
+.mod-crumbs {
+	width: calc(100% + 32px);
+	margin-left: -16px;
+	height: auto;
+	overflow: hidden;
+	transform: translateY(-65px);
+	display: block;
+}
+.mod-breadcrumb {
+	color: #69bcf3;
+	display: block;
+	padding: 7px 14px;
+	margin: 0;
+	list-style: none;
+	background: #fafafa;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='white', endColorstr='whitesmoke');
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f5f5f5));
+	background: -moz-linear-gradient(top, #fff, #f5f5f5);
+	background-repeat: repeat-x;
+	border: 1px solid #ddd;
+	box-sizing: border-box;
+	font-size: 12px;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	-webkit-border-bottom-left-radius: 0;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 0;
+	-moz-border-radius-bottomright: 0;
+	-moz-border-radius-bottomleft: 0;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	background-clip: padding-box;
+	border-radius: 3px;
+	box-shadow: inset 0 1px 0 #fff;
+}
+.mod-crumbs a {
+	color: #08c;
+	font-size: 12px;
+}
+.mod-crumbs a:hover {
+	text-decoration: underline;
+}
+.mod-breadcrumb i {
+	font-size: 12px;
+	color: #666;
+	text-indent: 4px;
+	font-weight: 400;
+	font-style: normal;
+}
+.mod-crumbs i {
+	display: inline-block;
+	margin: 0 2px;
+	color: #999;
+	font-weight: 700;
+	vertical-align: center;
+}
+p.data-l span {
+	font-size: 12px;
+	color: #666
+}
+.copy {
+	line-height: 30px;
+	text-align: center;
+	font-size: 13px;
+	background-color: #efefef;
+	border-radius: 3px;
+	margin-bottom: 15px;
+	color: #999;
+	cursor: pointer;
+}
+.copy:hover {
+	background: #08c;
+	color: #fff;
+}
+/* 面包屑导航end */

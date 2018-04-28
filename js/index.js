@@ -292,7 +292,8 @@ jQuery(function($) {
 
     //移动端禁止侧边导航上下滚动start
     $(".os-herder").on("touchmove",function(event) {
-        event.stopPropagation();
+        //event.stopPropagation();
+        event.preventDefault();
     });
     //移动端禁止侧边导航上下滚动end
 
