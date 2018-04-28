@@ -4696,7 +4696,7 @@ code {
 .post-actions .action-rewards{
 	position: relative;
 }
-.continar-left .log-text .post-actions *,.continar-left .log-text .post-actions *:hover{
+.continar-left .log-text .post-actions *,.continar-left .log-text .post-like a.done:hover span.count{
 	color: #fff;
 }
 .post-actions > a{
@@ -4832,7 +4832,7 @@ p.data-l span {
 	cursor: pointer;
 }
 .copy:hover {
-	background: #08c;
+	background: #45B6F7;
 	color: #fff;
 }
 /* 面包屑导航end */
