@@ -109,14 +109,18 @@
                         <!--文章打赏开始-->
                         <!-- PC端start -->
                         <div class="post-actions">
-                            <a href="javascript:;" class="post-like action action-like" data-pid="6408">
-                                <i class="fa fa-thumbs-o-up"></i>赞(
-                                <span><?php if( get_post_meta($post->ID,'bigfa_ding',true) ){            
+                            <span class="post-like action action-like">
+                                <a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if(isset($_COOKIE['bigfa_ding_'.$post->ID])) echo ' done';?>">
+                                    <i class="fa fa-thumbs-o-up"></i>赞(	  
+                                    <span class="count">   
+                                        <?php if( get_post_meta($post->ID,'bigfa_ding',true) ){            
                                                 echo get_post_meta($post->ID,'bigfa_ding',true);
                                             } else {
                                                 echo '0';
-                                        }?></span>)
-                            </a>
+                                        }?>
+                                    </span>)  
+                                </a>   
+                            </span>
                             <a href="javascript:;" class="action action-rewards" data-event="rewards">
                                 <i class="fa fa-jpy"></i> 打赏
                                 <span class="tooltip-content">

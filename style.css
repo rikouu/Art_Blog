@@ -4696,7 +4696,7 @@ code {
 .post-actions .action-rewards{
 	position: relative;
 }
-.post-actions *{
+.continar-left .log-text .post-actions *,.continar-left .log-text .post-actions *:hover{
 	color: #fff;
 }
 .post-actions > a{

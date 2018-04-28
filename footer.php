@@ -117,35 +117,6 @@
 </div>
     <!-- 在线客服结束 -->
   <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-2.1.4.min.js"></script>
-  <script>
-  $(function(){
-		//点赞
-		$.fn.postLike = function() {
-  	if ($(this).hasClass('done')) {
-  		return false;
-  	} else {
-  		$(this).addClass('done');
-  		var id = $(this).data("id"),
-  		action = $(this).data('action'),
-  		rateHolder = $(this).children('.count');
-  		var ajax_data = {
-  			action: "bigfa_like",
-  			um_id: id,
-  			um_action: action
-  		};
-  		$.post("/wp-admin/admin-ajax.php", ajax_data,
-  		function(data) {
-  			$(rateHolder).html(data);
-  		});
-  		return false;
-  	}
-  };
-  $(document).on("click", ".favorite",
-  function() {
-  	$(this).postLike();
-  }); 
-}) 
-</script>
 <?php include_once("baidu_js_push.php") ?>
 <!-- 网站运行时间 -->
 <script>

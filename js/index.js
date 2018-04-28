@@ -20,6 +20,31 @@ jQuery(function($) {
     setInterval(function(){
         $(".page-reward .page-reward-btn .tooltip-item font,.page-reward .page-reward-btn .tooltip-item a").toggleClass("s_show");
     },2000)
+    //点赞
+    $.fn.postLike = function() {
+        if ($(this).hasClass('done')) {
+            return false;
+        } else {
+            $(this).addClass('done');
+            var id = $(this).data("id"),
+            action = $(this).data('action'),
+            rateHolder = $(this).children('.count');
+            var ajax_data = {
+                action: "bigfa_like",
+                um_id: id,
+                um_action: action
+            };
+            $.post("/wp-admin/admin-ajax.php", ajax_data,
+            function(data) {
+                $(rateHolder).html(data);
+            });
+            return false;
+        }
+    };
+    $(document).on("click", ".favorite",
+    function() {
+        $(this).postLike();
+    }); 
 
     // 针对畅言傻逼作transform兼容
     $(".continar-left").css("transform","none");
