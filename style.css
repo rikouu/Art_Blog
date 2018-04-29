@@ -4306,6 +4306,9 @@ ul.post-categories li:first-child {
     padding: 0 0 4px!important;
 }
 #cyReping .reping-list .list-item{border-bottom:1px solid #ccc!important}
+#cyReping .reping-list .list-item:last-child {
+    border-bottom: none!important;
+}
 /*畅言评论end*/
 
 /*用户中心start*/
