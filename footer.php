@@ -180,7 +180,7 @@
 <!-- <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-1" count="99" src="<?php bloginfo('template_url'); ?>/js/canvas-nest.min.js"></script> -->
 
 <script  defer="defer">
-	if($( document ).width() > 1024){
+	if($( document ).width() >= 1200){
     // 文字琴弦效果start
 	(function ($) {
 			$.extend($.easing, {

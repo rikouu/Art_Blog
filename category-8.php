@@ -10,9 +10,9 @@
     <title>关于&留言 - 唯品秀 – 前端开发 | web前端技术博客</title>
     <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/font-awesome-4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" media="screen and (max-width:640px)" href="<?php bloginfo('template_url'); ?>/style-ios.css">
-	<link rel="stylesheet" type="text/css" media="screen and (min-width:641px) and (max-width:959px)" href="<?php bloginfo('template_url'); ?>/style-ipd.css">
-	<link rel="stylesheet" type="text/css" media="screen and (min-width:1025px)" href="<?php bloginfo('template_url'); ?>/style.css">
+	<link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="<?php bloginfo('template_url'); ?>/style-ios.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:768px) and (max-width:1199px)" href="<?php bloginfo('template_url'); ?>/style-ipd.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:1200px)" href="<?php bloginfo('template_url'); ?>/style.css">
    <link rel="stylesheet" href="http://at.alicdn.com/t/font_typ5xhkfpnetrzfr.css">
 	<?php wp_head(); ?>
 </head>
