@@ -1,6 +1,6 @@
 $( function() {
     //网站预加载运动开始
-    if ( $( document ).width() > 960 ) {
+    if ( $( document ).width() > 1024 ) {
         if ( window.location.href == "http://www.weipxiu.com" || window.location.href == "http://www.weipxiu.com/" ) {
             //首页公告开始
             setInterval( function() {

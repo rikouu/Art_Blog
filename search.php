@@ -19,7 +19,7 @@
 
     <link rel="stylesheet" type="text/css" media="screen and (max-width:640px)" href="<?php bloginfo('template_url'); ?>/style-ios.css">
     <link rel="stylesheet" type="text/css" media="screen and (min-width:641px) and (max-width:959px)" href="<?php bloginfo('template_url'); ?>/style-ipd.css">
-    <link rel="stylesheet" type="text/css" media="screen and (min-width:960px)" href="<?php bloginfo('template_url'); ?>/style.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:1025px)" href="<?php bloginfo('template_url'); ?>/style.css">
     <?php wp_head(); ?>
     <style>
         .bdcs-container .bdcs-search {

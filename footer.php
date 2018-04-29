@@ -180,7 +180,8 @@
 <!-- <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-1" count="99" src="<?php bloginfo('template_url'); ?>/js/canvas-nest.min.js"></script> -->
 
 <script  defer="defer">
-	// 文字琴弦效果start
+	if($( document ).width() > 1024){
+    // 文字琴弦效果start
 	(function ($) {
 			$.extend($.easing, {
 				easeOutElastic: function (x, t, b, c, d) {
@@ -305,6 +306,7 @@
 		recline:0.1 // default , 每像素偏移量，越小“琴弦绷的越紧”
 	});
 	//文字琴弦效果end
+  }
 </script>
 
 

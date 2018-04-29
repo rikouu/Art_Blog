@@ -732,7 +732,6 @@ img {
 }
 .text .text_right > h2 {
 	word-wrap:break-word;
-	height:0.88rem;
 	display:block;
 	white-space:nowrap;
 	overflow:hidden;
