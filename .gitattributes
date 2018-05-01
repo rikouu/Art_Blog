@@ -1,3 +1,3 @@
-*.js linguist-language=css3/jQuery2.14  
-*.css linguist-language=css3/jQuery2.14   
-*.html linguist-language=css3/jQuery2.14  
+*.js linguist-language=jquery  
+*.css linguist-language=jquery 
+*.html linguist-language=jquery
