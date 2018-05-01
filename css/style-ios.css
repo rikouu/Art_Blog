@@ -196,7 +196,7 @@ img {
 	width:100%;
 	height:20px;
 	margin:20px 0;
-	background:url("images/loading1.png") no-repeat 810px 2px
+	background:url("../images/loading1.png") no-repeat 810px 2px
 }
 .topbar ul {
 	width:360px;
@@ -518,7 +518,7 @@ img {
 	width:40px;
 	height:100%;
 	display:block;
-	background:url("images/logo_01.png") no-repeat center center;
+	background:url("../images/logo_01.png") no-repeat center center;
 }
 #Logo ul {
 	margin-top:12px;
@@ -530,15 +530,15 @@ img {
 	margin-top:2px
 }
 #Logo ul li:nth-child(1) {
-	background:url("images/logo_02.png");
+	background:url("../images/logo_02.png");
 	animation:move .2s .1s alternate infinite;
 }
 #Logo ul li:nth-child(2) {
-	background:url("images/logo_03.png");
+	background:url("../images/logo_03.png");
 	animation:move .2s .2s alternate infinite;
 }
 #Logo ul li:nth-child(3) {
-	background:url("images/logo_04.png");
+	background:url("../images/logo_04.png");
 	animation:move .2s .3s alternate infinite;
 }
 /*小飞机start*/
@@ -1157,7 +1157,7 @@ div.com-art ul li {
 	padding:10px 15px;
 	font-size:12px;
 	line-height:12px;
-	background:#2e2e2e url(images/footerBg.png) repeat;
+	background:#2e2e2e url(../images/footerBg.png) repeat;
 	box-shadow:inset 0 5px 10px 0 rgba(0,0,0,0.8);
 	border-top:1px solid #eaeaea;
 	-webkit-transform:translateY(0px);
@@ -1212,7 +1212,7 @@ div.com-art ul li {
 	width:28px;
 	height:28px;
 	border-radius:100%;
-	background:#f6f6f6 url('images/music.png') no-repeat center -4px;
+	background:#f6f6f6 url('../images/music.png') no-repeat center -4px;
 	position:fixed;
 	top:133px;
 	right:18px;
@@ -2164,7 +2164,7 @@ div.jy p {
 	border:1px solid #ccc;
 	border-bottom:none;
 	padding-right:20px;
-	background:#fff url("images/bg_sprites.png") 0 -90px repeat-x;
+	background:#fff url("../images/bg_sprites.png") 0 -90px repeat-x;
 	overflow:hidden;
 }
 #ds-thread #ds-reset .ds-textarea-wrapper textarea,#ds-thread #ds-reset .ds-textarea-wrapper .ds-hidden-text {
@@ -2215,8 +2215,8 @@ div.jy p {
 	line-height:16px;
 	padding-left:20px;
 	display:block;
-	background:url("images/service-icons-color.png?v=2") no-repeat;
-	_background-image:url("images/service-icons-color.gif?v=2");
+	background:url("../images/service-icons-color.png?v=2") no-repeat;
+	_background-image:url("../images/service-icons-color.gif?v=2");
 	overflow:hidden;
 }
 #ds-reset .ds-weixin {
@@ -2237,8 +2237,8 @@ div.jy p {
 	height:19px;
 	float:left;
 	margin-right:4px;
-	background:transparent url("images/sprites.png") no-repeat;
-	_background-image:url("images/sprites.gif");
+	background:transparent url("../images/sprites.png") no-repeat;
+	_background-image:url("../images/sprites.gif");
 	vertical-align:middle;
 	opacity:.6;
 	-webkit-transition:opacity .15s linear;
@@ -2255,8 +2255,8 @@ div.jy p {
 	vertical-align:middle;
 	display:inline-block;
 	overflow:hidden;
-	background:transparent url("images/sprites.png") no-repeat;
-	_background-image:url("images/sprites.gif");
+	background:transparent url("../images/sprites.png") no-repeat;
+	_background-image:url("../images/sprites.gif");
 }
 .ds-icon-reply {
 	width:18px;
@@ -2485,7 +2485,7 @@ iframe {
 .os-herder {
 	width:160px;
 	height:100%;
-	background:url(images/bg.png) no-repeat right;
+	background:url(../images/bg.png) no-repeat right;
 	background-size:100% 100%;
 	padding:0 15px;
 	position:fixed;
@@ -2540,7 +2540,7 @@ div.btn {
 	min-height:40px;
 	height:1rem;
 	font-size:0.44rem;
-	background:url(images/top_bg2.png) no-repeat;
+	background:url(../images/top_bg2.png) no-repeat;
 	background-size:100% 100%;
 	line-height:1rem;
 	color:#fff;
@@ -2562,7 +2562,7 @@ div.btn {
 	top:0rem;
 	left:0px;
 	z-index:3;
-	background-image:url(images/mobileicon.png);
+	background-image:url(../images/mobileicon.png);
 	background-repeat:no-repeat;
 	background-size:9.4rem 5.6rem;
 	background-position:-8.5rem -1.72rem;
@@ -2764,7 +2764,7 @@ span.post-like,.img-left span ul li a {
 	top: 0;
 	width: 100%;
 	height: 100%;
-	/* background: url('<?php bloginfo('template_url'); ?>/images/snow1.png'),url('<?php bloginfo('template_url'); ?>/images/snow2.png'); */
+	/* background: url('<?php bloginfo('template_url'); ?>/../images/snow1.png'),url('<?php bloginfo('template_url'); ?>/../images/snow2.png'); */
 	animation: 10s snow linear infinite;
 	pointer-events: none;
 	z-index: 9999
