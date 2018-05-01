@@ -9,7 +9,7 @@
 	<script>
 		 if ((navigator.userAgent.indexOf('MSIE') >= 0) 
 			&& (navigator.userAgent.indexOf('Opera') < 0)){
-			window.location.href="<?php bloginfo('template_url'); ?>/beta.html";/*判断IE5-10*/
+			window.location.href="<?php bloginfo('template_url'); ?>/reminder.php";/*判断IE5-10*/
 		 }
     </script>
 	<!-- IE禁止页面快捷保存，导致盗窃 -->
@@ -94,7 +94,7 @@
 								  		S-Baby
 								  	</a> -->
 								  </li>
-								  <li><a href="<?php bloginfo('template_url'); ?>/thanks.html" target="_blank">特别鸣谢</a></li>
+								  <li><a href="<?php bloginfo('template_url'); ?>/thanks.php" target="_blank">特别鸣谢</a></li>
 							  </ul>
 						  </div>
 					  </div>

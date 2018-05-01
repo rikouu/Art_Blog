@@ -1,91 +1,146 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <!--声明当前页面的编码集charset=gbk中文编码gb2312,charset=utf-8 国际编码-->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <!--当前页面的三要素-->
-    <title>标题</title>
-    <meta name="Keywords" content="关键词,关键词">
-    <meta name="description" content="描述">
-    <!--css , js-->
-    <style type="text/css">
-        * {
-            margin: 0px;
-            padding: 0px;
-        }
-
-        .erro {
-            width: 480px;
-            height: 500px;
-            margin: 40px auto;
-        }
-
-        .erro h3 {
-            font-size: 24px;
-            font-family: "微软雅黑";
-            line-height: 55px;
-        }
-
-        .erro p {
-            font-size: 13px;
-            color: #666;
-            font-family: "微软雅黑";
-            line-height: 25px;
-        }
-
-        .erro p font {
-            color: #FF00CC;
-            font-weight: bold;
-        }
-
-        .erro p a {
-            color: red;
-        }
-
-        .erro p span {
-            color: red;
-            font-weight: bold;
-            padding-left: 5px;
-        }
-
-        .xs {
-            color: red;
-            padding-right: 5px;
-        }
-    </style>
-
+	<meta charset="UTF-8">
+	<meta name="Author" content="李俊" />
+	<meta name="description" content="<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200,"
+	    ... "); ?>" />
+	<meta name="keywords" content="个人博客,唯品秀个人博客,个人博客网站,唯品秀，web前端博客，网页制作，博客，HTML5/CSS3，Javascript" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>
+		<?php the_title(); ?>&nbsp;|&nbsp;关注WEB前端开发技术&nbsp;-&nbsp;唯品秀博客</title>
+	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="<?php bloginfo('template_url'); ?>/css/style-ios.css">
+	<link rel="stylesheet" type="text/css" media="screen and (min-width:768px) and (max-width:1199px)" href="<?php bloginfo('template_url'); ?>/css/style-ipd.css">
+	<link rel="stylesheet" type="text/css" media="screen and (min-width:1200px)" href="<?php bloginfo('template_url'); ?>/style.css">
+	<?php wp_head(); ?>
 </head>
 
 <body>
-    <div class="erro">
-        <img src="images/404.png" />
-        <h3>很抱歉,未能找到你的女朋友</h3>
-        <p>
-            <font>1、</font>请试试以下方法：</p>
-        <p>
-            <font>2、</font>检查身高、颜值、银行卡、支付宝或微信存款，重新降临到这个世界</p>
-        <p>
-            <font>3、</font>页面将在<span class="autotime">5</span>
-            <font class="xs">s</font>的时间内跳转到网站首页</p>
-     <div>
-</body>
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript">
-    var num = 5;
-    var clearTime = null;
+	<!--头部文件引用开始-->
+	<?php get_header();?>
+	<!--头部文件引用结束-->
 
-    function autoPlay() {
-        clearTime = setInterval( function() {
-            num--;
-            $( ".autotime" ).text( num ); //把我们减好的值，赋给span
-            if ( num == 0 ) {
-                window.location = "http://www.weipxiu.com";
-                clearInterval( clearTime ); //清楚定时播放器
-            }
-        }, 1000 );
-    };
-    autoPlay();
-</script>
+	<!-- 正文区域start -->
+	<div class="continar">
+		<div class="continar-left" style="border:0; padding:0; background: transparent;">
+			<!-- 文章start -->
+			<?php
+			if(have_posts()): while(have_posts()):the_post();
+			?>
+
+				<div class="text">
+					<div class="img-left">
+						<a class="read-more" href="<?php the_permalink(); ?>" target="_blank">
+							<?php
+						    if ( has_post_thumbnail() )
+						        the_post_thumbnail();
+						    else
+						        echo '<img src="http://www.weipxiu.com/wp-content/uploads/2017/04/default-220x150.png" alt="" />';
+						?>
+						</a>
+					</div>
+					<div class="text_right">
+						<h2>
+							<span>
+								<?php the_category() ?>
+								<i></i>
+							</span>
+							<a href="<?php the_permalink(); ?>" target="_blank">
+								<?php the_title(); ?>
+							</a>
+						</h2>
+						<div class="entry-meta">
+							<a href="http://www.weipxiu.com">唯品秀</a>
+							<i class="space">•</i>
+							<a href="#">前端开发资讯</a>
+							<i class="space">•</i>
+							<?php the_author(); ?>
+							<a href="#" class="comments-number">
+								<span></span>
+							</a>
+						</div>
+						<h3>
+							<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 150,"..."); ?>
+							<!--文章内容-->
+						</h3>
+						<a class="read-more" href="<?php the_permalink(); ?>" target="_blank">阅读全文
+							<i class="fa fa-chevron-circle-right"></i>
+						</a>
+						<p class="l">
+							<!-- <span>
+							<a href="<?php the_permalink(); ?> ">
+								<i class="fa fa-calendar">&nbsp;</i><?php echo '发表于 '.timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); ?>
+							</a>
+						</span> -->
+							<span>
+								<i class="iconfont icon-shijian1"></i>&nbsp;
+								<?php the_time('Y年m月d日') ?>
+							</span>
+							<span>
+								<a href="<?php the_permalink(); ?> ">
+									<i class="iconfont icon-liulan"></i>&nbsp;
+									<?php echo getPostViews(get_the_ID()); ?>℃</span>
+							</a>
+							<span class="comm">
+								<a href="<?php the_permalink(); ?> ">
+									<i class="iconfont icon-pinglun2"></i>
+									<span id="url::<?php the_permalink(); ?>" class="cy_cmt_count"></span>
+									<script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cyt2b1NqT">
+									</script>
+									条评论
+								</a>
+							</span>
+							<span class="post-like">
+								<a href="javascript:;" style="color: #f78585" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if(isset($_COOKIE['bigfa_ding_'.$post->ID])) echo ' done';?>">
+									<i class="fa fa-thumbs-o-up" style="color: #f78585"></i>
+									<span class="count">
+										<?php if( get_post_meta($post->ID,'bigfa_ding',true) ){            
+						                    echo get_post_meta($post->ID,'bigfa_ding',true);
+						                 } else {
+						                    echo '0';
+						             }?>
+									</span>喜欢
+								</a>
+							</span>
+							<span class="r"></span>
+						</p>
+						<?php if( is_sticky() ) echo '<em><a href="">顶</a></em>'; ?>
+						<!-- <span class="new-icon">NEW</span> -->
+					</div>
+					<!-- <font class="s_bar"></font> -->
+					<!--竖条-->
+				</div>
+				<?php endwhile; else : ?>
+				<h2>
+					<?php _e('Not Found'); ?>
+				</h2>
+				<?php endif; ?>
+				<?php wp_pagenavi(); ?>
+				<!--分页插件调用-->
+
+		</div>
+		<!-- 左侧区域结束 -->
+
+		<!-- 右侧区域开始 -->
+		<div class="continar-right">
+			<?php get_sidebar( $name ); ?>
+		</div>
+		<!-- 右侧区域结束 -->
+	</div>
+	<!-- 正文区域end -->
+
+	<!-- 首页背景音乐开始 -->
+	<!-- <audio src="http://sc1.111ttt.com/2015/1/04/01/97011918297.mp3" autoplay="autoplay" loop="loop" id="music"></audio>
+    <div class="control hover"></div> -->
+	<!-- 首页背景音乐结束 -->
+
+	<!-- 底部引用区域开始 -->
+	<?php get_footer()?>
+	<!-- 底部引用区域结束 -->
+</body>
 
 </html>

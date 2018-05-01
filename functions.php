@@ -24,7 +24,7 @@ if ( function_exists('register_sidebar') )
 		$query->set('posts_per_page',12);//首页每页显示12篇文章
 		}
 		if(is_search()){
-			$query->set('posts_per_page',-1);//搜索页显示所有匹配的文章，不分页
+			$query->set('posts_per_page',10);//搜索页显示所有匹配的文章，不分页
 		}
 		if(is_archive()){
 			$query->set('posts_per_page',10);//其它页面每页显示10篇文章

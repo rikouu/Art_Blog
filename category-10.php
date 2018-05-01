@@ -10,8 +10,8 @@
     <title>我的博客我做主&nbsp;-&nbsp;了解唯品秀从这里开始&nbsp;|&nbsp;唯品秀博客</title>
     <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/font-awesome-4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="<?php bloginfo('template_url'); ?>/style-ios.css">
-    <link rel="stylesheet" type="text/css" media="screen and (min-width:768px) and (max-width:1199px)" href="<?php bloginfo('template_url'); ?>/style-ipd.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="<?php bloginfo('template_url'); ?>/css/style-ios.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:768px) and (max-width:1199px)" href="<?php bloginfo('template_url'); ?>/css/style-ipd.css">
     <link rel="stylesheet" type="text/css" media="screen and (min-width:1200px)" href="<?php bloginfo('template_url'); ?>/style.css">
 	<?php wp_head(); ?>
 </head>
@@ -95,7 +95,7 @@
                     唯品秀个人博客，是我首次创建的个人博客，主要用于记录学习前端学习、工作笔记、心得的地方，抒发自己情感的地方，在今后的岁月里会慢慢来打磨做到尽可能高保质，怀着自己的梦想，从这里起飞，远航。
                 </p>
                 <p class="px">
-                    此网站后台采用WordPress，前端模块完全自主开发(自主开发不代表不参考，如有雷同纯属巧合。。。)，运用大量js+css3运动，整体页面华丽的同时也会暗藏bug，尽管本人多次测试，但难免在众多设备或不同人不同见解下任有所不足之处，如有好的意见欢迎给我留言，博客会适当改进，慢慢改版。最后感谢大家的关注，尤其谢谢<a href="http://www.weipxiu.com/wp-content/themes/boke/thanks.html">各位</a>提供的帮助！
+                    此网站后台采用WordPress，前端模块完全自主开发(自主开发不代表不参考，如有雷同纯属巧合。。。)，运用大量js+css3运动，整体页面华丽的同时也会暗藏bug，尽管本人多次测试，但难免在众多设备或不同人不同见解下任有所不足之处，如有好的意见欢迎给我留言，博客会适当改进，慢慢改版。最后感谢大家的关注，尤其谢谢<a href="http://www.weipxiu.com/wp-content/themes/boke/thanks.php">各位</a>提供的帮助！
                 </p>
                 <p class="px">
                     也有人说，你花那么多时间去自己开发和维护这么一个小小个人博客网站有多大意义？这种网站只要有1-2年前端经验的就可以去完成，开发完了又开源出来供大家免费使用，
@@ -105,7 +105,7 @@
                     也是一件有趣的事情。
                 </p>
                 <!-- <p class="px">
-                    最后感谢大家的关注，尤其谢谢<a href="http://www.weipxiu.com/wp-content/themes/boke/thanks.html">各位</a>提供的帮助！
+                    最后感谢大家的关注，尤其谢谢<a href="http://www.weipxiu.com/wp-content/themes/boke/thanks.php">各位</a>提供的帮助！
                 </p>
                 <p class="px">
                     网址:<a href="http://www.weipxiu.com" target="_blank">www.weipxiu.com</a>

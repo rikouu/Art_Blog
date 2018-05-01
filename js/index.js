@@ -148,7 +148,7 @@ jQuery(function($) {
 		musicObj= $(".nav ul.music-nav li:not(.mod-header_music-icon)").eq($index).find('audio');
         if(off_y){
 			$(this).addClass("active");
-			musicObj.get(0).src = "http://www.weipxiu.com/wp-content/themes/boke/mp3/" + deta + ".mp3";
+			musicObj.get(0).src = "http://www.weipxiu.com/wp-content/themes/boke/music/" + deta + ".mp3";
         }else{
             musicObj.get(0).src = "";
         }
@@ -167,7 +167,7 @@ jQuery(function($) {
 
 	function musicdown(number){
 		var parameter = musicDown.eq(number).attr("detaName");
-		musicDown.eq(number).find('audio').get(0).src = "http://www.weipxiu.com/wp-content/themes/boke/mp3/" + parameter + ".mp3";
+		musicDown.eq(number).find('audio').get(0).src = "http://www.weipxiu.com/wp-content/themes/boke/music/" + parameter + ".mp3";
 		musicDown.eq(number).addClass("active")
 	}
 	
