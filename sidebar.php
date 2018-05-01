@@ -91,7 +91,6 @@
 <!-- 技术分类结束 -->
 
 <!-- <div class="widget Label">
-  <h3 class="widget-title"><a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>标签云</a></h3>
   <div class="daily-list">
       <?php wp_tag_cloud('smallest=10&largest=14&number=32&order=RAND') ?>
   </div>

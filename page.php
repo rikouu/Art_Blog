@@ -2,9 +2,7 @@
 <html lang="en">
 
 <head>
-    <!--声明当前页面的编码集charset=gbk中文编码gb2312,charset=utf-8 国际编码-->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <!--当前页面的三要素-->
     <title>登录注册</title>
     <meta name="Keywords" content="关键词,关键词">
     <meta name="description" content="">

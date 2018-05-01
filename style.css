@@ -2952,7 +2952,6 @@ div.jy p {
 	float:left;
 	margin-right:4px;
 	background:transparent url(images/sprites.png) no-repeat;
-	vertical-align:middle;
 	opacity:.6;
 	-webkit-transition:opacity .15s linear;
 	-moz-transition:opacity .15s linear;

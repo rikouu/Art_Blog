@@ -203,7 +203,6 @@
 									<a href="http://www.weipxiu.com/works/yunquna/index.html" target="_blank">运去哪官网</a>
 									<a href="http://www.weipxiu.com/works/shangcheng/index.html" target="_blank">节日礼品商城</a>
 							        <!-- <a href="http://www.weipxiu.com/works/taiyang/index.html" target="_blank">太平洋时尚网</a> -->
-								  	<!-- <a href="http://www.weipxiu.com/works/beautiful/index.html" target="_blank">美丽说-首页</a> -->
 									<a href="http://www.weipxiu.com/works/weiyun/index.html" target="_blank">微云桌面应用</a>
 								  	<!-- <a href="http://www.weipxiu.com/works/hnlyw/index.html" target="_blank">湖南海外旅游网</a> -->
 								  	<!-- <a href="http://www.weipxiu.com/works/music/index.html" target="_blank">音乐播放器</a> -->

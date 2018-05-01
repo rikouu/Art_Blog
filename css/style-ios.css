@@ -37,7 +37,6 @@ body {
 	-ms-user-select:none;
 	user-select:none;
 	-webkit-font-smoothing:antialiased;
-	/*chrome、safari*/
  	-moz-osx-font-smoothing:grayscale;
 	/*firefox页面文字抗锯齿*/
 	 -webkit-overflow-scrolling: touch;

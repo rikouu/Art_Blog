@@ -116,12 +116,7 @@
                         </h3>
                         <a class="read-more" href="<?php the_permalink(); ?>" target="_blank">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
                         <p class="l">
-                            <!-- <span>
-							<a href="<?php the_permalink(); ?> ">
-								<i class="fa fa-calendar">&nbsp;</i><?php echo '发表于 '.timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); ?>
-							</a>
-						</span> -->
-                            <span><i class="fa fa-clock-o">&nbsp;</i><?php echo '发表于 '.timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); ?>
+                        <span><i class="fa fa-clock-o">&nbsp;</i><?php echo '发表于 '.timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); ?>
 						</span>
                             <span>
 							<a href="<?php the_permalink(); ?> ">

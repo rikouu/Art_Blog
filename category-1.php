@@ -38,8 +38,10 @@ body{background-image:-webkit-linear-gradient(180deg, #FFFEF9, #EED6CC);
     font-size: 14px;
 	text-align:center;
 	text-indent: 0;}
-#messageList .reply{ -webkit-transform-origin:center -5px; -webkit-transform:rotateX(-180deg);opacity:0;transition:.6s cubic-bezier(0.280, 0.695, 0.580, 1.450); border: 1px solid #fff;
-    box-shadow: 0 3px 7px rgba(0,0,0,0.1);}
+#messageList .reply{ 
+	-webkit-transform-origin:center -5px; -webkit-transform:rotateX(-180deg);opacity:0;transition:.6s cubic-bezier(0.280, 0.695, 0.580, 1.450); border: 1px solid #fff;
+	box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+}
 .text{opacity: 1}
 </style>
 </head>
