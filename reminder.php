@@ -1,4 +1,5 @@
 ﻿<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" "">
 <html>
 <head>
 <meta content="IE=11.0000" http-equiv="X-UA-Compatible">

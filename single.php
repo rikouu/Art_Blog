@@ -7,14 +7,14 @@
     <meta name="description" content="<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200,"
         ... "); ?>" />
     <?php 
-        $keywords = get_post_meta($post->ID, "keywords", true);
-        if($keywords == '') {
-            $tags = wp_get_post_tags($post->ID);    
-            foreach ($tags as $tag ) {        
-                $keywords = $keywords . $tag->name . ", ";    
-            }
-            $keywords = rtrim($keywords, ', ');
-        }
+		   $keywords = get_post_meta($post->ID, "keywords", true);
+		   if($keywords == '') {
+		      $tags = wp_get_post_tags($post->ID);    
+		      foreach ($tags as $tag ) {        
+		         $keywords = $keywords . $tag->name . ", ";    
+		      }
+		      $keywords = rtrim($keywords, ', ');
+		   }
 	?>
     <meta name="keywords" content="<?php echo $keywords; ?>" />
     <meta name="format-detection" content="telephone=no" />

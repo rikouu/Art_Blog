@@ -1240,11 +1240,7 @@ to {
 	transition:all .35s;
 	border-bottom:0
 }
-.continar .continar-left-top:hover {
-	border: 1px solid #FF5E52;
-    background: #FFF8F7;
-    box-shadow:none;
-}
+
 .continar .continar-left-top h1 {
 	font-size:18px;
 	line-height:24px;

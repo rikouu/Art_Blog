@@ -28,6 +28,18 @@
 	<body>
 <div id="hide">
 	<?php get_header();?>
+	<!-- <section class="mod-banner" id="js_banner">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" style="background:url('http://www.weipxiu.com/wp-content/themes/boke/images/slide2.png') no-repeat center top;"></div>
+				<div class="swiper-slide" style="background:url('http://www.weipxiu.com/wp-content/themes/boke/images/slide3.png') no-repeat center top;"></div>
+				<div class="swiper-slide" style="background:url('http://www.weipxiu.com/wp-content/themes/boke/images/slide4.png') no-repeat center top;"></div>
+			</div>
+			<div class="swiper-pagination"></div>
+			<div class="swiper-button-next swiper-button-white"></div>
+			<div class="swiper-button-prev swiper-button-white"></div>
+		</div>
+	</section> -->
 
 	<section class="mod-banner" id="js_banner">
         <!-- <div class="mod-banner__snow_theme">
@@ -50,6 +62,47 @@
             </span>
         </div>
     </section>
+
+	<!--<section class="mod-banner" id="js_banner_1">
+	轮播开始
+			<div id="wowslider-container" class="foolishOut">
+				<div class="ws_images">
+					<ul>
+						<li>
+							<a href="#overview">
+								<img src="http://www.weipxiu.com/wp-content/themes/boke/images/slide2.png"  height="360" alt="123" title="" />
+							</a>
+						</li>
+						<li>
+							<a href="demo.html">
+								<img src="http://www.weipxiu.com/wp-content/themes/boke/images/slide3.png" height="360" alt="456" title="唯品秀个人博客" />
+							</a>
+							2016-11-16日正式上线
+						</li>
+						<li>
+							<a href="http://wowslider.com/wowslider-free-setup.zip">
+								<img src="http://www.weipxiu.com/wp-content/themes/boke/images/slide4.png" height="360" alt="789" title="关注用户体验" />
+							</a>
+							关注WEB前端开发技术
+						</li>
+					</ul>
+				</div>
+				<div class="ws_bullets">
+					<div>
+						<a href="#">
+							<img src="<?php bloginfo('template_url'); ?>/img/data/tooltips/slide1.png" alt="CSS3 Slider" />
+						</a>
+						<a href="#">
+							<img src="<?php bloginfo('template_url'); ?>/img/data/tooltips/slide2.png" alt="CSS Slideshow" />
+						</a>
+						<a href="#">
+							<img src="<?php bloginfo('template_url'); ?>/img/data/tooltips/slide3.png" alt="CSS Gallery" />
+						</a>
+					</div>
+				</div>
+			</div>
+	轮播结束
+	</section>-->
 	
 	<!-- 导航start -->
 	<!-- <div class="index-box">

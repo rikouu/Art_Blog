@@ -25,60 +25,60 @@
 			font-size:14px;
 			font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif; 
 		}
-		html,body {
-			width:100%;
-			height:100%;
-			background:url("images/xbj.gif");
-			background:url("http://www.weipxiu.com/wp-content/themes/boke/images/body.png");
-			background-repeat:repeat;
-			background-attachment:scroll;
-			background-clip:border-box;
-			background-origin:padding-box;
-			background-position-x:0%;
-			background-position-y:0%;
-		}
-		em,i {
-			font-style:normal;
-		}
-		h1 {
-			text-align:center;
-			font-size:22px;
-			line-height:70px;
-			margin-top:15px
-		}
-		.contaner {
-			width:1000px;
-			margin:0 auto 50px;
-		}
-		.contaner em {
-			display:block;
-			text-align:right;
-			margin-right:50px;
-			margin-bottom:25px;
-		}
-		.contaner p {
-			text-indent:28px;
-			line-height:26px
-		}
-		.contaner h2 {
-			margin:20px 0 5px;
-			font-size:15px
-		}
-		::-webkit-scrollbar {
-			width:6px;
-			height:6px;
-			background-color:#F5F5F5
-		}
-		::-webkit-scrollbar-track {
-			box-shadow:inset 0 0 6px rgba(0,0,0,.3);
-			border-radius:7px;
-			background-color:#eee
-		}
-		::-webkit-scrollbar-thumb {
-			border-radius:10px;
-			box-shadow:inset 0 0 6px rgba(0,0,0,.3);
-			background-color:#999
-		}
+	html,body {
+		width:100%;
+		height:100%;
+		background:url("images/xbj.gif");
+		background:url("http://www.weipxiu.com/wp-content/themes/boke/images/body.png");
+		background-repeat:repeat;
+		background-attachment:scroll;
+		background-clip:border-box;
+		background-origin:padding-box;
+		background-position-x:0%;
+		background-position-y:0%;
+	}
+	em,i {
+		font-style:normal;
+	}
+	h1 {
+		text-align:center;
+		font-size:22px;
+		line-height:70px;
+		margin-top:15px
+	}
+	.contaner {
+		width:1000px;
+		margin:0 auto 50px;
+	}
+	.contaner em {
+		display:block;
+		text-align:right;
+		margin-right:50px;
+		margin-bottom:25px;
+	}
+	.contaner p {
+		text-indent:28px;
+		line-height:26px
+	}
+	.contaner h2 {
+		margin:20px 0 5px;
+		font-size:15px
+	}
+	::-webkit-scrollbar {
+		width:6px;
+		height:6px;
+		background-color:#F5F5F5
+	}
+	::-webkit-scrollbar-track {
+		box-shadow:inset 0 0 6px rgba(0,0,0,.3);
+		border-radius:7px;
+		background-color:#eee
+	}
+	::-webkit-scrollbar-thumb {
+		border-radius:10px;
+		box-shadow:inset 0 0 6px rgba(0,0,0,.3);
+		background-color:#999
+	}
 	</style>
 </head>
 	<body>
