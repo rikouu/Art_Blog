@@ -119,32 +119,9 @@
         <h3 class="widget-title"><a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>风云英雄</a></h3>
         <p>他们同样是一群网虫，却不是每天泡在网上游走在淘宝和网游之间、刷着本来就快要透支的信用卡。他们或许没有踏出国门一步，却获得了斯坦福、哈佛等许多常青藤名校课程的结业证……他们的同学不局限在一国一校，而是遍及全球……加入他们，成为一名互联网学习者！
         </p>
-        <ul>
-            <li>
-                <i class="iconfont">&#xe64a;</i>
-                <a href="http://www.mxxia.com" title="梦想霞个人博客" target="_blank">梦想霞个人博客</a>
-            </li>
-            <li>
-                <i class="iconfont">&#xe64a;</i>
-                <a href="http://wujiabk.com/" title="吴佳（Jasn）博客" target="_blank">吴佳（Jasn）博客</a>
-            </li>
-            <li>
-                <i class="iconfont">&#xe64a;</i>
-                <a href="http://www.wcanrong.com" title="璀灿星辰个人博客" target="_blank">璀灿星辰个人博客</a>
-            </li>
-            <li>
-                <i class="iconfont">&#xe64a;</i>
-                <a href="http://www.menvscode.com/" title="menVScode" target="_blank">menVScode</a>
-            </li>
-            <li>
-                <i class="iconfont">&#xe64a;</i>
-                <a href="http://lovemychina.cn/" title="小潘资源网" target="_blank">小潘资源网</a>
-            </li>
-            <li>
-                <i class="iconfont">&#xe64a;</i>
-                <a href="http://www.jack.xin/index.html" title="Jack博客-个人博客" target="_blank">Jack博客-个人博客</a>
-            </li>
-        </ul>
+		<ul class="friendsChain">
+			<?php wp_list_bookmarks('title_li=&categorize=0'); ?>
+		</ul>
     </div>
 </div>
 <!-- 友情链接结束 -->

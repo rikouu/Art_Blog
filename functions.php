@@ -575,4 +575,7 @@ header("location:http://127.0.0.1");//可以换成其他链接，比如站内的
   $_SESSION['ll_lasttime'] = $ll_nowtime;
   $_SESSION['ll_times'] = $ll_times;
 }
+
+//恢复wordpress删除的友情链接功能
+add_filter('pre_option_link_manager_enabled','__return_true');
 ?>
