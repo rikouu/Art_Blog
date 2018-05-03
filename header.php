@@ -59,7 +59,7 @@
 				                <a href="http://www.weipxiu.com" style="padding-left: 3px;">喵，欢迎光临</a>
 					          	<a href="http://www.weipxiu.com/wp-login.php"><i class="fa fa-sign-in" style="display: inline-block;"></i>请登录</a>
 					          	<a href="http://www.weipxiu.com/wp-login.php?action=register"><i class="fa fa-user" style="display: inline-block;"></i>免费注册</a>
-					          	<a href="http://www.weipxiu.com/wp-admin/" style="padding-left: 3px;">
+					          	<a href="http://www.weipxiu.com/wp-admin/" target='_blank' style="padding-left: 3px;">
 					          		<?php  if (is_user_logged_in()){
 						          		$current_user = wp_get_current_user();
 						          		echo '欢迎您， ' . $current_user->display_name;
