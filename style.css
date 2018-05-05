@@ -4262,6 +4262,10 @@ ul.post-categories li:first-child {
 /*首页弹窗结束*/
 
 /*畅言评论*/
+#SOHUCS #SOHU_MAIN .module-cmt-header .section-title-w,
+#SOHUCS #SOHU_MAIN .module-cmt-header .section-cbox-w .block-head-w{
+	z-index:1!important
+}
 #cyHotusers .hotusers-header {
 	display:none!important;
 }
