@@ -1660,7 +1660,7 @@ margin-top:16px;
 	border-bottom:1px solid #bbb;
 	position:relative;
 }
-.widget-title:after {
+/* .widget-title:after {
 	content:"";
 	display:block;
 	width:112px;
@@ -1668,7 +1668,7 @@ margin-top:16px;
 	background:#45BCF9;
 	left:0;
 	bottom:0;
-}
+} */
 .widget-title a {
 	font-size:15px;
 	color:#5e5e5e;
@@ -2124,6 +2124,9 @@ to {
 	width:50%;
 	line-height: 36px;
 	float:left
+}
+.continar-left ul.clearfix li span.career{
+	font-size:16px;
 }
 .continar-left ul li.index {
 	text-indent:2em;
