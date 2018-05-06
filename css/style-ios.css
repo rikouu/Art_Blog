@@ -1173,13 +1173,13 @@ div.com-art ul li {
 	padding:0;
 }
 .container a {
-	font-size:12px;
+	font-size:0.28rem;
 	color:#999;
 	transition:.35s
 }
 .container p,.container span {
-	margin:0 0 5px;
-	font-size:12px;
+	margin:5px 0;
+	font-size:0.28rem;
 	color:#999;
 	line-height:18px;
 	text-align:center;
@@ -1334,18 +1334,18 @@ to {
 }
 .continar-left ul.clearfix li span {
 	display:block;
-	font-size:0.36rem;
+	font-size:0.28rem;
 	line-height:0.6rem
 }
-.continar-left ul.clearfix li span.career{
-	font-size:0.4rem;
-}
+
 .continar-left .px {
 	text-indent:2em;
+	font-size:0.28rem;
 }
 .continar-left ul li.index {
 	text-indent:2em;
 	clear:both;
+	font-size:0.28rem
 }
 .continar-left ul li.photo {
 	float:right;
@@ -2548,7 +2548,7 @@ div.btn {
 	line-height:1rem;
 	color:#fff;
 	text-align:center;
-	position:absolute;
+	position:fixed;
 	top:0;
 	left:0;
 	z-index:100;

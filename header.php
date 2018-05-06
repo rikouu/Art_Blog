@@ -34,7 +34,7 @@
 		<!-- 移动端头部start -->
 		 <div class="os-headertop">
 			<div class="btn_menu"></div>
-			<a href="http://www.weipxiu.com" class="weipxiu_nav">唯品秀博客</a>
+			<a href="javascript:;" class="weipxiu_nav">唯品秀博客</a>
 			<div class="xis">
 				<i class="fa fa-search"></i>
 			</div>

@@ -326,6 +326,22 @@ jQuery(function($) {
     });
     //移动端禁止侧边导航上下滚动end
 
+	//禁止ios11自带浏览器缩放功能start
+	document.addEventListener('touchstart',function (event) {  
+	if(event.touches.length>1){  
+			event.preventDefault();  
+		}  
+	})  
+	var lastTouchEnd=0;  
+	document.addEventListener('touchend',function (event) {  
+		var now=(new Date()).getTime();  
+		if(now-lastTouchEnd<=300){  
+			event.preventDefault();  
+		}  
+		lastTouchEnd=now;  
+	},false)  
+	//禁止ios11自带浏览器缩放功能end
+
     //移动端头部下拉搜索start
     $(".xis").on("touchstart",function(){
         $(".os-headertop .site-search").slideToggle(100);
