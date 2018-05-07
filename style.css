@@ -363,6 +363,10 @@ to {
 	border-bottom:1px solid #fff;
 	background: #fff;
 	z-index: 10;
+	display: block!important;
+}
+#mobil{
+	display:none!important;
 }
 /*轮播针对PC端大屏幕start*/
 #js_banner_1 {
@@ -371,7 +375,7 @@ to {
     margin-top: 10px;
     margin: 104px auto 0px;
     border-bottom: 1px solid #eee;
-	display:none;
+	display:none!important;
 }
 /*轮播针对PC端大屏幕end*/
 .header {

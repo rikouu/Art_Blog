@@ -51,7 +51,9 @@ img {
 /*初始化代码end*/
 
 /*swiper轮播start*/
-#js_banner{display: none}
+#js_banner{
+	display: none!important
+}
 .swiper-pagination-bullet{width:0.6rem!important; border-radius: 0!important; height:1.5px!important; background: #fff!important;opacity: 1!important}
 .swiper-pagination-bullet-active{background:#45BCF9!important;}
 .swiper-container1,.swiper-wrapper {
@@ -84,6 +86,7 @@ img {
 	height:8rem;
 	width:100%;
 	position:relative;
+	display:block!important;
 }
 .swiper-container-horizontal > .swiper-pagination{
 	bottom:0.2rem!important;
@@ -150,6 +153,7 @@ img {
 	border-radius:0 2px 2px 0;
 	width:1rem;
 	cursor:pointer;
+	float:left;
 }
 .header.hover {
 	position:fixed;
@@ -2690,7 +2694,7 @@ span.post-like,.img-left span ul li a {
 .reward-box .reward-box-item:nth-child(2) {
 	float:right;
 }
-.map,.post-actions {
+.map,.post-actions,#default-searchbox {
 	display:none;
 }
 #player > span.cover {

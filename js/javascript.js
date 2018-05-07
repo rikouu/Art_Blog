@@ -14,9 +14,6 @@ $( function() {
                 } );
             }, 5000 );
             
-            //删除移动端轮播DOM
-            $( "#mobil" ).remove(); 
-            
             //给首页增加默认高亮
             $(".nav ul.music-nav li:eq(0)").addClass("action");
 
@@ -343,7 +340,6 @@ $( function() {
 		autoplayDisableOnInteraction: false, //表示用户操作swiper之后，是否禁止autoplay。默认为 true：停止。false是播放
 		loop: true //循环
 	} );
-    $( "#js_banner" ).remove();
     //navigator.vibrate([1000, 500, 1000]);
     //手机震动功能，里面是数组-震动时间，第二个为间隔时间
 }
