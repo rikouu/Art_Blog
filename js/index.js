@@ -17,8 +17,11 @@ jQuery(function($) {
     }
 
 	//给友情链接列表增加iconfont
-	$("ul.friendsChain li a").before("<i class='iconfont'>&#xe64a;</i>");
-	
+    $("ul.friendsChain li a").before("<i class='iconfont'>&#xe64a;</i>");
+    
+    // 移动端固定导航fixed-bug
+    // var viewHight = document.body.clientHeight;
+    // $("#hide").css("height",viewHight+"px");
 
     // 文章详情页点赞
     setInterval(function(){

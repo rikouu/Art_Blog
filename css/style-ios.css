@@ -2548,7 +2548,7 @@ div.btn {
 	line-height:1rem;
 	color:#fff;
 	text-align:center;
-	position:fixed;
+	position: absolute;
 	top:0;
 	left:0;
 	z-index:100;
