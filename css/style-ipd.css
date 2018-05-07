@@ -585,7 +585,8 @@ img {
 	transform:translateX(0px);
 	-ms-transform:translateX(0px);
 	float:none;
-	padding:0 0.24rem
+	padding:0 0.24rem;
+	margin-top:0;
 }
 .continar .continar-left .mod-crumbs{
 	display:none;
@@ -1030,7 +1031,7 @@ div.com-art ul li {
 	font-style:normal;
 	display:inline-block;
 	position:absolute;
-	top:0.01rem;
+	top:0.08rem;
 	left:0;
 	text-align:center;
 	font-weight:normal;
@@ -1063,13 +1064,13 @@ div.com-art ul li {
 	margin-left:0.5rem
 }
 .widget ul li:nth-child(1) em {
-	background:rgb(237,65,56);
+	background:#fd8c84;
 }
 .widget ul li:nth-child(2) em {
-	background:rgb(231,112,100);
+	background:#7fd75a;
 }
 .widget ul li:nth-child(3) em {
-	background:rgb(253,138,97);
+	background:#60c4fd;
 }
 /*热门文章结束*/
 
@@ -2688,11 +2689,12 @@ span.post-like,.img-left span ul li a {
 .tooltip-item {
 	display:none;
 }
-.reward-box-item {
-	float:left;
+.reward-box-item,.reward-box .reward-box-item:nth-child(2) {
+	display: inline-block;
+	margin: 0 1rem;
 }
-.reward-box .reward-box-item:nth-child(2) {
-	float:right;
+.reward-box{
+	text-align: center
 }
 .map,.post-actions,#default-searchbox {
 	display:none;
