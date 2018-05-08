@@ -173,9 +173,12 @@ jQuery(function($) {
 	});
 
 	function musicdown(number){
-		var parameter = musicDown.eq(number).attr("detaName");
-		musicDown.eq(number).find('audio').get(0).src = "http://www.weipxiu.com/wp-content/themes/boke/music/" + parameter + ".mp3";
-		musicDown.eq(number).addClass("active")
+        var objLi = $(".nav ul.music-nav li");
+		var parameter = objLi.eq(number).attr("detaName");
+		objLi.eq(number).find('audio').get(0).src = "http://www.weipxiu.com/wp-content/themes/boke/music/" + parameter + ".mp3";
+		if(number !== 8){
+            objLi.eq(number).addClass("active")
+        }
 	}
 	
 	$(document).keydown(function(event){
@@ -204,6 +207,9 @@ jQuery(function($) {
 			}
 			else if(event.keyCode == 75){
 				musicdown(7)
+            }
+            else if(event.keyCode == 76){
+				musicdown(8)
 			}
 		}
 	});

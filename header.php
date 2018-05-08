@@ -182,7 +182,8 @@
 									  <audio src=""  autoplay="autoplay"></audio>
 									  <p></p>
 									</li>
-									<li class="js_piano_nav_icon mod-header_music-icon hover" title="钢琴节奏">
+									<li detaName="ddd" class="js_piano_nav_icon mod-header_music-icon hover" title="钢琴节奏">
+									<audio src=""  autoplay="autoplay"></audio>
 									  	<i></i>
 									  	<i></i>
 									  	<i></i>

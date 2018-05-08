@@ -218,7 +218,7 @@
     	 	     <div class="text_right">
 	    	 	 	 <h2>
 		    	 	 	 <span><?php the_category() ?><i></i></span>
-		    	 	 	 <a href="<?php the_permalink(); ?>" target="_blank"><?php the_title(); ?></a>
+		    	 	 	 <a href="<?php the_permalink(); ?>" target="_blank" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 	    	 	 	 </h2>
 	    	 	 	 <div class="entry-meta">
 	    	 	 	     <a href="http://www.weipxiu.com">唯品秀</a>
