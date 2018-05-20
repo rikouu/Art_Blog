@@ -312,6 +312,9 @@ jQuery(function($) {
         }
     });
     var obtn = true;
+    $(".btn_menu,.cover").on("touchmove",function(event){
+        event.preventDefault();
+    })
 	$(".btn_menu,.cover").on("touchstart",myFunction);
     function myFunction() {
         $(".os-herder").get(0).classList.toggle("btn");
@@ -325,11 +328,16 @@ jQuery(function($) {
                 "transform": "translateX(0)"
             })
         }
+        if($(".site-search").is(":visible")){
+            $(".os-headertop .site-search").slideToggle(100);
+            $(".xis").find("i").toggleClass("fa-search");
+            $(".xis").find("i").toggleClass("fa-remove")
+        }
         obtn = !obtn
     }
 
     //移动端禁止侧边导航上下滚动start
-    $(".os-herder").on("touchmove",function(event) {
+    $(".os-herder,.site-search").on("touchmove",function(event) {
         //event.stopPropagation();
         event.preventDefault();
     });

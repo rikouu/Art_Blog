@@ -26,6 +26,7 @@ input {
 html {
 	width:100%;
 	font-size:50px;
+	overflow-x: hidden;
 }
 body {
 	background-color:#f6f6f6;
@@ -110,6 +111,8 @@ img {
 	width:100%;
 	background-color:rgba(255,255,255,0.95);
 	display:none;
+	z-index: 1;
+	pointer-events: none;
 }
 .container {
 	position:relative;
@@ -132,6 +135,7 @@ img {
 	font-size:16px;
 	border-radius:2px 0 0 2px;
 	outline:none;
+	pointer-events: auto;
 }
 .search-btn .fa {
 	font-size:16px;
@@ -152,6 +156,7 @@ img {
 	width:1rem;
 	cursor:pointer;
 	float:left;
+	pointer-events: auto;
 }
 .header.hover {
 	position:fixed;
@@ -2557,6 +2562,7 @@ div.btn {
 	left:0;
 	z-index:100;
 	transition:all 0.25s;
+	pointer-events: none;
 }
 .os-headertop .weipxiu_nav{
     color: #fff;
@@ -2573,6 +2579,7 @@ div.btn {
 	background-repeat:no-repeat;
 	background-size:9.4rem 5.6rem;
 	background-position:-8.5rem -1.72rem;
+	pointer-events: auto;
 }
 .os-headertop img {
 	display:block;
@@ -2590,6 +2597,7 @@ div.btn {
 	position:absolute;
 	top:0;
 	right:0;
+	pointer-events: auto;
 }
 .xis i {
 	line-height:1rem;
