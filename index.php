@@ -308,30 +308,30 @@
 		<ul>
 			<li>
 				<p>
-					<strong>周年纪念</strong>
-					<span>热烈庆贺博客上线一周年</span>
-					<em>2017-11-16</em>
+					<strong>主题开源</strong>
+					<span>本博客主题已正式开源了</span>
+					<em>2018-02-20</em>
 				</p>
 			</li>
 			<li>
 				<p>
-					<strong>周年纪念</strong>
-					<span>感谢各位朋友的关注支持</span>
-					<em>2017-11-16</em>
+					<strong>免费授权</strong>
+					<span>永久不盈利原则免费授权</span>
+					<em>2018-02-20</em>
 				</p>
 			</li>
 			<li>
 				<p>
-					<strong>周年纪念</strong>
-					<span>真诚希望接下来的岁月里</span>
-					<em>2017-11-16</em>
+					<strong>免费更新</strong>
+					<span>项目不定期维护更新优化</span>
+					<em>2018-02-20</em>
 				</p>
 			</li>
 			<li>
 				<p>
-					<strong>周年纪念</strong>
-					<span>唯品秀博客永远伴随大家</span>
-					<em>2017-11-16</em>
+					<strong>欢迎使用</strong>
+					<span>欢迎Github克隆下载使用</span>
+					<em>2018-02-20</em>
 				</p>
 			</li>
 		</ul>
