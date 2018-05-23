@@ -115,8 +115,8 @@
     </table>
   </div>
 </div>
-    <!-- 在线客服结束 -->
-  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-2.1.4.min.js"></script>
+<!-- 在线客服结束 -->
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-2.1.4.min.js"></script>
 <?php include_once("baidu_js_push.php") ?>
 <!-- 网站运行时间 -->
 <script>
