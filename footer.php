@@ -210,11 +210,6 @@
 			};
 
 			function fillSpan($ele) {
-				// var content = [
-				//     '<span>',
-				//     [].join.call($ele.html(), '</span><span>'),
-				//     '</span>'
-				// ].join(''); // IE9+
 				var baseContent = $ele.html();
 				var content = '';
 				for (var i = 0, len = baseContent.length; i < len; i++) {
