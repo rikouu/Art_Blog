@@ -11,12 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 	<title>唯品秀&nbsp;–&nbsp;前端开发&nbsp;|&nbsp;web前端技术博客</title>
 	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
-	<!-- 轮播插件开始 -->
-	<!--  HEAD -->
-        <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/img/engine/style.css"
-        media="screen" />
-        <!--  HEAD. -->
-	<!-- 轮播插件结束 -->
+
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="<?php bloginfo('template_url'); ?>/css/style-ios.css">
 	<link rel="stylesheet" type="text/css" media="screen and (min-width:768px) and (max-width:1199px)" href="<?php bloginfo('template_url'); ?>/css/style-ipd.css">
@@ -46,7 +41,7 @@
             <div class="mod-banner__snow_1"></div>
             <div class="mod-banner__snow_2"></div>
         </div> -->
-        <a href="http://www.xuanfengge.com/category/web/img" target="_blank" class="mod-banner__img banner_1" id="banner_img" style="background: url(&quot;http://www.weipxiu.com/wp-content/themes/boke/img/banner-3.jpg&quot;) center center no-repeat;"></a>
+        <a href="http://www.weipxiu.com" target="_blank" class="mod-banner__img banner_1" id="banner_img" style="background: url(&quot;http://www.weipxiu.com/wp-content/themes/boke/images/banner-3.jpg&quot;) center center no-repeat;"></a>
         <div class="mod-banner__navi">
             <div class="js_banner_nav mod-banner_nav"></div>
             <span class="mod-banner__nav-dot"><canvas id="dotCanvas"></canvas></span>
@@ -352,9 +347,6 @@
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/javascript.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/swiper.min.js"></script>
 
-<!-- <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/img/engine/wowslider.js"></script> -->
-<!-- <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/img/engine/script.js"></script> -->
-
 <!-- 轩枫轮播start -->
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/xfg_banner.js"></script>
 <script>
@@ -368,23 +360,23 @@
             width: 1200,
             height: 300,
             images: [{
-                    url: 'http://www.weipxiu.com/wp-content/themes/boke/img/banner-1.jpg',
+                    url: 'http://www.weipxiu.com/wp-content/themes/boke/images/banner-1.jpg',
                     link: 'http://www.weipxiu.com/?cat=29'
                 }, {
-                    url: 'http://www.weipxiu.com/wp-content/themes/boke/img/banner-2.jpg',
+                    url: 'http://www.weipxiu.com/wp-content/themes/boke/images/banner-2.jpg',
                     link: 'http://www.weipxiu.com/'
                 }, {
-                    url: 'http://www.weipxiu.com/wp-content/themes/boke/img/banner-3.jpg',
+                    url: 'http://www.weipxiu.com/wp-content/themes/boke/images/banner-3.jpg',
                     link: 'javascript:;'
                 }, {
-                    url: 'http://www.weipxiu.com/wp-content/themes/boke/img/banner-4.jpg',
+                    url: 'http://www.weipxiu.com/wp-content/themes/boke/images/banner-4.jpg',
                     link: 'javascript:;'
                 }, {
-                    url: 'http://www.weipxiu.com/wp-content/themes/boke/img/banner-5.jpg',
+                    url: 'http://www.weipxiu.com/wp-content/themes/boke/images/banner-5.jpg',
                     link: 'http://www.weipxiu.com/?cat=6'
                 },
                 {
-                    url: 'http://www.weipxiu.com/wp-content/themes/boke/img/banner-6.jpg',
+                    url: 'http://www.weipxiu.com/wp-content/themes/boke/images/banner-6.jpg',
                     link: 'http://www.weipxiu.com/?p=1313'
                 }
             ],
