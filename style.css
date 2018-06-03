@@ -4448,7 +4448,7 @@ Inherited from div.head_avatar_c
 .head_user_data {
 	position:absolute;
 	left:0;
-	z-index:99;
+	z-index:1;
 	background:#fff;
 	margin-top:-29px;
 	padding:5px 10px;
