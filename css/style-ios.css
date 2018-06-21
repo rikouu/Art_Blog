@@ -523,7 +523,7 @@ img {
     }
 }
 
-@-webkit-keyframes playLeft {
+@keyframes playLeft {
     0% {
         -webkit-transform: translateX(-890px);
         opacity: 0
@@ -551,7 +551,7 @@ img {
     }
 }
 
-@-webkit-keyframes playRight {
+@keyframes playRight {
     0% {
         -webkit-transform: translateX(435px);
         opacity: 0
@@ -579,7 +579,7 @@ img {
     }
 }
 
-@-webkit-keyframes Footer {
+@keyframes Footer {
     0% {
         -webkit-transform: translateY(125px);
         opacity: 0
