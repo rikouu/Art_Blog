@@ -630,7 +630,7 @@ img {
 #Logo {
     width: 140px;
     height: 60px;
-    -webkit-transition: .5s;
+    transition: .5s;
     -ms-transition: .5s;
     display: block;
     position: absolute;
@@ -1937,9 +1937,7 @@ h2.title {
     margin-top: 0.2rem;
     color: #333;
     display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    text-align: left
 }
 
 p.data-l {
