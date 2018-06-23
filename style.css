@@ -2394,11 +2394,12 @@ td.line-numbers {
 	padding-top:8px
 }
 .continar-left .log-text a{
-	color: #08c
+	color: #08c;
+	text-decoration: underline;
 }
 .log-text li {
 	margin:10px 0;
-	height:24px;
+	line-height:28px;
 }
 .codecolorer-container * {
 	text-indent:0
@@ -4727,6 +4728,9 @@ code {
     font-size: 14px;
     background-color: #45B6F7;
     margin: 0 7px;
+}
+.continar-left .log-text .post-actions a{
+	text-decoration: none;
 }
 .post-actions .action .fa {
     font-size: 14px;

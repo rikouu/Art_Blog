@@ -840,7 +840,6 @@ img {
 
 .wpm_form .wpm_email,
 .wpm_form .wpm_submit {
-
     display: inline-block;
 }
 
@@ -2002,6 +2001,9 @@ td.line-numbers {
 .log-text * {
     font-size: 0.3rem;
     line-height: 0.5rem;
+}
+
+.log-text p{
     text-indent: 2em
 }
 
