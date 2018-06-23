@@ -2397,7 +2397,8 @@ td.line-numbers {
 	color: #08c
 }
 .log-text li {
-	margin:10px 0
+	margin:10px 0;
+	height:24px;
 }
 .codecolorer-container * {
 	text-indent:0
