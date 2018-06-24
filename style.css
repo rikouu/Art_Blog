@@ -515,7 +515,8 @@ to {
 	height:100%;
 	float:right;
 	font-size: 0;
-    text-align: right;
+	text-align: right;
+	overflow: hidden;
 }
 .topbar ul li {
     padding: 0 12px;
@@ -629,9 +630,9 @@ to {
 	float:left;
 	height:100%;
 	line-height:32px;
-	-webkit-perspective:100px;
-	-ms-perspective:100px;
-	perspective:100px;
+	/* -webkit-perspective:100px; */
+	/* -ms-perspective:100px; */
+	/* perspective:100px; */
 	position:relative;
 	transition:all 1s;
 }
@@ -654,17 +655,16 @@ to {
 }
 .nav ul li > a {
 	float:left;
-	position:relative;
 	width:100%;
 	padding:0 10px;
-	/*height: 100%;*/
 	position:relative;
 	-webkit-transform-style:preserve-3d;
 	-ms-transform-style:preserve-3d;
 	-moz-transform-style:preserve-3d;
 	transform-style:preserve-3d;
 	transition:all .5s;
-	transform-origin:center center -12px;
+	transform-origin:center center -14px;
+	height:25px;
 }
 .nav ul li audio {
 	display:none
