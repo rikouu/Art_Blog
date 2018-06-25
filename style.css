@@ -323,14 +323,14 @@ img:hover {
 }
 /* 轩枫轮播end */
 
-@-webkit-keyframes hue {
+@keyframes hue {
 	0% {
 	-webkit-filter:hue-rotate(0deg)
 }
 to {
 	-webkit-filter:hue-rotate(-1turn)
 }
-}@-webkit-keyframes leftIn {
+}@keyframes leftIn {
 	0%,60%,75%,90%,to {
 	-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);
 	animation-timing-function:cubic-bezier(.215,.61,.355,1)
@@ -1034,7 +1034,7 @@ to {
 	-ms-transform:translateX(0);
 	opacity:1
 }
-}@-webkit-keyframes Footer {
+}@keyframes Footer {
 	0% {
 	-webkit-transform:translateY(125px);
 	opacity:0
@@ -1052,7 +1052,7 @@ to {
 	-ms-transform:translateY(0);
 	opacity:1
 }
-}@-webkit-keyframes bar {
+}@keyframes bar {
 	0% {
 	-webkit-transform:translateY(-12px)
 }
@@ -1068,7 +1068,7 @@ to {
 	-ms-transform:translateY(0);
 	-ms-transform:rotate(360deg)
 }
-}@-webkit-keyframes bar1 {
+}@keyframes bar1 {
 	0% {
 	-webkit-transform:rotate(0)
 }
