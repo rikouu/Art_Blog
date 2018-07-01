@@ -87,7 +87,7 @@
                                   <li><a href="/?cat=29" target="_blank">前端工具箱</a></li>
 								  <li><a href="/?cat=10" target="_blank">联系我们</a></li>
 								  <li>
-								  	<a href="http://www.5ifxw.com/vipshipin/" target="_blank">
+								  	<a href="http://www.qmaile.com/" target="_blank">
 								  		Vip视频
 								  	</a>
 								  	<!-- <a href="http://www.weipxiu.com/sly.html" target="_blank">
