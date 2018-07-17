@@ -8,6 +8,7 @@
     color: #444;
     font-size: 14px;
     text-decoration: none;
+	font-weight: lighter;
     /*-webkit-touch-callout: none;长时间按住页面出现闪退,
 	如果启用，那么图片默认长按存储到相册功能被禁止*/
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
@@ -1407,7 +1408,7 @@ div.com-art ul li {
 }
 
 .container a {
-    font-size: 0.28rem;
+    font-size: 0.24rem;
     color: #999;
     transition: .35s
 }
@@ -1415,7 +1416,7 @@ div.com-art ul li {
 .container p,
 .container span {
     margin: 5px 0;
-    font-size: 0.28rem;
+    font-size: 0.24rem;
     color: #999;
     line-height: 18px;
     text-align: center;

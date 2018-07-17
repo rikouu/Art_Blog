@@ -105,7 +105,7 @@
                             <?php _e('Not Found'); ?>
                         </h2>
                         <?php endif; ?>
-                        <p class="copy">「一年博客，如果觉得我的文章对您有用，请帮助本站成长」</p>
+                        <p class="copy">「两年博客，如果觉得我的文章对您有用，请帮助本站成长」</p>
                         <!--文章打赏开始-->
                         <!-- PC端start -->
                         <div class="post-actions">
