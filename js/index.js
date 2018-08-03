@@ -16,6 +16,16 @@ jQuery(function($) {
         //$(".continar-right").css("transform", "translateX(0)")
     }
 
+    // PC端导航通过点击跳转
+    $(".music-nav li").click(function(){
+        var $href = $(this).find("span").eq(0).attr("data-href")
+        if($href != '/'){
+            window.open("http://www.weipxiu.com/" + $href);
+        }else{
+            window.open("http://www.weipxiu.com/");
+        }
+    })
+
 	//给友情链接列表增加iconfont
     $("ul.friendsChain li a").before("<i class='iconfont'>&#xe64a;</i>");
     

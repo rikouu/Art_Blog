@@ -833,10 +833,12 @@ img:hover {
 .nav ul li.action a span i {
 	color: #19ACF7
 }
-
+.nav ul.music-nav li{
+	cursor: pointer;
+}
 .nav ul li:hover a span {
 	color: #444;
-	transition: all .35s
+	transition: all .35s;
 }
 
 .nav ul li:hover a span i {
