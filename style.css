@@ -1695,7 +1695,6 @@ i {
 
 .text h2 a {
 	font: lighter 18px Menlo, PingFangSC-Regular, Microsoft Yahe;
-	color: #333;
 	transition: all .35s;
 	font-weight: lighter;
 }
