@@ -52,7 +52,7 @@
             }
         }
     </style>
-
+</head>
     <body>
         <!--头部文件引用开始-->
         <?php get_header();?>
