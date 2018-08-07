@@ -1606,7 +1606,7 @@ i {
 	height: 195px;
 	padding: 15px;
 	position: relative;
-	border: 1px solid #eaeaea;
+	border: 1px solid #eee;
 	transition: all .35s;
 	border-bottom: 1px solid transparent;
 	-webkit-transition: all .2s linear;
@@ -2009,7 +2009,7 @@ i {
 	line-height: 40px;
 	text-align: center;
 	padding: 1px 0;
-	border-right: 1px solid #ddd;
+	border-right: 1px solid #eee;
 	border-radius: 2px 0 0 0;
 	text-indent: 0;
 }
@@ -5165,12 +5165,12 @@ ul.post-categories li:first-child {
 #cyReping .reping-list .reping-content {
 	margin: 0 0 5px;
 	display: block;
-	border-bottom: 1px dotted #ccc;
+	border-bottom: 1px dotted #eee;
 	padding: 0 0 4px !important;
 }
 
 #cyReping .reping-list .list-item {
-	border-bottom: 1px solid #ccc !important
+	border-bottom: 1px solid #eee !important
 }
 
 #cyReping .reping-list .list-item:last-child {
