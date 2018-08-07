@@ -2,7 +2,7 @@
     <h3>前端简介</h3>
     <video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload  width="328" height="185" style="margin-top:0"
         poster="<?php bloginfo('template_url'); ?>/images/s1.png" width="328" height="185" data-setup="{}">
-        <source src="<?php bloginfo('template_url'); ?>/music/2018.mp4" type="video/mp4">
+        <source src="<?php bloginfo('template_url'); ?>/music/2018.mp4" type="video/mp4"></source>
         <p class="vjs-no-js"> 要查看此视频，请启用JavaScript，并考虑升级到Web浏览器版本。 <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a> </p>
     </video>
     <img src="<?php bloginfo('template_url'); ?>/images/s1.png" width="328" height="185" alt="" style="width:100%;display: none; margin-top:10px;background-size: 330px 185px;">

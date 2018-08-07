@@ -238,8 +238,9 @@
 						<span><i class="iconfont icon-shijian1"></i>&nbsp;<?php the_time('Y年m月d日') ?></span>
 						<span>
 							<a href="<?php the_permalink(); ?> ">
-								<i class="iconfont icon-liulan"></i>&nbsp;<?php echo getPostViews(get_the_ID()); ?>℃</span>
+								<i class="iconfont icon-liulan"></i>&nbsp;<?php echo getPostViews(get_the_ID()); ?>℃
 							</a>
+						</span>
 						<span class="comm">
 							<a href="<?php the_permalink(); ?> ">
 								<i class="iconfont icon-pinglun2"></i>
