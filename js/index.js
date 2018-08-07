@@ -8,7 +8,7 @@ jQuery(function($) {
     }
 
     // PC端导航通过点击跳转
-    $(".music-nav li").click(function(){
+    $(".nav ul.music-nav li:not(.mod-header_music-icon)").click(function(){
         var $href = $(this).find("span").eq(0).attr("data-href")
         if($href != '/'){
             window.open("http://www.weipxiu.com/" + $href);
