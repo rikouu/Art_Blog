@@ -1,70 +1,70 @@
 $.noConflict();
-jQuery(function($) {
+jQuery(function ($) {
     if (window.location.href != "http://www.weipxiu.com" && window.location.href != "http://www.weipxiu.com/") {
         $("#js_banner,#js_banner_1").remove();
         $(".continar-right .aside .video-js").remove();
         $(".continar-right .aside .video-js").remove();
-        $(".continar-right .aside > img").css('display','block');
+        $(".continar-right .aside > img").css('display', 'block');
     }
 
     // PC端导航通过点击跳转
-    $(".nav ul.music-nav li:not(.mod-header_music-icon)").click(function(){
+    $(".nav ul.music-nav li:not(.mod-header_music-icon)").click(function () {
         var $href = $(this).find("span").eq(0).attr("data-href")
-        if($href != '/'){
+        if ($href != '/') {
             window.open("http://www.weipxiu.com/" + $href);
-        }else{
+        } else {
             window.open("http://www.weipxiu.com/");
         }
     })
 
-	//给友情链接列表增加iconfont
+    //给友情链接列表增加iconfont
     $("ul.friendsChain li a").before("<i class='iconfont'>&#xe64a;</i>");
-    
+
     // 移动端固定导航fixed-bug
     // var viewHight = document.body.clientHeight;
     // $("#hide").css("height",viewHight+"px");
 
     // 文章详情页点赞
-    setInterval(function(){
+    setInterval(function () {
         $(".page-reward .page-reward-btn .tooltip-item font,.page-reward .page-reward-btn .tooltip-item a").toggleClass("s_show");
-    },2000)
+    }, 2000)
     //点赞
-    $.fn.postLike = function() {
+    $.fn.postLike = function () {
         if ($(this).hasClass('done')) {
             return false;
         } else {
             $(this).addClass('done');
             var id = $(this).data("id"),
-            action = $(this).data('action'),
-            rateHolder = $(this).children('.count');
+                action = $(this).data('action'),
+                rateHolder = $(this).children('.count');
             var ajax_data = {
                 action: "bigfa_like",
                 um_id: id,
                 um_action: action
             };
             $.post("/wp-admin/admin-ajax.php", ajax_data,
-            function(data) {
-                $(rateHolder).html(data);
-            });
+                function (data) {
+                    $(rateHolder).html(data);
+                });
             return false;
         }
     };
     $(document).on("click", ".favorite",
-    function() {
-        $(this).postLike();
-    }); 
+        function () {
+            $(this).postLike();
+        });
 
     // 针对畅言傻逼作transform兼容
-    $(".continar-left").css("transform","none");
+    $(".continar-left").css("transform", "none");
     var mBenu = document.getElementById('menu');
-    document.oncontextmenu = function(ev) {
+    document.oncontextmenu = function (ev) {
         var ev = ev || event;
         mBenu.style.display = 'block';
         mBenu.style.left = ev.pageX - 85 + 'px';
         mBenu.style.top = ev.pageY - 24 + 'px';
         return false
     }
-    document.onclick = function() {
+    document.onclick = function () {
         mBenu.style.display = 'none'
     }
     /*document.onkeydown = function(ev) {
@@ -77,21 +77,21 @@ jQuery(function($) {
         }
     }*/
     var searchShow = true;
-    $(".navto-search a").click(function() {
-        $(".site-search.active.pc").stop(true, true).slideToggle(150,function(){
-            if($(this).is(":visible") && $(".nav ul.music-nav li>p").css("opacity") == 1){
+    $(".navto-search a").click(function () {
+        $(".site-search.active.pc").stop(true, true).slideToggle(150, function () {
+            if ($(this).is(":visible") && $(".nav ul.music-nav li>p").css("opacity") == 1) {
                 $('.mod-header_music-icon').trigger("click");
-            }else if($(this).is(":hidden") && $(".nav ul.music-nav li>p").css("opacity") == 0){
+            } else if ($(this).is(":hidden") && $(".nav ul.music-nav li>p").css("opacity") == 0) {
                 $('.mod-header_music-icon').trigger("click");
-            }else if($(".nav ul.music-nav li>p").css("opacity") == 0){
+            } else if ($(".nav ul.music-nav li>p").css("opacity") == 0) {
                 return false;
             }
         });
-        if(searchShow){
-            $('.header').css('z-index','11');
+        if (searchShow) {
+            $('.header').css('z-index', '11');
             searchShow = false;
-        }else{
-            $('.header').css('z-index','10');
+        } else {
+            $('.header').css('z-index', '10');
             searchShow = true;
         }
         $(this).find("i").toggleClass("fa-search");
@@ -100,7 +100,7 @@ jQuery(function($) {
 
     // 背景音乐start
     var off = true;
-    $(".control").click(function() {
+    $(".control").click(function () {
         if (off) {
             $("#music").get(0).play()
         } else {
@@ -110,7 +110,7 @@ jQuery(function($) {
         off = !off
     });
     //判断当前页面是否存在背景音乐播放器，如果存在的话将声音大小调制到50%
-    if(document.getElementById("music")){
+    if (document.getElementById("music")) {
         document.getElementById("music").volume = 0.5;
     }
     // 背景音乐end
@@ -118,169 +118,184 @@ jQuery(function($) {
     $(".header").addClass("Top");
 
     // 跳动的Logo start
-    $("#Logo").hover(function() {
-        $("#dj li").css("animation", "move .5s alternate");
-    },
-    function() {
-        $('#dj li').attr("style", "");
-    });
+    $("#Logo").hover(function () {
+            $("#dj li").css("animation", "move .5s alternate");
+        },
+        function () {
+            $('#dj li').attr("style", "");
+        });
     // 跳动的Logo end
 
     // 跳动音符start
     var off_y = true;
-    $(".mod-header_music-icon").click(function(){
-        clearInterval(navMinHideSetTime);//清除鼠标离开li时候的定时器
-        if(off_y){
-           $(this).removeClass("hover"); 
-           $(".nav ul.music-nav li > p").css("opacity","0");
-           $(this).attr("title","钢琴音效NO");
-        }
-        else{
-           $(this).addClass("hover");
-           $(this).attr("title","钢琴音效OFF");
-           $(".nav ul.music-nav li > p").css("opacity","1");
+    $(".mod-header_music-icon").click(function () {
+        clearInterval(navMinHideSetTime); //清除鼠标离开li时候的定时器
+        if (off_y) {
+            $(this).removeClass("hover");
+            $(".nav ul.music-nav li > p").css("opacity", "0");
+            $(this).attr("title", "钢琴音效NO");
+        } else {
+            $(this).addClass("hover");
+            $(this).attr("title", "钢琴音效OFF");
+            $(".nav ul.music-nav li > p").css("opacity", "1");
         }
         off_y = !off_y;
     });
     // 跳动音符end
 
-	//钢琴导航start
-	var $index = null;
+    //钢琴导航start
+    var $index = null;
     var musicObj = null;
     var navMinHideSetTime = null;
-	var musicDown = $(".nav ul.music-nav li:not(.mod-header_music-icon)");
-    $(".nav ul.music-nav li:not(.mod-header_music-icon)").hover(function(event) {
-        $(this).parents(".header").css("z-index","11");//默认下方轮播层级高于头部
-		$index = $(this).index();
-        var deta = $(this).attr("detaName");
-		musicObj= $(".nav ul.music-nav li:not(.mod-header_music-icon)").eq($index).find('audio');
-        if(off_y){
-			$(this).addClass("active");
-			musicObj.get(0).src = "http://www.weipxiu.com/wp-content/themes/boke/music/" + deta + ".mp3";
-        }else{
-            musicObj.get(0).src = "";
-        }
-        event.stopPropagation();
-    },
-    function() {
-        clearInterval(navMinHideSetTime);
-        navMinHideSetTime = setInterval(function(){//不断检测鼠标移开后下拉二级菜单是否完好影藏
+    var musicDown = $(".nav ul.music-nav li:not(.mod-header_music-icon)");
+    $(".nav ul.music-nav li:not(.mod-header_music-icon)").hover(function (event) {
+            $(this).parents(".header").css("z-index", "11"); //默认下方轮播层级高于头部
+            $index = $(this).index();
+            var deta = $(this).attr("detaName");
+            musicObj = $(".nav ul.music-nav li:not(.mod-header_music-icon)").eq($index).find('audio');
+            if (off_y) {
+                $(this).addClass("active");
+                musicObj.get(0).src = "http://www.weipxiu.com/wp-content/themes/boke/music/" + deta + ".mp3";
+            } else {
+                musicObj.get(0).src = "";
+            }
+            event.stopPropagation();
+        },
+        function () {
+            clearInterval(navMinHideSetTime);
+            navMinHideSetTime = setInterval(function () { //不断检测鼠标移开后下拉二级菜单是否完好影藏
                 if (searchShow && $(".nav-min").eq(0).css("opacity") == 0 && $(".nav-min").eq(1).css("opacity") == 0) {
-                    $(".header").css("z-index","10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
+                    $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
                     clearInterval(navMinHideSetTime);
                 }
-            },1000)
-		$(this).removeClass("active");
-	});
+            }, 1000)
+            $(this).removeClass("active");
+        });
 
-	function musicdown(number){
+    function musicdown(number) {
         var objLi = $(".nav ul.music-nav li");
-		var parameter = objLi.eq(number).attr("detaName");
-		objLi.eq(number).find('audio').get(0).src = "http://www.weipxiu.com/wp-content/themes/boke/music/" + parameter + ".mp3";
-		if(number !== 8){
+        var parameter = objLi.eq(number).attr("detaName");
+        objLi.eq(number).find('audio').get(0).src = "http://www.weipxiu.com/wp-content/themes/boke/music/" + parameter + ".mp3";
+        if (number !== 8) {
             objLi.eq(number).addClass("active")
         }
-	}
-	
-	$(document).keydown(function(event){
-		if(off_y){
-			//a65 s83 d68 f70 g71 h72 j74 k75 l76
-			if(event.keyCode == 65){
-				musicdown(0)
+    }
+
+    $(document).keydown(function (event) {
+        if (off_y) {
+            //a65 s83 d68 f70 g71 h72 j74 k75 l76
+            if (event.keyCode == 65) {
+                musicdown(0)
+            } else if (event.keyCode == 83) {
+                musicdown(1)
+            } else if (event.keyCode == 68) {
+                musicdown(2)
+            } else if (event.keyCode == 70) {
+                musicdown(3)
+            } else if (event.keyCode == 71) {
+                musicdown(4)
+            } else if (event.keyCode == 72) {
+                musicdown(5)
+            } else if (event.keyCode == 74) {
+                musicdown(6)
+            } else if (event.keyCode == 75) {
+                musicdown(7)
+            } else if (event.keyCode == 76) {
+                musicdown(8)
             }
-            else if(event.keyCode == 83){
-				musicdown(1)
-			}
-			else if(event.keyCode == 68){
-				musicdown(2)
-			}
-			else if(event.keyCode == 70){
-				musicdown(3)
-			}
-			else if(event.keyCode == 71){
-				musicdown(4)
-			}
-			else if(event.keyCode == 72){
-				musicdown(5)
-			}
-			else if(event.keyCode == 74){
-				musicdown(6)
-			}
-			else if(event.keyCode == 75){
-				musicdown(7)
-            }
-            else if(event.keyCode == 76){
-				musicdown(8)
-			}
-		}
-	});
-	$(document).keyup(function(){
-		setTimeout(function(){
+        }
+    });
+    $(document).keyup(function () {
+        setTimeout(function () {
             musicDown.removeClass("active")
-        },150);
-	});
-	//钢琴导航end
+        }, 150);
+    });
+    //钢琴导航end
 
     //PC二级菜单start
     var time = null;
-    $(".front").hover(function(event) {
+    $(".front").hover(function (event) {
         clearTimeout(time);
-        $(".header-conter .nav-min").eq(0).css({"opacity": "1","visibility": "visible","top": "49px"});
-        $(".header-conter .nav-min").eq(1).css({"opacity": "0","visibility": "hidden","top": "70px"});
+        $(".header-conter .nav-min").eq(0).css({
+            "opacity": "1",
+            "visibility": "visible",
+            "top": "49px"
+        });
+        $(".header-conter .nav-min").eq(1).css({
+            "opacity": "0",
+            "visibility": "hidden",
+            "top": "70px"
+        });
         event.stopPropagation();
-    },function(){
+    }, function () {
         clearTimeout(time);
-        time = setTimeout(function(){
-            $(".header-conter .nav-min").css({"opacity": "0","visibility": "hidden","top": "70px"});
-        },0);
-        
+        time = setTimeout(function () {
+            $(".header-conter .nav-min").css({
+                "opacity": "0",
+                "visibility": "hidden",
+                "top": "70px"
+            });
+        }, 0);
+
     });
-    $(".works").hover(function(event) {
+    $(".works").hover(function (event) {
         clearTimeout(time);
-        $(".header-conter .nav-min").eq(1).css({"opacity": "1","visibility": "visible","top": "49px"});
-        $(".header-conter .nav-min").eq(0).css({"opacity": "0","visibility": "hidden","top": "70px"});
+        $(".header-conter .nav-min").eq(1).css({
+            "opacity": "1",
+            "visibility": "visible",
+            "top": "49px"
+        });
+        $(".header-conter .nav-min").eq(0).css({
+            "opacity": "0",
+            "visibility": "hidden",
+            "top": "70px"
+        });
         event.stopPropagation();
-    },function(){
+    }, function () {
         clearTimeout(time);
-        time = setTimeout(function(){
-            $(".header-conter .nav-min").css({"opacity": "0","visibility": "hidden","top": "70px"});
-        },0);
+        time = setTimeout(function () {
+            $(".header-conter .nav-min").css({
+                "opacity": "0",
+                "visibility": "hidden",
+                "top": "70px"
+            });
+        }, 0);
     });
     //PC二级菜单end
 
-   
-    $(".aircraft").click(function() {
-        $('body,html').animate({
-            scrollTop: 0
-        },
-        1200);
-        $(this).animate({
-            "bottom": "500px",
-            "opacity": "0"
-        },
-        1000,
-        function() {
-            setTimeout(function() {
-                $(".aircraft").css({
-                    "bottom": "50px",
-                    "opacity": "1"
-                })
-            },
-            500)
-        })
-    });
-    $("#wuyousujian-kefuDv").hover(function() {
-        $("#wuyousujian-kefuDv").stop().animate({
-            "right": "-100px"
-        },500)
-    },
-    function() {
-        $("#wuyousujian-kefuDv").stop().animate({
-            "right": "-196px"
-        },500)
-    });
 
-    $(document).scroll(function() {
+    $(".aircraft").click(function () {
+        $('body,html').animate({
+                scrollTop: 0
+            },
+            1200);
+        $(this).animate({
+                "bottom": "500px",
+                "opacity": "0"
+            },
+            1000,
+            function () {
+                setTimeout(function () {
+                        $(".aircraft").css({
+                            "bottom": "50px",
+                            "opacity": "1"
+                        })
+                    },
+                    500)
+            })
+    });
+    $("#wuyousujian-kefuDv").hover(function () {
+            $("#wuyousujian-kefuDv").stop().animate({
+                "right": "-100px"
+            }, 500)
+        },
+        function () {
+            $("#wuyousujian-kefuDv").stop().animate({
+                "right": "-196px"
+            }, 500)
+        });
+
+    $(document).scroll(function () {
         var scrollTop = $(document).scrollTop();
         if (scrollTop > 500) {
             $(".aircraft").css({
@@ -305,7 +320,7 @@ jQuery(function($) {
             $(".header").removeClass("hover")
         }
     });
-    $(".continar .continar-left-top > span").each(function() {
+    $(".continar .continar-left-top > span").each(function () {
         var maxwidth = 115;
         if ($(this).text().length > maxwidth) {
             $(this).text($(this).text().substring(0, maxwidth));
@@ -313,10 +328,11 @@ jQuery(function($) {
         }
     });
     var obtn = true;
-    $(".btn_menu,.cover").on("touchmove",function(event){
+    $(".btn_menu,.cover").on("touchmove", function (event) {
         event.preventDefault();
     })
-	$(".btn_menu,.cover").on("touchstart",myFunction);
+    $(".btn_menu,.cover").on("touchstart", myFunction);
+
     function myFunction() {
         $(".os-herder").get(0).classList.toggle("btn");
         $(".cover").toggle();
@@ -329,7 +345,7 @@ jQuery(function($) {
                 "transform": "translateX(0)"
             })
         }
-        if($(".site-search").is(":visible")){
+        if ($(".site-search").is(":visible")) {
             $(".os-headertop .site-search").slideToggle(100);
             $(".xis").find("i").toggleClass("fa-search");
             $(".xis").find("i").toggleClass("fa-remove")
@@ -338,35 +354,35 @@ jQuery(function($) {
     }
 
     //移动端禁止侧边导航上下滚动start
-    $(".os-herder,.site-search").on("touchmove",function(event) {
+    $(".os-herder,.site-search").on("touchmove", function (event) {
         //event.stopPropagation();
         event.preventDefault();
     });
     //移动端禁止侧边导航上下滚动end
 
-	//禁止ios11自带浏览器缩放功能start
-	document.addEventListener('touchstart',function (event) {  
-	if(event.touches.length>1){  
-			event.preventDefault();  
-		}  
-	})  
-	var lastTouchEnd=0;  
-	document.addEventListener('touchend',function (event) {  
-		var now=(new Date()).getTime();  
-		if(now-lastTouchEnd<=300){  
-			event.preventDefault();  
-		}  
-		lastTouchEnd=now;  
-	},false)  
-	//禁止ios11自带浏览器缩放功能end
+    //禁止ios11自带浏览器缩放功能start
+    document.addEventListener('touchstart', function (event) {
+        if (event.touches.length > 1) {
+            event.preventDefault();
+        }
+    })
+    var lastTouchEnd = 0;
+    document.addEventListener('touchend', function (event) {
+        var now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+        }
+        lastTouchEnd = now;
+    }, false)
+    //禁止ios11自带浏览器缩放功能end
 
     //移动端头部下拉搜索start
-    $(".xis").on("touchstart",function(){
+    $(".xis").on("touchstart", function () {
         $(".os-headertop .site-search").slideToggle(100);
         $(this).find("i").toggleClass("fa-search");
         $(this).find("i").toggleClass("fa-remove")
     });
-	//移动端头部下拉搜索end
+    //移动端头部下拉搜索end
 
     if ($("html,body").width() < 960) {
         $(".nav-s1 > a").html("给我留言");
@@ -379,31 +395,37 @@ jQuery(function($) {
     $(".clearfix img").hide();
 
     // 移动端二级菜单导航start
-    $("ul.slide-left li").on("touchstart",function(){
-       $(this).find(".slide_slect").stop().slideToggle();
+    $("ul.slide-left li").on("touchstart", function () {
+        $(this).find(".slide_slect").stop().slideToggle();
         $(this).find(".iconfont_click").toggleClass("icon-xiajiantou");
-        $(this).find(".iconfont_click").toggleClass("icon-shangjiantou"); 
+        $(this).find(".iconfont_click").toggleClass("icon-shangjiantou");
     })
     // 移动端二级菜单导航end
 
     //留言板手风琴start
-    $(".accordion .accordion_center ul li").hover(function(){
-        $(this).stop().animate({"width":"340px"}).siblings("li").stop().animate({"width":"166px"});
+    $(".accordion .accordion_center ul li").hover(function () {
+        $(this).stop().animate({
+            "width": "340px"
+        }).siblings("li").stop().animate({
+            "width": "166px"
+        });
         $(this).find(".slide-item").stop().fadeOut();
-        $(this).find(".mask").stop(true,true).fadeIn();
-        $(".accordion_center ul li .slide-item .iconfont").css("animation","arrow_move1 1s .5s infinite alternate");
+        $(this).find(".mask").stop(true, true).fadeIn();
+        $(".accordion_center ul li .slide-item .iconfont").css("animation", "arrow_move1 1s .5s infinite alternate");
         //上：暂停首页iconfont动画
         return false;
-    },function(){
+    }, function () {
         $(this).find(".slide-item").fadeIn();
-        $(this).find(".mask").stop(true,false).fadeOut();//鼠标离开过后，动画暂停，切不需要完成
+        $(this).find(".mask").stop(true, false).fadeOut(); //鼠标离开过后，动画暂停，切不需要完成
     });
 
-    $(".accordion .accordion_center").mouseleave(function(){
-        $(".accordion .accordion_center ul li").stop().animate({"width":"200px"});
+    $(".accordion .accordion_center").mouseleave(function () {
+        $(".accordion .accordion_center ul li").stop().animate({
+            "width": "200px"
+        });
         $(".accordion .accordion_center ul li").find(".slide-item").fadeIn();
         $(".accordion .accordion_center ul li").find(".mask").fadeOut();
-        $(".accordion_center ul li .slide-item .iconfont").css("animation","arrow_move 1s .5s infinite alternate");
+        $(".accordion_center ul li .slide-item .iconfont").css("animation", "arrow_move 1s .5s infinite alternate");
         //上：开启首页iconfont动画，修复因为鼠标放上li上去导致动画停止后的bug
     });
     //留言板手风琴end
