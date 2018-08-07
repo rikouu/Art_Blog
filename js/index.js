@@ -1,19 +1,10 @@
 $.noConflict();
 jQuery(function($) {
-    if (window.location.href !== "http://www.weipxiu.com" && window.location.href !== "http://www.weipxiu.com/") {
+    if (window.location.href != "http://www.weipxiu.com" && window.location.href != "http://www.weipxiu.com/") {
         $("#js_banner,#js_banner_1").remove();
         $(".continar-right .aside .video-js").remove();
         $(".continar-right .aside .video-js").remove();
         $(".continar-right .aside > img").css('display','block');
-        //$(".continar .continar-left").css("WebkitTransform", "translateX(0px)");
-        //$(".continar .continar-left").css("MsTransform", "translateX(0px)");
-        //$(".continar .continar-left").css("transform", "translateX(0px)");
-        //$(".continar .continar-left").css({
-            //"opacity": "1"
-        //});
-        //$(".continar-right").css("WebkitTransform", "translateX(0)");
-        //$(".continar-right").css("MsTransform", "translateX(0)");
-        //$(".continar-right").css("transform", "translateX(0)")
     }
 
     // PC端导航通过点击跳转
