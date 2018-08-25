@@ -79,8 +79,8 @@
                     <p class="wangwang-names" style="margin-bottom:7px">&nbsp;QQ在线交流</p>
                     <div class="qqSmall">
                       <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=343049466&site=qq&menu=yes">
-                        <img border="0" width="77" height="22" src="<?php bloginfo('template_url'); ?>/images/zaixian_qq.gif"
-                          alt="点击这里给我发消息" title="点击这里给我发消息" />
+                        <img border="0" width="77" height="22" src="<?php bloginfo('template_url'); ?>/images/zaixian_qq.gif" alt="点击这里给我发消息" title="点击这里给我发消息"
+                        />
                       </a>
                     </div>
                   </td>
@@ -89,8 +89,7 @@
                   <td>
                     <div class="qqSmall">
                       <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=343049466&site=qq&menu=yes">
-                        <img border="0" src="<?php bloginfo('template_url'); ?>/images/zaixian_qq.gif" alt="点击这里给我发消息" title="点击这里给我发消息"
-                        />
+                        <img border="0" src="<?php bloginfo('template_url'); ?>/images/zaixian_qq.gif" alt="点击这里给我发消息" title="点击这里给我发消息" />
                       </a>
                     </div>
                   </td>
@@ -202,7 +201,7 @@
 	 }           
 	 else {             
 	   echo "<script>$('#username a:lt(3)').show();
-     $('#username a:gt(2)').hide();</script>";           
+      $('#username a:gt(2)').hide();</script>";           
 	   };  
 ?>
 <!-- 判断用户当前是否登录 结束 -->
@@ -250,8 +249,7 @@
         var baseContent = $ele.html();
         var content = '';
         for (var i = 0, len = baseContent.length; i < len; i++) {
-          // content += '<span>' + baseContent[i] + '</span>' // IE8+
-          content += '<span>' + baseContent.substr(i, 1) + '</span>' // 兼容到IE6...
+          content += '<span>' + baseContent.substr(i, 1) + '</span>' 
         }
         $ele.html(content);
         var positionArr = []; //存放原始位置
@@ -260,7 +258,7 @@
           var position = $span.position();
           positionArr.push(position);
           $span.css({
-            top: 0 + "px", //源代码：top: position.top + "px",
+            top: 0 + "px", 
             left: position.left + "px"
           });
           setTimeout(function () {
@@ -323,9 +321,9 @@
             $(this).stop(true, false).animate({
               top: 0 + "px" //源代码：top: positionArr[index].top + "px"
             }, {
-              duration: opt.duration,
-              easing: "easeOutElastic"
-            });
+                duration: opt.duration,
+                easing: "easeOutElastic"
+              });
           });
         });
       };
