@@ -66,7 +66,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <div class="telNo" id="txtTelNo">&nbsp;182XXXX8470</div>
+                    <div class="telNo" id="txtTelNo">&nbsp;182****8470</div>
                   </td>
                 </tr>
                 <tr>
