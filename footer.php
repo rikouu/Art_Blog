@@ -132,7 +132,7 @@
                       <a class="qq-kefu-qrCode" id="qq-kefu-qrCode" href="javascript:;"></a>
                       <a class="qq-kefu-backUp-2" id="qq-kefu-backUp" href="javascript:;"></a>
                       <div class="qqkefu-qrcode-box" pos="2">
-                        <img width="150" height="100" src="http://pan.baidu.com/share/qrcode?w=150&amp;h=150&amp;url=http://5usujian.com">
+                        <!-- <img width="150" height="100" src="http://pan.baidu.com/share/qrcode?w=150&amp;h=150&amp;url=http://5usujian.com"> -->
                       </div>
                     </div>
                   </td>
