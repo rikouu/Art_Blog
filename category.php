@@ -83,8 +83,9 @@
 							<span>
 								<a href="<?php the_permalink(); ?> ">
 									<i class="iconfont icon-liulan"></i>&nbsp;
-									<?php echo getPostViews(get_the_ID()); ?>℃</span>
+									<?php echo getPostViews(get_the_ID()); ?>℃
 							</a>
+							</span>
 							<span class="comm">
 								<a href="<?php the_permalink(); ?> ">
 									<i class="iconfont icon-pinglun2"></i>
