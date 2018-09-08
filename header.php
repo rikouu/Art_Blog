@@ -66,8 +66,8 @@
 						          		}
 					          	  	?>
 					          	</a>
-					          	<!-- <a href="http://www.weipxiu.com/wp-admin/" style="display: none; color:#fff" target="_blank"><i class="iconfont" style="color:#fff">&#xe654;</i>会员中心 -->
-					          	</a>
+					          	<!-- <a href="http://www.weipxiu.com/wp-admin/" style="display: none; color:#fff" target="_blank"><i class="iconfont" style="color:#fff">&#xe654;</i>会员中心 
+					          	</a>-->
 			              </div>
 			              <div class="topbar">
 							  <div class="notice">
@@ -144,7 +144,7 @@
 									<li detaName="fa" class="<?php if ( (is_category('1') || in_category('1')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="/?cat=1" target="_blank">
 										  <span data-href="category/timemachine">时光机</span>
-										  <span data-href="category/timemachine"></i>时光机</span>
+										  <span data-href="category/timemachine">时光机</span>
 									  </a>
 									  <audio src="" autoplay="autoplay"></audio>
 									  <!-- <img src="<?php bloginfo('template_url'); ?>/images/new.png" alt="" class="new"> -->
