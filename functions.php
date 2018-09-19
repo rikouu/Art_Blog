@@ -21,7 +21,7 @@ if ( function_exists('register_sidebar') )
 <?php  //控制分页页面，每个页面所显示的文章数量
 	function custom_posts_per_page($query){
 		if(is_home()){
-		$query->set('posts_per_page',13);//首页每页显示12篇文章
+		$query->set('posts_per_page',12);//首页每页显示12篇文章
 		}
 		if(is_search()){
 			$query->set('posts_per_page',10);//搜索页显示所有匹配的文章，不分页
@@ -191,7 +191,7 @@ function add_next_page_button($mce_buttons) {
 function v5v1_baiping($post_id) {
     $baiduXML = 'weblogUpdates.extendedPing' . get_option('blogname') . ' ' . home_url() . ' ' . get_permalink($post_id) . ' ' . get_feed_link() . ' ';
     $wp_http_obj = new WP_Http();
-    $return = $wp_http_obj->post('http://ping.baidu.com/ping/RPC2', array('body' => $baiduXML, 'headers' => array('Content-Type' => 'text/xml')));
+    $return = $wp_http_obj->post('https://ping.baidu.com/ping/RPC2', array('body' => $baiduXML, 'headers' => array('Content-Type' => 'text/xml')));
     if(isset($return['body'])){
         if(strstr($return['body'], '0')){
             $noff_log='succeeded!';
@@ -345,7 +345,7 @@ function cn_nf_url_parse( $content ) {
 // add_filter ('the_content', 'lazyload');
 // 自定义登录界面
 function custom_login(){
-    echo '<link rel="stylesheet" type="text/css" href="http://www.weipxiu.com/style-login.4205e3e2.css" />';
+    echo '<link rel="stylesheet" type="text/css" href="https://www.weipxiu.com/style-login.4205e3e2.css" />';
 }
 add_action('login_head', 'custom_login');
  
@@ -567,7 +567,7 @@ if ($_SESSION){
 //现在时间-开始登录时间 来进行判断 如果登录频繁 跳转 否则对session进行赋值
 if(($ll_nowtime - $ll_lasttime) < 3){
   if ($ll_times>=5){
-header("location:http://127.0.0.1");//可以换成其他链接，比如站内的404错误显示页面(千万不要用动态页面)
+header("location:https://127.0.0.1");//可以换成其他链接，比如站内的404错误显示页面(千万不要用动态页面)
   exit;
   }
 }else{

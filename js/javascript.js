@@ -1,7 +1,7 @@
 $( function() {
     //网站预加载运动开始
     if ( $( document ).width() >= 1200 ) {
-        if ( window.location.href == "http://www.weipxiu.com" || window.location.href == "http://www.weipxiu.com/" ) {
+        if ( window.location.href == "https://www.weipxiu.com" || window.location.href == "https://www.weipxiu.com/" ) {
             //首页公告开始
             setInterval( function() {
                 $( ".notice" ).show();
@@ -92,7 +92,7 @@ $( function() {
                         if ( Notification.permission == "granted" ) {
                             var notification = new Notification( "官方提示：", {
                                 body: '欢迎点击加入"WEB前端薪资吐槽群"互相学习、交流！',
-                                icon: 'http://www.weipxiu.com/wp-content/themes/boke/images/tishi.jpg'
+                                icon: 'https://www.weipxiu.com/wp-content/themes/boke/images/tishi.jpg'
                             } )
 
                             notification.onclick = function() {
@@ -143,7 +143,7 @@ $( function() {
             // console.log---start
             if ( window.console && window.console.log ) {
                 setTimeout( function() {
-                    console.log( "\n %c 唯品秀个人博客 %c  © Jun Li  http://weipxiu.com \n",
+                    console.log( "\n %c 唯品秀个人博客 %c  © Jun Li  https://weipxiu.com \n",
                         "color:#FFFFFB;background:#1abc9c;padding:5px 0;border-radius:.5rem 0 0 .5rem;",
                         "color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;"
                     );

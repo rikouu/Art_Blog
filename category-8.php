@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="<?php bloginfo('template_url'); ?>/css/style-ios.css">
     <link rel="stylesheet" type="text/css" media="screen and (min-width:768px) and (max-width:1199px)" href="<?php bloginfo('template_url'); ?>/css/style-ipd.css">
     <link rel="stylesheet" type="text/css" media="screen and (min-width:1200px)" href="<?php bloginfo('template_url'); ?>/style.css">
-    <link rel="stylesheet" href="http://at.alicdn.com/t/font_typ5xhkfpnetrzfr.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_typ5xhkfpnetrzfr.css">
 	  <?php wp_head(); ?>
 </head>
     <body>
@@ -153,7 +153,7 @@
               var conf = '82271e371d1386ecc2659e2cff9c706c'; 
               var width = window.innerWidth || document.documentElement.clientWidth; 
               if (width < 960) { 
-              window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+              window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
               <!-- 畅言公共JS代码 end -->
               <!-- 留言区域结束 -->
          </div>
@@ -162,7 +162,7 @@
     <!-- 正文区域end -->
     
     <!-- 首页背景音乐开始 -->
-    <!-- <audio src="http://other.web.rb01.sycdn.kuwo.cn/resource/n1/64/94/2264457540.mp3" autoplay="autoplay" loop="loop" id="music"></audio>
+    <!-- <audio src="https://other.web.rb01.sycdn.kuwo.cn/resource/n1/64/94/2264457540.mp3" autoplay="autoplay" loop="loop" id="music"></audio>
     <div class="control hover"></div> -->
     <!-- 首页背景音乐结束 -->
     

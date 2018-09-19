@@ -1,10 +1,10 @@
 # 唯品秀博客 - Wordpress主题
 
-# http://www.weipxiu.com
+# https://www.weipxiu.com
 
 > 一款基于jquery2.1.4开发的wordpress主题2.0版
 
-> 主题介绍：http://www.weipxiu.com/?cat=10
+> 主题介绍：https://www.weipxiu.com/?cat=10
 
 ## 使用方式
 
@@ -48,7 +48,7 @@
 > 3、基于css文件作了根据终端分割，所以你会看到主题根目录下有三个css文件，有利有弊，不做过多评论
 
 > 4、源码开放供大家使用并修改，但在使用过程中底部请保留"唯品秀"版权说明，
-  即：在footer.php源码中请不要去掉：<p>本站主题由<a href="http://www.weipxiu.com/" class="highlight">WEIPXIU.COM</a>免费提供</p>
+  即：在footer.php源码中请不要去掉：<p>本站主题由<a href="https://www.weipxiu.com/" class="highlight">WEIPXIU.COM</a>免费提供</p>
 
 <!-- 
 <h2>使用当前主题网站</h2>

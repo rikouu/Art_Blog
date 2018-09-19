@@ -136,7 +136,7 @@
 <body class="webBody">
     <?php get_header(); ?>
     <?php  if (is_user_logged_in()){
-  		echo '<script>window.location.href="http://www.weipxiu.com"</script>';
+  		echo '<script>window.location.href="https://www.weipxiu.com"</script>';
 	}/*用户登录成功立即跳转到网站首页*/
 ?>
     <!-- 正文区域start -->

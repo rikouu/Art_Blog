@@ -26,18 +26,18 @@ a{color:#930;text-decoration:none;border-bottom:1px dotted #930; }
 <body>
 <h2>温馨提示：<br/><br/><strong>您的浏览器版本实在过低，需要更新才能访问哦 ^_^</strong></h2>
 <h3>建议使用 
-<strong><a href="http://rj.baidu.com/soft/detail/14744.html?ald" target="_blank">Chrome</a></strong>、<strong><a href="http://www.firefox.com/" target="_blank">firefox</a></strong>、<strong><a href="http://www.apple.com/safari" target="_blank">Safari</a></strong>、<strong><a href="http://www.opera.com/zh-cn" target="_blank">opera</a></strong> 
+<strong><a href="https://rj.baidu.com/soft/detail/14744.html?ald" target="_blank">Chrome</a></strong>、<strong><a href="https://www.firefox.com/" target="_blank">firefox</a></strong>、<strong><a href="https://www.apple.com/safari" target="_blank">Safari</a></strong>、<strong><a href="https://www.opera.com/zh-cn" target="_blank">opera</a></strong> 
 标准浏览器访问~
 </h3>
 <h3>
 	如果坚持使用Internet Explorer浏览器，那么请务必升级到最新版<a href="https://support.microsoft.com/zh-cn/help/17621/internet-explorer-downloads">Explorer 11</a>
 </h3>
 <p>
-	<a href="http://rj.baidu.com/soft/detail/14744.html?ald" target="_blank"><img alt="chrome" src="images/chrome.png"></a>
-	<a href="http://www.firefox.com/" target="_blank"><img alt="safari" src="images/firefox.png"></a>
-	<a href="http://www.apple.com/safari" target="_blank"><img alt="safari" src="images/safari.png"></a>
-	<a href="http://www.opera.com/zh-cn" target="_blank"><img alt="safari" src="images/opera.png"></a>
+	<a href="https://rj.baidu.com/soft/detail/14744.html?ald" target="_blank"><img alt="chrome" src="images/chrome.png"></a>
+	<a href="https://www.firefox.com/" target="_blank"><img alt="safari" src="images/firefox.png"></a>
+	<a href="https://www.apple.com/safari" target="_blank"><img alt="safari" src="images/safari.png"></a>
+	<a href="https://www.opera.com/zh-cn" target="_blank"><img alt="safari" src="images/opera.png"></a>
 </p>
-<h4>Copyright © 2016-2018 <a href="http://www.weipxiu.com">WEIPXIU.COM</a> · 版权所有 鄂ICP备 16001853号-1</h4>
+<h4>Copyright © 2016-2018 <a href="https://www.weipxiu.com">WEIPXIU.COM</a> · 版权所有 鄂ICP备 16001853号-1</h4>
 </body>
 </html>

@@ -8,7 +8,7 @@
 	<meta name="format-detection" content="telephone=no"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
 	<title>唯品秀个人博客&nbsp;|&nbsp;关注WEB前端开发技术_关注用户体验</title>
-	<link rel="shortcut icon" type="image/x-icon" href="http://www.weipxiu.com/wp-content/themes/boke/favicon.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="https://www.weipxiu.com/wp-content/themes/boke/favicon.ico" />
 	<style>
 		@font-face { 
 		  font-family: "SF Pro Text"; 
@@ -29,7 +29,7 @@
 		width:100%;
 		height:100%;
 		background:url("images/xbj.gif");
-		background:url("http://www.weipxiu.com/wp-content/themes/boke/images/body.png");
+		background:url("https://www.weipxiu.com/wp-content/themes/boke/images/body.png");
 		background-repeat:repeat;
 		background-attachment:scroll;
 		background-clip:border-box;
@@ -108,6 +108,6 @@
              <em style="margin:20px 80px 0 0;">2016年11月16日</em>
 	    </div>
 	</body>	
-	<!-- <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script> -->
+	<!-- <script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script> -->
 
 </html>

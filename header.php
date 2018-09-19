@@ -40,7 +40,7 @@
 			</div>
 			<div class="site-search active">
 				<div class="container">
-					<form role="search" method="get" id="searchform" class="site-search-form" action="http://www.weipxiu.com/">
+					<form role="search" method="get" id="searchform" class="site-search-form" action="https://www.weipxiu.com/">
 						<input class="search-input" name="s" id="s" value="" placeholder="输入关键字搜索" type="text" />
 						<button class="search-btn" type="submit" id="searchsubmit">
 							<i class="fa fa-search"></i>
@@ -56,18 +56,18 @@
 		 		<div class="header_top">
 			 		<div class="header-list">
 			 			 <div id="username" style="margin:0 auto">
-				                <a href="http://www.weipxiu.com" style="padding-left: 3px;">喵，欢迎光临</a>
-					          	<a href="http://www.weipxiu.com/wp-login.php"><i class="fa fa-sign-in" style="display: inline-block;"></i>请登录</a>
-					          	<a href="http://www.weipxiu.com/wp-login.php?action=register"><i class="fa fa-user" style="display: inline-block;"></i>免费注册</a>
-					          	<a href="http://www.weipxiu.com/wp-admin/" target='_blank' style="padding-left: 3px;">
+				                <a href="https://www.weipxiu.com" style="padding-left: 3px;">喵，欢迎光临</a>
+					          	<a href="https://www.weipxiu.com/wp-login.php"><i class="fa fa-sign-in" style="display: inline-block;"></i>请登录</a>
+					          	<a href="https://www.weipxiu.com/wp-login.php?action=register"><i class="fa fa-user" style="display: inline-block;"></i>免费注册</a>
+					          	<a href="https://www.weipxiu.com/wp-admin/" target='_blank' style="padding-left: 3px;">
 					          		<?php  if (is_user_logged_in()){
 						          		$current_user = wp_get_current_user();
 						          		echo '欢迎您， ' . $current_user->display_name;
 						          		}
 					          	  	?>
 					          	</a>
-					          	<!-- <a href="http://www.weipxiu.com/wp-admin/" style="display: none; color:#fff" target="_blank"><i class="iconfont" style="color:#fff">&#xe654;</i>会员中心
-					          	</a> -->
+					          	<!-- <a href="https://www.weipxiu.com/wp-admin/" style="display: none; color:#fff" target="_blank"><i class="iconfont" style="color:#fff">&#xe654;</i>会员中心 
+					          	</a>-->
 			              </div>
 			              <div class="topbar">
 							  <div class="notice">
@@ -87,10 +87,10 @@
                                   <li><a href="/?cat=29" target="_blank">前端工具箱</a></li>
 								  <li><a href="/?cat=10" target="_blank">联系我们</a></li>
 								  <li>
-								  	<a href="http://www.qmaile.com/" target="_blank">
+								  	<a href="https://www.qmaile.com/" target="_blank">
 								  		Vip视频
 								  	</a>
-								  	<!-- <a href="http://www.weipxiu.com/sly.html" target="_blank">
+								  	<!-- <a href="https://www.weipxiu.com/sly.html" target="_blank">
 								  		S-Baby
 								  	</a> -->
 								  </li>
@@ -102,7 +102,7 @@
 		 		<div class="header-body">
 			 	    <div class="header-conter">
 						  <div class="nav">
-						      <a href="http://www.weipxiu.com" class="t-logo" id="Logo">
+						      <a href="https://www.weipxiu.com" class="t-logo" id="Logo">
 						          <span class="logo"></span>
 						          <ul id="dj">
 						          	  <li></li>
@@ -199,18 +199,18 @@
 									<a href="/?cat=22">Node.js基础</a>
 							  </div>
 							  <div class="nav-min nav-min-1">
-									<a href="http://www.weipxiu.com/works/grjl/index.html" target="_blank">炫酷个人简历</a>
-							        <a href="http://www.weipxiu.com/works/h5-7_vip/index.html" target="_blank">H5响应式</a>
-									<a href="http://www.weipxiu.com/works/yunquna/index.html" target="_blank">运去哪官网</a>
-									<a href="http://www.weipxiu.com/works/shangcheng/index.html" target="_blank">节日礼品商城</a>
-							        <!-- <a href="http://www.weipxiu.com/works/taiyang/index.html" target="_blank">太平洋时尚网</a> -->
-								  	<!-- <a href="http://www.weipxiu.com/works/beautiful/index.html" target="_blank">美丽说-首页</a> -->
-									<a href="http://www.weipxiu.com/works/weiyun/index.html" target="_blank">微云桌面应用</a>
-								  	<!-- <a href="http://www.weipxiu.com/works/hnlyw/index.html" target="_blank">湖南海外旅游网</a> -->
-								  	<!-- <a href="http://www.weipxiu.com/works/music/index.html" target="_blank">音乐播放器</a> -->
-								  	<a href="http://www.weipxiu.com/works/caiquan/index.html" target="_blank">游戏-猜拳</a>
-								  	<a href="http://www.weipxiu.com/works/feiji/index.html" target="_blank">游戏-打飞机</a>
-								  	<!-- <a href="http://www.weipxiu.com/works/txz/index.html" target="_blank">游戏-推箱子</a> -->
+									<a href="https://www.weipxiu.com/works/grjl/index.html" target="_blank">炫酷个人简历</a>
+							        <a href="https://www.weipxiu.com/works/h5-7_vip/index.html" target="_blank">H5响应式</a>
+									<a href="https://www.weipxiu.com/works/yunquna/index.html" target="_blank">运去哪官网</a>
+									<a href="https://www.weipxiu.com/works/shangcheng/index.html" target="_blank">节日礼品商城</a>
+							        <!-- <a href="https://www.weipxiu.com/works/taiyang/index.html" target="_blank">太平洋时尚网</a> -->
+								  	<!-- <a href="https://www.weipxiu.com/works/beautiful/index.html" target="_blank">美丽说-首页</a> -->
+									<a href="https://www.weipxiu.com/works/weiyun/index.html" target="_blank">微云桌面应用</a>
+								  	<!-- <a href="https://www.weipxiu.com/works/hnlyw/index.html" target="_blank">湖南海外旅游网</a> -->
+								  	<!-- <a href="https://www.weipxiu.com/works/music/index.html" target="_blank">音乐播放器</a> -->
+								  	<a href="https://www.weipxiu.com/works/caiquan/index.html" target="_blank">游戏-猜拳</a>
+								  	<a href="https://www.weipxiu.com/works/feiji/index.html" target="_blank">游戏-打飞机</a>
+								  	<!-- <a href="https://www.weipxiu.com/works/txz/index.html" target="_blank">游戏-推箱子</a> -->
 							  </div>
 							  <!-- 搜索按钮开始 -->
 							  <div class="navto-search">
@@ -225,7 +225,7 @@
 				<!-- 搜索区域开始 -->
 				<div class="site-search active pc">
 					<div class="container">
-						<form role="search" method="get" id="searchform" class="site-search-form" action="http://www.weipxiu.com/">
+						<form role="search" method="get" id="searchform" class="site-search-form" action="https://www.weipxiu.com/">
 							<input class="search-input" name="s" id="s" type="text" value="" placeholder="输入关键字搜索">
 							<button class="search-btn" type="submit" id="searchsubmit"><i class="fa fa-search"></i></button>
 						</form>
@@ -237,7 +237,7 @@
     <!-- 移动端渣渣侧边栏导航开始 -->
     <div class="os-herder btn">
          <ul class="slide-left">
-        	 <li><a href="http://www.weipxiu.com"><i class="iconfont">&#xe632;</i>首页</a></li>
+        	 <li><a href="https://www.weipxiu.com"><i class="iconfont">&#xe632;</i>首页</a></li>
         	 <li>
         		 <a href="javascript:void(0);" class="frontEnd"><i class="iconfont">&#xe64b;</i>前端开发<i class="iconfont iconfont_click icon-xiajiantou"></i></a>
         		 <div class="slide_slect">
@@ -246,14 +246,14 @@
 		        	 <a href="/?cat=3"><i class="iconfont">&#xe693;</i>H5/CSS3</a>
 		        	 <a href="/?cat=14"><i class="iconfont">&#xe89a;</i>Js框架</a>
 		        	 <a href="/?cat=29"><i class="iconfont">&#xe6ad;</i>前端工具箱</a>
-		        	 <a href="http://www.weipxiu.com/works/h5-7_vip/index.html"><i class="iconfont">&#xe757;</i>作品案例</a>
+		        	 <a href="https://www.weipxiu.com/works/h5-7_vip/index.html"><i class="iconfont">&#xe757;</i>作品案例</a>
         		 </div>
         	 </li>
         	 <li><a href="/?cat=13"><i class="iconfont">&#xe617;</i>技巧资源</a></li>
         	 <li><a href="/?cat=2"><i class="iconfont">&#xe617;</i>心情小镇</a></li>
         	 <li><a href="/?cat=8"><i class="iconfont">&#xe60e;</i>给我留言</a></li>
         	 <li><a href="/?cat=10"><i class="iconfont">&#xe603;</i>关于博客</a></li>
-			 <li><a href="http://www.weipxiu.com/wp-login.php"><i class="iconfont">&#xe630;</i>用户登录</a></li>
+			 <li><a href="https://www.weipxiu.com/wp-login.php"><i class="iconfont">&#xe630;</i>用户登录</a></li>
          </ul>
     </div>
     <!-- 移动端侧边栏导航结束 -->

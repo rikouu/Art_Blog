@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------------
-// http://wowslider.com/
+// https://wowslider.com/
 // JavaScript Wow Slider is a free software that helps you easily generate delicious 
 // slideshows with gorgeous transition effects, in a few clicks without writing a single line of code.
 // Last updated: 2010-29-11

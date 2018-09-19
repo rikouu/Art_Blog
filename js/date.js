@@ -90,7 +90,7 @@ var date=[
 	},
 	{
 		message:"2016 - 11 - 16 网站正式上线！",
-		reply:"唯品秀个人博客，http://www.weipxiu.com正式上线了"
+		reply:"唯品秀个人博客，https://www.weipxiu.com正式上线了"
 	},
 	{
 		message:"本页面目前处于完善测试阶段",

@@ -3,7 +3,7 @@
     <video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload  width="328" height="185" style="margin-top:0"
         poster="<?php bloginfo('template_url'); ?>/images/s1.png" width="328" height="185" data-setup="{}">
         <source src="<?php bloginfo('template_url'); ?>/music/2018.mp4" type="video/mp4"></source>
-        <p class="vjs-no-js"> 要查看此视频，请启用JavaScript，并考虑升级到Web浏览器版本。 <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a> </p>
+        <p class="vjs-no-js"> 要查看此视频，请启用JavaScript，并考虑升级到Web浏览器版本。 <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a> </p>
     </video>
     <img src="<?php bloginfo('template_url'); ?>/images/s1.png" width="328" height="185" alt="" style="width:100%;display: none; margin-top:10px;background-size: 330px 185px;">
     <div class="textwidget">
@@ -14,7 +14,7 @@
         <ul class="social">
             <ul class="social">
                 <li class="weibo">
-                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=343049466&site=qq&menu=yes"><i class="iconfont icon-qq"></i>QQ</a>
+                    <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=343049466&site=qq&menu=yes"><i class="iconfont icon-qq"></i>QQ</a>
                 </li>
                 <li class="qq">
                     <a target="_blank" href="https://jq.qq.com/?_wv=1027&k=4BemYKg" rel="nofollow" class="top-tip" title="加入web前端QQ群"><i class="iconfont icon-qqqun"></i>Q群</a>
@@ -26,7 +26,7 @@
                     <a href="mailto:343049466@qq.com.com" target="_blank" rel="nofollow" class="top-tip" title="给我发送qq邮件"><i class="iconfont icon-youxiang"></i>邮件</a>
                 </li>
                 <li class="weixin">
-                    <a href="http://www.weipxiu.com/feed" target="_blank" rel="nofollow" class="top-tip" title="关注微信"><i class="iconfont icon-weixin"></i>微信</a>
+                    <a href="https://www.weipxiu.com/feed" target="_blank" rel="nofollow" class="top-tip" title="关注微信"><i class="iconfont icon-weixin"></i>微信</a>
                 </li>
             </ul>
         </ul>
@@ -65,21 +65,21 @@
 <div class="classif">
     <h3 class="widget-title"><a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>文章分类</a></h3>
     <div class="items">
-        <a href="http://www.weipxiu.com/?cat=3">HTML/CSS (<?php echo wt_get_category_count(3); ?>)</a>
-        <a href="http://www.weipxiu.com/?cat=6">HTML5 (<?php echo wt_get_category_count(6); ?>)</a>
-        <a href="http://www.weipxiu.com/?cat=6">CSS3详解 (<?php echo wt_get_category_count(6); ?>)</a>
-        <a href="http://www.weipxiu.com/?cat=5">JavaScript (<?php echo wt_get_category_count(5); ?>)</a>
-        <a href="http://www.weipxiu.com/?cat=5">jQuery (<?php echo wt_get_category_count(5); ?>)</a>
-        <a href="http://www.weipxiu.com/?cat=14">Vue.js (<?php echo wt_get_category_count(14); ?>)</a>
-        <a href="http://www.weipxiu.com/?cat=14">Angular.js (<?php echo wt_get_category_count(14); ?>)</a>
-        <a href="http://www.weipxiu.com/?cat=22">Node.js (<?php echo wt_get_category_count(22); ?>)</a>
-        <a href="http://www.weipxiu.com/?cat=13">前端技巧 ((<?php echo wt_get_category_count(13); ?>))</a>
-        <a href="http://www.weipxiu.com/?cat=14">前端资源 (<?php echo wt_get_category_count(14); ?>)</a>
-        <a href="http://www.weipxiu.com/?cat=29">前端工具 (<?php echo wt_get_category_count(29); ?>)</a>
-        <a href="http://www.weipxiu.com/?cat=2">wordpress (<?php echo wt_get_category_count(2); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=3">HTML/CSS (<?php echo wt_get_category_count(3); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=6">HTML5 (<?php echo wt_get_category_count(6); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=6">CSS3详解 (<?php echo wt_get_category_count(6); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=5">JavaScript (<?php echo wt_get_category_count(5); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=5">jQuery (<?php echo wt_get_category_count(5); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=14">Vue.js (<?php echo wt_get_category_count(14); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=14">Angular.js (<?php echo wt_get_category_count(14); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=22">Node.js (<?php echo wt_get_category_count(22); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=13">前端技巧 ((<?php echo wt_get_category_count(13); ?>))</a>
+        <a href="https://www.weipxiu.com/?cat=14">前端资源 (<?php echo wt_get_category_count(14); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=29">前端工具 (<?php echo wt_get_category_count(29); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=2">wordpress (<?php echo wt_get_category_count(2); ?>)</a>
         <a href="javascript:void(0);">Webpack (43)</a>
         <a href="javascript:void(0);">W3c标准 (16)</a>
-        <a href="http://www.weipxiu.com/?cat=1">网站公告 (99)</a>
+        <a href="https://www.weipxiu.com/?cat=1">网站公告 (99)</a>
         <a href="javascript:void(0);">作品欣赏 (10)</a>
         <a href="javascript:void(0);">网页设计 (10)</a>
         <a href="javascript:void(0);">UI设计 (10)</a>

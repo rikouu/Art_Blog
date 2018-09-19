@@ -26,9 +26,9 @@
 	<!-- <section class="mod-banner" id="js_banner">
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide" style="background:url('http://www.weipxiu.com/wp-content/themes/boke/images/slide2.png') no-repeat center top;"></div>
-				<div class="swiper-slide" style="background:url('http://www.weipxiu.com/wp-content/themes/boke/images/slide3.png') no-repeat center top;"></div>
-				<div class="swiper-slide" style="background:url('http://www.weipxiu.com/wp-content/themes/boke/images/slide4.png') no-repeat center top;"></div>
+				<div class="swiper-slide" style="background:url('https://www.weipxiu.com/wp-content/themes/boke/images/slide2.png') no-repeat center top;"></div>
+				<div class="swiper-slide" style="background:url('https://www.weipxiu.com/wp-content/themes/boke/images/slide3.png') no-repeat center top;"></div>
+				<div class="swiper-slide" style="background:url('https://www.weipxiu.com/wp-content/themes/boke/images/slide4.png') no-repeat center top;"></div>
 			</div>
 			<div class="swiper-pagination"></div>
 			<div class="swiper-button-next swiper-button-white"></div>
@@ -41,7 +41,7 @@
             <div class="mod-banner__snow_1"></div>
             <div class="mod-banner__snow_2"></div>
         </div> -->
-        <a href="http://www.weipxiu.com" target="_blank" class="mod-banner__img banner_1" id="banner_img" style="background: url(&quot;http://www.weipxiu.com/wp-content/themes/boke/images/banner-3.jpg&quot;) center center no-repeat;"></a>
+        <a href="https://www.weipxiu.com" target="_blank" class="mod-banner__img banner_1" id="banner_img" style="background: url(&quot;https://www.weipxiu.com/wp-content/themes/boke/images/banner-3.jpg&quot;) center center no-repeat;"></a>
         <div class="mod-banner__navi">
             <div class="js_banner_nav mod-banner_nav"></div>
             <span class="mod-banner__nav-dot"><canvas id="dotCanvas"></canvas></span>
@@ -65,18 +65,18 @@
 					<ul>
 						<li>
 							<a href="#overview">
-								<img src="http://www.weipxiu.com/wp-content/themes/boke/images/slide2.png"  height="360" alt="123" title="" />
+								<img src="https://www.weipxiu.com/wp-content/themes/boke/images/slide2.png"  height="360" alt="123" title="" />
 							</a>
 						</li>
 						<li>
 							<a href="demo.html">
-								<img src="http://www.weipxiu.com/wp-content/themes/boke/images/slide3.png" height="360" alt="456" title="唯品秀个人博客" />
+								<img src="https://www.weipxiu.com/wp-content/themes/boke/images/slide3.png" height="360" alt="456" title="唯品秀个人博客" />
 							</a>
 							2016-11-16日正式上线
 						</li>
 						<li>
-							<a href="http://wowslider.com/wowslider-free-setup.zip">
-								<img src="http://www.weipxiu.com/wp-content/themes/boke/images/slide4.png" height="360" alt="789" title="关注用户体验" />
+							<a href="https://wowslider.com/wowslider-free-setup.zip">
+								<img src="https://www.weipxiu.com/wp-content/themes/boke/images/slide4.png" height="360" alt="789" title="关注用户体验" />
 							</a>
 							关注WEB前端开发技术
 						</li>
@@ -124,9 +124,9 @@
     	 	<!--移动端轮播start-->
 			<div class="swiper-container1">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide" style="background:url('http://www.weipxiu.com/wp-content/themes/boke/images/banner1.png') no-repeat center top; background-size:100% 100%"></div>
-					<div class="swiper-slide" style="background:url('http://www.weipxiu.com/wp-content/themes/boke/images/banner2.png') no-repeat center top; background-size:100% 100%"></div>
-					<div class="swiper-slide" style="background:url('http://www.weipxiu.com/wp-content/themes/boke/images/banner3.png') no-repeat center top; background-size:100% 100%"></div>
+					<div class="swiper-slide" style="background:url('https://www.weipxiu.com/wp-content/themes/boke/images/banner1.png') no-repeat center top; background-size:100% 100%"></div>
+					<div class="swiper-slide" style="background:url('https://www.weipxiu.com/wp-content/themes/boke/images/banner2.png') no-repeat center top; background-size:100% 100%"></div>
+					<div class="swiper-slide" style="background:url('https://www.weipxiu.com/wp-content/themes/boke/images/banner3.png') no-repeat center top; background-size:100% 100%"></div>
 				</div>
 				<div class="swiper-pagination"></div>
 			</div>
@@ -165,7 +165,7 @@
 						</p>
 						<ul class="social">
 							<li class="weibo">
-							   <a href="http://shang.qq.com/email/stop/email_stop.html?qq=343049466&sig=a1c657365db7e82805ea4b2351081fc3ebcde159f8ae49b1&tttt=1" target="_blank" class="top-tip" title="加QQ为好友"><i class="iconfont icon-qq"></i>QQ</a>
+							   <a href="https://shang.qq.com/email/stop/email_stop.html?qq=343049466&sig=a1c657365db7e82805ea4b2351081fc3ebcde159f8ae49b1&tttt=1" target="_blank" class="top-tip" title="加QQ为好友"><i class="iconfont icon-qq"></i>QQ</a>
 							</li>
 							<li class="qq">
 							   <a target="_blank" href="https://jq.qq.com/?_wv=1027&k=4BemYKg" rel="nofollow" class="top-tip" title="加入web前端QQ群"><i class="iconfont icon-qqqun"></i>Q群</a>
@@ -177,7 +177,7 @@
 							   <a href="mailto:343049466@qq.com.com" target="_blank" rel="nofollow" class="top-tip" title="给我发送qq邮件"><i class="iconfont icon-youxiang"></i>邮件</a>
 							</li>
 							<li class="weixin">
-								<a href="http://www.weipxiu.com/feed" target="_blank" rel="nofollow" class="top-tip" title="关注微信"><i class="iconfont icon-weixin"></i>微信</a>
+								<a href="https://www.weipxiu.com/feed" target="_blank" rel="nofollow" class="top-tip" title="关注微信"><i class="iconfont icon-weixin"></i>微信</a>
 							</li>
 						</ul>
 					</div>
@@ -206,7 +206,7 @@
 						    if ( has_post_thumbnail() )
 						        the_post_thumbnail();
 						    else
-						        echo '<img src="http://www.weipxiu.com/wp-content/uploads/2017/04/default-220x150.png" alt="" />';
+						        echo '<img src="https://www.weipxiu.com/wp-content/uploads/2017/04/default-220x150.png" alt="" />';
 						?>
 					</a>
 				 </div>
@@ -216,7 +216,7 @@
 		    	 	 	 <a href="<?php the_permalink(); ?>" target="_blank" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 	    	 	 	 </h2>
 	    	 	 	 <div class="entry-meta">
-	    	 	 	     <a href="http://www.weipxiu.com">唯品秀</a>
+	    	 	 	     <a href="https://www.weipxiu.com">唯品秀</a>
 	    	 	 	     <i class="space">•</i>
 	    	 	 	     <a href="#">前端开发资讯</a>
 	    	 	 	     <i class="space">•</i>
@@ -293,7 +293,7 @@
 
 
     <h1 style="position: fixed; left:-999px;top:-999px">
-		<a href="http://www.weipxiu.com"><img src="<?php bloginfo('template_url'); ?>/images/web.png" width="121" height="75" alt="唯品秀个人博客"></a>
+		<a href="https://www.weipxiu.com"><img src="<?php bloginfo('template_url'); ?>/images/web.png" width="121" height="75" alt="唯品秀个人博客"></a>
 	</h1>
 	<!-- 首页弹窗start -->
 	<div id="curriculum" class="gradient">
@@ -341,7 +341,7 @@
 	<!-- 首页弹窗end -->
 
 	<!-- 首页背景音乐开始 -->
-    <audio src="http://other.web.nf01.sycdn.kuwo.cn/resource/n1/36/3/1740856255.mp3" loop="loop" preload="none" id="music"></audio>
+    <audio src="https://other.web.nf01.sycdn.kuwo.cn/resource/n1/36/3/1740856255.mp3" loop="loop" preload="none" id="music"></audio>
     <div class="control"></div>
     <!-- 首页背景音乐结束 -->
 </body>
@@ -361,24 +361,24 @@
             width: 1200,
             height: 300,
             images: [{
-                    url: 'http://www.weipxiu.com/wp-content/themes/boke/images/banner-1.jpg',
-                    link: 'http://www.weipxiu.com/?cat=29'
+                    url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-1.jpg',
+                    link: 'https://www.weipxiu.com/?cat=29'
                 }, {
-                    url: 'http://www.weipxiu.com/wp-content/themes/boke/images/banner-2.jpg',
-                    link: 'http://www.weipxiu.com/'
+                    url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-2.jpg',
+                    link: 'https://www.weipxiu.com/'
                 }, {
-                    url: 'http://www.weipxiu.com/wp-content/themes/boke/images/banner-3.jpg',
+                    url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-3.jpg',
                     link: 'javascript:;'
                 }, {
-                    url: 'http://www.weipxiu.com/wp-content/themes/boke/images/banner-4.jpg',
+                    url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-4.jpg',
                     link: 'javascript:;'
                 }, {
-                    url: 'http://www.weipxiu.com/wp-content/themes/boke/images/banner-5.jpg',
-                    link: 'http://www.weipxiu.com/?cat=6'
+                    url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-5.jpg',
+                    link: 'https://www.weipxiu.com/?cat=6'
                 },
                 {
-                    url: 'http://www.weipxiu.com/wp-content/themes/boke/images/banner-6.jpg',
-                    link: 'http://www.weipxiu.com/?p=1313'
+                    url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-6.jpg',
+                    link: 'https://www.weipxiu.com/?p=1313'
                 }
             ],
 

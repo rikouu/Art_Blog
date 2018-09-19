@@ -39,7 +39,7 @@
 						    if ( has_post_thumbnail() )
 						        the_post_thumbnail();
 						    else
-						        echo '<img src="http://www.weipxiu.com/wp-content/uploads/2017/04/default-220x150.png" alt="" />';
+						        echo '<img src="https://www.weipxiu.com/wp-content/uploads/2017/04/default-220x150.png" alt="" />';
 						?>
 						</a>
 					</div>
@@ -54,7 +54,7 @@
 							</a>
 						</h2>
 						<div class="entry-meta">
-							<a href="http://www.weipxiu.com">唯品秀</a>
+							<a href="https://www.weipxiu.com">唯品秀</a>
 							<i class="space">•</i>
 							<a href="#">前端开发资讯</a>
 							<i class="space">•</i>
@@ -84,7 +84,7 @@
 								<a href="<?php the_permalink(); ?> ">
 									<i class="iconfont icon-liulan"></i>&nbsp;
 									<?php echo getPostViews(get_the_ID()); ?>℃
-								</a>
+							</a>
 							</span>
 							<span class="comm">
 								<a href="<?php the_permalink(); ?> ">
@@ -135,7 +135,7 @@
 	<!-- 正文区域end -->
 
 	<!-- 首页背景音乐开始 -->
-	<!-- <audio src="http://sc1.111ttt.com/2015/1/04/01/97011918297.mp3" autoplay="autoplay" loop="loop" id="music"></audio>
+	<!-- <audio src="https://sc1.111ttt.com/2015/1/04/01/97011918297.mp3" autoplay="autoplay" loop="loop" id="music"></audio>
     <div class="control hover"></div> -->
 	<!-- 首页背景音乐结束 -->
 

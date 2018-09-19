@@ -72,7 +72,7 @@
                     var bdcs = document.createElement( 'script' );
                     bdcs.type = 'text/javascript';
                     bdcs.async = true;
-                    bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=16243462616234269555' + '&plate_url=' + encodeURIComponent( window.location.href ) + '&t=' + Math.ceil( new Date() / 3600000 );
+                    bdcs.src = 'https://znsv.baidu.com/customer_search/api/js?sid=16243462616234269555' + '&plate_url=' + encodeURIComponent( window.location.href ) + '&t=' + Math.ceil( new Date() / 3600000 );
                     var s = document.getElementsByTagName( 'script' )[ 0 ];
                     s.parentNode.insertBefore( bdcs, s );
                 } )();
@@ -90,7 +90,7 @@
 					    if ( has_post_thumbnail() )
 					        the_post_thumbnail();
 					    else
-					        echo '<img src="http://www.weipxiu.com/wp-content/uploads/2017/04/default-220x150.png" alt="" />';
+					        echo '<img src="https://www.weipxiu.com/wp-content/uploads/2017/04/default-220x150.png" alt="" />';
 					?>
                     </div>
                     <div class="text_right">
@@ -101,7 +101,7 @@
                             </a>
                         </h2>
                         <div class="entry-meta">
-                            <a href="http://www.weipxiu.com">唯品秀</a>
+                            <a href="https://www.weipxiu.com">唯品秀</a>
                             <i class="space">•</i>
                             <a href="#">前端开发资讯</a>
                             <i class="space">•</i>

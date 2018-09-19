@@ -2,14 +2,14 @@
 <div class="footer">
   <div class="container">
     <p>注：当前主题为
-      <a href="http://www.weipxiu.com/">"唯品秀"</a>自主研发，版权所有！</p>
+      <a href="https://www.weipxiu.com/">"唯品秀"</a>自主研发，版权所有！</p>
     <p style="color: #28d0e9">该网站勉强运行 :
       <span id="htmer_time" style="color: #28d0e9;"></span>
     </p>
     <p>
       © 2016-2018
-      <a href="http://www.weipxiu.com/">唯品秀</a> 本站主题由
-      <a href="http://www.weipxiu.com/" class="highlight">WEIPXIU.COM</a>提供 鄂ICP备 16001853号-1
+      <a href="https://www.weipxiu.com/">唯品秀</a> 本站主题由
+      <a href="https://www.weipxiu.com/" class="highlight">WEIPXIU.COM</a>提供 鄂ICP备 16001853号-1
     </p>
   </div>
 </div>
@@ -66,7 +66,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <div class="telNo" id="txtTelNo">&nbsp;182XXXX8470</div>
+                    <div class="telNo" id="txtTelNo">&nbsp;182****8470</div>
                   </td>
                 </tr>
                 <tr>
@@ -78,18 +78,8 @@
                   <td>
                     <p class="wangwang-names" style="margin-bottom:7px">&nbsp;QQ在线交流</p>
                     <div class="qqSmall">
-                      <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=343049466&site=qq&menu=yes">
-                        <img border="0" width="77" height="22" src="<?php bloginfo('template_url'); ?>/images/zaixian_qq.gif"
-                          alt="点击这里给我发消息" title="点击这里给我发消息" />
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="qqSmall">
-                      <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=343049466&site=qq&menu=yes">
-                        <img border="0" src="<?php bloginfo('template_url'); ?>/images/zaixian_qq.gif" alt="点击这里给我发消息" title="点击这里给我发消息"
+                      <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=343049466&site=qq&menu=yes">
+                        <img border="0" width="77" height="22" src="<?php bloginfo('template_url'); ?>/images/zaixian_qq.gif" alt="点击这里给我发消息" title="点击这里给我发消息"
                         />
                       </a>
                     </div>
@@ -97,7 +87,16 @@
                 </tr>
                 <tr>
                   <td>
-                    <p class="wangwang-names">&nbsp;旺旺客服</p>
+                    <div class="qqSmall">
+                      <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=343049466&site=qq&menu=yes">
+                        <img border="0" src="<?php bloginfo('template_url'); ?>/images/zaixian_qq.gif" alt="点击这里给我发消息" title="点击这里给我发消息" />
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p class="wangwang-names">&nbsp;旺旺在线</p>
                     <div class="qqSmall">
                       <a target="_blank" href="https://amos.alicdn.com/getcid.aw?spm=a1z10.1-c.0.0.LyS6rO&v=3&groupid=0&s=1&charset=utf-8&uid=可爱天使5202012&site=cntaobao&groupid=0&s=1&fromid=cntaobao可爱天使5202012"
                         style="position: relative; overflow: hidden;">
@@ -133,7 +132,7 @@
                       <a class="qq-kefu-qrCode" id="qq-kefu-qrCode" href="javascript:;"></a>
                       <a class="qq-kefu-backUp-2" id="qq-kefu-backUp" href="javascript:;"></a>
                       <div class="qqkefu-qrcode-box" pos="2">
-                        <!-- <img width="150" height="100" src="http://pan.baidu.com/share/qrcode?w=150&amp;h=150&amp;url=http://5usujian.com"> -->
+                        <!-- <img width="150" height="100" src="https://pan.baidu.com/share/qrcode?w=150&amp;h=150&amp;url=https://5usujian.com"> -->
                       </div>
                     </div>
                   </td>
@@ -202,7 +201,7 @@
 	 }           
 	 else {             
 	   echo "<script>$('#username a:lt(3)').show();
-     $('#username a:gt(2)').hide();</script>";           
+      $('#username a:gt(2)').hide();</script>";           
 	   };  
 ?>
 <!-- 判断用户当前是否登录 结束 -->
@@ -250,8 +249,7 @@
         var baseContent = $ele.html();
         var content = '';
         for (var i = 0, len = baseContent.length; i < len; i++) {
-          // content += '<span>' + baseContent[i] + '</span>' // IE8+
-          content += '<span>' + baseContent.substr(i, 1) + '</span>' // 兼容到IE6...
+          content += '<span>' + baseContent.substr(i, 1) + '</span>' 
         }
         $ele.html(content);
         var positionArr = []; //存放原始位置
@@ -260,7 +258,7 @@
           var position = $span.position();
           positionArr.push(position);
           $span.css({
-            top: 0 + "px", //源代码：top: position.top + "px",
+            top: 0 + "px", 
             left: position.left + "px"
           });
           setTimeout(function () {
@@ -323,9 +321,9 @@
             $(this).stop(true, false).animate({
               top: 0 + "px" //源代码：top: positionArr[index].top + "px"
             }, {
-              duration: opt.duration,
-              easing: "easeOutElastic"
-            });
+                duration: opt.duration,
+                easing: "easeOutElastic"
+              });
           });
         });
       };
