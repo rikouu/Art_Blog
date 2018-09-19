@@ -46,8 +46,6 @@ i {
 
 html {
 	width: 100%;
-	height: 100%;
-	overflow: hidden;
 }
 
 body {
@@ -6067,5 +6065,8 @@ p.data-l span {
 }
 
 /* 面包屑导航end */
+
+/* 针对傻逼畅言广告屏蔽 */
+#feedAv,#MZAD_POP_PLACEHOLDER{ margin-top: -200px!important;transform: scale(0);display: none}
 
                     

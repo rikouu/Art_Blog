@@ -279,7 +279,6 @@ jQuery(function($) {
             "right": "-196px"
         },500)
     });
-
     $(document).scroll(function() {
         var scrollTop = $(document).scrollTop();
         if (scrollTop > 500) {
@@ -293,17 +292,14 @@ jQuery(function($) {
                 "opacity": "0"
             })
         }
-        if ($(document).scrollTop() <= 0) {
+        if (scrollTop <= 0) {
             $(".header").addClass("Top")
+            $(".header").removeClass("hover")
         } else {
             $(".header").removeClass("Top")
-        }
-        var se = document.documentElement.clientHeight;
-        if ($(document).scrollTop() > 0) {
             $(".header").addClass("hover")
-        } else {
-            $(".header").removeClass("hover")
         }
+        //var se = document.documentElement.clientHeight;
     });
     $(".continar .continar-left-top > span").each(function() {
         var maxwidth = 115;

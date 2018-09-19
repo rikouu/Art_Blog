@@ -19,6 +19,7 @@
     <meta name="keywords" content="<?php echo $keywords; ?>" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>
     <?php the_title(); ?>&nbsp;|&nbsp;关注WEB前端开发技术&nbsp;-&nbsp;唯品秀博客</title>
     <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
@@ -42,9 +43,9 @@
             border: 1px solid #e6e6e6;
         }
 
-        #SOHUCS #SOHU_MAIN .module-cmt-notice {
+        /* #SOHUCS #SOHU_MAIN .module-cmt-notice {
             display: none;
-        }
+        } */
 
         @media screen and (min-width:980px) {
             .continar-left {
