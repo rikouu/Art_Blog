@@ -75,7 +75,7 @@
 										<li><i class="fa fa-volume-up"></i>温馨提示：唯品秀个人博客2016/11/16正式上线了！</li>
 										<li><i class="fa fa-volume-up"></i>博客不定时更新、修复bug，若无法正常访问浏览，请稍后再试</li>
 										<li><i class="fa fa-volume-up"></i>欢迎各位前端伙伴注册登录会员，共同分享前端技巧</li>
-										<li><i class="fa fa-volume-up"></i>2018/04/24日最近更新：优化主导航高亮显示配置</li>
+										<li><i class="fa fa-volume-up"></i>2018/09/18日最近更新：全站支持HTTPS，更安全、更放心</li>
 									</ul>
 							  </div>
                               <ul class="last-ul">

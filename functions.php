@@ -187,24 +187,7 @@ function add_next_page_button($mce_buttons) {
     }
     return $mce_buttons;
 }
-//百度收录
-function v5v1_baiping($post_id) {
-    $baiduXML = 'weblogUpdates.extendedPing' . get_option('blogname') . ' ' . home_url() . ' ' . get_permalink($post_id) . ' ' . get_feed_link() . ' ';
-    $wp_http_obj = new WP_Http();
-    $return = $wp_http_obj->post('https://ping.baidu.com/ping/RPC2', array('body' => $baiduXML, 'headers' => array('Content-Type' => 'text/xml')));
-    if(isset($return['body'])){
-        if(strstr($return['body'], '0')){
-            $noff_log='succeeded!';
-        }
-        else{
-            $noff_log='failed!';
-        }
-    }else{
-        $noff_log='failed!';
-    }
-}
-add_action('publish_post', 'v5v1_baiping');
-//百度收录end
+
 function e_secret($atts, $content=null){//输入密码查看
 extract(shortcode_atts(array('key'=>null), $atts));
 if(isset($_POST['e_secret_key']) && $_POST['e_secret_key']==$key){
@@ -378,69 +361,6 @@ function reset_password_message( $message, $key ) {
 }
 add_filter('retrieve_password_message', reset_password_message, null, 2);
 
-//删除emoji脚本
-remove_action( 'admin_print_scripts',   'print_emoji_detection_script');
-remove_action( 'admin_print_styles',    'print_emoji_styles');
-remove_action( 'wp_head',       'print_emoji_detection_script', 7);
-remove_action( 'wp_print_styles',   'print_emoji_styles');
-remove_filter( 'the_content_feed',  'wp_staticize_emoji');
-remove_filter( 'comment_text_rss',  'wp_staticize_emoji');
-remove_filter( 'wp_mail',       'wp_staticize_emoji_for_email');
-
-//移除wp-json链接
-add_filter('rest_enabled', '_return_false');
-add_filter('rest_jsonp_enabled', '_return_false');
-remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
-remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
-
-//禁用embeds功能
-function disable_embeds_init() {
-    /* @var WP $wp */
-    global $wp;
-    $wp->public_query_vars = array_diff( $wp->public_query_vars, array(
-        'embed',
-    ) );
-    remove_action( 'rest_api_init', 'wp_oembed_register_route' );
-    add_filter( 'embed_oembed_discover', '__return_false' );
-    remove_filter( 'oembed_dataparse', 'wp_filter_oembed_result', 10 );
-    remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
-    remove_action( 'wp_head', 'wp_oembed_add_host_js' );
-    add_filter( 'tiny_mce_plugins', 'disable_embeds_tiny_mce_plugin' );
-    add_filter( 'rewrite_rules_array', 'disable_embeds_rewrites' );
-}
-add_action( 'init', 'disable_embeds_init', 9999 );
-function disable_embeds_tiny_mce_plugin( $plugins ) {
-    return array_diff( $plugins, array( 'wpembed' ) );
-}
-function disable_embeds_rewrites( $rules ) {
-    foreach ( $rules as $rule => $rewrite ) {
-        if ( false !== strpos( $rewrite, 'embed=true' ) ) {
-            unset( $rules[ $rule ] );
-        }
-    }
-    return $rules;
-}
-function disable_embeds_remove_rewrite_rules() {
-    add_filter( 'rewrite_rules_array', 'disable_embeds_rewrites' );
-    flush_rewrite_rules();
-}
-register_activation_hook( __FILE__, 'disable_embeds_remove_rewrite_rules' );
-function disable_embeds_flush_rewrite_rules() {
-    remove_filter( 'rewrite_rules_array', 'disable_embeds_rewrites' );
-    flush_rewrite_rules();
-}
-register_deactivation_hook( __FILE__, 'disable_embeds_flush_rewrite_rules' );
-
-remove_action( 'wp_head', 'feed_links_extra', 3 ); //去除评论feed
-remove_action( 'wp_head', 'feed_links', 2 ); //去除文章feed
-remove_action( 'wp_head', 'rsd_link' ); //针对Blog的远程离线编辑器接口
-remove_action( 'wp_head', 'wlwmanifest_link' ); //Windows Live Writer接口
-remove_action( 'wp_head', 'index_rel_link' ); //移除当前页面的索引
-// remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 ); //移除后面文章的url
-// remove_action( 'wp_head', 'start_post_rel_link', 10, 0 ); //移除最开始文章的url
-remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );//自动生成的短链接
-remove_action( 'wp_head', 'adjacent_posts_rel_link', 10, 0 ); ///移除相邻文章的url
-remove_action( 'wp_head', 'wp_generator' ); // 移除版本号
 
 // 面包屑导航注册代码
 function wheatv_breadcrumbs() {
