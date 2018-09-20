@@ -198,7 +198,7 @@
                         <?php if (get_previous_post()) { previous_post_link('<span>上一篇：</span>%link');} else {echo "没有了，已经是最后文章";} ?>
                     </p>
                     <p class="text-post">
-                        <?php if (get_next_post()) { next_post_link('<span>下一篇：</span>%link');} else {echo "下一篇：&nbsp;&nbsp;没有了，已经是最新文章";} ?>
+                        <?php if (get_next_post()) { next_post_link('<span>下一篇：</span>%link');} else {echo "下一篇：没有了，已经是最新文章";} ?>
                     </p>
 
                     <!-- 畅言公共JS代码 start (一个网页只需插入一次) -->

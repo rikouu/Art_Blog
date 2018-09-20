@@ -2969,8 +2969,8 @@ td.line-numbers {
 
 .log-text p {
 	font-size: 14px;
-	line-height: 28px;
-	margin: 10px auto;
+	line-height: 30px;
+	margin: 15px auto;
 	text-indent: 2em;
 	color: #666;
 }
@@ -2985,6 +2985,11 @@ td.line-numbers {
 	max-width: 100%;
 	height: auto;
 	opacity: 1;
+	cursor: pointer;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 }
 
 .continar-left .log-text ul li {
@@ -3000,7 +3005,7 @@ p.text-post {
 	width: 100%;
 	line-height: 30px;
 	color: #666;
-	font-size: 12px;
+	font-size: 14px;
 }
 
 .ds-comments-info {

@@ -145,6 +145,7 @@
     </table>
   </div>
 </div>
+
 <!-- 在线客服结束 -->
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-2.1.4.min.js"></script>
 <?php include_once("baidu_js_push.php") ?>
@@ -246,10 +247,11 @@
       };
 
       function fillSpan($ele) {
-        var baseContent = $ele.html();
+        var baseContent = $ele.text().trim().length < 25?$ele.text().trim():$ele.text().trim().slice(0,25) + '...';
+
         var content = '';
         for (var i = 0, len = baseContent.length; i < len; i++) {
-          content += '<span>' + baseContent.substr(i, 1) + '</span>' 
+          content += '<span>'+baseContent.substr(i, 1)+'</span>' 
         }
         $ele.html(content);
         var positionArr = []; //存放原始位置

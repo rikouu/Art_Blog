@@ -246,86 +246,80 @@ function add_button_mce($mce_settings) {//扩充发表文章编辑器的导航�
 <?php
 }
 // 彩色静态标签云 Color Tag Cloud
-function colorCloud($text) {
-  $text = preg_replace_callback('|<a (.+?)>|i', 'colorCloudCallback', $text);
-  return $text;
-}
-function colorCloudCallback($matches) {
-  $text = $matches[1];
-  $color = dechex(rand(0,16777215));
-  $pattern = '/style=(\'|\")(.*)(\'|\")/i';
-  $text = preg_replace($pattern, "style=\"color:#{$color};$2;\"", $text);
-  return "<a $text>";
-}
-add_filter('wp_tag_cloud', 'colorCloud', 1);
+// function colorCloud($text) {
+//   $text = preg_replace_callback('|<a (.+?)>|i', 'colorCloudCallback', $text);
+//   return $text;
+// }
+// function colorCloudCallback($matches) {
+//   $text = $matches[1];
+//   $color = dechex(rand(0,16777215));
+//   $pattern = '/style=(\'|\")(.*)(\'|\")/i';
+//   $text = preg_replace($pattern, "style=\"color:#{$color};$2;\"", $text);
+//   return "<a $text>";
+// }
+// add_filter('wp_tag_cloud', 'colorCloud', 1);
 
 
 // 搜索结果关键词高亮显示
-function lee_set_query() {
-  $query  = attribute_escape(get_search_query());
-  if(strlen($query) > 0){
-    echo '
-      <script type="text/javascript">
-        var lee_query  = "'.$query.'";
-      </script>
-    ';
-  }
-}
-function lee_init_jquery() {
- wp_enqueue_script('jquery');
-}
-add_action('init', 'lee_init_jquery');
-add_action('wp_print_scripts', 'lee_set_query');
+// function lee_set_query() {
+//   $query  = attribute_escape(get_search_query());
+//   if(strlen($query) > 0){
+//     echo '
+//       <script type="text/javascript">
+//         var lee_query  = "'.$query.'";
+//       </script>
+//     ';
+//   }
+// }
+// function lee_init_jquery() {
+//  wp_enqueue_script('jquery');
+// }
+// add_action('init', 'lee_init_jquery');
+// add_action('wp_print_scripts', 'lee_set_query');
 
 
 // 文章外部链接加上nofollow
-add_filter( 'the_content', 'cn_nf_url_parse');
-function cn_nf_url_parse( $content ) {
+// add_filter( 'the_content', 'cn_nf_url_parse');
+// function cn_nf_url_parse( $content ) {
  
-  $regexp = "<a\s[^>]*href=(\"??)([^\" >]*?)\\1[^>]*>";
-  if(preg_match_all("/$regexp/siU", $content, $matches, PREG_SET_ORDER)) {
-    if( !empty($matches) ) {
+//   $regexp = "<a\s[^>]*href=(\"??)([^\" >]*?)\\1[^>]*>";
+//   if(preg_match_all("/$regexp/siU", $content, $matches, PREG_SET_ORDER)) {
+//     if( !empty($matches) ) {
  
-      $srcUrl = get_option('siteurl');
-      for ($i=0; $i < count($matches); $i++)
-      {
+//       $srcUrl = get_option('siteurl');
+//       for ($i=0; $i < count($matches); $i++)
+//       {
  
-        $tag = $matches[$i][0];
-        $tag2 = $matches[$i][0];
-        $url = $matches[$i][0];
+//         $tag = $matches[$i][0];
+//         $tag2 = $matches[$i][0];
+//         $url = $matches[$i][0];
  
-        $noFollow = '';
+//         $noFollow = '';
  
-        $pattern = '/target\s*=\s*"\s*_blank\s*"/';
-        preg_match($pattern, $tag2, $match, PREG_OFFSET_CAPTURE);
-        if( count($match) < 1 )
-          $noFollow .= ' target="_blank" ';
+//         $pattern = '/target\s*=\s*"\s*_blank\s*"/';
+//         preg_match($pattern, $tag2, $match, PREG_OFFSET_CAPTURE);
+//         if( count($match) < 1 )
+//           $noFollow .= ' target="_blank" ';
  
-        $pattern = '/rel\s*=\s*"\s*[n|d]ofollow\s*"/';
-        preg_match($pattern, $tag2, $match, PREG_OFFSET_CAPTURE);
-        if( count($match) < 1 )
-          $noFollow .= ' rel="nofollow" ';
+//         $pattern = '/rel\s*=\s*"\s*[n|d]ofollow\s*"/';
+//         preg_match($pattern, $tag2, $match, PREG_OFFSET_CAPTURE);
+//         if( count($match) < 1 )
+//           $noFollow .= ' rel="nofollow" ';
  
-        $pos = strpos($url,$srcUrl);
-        if ($pos === false) {
-          $tag = rtrim ($tag,'>');
-          $tag .= $noFollow.'>';
-          $content = str_replace($tag2,$tag,$content);
-        }
-      }
-    }
-  }
- 
-  $content = str_replace(']]>', ']]>', $content);
-  return $content;
-}
-// function lazyload($content) {
-//   if(!is_feed()||!is_robots) {
-//     $content=preg_replace('/<img(.+)src=[\'"]([^\'"]+)[\'"](.*)>/i',"<img\$1data-original=\"\$2\" src=\"data:image/gif;base64,R0lGODlhAQABAIAAAOHh4QAAACH5BAAAAAAALAAAAAABAAEAQAICRAEAOw==\"\$3>\n",$content);
+//         $pos = strpos($url,$srcUrl);
+//         if ($pos === false) {
+//           $tag = rtrim ($tag,'>');
+//           $tag .= $noFollow.'>';
+//           $content = str_replace($tag2,$tag,$content);
+//         }
+//       }
+//     }
 //   }
+ 
+//   $content = str_replace(']]>', ']]>', $content);
 //   return $content;
 // }
-// add_filter ('the_content', 'lazyload');
+
 // 自定义登录界面
 function custom_login(){
     echo '<link rel="stylesheet" type="text/css" href="https://www.weipxiu.com/style-login.4205e3e2.css" />';
