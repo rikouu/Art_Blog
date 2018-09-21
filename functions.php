@@ -21,7 +21,7 @@ if ( function_exists('register_sidebar') )
 <?php  //控制分页页面，每个页面所显示的文章数量
 	function custom_posts_per_page($query){
 		if(is_home()){
-		$query->set('posts_per_page',12);//首页每页显示12篇文章
+		$query->set('posts_per_page',13);//首页每页显示12篇文章
 		}
 		if(is_search()){
 			$query->set('posts_per_page',10);//搜索页显示所有匹配的文章，不分页

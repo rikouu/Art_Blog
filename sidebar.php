@@ -1,9 +1,12 @@
 <div class="aside">
     <h3>前端简介</h3>
-    <video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload  width="328" height="185" style="margin-top:0"
-        poster="<?php bloginfo('template_url'); ?>/images/s1.png" width="328" height="185" data-setup="{}">
-        <source src="<?php bloginfo('template_url'); ?>/music/2018.mp4" type="video/mp4"></source>
-        <p class="vjs-no-js"> 要查看此视频，请启用JavaScript，并考虑升级到Web浏览器版本。 <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a> </p>
+    <video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload width="328" height="185"
+        style="margin-top:0" poster="<?php bloginfo('template_url'); ?>/images/s1.png" width="328" height="185"
+        data-setup="{}">
+        <source src="<?php bloginfo('template_url'); ?>/music/2018.mp4" type="video/mp4">
+        </source>
+        <p class="vjs-no-js"> 要查看此视频，请启用JavaScript，并考虑升级到Web浏览器版本。 <a href="https://videojs.com/html5-video-support/"
+                target="_blank">supports HTML5 video</a> </p>
     </video>
     <img src="<?php bloginfo('template_url'); ?>/images/s1.png" width="328" height="185" alt="" style="width:100%;display: none; margin-top:10px;background-size: 330px 185px;">
     <div class="textwidget">
@@ -17,16 +20,20 @@
                     <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=343049466&site=qq&menu=yes"><i class="iconfont icon-qq"></i>QQ</a>
                 </li>
                 <li class="qq">
-                    <a target="_blank" href="https://jq.qq.com/?_wv=1027&k=4BemYKg" rel="nofollow" class="top-tip" title="加入web前端QQ群"><i class="iconfont icon-qqqun"></i>Q群</a>
+                    <a target="_blank" href="https://jq.qq.com/?_wv=1027&k=4BemYKg" rel="nofollow" class="top-tip"
+                        title="加入web前端QQ群"><i class="iconfont icon-qqqun"></i>Q群</a>
                 </li>
                 <li class="feed">
-                    <a target="_blank" href="tencent://message/?uin=343049466&Site=qq&Menu=yes" rel="nofollow" class="top-tip" title="QQ临时会话"><i class="iconfont icon-qq"></i>会话</a>
+                    <a target="_blank" href="tencent://message/?uin=343049466&Site=qq&Menu=yes" rel="nofollow" class="top-tip"
+                        title="QQ临时会话"><i class="iconfont icon-qq"></i>会话</a>
                 </li>
                 <li class="email">
-                    <a href="mailto:343049466@qq.com.com" target="_blank" rel="nofollow" class="top-tip" title="给我发送qq邮件"><i class="iconfont icon-youxiang"></i>邮件</a>
+                    <a href="mailto:343049466@qq.com.com" target="_blank" rel="nofollow" class="top-tip" title="给我发送qq邮件"><i
+                            class="iconfont icon-youxiang"></i>邮件</a>
                 </li>
                 <li class="weixin">
-                    <a href="https://www.weipxiu.com/feed" target="_blank" rel="nofollow" class="top-tip" title="关注微信"><i class="iconfont icon-weixin"></i>微信</a>
+                    <a href="https://www.weipxiu.com/feed" target="_blank" rel="nofollow" class="top-tip" title="关注微信"><i
+                            class="iconfont icon-weixin"></i>微信</a>
                 </li>
             </ul>
         </ul>
@@ -49,13 +56,13 @@
               $query_posts = new WP_Query();
               $query_posts->query($args);
               while( $query_posts->have_posts() ) { $query_posts->the_post(); ?>
-                <li>
-                    <em></em>
-                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                        <?php the_title(); ?>
-                    </a>
-                </li>
-                <?php } wp_reset_query();?>
+            <li>
+                <em></em>
+                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                    <?php the_title(); ?>
+                </a>
+            </li>
+            <?php } wp_reset_query();?>
         </ul>
     </div>
 </div>
@@ -65,18 +72,30 @@
 <div class="classif">
     <h3 class="widget-title"><a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>文章分类</a></h3>
     <div class="items">
-        <a href="https://www.weipxiu.com/?cat=3">HTML/CSS (<?php echo wt_get_category_count(3); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=6">HTML5 (<?php echo wt_get_category_count(6); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=6">CSS3详解 (<?php echo wt_get_category_count(6); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=5">JavaScript (<?php echo wt_get_category_count(5); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=5">jQuery (<?php echo wt_get_category_count(5); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=14">Vue.js (<?php echo wt_get_category_count(14); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=14">Angular.js (<?php echo wt_get_category_count(14); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=22">Node.js (<?php echo wt_get_category_count(22); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=13">前端技巧 ((<?php echo wt_get_category_count(13); ?>))</a>
-        <a href="https://www.weipxiu.com/?cat=14">前端资源 (<?php echo wt_get_category_count(14); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=29">前端工具 (<?php echo wt_get_category_count(29); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=2">wordpress (<?php echo wt_get_category_count(2); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=3">HTML/CSS (
+            <?php echo wt_get_category_count(3); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=6">HTML5 (
+            <?php echo wt_get_category_count(6); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=6">CSS3详解 (
+            <?php echo wt_get_category_count(6); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=5">JavaScript (
+            <?php echo wt_get_category_count(5); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=5">jQuery (
+            <?php echo wt_get_category_count(5); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=14">Vue.js (
+            <?php echo wt_get_category_count(14); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=14">Angular.js (
+            <?php echo wt_get_category_count(14); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=22">Node.js (
+            <?php echo wt_get_category_count(22); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=13">前端技巧 ((
+            <?php echo wt_get_category_count(13); ?>))</a>
+        <a href="https://www.weipxiu.com/?cat=14">前端资源 (
+            <?php echo wt_get_category_count(14); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=29">前端工具 (
+            <?php echo wt_get_category_count(29); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=2">wordpress (
+            <?php echo wt_get_category_count(2); ?>)</a>
         <a href="javascript:void(0);">Webpack (43)</a>
         <a href="javascript:void(0);">W3c标准 (16)</a>
         <a href="https://www.weipxiu.com/?cat=1">网站公告 (99)</a>
@@ -119,9 +138,9 @@
         <h3 class="widget-title"><a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>风云英雄</a></h3>
         <p>他们同样是一群网虫，却不是每天泡在网上游走在淘宝和网游之间、刷着本来就快要透支的信用卡。他们或许没有踏出国门一步，却获得了斯坦福、哈佛等许多常青藤名校课程的结业证……他们的同学不局限在一国一校，而是遍及全球……加入他们，成为一名互联网学习者！
         </p>
-		<ul class="friendsChain">
-			<?php wp_list_bookmarks('title_li=&categorize=0'); ?>
-		</ul>
+        <ul class="friendsChain">
+            <?php wp_list_bookmarks('title_li=&categorize=0'); ?>
+        </ul>
     </div>
 </div>
 <!-- 友情链接结束 -->
@@ -130,24 +149,54 @@
     <div class="daily-list">
         <h3 class="widget-title"><a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>站点统计</a></h3>
         <ul>
-            <li>文章：
-                <?php $count_posts = wp_count_posts(); echo $published_posts = $count_posts->publish; ?> 篇</li>
-            <li>分类：
-                <?php echo $count_categories = wp_count_terms('category'); ?> 个</li>
-            <li>标签：
-                <?php echo $count_tags = wp_count_terms('post_tag'); ?> 个</li>
-            <!-- <li>链接：<?php $link = $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->links WHERE link_visible = 'Y'"); echo $link; ?> 个</li> -->
-            <li>运行：
-                <?php echo floor((time()-strtotime("2016-12-15"))/86400);?>天</li>
-            <li>访问：6,587,558次</li>
-            <li>更新：
+            <li>文章总数：
+                <?php $count_posts = wp_count_posts(); echo $published_posts = $count_posts->publish; ?> 篇
+            </li>
+            <li>草稿数目：
+                <?php $count_posts = wp_count_posts(); echo $draft_posts = $count_posts->draft; ?> 篇
+            </li>
+            <li>分类数目：
+                <?php echo $count_categories = wp_count_terms('category'); ?> 个
+            </li>
+            <li>页面总数：
+                <!-- <?php $count_pages = wp_count_posts('page'); echo $page_posts = $count_pages->publish; ?> 个 -->
+                21 个
+            </li>
+            <li>评论总数：
+                <?php echo $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->comments");?> 条</li>
+            <li>链接总数：
+                <?php $link = $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->links WHERE link_visible = 'Y'"); echo $link; ?> 个
+            </li>
+            <li>标签总数：
+                <?php echo $count_tags = wp_count_terms('post_tag'); ?> 个
+            </li>
+            <li>建站时间：
+                <?php echo floor((time()-strtotime("2016-12-15"))/86400);?> 天
+            </li>
+            <li>用户总量：
+                <?php $users = $wpdb->get_var("SELECT COUNT(ID) FROM $wpdb->users"); echo $users; ?> 人
+            </li>
+            <li>访问总量：
+                <?php
+                    $counterFile = "counter.txt";
+                    $fp = fopen($counterFile,"a+");
+                    $num = fgets($fp,10);
+                    $num += 1;
+                    print ($num+8647865).' 次';
+                    fclose($fp);
+                    $fpp=fopen($counterFile,"w");
+                    fwrite($fpp, $num);
+                    fclose($fpp);
+                ?>
+            </li>
+            <li>最近更新：
                 <?php $last = $wpdb->get_results("SELECT MAX(post_modified) AS MAX_m FROM $wpdb->posts WHERE (post_type = 'post' OR post_type = 'page') AND (post_status = 'publish' OR post_status = 'private')");$last = date('Y年n月j日', strtotime($last[0]->MAX_m));echo $last; ?>
             </li>
-            <!-- <li style="margin:0; line-height: 22px;">
-                  <a href="<?php bloginfo('rss2_url'); ?>" title="RSS订阅本站">
-                      <font class="iconfont icon-1" style="color:#666; font-size:16px;"></font>
-                  </a>
-              </li> -->
+            <li style="margin:0; line-height: 22px;">如若喜欢本站，欢迎收藏
+                <!-- 订阅本站：<a href="<?php bloginfo('rss2_url'); ?>" title="RSS订阅本站" style="display:inline;margin-left:0;line-height: normal;">
+                    <font class="iconfont icon-1" style="color:#666; font-size:16px;"></font>
+                </a> -->
+            </li> 
         </ul>
     </div>
 </div>
