@@ -1611,7 +1611,9 @@ i {
 .continar .rssbook>p {
 	margin-top: 16px;
 }
-
+.continar p.wpm_thankyou{
+	color:#ed145b
+}
 .rssbook h3 {
 	font-size: 16px;
 	margin-bottom: 3px;

@@ -9,6 +9,7 @@
 	<meta name="format-detection" content="telephone=no"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">强制https -->
 	<title>唯品秀&nbsp;–&nbsp;前端开发&nbsp;|&nbsp;web前端技术博客</title>
 	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
 
@@ -186,7 +187,7 @@
     	 	 <!-- 邮件订阅start -->
     	 	 <div class="inner-box">
     	 	 	  <div class="rssbook">
-    	 	 	  	  <h3 class="info">您也可以通过电子邮件订阅每日的更新，不错过任何一篇好文章</h3>
+    	 	 	  	  <h3 class="info">您也可以通过电子邮件订阅每日的更新，不定时为您推送优质文章</h3>
     	 	 	  	  <p>我们不会公开您的邮箱，您可以随时取消订阅</p>
     	 	 	  	  <div class="mailInput">
     	 	 	  	  	 <?php echo wpm_form(1); ?>
@@ -341,7 +342,7 @@
 	<!-- 首页弹窗end -->
 
 	<!-- 首页背景音乐开始 -->
-    <audio src="https://other.web.nf01.sycdn.kuwo.cn/resource/n1/36/3/1740856255.mp3" loop="loop" preload="none" id="music"></audio>
+    <audio src="http://other.web.rh01.sycdn.kuwo.cn/resource/n2/33/99/2947872486.mp3" loop="loop" preload="none" id="music"></audio>
     <div class="control"></div>
     <!-- 首页背景音乐结束 -->
 </body>

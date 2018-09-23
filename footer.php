@@ -9,7 +9,8 @@
     <p>
       © 2016-2018
       <a href="https://www.weipxiu.com/">唯品秀</a> 本站主题由
-      <a href="https://www.weipxiu.com/" class="highlight">WEIPXIU.COM</a>提供 鄂ICP备 16001853号-1
+      <a href="https://www.weipxiu.com/" class="highlight">WEIPXIU.COM</a>
+      提供 鄂ICP备 16001853号<!---1-->
     </p>
   </div>
 </div>
