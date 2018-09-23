@@ -31,14 +31,6 @@
 ```
 <img src="https://raw.githubusercontent.com/weipxiu/weipxiu.github.io/master/images/zhiwei.png">
 
-<h2>更新摘要</h2>
-
-<h3>2018/4/24</h3>
-
-> 1、去掉垃圾文件，去掉每个分类category.php页面底部多余冗余js
-
-> 2、优化导航设置高亮方式，改以往笨拙手动设置为在header.php导航中通过is_category判断配置
-
 <h2>备注说明</h2>
 
 > 1、wordpress主题制作有特别要求，例如主题根目录必须存在header.php、index.php、footer.php、style.css，否则是不认，无法加载的。因此不用觉得某些文件摆放不合理，存在必定有意义
