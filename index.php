@@ -58,47 +58,6 @@
             </span>
         </div>
     </section>
-
-	<!--<section class="mod-banner" id="js_banner_1">
-	轮播开始
-			<div id="wowslider-container" class="foolishOut">
-				<div class="ws_images">
-					<ul>
-						<li>
-							<a href="#overview">
-								<img src="https://www.weipxiu.com/wp-content/themes/boke/images/slide2.png"  height="360" alt="123" title="" />
-							</a>
-						</li>
-						<li>
-							<a href="demo.html">
-								<img src="https://www.weipxiu.com/wp-content/themes/boke/images/slide3.png" height="360" alt="456" title="唯品秀个人博客" />
-							</a>
-							2016-11-16日正式上线
-						</li>
-						<li>
-							<a href="https://wowslider.com/wowslider-free-setup.zip">
-								<img src="https://www.weipxiu.com/wp-content/themes/boke/images/slide4.png" height="360" alt="789" title="关注用户体验" />
-							</a>
-							关注WEB前端开发技术
-						</li>
-					</ul>
-				</div>
-				<div class="ws_bullets">
-					<div>
-						<a href="#">
-							<img src="<?php bloginfo('template_url'); ?>/img/data/tooltips/slide1.png" alt="CSS3 Slider" />
-						</a>
-						<a href="#">
-							<img src="<?php bloginfo('template_url'); ?>/img/data/tooltips/slide2.png" alt="CSS Slideshow" />
-						</a>
-						<a href="#">
-							<img src="<?php bloginfo('template_url'); ?>/img/data/tooltips/slide3.png" alt="CSS Gallery" />
-						</a>
-					</div>
-				</div>
-			</div>
-	轮播结束
-	</section>-->
 	
 	<!-- 导航start -->
 	<!-- <div class="index-box">
@@ -346,57 +305,7 @@
     <div class="control"></div>
     <!-- 首页背景音乐结束 -->
 </body>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/xfg_banner.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/javascript.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/swiper.min.js"></script>
-
-<!-- 轩枫轮播start -->
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/xfg_banner.js"></script>
-<script>
-		//turnEffect（翻转）boomEffect（爆炸）pageEffect（翻页）skewEffect（扭曲）cubeEffect（立方体）
-		var flippingMode = ['turnEffect', 'boomEffect', 'skewEffect']
-		var randomNum = Math.floor(Math.random()*3);
-        var banner = new Banner({
-            banner: '#banner_img',
-            index: 0,
-            autoplay: 8000,
-            width: 1200,
-            height: 300,
-            images: [{
-                    url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-1.jpg',
-                    link: 'https://www.weipxiu.com/?cat=29'
-                }, {
-                    url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-2.jpg',
-                    link: 'https://www.weipxiu.com/'
-                }, {
-                    url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-3.jpg',
-                    link: 'javascript:;'
-                }, {
-                    url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-4.jpg',
-                    link: 'javascript:;'
-                }, {
-                    url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-5.jpg',
-                    link: 'https://www.weipxiu.com/?cat=6'
-                },
-                {
-                    url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-6.jpg',
-                    link: 'https://www.weipxiu.com/?p=1313'
-                }
-            ],
-
-            preloadImages: true,// 预加载所有图片
-
-			// 分页及控制
-			pagination: '.js_banner_nav',     // 分页dom
-			paginationClick: true,  // 分页是否可点击
-			prevButton: '.js_banner_prev',     // 下一张dom
-			nextButton: '.js_banner_next',     // 上一张dom
-            Effects: {
-				//turnEffect（翻转）boomEffect（爆炸）pageEffect（翻页）skewEffect（扭曲）cubeEffect（立方体）
-                'prev': 'turnEffect',
-                'next': 'boomEffect',
-                'navi': 'pageEffect'
-            },
-        });
-</script>
-<!-- 轩枫轮播end -->
 </html>

@@ -1,10 +1,10 @@
 	<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_183025_79bwxxk5sei885mi.css">
 	<!-- 上面老版本，不维护 -->
 	<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_385244_86xbm4tvg5m3rf6r.css">
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/video-js.css">
+	<!-- <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/video-js.css"> -->
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/index.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/video.js/video.min.js"></script>
+	<!-- <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/video.js/video.min.js"></script> -->
 	<!-- 判断低版本IE -->
 	<script>
 		 if ((navigator.userAgent.indexOf('MSIE') >= 0) 
@@ -125,7 +125,7 @@
 									  <p></p>
 									</li>
 									<li detaName="re" class="<?php if ( (is_category('2') || in_category('2')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-									  <a href="javascript:void(0);" target="_blank">
+									  <a href="javascript:void(0);">
 										  <span data-href="category/mood">心情小镇</span>
 										  <span data-href="category/mood">心情小镇</span>
 									  </a>
@@ -142,7 +142,7 @@
 									  <p></p>
 									</li>
 									<li detaName="fa" class="<?php if ( (is_category('1') || in_category('1')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-									  <a href="/?cat=1" target="_blank">
+									  <a href="javascript:void(0);">
 										  <span data-href="category/timemachine">时光机</span>
 										  <span data-href="category/timemachine">时光机</span>
 									  </a>
@@ -159,7 +159,7 @@
 									  <p></p>
 									</li>
 									<li detaName="la" class="<?php if ( (is_category('8') || in_category('8')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-									  <a href="javascript:void(0);" target="_blank">
+									  <a href="javascript:void(0);">
 										  <span data-href="category/message">给我留言</span>
 										  <span data-href="category/message">给我留言</span>
 									  </a>
@@ -167,7 +167,7 @@
 									  <p></p>
 									</li>
 									<li detaName="si" class="<?php if ( in_category('13') && is_category('13') ) { echo 'action'; } ?>">
-									  <a href="javascript:void(0);" target="_blank">
+									  <a href="javascript:void(0);">
 										  <span data-href="category/jqzy">技巧资源</span>
 										  <span data-href="category/jqzy">技巧资源</span>
 									  </a>
@@ -175,7 +175,7 @@
 									  <p></p>
 									</li>
 									<li detaName="dd" class="<?php if ( (is_category('10') || in_category('10')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-									  <a href="javascript:void(0);" target="_blank">
+									  <a href="javascript:void(0);">
 										  <span data-href="category/about">关于博客</span>
 										  <span data-href="category/about">关于博客</span>
 									  </a>

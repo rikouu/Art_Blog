@@ -452,18 +452,6 @@ img:hover {
 	display: none !important;
 }
 
-/*轮播针对PC端大屏幕start*/
-
-#js_banner_1 {
-	width: 100%;
-	height: 360px;
-	margin-top: 10px;
-	margin: 104px auto 0px;
-	border-bottom: 1px solid #eee;
-	display: none !important;
-}
-
-/*轮播针对PC端大屏幕end*/
 
 .header {
 	width: 100%;
