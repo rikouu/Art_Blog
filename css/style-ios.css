@@ -827,7 +827,7 @@ img {
 }
 
 .rssbook p {
-    font-size: 0.3rem !important;
+    font-size: 0.29rem !important;
     margin: 5px auto 10px;
     line-height: 24px;
     color: #666;
@@ -1650,7 +1650,7 @@ div.com-art ul li {
 }
 
 .continar-left div.key-w .single_lable {
-    display: inline-block;
+    display: table;
     height: 0.55rem;
 }
 
@@ -1701,7 +1701,7 @@ div.com-art ul li {
 }
 
 div.key-w {
-    margin: 10px 0;
+    margin: 0.2rem 0 0.5rem;
     font-size: 14px;
     padding-top: 0.25rem;
     clear: both;
@@ -1768,7 +1768,7 @@ div.key-w a:nth-of-type(3):hover {
     padding-left: 0px;
     padding-right: 0;
     color: #ed145b;
-    padding: 0 0.1rem;
+    padding: 0 0.1rem 0 0;
     font-size: 0.28rem;
 }
 
@@ -3174,11 +3174,12 @@ canvas,
 
 #web-tj ul li {
     float: left;
-    margin: 0px 55px 0px 10px;
-    line-height: 25px;
-    font-size: 12px;
+    line-height: 0.5rem;
+    font-size: 0.24rem;
     width: auto;
     font-weight: normal;
+    width: 50%;
+    overflow: hidden;
 }
 
 .widget-title a i {
@@ -3198,7 +3199,7 @@ canvas,
     height: 0.9rem;
     line-height: 0.9rem;
     background: #fbfbfb;
-    font-size: 0.34rem;
+    font-size: 0.32rem;
     text-indent: 0.5em;
     display: block;
     white-space: nowrap;
@@ -3209,7 +3210,7 @@ canvas,
 .continar-left .log-text h5 {
     text-indent: 0;
     font-weight: normal;
-    font-size: 0.32rem;
+    font-size: 0.3rem;
     border-bottom: 1px dashed #ccc;
     padding: 0.1rem 0;
 }
@@ -3247,8 +3248,8 @@ canvas,
 }
 
 .reward-box img {
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 100%;
+    /* height: 3.2rem; */
     float: left;
 }
 
@@ -3276,6 +3277,7 @@ canvas,
 
 .reward-box-item {
     display: inline-block;
+    width:49%;
     text-indent: 0;
 }
 

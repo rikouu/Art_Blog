@@ -173,7 +173,7 @@
             <li>建站时间：
                 <?php echo floor((time()-strtotime("2016-12-15"))/86400);?> 天
             </li>
-            <li>用户总量：
+            <li>注册用户：
                 <?php $users = $wpdb->get_var("SELECT COUNT(ID) FROM $wpdb->users"); echo $users; ?> 人
             </li>
             <li>访问总量：
