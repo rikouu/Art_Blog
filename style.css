@@ -2950,7 +2950,9 @@ td.line-numbers {
 	margin: 10px 0;
 	line-height: 28px;
 }
-
+.log-text li + p,.log-text li + p +p,.log-text li + p+p+p,.log-text li + p+p+p+p{
+	margin: -10px auto 10px;
+} 
 .codecolorer-container * {
 	text-indent: 0
 }
