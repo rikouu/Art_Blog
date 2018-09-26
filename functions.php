@@ -19,9 +19,9 @@ if ( function_exists('register_sidebar') )
 	set_post_thumbnail_size(220, 150, true); // 图片宽度与高度
 ?>
 <?php  //控制分页页面，每个页面所显示的文章数量
-	function custom_posts_per_page($query){
+	/*function custom_posts_per_page($query){
 		if(is_home()){
-		$query->set('posts_per_page',12);//首页每页显示12篇文章
+		$query->set('posts_per_page',15);//首页每页显示12篇文章
 		}
 		if(is_search()){
 			$query->set('posts_per_page',10);//搜索页显示所有匹配的文章，不分页
@@ -30,7 +30,7 @@ if ( function_exists('register_sidebar') )
 			$query->set('posts_per_page',15);//其它页面每页显示10篇文章
 	}//endif
 	}//function
-	add_action('pre_get_posts','custom_posts_per_page');
+	add_action('pre_get_posts','custom_posts_per_page');*/
 ?>
 <?php  //文章分类统计
 function wt_get_category_count($input = '') { 

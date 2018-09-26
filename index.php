@@ -158,7 +158,7 @@
 			<?php
 			if(have_posts()): while(have_posts()):the_post();
 			?>
-
+			
 			<div class="text">
 				 <div class="img-left">
 				 	<a class="read-more" href="<?php the_permalink(); ?>" target="_blank">

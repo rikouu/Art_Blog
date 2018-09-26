@@ -8,7 +8,7 @@
         <p class="vjs-no-js"> 要查看此视频，请启用JavaScript，并考虑升级到Web浏览器版本。 <a href="https://videojs.com/html5-video-support/"
                 target="_blank">supports HTML5 video</a> </p>
     </video> -->
-    <img src="<?php bloginfo('template_url'); ?>/images/s1.png" width="328" height="185" alt="" style="width:100%;margin-top:10px;background-size: 330px 185px;">
+    <img src="<?php bloginfo('template_url'); ?>/images/s1.png" width="328" height="185" alt="" style="display: block;width:100%;margin-top:10px;background-size: 330px 185px;">
     <div class="textwidget">
         <p class="clearfix">
             唯品秀博客: weipxiu.com，一个关注Web前端开发技术、关注用户体验、坚持更多原创实战教程的个人网站，
@@ -39,10 +39,57 @@
         </ul>
     </div>
 </div>
-<!-- 前端日报开始 -->
-<div class="widget mouseover">
+
+<!-- 热门文章start -->
+<div class="widget hot_rticles">
     <div class="daily-list">
         <h3 class="widget-title"><a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>大家喜欢</a></h3>
+        <!-- 按发布日期排序 orderby=date?
+        按修改时间排序 orderby=modified
+        按文章ID排序 orderby=ID
+        按评论最多排序 orderby=comment_count
+        按标题排序 orderby=title
+        随机排序 orderby=rand -->
+        <ul>
+            <?php
+                  $args = array(
+                      'post_password' => '',
+                      'post_status' => 'publish', // 只选公开的文章.
+                      'post__not_in' => array($post->ID),//排除当前文章
+                      'caller_get_posts' => 1, // 排除置頂文章.
+                      'orderby' => 'modified', // 依ID排序.
+                      'posts_per_page' => 5 // 设置调用条数
+                  );
+                  $query_posts = new WP_Query();
+                  $query_posts->query($args);
+                  while( $query_posts->have_posts() ) { $query_posts->the_post(); ?>
+            <li>
+                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                    <?php
+                        if ( has_post_thumbnail() )
+                            the_post_thumbnail();
+                        else
+                            echo '<img src="https://www.weipxiu.com/wp-content/uploads/2017/04/default-220x150.png" alt="" />';
+                    ?>
+                </a>
+                <!-- <em></em> -->
+                <div class="hot_text">
+                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="hot_title">
+                        <?php the_title(); ?>
+                    </a>
+                    <span class="hot_time"><?php the_time('Y年m月d日') ?></span>
+                </div>
+            </li>
+            <?php } wp_reset_query();?>
+        </ul>
+    </div>
+</div>
+<!-- 热门文章end -->
+
+<!-- 随机文章start -->
+<div class="widget mouseover">
+    <div class="daily-list">
+        <h3 class="widget-title"><a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>随机文章</a></h3>
         <ul>
             <?php
               $args = array(
@@ -50,7 +97,7 @@
                   'post_status' => 'publish', // 只选公开的文章.
                   'post__not_in' => array($post->ID),//排除当前文章
                   'caller_get_posts' => 1, // 排除置頂文章.
-                  'orderby' => 'rand', // 依評論數排序.
+                  'orderby' => 'rand', // 随机排序.
                   'posts_per_page' => 10 // 设置调用条数
               );
               $query_posts = new WP_Query();
@@ -66,9 +113,9 @@
         </ul>
     </div>
 </div>
-<!-- 前端日报结束 -->
+<!-- 随机文章end -->
 
-<!-- 技术分类开始 -->
+<!-- 技术分类start -->
 <div class="classif">
     <h3 class="widget-title"><a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>文章分类</a></h3>
     <div class="items">
@@ -107,7 +154,7 @@
         <a href="javascript:void(0);">WEB兼容 (17)</a>
     </div>
 </div>
-<!-- 技术分类结束 -->
+<!-- 技术分类end -->
 
 <!-- <div class="widget Label">
   <h3 class="widget-title"><a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>标签云</a></h3>
@@ -116,7 +163,7 @@
   </div>
 </div> -->
 
-<!-- 评论模块开始 -->
+<!-- 评论模块start -->
 <div class="classif" id="primary-sidebar">
     <div class="com-s com">
         <h3 class="widget-title">
@@ -131,20 +178,22 @@
         <!-- 评论模块结束 -->
     </div>
 </div>
+<!-- 评论模块end -->
 
-<!-- 友情链接开始 -->
+<!-- 友情链接start -->
 <div class="widget friendship">
     <div class="daily-list">
         <h3 class="widget-title"><a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>风云英雄</a></h3>
-        <p>他们同样是一群网虫，却不是每天泡在网上游走在淘宝和网游之间、刷着本来就快要透支的信用卡。他们或许没有踏出国门一步，却获得了斯坦福、哈佛等许多常青藤名校课程的结业证……他们的同学不局限在一国一校，而是遍及全球……加入他们，成为一名互联网学习者！
+        <p>他们同样是一群网虫，却不是每天泡在网上游走在淘宝和网游之间、刷着本来就快要透支的信用卡。他们或许没有踏出国门一步，但同学却不局限在一国一校，而是遍及全球！
         </p>
         <ul class="friendsChain">
             <?php wp_list_bookmarks('title_li=&categorize=0'); ?>
         </ul>
     </div>
 </div>
-<!-- 友情链接结束 -->
+<!-- 友情链接end -->
 
+<!-- 网站统计start -->
 <div class="widget" id="web-tj">
     <div class="daily-list">
         <h3 class="widget-title"><a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>站点统计</a></h3>
@@ -165,7 +214,8 @@
             <li>评论总数：
                 <?php echo $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->comments");?> 条</li>
             <li>链接总数：
-                <?php $link = $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->links WHERE link_visible = 'Y'"); echo $link; ?> 个
+                <?php $link = $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->links WHERE link_visible = 'Y'"); echo $link; ?>
+                个
             </li>
             <li>标签总数：
                 <?php echo $count_tags = wp_count_terms('post_tag'); ?> 个
@@ -196,7 +246,7 @@
                 <!-- 订阅本站：<a href="<?php bloginfo('rss2_url'); ?>" title="RSS订阅本站" style="display:inline;margin-left:0;line-height: normal;">
                     <font class="iconfont icon-1" style="color:#666; font-size:16px;"></font>
                 </a> -->
-            </li> 
+            </li>
         </ul>
     </div>
 </div>

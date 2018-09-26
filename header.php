@@ -84,7 +84,7 @@
 											<i class="iconfont icon-icongithub"></i>
                               	  		</a>
                               	  </li>
-                                  <li><a href="/?cat=29" target="_blank">前端工具箱</a></li>
+                                  <li><a href="/?cat=29">前端工具箱</a></li>
 								  <li><a href="/?cat=10" target="_blank">联系我们</a></li>
 								  <li>
 								  	<a href="https://www.qmaile.com/" target="_blank">

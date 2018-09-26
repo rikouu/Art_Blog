@@ -84,7 +84,7 @@ body::-webkit-scrollbar-thumb {
 	border-radius: 10px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
 	        box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-	background-color: #999
+	background-color: #ccc
 }
 
 img {
@@ -1886,7 +1886,7 @@ i {
 	        box-shadow: 0 1px 2px #c5c5c5;
 	border: 1px solid #eaeaea;
 	border-radius: 4px;
-	padding: 0 15px 15px 15px;
+	padding: 0 15px 10px 15px;
 	-webkit-transition: all .35s;
 	-o-transition: all .35s;
 	transition: all .35s;
@@ -1909,7 +1909,7 @@ i {
 }
 
 .continar-right p.clearfix {
-	margin: 10px 0;
+	margin: 10px 0 0;
 	line-height: 24px
 }
 
@@ -1926,7 +1926,8 @@ i {
 
 .continar-right .social {
 	display: table;
-	width: 100%
+	width: 100%;
+	display: none;
 }
 
 .social li {
@@ -6063,5 +6064,58 @@ p.data-l span {
 
 /* 针对傻逼畅言广告屏蔽 */
 #feedAv,#MZAD_POP_PLACEHOLDER{ margin-top: -200px!important;transform: scale(0);display: none}
+
+/* 热门文章start */
+.hot_rticles ul li{
+	padding:10px 0;
+	margin-bottom:0;
+	border-bottom: solid 1px #eee;
+}
+.hot_rticles ul li:last-of-type{
+	border-bottom:0;
+}
+.hot_rticles ul li a:nth-of-type(1){
+	width:105px;
+	height:70px;
+	float: left;
+    margin-left: 0;
+}
+.hot_rticles ul li .hot_text{
+	width: 205px;
+	height:70px;
+	float: right;
+	position:relative;
+}
+.hot_rticles ul li .hot_text .hot_title{
+	overflow: visible;
+	width:100%;
+	height: 48px;
+    line-height: 18px;
+    word-wrap: break-word;
+    word-break: normal;
+	margin-left: 0;
+	white-space: normal;
+}
+.hot_rticles ul li .hot_text .hot_time{
+	width:100%;
+	height:20px;
+	line-height: 20px;
+	font-size:12px;
+	color:#666;
+	position: absolute;
+	bottom:0;
+	left: 0;
+}
+.hot_rticles ul li img{
+	width: 100%!important;;
+	height:100%!important;
+}
+.hot_rticles .widget-title{
+	margin-bottom:0;
+}
+.hot_rticles .daily-list ul{
+	padding-bottom:0;
+}
+/* 热门文章end */
 
                     

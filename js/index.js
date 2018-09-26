@@ -1,8 +1,7 @@
 $.noConflict();
 jQuery(function ($) {
-    if (window.location.href != "https://www.weipxiu.com" && window.location.href != "https://www.weipxiu.com/") {
-        $("#js_banner,#js_banner_1").remove();
-        $(".continar-right .aside .video-js").remove();
+    if (window.location.href == "https://www.weipxiu.com" && window.location.href == "https://www.weipxiu.com/") {
+        // $(".continar-right .aside .video-js").remove();
     }
 
     //点击图片放大全屏start
@@ -46,7 +45,7 @@ jQuery(function ($) {
 
 
     // PC端导航通过点击跳转
-    $(".nav ul.music-nav li:not(.mod-header_music-icon)").click(function () {
+    $(".nav ul.music-nav li:not(.mod-header_music-icon,.front,.works)").click(function () {
         var $href = $(this).find("span").eq(0).attr("data-href");
         if ($href != '/') {
             location.href = "http://www.weipxiu.com/" + $href;
@@ -147,6 +146,7 @@ jQuery(function ($) {
         $(this).toggleClass("hover");
         off = !off
     });
+
     //判断当前页面是否存在背景音乐播放器，如果存在的话将声音大小调制到50%
     if (document.getElementById("music")) {
         document.getElementById("music").volume = 0.5;
@@ -286,7 +286,6 @@ jQuery(function ($) {
     });
     //PC二级菜单end
 
-
     $(".aircraft").click(function () {
         $('body,html').animate({
             scrollTop: 0
@@ -406,8 +405,9 @@ jQuery(function ($) {
         $(".nav-s1 > a").html("给我留言");
         $(".log-text").css("width", "100%")
     }
-    for (var i = 0; i <= $(".widget ul li").length; i++) {
-        $(".widget ul li").eq(i).find("em").html(i + 1)
+    //.mouseover ul li em序列号
+    for (var i = 0; i <= $(".mouseover ul li").length; i++) {
+        $(".mouseover ul li").eq(i).find("em").html(i + 1)
     }
     $(".text:lt(3) .new-icon").show();
     $(".clearfix img").hide();

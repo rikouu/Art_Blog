@@ -70,7 +70,7 @@ img {
 
 /*swiper轮播start*/
 
-#js_banner {
+#js_banner,.hot_rticles {
     display: none !important
 }
 
