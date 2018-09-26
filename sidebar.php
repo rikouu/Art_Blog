@@ -8,7 +8,7 @@
         <p class="vjs-no-js"> 要查看此视频，请启用JavaScript，并考虑升级到Web浏览器版本。 <a href="https://videojs.com/html5-video-support/"
                 target="_blank">supports HTML5 video</a> </p>
     </video> -->
-    <img src="<?php bloginfo('template_url'); ?>/images/s1.png" width="328" height="185" alt="" style="display: block;width:100%;margin-top:10px;background-size: 330px 185px;">
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537960896450&di=e597a8b0993684c5426734fcfcb53b1a&imgtype=0&src=http%3A%2F%2Fimg5.xiazaizhijia.com%2Fwalls%2F20150417%2Fmid_84422024ff063d3.jpg" width="328" height="185" alt="" style="display: block;width:100%;margin-top:10px;background-size: 330px 185px;">
     <div class="textwidget">
         <p class="clearfix">
             唯品秀博客: weipxiu.com，一个关注Web前端开发技术、关注用户体验、坚持更多原创实战教程的个人网站，
