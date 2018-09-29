@@ -1,4 +1,5 @@
 ﻿@charset "utf-8";
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +9,7 @@
     color: #444;
     font-size: 14px;
     text-decoration: none;
-	font-weight: lighter;
+    font-weight: lighter;
     /*-webkit-touch-callout: none;长时间按住页面出现闪退,
 	如果启用，那么图片默认长按存储到相册功能被禁止*/
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
@@ -70,7 +71,8 @@ img {
 
 /*swiper轮播start*/
 
-#js_banner,.hot_rticles {
+#js_banner,
+.hot_rticles {
     display: none !important
 }
 
@@ -476,13 +478,16 @@ img {
         -webkit-transform: translateY(-108px);
         opcity: 0;
     }
+
     50% {
         opcity: 0;
     }
+
     80% {
         -webkit-transform: translateY(30px);
         opcity: 0.9;
     }
+
     100% {
         -webkit-transform: translateY(0px);
         opcity: 1;
@@ -493,13 +498,16 @@ img {
     0% {
         -ms-transform: translateY(-108px)
     }
+
     50% {
         opcity: 0;
     }
+
     80% {
         -ms-transform: translateY(30px);
         opcity: 0.9;
     }
+
     100% {
         -ms-transform: translateY(0px);
         opcity: 1;
@@ -510,6 +518,7 @@ img {
     0% {
         -webkit-transform: translateY(0px)
     }
+
     100% {
         -webkit-transform: translateY(-8px)
     }
@@ -519,6 +528,7 @@ img {
     0% {
         -ms-transform: translateY(0px)
     }
+
     100% {
         -ms-transform: translateY(-8px)
     }
@@ -529,9 +539,11 @@ img {
         -webkit-transform: translateX(-890px);
         opacity: 0
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         -webkit-transform: translateX(0px);
         opacity: 1;
@@ -543,9 +555,11 @@ img {
         -ms-transform: translateX(-890px);
         opacity: 0
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         -ms-transform: translateX(0px);
         opacity: 1
@@ -557,9 +571,11 @@ img {
         -webkit-transform: translateX(435px);
         opacity: 0
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         -webkit-transform: translateX(0px);
         opacity: 1;
@@ -571,9 +587,11 @@ img {
         -ms-transform: translateX(435px);
         opacity: 0
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         -ms-transform: translateX(0px);
         opacity: 1;
@@ -585,6 +603,7 @@ img {
         -webkit-transform: translateY(125px);
         opacity: 0
     }
+
     100% {
         -webkit-transform: translateY(0px);
         opacity: 1;
@@ -596,6 +615,7 @@ img {
         -ms-transform: translateY(125px);
         opacity: 0
     }
+
     100% {
         -ms-transform: translateY(0px);
         opacity: 1;
@@ -609,6 +629,7 @@ img {
         opacity: 0;
         height: 0px;
     }
+
     100% {
         opacity: 1;
         height: 80px;
@@ -620,6 +641,7 @@ img {
         opacity: 0;
         height: 0px;
     }
+
     100% {
         opacity: 1;
         height: 80px;
@@ -1476,6 +1498,7 @@ div.com-art ul li {
     from {
         -webkit-transform: rotate(0deg);
     }
+
     to {
         -webkit-transform: rotate(360deg);
     }
@@ -2001,7 +2024,7 @@ td.line-numbers {
     line-height: 0.5rem;
 }
 
-.log-text p{
+.log-text p {
     text-indent: 2em
 }
 
@@ -2835,10 +2858,13 @@ div.jy p {
     font-family: "iconfont";
     src: url('https://at.alicdn.com/t/font_xozvftf5qlpzxgvi.eot?t=1484057152574');
     /* IE9*/
-    src: url('https://at.alicdn.com/t/font_xozvftf5qlpzxgvi.eot?t=1484057152574#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('https://at.alicdn.com/t/font_xozvftf5qlpzxgvi.woff?t=1484057152574') format('woff'), /* chrome,firefox */
-    url('https://at.alicdn.com/t/font_xozvftf5qlpzxgvi.ttf?t=1484057152574') format('truetype'), /* chrome,firefox,opera,Safari,Android,iOS 4.2+*/
-    url('https://at.alicdn.com/t/font_xozvftf5qlpzxgvi.svg?t=1484057152574#iconfont') format('svg');
+    src: url('https://at.alicdn.com/t/font_xozvftf5qlpzxgvi.eot?t=1484057152574#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('https://at.alicdn.com/t/font_xozvftf5qlpzxgvi.woff?t=1484057152574') format('woff'),
+        /* chrome,firefox */
+        url('https://at.alicdn.com/t/font_xozvftf5qlpzxgvi.ttf?t=1484057152574') format('truetype'),
+        /* chrome,firefox,opera,Safari,Android,iOS 4.2+*/
+        url('https://at.alicdn.com/t/font_xozvftf5qlpzxgvi.svg?t=1484057152574#iconfont') format('svg');
     /* iOS 4.1- */
 }
 
@@ -3277,7 +3303,7 @@ canvas,
 
 .reward-box-item {
     display: inline-block;
-    width:49%;
+    width: 49%;
     text-indent: 0;
 }
 
@@ -3352,6 +3378,7 @@ canvas,
     0% {
         background-position: 0 0, 0 0;
     }
+
     100% {
         background-position: 500px 500px, 1000px 500px;
     }
