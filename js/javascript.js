@@ -161,7 +161,7 @@ $(function () {
                 //     alert('浏览器不支持Notification');    
                 // }
             }
-            set_desktop();
+            //set_desktop();
             setTimeout(function () {
                 set_desktop();
             }, 20000);

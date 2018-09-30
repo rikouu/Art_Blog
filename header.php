@@ -87,7 +87,7 @@
                                   <li><a href="/?cat=29">前端工具箱</a></li>
 								  <li><a href="/?cat=10" target="_blank">联系我们</a></li>
 								  <li>
-								  	<a href="https://www.qmaile.com/" target="_blank">
+								  	<a href="http://tv.dsqndh.com/?&rand=c39408f5685d21b8dc8480eda5edf73f" target="_blank">
 								  		Vip视频
 								  	</a>
 								  	<!-- <a href="https://www.weipxiu.com/sly.html" target="_blank">
@@ -182,7 +182,7 @@
 									  <audio src=""  autoplay="autoplay"></audio>
 									  <p></p>
 									</li>
-									<li detaName="ddd" class="js_piano_nav_icon mod-header_music-icon hover" title="钢琴节奏">
+									<li detaName="ddd" class="js_piano_nav_icon mod-header_music-icon" title="钢琴节奏">
 									<audio src=""  autoplay="autoplay"></audio>
 									  	<i></i>
 									  	<i></i>

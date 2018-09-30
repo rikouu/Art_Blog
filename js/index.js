@@ -117,9 +117,9 @@ jQuery(function ($) {
     $(".navto-search a").click(function () {
         $(".site-search.active.pc").stop(true, true).slideToggle(150, function () {
             if ($(this).is(":visible") && $(".nav ul.music-nav li>p").css("opacity") == 1) {
-                $('.mod-header_music-icon').trigger("click");
+                //$('.mod-header_music-icon').trigger("click");
             } else if ($(this).is(":hidden") && $(".nav ul.music-nav li>p").css("opacity") == 0) {
-                $('.mod-header_music-icon').trigger("click");
+                //$('.mod-header_music-icon').trigger("click");
             } else if ($(".nav ul.music-nav li>p").css("opacity") == 0) {
                 return false;
             }
@@ -157,28 +157,38 @@ jQuery(function ($) {
 
     // 跳动的Logo start
     $("#Logo").hover(function () {
-        $("#dj li").css("animation", "move .5s alternate");
-    },
+            $("#dj li").css("animation", "move .5s alternate");
+        },
         function () {
             $('#dj li').attr("style", "");
         });
     // 跳动的Logo end
 
+    // 根据缓存状态初始化音乐
+    if (localStorage.getItem("off_y") != 1) {
+        $(".mod-header_music-icon").removeClass("hover").attr("title", "钢琴音效NO");
+        $(".nav ul.music-nav li > p").css("opacity", "0");
+        localStorage.setItem("off_y", 0);
+    } else {
+        $(".mod-header_music-icon").addClass("hover").attr("title", "钢琴音效OFF");
+        $(".nav ul.music-nav li > p").css("opacity", "1");
+        localStorage.setItem("off_y", 1);
+    }
+
     // 跳动音符start
-    var off_y = true;
     $(".mod-header_music-icon").click(function () {
-        clearInterval(navMinHideSetTime);//清除鼠标离开li时候的定时器
-        if (off_y) {
-            $(this).removeClass("hover");
-            $(".nav ul.music-nav li > p").css("opacity", "0");
-            $(this).attr("title", "钢琴音效NO");
-        }
-        else {
+        clearInterval(navMinHideSetTime); //清除鼠标离开li时候的定时器
+        if (localStorage.getItem("off_y") != 1) {
             $(this).addClass("hover");
             $(this).attr("title", "钢琴音效OFF");
             $(".nav ul.music-nav li > p").css("opacity", "1");
+            localStorage.setItem("off_y", 1);
+        } else {
+            $(this).removeClass("hover");
+            $(".nav ul.music-nav li > p").css("opacity", "0");
+            $(this).attr("title", "钢琴音效NO");
+            localStorage.setItem("off_y", 0);
         }
-        off_y = !off_y;
     });
     // 跳动音符end
 
@@ -188,21 +198,21 @@ jQuery(function ($) {
     var navMinHideSetTime = null;
     var musicDown = $(".nav ul.music-nav li:not(.mod-header_music-icon)");
     $(".nav ul.music-nav li:not(.mod-header_music-icon)").hover(function (event) {
-        $(this).parents(".header").css("z-index", "11");//默认下方轮播层级高于头部
-        $index = $(this).index();
-        var deta = $(this).attr("detaName");
-        musicObj = $(".nav ul.music-nav li:not(.mod-header_music-icon)").eq($index).find('audio');
-        if (off_y) {
-            $(this).addClass("active");
-            musicObj.get(0).src = "https://www.weipxiu.com/wp-content/themes/boke/music/" + deta + ".mp3";
-        } else {
-            musicObj.get(0).src = "";
-        }
-        event.stopPropagation();
-    },
+            $(this).parents(".header").css("z-index", "11"); //默认下方轮播层级高于头部
+            $index = $(this).index();
+            var deta = $(this).attr("detaName");
+            musicObj = $(".nav ul.music-nav li:not(.mod-header_music-icon)").eq($index).find('audio');
+            if (localStorage.getItem("off_y") == 1) {
+                $(this).addClass("active");
+                musicObj.get(0).src = "https://www.weipxiu.com/wp-content/themes/boke/music/" + deta + ".mp3";
+            } else {
+                musicObj.get(0).src = "";
+            }
+            event.stopPropagation();
+        },
         function () {
             clearInterval(navMinHideSetTime);
-            navMinHideSetTime = setInterval(function () {//不断检测鼠标移开后下拉二级菜单是否完好影藏
+            navMinHideSetTime = setInterval(function () { //不断检测鼠标移开后下拉二级菜单是否完好影藏
                 if (searchShow && $(".nav-min").eq(0).css("opacity") == 0 && $(".nav-min").eq(1).css("opacity") == 0) {
                     $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
                     clearInterval(navMinHideSetTime);
@@ -221,33 +231,25 @@ jQuery(function ($) {
     }
 
     $(document).keydown(function (event) {
-        if (off_y) {
+        if (localStorage.getItem("off_y") == 1) {
             //a65 s83 d68 f70 g71 h72 j74 k75 l76
             if (event.keyCode == 65) {
                 musicdown(0)
-            }
-            else if (event.keyCode == 83) {
+            } else if (event.keyCode == 83) {
                 musicdown(1)
-            }
-            else if (event.keyCode == 68) {
+            } else if (event.keyCode == 68) {
                 musicdown(2)
-            }
-            else if (event.keyCode == 70) {
+            } else if (event.keyCode == 70) {
                 musicdown(3)
-            }
-            else if (event.keyCode == 71) {
+            } else if (event.keyCode == 71) {
                 musicdown(4)
-            }
-            else if (event.keyCode == 72) {
+            } else if (event.keyCode == 72) {
                 musicdown(5)
-            }
-            else if (event.keyCode == 74) {
+            } else if (event.keyCode == 74) {
                 musicdown(6)
-            }
-            else if (event.keyCode == 75) {
+            } else if (event.keyCode == 75) {
                 musicdown(7)
-            }
-            else if (event.keyCode == 76) {
+            } else if (event.keyCode == 76) {
                 musicdown(8)
             }
         }
@@ -263,54 +265,78 @@ jQuery(function ($) {
     var time = null;
     $(".front").hover(function (event) {
         clearTimeout(time);
-        $(".header-conter .nav-min").eq(0).css({ "opacity": "1", "visibility": "visible", "top": "49px" });
-        $(".header-conter .nav-min").eq(1).css({ "opacity": "0", "visibility": "hidden", "top": "70px" });
+        $(".header-conter .nav-min").eq(0).css({
+            "opacity": "1",
+            "visibility": "visible",
+            "top": "49px"
+        });
+        $(".header-conter .nav-min").eq(1).css({
+            "opacity": "0",
+            "visibility": "hidden",
+            "top": "70px"
+        });
         event.stopPropagation();
     }, function () {
         clearTimeout(time);
         time = setTimeout(function () {
-            $(".header-conter .nav-min").css({ "opacity": "0", "visibility": "hidden", "top": "70px" });
+            $(".header-conter .nav-min").css({
+                "opacity": "0",
+                "visibility": "hidden",
+                "top": "70px"
+            });
         }, 0);
 
     });
     $(".works").hover(function (event) {
         clearTimeout(time);
-        $(".header-conter .nav-min").eq(1).css({ "opacity": "1", "visibility": "visible", "top": "49px" });
-        $(".header-conter .nav-min").eq(0).css({ "opacity": "0", "visibility": "hidden", "top": "70px" });
+        $(".header-conter .nav-min").eq(1).css({
+            "opacity": "1",
+            "visibility": "visible",
+            "top": "49px"
+        });
+        $(".header-conter .nav-min").eq(0).css({
+            "opacity": "0",
+            "visibility": "hidden",
+            "top": "70px"
+        });
         event.stopPropagation();
     }, function () {
         clearTimeout(time);
         time = setTimeout(function () {
-            $(".header-conter .nav-min").css({ "opacity": "0", "visibility": "hidden", "top": "70px" });
+            $(".header-conter .nav-min").css({
+                "opacity": "0",
+                "visibility": "hidden",
+                "top": "70px"
+            });
         }, 0);
     });
     //PC二级菜单end
 
     $(".aircraft").click(function () {
         $('body,html').animate({
-            scrollTop: 0
-        },
+                scrollTop: 0
+            },
             1200);
         $(this).animate({
-            "bottom": "500px",
-            "opacity": "0"
-        },
+                "bottom": "500px",
+                "opacity": "0"
+            },
             1000,
             function () {
                 setTimeout(function () {
-                    $(".aircraft").css({
-                        "bottom": "50px",
-                        "opacity": "1"
-                    })
-                },
+                        $(".aircraft").css({
+                            "bottom": "50px",
+                            "opacity": "1"
+                        })
+                    },
                     500)
             })
     });
     $("#wuyousujian-kefuDv").hover(function () {
-        $("#wuyousujian-kefuDv").stop().animate({
-            "right": "-100px"
-        }, 500)
-    },
+            $("#wuyousujian-kefuDv").stop().animate({
+                "right": "-100px"
+            }, 500)
+        },
         function () {
             $("#wuyousujian-kefuDv").stop().animate({
                 "right": "-196px"
@@ -350,6 +376,7 @@ jQuery(function ($) {
         event.preventDefault();
     })
     $(".btn_menu,.cover").on("touchstart", myFunction);
+
     function myFunction() {
         $(".os-herder").get(0).classList.toggle("btn");
         $(".cover").toggle();
@@ -422,7 +449,11 @@ jQuery(function ($) {
 
     //留言板手风琴start
     $(".accordion .accordion_center ul li").hover(function () {
-        $(this).stop().animate({ "width": "340px" }).siblings("li").stop().animate({ "width": "166px" });
+        $(this).stop().animate({
+            "width": "340px"
+        }).siblings("li").stop().animate({
+            "width": "166px"
+        });
         $(this).find(".slide-item").stop().fadeOut();
         $(this).find(".mask").stop(true, true).fadeIn();
         $(".accordion_center ul li .slide-item .iconfont").css("animation", "arrow_move1 1s .5s infinite alternate");
@@ -430,11 +461,13 @@ jQuery(function ($) {
         return false;
     }, function () {
         $(this).find(".slide-item").fadeIn();
-        $(this).find(".mask").stop(true, false).fadeOut();//鼠标离开过后，动画暂停，切不需要完成
+        $(this).find(".mask").stop(true, false).fadeOut(); //鼠标离开过后，动画暂停，切不需要完成
     });
 
     $(".accordion .accordion_center").mouseleave(function () {
-        $(".accordion .accordion_center ul li").stop().animate({ "width": "200px" });
+        $(".accordion .accordion_center ul li").stop().animate({
+            "width": "200px"
+        });
         $(".accordion .accordion_center ul li").find(".slide-item").fadeIn();
         $(".accordion .accordion_center ul li").find(".mask").fadeOut();
         $(".accordion_center ul li .slide-item .iconfont").css("animation", "arrow_move 1s .5s infinite alternate");
@@ -445,9 +478,9 @@ jQuery(function ($) {
     //点击页面出现爱心
     ! function (e, t, a) {
         function r() {
-            for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y-- ,
+            for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--,
                 s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e]
-                    .y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale +
+                .y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale +
                 ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
             requestAnimationFrame(r)
         }

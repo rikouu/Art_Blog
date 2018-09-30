@@ -883,6 +883,7 @@ img:hover {
 	-o-transition: height 0.25s;
 	transition: height 0.25s;
 	z-index: 0;
+	opacity: 0;
 	display: block !important;
 }
 
