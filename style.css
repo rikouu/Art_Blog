@@ -459,7 +459,7 @@ img:hover {
 	border-bottom: 1px solid #fff;
 	background: #fff;
 	z-index: 10;
-	display: block !important;
+	display: none;
 }
 
 #mobil {

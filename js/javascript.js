@@ -2,6 +2,7 @@ $(function () {
     //网站预加载运动开始
     if ($(document).width() >= 1200) {
         if (window.location.href == "https://www.weipxiu.com" || window.location.href == "https://www.weipxiu.com/") {
+            $("#js_banner").show();
             //首页公告开始
             setInterval(function () {
                 $(".notice").show();
@@ -353,19 +354,7 @@ $(function () {
             }, 3500);
         } else {
             $(".continar").css("margin-top", "128px");
-            $(".c-860,.index-box,.hide").remove(); //去掉轮播、视频、邮件订阅
-            $("#hide").show();
-            $("html").css({
-                "overflow-y": "visible",
-                "height": "auto",
-                "width": "auto"
-            });
-            $("body").css({
-                "overflow-x": "hidden",
-                "height": "auto",
-                "width": "auto"
-            });
-            $(".buffer").fadeOut();
+            $(".c-860,.index-box,.hide,#curriculum,#js_banner").remove(); //去掉轮播、视频、邮件订阅
         }
     } else {
         //排除PC端执行下列代码
