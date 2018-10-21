@@ -585,10 +585,6 @@ img:hover {
 	box-shadow: 0 0 10px #ccc;
 }
 
-.header.hover .topbar {
-	height: auto;
-}
-
 .header.hover ul li a span {
 	line-height: 28px
 }
@@ -616,7 +612,7 @@ img:hover {
 
 .topbar {
 	width: 100%;
-	height: 28px;
+	height: 100%;
 }
 
 .header-list {
