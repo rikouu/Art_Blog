@@ -210,6 +210,7 @@
 								  	<!-- <a href="https://www.weipxiu.com/works/music/index.html" target="_blank">音乐播放器</a> -->
 								  	<a href="https://www.weipxiu.com/works/caiquan/index.html" target="_blank">游戏-猜拳</a>
 								  	<a href="https://www.weipxiu.com/works/feiji/index.html" target="_blank">游戏-打飞机</a>
+								  	<a href="https://github.com/weipxiu" target="_blank">更多作品案例</a>
 								  	<!-- <a href="https://www.weipxiu.com/works/txz/index.html" target="_blank">游戏-推箱子</a> -->
 							  </div>
 							  <!-- 搜索按钮开始 -->
