@@ -1,7 +1,7 @@
 {
   "name": "gulp",
   "version": "1.0.0",
-  "description": "配置gulp自动化构建工具",
+  "description": "一款基于jquery2.1.4开发的wordpress主题2.0版",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,7 @@
   "author": "李俊",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.18.13",
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "ansi-styles": "^3.2.1",
@@ -24,6 +25,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^4.1.0",
     "gulp-less": "^3.5.0",
+    "gulp-minify-css": "^1.2.4",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
     "orchestrator": "^0.3.8",

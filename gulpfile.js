@@ -1,10 +1,13 @@
 var gulp = require('gulp');
 var imagemin = require('gulp-imagemin'); //引入图片压缩模块
 var scriptmin = require('gulp-uglify'); //引入js压缩模块
-var pump = require('pump');//依照gulp-uglify官网说明配合gulp-uglify
+var pump = require('pump'); //依照gulp-uglify官网说明配合gulp-uglify
 var gulpless = require('gulp-less'); //引入less转换模块
+var gulp_minify_css = require('gulp-minify-css'); //压缩css
 var concat = require('gulp-concat'); //引入合并代码模块
 var babel = require('gulp-babel'); //引入ES6转ES5模块
+
+let browserSync = require('browser-sync'); //热更新模块
 
 /*
 gulp.task -- 定义任务
@@ -18,8 +21,7 @@ gulp.watch -- 观察文件是否发生改变
 // 拷贝文件
 gulp.task("copyHtml", function () {
     //pipe后面对应的地址就是将前面路径文件拷贝复制到哪里去
-    //gulp.src(["src/*.html","src/*.css","src/*.png","src/*.php","src/img","src/font-awesome-4.7.0","src/css","src/music"]).pipe(gulp.dest("dist"))
-    gulp.src(["src/*", "!src/js", "!src/css", "!src/images"]).pipe(gulp.dest("dist"))
+    gulp.src(["src/**", "!src/js", "!src/css", "!src/images"]).pipe(gulp.dest("dist"))
 });
 
 //图片压缩
@@ -66,17 +68,18 @@ gulp.task('scriptmin', function (cb) {
 gulp.task("gulpless", function () {
     gulp.src("src/css/*.less")
         .pipe(gulpless())
+        .pipe(gulp_minify_css()) //less转换后再压缩
         .pipe(gulp.dest("dist/css"))
-    gulp.src(["src/*", "!src/css/*.less"]).pipe(gulp.dest("dist/css"))
+    gulp.src(["src/css/*", "!src/css/*.less"]).pipe(gulp.dest("dist/css"))
 });
 
 //ES6转换转ES5(babel-v7版本)
 gulp.task('babel', () =>
     gulp.src('src/js/*.js')
-        .pipe(babel({
-            presets: ['@babel/env']
-        }))
-        .pipe(gulp.dest('dist/js'))
+    .pipe(babel({
+        presets: ['@babel/env']
+    }))
+    .pipe(gulp.dest('dist/js'))
 );
 
 
@@ -88,6 +91,42 @@ gulp.task("concat", function () {
         .pipe(scriptmin()) //在合并的时候压缩js
         .pipe(gulp.dest("dist/js"))
 })
+
+//初始化browserSync
+browserSync.init({
+    server: {
+        baseDir: './src'
+    },
+    middleware: function (req, res, next) {
+        let str = '';
+        let pathname = require('url').parse(req.url).pathname;
+        if (pathname.match(/\.css/)) {
+            str = scssSolve(pathname);
+            if (str) {
+                res.end(str);
+            }
+        }
+        if (pathname.match(/\.js/)) {
+            str = jsSolve(pathname);
+            if (str) {
+                res.end(str);
+            }
+        }
+        next();
+    }
+});
+
+gulp.watch('src/*.php').on('change', function () {
+    browserSync.reload('*.php');
+});
+gulp.watch('src/css/**/*.scss').on('change', function () {
+    browserSync.reload('*.css');
+});
+gulp.watch('src/js/**/*.js').on('change', function () {
+    browserSync.reload('*.js');
+});
+browserSync.reload();
+
 
 //监听文件是否发生改变
 gulp.task("watch", function () {
@@ -103,20 +142,20 @@ gulp.task('default', ["copyHtml", "gulpless", "imageMin", "scriptmin", "babel"])
 
 
 //stream-combiner2模块下面代码可打印gulp报错信息
-var combiner = require('stream-combiner2');
-var uglify = require('gulp-uglify');
-var gulp = require('gulp');
+// var combiner = require('stream-combiner2');
+// var uglify = require('gulp-uglify');
+// var gulp = require('gulp');
 
-gulp.task('test', function () {
-    var combined = combiner.obj([
-        gulp.src('bootstrap/js/*.js'),
-        uglify(),
-        gulp.dest('public/bootstrap')
-    ]);
+// gulp.task('test', function () {
+//     var combined = combiner.obj([
+//         gulp.src('bootstrap/js/*.js'),
+//         uglify(),
+//         gulp.dest('public/bootstrap')
+//     ]);
 
-    // any errors in the above streams will get caught
-    // by this listener, instead of being thrown:
-    combined.on('error', console.error.bind(console));
+//     // any errors in the above streams will get caught
+//     // by this listener, instead of being thrown:
+//     combined.on('error', console.error.bind(console));
 
-    return combined;
-});
+//     return combined;
+// });
