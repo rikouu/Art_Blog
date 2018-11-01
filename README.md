@@ -29,7 +29,7 @@
 8、如果喜欢，请多多打赏。
 
 ```
-<img src="https://raw.githubusercontent.com/weipxiu/weipxiu.github.io/master/images/zhiwei.png">
+<img src="https://raw.githubusercontent.com/weipxiu/weipxiu/master/src/images/zhiwei.png">
 
 <h2>备注说明</h2>
 
