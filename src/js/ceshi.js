@@ -1,0 +1,3 @@
+﻿var log = () => {
+    alert('haoxiangbuxing')
+}

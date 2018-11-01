@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var imagemin = require('gulp-imagemin'); //引入图片压缩模块
 var scriptmin = require('gulp-uglify'); //引入js压缩模块
-var pump = require('pump'); //依照gulp-uglify官网说明配合gulp-uglify
 var gulpless = require('gulp-less'); //引入less转换模块
 var gulp_minify_css = require('gulp-minify-css'); //压缩css
 var concat = require('gulp-concat'); //引入合并代码模块
@@ -21,7 +20,7 @@ gulp.watch -- 观察文件是否发生改变
 // 拷贝文件
 gulp.task("copyHtml", function () {
     //pipe后面对应的地址就是将前面路径文件拷贝复制到哪里去
-    gulp.src(["src/**", "!src/js", "!src/css", "!src/images"]).pipe(gulp.dest("dist"))
+    gulp.src(["src/*", "!src/js", "!src/css"]).pipe(gulp.dest("dist"))
 });
 
 //图片压缩
@@ -51,17 +50,12 @@ gulp.task("imageMin", function () {
         .pipe(gulp.dest('dist/images'))
 })
 
-// 压缩js
-//安装js压缩模块 npm i gulp-uglify --save-dev
-gulp.task('scriptmin', function (cb) {
-    pump([
-            gulp.src(["src/js/*.js", "!src/js/not.js"]),
-            uglify(),
-            gulp.dest("dist/js")
-        ],
-        cb
-    );
-});
+// 压缩js，gulp-uglify
+// gulp.task('scriptmin', function (cb) {
+//     gulp.src(["src/js/*.js", "!src/js/not.js"])
+//         .pipe(scriptmin())
+//         .pipe(gulp.dest("dist/js"))
+// });
 
 // 转行less
 //安装gulpless压缩模块 npm i gulp-less --save-dev
@@ -79,18 +73,19 @@ gulp.task('babel', () =>
     .pipe(babel({
         presets: ['@babel/env']
     }))
+    .pipe(scriptmin())
     .pipe(gulp.dest('dist/js'))
 );
 
 
 //代码合并
 //安装 npm i gulp-concat --save-dev
-gulp.task("concat", function () {
-    gulp.src("src/js/*.js")
-        .pipe(concat("main.js"))
-        .pipe(scriptmin()) //在合并的时候压缩js
-        .pipe(gulp.dest("dist/js"))
-})
+// gulp.task("concat", function () {
+//     gulp.src("src/js/*.js")
+//         .pipe(concat("main.js"))
+//         .pipe(scriptmin()) //在合并的时候压缩js
+//         .pipe(gulp.dest("dist/js"))
+// })
 
 //初始化browserSync
 browserSync.init({
@@ -113,49 +108,36 @@ browserSync.init({
             }
         }
         next();
+        console.log('正在打包编译中。。。');
     }
 });
 
-gulp.watch('src/*.php').on('change', function () {
-    browserSync.reload('*.php');
-});
-gulp.watch('src/css/**/*.scss').on('change', function () {
-    browserSync.reload('*.css');
-});
-gulp.watch('src/js/**/*.js').on('change', function () {
-    browserSync.reload('*.js');
-});
-browserSync.reload();
+// gulp.watch('src/*.html').on('change', function () {
+//     browserSync.reload('*.html');
+// });
+// gulp.watch('src/*.php').on('change', function () {
+//     browserSync.reload('*.php');
+// });
+// gulp.watch('src/css/**/*.scss').on('change', function () {
+//     browserSync.reload('*.css');
+// });
+// gulp.watch('src/js/**/*.js').on('change', function () {
+//     browserSync.reload('*.js');
+// });
+// browserSync.reload();
 
 
 //监听文件是否发生改变
-gulp.task("watch", function () {
+gulp.task("Watch", function () {
     gulp.watch("src/*.html", ["copyHtml"]);
     gulp.watch("src/css/*.less", ["gulpless"]);
     gulp.watch("src/images/*", ["imageMin"]);
-    gulp.watch("src/js/*.js", ["scriptmin", "babel"]);
+    gulp.watch("src/js/*.js", ["babel"]);
 })
 
 
 //如果直接执行 gulp 那么就是运行任务名称为‘default’的任务,后面数组代表所需要执行的任务列表
-gulp.task('default', ["copyHtml", "gulpless", "imageMin", "scriptmin", "babel"]);
-
-
-//stream-combiner2模块下面代码可打印gulp报错信息
-// var combiner = require('stream-combiner2');
-// var uglify = require('gulp-uglify');
-// var gulp = require('gulp');
-
-// gulp.task('test', function () {
-//     var combined = combiner.obj([
-//         gulp.src('bootstrap/js/*.js'),
-//         uglify(),
-//         gulp.dest('public/bootstrap')
-//     ]);
-
-//     // any errors in the above streams will get caught
-//     // by this listener, instead of being thrown:
-//     combined.on('error', console.error.bind(console));
-
-//     return combined;
-// });
+//"imageMin"不加入，否则实在太慢，图片压缩还是单独处理吧
+gulp.task('default', ["copyHtml", "babel", "gulpless"], function () {
+    console.log('编译打包完成!');
+});
