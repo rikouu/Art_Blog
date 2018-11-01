@@ -17,7 +17,7 @@ $(function () {
 
             //轩枫博客start
             //turnEffect（翻转）boomEffect（爆炸）pageEffect（翻页）skewEffect（扭曲）cubeEffect（立方体）
-            var flippingMode = ['turnEffect', 'boomEffect', 'skewEffect']
+            var flippingMode = ['turnEffect', 'boomEffect', 'skewEffect'];
             var randomNum = Math.floor(Math.random() * 3);
             var banner = new Banner({
                 banner: '#banner_img',

@@ -306,7 +306,8 @@
     <div class="control"></div>
     <!-- 首页背景音乐结束 -->
 </body>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/xfg_banner.js"></script>
+
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/xfg_banner/banner-effect.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/javascript.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/swiper.min.js"></script>
 </html>

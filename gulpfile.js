@@ -20,7 +20,8 @@ gulp.watch -- 观察文件是否发生改变
 // 拷贝文件
 gulp.task("copyHtml", function () {
     //pipe后面对应的地址就是将前面路径文件拷贝复制到哪里去
-    gulp.src(["src/*", "!src/js", "!src/css"]).pipe(gulp.dest("dist"))
+    console.log('正在打包编译中。。。');
+    gulp.src(["src/**", "!src/js/*", "!src/css/*"]).pipe(gulp.dest("dist"))
 });
 
 //图片压缩
@@ -101,7 +102,6 @@ browserSync.init({
             }
         }
         next();
-        console.log('正在打包编译中。。。');
     }
 });
 
@@ -124,8 +124,8 @@ browserSync.init({
 gulp.task("Watch", function () {
     gulp.watch("src/*.html", ["copyHtml"]);
     gulp.watch("src/css/*.less", ["gulpless"]);
-    gulp.watch("src/images/*", ["imageMin"]);
     gulp.watch("src/js/*.js", ["babel"]);
+    //gulp.watch("src/images/*", ["imageMin"]);
 })
 
 
