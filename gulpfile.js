@@ -50,13 +50,6 @@ gulp.task("imageMin", function () {
         .pipe(gulp.dest('dist/images'))
 })
 
-// 压缩js，gulp-uglify
-// gulp.task('scriptmin', function (cb) {
-//     gulp.src(["src/js/*.js", "!src/js/not.js"])
-//         .pipe(scriptmin())
-//         .pipe(gulp.dest("dist/js"))
-// });
-
 // 转行less
 //安装gulpless压缩模块 npm i gulp-less --save-dev
 gulp.task("gulpless", function () {
@@ -73,7 +66,7 @@ gulp.task('babel', () =>
     .pipe(babel({
         presets: ['@babel/env']
     }))
-    .pipe(scriptmin())
+    .pipe(scriptmin()) //转换后进行压缩
     .pipe(gulp.dest('dist/js'))
 );
 
