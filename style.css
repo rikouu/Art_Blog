@@ -6124,14 +6124,6 @@ p.data-l span {
 
 /* 面包屑导航end */
 
-/* 针对傻逼畅言广告屏蔽 */
-#feedAv,
-#MZAD_POP_PLACEHOLDER {
-	margin-top: -200px !important;
-	transform: scale(0);
-	display: none
-}
-
 /* 热门文章start */
 .hot_rticles ul li {
 	padding: 10px 0;
@@ -6188,7 +6180,13 @@ p.data-l span {
 .hot_rticles .widget-title {
 	margin-bottom: 0;
 }
-
-
-
 /* 热门文章end */
+
+/* 针对傻逼畅言广告屏蔽start */
+#feedAv,#pop_ad,
+#MZAD_POP_PLACEHOLDER {
+	margin-top: -200px !important;
+	transform: scale(0);
+	display: none!important
+}
+/* 针对傻逼畅言广告屏蔽end */

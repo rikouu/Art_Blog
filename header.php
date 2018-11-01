@@ -87,7 +87,7 @@
                                   <li><a href="/?cat=29">前端工具箱</a></li>
 								  <li><a href="/?cat=10" target="_blank">联系我们</a></li>
 								  <li>
-								  	<a href="http://tv.dsqndh.com/?&rand=c39408f5685d21b8dc8480eda5edf73f" target="_blank">
+								  	<a href="http://www.qmaile.com/" target="_blank">
 								  		Vip视频
 								  	</a>
 								  	<!-- <a href="https://www.weipxiu.com/sly.html" target="_blank">
