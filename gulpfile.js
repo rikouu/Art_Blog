@@ -6,6 +6,7 @@ const gulp_minify_css = require('gulp-minify-css'); //压缩css
 const concat = require('gulp-concat'); //引入合并代码模块
 const babel = require('gulp-babel'); //引入ES6转ES5模块
 const autoprefixer = require('gulp-autoprefixer'); //增加浏览器前缀
+const rev = require('gulp-rev');//给静态文件资源添加hash值防缓存
 
 const browserSync = require('browser-sync'); //热更新模块
 
@@ -56,6 +57,7 @@ gulp.task("imageMin", function () {
 //安装gulpless压缩模块 npm i gulp-less --save-dev
 gulp.task("gulpless", function () {
     gulp.src("src/css/*.less")
+        .pipe(rev())//添加hash值防缓存
         .pipe(gulpless())
         .pipe(autoprefixer({ //增加浏览器前缀
             browsers: ['last 2 versions'],
