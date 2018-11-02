@@ -1,12 +1,13 @@
-var gulp = require('gulp');
-var imagemin = require('gulp-imagemin'); //引入图片压缩模块
-var scriptmin = require('gulp-uglify'); //引入js压缩模块
-var gulpless = require('gulp-less'); //引入less转换模块
-var gulp_minify_css = require('gulp-minify-css'); //压缩css
-var concat = require('gulp-concat'); //引入合并代码模块
-var babel = require('gulp-babel'); //引入ES6转ES5模块
+const gulp = require('gulp');
+const imagemin = require('gulp-imagemin'); //引入图片压缩模块
+const scriptmin = require('gulp-uglify'); //引入js压缩模块
+const gulpless = require('gulp-less'); //引入less转换模块
+const gulp_minify_css = require('gulp-minify-css'); //压缩css
+const concat = require('gulp-concat'); //引入合并代码模块
+const babel = require('gulp-babel'); //引入ES6转ES5模块
+const autoprefixer = require('gulp-autoprefixer'); //增加浏览器前缀
 
-let browserSync = require('browser-sync'); //热更新模块
+const browserSync = require('browser-sync'); //热更新模块
 
 /*
 gulp.task -- 定义任务
@@ -20,7 +21,7 @@ gulp.watch -- 观察文件是否发生改变
 // 拷贝文件
 gulp.task("copyHtml", function () {
     //pipe后面对应的地址就是将前面路径文件拷贝复制到哪里去
-    console.log('正在打包编译中。。。');
+    console.log('正在打包编译中，请稍后......................');
     gulp.src(["src/**", "!src/js/*", "!src/css/*"]).pipe(gulp.dest("dist"))
 });
 
@@ -56,6 +57,10 @@ gulp.task("imageMin", function () {
 gulp.task("gulpless", function () {
     gulp.src("src/css/*.less")
         .pipe(gulpless())
+        .pipe(autoprefixer({ //增加浏览器前缀
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(gulp_minify_css()) //less转换后再压缩
         .pipe(gulp.dest("dist/css"))
     gulp.src(["src/css/*", "!src/css/*.less"]).pipe(gulp.dest("dist/css"))
@@ -132,5 +137,5 @@ gulp.task("Watch", function () {
 //如果直接执行 gulp 那么就是运行任务名称为‘default’的任务,后面数组代表所需要执行的任务列表
 //"imageMin"不加入，否则实在太慢，图片压缩还是单独处理吧
 gulp.task('default', ["copyHtml", "babel", "gulpless"], function () {
-    console.log('编译打包完成!');
+    console.log('恭喜你，编译打包已完成，所有文件在dist文件夹，请注意查收！！！');
 });

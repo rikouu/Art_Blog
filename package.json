@@ -23,6 +23,7 @@
     "color-name": "^1.1.4",
     "escape-string-regexp": "^1.0.5",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^4.1.0",
