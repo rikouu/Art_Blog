@@ -79,7 +79,7 @@ img {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  display: box;
+  display: flex;
   display: -ms-flexbox;
   display: flex;
   box-pack: center;
@@ -652,7 +652,7 @@ img {
   line-height: 25px;
   margin: 0;
   text-indent: 2em;
-  display: box;
+  display: flex;
   -moz-line-clamp: 2;
   -moz-box-orient: vertical;
   line-clamp: 2;
@@ -859,7 +859,7 @@ ul.post-categories li:first-child {
   color: #666;
   font-size: 0.26rem;
   font-weight: normal;
-  display: box;
+  display: flex;
   -moz-line-clamp: 2;
   -moz-box-orient: vertical;
   line-clamp: 2;
