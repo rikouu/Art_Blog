@@ -22,7 +22,7 @@ gulp.watch -- 观察文件是否发生改变
 // 拷贝文件
 gulp.task("copyHtml", function () {
     //pipe后面对应的地址就是将前面路径文件拷贝复制到哪里去
-    console.log('正在打包编译中，请稍后......................');
+    console.log('\n正在打包编译中，请稍后......................\n');
     gulp.src(["src/**", "!src/js/*", "!src/css/*"]).pipe(gulp.dest("dist"))
 });
 
@@ -139,5 +139,7 @@ gulp.task("Watch", function () {
 //如果直接执行 gulp 那么就是运行任务名称为‘default’的任务,后面数组代表所需要执行的任务列表
 //"imageMin"不加入，否则实在太慢，图片压缩还是单独处理吧
 gulp.task('default', ["copyHtml", "babel", "gulpless"], function () {
-    console.log('恭喜你，编译打包已完成，所有文件在dist文件夹，请注意查收！！！');
+    setTimeout(()=>{
+        console.log('\n恭喜你，编译打包已完成，所有文件在dist文件夹！！！');
+    },1000)
 });
