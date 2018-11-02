@@ -79,7 +79,7 @@
                         </h2>
                         <p class="data-l">
                         <span><i class="iconfont icon-shijian1"></i>&nbsp;<?php the_time('Y年m月d日') ?></span>
-                            <span>作者：
+                            <span>作者:
                                 <?php the_author(); ?>
                             </span>
                             <span>
