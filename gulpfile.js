@@ -15,6 +15,7 @@ gulp.task -- 定义任务
 gulp.src -- 找到需要执行任务的文件
 gulp.dest -- 执行任务的文件的去处
 gulp.watch -- 观察文件是否发生改变
+安装gulpless压缩模块 npm i gulp-less --save-dev
 
 执行任务 gulp + 任务名称 + 回车
 */
@@ -53,19 +54,18 @@ gulp.task("imageMin", function () {
         .pipe(gulp.dest('dist/images'))
 })
 
-// 转行less
-//安装gulpless压缩模块 npm i gulp-less --save-dev
-gulp.task("gulpless", function () {
-    gulp.src("src/css/*.less")
-        .pipe(rev())//添加hash值防缓存
-        .pipe(gulpless())
+// 转行压缩css
+gulp.task("minCss", function () {
+    gulp.src("src/css/*.css")
+        //.pipe(rev())//添加hash值防缓存
+        //.pipe(gulpless())
         .pipe(autoprefixer({ //增加浏览器前缀
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(gulp_minify_css()) //less转换后再压缩
+        .pipe(gulp_minify_css())
         .pipe(gulp.dest("dist/css"))
-    gulp.src(["src/css/*", "!src/css/*.less"]).pipe(gulp.dest("dist/css"))
+    gulp.src(["src/css/*", "!src/css/*.css"]).pipe(gulp.dest("dist/css"))
 });
 
 //ES6转换转ES5(babel-v7版本)
@@ -130,7 +130,7 @@ browserSync.init({
 //监听文件是否发生改变
 gulp.task("Watch", function () {
     gulp.watch("src/*.html", ["copyHtml"]);
-    gulp.watch("src/css/*.less", ["gulpless"]);
+    gulp.watch("src/css/*.css", ["minCss"]);
     gulp.watch("src/js/*.js", ["babel"]);
     //gulp.watch("src/images/*", ["imageMin"]);
 })
@@ -138,7 +138,7 @@ gulp.task("Watch", function () {
 
 //如果直接执行 gulp 那么就是运行任务名称为‘default’的任务,后面数组代表所需要执行的任务列表
 //"imageMin"不加入，否则实在太慢，图片压缩还是单独处理吧
-gulp.task('default', ["copyHtml", "babel", "gulpless"], function () {
+gulp.task('default', ["copyHtml", "babel", "minCss"], function () {
     setTimeout(()=>{
         console.log('\n恭喜你，编译打包已完成，所有文件在dist文件夹！！！');
     },1000)

@@ -173,7 +173,7 @@ img {
     float: left;
     color: #999;
     border: solid 1px #ddd;
-    width: calc(100% - 1rem);
+    width: calc(100% - 50px);
     height: 45px;
     padding: 4px 12px;
     border-right: none;
@@ -1611,7 +1611,6 @@ div.com-art ul li {
 .continar-left ul.clearfix li {
     width: 100%;
     line-height: 0.6rem;
-    font-size: 0.36rem;
     float: left;
     margin-bottom: 0.2rem;
 }
