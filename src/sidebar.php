@@ -1,5 +1,5 @@
 <div class="aside">
-    <h3>前端简介</h3>
+    <h3>博客简介</h3>
     <!-- <video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload width="328" height="185"
         style="margin-top:0" poster="<?php bloginfo('template_url'); ?>/images/s1.png" width="328" height="185"
         data-setup="{}">
