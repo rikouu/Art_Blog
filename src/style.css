@@ -308,54 +308,6 @@ img:hover {
 	width: 56px;
 	height: 10px
 }
-
-.mod-banner__tool .mod-banner__tool-white {
-	position: absolute;
-	top: 35px;
-	right: 0;
-	opacity: 0;
-	filter: alpha(opacity=0)
-}
-
-.mod-banner__tool .mod-banner__tool-shadow {
-	display: block;
-	position: absolute;
-	top: 91px;
-	right: 0;
-	height: 10px;
-	width: 56px
-}
-
-.mod-banner__snow_theme {
-	width: 100%;
-	margin: 0 auto;
-	position: absolute;
-	top: -14px;
-	left: 0;
-	height: 40px;
-	z-index: 999
-}
-
-.mod-banner__snow_theme .mod-banner__snow_1 {
-	width: 440px;
-	height: 40px;
-	position: absolute;
-	top: 0;
-	right: 50%;
-	margin-right: 58px;
-	background: url(../img/snow/snow_1.a8b97dd0.png)
-}
-
-.mod-banner__snow_theme .mod-banner__snow_2 {
-	width: 150px;
-	height: 40px;
-	position: absolute;
-	top: 3px;
-	left: 50%;
-	margin-left: 346px;
-	background: url(../img/snow/snow_2.bb28679e.png)
-}
-
 /* 轩枫轮播end */
 
 @-webkit-keyframes hue {

@@ -138,7 +138,7 @@ $(function () {
                         if (Notification.permission == "granted") {
                             var notification = new Notification("官方提示：", {
                                 body: '欢迎点击加入"WEB前端薪资吐槽群"互相学习、交流！',
-                                icon: 'https://www.weipxiu.com/wp-content/themes/boke/images/tishi.jpg'
+                                icon: 'https://www.weipxiu.com/wp-content/themes/boke/images/tishi.png'
                             })
 
                             notification.onclick = function () {
