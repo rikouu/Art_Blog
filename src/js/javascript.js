@@ -165,7 +165,7 @@ $(function () {
             //set_desktop();
             setTimeout(function () {
                 set_desktop();
-            }, 20000);
+            }, 5000);
             // 桌面提醒功能
 
             // setTimeout(function(){
