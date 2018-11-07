@@ -24,7 +24,7 @@ gulp.watch -- 观察文件是否发生改变
 gulp.task("copyHtml", function () {
     //pipe后面对应的地址就是将前面路径文件拷贝复制到哪里去
     console.log('\n正在打包编译中，请稍后......................\n');
-    gulp.src(["src/**", "!src/js/*", "!src/css/*"]).pipe(gulp.dest("dist"))
+    gulp.src(["src/**", "!src/js/*", "!src/css/*", "!src/style.css"]).pipe(gulp.dest("dist"))
 });
 
 //图片压缩
@@ -65,7 +65,12 @@ gulp.task("minCss", function () {
         }))
         .pipe(gulp_minify_css())
         .pipe(gulp.dest("dist/css"))
-    gulp.src(["src/css/*", "!src/css/*.css"]).pipe(gulp.dest("dist/css"))
+
+    gulp.src(["src/css/*", "!src/css/*.css", "!src/style.css"]).pipe(gulp.dest("dist/css"))
+
+    gulp.src("src/style.css")
+    .pipe(gulp_minify_css())
+    .pipe(gulp.dest("dist"))
 });
 
 //ES6转换转ES5(babel-v7版本)
