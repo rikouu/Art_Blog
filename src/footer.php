@@ -247,7 +247,7 @@
       };
 
       function fillSpan($ele) {
-        var baseContent = $ele.text().trim().length < 25?$ele.text().trim():$ele.text().trim().slice(0,25) + '...';
+        var baseContent = $ele.text().trim().length < 25?$ele.text().trim():$ele.text().trim().slice(0,20) + '...';
 
         var content = '';
         for (var i = 0, len = baseContent.length; i < len; i++) {

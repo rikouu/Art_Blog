@@ -119,30 +119,18 @@
 <div class="classif">
     <h3 class="widget-title"><a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>文章分类</a></h3>
     <div class="items">
-        <a href="https://www.weipxiu.com/?cat=3">HTML/CSS (
-            <?php echo wt_get_category_count(3); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=6">HTML5 (
-            <?php echo wt_get_category_count(6); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=6">CSS3详解 (
-            <?php echo wt_get_category_count(6); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=5">JavaScript (
-            <?php echo wt_get_category_count(5); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=5">jQuery (
-            <?php echo wt_get_category_count(5); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=14">Vue.js (
-            <?php echo wt_get_category_count(14); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=14">Angular.js (
-            <?php echo wt_get_category_count(14); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=22">Node.js (
-            <?php echo wt_get_category_count(22); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=13">前端技巧 ((
-            <?php echo wt_get_category_count(13); ?>))</a>
-        <a href="https://www.weipxiu.com/?cat=14">前端资源 (
-            <?php echo wt_get_category_count(14); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=29">前端工具 (
-            <?php echo wt_get_category_count(29); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=2">wordpress (
-            <?php echo wt_get_category_count(2); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=3">HTML/CSS (<?php echo wt_get_category_count(3); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=6">HTML5 (<?php echo wt_get_category_count(6); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=6">CSS3详解 (<?php echo wt_get_category_count(6); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=5">Js基础 (<?php echo wt_get_category_count(5); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=5">jQuery (<?php echo wt_get_category_count(5); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=14">Vue.js (<?php echo wt_get_category_count(14); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=14">Angular (<?php echo wt_get_category_count(14); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=22">Node.js (<?php echo wt_get_category_count(22); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=13">前端技巧 ((<?php echo wt_get_category_count(13); ?>))</a>
+        <a href="https://www.weipxiu.com/?cat=14">前端资源 (<?php echo wt_get_category_count(14); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=29">前端工具 (<?php echo wt_get_category_count(29); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=2">CMS系统 (<?php echo wt_get_category_count(2); ?>)</a>
         <a href="javascript:void(0);">Webpack (43)</a>
         <a href="javascript:void(0);">W3c标准 (16)</a>
         <a href="https://www.weipxiu.com/?cat=1">网站公告 (99)</a>
@@ -150,7 +138,7 @@
         <a href="javascript:void(0);">网页设计 (10)</a>
         <a href="javascript:void(0);">UI设计 (10)</a>
         <a href="javascript:void(0);">站长必备 (27)</a>
-        <a href="https://github.com/weipxiu">Github开源(3)</a>
+        <a href="https://github.com/weipxiu">Github(3)</a>
         <a href="javascript:void(0);">WEB兼容 (17)</a>
     </div>
 </div>
