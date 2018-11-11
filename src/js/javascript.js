@@ -371,8 +371,8 @@ $(function () {
             spaceBetween: 0, //图片间距
             autoplay: 4500, //自动轮播时间
             speed: 500, //切换一张所需要的时间
-            keyboardControl: true, //键盘左右按钮切换
-            mousewheelControl: false, //鼠标滚轮切换
+            // keyboardControl: true, //键盘左右按钮切换
+            // mousewheelControl: false, //鼠标滚轮切换
             autoplayDisableOnInteraction: false, //表示用户操作swiper之后，是否禁止autoplay。默认为 true：停止。false是播放
             loop: true //循环
         });
