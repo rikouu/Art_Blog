@@ -155,7 +155,7 @@ img:hover {
 	height: 300px;
 	margin: 0 auto;
 	cursor: pointer;
-	background-image: url(../img/banner/1.0bd56759.jpg);
+	background-image: url(http://cdn.xuanfengge.com/wp-content/themes/lee3.0/dist/img/banner/1.0bd56759.jpg);
 	background-repeat: no-repeat;
 	background-size: cover
 }
@@ -342,7 +342,7 @@ img:hover {
 	top: 0;
 	right: 50%;
 	margin-right: 58px;
-	background: url(../img/snow/snow_1.a8b97dd0.png)
+	background: url(http://cdn.xuanfengge.com/wp-content/themes/lee3.0/dist/img/snow/snow_1.a8b97dd0.png)
 }
 
 .mod-banner__snow_theme .mod-banner__snow_2 {
@@ -352,7 +352,7 @@ img:hover {
 	top: 3px;
 	left: 50%;
 	margin-left: 346px;
-	background: url(../img/snow/snow_2.bb28679e.png)
+	background: url(http://cdn.xuanfengge.com/wp-content/themes/lee3.0/dist/img/snow/snow_2.bb28679e.png)
 }
 /* 轩枫轮播end */
 
@@ -6173,3 +6173,193 @@ p.data-l span {
 	display: none!important
 }
 /* 针对傻逼畅言广告屏蔽end */
+
+/* 首页3d轩枫导航start */
+.mod-index__feature{
+	display: block!important;
+	width:100%;
+}
+.mod-index__feature *{
+	color:#fff;
+}
+.mod-index__feature .img_list_6pic {
+	overflow:visible;
+	width:100%;
+	margin-bottom: 5px;
+	float: left;
+    left:0
+}
+.mod-index__feature .img_list_3pic {
+    left:710px
+}
+.mod-index__feature .img_list_1pic {
+    left:1420px
+}
+.mod-index__feature .img_list_6pic .img_box, .mod-index__feature .img_list_6pic .img_box img {
+    width:290px;
+    height:180px
+}
+.mod-index__feature .img_box {
+    float:left;
+    position:relative;
+    overflow:hidden
+}
+.mod-index__feature .img_box a:hover {
+    text-decoration:none
+}
+.mod-index__feature .img_bg, .mod-index__feature .img_txt {
+    width:100%;
+    height:35px;
+    overflow:hidden;
+    position:absolute;
+    bottom:0;
+    left:0
+}
+.mod-index__feature .img_bg {
+    filter:alpha(opacity=70);
+    opacity:.7;
+    background:#000
+}
+.mod-index__feature .img_txt p {
+    padding:0 17px;
+    color:#b3b3b3;
+    font-size:12px
+}
+.mod-index__feature .img_info {
+    line-height:16px;
+    margin-top:5px
+}
+.mod-index__feature .img_txt .img_title {
+    font-size:16px;
+    font-family:STHeiti, Microsoft Yahei, 微软雅黑, Arial, sans-serif;
+    padding-top:6px;
+    color:#fff
+}
+.mod-index__feature .img_title a, .mod-index__feature .img_title a:hover {
+    color:#fff
+}
+.mod-index__feature .img_info a, .mod-index__feature .img_info a:hover {
+    color:#b3b3b3
+}
+.mod-index__feature .small_pic_wrap {
+    height:85px;
+    width:110px;
+    float:left;
+    display:block;
+    margin:0 0 10px 10px;
+    position:relative;
+    color:#fff;
+    font-family:STHeiti, Microsoft Yahei, 微软雅黑, Arial, sans-serif
+}
+.mod-index__feature .small_pic_wrap_long {
+    width:160px
+}
+.mod-index__feature .small_pic_wrap .carousel_small_str {
+    display:none;
+    cursor:pointer;
+    position:absolute;
+    height:85px;
+    width:110px;
+    background-image:url(http://cdn.xuanfengge.com/wp-content/themes/lee3.0/dist/img/feature/block.c41dc5e3.png);
+    background-repeat:no-repeat;
+    top:0;
+    left:0
+}
+.mod-index__feature .small_pic_wrap .carousel_small_pic {
+    position:absolute;
+    top:0;
+    left:0
+}
+.mod-index__feature .word_display {
+    z-index:1
+}
+.mod-index__feature .word_display .carousel_small_pic {
+    display:none
+}
+.mod-index__feature .word_display .carousel_small_str {
+    display:block
+}
+.mod-index__feature .small_pic_wrap_long .carousel_small_str {
+    width:160px
+}
+.mod-index__feature .small_pic_wrap:hover {
+    color:#fff;
+    text-decoration:none
+}
+.mod-index__feature .img_txt_title {
+    font-size:24px;
+    line-height:34px;
+    margin:5px 0 0 8px;
+    width:150px
+}
+.mod-index__feature .img_p {
+    font-size:14px;
+    margin-left:8px;
+	width:150px;
+	color:#fff;
+}
+.mod-index__feature .small_pic_wrap .txt_bg01 {
+    background-position:0 0
+}
+.mod-index__feature .small_pic_wrap .txt_bg02 {
+    background-position:0 -105px
+}
+.mod-index__feature .small_pic_wrap .txt_bg03 {
+    background-position:0 -210px
+}
+.mod-index__feature .small_pic_wrap .txt_bg04 {
+    background-position:0 -315px
+}
+.mod-index__feature .small_pic_wrap .txt_bg05 {
+    background-position:0 -420px
+}
+.mod-index__feature .small_pic_wrap .txt_bg06 {
+    background-position:0 -514px
+}
+.mod-index__feature .img_list_6pic .carousel_pic_wrap .carousel_small_str, .mod-index__feature .img_list_6pic .word_display .carousel_small_pic, .mod-index__feature .img_list_6pic .word_display .carousel_small_str {
+    display:block
+}
+.mod-index__feature .img_list_6pic .word_display .carousel_small_pic {
+    display:none\9
+}
+.mod-index__feature .img_list_6pic .carousel_pic_wrap {
+    perspective:10000px;
+    transform-style:preserve-3d;
+    transition:transform .5s
+}
+.mod-index__feature .img_list_6pic .carousel_small_pic, .mod-index__feature .img_list_6pic .carousel_small_str {
+    transition:all .5s;
+}
+.mod-index__feature .img_list_6pic .carousel_small_pic {
+    transform:translateZ(40px);
+}
+.mod-index__feature .img_list_6pic .carousel_small_str {
+    transform:rotateX(-90deg) translateZ(42px)
+}
+.mod-index__feature .img_list_6pic .word_display {
+    transform:translateZ(0) rotateX(90deg);
+}
+.mod-index__feature .unsupport3d .img_list_6pic .carousel_pic_wrap .carousel_small_str, .mod-index__feature .unsupport3d .img_list_6pic .word_display .carousel_small_pic, .mod-index__feature .unsupport3d .img_list_6pic .word_display .carousel_small_str {
+    display:none
+}
+.mod-index__feature .unsupport3d .img_list_6pic .word_display .carousel_small_str {
+    display:block
+}
+.mod-index__feature .unsupport3d .img_list_6pic .carousel_pic_wrap {
+    transform-style:flat;
+    transition:transform 0s
+}
+.mod-index__feature .unsupport3d .img_list_6pic .carousel_small_pic, .mod-index__feature .unsupport3d .img_list_6pic .carousel_small_str {
+    transition:all 0s
+}
+.mod-index__feature .unsupport3d .img_list_6pic .carousel_small_pic {
+    transform:translateZ(0);
+    display:block
+}
+.mod-index__feature .unsupport3d .img_list_6pic .carousel_small_str {
+    transform:rotateX(0deg) translateZ(0)
+}
+.mod-index__feature .unsupport3d .img_list_6pic .word_display {
+    transform:translateZ(0) rotateX(0deg);
+}
+/* 首页3d轩枫导航end */
