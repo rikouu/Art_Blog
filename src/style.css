@@ -1009,9 +1009,6 @@ i {
 	-webkit-transform: rotate(22.5deg);
 	-ms-transform: rotate(22.5deg);
 	transform: rotate(22.5deg);
-	-webkit-transform: rotate(rotate(22.5deg)) scale(1) skew(1deg) translate(10px);
-	-ms-transform: rotate(rotate(22.5deg)) scale(1) skew(1deg) translate(10px);
-	transform: rotate(rotate(22.5deg)) scale(1) skew(1deg) translate(10px);
 }
 
 .mod-header_music-icon i:nth-of-type(3) {
@@ -1019,9 +1016,6 @@ i {
 	-webkit-transform: rotate(-22.5deg);
 	-ms-transform: rotate(-22.5deg);
 	transform: rotate(-22.5deg);
-	-webkit-transform: rotate(rotate(-22.5deg)) scale(1) skew(1deg) translate(10px);
-	-ms-transform: rotate(rotate(-22.5deg)) scale(1) skew(1deg) translate(10px);
-	transform: rotate(rotate(-22.5deg)) scale(1) skew(1deg) translate(10px);
 }
 
 .mod-header_music-icon i:nth-of-type(4) {
@@ -1029,9 +1023,6 @@ i {
 	-webkit-transform: rotate(22.5deg);
 	-ms-transform: rotate(22.5deg);
 	transform: rotate(22.5deg);
-	-webkit-transform: rotate(rotate(22.5deg)) scale(1) skew(1deg) translate(10px);
-	-ms-transform: rotate(rotate(22.5deg)) scale(1) skew(1deg) translate(10px);
-	transform: rotate(rotate(22.5deg)) scale(1) skew(1deg) translate(10px);
 }
 
 .mod-header_music-icon i:nth-of-type(5) {
@@ -1039,9 +1030,6 @@ i {
 	-webkit-transform: rotate(-22.5deg);
 	-ms-transform: rotate(-22.5deg);
 	transform: rotate(-22.5deg);
-	-webkit-transform: rotate(rotate(-22.5deg)) scale(1) skew(1deg) translate(10px);
-	-ms-transform: rotate(rotate(-22.5deg)) scale(1) skew(1deg) translate(10px);
-	transform: rotate(rotate(-22.5deg)) scale(1) skew(1deg) translate(10px);
 }
 
 .mod-header_music-icon.hover:not(.close) i:nth-of-type(1) {
@@ -1053,9 +1041,6 @@ i {
 	-webkit-transform: rotate(0deg);
 	-ms-transform: rotate(0deg);
 	transform: rotate(0deg);
-	-webkit-transform: rotate(rotate(0deg)) scale(1) skew(1deg) translate(10px);
-	-ms-transform: rotate(rotate(0deg)) scale(1) skew(1deg) translate(10px);
-	transform: rotate(rotate(0deg)) scale(1) skew(1deg) translate(10px);
 	background-color: #333;
 }
 
