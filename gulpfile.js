@@ -94,28 +94,28 @@ gulp.task('babel', () =>
 // })
 
 //初始化browserSync
-browserSync.init({
-    server: {
-        baseDir: './src'
-    },
-    middleware: function (req, res, next) {
-        let str = '';
-        let pathname = require('url').parse(req.url).pathname;
-        if (pathname.match(/\.css/)) {
-            str = scssSolve(pathname);
-            if (str) {
-                res.end(str);
-            }
-        }
-        if (pathname.match(/\.js/)) {
-            str = jsSolve(pathname);
-            if (str) {
-                res.end(str);
-            }
-        }
-        next();
-    }
-});
+// browserSync.init({
+//     server: {
+//         baseDir: './src'
+//     },
+//     middleware: function (req, res, next) {
+//         let str = '';
+//         let pathname = require('url').parse(req.url).pathname;
+//         if (pathname.match(/\.css/)) {
+//             str = scssSolve(pathname);
+//             if (str) {
+//                 res.end(str);
+//             }
+//         }
+//         if (pathname.match(/\.js/)) {
+//             str = jsSolve(pathname);
+//             if (str) {
+//                 res.end(str);
+//             }
+//         }
+//         next();
+//     }
+// });
 
 // gulp.watch('src/*.html').on('change', function () {
 //     browserSync.reload('*.html');

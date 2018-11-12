@@ -99,7 +99,7 @@
 					<div class="img_list_6pic ui-clearfix">
 						<div class="img_box">
 							<a href="https://www.weipxiu.com/funny" target="_blank">
-								<img src="http://cdn.xuanfengge.com/wp-content/themes/lee3.0/dist/img/feature/01.503c5483.jpg" width="280"
+								<img src="https://www.weipxiu.com/wp-content/themes/boke/images/01.503c5483.jpg" width="280"
 								 height="180" class="ui-d-b">
 								<div class="img_bg"></div>
 								<div class="img_txt">
@@ -115,7 +115,7 @@
 								<h3 class="img_txt_title">404</h3>
 								<p class="img_p">路<br>在何方</p>
 							</div>
-							<img class="carousel_small_pic" width="110" height="85" src="http://cdn.xuanfengge.com/wp-content/themes/lee3.0/dist/img/feature/02.1999dad7.jpg">
+							<img class="carousel_small_pic" width="110" height="85" src="https://www.weipxiu.com/wp-content/themes/boke/images/02.1999dad7.jpg">
 						</a>
 						<a href="https://www.weipxiu.com/funny/html5/draw/" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small"
 						 target="_blank">
@@ -123,7 +123,7 @@
 								<h3 class="img_txt_title">绘画板</h3>
 								<p class="img_p">描绘<br>在故事里的风景</p>
 							</div>
-							<img class="carousel_small_pic" width="110" height="85" src="http://cdn.xuanfengge.com/wp-content/themes/lee3.0/dist/img/feature/03.79b87140.jpg">
+							<img class="carousel_small_pic" width="110" height="85" src="https://www.weipxiu.com/wp-content/themes/boke/images/03.79b87140.jpg">
 						</a>
 						<a href="https://www.weipxiu.com/good-night" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_long word_display"
 						 target="_blank">
@@ -131,7 +131,7 @@
 								<h3 class="img_txt_title">千里共良宵</h3>
 								<p class="img_p">岁月<br>在电波中流淌</p>
 							</div>
-							<img class="carousel_small_pic" src="http://cdn.xuanfengge.com/wp-content/themes/lee3.0/dist/img/feature/04.106fc8c0.jpg"
+							<img class="carousel_small_pic" src="https://www.weipxiu.com/wp-content/themes/boke/images/04.106fc8c0.jpg"
 							 width="160" height="85">
 						</a>
 						<a href="javascript:;" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display" target="_blank">
@@ -139,14 +139,14 @@
 								<h3 class="img_txt_title">忙碌</h3>
 								<p class="img_p">在喧闹<br>又孤独的城市</p>
 							</div>
-							<img class="carousel_small_pic" width="110" height="85" src="http://cdn.xuanfengge.com/wp-content/themes/lee3.0/dist/img/feature/05.0357cd0d.jpg">
+							<img class="carousel_small_pic" width="110" height="85" src="https://www.weipxiu.com/wp-content/themes/boke/images/05.0357cd0d.jpg">
 						</a>
 						<a href="https://www.weipxiu.com/funny/html5/video" target="_blank" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_long">
 							<div class="carousel_small_str txt_bg04">
 								<h3 class="img_txt_title">MV</h3>
 								<p class="img_p">时光<br>在画面里穿梭</p>
 							</div>
-							<img class="carousel_small_pic" src="http://cdn.xuanfengge.com/wp-content/themes/lee3.0/dist/img/feature/06.50599bb3.jpg"
+							<img class="carousel_small_pic" src="https://www.weipxiu.com/wp-content/themes/boke/images/06.50599bb3.jpg"
 							 width="160" height="85">
 						</a>
 						<a href="https://www.weipxiu.com/funny/html5/music" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display"
@@ -155,21 +155,21 @@
 								<h3 class="img_txt_title">Music</h3>
 								<p class="img_p">心情<br>在音乐中释放</p>
 							</div>
-							<img class="carousel_small_pic" width="110" height="85" src="http://cdn.xuanfengge.com/wp-content/themes/lee3.0/dist/img/feature/07.2f43931e.jpg">
+							<img class="carousel_small_pic" width="110" height="85" src="https://www.weipxiu.com/wp-content/themes/boke/images/07.2f43931e.jpg">
 						</a>
 						<a href="javascript:;" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
 							<div class="carousel_small_str txt_bg06">
 								<h3 class="img_txt_title">纸飞机</h3>
 								<p class="img_p">Logo<br>在希望中起飞</p>
 							</div>
-							<img class="carousel_small_pic" width="110" height="85" src="http://cdn.xuanfengge.com/wp-content/themes/lee3.0/dist/img/feature/08.daacfa0c.jpg">
+							<img class="carousel_small_pic" width="110" height="85" src="https://www.weipxiu.com/wp-content/themes/boke/images/08.daacfa0c.jpg">
 						</a>
 						<a href="javascript:;" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
 							<div class="carousel_small_str txt_bg06">
 								<h3 class="img_txt_title">近未来</h3>
 								<p class="img_p">梦想起航<br>在未来绽放</p>
 							</div>
-							<img class="carousel_small_pic" width="110" height="85" src="http://cdn.xuanfengge.com/wp-content/themes/lee3.0/dist/img/feature/09.1f0f38a3.jpg">
+							<img class="carousel_small_pic" width="110" height="85" src="https://www.weipxiu.com/wp-content/themes/boke/images/09.1f0f38a3.jpg">
 						</a>
 					</div>
 				</div>
@@ -405,6 +405,5 @@
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/xfg_banner/banner-effect.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/javascript.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/swiper.min.js"></script>
-<!-- <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/index.eebde3d9.js"></script> -->
 
 </html>

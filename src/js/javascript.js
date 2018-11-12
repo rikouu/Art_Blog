@@ -15,6 +15,13 @@ $(function () {
                 });
             }, 5000);
 
+            //首页轮播下sd导航start
+            $(".mod-index__feature .img_list_6pic a").removeClass("word_display");
+            $(".mod-index__feature .img_list_6pic a").mouseover(function(){
+                $(this).addClass("word_display").siblings("a").removeClass("word_display");
+            });
+            //首页轮播下sd导航end
+
             //轩枫博客start
             //turnEffect（翻转）boomEffect（爆炸）pageEffect（翻页）skewEffect（扭曲）cubeEffect（立方体）
             var flippingMode = ['turnEffect', 'boomEffect', 'skewEffect'];
