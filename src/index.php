@@ -117,7 +117,7 @@
 							</div>
 							<img class="carousel_small_pic" width="110" height="85" src="https://www.weipxiu.com/wp-content/themes/boke/images/02.1999dad7.jpg">
 						</a>
-						<a href="https://www.weipxiu.com/funny/html5/draw/" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small"
+						<a href="https://www.weipxiu.com/817.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small"
 						 target="_blank">
 							<div class="carousel_small_str txt_bg02">
 								<h3 class="img_txt_title">绘画板</h3>
@@ -125,7 +125,7 @@
 							</div>
 							<img class="carousel_small_pic" width="110" height="85" src="https://www.weipxiu.com/wp-content/themes/boke/images/03.79b87140.jpg">
 						</a>
-						<a href="https://www.weipxiu.com/good-night" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_long word_display"
+						<a href="https://www.weipxiu.com/802.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_long word_display"
 						 target="_blank">
 							<div class="carousel_small_str txt_bg03">
 								<h3 class="img_txt_title">千里共良宵</h3>
@@ -134,14 +134,14 @@
 							<img class="carousel_small_pic" src="https://www.weipxiu.com/wp-content/themes/boke/images/04.106fc8c0.jpg"
 							 width="160" height="85">
 						</a>
-						<a href="javascript:;" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display" target="_blank">
+						<a href="https://www.weipxiu.com/2075.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display" target="_blank">
 							<div class="carousel_small_str txt_bg02">
 								<h3 class="img_txt_title">忙碌</h3>
 								<p class="img_p">在喧闹<br>又孤独的城市</p>
 							</div>
 							<img class="carousel_small_pic" width="110" height="85" src="https://www.weipxiu.com/wp-content/themes/boke/images/05.0357cd0d.jpg">
 						</a>
-						<a href="https://www.weipxiu.com/funny/html5/video" target="_blank" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_long">
+						<a href="https://www.weipxiu.com/category/timemachine" target="_blank" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_long">
 							<div class="carousel_small_str txt_bg04">
 								<h3 class="img_txt_title">MV</h3>
 								<p class="img_p">时光<br>在画面里穿梭</p>
@@ -149,7 +149,7 @@
 							<img class="carousel_small_pic" src="https://www.weipxiu.com/wp-content/themes/boke/images/06.50599bb3.jpg"
 							 width="160" height="85">
 						</a>
-						<a href="https://www.weipxiu.com/funny/html5/music" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display"
+						<a href="javascript:;" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display"
 						 target="_blank">
 							<div class="carousel_small_str txt_bg05">
 								<h3 class="img_txt_title">Music</h3>
@@ -157,17 +157,17 @@
 							</div>
 							<img class="carousel_small_pic" width="110" height="85" src="https://www.weipxiu.com/wp-content/themes/boke/images/07.2f43931e.jpg">
 						</a>
-						<a href="javascript:;" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
+						<a href="https://www.weipxiu.com/913.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
 							<div class="carousel_small_str txt_bg06">
-								<h3 class="img_txt_title">纸飞机</h3>
-								<p class="img_p">Logo<br>在希望中起飞</p>
+								<h3 class="img_txt_title">情人节</h3>
+								<p class="img_p">单身<br>一个程序员的史诗</p>
 							</div>
 							<img class="carousel_small_pic" width="110" height="85" src="https://www.weipxiu.com/wp-content/themes/boke/images/08.daacfa0c.jpg">
 						</a>
 						<a href="javascript:;" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
 							<div class="carousel_small_str txt_bg06">
-								<h3 class="img_txt_title">近未来</h3>
-								<p class="img_p">梦想起航<br>在未来绽放</p>
+								<h3 class="img_txt_title">直男癌</h3>
+								<p class="img_p">花花世界<br>谁在鄙视直男癌</p>
 							</div>
 							<img class="carousel_small_pic" width="110" height="85" src="https://www.weipxiu.com/wp-content/themes/boke/images/09.1f0f38a3.jpg">
 						</a>

@@ -451,7 +451,7 @@ img:hover {
 #js_banner {
 	width: 100%;
 	height: 300px;
-	margin: 114px auto 0px;
+	margin: 86px auto 0px;
 	border-bottom: 1px solid #fff;
 	background: #fff;
 	z-index: 10;
@@ -465,7 +465,7 @@ img:hover {
 
 .header {
 	width: 100%;
-	height: 104px;
+	height: 76px;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -484,7 +484,7 @@ img:hover {
 }
 
 .header-body {
-	height: calc(100% - 28px);
+	height: 100%;
 	border-top: 1px solid #fff;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -573,7 +573,7 @@ img:hover {
 
 .header.hover {
 	z-index: 1000;
-	height: 76px;
+	height: 48px;
 	opacity: 1;
 	z-index: 100 !important;
 	background: rgba(255, 255, 255, .9);
@@ -595,7 +595,7 @@ img:hover {
 
 .header-conter {
 	width: 1200px;
-	margin: 24px auto 0;
+	margin: 21px auto 0;
 	border-top: 1px solid transparent;
 	-webkit-transition: all 1s;
 	-o-transition: all 1s;
@@ -795,7 +795,7 @@ img:hover {
 	width: 100%;
 	height: 3px;
 	position: absolute;
-	bottom: -17px;
+	bottom: -19px;
 	left: 0;
 	background: #19ACF7;
 	-webkit-transition: all 0.5s;
