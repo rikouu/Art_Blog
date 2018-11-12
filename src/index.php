@@ -160,7 +160,7 @@
 						<a href="https://www.weipxiu.com/913.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
 							<div class="carousel_small_str txt_bg06">
 								<h3 class="img_txt_title">情人节</h3>
-								<p class="img_p">单身<br>一个程序员的史诗</p>
+								<p class="img_p">一个单身<br>程序员的史诗</p>
 							</div>
 							<img class="carousel_small_pic" width="110" height="85" src="https://www.weipxiu.com/wp-content/themes/boke/images/08.daacfa0c.jpg">
 						</a>

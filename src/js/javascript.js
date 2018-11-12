@@ -15,12 +15,147 @@ $(function () {
                 });
             }, 5000);
 
-            //首页轮播下sd导航start
+            //IE浏览器屏蔽部分动效start
             $(".mod-index__feature .img_list_6pic a").removeClass("word_display");
-            $(".mod-index__feature .img_list_6pic a").mouseover(function(){
-                $(this).addClass("word_display").siblings("a").removeClass("word_display");
-            });
-            //首页轮播下sd导航end
+            if (!!window.ActiveXObject || "ActiveXObject" in window) {
+                console.log("当前浏览器IE内核，部分效果不可展现！")
+            } else {
+                //首页轮播下sd导航start
+                $(".mod-index__feature .img_list_6pic a").mouseenter(function () {
+                    $(this).addClass("word_display")
+                });
+                $(".mod-index__feature .img_list_6pic a").mouseleave(function () {
+                    $(this).removeClass("word_display");
+                });
+                //首页轮播下sd导航end
+
+                // 首页弹窗开始
+                setTimeout(function () {
+                    var oBox = document.getElementById("curriculum");
+                    var oUl = oBox.getElementsByTagName("ul")[0];
+                    var oContact = oBox.getElementsByClassName("contact")[0];
+                    var oClos = oBox.getElementsByClassName("close")[0];
+                    var aLi = oUl.children;
+                    var oBack = oContact.getElementsByTagName("a")[0];
+                    oBox.style.opacity = 1;
+                    oBox.addEventListener("transitionEnd", end, false);
+                    oBox.addEventListener("webkitTransitionEnd", end, false);
+                    //oUl.style.transition=".5s 600ms linear";
+                    function end() {
+                        this.removeEventListener("transitionEnd", end, false);
+                        this.removeEventListener("webkitTransitionEnd", end, false);
+                        oUl.style.top = 0;
+                        oBox.style.height = "230px";
+                        oBox.style.top = "0px";
+                        for (var i = 0; i < aLi.length; i++) {
+                            aLi[i].style.transition = "0.5s " + (300 + i * 200) + "ms";
+                            aLi[i].style.opacity = 1;
+                            aLi[i].style.transform = "rotateX(0deg)";
+                            aLi[i].style.WebkitTransform = "rotateX(0deg)";
+                            aLi[i].off = true;
+                            aLi[i].index = i;
+                            aLi[i].onmouseover = over;
+                            aLi[i].onmouseout = function () {
+                                if (this.off) {
+                                    this.style.transform = "rotateY(0deg)";
+                                    this.style.WebkitTransform = "rotateY(0deg)";
+                                }
+                            };
+                            aLi[i].onclick = fnClick;
+                        }
+                    }
+
+                    function over(ev) {
+                        if (this.off) {
+                            var iX = ev.clientX - getLeft(this);
+                            this.style.transition = "0.5s";
+                            if (iX > this.offsetWidth / 2) {
+                                this.style.transform = "rotateY(30deg)";
+                                this.style.WebkitTransform = "rotateY(30deg)";
+                            } else {
+                                this.style.transform = "rotateY(-30deg)";
+                                this.style.WebkitTransform = "rotateY(-30deg)";
+                            }
+                        }
+                    }
+
+                    function getLeft(obj) {
+                        var iLeft = 0;
+                        while (obj) {
+                            iLeft += obj.offsetLeft;
+                            obj = obj.offsetParent;
+                        }
+                        return iLeft
+                    }
+
+                    function fnClick(ev) {
+                        var iX = ev.clientX - getLeft(this);
+                        var iDeg = iX > this.offsetWidth / 2 ? -180 : 180;
+                        var iMax = 0;
+                        var iNow = 0;
+                        oContact.style.display = "block";
+                        for (var i = 0; i < aLi.length; i++) {
+                            if (iMax < Math.abs(i - this.index)) {
+                                iMax = Math.abs(i - this.index);
+                                iNow = i;
+                            }
+                            aLi[i].off = false;
+                            aLi[i].style.transition = "0.5s " + Math.abs(i - this.index) * 100 + "ms cubic-bezier(0.115, -0.195, 0.255, -0.280)";
+                            aLi[i].style.transform = "rotateY(" + iDeg + "deg)";
+                            aLi[i].style.WebkitTransform = "rotateY(" + iDeg + "deg)";
+                            aLi[i].style.opacity = 0.1;
+                        }
+                        aLi[iNow].addEventListener("transitionEnd", end, false);
+                        aLi[iNow].addEventListener("webkitTransitionEnd", end, false);
+
+                        function end() {
+                            this.removeEventListener("transitionEnd", end, false);
+                            this.removeEventListener("webkitTransitionEnd", end, false);
+                            oContact.style.opacity = 1;
+                        }
+                    }
+                    oBack.onclick = function () {
+                        oContact.style.opacity = 0;
+                        oContact.addEventListener("transitionEnd", end, false);
+                        oContact.addEventListener("webkitTransitionEnd", end, false);
+
+                        function end() {
+                            this.removeEventListener("transitionEnd", end, false);
+                            this.removeEventListener("webkitTransitionEnd", end, false);
+                            for (var i = 0; i < aLi.length; i++) {
+                                aLi[i].off = true;
+                                aLi[i].style.transition = "0.5s " + (aLi.length - i - 1) * 100 + "ms";
+                                aLi[i].style.transform = "rotateY(0deg)";
+                                aLi[i].style.WebkitTransform = "rotateY(0deg)";
+                                aLi[i].style.opacity = 1;
+                            }
+                        }
+                    };
+
+                    function Clos() {
+                        oBox.style.transition = ".8s height,0.4s opacity .2s";
+                        oBox.style.height = "40px";
+                        oBox.style.opacity = 0;
+                        setTimeout(function () {
+                            $("#curriculum").remove();
+                        }, 1000)
+                    };
+                    oClos.onclick = function () {
+                        Clos();
+                    }
+                    setTimeout(function () {
+                        Clos()
+                    }, 8000);
+                    document.onkeydown = function (e) {
+                        if (!e) e = window.event;
+                        if ((e.keyCode || e.which) == 13) {
+                            Clos();
+                        };
+                    }
+                }, 3000);
+                // 首页弹窗结束
+            }
+            //IE浏览器屏蔽部分动效end
 
             //轩枫博客start
             //turnEffect（翻转）boomEffect（爆炸）pageEffect（翻页）skewEffect（扭曲）cubeEffect（立方体）
@@ -33,34 +168,34 @@ $(function () {
                 width: 1200,
                 height: 300,
                 images: [{
-                    url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-1.jpg',
-                    link: 'https://www.weipxiu.com/?cat=29'
-                }, {
-                    url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-2.jpg',
-                    link: 'https://www.weipxiu.com/'
-                }, {
-                    url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-3.jpg',
-                    link: 'javascript:;'
-                }, {
-                    url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-4.jpg',
-                    link: 'javascript:;'
-                }, {
-                    url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-5.jpg',
-                    link: 'https://www.weipxiu.com/?cat=6'
-                },
-                {
-                    url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-6.jpg',
-                    link: 'https://www.weipxiu.com/?p=1313'
-                }
+                        url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-1.jpg',
+                        link: 'https://www.weipxiu.com/?cat=29'
+                    }, {
+                        url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-2.jpg',
+                        link: 'https://www.weipxiu.com/'
+                    }, {
+                        url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-3.jpg',
+                        link: 'javascript:;'
+                    }, {
+                        url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-4.jpg',
+                        link: 'javascript:;'
+                    }, {
+                        url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-5.jpg',
+                        link: 'https://www.weipxiu.com/?cat=6'
+                    },
+                    {
+                        url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-6.jpg',
+                        link: 'https://www.weipxiu.com/?p=1313'
+                    }
                 ],
 
-                preloadImages: true,// 预加载所有图片
+                preloadImages: true, // 预加载所有图片
 
                 // 分页及控制
-                pagination: '.js_banner_nav',     // 分页dom
-                paginationClick: true,  // 分页是否可点击
-                prevButton: '.js_banner_prev',     // 下一张dom
-                nextButton: '.js_banner_next',     // 上一张dom
+                pagination: '.js_banner_nav', // 分页dom
+                paginationClick: true, // 分页是否可点击
+                prevButton: '.js_banner_prev', // 下一张dom
+                nextButton: '.js_banner_next', // 上一张dom
                 Effects: {
                     //turnEffect（翻转）boomEffect（爆炸）pageEffect（翻页）skewEffect（扭曲）cubeEffect（立方体）
                     'prev': 'turnEffect',
@@ -134,7 +269,7 @@ $(function () {
                     myPlayer.pause();
                 }, 2000);
             });
-            //视频播放end*/				
+            //视频播放end*/
 
             // 桌面提醒功能
             var set_desktop = function () {
@@ -203,132 +338,6 @@ $(function () {
                 }, 1500);
             }
             // console.log---end
-
-            // 首页弹窗开始
-            setTimeout(function () {
-                var oBox = document.getElementById("curriculum");
-                var oUl = oBox.getElementsByTagName("ul")[0];
-                var oContact = oBox.getElementsByClassName("contact")[0];
-                var oClos = oBox.getElementsByClassName("close")[0];
-                var aLi = oUl.children;
-                var oBack = oContact.getElementsByTagName("a")[0];
-                oBox.style.opacity = 1;
-                oBox.addEventListener("transitionEnd", end, false);
-                oBox.addEventListener("webkitTransitionEnd", end, false);
-                //oUl.style.transition=".5s 600ms linear";
-                function end() {
-                    this.removeEventListener("transitionEnd", end, false);
-                    this.removeEventListener("webkitTransitionEnd", end, false);
-                    oUl.style.top = 0;
-                    oBox.style.height = "230px";
-                    oBox.style.top = "0px";
-                    for (var i = 0; i < aLi.length; i++) {
-                        aLi[i].style.transition = "0.5s " + (300 + i * 200) + "ms";
-                        aLi[i].style.opacity = 1;
-                        aLi[i].style.transform = "rotateX(0deg)";
-                        aLi[i].style.WebkitTransform = "rotateX(0deg)";
-                        aLi[i].off = true;
-                        aLi[i].index = i;
-                        aLi[i].onmouseover = over;
-                        aLi[i].onmouseout = function () {
-                            if (this.off) {
-                                this.style.transform = "rotateY(0deg)";
-                                this.style.WebkitTransform = "rotateY(0deg)";
-                            }
-                        };
-                        aLi[i].onclick = fnClick;
-                    }
-                }
-
-                function over(ev) {
-                    if (this.off) {
-                        var iX = ev.clientX - getLeft(this);
-                        this.style.transition = "0.5s";
-                        if (iX > this.offsetWidth / 2) {
-                            this.style.transform = "rotateY(30deg)";
-                            this.style.WebkitTransform = "rotateY(30deg)";
-                        } else {
-                            this.style.transform = "rotateY(-30deg)";
-                            this.style.WebkitTransform = "rotateY(-30deg)";
-                        }
-                    }
-                }
-
-                function getLeft(obj) {
-                    var iLeft = 0;
-                    while (obj) {
-                        iLeft += obj.offsetLeft;
-                        obj = obj.offsetParent;
-                    }
-                    return iLeft
-                }
-
-                function fnClick(ev) {
-                    var iX = ev.clientX - getLeft(this);
-                    var iDeg = iX > this.offsetWidth / 2 ? -180 : 180;
-                    var iMax = 0;
-                    var iNow = 0;
-                    oContact.style.display = "block";
-                    for (var i = 0; i < aLi.length; i++) {
-                        if (iMax < Math.abs(i - this.index)) {
-                            iMax = Math.abs(i - this.index);
-                            iNow = i;
-                        }
-                        aLi[i].off = false;
-                        aLi[i].style.transition = "0.5s " + Math.abs(i - this.index) * 100 + "ms cubic-bezier(0.115, -0.195, 0.255, -0.280)";
-                        aLi[i].style.transform = "rotateY(" + iDeg + "deg)";
-                        aLi[i].style.WebkitTransform = "rotateY(" + iDeg + "deg)";
-                        aLi[i].style.opacity = 0.1;
-                    }
-                    aLi[iNow].addEventListener("transitionEnd", end, false);
-                    aLi[iNow].addEventListener("webkitTransitionEnd", end, false);
-
-                    function end() {
-                        this.removeEventListener("transitionEnd", end, false);
-                        this.removeEventListener("webkitTransitionEnd", end, false);
-                        oContact.style.opacity = 1;
-                    }
-                }
-                oBack.onclick = function () {
-                    oContact.style.opacity = 0;
-                    oContact.addEventListener("transitionEnd", end, false);
-                    oContact.addEventListener("webkitTransitionEnd", end, false);
-
-                    function end() {
-                        this.removeEventListener("transitionEnd", end, false);
-                        this.removeEventListener("webkitTransitionEnd", end, false);
-                        for (var i = 0; i < aLi.length; i++) {
-                            aLi[i].off = true;
-                            aLi[i].style.transition = "0.5s " + (aLi.length - i - 1) * 100 + "ms";
-                            aLi[i].style.transform = "rotateY(0deg)";
-                            aLi[i].style.WebkitTransform = "rotateY(0deg)";
-                            aLi[i].style.opacity = 1;
-                        }
-                    }
-                };
-
-                function Clos() {
-                    oBox.style.transition = ".8s height,0.4s opacity .2s";
-                    oBox.style.height = "40px";
-                    oBox.style.opacity = 0;
-                    setTimeout(function () {
-                        $("#curriculum").remove();
-                    }, 1000)
-                };
-                oClos.onclick = function () {
-                    Clos();
-                }
-                setTimeout(function () {
-                    Clos()
-                }, 8000);
-                document.onkeydown = function (e) {
-                    if (!e) e = window.event;
-                    if ((e.keyCode || e.which) == 13) {
-                        Clos();
-                    };
-                }
-            }, 3000);
-            // 首页弹窗结束
 
             $("#hide").show();
             $("html").css({
