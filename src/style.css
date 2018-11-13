@@ -2310,8 +2310,19 @@ div.com-art ul li {
     overflow: hidden; */
     width: 100%;
     background: url(images/footer_bg.jpg) center center repeat-x;
+    position: relative;
 }
-
+.footer:after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    background: #ccc;
+    background: linear-gradient(to right top,#FCFCFA,#F1F1EF);
+}
 .container {
     position: relative;
     margin: 0 auto;
