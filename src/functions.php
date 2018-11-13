@@ -234,7 +234,8 @@ function add_button_mce($mce_settings) {//扩充发表文章编辑器的导航�
 <script type="text/javascript">
     QTags.addButton( '注意', '注意', "<span class='beCareful'>", "</span>" );
     QTags.addButton( 'a', 'a', "<a href=''>", "</a>" );
-    QTags.addButton( 'p', 'p', "\n<p>", "</p>" );
+    QTags.addButton( 'p', 'p', "<p>", "</p>" );
+    QTags.addButton( 'li', 'li', "<li>", "</li>" );
     QTags.addButton( 'span', 'span', "\n<span>", "</span>" );
     QTags.addButton( 'h1', 'h1', "\n<h1>", "</h1>" );
     QTags.addButton( 'h4', 'h4', "\n<h4>", "</h4>" );
