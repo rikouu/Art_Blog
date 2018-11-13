@@ -58,7 +58,7 @@
 	}
 	.contaner p {
 		text-indent:28px;
-		line-height:26px
+		line-height:34px
 	}
 	.contaner h2 {
 		margin:20px 0 5px;
