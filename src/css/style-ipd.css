@@ -58,17 +58,12 @@ img {
 .swiper-slide {
 	text-align:center;
 	font-size:18px;
-	display:box;
-	display:-ms-flexbox;
-	display:flex;
 	display:flex;
 	box-pack:center;
 	-ms-flex-pack:center;
 	justify-content:center;
-	justify-content:center;
 	box-align:center;
 	-ms-flex-align:center;
-	align-items:center;
 	align-items:center;
 }
 #wowslider-container,.accordion {
@@ -627,7 +622,7 @@ img {
 	line-height:25px;
 	margin:0;
 	text-indent:2em;
-	display:box;
+	display:flex;
 	line-clamp:2;
 	box-orient:vertical;
 	-moz-line-clamp:2;
@@ -832,7 +827,7 @@ ul.post-categories li:first-child {
 	color:#666;
 	font-size:0.26rem;
 	font-weight:normal;
-	display:box;
+	display:flex;
 	line-clamp:2;
 	box-orient:vertical;
 	-moz-line-clamp:2;
