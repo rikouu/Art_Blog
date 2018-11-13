@@ -43,7 +43,7 @@
 <!-- 热门文章start -->
 <div class="widget hot_rticles">
     <div class="daily-list">
-        <h3 class="widget-title"><a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>大家喜欢</a></h3>
+        <h3 class="widget-title"><a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>最近更新</a></h3>
         <!-- 按发布日期排序 orderby=date?
         按修改时间排序 orderby=modified
         按文章ID排序 orderby=ID

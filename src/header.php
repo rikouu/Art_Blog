@@ -160,16 +160,16 @@
 									</li>
 									<li detaName="la" class="<?php if ( (is_category('8') || in_category('8')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="javascript:void(0);">
-										  <span data-href="category/message">给我留言</span>
-										  <span data-href="category/message">给我留言</span>
+										  <span data-href="category/message">碎言碎语</span>
+										  <span data-href="category/message">碎言碎语</span>
 									  </a>
 									  <audio src="" autoplay="autoplay"></audio>
 									  <p></p>
 									</li>
 									<li detaName="si" class="<?php if ( in_category('13') && is_category('13') ) { echo 'action'; } ?>">
 									  <a href="javascript:void(0);">
-										  <span data-href="category/jqzy">技巧资源</span>
-										  <span data-href="category/jqzy">技巧资源</span>
+										  <span data-href="category/jqzy">别具匠心</span>
+										  <span data-href="category/jqzy">别具匠心</span>
 									  </a>
 									  <audio src="" autoplay="autoplay"></audio>
 									  <p></p>
@@ -257,9 +257,9 @@
 		        	 <a href="https://www.weipxiu.com/works/h5-7_vip/index.html"><i class="iconfont">&#xe757;</i>作品案例</a>
         		 </div>
         	 </li>
-        	 <li><a href="/?cat=13"><i class="iconfont">&#xe617;</i>技巧资源</a></li>
+        	 <li><a href="/?cat=13"><i class="iconfont">&#xe617;</i>别具匠心</a></li>
         	 <li><a href="/?cat=2"><i class="iconfont">&#xe617;</i>心情小镇</a></li>
-        	 <li><a href="/?cat=8"><i class="iconfont">&#xe60e;</i>给我留言</a></li>
+        	 <li><a href="/?cat=8"><i class="iconfont">&#xe60e;</i>碎言碎语</a></li>
         	 <li><a href="/?cat=10"><i class="iconfont">&#xe603;</i>关于博客</a></li>
 			 <li><a href="https://www.weipxiu.com/wp-login.php"><i class="iconfont">&#xe630;</i>用户登录</a></li>
          </ul>
