@@ -528,7 +528,6 @@ jQuery(function ($) {
     } else {
         // 移动端固定导航fixed-bug
         setTimeout(function(){
-            // var viewHight = $(document).height();
             var objec = $('.footer').detach();
             $("body > .continar").append(objec);
             $(".footer").css({"display": "block",});
