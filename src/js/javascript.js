@@ -1,5 +1,5 @@
 $(function () {
-    //网站预加载运动开始
+    //网站预加载运动start
     if ($(document).width() >= 1200) {
         if (window.location.href == "https://www.weipxiu.com" || window.location.href == "https://www.weipxiu.com/") {
             $("#js_banner").show();
@@ -395,5 +395,18 @@ $(function () {
         //navigator.vibrate([1000, 500, 1000]);
         //手机震动功能，里面是数组-震动时间，第二个为间隔时间
     }
-    //网站预加载运动结束
+    //网站预加载运动end
+
+    // 当窗口改变时候start
+    $(window).resize(function() {
+        if($(document).width() >= 1200){
+            if (window.location.href == "https://www.weipxiu.com" || window.location.href == "https://www.weipxiu.com/") {
+                $("#js_banner").show();
+            }
+        }else{
+
+        }
+    });
+    // 当窗口改变时候end
+
 })
