@@ -26,24 +26,11 @@
 <body>
 	<div id="hide">
 		<?php get_header();?>
-		<!-- <section class="mod-banner" id="js_banner">
-		<div class="swiper-container">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide" style="background:url('https://www.weipxiu.com/wp-content/themes/boke/images/slide2.png') no-repeat center top;"></div>
-				<div class="swiper-slide" style="background:url('https://www.weipxiu.com/wp-content/themes/boke/images/slide3.png') no-repeat center top;"></div>
-				<div class="swiper-slide" style="background:url('https://www.weipxiu.com/wp-content/themes/boke/images/slide4.png') no-repeat center top;"></div>
-			</div>
-			<div class="swiper-pagination"></div>
-			<div class="swiper-button-next swiper-button-white"></div>
-			<div class="swiper-button-prev swiper-button-white"></div>
-		</div>
-	</section> -->
-
 		<section class="mod-banner" id="js_banner">
 			<!-- <div class="mod-banner__snow_theme">
-            <div class="mod-banner__snow_1"></div>
-            <div class="mod-banner__snow_2"></div>
-        </div> -->
+					<div class="mod-banner__snow_1"></div>
+					<div class="mod-banner__snow_2"></div>
+				</div> -->
 			<a href="https://www.weipxiu.com" target="_blank" class="mod-banner__img banner_1" id="banner_img" style="background: url(&quot;https://www.weipxiu.com/wp-content/themes/boke/images/banner-3.jpg&quot;) center center no-repeat;"></a>
 			<div class="mod-banner__navi">
 				<div class="js_banner_nav mod-banner_nav"></div>
@@ -65,16 +52,16 @@
 		<!--<div class="index-box">
 			<div class="index-main path-banner">
 				<a href="" target="_blank" class="path-banner_1">
-					<img src="<?php bloginfo('template_url'); ?>/images/path_1.png" alt="WEB前端开发，最前沿的前端视频">
+					<img src="<?php /*bloginfo('template_url'); */?>/images/path_1.png" alt="WEB前端开发，最前沿的前端视频">
 				</a>
 				<a href="" target="_blank" class="path-banner_1">
-					<img src="<?php bloginfo('template_url'); ?>/images/path_2.png" alt="文章主题插件，最全最完整的持续更新">
+					<img src="<?php /*bloginfo('template_url'); */?>/images/path_2.png" alt="文章主题插件，最全最完整的持续更新">
 				</a>
 				<a href="" target="_blank" class="path-banner_1">
-					<img src="<?php bloginfo('template_url'); ?>/images/path_3.png" alt="原创实战经验，最流行的WEB前端教程">
+					<img src="<?php /*bloginfo('template_url'); */?>/images/path_3.png" alt="原创实战经验，最流行的WEB前端教程">
 				</a>
 				<a href="" target="_blank" class="path-banner_1">
-					<img src="<?php bloginfo('template_url'); ?>/images/path_4.png" alt="资源交流社区，一个社区一个温暖的家">
+					<img src="<?php /*bloginfo('template_url'); */?>/images/path_4.png" alt="资源交流社区，一个社区一个温暖的家">
 				</a>
 			</div>
 		</div> -->
@@ -95,15 +82,15 @@
 				<!--移动端轮播end-->
 			</div>
 			<div class="continar-left" style="border:0; padding:0;background: transparent;">
+				<!-- PC正文3d导航start -->
 				<div class="mod-index__feature" style="display: none">
 					<div class="img_list_6pic ui-clearfix">
 						<div class="img_box">
-							<a href="https://www.weipxiu.com/funny" target="_blank">
-								<img src="https://www.weipxiu.com/wp-content/themes/boke/images/01.503c5483.jpg" width="280"
-								 height="180" class="ui-d-b">
+							<a href="https://www.weipxiu.com/1212.html" target="_blank">
+								<img src="https://www.weipxiu.com/wp-content/themes/boke/images/01.503c5483.jpg" width="280" height="180" class="ui-d-b">
 								<div class="img_bg"></div>
 								<div class="img_txt">
-									<p class="img_title">FE World | More Fun.</p>
+									<p class="img_title">有些话不一定要说出来 | 但一定要记录在某个地方</p>
 									<!--<p class="img_info">.</p>-->
 								</div>
 								<i class="light"></i>
@@ -117,8 +104,7 @@
 							</div>
 							<img class="carousel_small_pic" width="110" height="85" src="https://www.weipxiu.com/wp-content/themes/boke/images/02.1999dad7.jpg">
 						</a>
-						<a href="https://www.weipxiu.com/817.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small"
-						 target="_blank">
+						<a href="https://www.weipxiu.com/817.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
 							<div class="carousel_small_str txt_bg02">
 								<h3 class="img_txt_title">绘画板</h3>
 								<p class="img_p">描绘<br>在故事里的风景</p>
@@ -134,7 +120,8 @@
 							<img class="carousel_small_pic" src="https://www.weipxiu.com/wp-content/themes/boke/images/04.106fc8c0.jpg"
 							 width="160" height="85">
 						</a>
-						<a href="https://www.weipxiu.com/2075.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display" target="_blank">
+						<a href="https://www.weipxiu.com/2075.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display"
+						 target="_blank">
 							<div class="carousel_small_str txt_bg02">
 								<h3 class="img_txt_title">忙碌</h3>
 								<p class="img_p">在喧闹<br>又孤独的城市</p>
@@ -149,8 +136,7 @@
 							<img class="carousel_small_pic" src="https://www.weipxiu.com/wp-content/themes/boke/images/06.50599bb3.jpg"
 							 width="160" height="85">
 						</a>
-						<a href="javascript:;" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display"
-						 target="_blank">
+						<a href="javascript:;" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display" target="_blank">
 							<div class="carousel_small_str txt_bg05">
 								<h3 class="img_txt_title">Music</h3>
 								<p class="img_p">心情<br>在音乐中释放</p>
@@ -173,6 +159,8 @@
 						</a>
 					</div>
 				</div>
+				<!-- PC正文3d导航end -->
+
 				<div class="continar-left-top">
 					<?php 
 					$args = array( 
@@ -281,8 +269,8 @@
 						<a class="read-more" href="<?php the_permalink(); ?>" target="_blank">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
 						<p class="l">
 							<!-- <span>
-							<a href="<?php the_permalink(); ?> ">
-								<i class="fa fa-calendar">&nbsp;</i><?php echo '发表于 '.timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); ?>
+							<a href="<?php /*the_permalink(); */?> ">
+								<i class="fa fa-calendar">&nbsp;</i><?php /*echo '发表于 '.timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); */?>
 							</a>
 						</span> -->
 							<span><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;

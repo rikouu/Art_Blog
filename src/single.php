@@ -37,18 +37,12 @@
             user-select: text;
             background: #f1f1ef;
         }
-
         .continar-left {
             border-radius: 5px;
             background: #fff;
             padding: 15px;
             border: 1px solid #e6e6e6;
         }
-
-        /* #SOHUCS #SOHU_MAIN .module-cmt-notice {
-            display: none;
-        } */
-
         @media screen and (min-width:980px) {
             .continar-left {
                 margin-top: 50px;

@@ -147,7 +147,7 @@
 <!-- <div class="widget Label">
   <h3 class="widget-title"><a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>标签云</a></h3>
   <div class="daily-list">
-      <?php wp_tag_cloud('smallest=10&largest=14&number=32&order=RAND') ?>
+      <?php /*wp_tag_cloud('smallest=10&largest=14&number=32&order=RAND') */?>
   </div>
 </div> -->
 
@@ -231,7 +231,7 @@
                 <?php $last = $wpdb->get_results("SELECT MAX(post_modified) AS MAX_m FROM $wpdb->posts WHERE (post_type = 'post' OR post_type = 'page') AND (post_status = 'publish' OR post_status = 'private')");$last = date('Y年n月j日', strtotime($last[0]->MAX_m));echo $last; ?>
             </li>
             <li style="margin:0; line-height: 22px;">如若喜欢本站，欢迎收藏
-                <!-- 订阅本站：<a href="<?php bloginfo('rss2_url'); ?>" title="RSS订阅本站" style="display:inline;margin-left:0;line-height: normal;">
+                <!-- 订阅本站：<a href="<?php /*bloginfo('rss2_url'); */?>" title="RSS订阅本站" style="display:inline;margin-left:0;line-height: normal;">
                     <font class="iconfont icon-1" style="color:#666; font-size:16px;"></font>
                 </a> -->
             </li>
