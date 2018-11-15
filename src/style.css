@@ -3693,36 +3693,44 @@ div.jy p {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    margin: 55px 0 15px;
+    margin: 50px 0 15px;
     text-align: -moz-center;
     text-align: center
 }
 
 .wp-pagenavi a {
     text-decoration: none;
-    background-color: #1abc9c;
-    color: #fff;
-    padding: 5px 11px;
-    margin: 0;
+    background-color: #ddd;
+    color: #666;
+    padding: 4px 11px;
+    margin: 0 2px;
+    border-radius: 2px;
+    font-size: 12px;
 }
 
 .pages {
     display: none
 }
-
+.wp-pagenavi a:last-of-type,.wp-pagenavi a:last-of-type:hover{
+    background: transparent;
+    cursor: default;
+    color:#999;
+}
 .wp-pagenavi a:hover,
 .wp-pagenavi span.current:hover {
     color: #FFF;
-    background: #28e1bd;
+    background-color: #45B6F7;
 }
 
 .wp-pagenavi span.current {
-    background: #fff;
+    background-color: #45B6F7;
     text-decoration: none;
-    padding: 5px 11px;
+    padding: 4px 11px;
     margin: 00;
     border: 0;
-    color: #2c3e50;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 12px;
 }
 
 .screen-reader-text {

@@ -369,7 +369,6 @@ $(function () {
                 }, 1000);
             }, 3500);
         } else {
-            $(".continar").css("margin-top", "128px");
             $(".c-860,.index-box,.hide,#curriculum,#js_banner").remove(); //去掉轮播、视频、邮件订阅
         }
     } else {

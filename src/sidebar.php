@@ -230,7 +230,8 @@
             <li>最近更新：
                 <?php $last = $wpdb->get_results("SELECT MAX(post_modified) AS MAX_m FROM $wpdb->posts WHERE (post_type = 'post' OR post_type = 'page') AND (post_status = 'publish' OR post_status = 'private')");$last = date('Y年n月j日', strtotime($last[0]->MAX_m));echo $last; ?>
             </li>
-            <li style="margin:0; line-height: 22px;">如若喜欢本站，欢迎收藏
+            <li>
+                <!-- 如若喜欢本站，欢迎收藏 -->
                 <!-- 订阅本站：<a href="<?php /*bloginfo('rss2_url'); */?>" title="RSS订阅本站" style="display:inline;margin-left:0;line-height: normal;">
                     <font class="iconfont icon-1" style="color:#666; font-size:16px;"></font>
                 </a> -->
