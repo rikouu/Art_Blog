@@ -6202,7 +6202,7 @@ p.data-l span {
     bottom: 0;
     left: 0
 }
-.mod-index__feature .img_txt .light{
+.mod-index__feature .img_box .light{
     cursor: pointer;
     position: absolute;
     left: -100px;
