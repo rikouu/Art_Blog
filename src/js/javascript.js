@@ -3,7 +3,7 @@ $(function () {
     if ($(document).width() >= 1200) {
         if (window.location.href == "https://www.weipxiu.com" || window.location.href == "https://www.weipxiu.com/") {
             $("#js_banner").show();
-            $(".continar").css("margin-top","15px");
+            $("body > .continar").css("margin-top","15px");
             //首页公告开始
             setInterval(function () {
                 $(".notice").show();
@@ -402,6 +402,7 @@ $(function () {
         if($(document).width() >= 1200){
             if (window.location.href == "https://www.weipxiu.com" || window.location.href == "https://www.weipxiu.com/") {
                 $("#js_banner").show();
+                $("body > .continar").css("margin-top","15px");
             }
         }else{
 
