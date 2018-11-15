@@ -3707,7 +3707,15 @@ div.jy p {
     border-radius: 2px;
     font-size: 12px;
 }
-
+span.extend{
+    margin: 0 2px;
+    padding: 4px 10px;
+    color: #666;
+    border-radius: 2px;
+    color: #999999;
+    background-color: transparent;
+    cursor: default;
+}
 .pages {
     display: none
 }

@@ -312,7 +312,7 @@ jQuery(function ($) {
         $('body,html').animate({
                 scrollTop: 0
             },
-            1200);
+            800);
         $(this).animate({
                 "bottom": "500px",
                 "opacity": "0"
