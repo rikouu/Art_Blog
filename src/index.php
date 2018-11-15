@@ -67,7 +67,7 @@
 	<!-- 导航end -->
 
 	<!-- 正文区域start -->
-	<div class="continar" style="margin-top:15px">
+	<div class="continar">
 		<div id="mobil">
 			<!--移动端轮播start-->
 			<div class="swiper-container1">
