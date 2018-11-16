@@ -153,17 +153,35 @@
 
 <!-- 评论模块start -->
 <div class="classif" id="primary-sidebar">
-    <div class="com-s com">
+    <!-- <div class="com-s com">
         <h3 class="widget-title">
             <a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>精彩评论</a>
         </h3>
         <!-- 代码1：放在页面需要展示的位置  -->
         <!-- 如果您配置过sourceid，建议在div标签中配置sourceid、cid(分类id)，没有请忽略  -->
-        <div id="cyReping" role="cylabs" data-use="reping"></div>
+        <!-- <div id="cyReping" role="cylabs" data-use="reping"></div> -->
         <!-- 代码2：用来读取评论框配置，此代码需放置在代码1之后。 -->
         <!-- 如果当前页面有评论框，代码2请勿放置在评论框代码之前。 -->
         <!-- 如果页面同时使用多个实验室项目，以下代码只需要引入一次，只配置上面的div标签即可 -->
-        <!-- 评论模块结束 -->
+        <!-- 评论模块结束 --
+    </div> -->
+    <div class="com-s com">
+        <h3 class="widget-title">
+            <a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>精彩评论</a>
+        </h3>
+        <ul class="uk-list uk-padding-small tuts_comments_user_avatars">
+            <?php
+            global $wpdb;
+            $my_email = get_bloginfo ('admin_email');
+            $sql = "SELECT DISTINCT ID, post_title, post_password, comment_ID, comment_post_ID, comment_author, comment_date_gmt, comment_approved, comment_type,comment_author_url,comment_author_email, SUBSTRING(comment_content,1,50) AS com_excerpt FROM $wpdb->comments LEFT OUTER JOIN $wpdb->posts ON ($wpdb->comments.comment_post_ID = $wpdb->posts.ID) WHERE comment_approved = '1' AND comment_type = '' AND post_password = '' AND comment_author_email != '$my_email' ORDER BY comment_date_gmt DESC LIMIT 6";
+            $comments = $wpdb->get_results($sql);
+            $output = $pre_HTML;
+            foreach ($comments as $comment) {$output .= "\n<li>".get_avatar(get_comment_author_email(), 5).strip_tags($comment->comment_author).":<br />" . "<a href=\"" . get_permalink($comment->ID) ."#comment-" . $comment->comment_ID . "\" title=\"查看 " .$comment->post_title . "\">" . strip_tags($comment->com_excerpt)."</a></li>";}
+            $output .= $post_HTML;
+            $output = convert_smilies($output);
+            echo $output;
+        ?> 
+        </ul>
     </div>
 </div>
 <!-- 评论模块end -->

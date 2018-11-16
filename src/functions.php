@@ -493,4 +493,41 @@ header("location:https://127.0.0.1");//可以换成其他链接，比如站内�
 
 //恢复wordpress删除的友情链接功能
 add_filter('pre_option_link_manager_enabled','__return_true');
-?>
+
+//自定义评论列表模板
+function dedewp_comment_add_at( $comment_text, $comment = '') {
+    if( $comment->comment_parent > 0) {
+    $comment_text = '<a  class="action" href="#comment-' . $comment->comment_parent . '">@'.get_comment_author( $comment->comment_parent ) . '</a>' . $comment_text;
+    }
+    return $comment_text;
+    }
+    add_filter( 'get_comment_text' , 'dedewp_comment_add_at', 20, 2);
+
+
+function simple_comment($comment, $args, $depth) {
+    $GLOBALS['comment'] = $comment; ?>
+    <li class="comment" id="li-comment-<?php comment_ID(); ?>">
+            <div class="media">
+                <div class="media-left">
+                 <?php if (function_exists('get_avatar') && get_option('show_avatars')) { echo get_avatar($comment, 48); } ?>
+                </div>
+                <div class="media-body">
+                    <?php printf(__('<p class="author_name">%s</p>'), get_comment_author_link()); ?>
+                 <?php if ($comment->comment_approved == '0') : ?>
+                     <em>评论等待审核...</em><br />
+                 <?php endif; ?>
+                 <?php comment_text(); ?>
+                </div>
+            </div>
+            <div class="comment-metadata">
+                <span class="comment-pub-time">
+                    <?php echo get_comment_time('Y-m-d H:i'); ?>
+                </span>
+                <span class="comment-btn-reply">
+                  <i class="fa fa-reply"></i> <?php comment_reply_link(array_merge( $args, array('reply_text' => '回复','depth' => $depth, 'null' => $args['max_depth']))) ?> 
+                </span>
+            </div>
+ 
+ <?php
+ }
+ ?>

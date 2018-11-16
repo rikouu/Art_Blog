@@ -80,13 +80,13 @@
                                 <i class="iconfont icon-liulan"></i>
                                 <?php echo getPostViews(get_the_ID()); ?>次浏览</span>
                             <span>
-                                <a href="<?php the_permalink(); ?> ">
+                                <!-- <a href="<?php the_permalink(); ?> ">
                                     <i class="iconfont icon-pinglun2"></i>
                                     <span id="url::<?php the_permalink(); ?>" class="cy_cmt_count"></span>
                                     <script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cyt2b1NqT">
                                     </script>
                                     条评论
-                                </a>
+                                </a> -->
                             </span>
                         </p>
                     </div>
@@ -195,7 +195,11 @@
                     </p>
 
                     <!-- 畅言公共JS代码 start (一个网页只需插入一次) -->
-                    <div id="SOHUCS"></div>
+                    <!-- 评论 -->
+                    <div class="post_content">
+                        <?php comments_template( '', true ); ?>
+                    </div>
+                    <!-- <div id="SOHUCS"></div>
                     <script type="text/javascript">
                         (function () {
                             var appid = 'cyt2b1NqT';
@@ -236,7 +240,7 @@
                                 });
                             }
                         })();
-                    </script>
+                    </script> -->
                     <!-- 畅言公共JS代码 end -->
                 </div>
                 <!-- 左侧区域结束 -->
