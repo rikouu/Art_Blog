@@ -283,10 +283,7 @@
 						<span class="comm">
 							<a href="<?php the_permalink(); ?> ">
 								<i class="iconfont icon-pinglun2"></i>
-								<span id="url::<?php the_permalink(); ?>" class="cy_cmt_count"></span>
-								<script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cyt2b1NqT">
-								</script>
-								条评论
+								<?php echo number_format_i18n( get_comments_number() );?> 条评论
 							</a>
 						</span>
 						<span class="post-like">

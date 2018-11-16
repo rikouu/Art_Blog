@@ -1621,6 +1621,7 @@ i {
   border: 1px solid #1ed0e1;
   outline: none;
   height: 38px;
+  float: left;
 }
 
 .wpm_form .wpm_submit input {
@@ -6720,8 +6721,8 @@ label {
     vertical-align: middle;
 }
 .commentBtn .btn {
-    padding: 8px 0;
-    width: 139px!important;
+    padding: 7ßpx 0;
+    width: 138px!important;
     text-align: center;
     background: #45b6f7;
     color:#fff;
