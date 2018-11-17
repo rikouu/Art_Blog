@@ -257,5 +257,5 @@
         </ul>
     </div>
 </div>
-<script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cyt2b1NqT"></script>
+<!-- <script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cyt2b1NqT"></script> -->
 <!-- 畅言js -->

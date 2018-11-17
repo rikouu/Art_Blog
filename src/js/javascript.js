@@ -341,15 +341,8 @@ $(function () {
             // console.log---end
 
             $("#hide").show();
-            $("html").css({
-                "overflow-y": "visible",
-                "height": "auto",
-                "width": "auto"
-            });
-            $("body").css({
-                "overflow-x": "hidden",
-                "height": "auto",
-                "width": "auto"
+            $("html,body").css({
+                "overflow-y": "visible"
             });
             $(".buffer").fadeOut();
             $(".buffer .bar").hide();

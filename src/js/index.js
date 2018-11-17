@@ -534,4 +534,15 @@ jQuery(function ($) {
         },1500)
     }
 
+    // 当窗口改变时候start
+    $(window).resize(function() {
+        if($(document).width() >= 1200){
+            // 当从移动端点开了侧边栏，然后改编窗口到pc端，关闭偏移
+            $(".continar,.os-headertop").css({
+                "transform": "translateX(0)"
+            })
+        }
+    });
+    // 当窗口改变时候end
+
 });
