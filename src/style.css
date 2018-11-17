@@ -6672,6 +6672,7 @@ h3.comments-title:after {
     border-bottom: 0;
     color: #999;
     position: relative;
+    margin:0;
 }
 #reply-title #cancel-comment-reply-link {
     background: #fff;
@@ -6721,7 +6722,7 @@ label {
     vertical-align: middle;
 }
 .commentBtn .btn {
-    padding: 7ßpx 0;
+    padding: 7px 0;
     width: 138px!important;
     text-align: center;
     background: #45b6f7;

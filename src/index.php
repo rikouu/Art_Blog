@@ -307,9 +307,10 @@
 				<!--竖条-->
 			</div>
 			<?php endwhile; else : ?>
-			<h2>
-				<?php _e('Not Found'); ?>
-			</h2>
+			<?php header("Location: https://www.weipxiu.com/404.html");exit; ?> 
+			<!-- <h2 id="redirect">
+				<?php _e('404'); ?>
+			</h2> -->
 			<?php endif; ?>
 			<?php wp_pagenavi(); ?>
 			<!--分页插件调用-->

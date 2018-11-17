@@ -2032,6 +2032,7 @@ td.line-numbers {
 .log-text * {
     font-size: 0.3rem;
     line-height: 0.5rem;
+    word-wrap:break-word;
 }
 
 .log-text p {
@@ -2807,19 +2808,21 @@ div.jy p {
 .wp-pagenavi a,
 .pages {
     text-decoration: none;
-    background-color: #28e1bd;
-    color: #fff;
+    background-color: #ddd;
+    color: #666;
     padding: 6px 10px;
     margin: 0;
     font-size: 12px;
     line-height: 16px;
-    border-left: 1px solid #ccc;
+    border-left: 2px solid#fff;
 }
-
+.wp-pagenavi a.last{
+	display: none;
+}
 .wp-pagenavi span.current {
-    background: #fff;
+    background: #60c4fd;
     text-decoration: none;
-    color: #2c3e50;
+    color: #fff;
     padding: 6px 12px;
     margin: 00;
     line-height: 16px;
@@ -3408,6 +3411,31 @@ canvas,
     pointer-events: none;
     z-index: 9999
 }
-
 /* 雪花end */
+
+/* 侧边栏留言评论start */
+.tuts_comments_user_avatars{
+    overflow: hidden;
+    padding: .26rem .2rem .24rem;
+}
+.tuts_comments_user_avatars li{
+    display: block;
+    overflow: hidden;
+    padding: 0.15rem 0;
+    border-bottom: 1px solid #eee;
+}
+.tuts_comments_user_avatars img{
+    width: 0.72rem;
+    height:0.72rem;
+    border-radius: 100%;
+    float: left;
+    margin-right: 0.2rem
+}
+.tuts_comments_user_avatars li a{
+    margin-top: 0.1rem;
+    float: left;
+    width: calc(100% - 1.2rem);
+    line-height: 0.4rem;
+}
+/* 侧边栏留言评论start */
 
