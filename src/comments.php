@@ -45,13 +45,11 @@ if ( post_password_required() )
     <ol class="commentlist">
         <?php
         wp_list_comments( array(
-            'format'=>'html5',
             'style'       => 'ol',
             'short_ping'  => true,
-            'avatar_size' => 36,
             'type'        =>'comment',
             'callback'    =>'simple_comment',
-            'reverse_top_level ' => true
+            'avatar_size' => 50,
         ) );
         ?>
     </ol>
