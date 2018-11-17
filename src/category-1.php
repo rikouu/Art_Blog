@@ -5,6 +5,8 @@
 <meta name="Author" content="李俊" />
 <meta name="description" content="<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200,"..."); ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!-- 强制https -->
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <title>不忘初心&nbsp;-&nbsp;方得始终&nbsp;|&nbsp;唯品秀博客</title>
 <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/font-awesome-4.7.0/css/font-awesome.min.css">

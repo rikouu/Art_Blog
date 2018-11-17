@@ -173,10 +173,12 @@
             <?php
             global $wpdb;
             $my_email = get_bloginfo ('admin_email');
-            $sql = "SELECT DISTINCT ID, post_title, post_password, comment_ID, comment_post_ID, comment_author, comment_date_gmt, comment_approved, comment_type,comment_author_url,comment_author_email, SUBSTRING(comment_content,1,50) AS com_excerpt FROM $wpdb->comments LEFT OUTER JOIN $wpdb->posts ON ($wpdb->comments.comment_post_ID = $wpdb->posts.ID) WHERE comment_approved = '1' AND comment_type = '' AND post_password = '' AND comment_author_email != '$my_email' ORDER BY comment_date_gmt DESC LIMIT 6";
+            $sql = "SELECT DISTINCT ID, post_title, post_password, comment_ID, comment_post_ID, comment_author, comment_date_gmt, comment_approved, comment_type,comment_author_url,comment_author_email, SUBSTRING(comment_content,1,100) AS com_excerpt FROM $wpdb->comments LEFT OUTER JOIN $wpdb->posts ON ($wpdb->comments.comment_post_ID = $wpdb->posts.ID) WHERE comment_approved = '1' AND comment_type = '' AND post_password = '' AND comment_author_email != '$my_email' ORDER BY comment_date_gmt DESC LIMIT 6";
             $comments = $wpdb->get_results($sql);
             $output = $pre_HTML;
-            foreach ($comments as $comment) {$output .= "\n<li>".get_avatar(get_comment_author_email(), 50).strip_tags($comment->comment_author).":<br />" . "<a href=\"" . get_permalink($comment->ID) ."#comment-" . $comment->comment_ID . "\" title=\"查看 " .$comment->post_title . "\">" . strip_tags($comment->com_excerpt)."</a></li>";}
+            foreach ($comments as $comment) { $com_excerpt = strip_tags($comment->com_excerpt); $excerpt_len = mb_strlen($com_excerpt, 'utf-8');
+                if ($excerpt_len > 37) $com_excerpt = mb_substr($com_excerpt, 0, 37, 'utf-8').'...';
+                $output .= "\n<li>".get_avatar(get_comment_author_email(), 50).strip_tags($comment->comment_author).":<br />" . "<a href=\"" . get_permalink($comment->ID) ."#comment-" . $comment->comment_ID . "\" title=\"查看 " .$comment->post_title . "\">". $com_excerpt ."</a></li>";}
             $output .= $post_HTML;
             $output = convert_smilies($output);
             echo $output;

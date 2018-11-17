@@ -20,9 +20,9 @@ if ( post_password_required() )
                 <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" class="commentform" id="commentform">
                     <?php if ( $user_ID ) : ?>
                         <p class="warning-text" style="margin-bottom:10px">以<a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>身份登录&nbsp;|&nbsp;<a class="link-logout" href="<?php echo wp_logout_url(get_permalink()); ?>">注销 &raquo;</a></p>
-                        <textarea class="form-control" rows="3" id="comment" onkeydown="if(event.ctrlKey&&event.keyCode==13){document.getElementById('submit').click();return false};" placeholder="<?php comment_form_title( '只是因为在人群中多看了你一眼', '给他回复'); ?>"></textarea>
+                        <textarea class="form-control" rows="3" id="comment" onkeydown="if(event.ctrlKey&&event.keyCode==13){document.getElementById('submit').click();return false};" placeholder="<?php comment_form_title( '请保持正确的价值观，否则留言会被删除！', '给他回复'); ?>"></textarea>
                     <?php else : ?>
-                        <textarea class="form-control" rows="3" id="comment" onkeydown="if(event.ctrlKey&&event.keyCode==13){document.getElementById('submit').click();return false};" placeholder="<?php comment_form_title( '只是因为在人群中多看了你一眼', '给他回复' ); ?>"></textarea>
+                        <textarea class="form-control" rows="3" id="comment" onkeydown="if(event.ctrlKey&&event.keyCode==13){document.getElementById('submit').click();return false};" placeholder="<?php comment_form_title( '请保持正确的价值观，否则留言会被删除！', '给他回复' ); ?>"></textarea>
                         <div class="commentform-info">
                             <label id="author_name" for="author">
                                 <input class="form-control" id="author" type="text" tabindex="2" value="<?php echo $comment_author; ?>" name="author" placeholder="昵称[必填]" required>

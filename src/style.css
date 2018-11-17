@@ -2644,7 +2644,10 @@ div.com-art ul li {
 .continar-left p.text-post {
   text-indent: 0;
 }
-
+.continar-left p.text-post a:hover{
+  color: #06aaff;
+  text-decoration: underline;
+}
 .continar-left p.text-post-top {
   margin-top: 20px;
   font-size: 14px;
@@ -6517,13 +6520,29 @@ comments
 }
 .comment .media-body .author_name{
 	margin-bottom:5px;
-	font-size:14px;
+	font-size:16px;
 	color:#777;
+}
+.comment .media-body .system{
+  margin-left:5px;
+    vertical-align: bottom;
+    padding: 0px 4px;
+    border-radius: 3px;
+    color: #fff;
+    background: linear-gradient(90deg,#5087ec,#d95040,#f2bd42);
+}
+.comment .media-body .browser{
+    vertical-align: bottom;
+    padding: 0px 4px;
+    background: linear-gradient(90deg,#fc5c7d,#6a82fb);
+    border-radius: 3px;
+    color: #fff;
 }
 .comment .media-body p{
 	font-size:14px;
 	line-height:1.5em;
-	color:#777;
+  color:#777;
+  padding:10px 0;
 }
 .comment .comment-metadata{
 	margin-left:58px;
