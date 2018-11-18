@@ -389,7 +389,7 @@
 	<!-- 首页弹窗end -->
 
 	<!-- 首页背景音乐开始 -->
-	<audio src="http://sf.sycdn.kuwo.cn/resource/n2/14/94/2595207170.mp3" loop="loop" preload="none" id="music"></audio>
+	<audio src="<?php bloginfo('template_url'); ?>/music/2595207170.mp3" loop="loop" preload="none" id="music"></audio>
 	<div class="control"></div>
 	<!-- 首页背景音乐结束 -->
 </body>
