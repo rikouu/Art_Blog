@@ -452,7 +452,7 @@ img:hover {
 
 .header {
     width: 100%;
-    height: 76px;
+    height: 74px;
     position: fixed;
     top: 0;
     left: 0;
@@ -473,10 +473,8 @@ img:hover {
 .header-body {
     height: 100%;
     border-top: 1px solid #fff;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background: #eaebed;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#d4d7db');
     background: gradient(linear, left top, left bottom, from(#fff), to(#dedede));
     background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dedede));
     background: -moz-linear-gradient(top, #fff, #d4d7db);
@@ -582,7 +580,7 @@ img:hover {
 
 .header-conter {
     width: 1200px;
-    margin: 21px auto 0;
+    margin: 18px auto 0;
     border-top: 1px solid transparent;
     -webkit-transition: all 1s;
     -o-transition: all 1s;
@@ -780,9 +778,9 @@ img:hover {
 
 .nav ul li>p {
     width: 100%;
-    height: 3px;
+    height: 4px;
     position: absolute;
-    bottom: -19px;
+    bottom: -21px;
     left: 0;
     background: #19acf7;
     -webkit-transition: all 0.5s;
@@ -1320,7 +1318,7 @@ i {
     display: block;
     position: absolute;
     left: 0;
-    top: -13px;
+    top: -10px;
     overflow: hidden;
 }
 
