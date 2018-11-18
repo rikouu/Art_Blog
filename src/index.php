@@ -255,7 +255,14 @@
 					<div class="entry-meta">
 						<a href="https://www.weipxiu.com">唯品秀</a>
 						<i class="space">•</i>
-						<a href="#">前端开发资讯</a>
+						<a href="#">
+							<?php if( get_field('original') ): ?>
+							<!-- <? /*php the_field('original'); */?> -->
+							<?php echo "原创"; ?>
+							<?php else: ?>
+							<?php echo "转载"; ?>
+							<?php endif; ?>
+						</a>
 						<i class="space">•</i>
 						<?php the_author(); ?>
 						<a href="#" class="comments-number">
