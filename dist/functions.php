@@ -500,7 +500,7 @@ function get_author_class($comment_author_email,$comment_author_url){
     $author_count = count($wpdb->get_results(
     "SELECT comment_ID as author_count FROM $wpdb->comments WHERE comment_author_email = '$comment_author_email' "));
     if($comment_author_email == $adminEmail)
-    echo '<a class="vp" target="_blank" href="https://www.weipxiu.com/category/about" title="经鉴定，管理员"><i class="wi wi-crown"></i><span class="lv">管理员</span></a>';
+    echo '<a class="vp" target="_blank" href="https://www.weipxiu.com/category/about" title="经鉴定，管理员"></a>';
     $linkurls = $wpdb->get_results(
     "SELECT link_url FROM $wpdb->links WHERE link_url = '$comment_author_url'");
     foreach ($linkurls as $linkurl) {
@@ -508,19 +508,19 @@ function get_author_class($comment_author_email,$comment_author_url){
     echo '<a class="vip" target="_blank" href="/links.html" title="合作商或友情链接认证"><i class="wi wi-heart"></i></a>';
     }
     if($author_count>=1 && $author_count<5 && $comment_author_email!=$adminEmail)
-    echo '<a class="vip1" target="_blank" href="/about.html" title="评论之星 LV.1"><i class="wi wi-level-1"></i></a>';
+    echo '<a class="vip1" target="_blank" href="https://www.weipxiu.com/category/about" title="评论之星 LV.1"><i class="wi wi-level-1"></i></a>';
     else if($author_count>=5 && $author_count<10 && $comment_author_email!=$adminEmail)
-    echo '<a class="vip2" target="_blank" href="/about.html" title="评论之星 LV.2"><i class="wi wi-level-2"></i></a>';
+    echo '<a class="vip2" target="_blank" href="https://www.weipxiu.com/category/about" title="评论之星 LV.2"><i class="wi wi-level-2"></i></a>';
     else if($author_count>=10 && $author_count<25 && $comment_author_email!=$adminEmail)
-    echo '<a class="vip3" target="_blank" href="/about.html" title="评论之星 LV.3"><i class="wi wi-level-3"></i></a>';
+    echo '<a class="vip3" target="_blank" href="https://www.weipxiu.com/category/about" title="评论之星 LV.3"><i class="wi wi-level-3"></i></a>';
     else if($author_count>=25 && $author_count<50 && $comment_author_email!=$adminEmail)
-    echo '<a class="vip4" target="_blank" href="/about.html" title="评论之星 LV.4"><i class="wi wi-level-4"></i>/a>';
+    echo '<a class="vip4" target="_blank" href="https://www.weipxiu.com/category/about" title="评论之星 LV.4"><i class="wi wi-level-4"></i>/a>';
     else if($author_count>=50 && $author_count<100 && $comment_author_email!=$adminEmail)
-    echo '<a class="vip5" target="_blank" href="/about.html" title="评论之星 LV.5"><i class="wi wi-level-5"></i></a>';
+    echo '<a class="vip5" target="_blank" href="https://www.weipxiu.com/category/about" title="评论之星 LV.5"><i class="wi wi-level-5"></i></a>';
     else if($author_count>=100 && $author_count<250 && $comment_author_email!=$adminEmail)
-    echo '<a class="vip6" target="_blank" href="/about.html" title="评论之星 LV.6"><i class="wi wi-level-6"></i></a>';
+    echo '<a class="vip6" target="_blank" href="https://www.weipxiu.com/category/about" title="评论之星 LV.6"><i class="wi wi-level-6"></i></a>';
     else if($author_count>=250 && $comment_author_email!=$adminEmail)
-    echo '<a class="vip7" target="_blank" href="/about.html" title="评论之星 LV.7"><i class="wi wi-level-7"></i></a>';
+    echo '<a class="vip7" target="_blank" href="https://www.weipxiu.com/category/about" title="评论之星 LV.7"><i class="wi wi-level-7"></i></a>';
     }
 
 //获取用户UA信息,包括浏览器和系统等 调用:echo user_agent($comment->comment_agent);

@@ -571,11 +571,7 @@ img:hover {
 }
 
 .header.hover .site-search.active {
-    top: 76px;
-}
-
-.header.hover .navto-search a {
-    margin-top: 2px;
+    top: 50px;
 }
 
 .header-conter {
@@ -6488,18 +6484,22 @@ comments
 .comment .media-body .system {
     margin-left: 5px;
     vertical-align: bottom;
-    padding: 0px 4px;
+    padding: 2px 4px;
     border-radius: 3px;
+    font-size:12px;
     color: #fff;
+    font-weight: 300;
     background: linear-gradient(90deg, #5087ec, #d95040, #f2bd42);
 }
 
 .comment .media-body .browser {
     vertical-align: bottom;
-    padding: 0px 4px;
+    padding: 2px 4px;
     background: linear-gradient(90deg, #fc5c7d, #6a82fb);
     border-radius: 3px;
     color: #fff;
+    font-weight: 300;
+    font-size:12px;
 }
 
 .comment .media-body p {
@@ -6825,7 +6825,9 @@ label {
     background-position: -147px -70px;
     background-image: url(https://upyun.xuanmo.xin/blog/vip.png);
 }
-
+.comment_vip a.vp{
+    background-position-Y: -220px;
+}
 .comment_vip a.vip2 {
     background-position-Y: -95px;
 }
