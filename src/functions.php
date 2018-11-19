@@ -499,7 +499,7 @@ function get_author_class($comment_author_email,$comment_author_url){
     $adminEmail = '343049466@qq.com';
     $author_count = count($wpdb->get_results(
     "SELECT comment_ID as author_count FROM $wpdb->comments WHERE comment_author_email = '$comment_author_email' "));
-    if($comment_author_email ==$adminEmail)
+    if($comment_author_email == $adminEmail)
     echo '<a class="vp" target="_blank" href="https://www.weipxiu.com/category/about" title="经鉴定，管理员"><i class="wi wi-crown"></i><span class="lv">管理员</span></a>';
     $linkurls = $wpdb->get_results(
     "SELECT link_url FROM $wpdb->links WHERE link_url = '$comment_author_url'");

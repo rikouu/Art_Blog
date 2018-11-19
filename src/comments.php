@@ -5,17 +5,6 @@ if ( post_password_required() )
 <div id="comments" class="responsesWrapper">
     <meta content="UserComments:<?php echo number_format_i18n( get_comments_number() );?>" itemprop="interactionCount">
     <h3 class="comments-title">共有 <span class="commentCount"><?php echo number_format_i18n( get_comments_number() );?></span> 条评论</h3>
-    <ol class="commentlist">
-        <?php
-        wp_list_comments( array(
-            'style'       => 'ol',
-            'short_ping'  => true,
-            'avatar_size' => 48,
-            'type'        =>'comment',
-            'callback'    =>'simple_comment',
-        ) );
-        ?>
-    </ol>
     <nav class="navigation comment-navigation u-textAlignCenter" data-fuck="<?php the_ID();?>">
     <?php paginate_comments_links(array('prev_next'=>true)); ?>
     </nav>
@@ -51,5 +40,16 @@ if ( post_password_required() )
                 </form>
             <?php endif; ?>
         </div>
+        <ol class="commentlist">
+            <?php
+            wp_list_comments( array(
+                'style'       => 'ol',
+                'short_ping'  => true,
+                'avatar_size' => 48,
+                'type'        =>'comment',
+                'callback'    =>'simple_comment',
+            ) );
+            ?>
+        </ol>
     <?php endif; ?>
 </div>
