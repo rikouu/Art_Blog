@@ -229,7 +229,7 @@
 			</div>
 			<!-- 邮件订阅end -->
 			<!-- 文章start -->
-			<?php $posts = query_posts($query_string . '&orderby=date&showposts=11'); ?>
+			<?php $posts = query_posts($query_string . '&orderby=date&showposts=12'); ?>
 			<?php
 			if(have_posts()): while(have_posts()):the_post();
 			?>

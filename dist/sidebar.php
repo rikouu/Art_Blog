@@ -178,7 +178,7 @@
             $output = $pre_HTML;
             foreach ($comments as $comment) { $com_excerpt = strip_tags($comment->com_excerpt); $excerpt_len = mb_strlen($com_excerpt, 'utf-8');
                 if ($excerpt_len > 37) $com_excerpt = mb_substr($com_excerpt, 0, 37, 'utf-8').'...';
-                $output .= "\n<li>".get_avatar(get_comment_author_email(), 50).strip_tags($comment->comment_author).":<br />" . "<a href=\"" . get_permalink($comment->ID) ."#comment-" . $comment->comment_ID . "\" title=\"查看 " .$comment->post_title . "\">". $com_excerpt ."</a></li>";}
+                $output .= "\n<li>".get_avatar(get_comment_author_email(), 50).strip_tags($comment->comment_author). '' . "<p>". $com_excerpt ."</p>" . "<a href=\"" . get_permalink($comment->ID) ."#comment-" . $comment->comment_ID . "\" title=\"查看 " .$comment->post_title . "\">".$comment->post_title ."</a></li>";}
             $output .= $post_HTML;
             $output = convert_smilies($output);
             echo $output;

@@ -2789,12 +2789,11 @@ span.post-like,.img-left span ul li a {
     float: left;
     margin-right: 0.2rem
 }
-.tuts_comments_user_avatars li a{
+.tuts_comments_user_avatars li a,.tuts_comments_user_avatars li p{
     margin-top: 0.1rem;
-    float: left;
-    width: calc(100% - 1.2rem);
-	line-height: 0.4rem;
-	font-size:0.26rem;
+    float: right;
+    width: calc(100% - 0.92rem);
+    line-height: 0.4rem;
 }
 /* 侧边栏留言评论start */
 

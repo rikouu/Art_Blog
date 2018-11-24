@@ -3432,10 +3432,10 @@ canvas,
     float: left;
     margin-right: 0.2rem
 }
-.tuts_comments_user_avatars li a{
+.tuts_comments_user_avatars li a,.tuts_comments_user_avatars li p{
     margin-top: 0.1rem;
-    float: left;
-    width: calc(100% - 1.2rem);
+    float: right;
+    width: calc(100% - 0.92rem);
     line-height: 0.4rem;
 }
 /* 侧边栏留言评论start */
