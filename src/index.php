@@ -81,7 +81,7 @@
 			</div>
 			<!--移动端轮播end-->
 		</div>
-		<div class="continar-left" style="border:0; padding:0;background: transparent;">
+		<div class="continar-left" id="ajax_centent">
 			<!-- PC正文3d导航start -->
 			<div class="mod-index__feature" style="display: none">
 				<div class="img_list_6pic ui-clearfix">

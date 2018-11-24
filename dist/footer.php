@@ -44,6 +44,17 @@
 </div>
 <!-- 小飞机end -->
 
+<!--ajax加载loading-->
+<div id="loading">
+  <div class="k-ball-holder">
+      <div class="k-ball7a"></div>
+      <div class="k-ball7b"></div>
+      <div class="k-ball7c"></div>
+      <div class="k-ball7d"></div>
+  </div>
+</div>
+<!--ajax加载loading end-->
+
 <!-- 在线客服开始 -->
 <div id="divStayTopright" style="position:fixed;z-index:999999;top:40%;right:0px;height:16px;">
   <div id="wuyousujian-kefuDv" style="right: -196px; position: fixed;">
@@ -209,7 +220,7 @@
 <!-- 判断用户当前是否登录 结束 -->
 
 <!-- <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-1" count="99" src="<?php bloginfo('template_url'); ?>/js/canvas-nest.min.js"></script> -->
-
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/ajax_wordpress.js"></script>
 <script defer="defer">
   if ($(document).width() >= 1200) {
     // 文字琴弦效果start

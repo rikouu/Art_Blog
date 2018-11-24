@@ -56,7 +56,7 @@
     </style>
 </head>
 
-<body>
+<body id="ajax_centent">
     <!--头部文件引用开始-->
     <?php get_header();?>
     <!--头部文件引用结束-->

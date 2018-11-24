@@ -60,7 +60,7 @@
             <?php
 		  if (have_posts()) : while (have_posts()) : the_post();setPostViews(get_the_ID());
 		 ?>
-                <div class="continar-left">
+                <div class="continar-left" id="ajax_centent">
                     <!-- 面包屑导航 -->
                     <div class="mod-crumbs">
                         <span class="mod-breadcrumb">
