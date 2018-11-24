@@ -96,7 +96,8 @@ $(function () {
                             var datax = data.split('<title>');
                             var titlesx = data.split('</title>');
                             jQuery('#loading').hide() //移除加载中动画
-                            jQuery('html,body').animate({ scrollTop: 0 }, 600);
+                            jQuery('.continar').css({ scrollTop: 0 });
+                            jQuery('html,body,.continar').animate({ scrollTop: 0 }, 600);
 
                             if (datax.length == 2 || titlesx.length == 2) {
                                 var data = data.split('<title>')[1];

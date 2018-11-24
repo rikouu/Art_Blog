@@ -745,7 +745,6 @@ img {
     transform: translateX(0px);
     -ms-transform: translateX(0px);
     float: none;
-    padding: 0 0.24rem
 }
 
 .continar .continar-left .mod-crumbs {
@@ -2804,7 +2803,9 @@ div.jy p {
     *text-align: center;
     text-align: center
 }
-
+.pages {
+    display: none;
+}
 .wp-pagenavi a,
 .pages {
     text-decoration: none;
@@ -3438,4 +3439,89 @@ canvas,
     line-height: 0.4rem;
 }
 /* 侧边栏留言评论start */
+/* ajax loading动画start */
 
+@keyframes k-loadingO {
+    0%,
+    100% {
+        transform: translate(0)
+    }
+    25% {
+        transform: translate(160%)
+    }
+    50% {
+        transform: translate(160%, 160%)
+    }
+    75% {
+        transform: translate(0, 160%)
+    }
+}
+#loading{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.2);
+  left: 0;
+  z-index: 10000;
+  display: none;
+}
+.k-ball-holder {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.k-ball7a {
+    border: 0;
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    border-radius: 50%;
+    animation: k-loadingO 2s ease infinite;
+    background: #19A68C;
+    animation-delay: -1.5s;
+}
+
+.k-ball7b {
+    border: 0;
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    border-radius: 50%;
+    animation: k-loadingO 2s ease infinite;
+    background: #F63D3A;
+    animation-delay: -1s;
+}
+
+.k-ball7c {
+    border: 0;
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    border-radius: 50%;
+    animation: k-loadingO 2s ease infinite;
+    background: #FDA543;
+    animation-delay: -0.5s;
+}
+
+.k-ball7d {
+    border: 0;
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    border-radius: 50%;
+    animation: k-loadingO 2s ease infinite;
+    background: #193B48;
+}
+
+/* ajax loading动画end */
