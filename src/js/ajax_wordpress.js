@@ -171,7 +171,12 @@ $(function () {
     function ajaxcheck_ignore(url) {
         for (var i in ajaxignore) {
             if (url.indexOf(ajaxignore[i]) >= 0 || url == ajaxhome || url == 'https://www.weipxiu.com') {
+                $("#js_banner").show();
+                $("body > .continar").css("margin-top","15px");
                 return false;
+            }else{
+                $("#js_banner").hide();
+                $("body > .continar").css("margin-top","96px");
             }
         }
         return true;

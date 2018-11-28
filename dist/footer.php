@@ -3,7 +3,7 @@
   <div class="container">
     <p>注：当前主题为
       <a href="https://www.weipxiu.com/">"唯品秀"</a>自主研发，版权所有！</p>
-    <p style="color: #28d0e9">该网站勉强运行 :
+    <p style="color: #28d0e9">该网站已运行 :
       <span id="htmer_time" style="color: #28d0e9;"></span>
     </p>
     <p>
@@ -33,7 +33,7 @@
 
 <!-- 自定义右键菜单提示开始 -->
 <div id="menu">
-  别看啦，宝宝好害羞
+  别看啦，宝宝好羞涩
   <span>*^_^*</span>
 </div>
 <!-- 自定义右键菜单提示结束 -->
