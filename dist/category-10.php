@@ -32,7 +32,7 @@
                      <div class="head_avatar"> 
                       <a href="/author/1?info=home"> 
                        <m class="head_user_avatar_aa"> 
-                             <img src="https://www.weipxiu.com/wp-content/themes/boke/images/ttx.png" class="avatar" width="160" height="160" />
+                             <img src="https://avatars3.githubusercontent.com/u/24957370?s=460&v=4" class="avatar" width="160" height="160" />
                        </m> <span class="verify_1"></span></a> 
                      </div> 
                      <div class="head_avatar_a">

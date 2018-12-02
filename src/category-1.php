@@ -17,7 +17,7 @@
 <style>
 body{background-image:-webkit-linear-gradient(180deg, #FFFEF9, #EED6CC);
     background-image:linear-gradient(180deg,#FFFEF9,#EED6CC);}
-#message{width:1000px;margin:130px auto 30px;overflow:hidden;padding:0 50px;}
+#message{width:1000px;margin:130px auto 80px;overflow:hidden;padding:0 50px;}
 #header{ height:48px;background:#fff; border-radius:5px; line-height:48px; font-size:16px; font-weight:bold; text-align:center; box-shadow:0 5px 7px rgba(0,0,0,0.2); color:#ed145b;}
 #footer{ height:30px;background:#fff;box-shadow:0 5px 7px rgba(0,0,0,0.2); border-radius:5px; line-height:30px; text-align:center; position:relative;z-index:10; margin-top:40px}
 #footer a,#footer p{ display:inline-block;}
@@ -26,7 +26,7 @@ body{background-image:-webkit-linear-gradient(180deg, #FFFEF9, #EED6CC);
 #messageList{padding:10px 0;margin-left:100px;border-left:1px solid #fff;height:0; transition:1s;}
 #messageList li{padding:5px 0; position:relative; min-height:100px; -webkit-perspective:800px; -webkit-perspective-origin:left 30px; }
 #messageList .box{ -webkit-transform-origin:left 30px; -webkit-transform:rotateY(90deg);-webkit-transform-style:preserve-3d; transition:.6s cubic-bezier(0.280, 0.695, 0.580, 1.450);}
-#messageList .pic{width:60px;height:60px;border:5px solid #fff;border-radius:50%; position:absolute;left:-100px;top:0;background:url(<?php bloginfo('template_url'); ?>/images/1.png) center no-repeat; box-shadow:inset 0 2px 5px rgba(0,0,0,0.2),0 5px 7px rgba(0,0,0,0.2); background-size:60px 60px}
+#messageList .pic{width:60px;height:60px;border:5px solid #fff;border-radius:50%; position:absolute;left:-100px;top:0;background:url(https://avatars3.githubusercontent.com/u/24957370?s=460&v=4) center no-repeat; box-shadow:inset 0 2px 5px rgba(0,0,0,0.2),0 5px 7px rgba(0,0,0,0.2); background-size:60px 60px}
 #messageList .ico{ width:12px;height:12px;background:#f7ebe6;border:3px solid #fff;border-radius:50%;box-shadow:inset 0 2px 5px rgba(0,0,0,0.2),0 5px 7px rgba(0,0,0,0.2); position:absolute;left:-6px;top:23px;}
 #messageList .text{margin:0 30px;background:#f7ebe6;line-height:26px;padding:10px;  height:auto;text-indent:2em; border:0}
 #messageList .content{    
