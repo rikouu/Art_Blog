@@ -170,7 +170,7 @@ $(function () {
 
     function ajaxcheck_ignore(url) {
         for (var i in ajaxignore) {
-            if (url.indexOf(ajaxignore[i]) >= 0 || url == ajaxhome || url == 'https://www.weipxiu.com') {
+            if (url.indexOf(ajaxignore[i]) >= 0 || url == ajaxhome || url == ajaxhome.substr(0, basic.length - 1)) {
                 $("#js_banner").show();
                 $("body > .continar").css("margin-top","15px");
                 return false;
