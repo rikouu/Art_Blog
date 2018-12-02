@@ -27,7 +27,7 @@
 
 	<!-- 正文区域start -->
 	<div class="continar">
-		<div class="continar-left" style="border:0; padding:0; background: transparent;">
+		<div class="continar-left" id="ajax_centent" style="border:0; padding:0; background: transparent;">
 			<!-- 文章start -->
 			<?php
 			if(have_posts()): while(have_posts()):the_post();

@@ -3733,6 +3733,7 @@ span.extend {
     background: transparent;
     cursor: default;
     color: #999;
+    cursor: pointer;
 }
 
 .wp-pagenavi a:hover,
