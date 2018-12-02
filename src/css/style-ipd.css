@@ -1492,6 +1492,8 @@ ul.bon-1 li:nth-of-type(2) {
 	background:#fff;
 	width:auto!important;
 	overflow:hidden;
+	border-radius:0;
+	padding:0 0.25rem;
 }
 div.nav-s {
 	width:820px;
@@ -2583,9 +2585,6 @@ div.btn {
 	width:1.8rem;
 	height:0.45rem;
 	margin-top:0.28rem;
-}
-#details {
-	border-radius:0
 }
 .xis {
 	width:1rem;
