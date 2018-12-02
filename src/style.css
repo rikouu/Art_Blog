@@ -2943,6 +2943,8 @@ td.line-numbers {
 
 .continar-left .log-text a {
     color: #08c;
+}
+.continar-left .log-text a:hover{
     text-decoration: underline;
 }
 
