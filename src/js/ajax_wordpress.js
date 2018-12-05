@@ -138,7 +138,6 @@ $(function () {
                             jQuery('#' + ajaxcontent).css("left", "20000px");
                             jQuery('#' + ajaxcontent).show();
                             ajaxloadPageInit("#" + ajaxcontent + " ");
-
                             if (ajaxreloadDocumentReady == true) {
                                 jQuery(document).trigger("ready");
                             }
@@ -161,16 +160,14 @@ $(function () {
             });
         }
     }
-
     function submitSearch(param) {
         if (!ajaxisLoad) {
             ajaxloadPage(ajaxsearchPath, 0, param);
         }
     }
-
     function ajaxcheck_ignore(url) {
         for (var i in ajaxignore) {
-            if (url.indexOf(ajaxignore[i]) >= 0 || url == ajaxhome || url == ajaxhome.substr(0, basic.length - 1)) {
+            if (url.indexOf(ajaxignore[i]) >= 0 || url == ajaxhome || url == 'https://www.weipxiu.com') {
                 $("#js_banner").show();
                 $("body > .continar").css("margin-top","15px");
                 return false;
