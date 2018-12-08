@@ -333,7 +333,7 @@ $(function () {
             if (window.console && window.console.log) {
                 setTimeout(function () {
                     console.log("\n %c 唯品秀个人博客 %c  © Jun Li  https://weipxiu.com \n",
-                        "color:#FFFFFB;background:#1abc9c;padding:5px 0;border-radius:.5rem 0 0 .5rem;",
+                        "color:#FFFFFB;background:#1890ff;padding:5px 0;border-radius:.5rem 0 0 .5rem;",
                         "color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;"
                     );
                 }, 1500);

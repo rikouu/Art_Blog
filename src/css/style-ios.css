@@ -89,7 +89,7 @@ img {
 }
 
 .swiper-pagination-bullet-active {
-    background: #45BCF9 !important;
+    background: #1890ff !important;
 }
 
 .swiper-container1,
@@ -201,7 +201,7 @@ img {
 .search-btn {
     color: #fff;
     border: none;
-    background: #45B6F7;
+    background: #1890ff;
     height: 45px;
     font-size: 16px;
     padding: 0 12px;
@@ -221,7 +221,7 @@ img {
     opacity: 1;
     animation: box .5s linear;
     -ms-animation: box .5s linear;
-    border-bottom: 1px solid #45BCF9;
+    border-bottom: 1px solid #1890ff;
     background: rgba(40, 40, 40, .9);
 }
 
@@ -397,11 +397,11 @@ img {
 }
 
 .nav ul li a span.hover {
-    color: #45BCF9;
+    color: #1890ff;
 }
 
 .nav ul li a span.hover i {
-    color: #45BCF9;
+    color: #1890ff;
 }
 
 .nav {
@@ -717,7 +717,7 @@ img {
     font-size: 0.6rem;
     line-height: 64px;
     text-align: center;
-    color: #16c0f8
+    color: #1890ff
 }
 
 /*小飞机end*/
@@ -791,7 +791,7 @@ img {
 
 .continar .continar-left-top h1 span {
     margin-left: -8px;
-    color: #FF5E52;
+    color: #1890ff;
     transition: all 0.25s;
     font-size: 0.32rem;
 }
@@ -942,7 +942,7 @@ ul.post-categories li:first-child {
 
 .text_right h2 span:nth-child(1) {
     color: #fff;
-    background-color: #45BCF9;
+    background-color: #1890ff;
     padding: 2px 6px;
     font-size: 12px;
     float: left;
@@ -961,7 +961,7 @@ ul.post-categories li:first-child {
     width: 0;
     height: 0;
     vertical-align: middle;
-    border-left: 4px solid #45BCF9;
+    border-left: 4px solid #1890ff;
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
 }
@@ -986,7 +986,7 @@ ul.post-categories li:first-child {
     top: 149px;
     font-style: normal;
     transition: all 0.35s;
-    background: #EA4C89;
+    background: #1890ff;
     color: #fff;
     opacity: .8;
     display: block;
@@ -1009,7 +1009,7 @@ ul.post-categories li:first-child {
     margin-left: -2px;
     top: 15px;
     border: 8px dashed transparent;
-    border-left: 8px solid #EA4C89;
+    border-left: 8px solid #1890ff;
     border-right-width: 0;
 }
 
@@ -1024,7 +1024,7 @@ ul.post-categories li:first-child {
 }
 
 .entry-meta a {
-    color: #ea4c89;
+    color: #1890ff;
     font-size: 0.24rem
 }
 
@@ -1105,7 +1105,7 @@ p.clearfix {
 }
 
 p.clearfix a {
-    color: #ea4c89;
+    color: #1890ff;
     font-size: 0.3rem !important
 }
 
@@ -1309,7 +1309,7 @@ div.com-art ul li {
 }
 
 .widget ul li:nth-child(3) em {
-    background: #60c4fd;
+    background: #1890ff;
 }
 
 /*热门文章结束*/
@@ -1552,7 +1552,7 @@ div.com-art ul li {
 }
 
 #primary-sidebar #ds-recent-comments li.ds-comment div a {
-    color: #EA4C89;
+    color: #1890ff;
     font-size: 12px
 }
 
@@ -1604,12 +1604,12 @@ div.com-art ul li {
 /*-----------*/
 
 #ds-recent-comments li.ds-comment a {
-    color: #EA4C89;
+    color: #1890ff;
     font-size: 13px;
 }
 
 #ds-recent-comments li.ds-comment .ds-thread-title a {
-    color: #EA4C89;
+    color: #1890ff;
 }
 
 /*评论模块结束*/
@@ -1749,7 +1749,7 @@ div.key-w {
     margin: 0 5px;
     border-radius: 3px;
     display: inline-block;
-    background: #45BCF9;
+    background: #1890ff;
 }
 
 div.key-w a:hover {
@@ -1852,7 +1852,7 @@ div.nav-s a {
 }
 
 div.nav-s a:nth-child(1) {
-    background: #45BCF9;
+    background: #1890ff;
     color: #fff;
     padding: 0px 25px 0px 35px;
     border-radius: 4px 0px 0px 4px;
@@ -1870,7 +1870,7 @@ div.nav-s a:nth-child(1):after {
     content: "";
     border-top: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-left: 20px solid #45BCF9;
+    border-left: 20px solid #1890ff;
     border-bottom: 20px solid transparent;
     position: absolute;
     top: 0px;
@@ -2041,7 +2041,7 @@ td.line-numbers {
 }
 
 .continar-left .log-text a {
-    color: #08c
+    color: #1890ff
 }
 
 .codecolorer-container * {
@@ -2823,7 +2823,7 @@ div.jy p {
 	display: none;
 }
 .wp-pagenavi span.current {
-    background: #60c4fd;
+    background: #1890ff;
     text-decoration: none;
     color: #fff;
     padding: 6px 12px;

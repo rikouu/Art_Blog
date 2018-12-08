@@ -43,7 +43,7 @@
 <!-- 热门文章start -->
 <div class="widget hot_rticles">
     <div class="daily-list">
-        <h3 class="widget-title"><a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>最近更新</a></h3>
+        <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-web__xinshou"></i>最近更新</a></h3>
         <!-- 按发布日期排序 orderby=date?
         按修改时间排序 orderby=modified
         按文章ID排序 orderby=ID
@@ -89,7 +89,7 @@
 <!-- 随机文章start -->
 <div class="widget mouseover">
     <div class="daily-list">
-        <h3 class="widget-title"><a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>随机文章</a></h3>
+        <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-suiji-copy"></i>随机文章</a></h3>
         <ul>
             <?php
               $args = array(
@@ -117,7 +117,7 @@
 
 <!-- 技术分类start -->
 <div class="classif">
-    <h3 class="widget-title"><a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>文章分类</a></h3>
+    <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-leimupinleifenleileibie"></i>文章分类</a></h3>
     <div class="items">
         <a href="https://www.weipxiu.com/?cat=3">HTML/CSS (<?php echo wt_get_category_count(3); ?>)</a>
         <a href="https://www.weipxiu.com/?cat=6">HTML5 (<?php echo wt_get_category_count(6); ?>)</a>
@@ -167,7 +167,7 @@
     </div> -->
     <div class="com-s com">
         <h3 class="widget-title">
-            <a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>精彩评论</a>
+            <a href="javascript:()"><i class="iconfont icon-pinglun3"></i>精彩评论</a>
         </h3>
         <ul class="uk-list uk-padding-small tuts_comments_user_avatars">
             <?php
@@ -177,7 +177,7 @@
             $comments = $wpdb->get_results($sql);
             $output = $pre_HTML;
             foreach ($comments as $comment) { $com_excerpt = strip_tags($comment->com_excerpt); $excerpt_len = mb_strlen($com_excerpt, 'utf-8');
-                if ($excerpt_len > 37) $com_excerpt = mb_substr($com_excerpt, 0, 37, 'utf-8').'...';
+                if ($excerpt_len > 46) $com_excerpt = mb_substr($com_excerpt, 0, 46, 'utf-8').'...';
                 $output .= "\n<li>".get_avatar(get_comment_author_email(), 50).strip_tags($comment->comment_author). '：' . "<p>". $com_excerpt ."</p>" . "<a href=\"" . get_permalink($comment->ID) ."#comment-" . $comment->comment_ID . "\" title=\"查看 " .$comment->post_title . "\">评：".$comment->post_title ."</a></li>";}
             $output .= $post_HTML;
             $output = convert_smilies($output);
@@ -191,7 +191,7 @@
 <!-- 友情链接start -->
 <div class="widget friendship">
     <div class="daily-list">
-        <h3 class="widget-title"><a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>风云英雄</a></h3>
+        <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-yingxiongbang"></i>风云英雄</a></h3>
         <p>他们同样是一群网虫，却不是每天泡在网上游走在淘宝和网游之间、刷着本来就快要透支的信用卡。他们或许没有踏出国门一步，但同学却不局限在一国一校，而是遍及全球！
         </p>
         <ul class="friendsChain">
@@ -204,7 +204,7 @@
 <!-- 网站统计start -->
 <div class="widget" id="web-tj">
     <div class="daily-list">
-        <h3 class="widget-title"><a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>站点统计</a></h3>
+        <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-tongji"></i>站点统计</a></h3>
         <ul>
             <li>文章总数：
                 <?php $count_posts = wp_count_posts(); echo $published_posts = $count_posts->publish; ?> 篇

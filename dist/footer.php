@@ -40,7 +40,7 @@
 
 <!-- 小飞机start -->
 <div class="aircraft">
-  <font class="iconfont">&#xe601;</font>
+  <font class="iconfont icon-huojian-copy"></font>
 </div>
 <!-- 小飞机end -->
 

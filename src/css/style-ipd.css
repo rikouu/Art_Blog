@@ -48,7 +48,7 @@ img {
 	display: none!important
 }
 .swiper-pagination-bullet{width:0.6rem!important; border-radius: 0!important; height:1.5px!important; background: #fff!important;opacity: 1!important}
-.swiper-pagination-bullet-active{background:#45BCF9!important;}
+.swiper-pagination-bullet-active{background:#1890ff!important;}
 .swiper-container1,.swiper-wrapper {
 	width:100%;
 	height:100%;
@@ -134,7 +134,7 @@ img {
 .search-btn {
 	color:#fff;
 	border:none;
-	background:#45B6F7;
+	background:#1890ff;
 	height:45px;
 	font-size:16px;
 	padding:0 12px;
@@ -152,7 +152,7 @@ img {
 	opacity:1;
 	animation:box .5s linear;
 	-ms-animation:box .5s linear;
-	border-bottom:1px solid #45BCF9;
+	border-bottom:1px solid #1890ff;
 	background:rgba(40,40,40,.9)
 }
 .header.hover .topbar {
@@ -303,10 +303,10 @@ img {
 	-ms-transform:rotateX(90deg);
 }
 .nav ul li a span.hover {
-	color:#45BCF9;
+	color:#1890ff;
 }
 .nav ul li a span.hover i {
-	color:#45BCF9;
+	color:#1890ff;
 }
 /*二级菜单开始*/
 .nav {
@@ -556,7 +556,7 @@ img {
 	font-size:0.6rem;
 	line-height:64px;
 	text-align:center;
-	color:#16c0f8
+	color:#1890ff
 }
 /*小飞机end*/
 
@@ -612,7 +612,7 @@ img {
 }
 .continar .continar-left-top h1 span {
 	margin-left:-8px;
-	color:#FF5E52;
+	color:#1890ff;
 	transition:all 0.25s;
 	font-size:0.32rem;
 }
@@ -741,7 +741,7 @@ ul.post-categories li:first-child {
 }
 .text_right h2 span:nth-child(1) {
 	color:#fff;
-	background-color:#45BCF9;
+	background-color:#1890ff;
 	padding:2px 6px;
 	font-size:12px;
 	float: left;
@@ -758,7 +758,7 @@ ul.post-categories li:first-child {
 	width:0;
 	height:0;
 	vertical-align:middle;
-	border-left:4px solid #45BCF9;
+	border-left:4px solid #1890ff;
 	border-top:4px solid transparent;
 	border-bottom:4px solid transparent;
 }
@@ -784,7 +784,7 @@ ul.post-categories li:first-child {
 	top:149px;
 	font-style:normal;
 	transition:all 0.35s;
-	background:#EA4C89;
+	background:#1890ff;
 	color:#fff;
 	opacity:.8;
 	display:block;
@@ -805,7 +805,7 @@ ul.post-categories li:first-child {
 	margin-left:-2px;
 	top:15px;
 	border:8px dashed transparent;
-	border-left:8px solid #EA4C89;
+	border-left:8px solid #1890ff;
 	border-right-width:0;
 }
 .entry-meta {
@@ -817,7 +817,7 @@ ul.post-categories li:first-child {
 	margin:0 auto 0.2rem;
 }
 .entry-meta a {
-	color:#ea4c89;
+	color:#1890ff;
 	font-size:0.24rem
 }
 .entry-meta .space,.sep,.space {
@@ -887,7 +887,7 @@ p.clearfix {
 	font-size:0.3rem!important
 }
 p.clearfix a {
-	color:#ea4c89;
+	color:#1890ff;
 	font-size:0.3rem!important
 }
 .social {
@@ -1063,7 +1063,7 @@ div.com-art ul li {
 	background:#7fd75a;
 }
 .widget ul li:nth-child(3) em {
-	background:#60c4fd;
+	background:#1890ff;
 }
 /*热门文章结束*/
 
@@ -1270,7 +1270,7 @@ to {
 	font-size:12px;
 }
 #primary-sidebar #ds-recent-comments li.ds-comment div a {
-	color:#EA4C89;
+	color:#1890ff;
 	font-size:12px
 }
 #ds-recent-visitors div.ds-avatar img {
@@ -1313,11 +1313,11 @@ to {
 }
 /*-----------*/
 #ds-recent-comments li.ds-comment a {
-	color:#EA4C89;
+	color:#1890ff;
 	font-size:13px;
 }
 #ds-recent-comments li.ds-comment .ds-thread-title a {
-	color:#EA4C89;
+	color:#1890ff;
 }
 /*评论模块结束*/
 
@@ -1511,7 +1511,7 @@ div.nav-s a {
 	margin-right:40px;
 }
 div.nav-s a:nth-child(1) {
-	background:#45BCF9;
+	background:#1890ff;
 	color:#fff;
 	padding:0px 25px 0px 35px;
 	border-radius:4px 0px 0px 4px;
@@ -1527,7 +1527,7 @@ div.nav-s a:nth-child(1):after {
 	content:"";
 	border-top:20px solid transparent;
 	border-right:20px solid transparent;
-	border-left:20px solid #45BCF9;
+	border-left:20px solid #1890ff;
 	border-bottom:20px solid transparent;
 	position:absolute;
 	top:0px;
@@ -1671,7 +1671,7 @@ td.line-numbers {
 	text-indent:2em
 }
 .continar-left .log-text a{
-	color: #08c
+	color: #1890ff
 }
 .continar-left .log-text p,.continar-left .log-text li{
 	margin:10px 0;
@@ -2327,7 +2327,7 @@ div.jy p {
 	display: none;
 }
 .wp-pagenavi span.current {
-	background:#60c4fd;
+	background:#1890ff;
 	text-decoration:none;
 	color:#fff;
 	padding:12px 15px;
@@ -2720,7 +2720,7 @@ span.post-like,.img-left span ul li a {
 	color:#FE5187!important;
 }
 #cyReping .reping-list .reping-nickname {
-	color:#1abc9c!important;
+	color:#1890ff!important;
 }
 #cyReping .list-item div:nth-of-type(1) > img {
 	border-radius:100%!important;
