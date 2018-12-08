@@ -229,7 +229,10 @@
 			</div>
 			<!-- 邮件订阅end -->
 			<!-- 文章start -->
-			<?php $posts = query_posts($query_string . '&orderby=date&showposts=12'); ?>
+			<!-- <?php /*$posts = query_posts($query_string . '&orderby=date&showposts=12'); ?>
+			<?php
+			if(have_posts()): while(have_posts()):the_post();*/
+			?> -->
 			<?php
 			if(have_posts()): while(have_posts()):the_post();
 			?>
@@ -315,13 +318,13 @@
 				<!--竖条-->
 			</div>
 			<?php endwhile; else : ?>
-			<?php header("Location: https://www.weipxiu.com/404.html");exit; ?> 
-			<!-- <h2 id="redirect">
-				<?php _e('404'); ?>
-			</h2> -->
-			<?php endif; ?>
-			<?php wp_pagenavi(); ?>
-			<!--分页插件调用-->
+				<?php header("Location: https://www.weipxiu.com/404.html");exit; ?> 
+				<!-- <h2 id="redirect">
+					<?php _e('404'); ?>
+				</h2> -->
+				<?php endif; ?>
+				<?php wp_pagenavi(); ?>
+				<!--分页插件调用-->
 		</div>
 		<!-- 左侧区域结束 -->
 
