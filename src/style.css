@@ -2202,14 +2202,14 @@ div.com-art ul li {
 
 .items {
     overflow: hidden;
-    padding: 5px 0 12px 15px;
+    padding: 5px 15px 12px 15px;
 }
 
 .items a {
     color: #999;
     background-color: #f6f6f6;
     float: left;
-    width: 31.3333%;
+    width: 32.67%;
     margin: 0 1% 1% 0;
     padding: 0 8px;
     font-size: 12px;
@@ -2220,7 +2220,9 @@ div.com-art ul li {
     -o-transition: all 0.35s;
     transition: all 0.35s;
 }
-
+.items a:nth-of-type(3n){
+    margin-right:0;
+}
 .items a:hover {
     color: #fff;
     background: #1890ff;
@@ -6743,12 +6745,12 @@ label {
 
 #primary-sidebar ul {
     list-style: none;
-    padding: 5px 0 12px 10px;
+    padding: 0px 15px 0px 15px;
 }
 
 #primary-sidebar ul li {
     overflow: hidden;
-    padding: 5px 10px 5px;
+    padding: 5px 0px 5px 11px;
     line-height: 15px;
 }
 
@@ -6766,6 +6768,9 @@ label {
     float: right;
     line-height: 18px;
     width: calc(100% - 37px);
+}
+#primary-sidebar ul li a:last-of-type{
+    border-bottom: none;
 }
 #primary-sidebar ul li p{
     border:0;
