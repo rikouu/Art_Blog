@@ -6769,7 +6769,7 @@ label {
     line-height: 18px;
     width: calc(100% - 37px);
 }
-#primary-sidebar ul li a:last-of-type{
+#primary-sidebar ul li:last-of-type a{
     border-bottom: none;
 }
 #primary-sidebar ul li p{
