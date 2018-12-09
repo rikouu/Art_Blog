@@ -222,6 +222,7 @@
 				<div class="rssbook">
 					<h3 class="info">您也可以通过电子邮件订阅每日的更新，不定时为您推送优质文章</h3>
 					<p>我们不会公开您的邮箱，您可以随时取消订阅</p>
+					<p><?php the_field('bannerUrl_1'); ?></p>
 					<div class="mailInput">
 						<?php echo wpm_form(1); ?>
 					</div>

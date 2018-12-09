@@ -817,6 +817,7 @@ ul.post-categories li:first-child {
 	margin:0 auto 0.2rem;
 }
 .entry-meta a {
+	color:#a5a5a5;
 	font-size:0.24rem
 }
 .entry-meta .space,.sep,.space {
