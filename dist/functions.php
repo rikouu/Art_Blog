@@ -1,4 +1,9 @@
 <?php
+//主题设置，，判断是后台还是前台，引入设置模块文件
+if(is_admin())
+    require ('theme-options.php');
+?>
+<?php
 //注册菜单
 register_nav_menus(array('MainNav' => '主导航',));
 ?>
