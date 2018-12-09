@@ -44,11 +44,12 @@
 > 4、源码开放供大家使用并修改，但在使用过程中底部请保留"唯品秀"版权说明，
   即：在footer.php源码中请不要去掉：<p>本站主题由<a href="https://www.weipxiu.com/" class="highlight">WEIPXIU.COM</a>免费提供</p>
 
-<!-- 
-<h2>使用当前主题网站</h2>
+
+<!-- <h2>使用当前主题网站</h2>
 
 >不完全统计
 
-> 程平博客  https://www.chenii.com -->
+> 爱前端  https//www.huanggr.cn/
+> 博学老头  hhttps://www.boxuelaotou.com/ -->
 
 
