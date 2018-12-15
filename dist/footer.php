@@ -160,7 +160,24 @@
 
 <!-- 在线客服结束 -->
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-2.1.4.min.js"></script>
-<?php include_once("baidu_js_push.php") ?>
+
+<!-- 百度自动推送start -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- 百度自动推送end -->
+
 <!-- 网站运行时间 -->
 <script>
   function secondToDate(second) {

@@ -161,6 +161,24 @@ function hot_posts_list($days = 7, $nums = 10) {
     }
     echo $output;
 }
+//百度收录
+function v5v1_baiping($post_id) {
+    $baiduXML = 'weblogUpdates.extendedPing' . get_option('blogname') . ' ' . home_url() . ' ' . get_permalink($post_id) . ' ' . get_feed_link() . ' ';
+    $wp_http_obj = new WP_Http();
+    $return = $wp_http_obj->post('http://ping.baidu.com/ping/RPC2', array('body' => $baiduXML, 'headers' => array('Content-Type' => 'text/xml')));
+    if(isset($return['body'])){
+        if(strstr($return['body'], '0')){
+            $noff_log='succeeded!';
+        }
+        else{
+            $noff_log='failed!';
+        }
+    }else{
+        $noff_log='failed!';
+    }
+}
+add_action('publish_post', 'v5v1_baiping');
+//百度收录end
 //在 WordPress 编辑器添加“下一页”按钮
 add_filter('mce_buttons', 'add_next_page_button');
 function add_next_page_button($mce_buttons) {
