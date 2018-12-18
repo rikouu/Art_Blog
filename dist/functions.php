@@ -1,16 +1,18 @@
 <?php
-//主题设置，，判断是后台还是前台，引入设置模块文件
-if(is_admin())
-    require ('include/xm-theme-options.php');
-?>
-<?php
+if (is_admin()) require ('include/xm-theme-options.php');
+
 //注册菜单
-register_nav_menus(array('MainNav' => '主导航',));
-?>
-<?php
-if (function_exists('register_sidebar')) register_sidebar(array('before_widget' => '<div class="sidebox">    ', 'after_widget' => '</div>', 'before_title' => '<h2>', 'after_title' => '</h2>',));
-?>
-<?php
+register_nav_menus(array(
+    'MainNav' => '主导航',
+));
+
+if (function_exists('register_sidebar')) register_sidebar(array(
+    'before_widget' => '<div class="sidebox">    ',
+    'after_widget' => '</div>',
+    'before_title' => '<h2>',
+    'after_title' => '</h2>',
+));
+
 //注册特色图像
 add_theme_support('post-thumbnails');
 set_post_thumbnail_size(220, 150, true); // 图片宽度与高度
@@ -82,13 +84,21 @@ add_filter('show_admin_bar', '__return_false'); //去掉默认顶端导航条
 function time_ago($type = 'commennt', $day = 7) {
     $d = $type == 'post' ? 'get_post_time' : 'get_comment_time';
     if (time() - $d('U') > 60 * 60 * 24 * $day) return;
-    echo ' (', human_time_diff($d('U'), strtotime(current_time('mysql', 0))), '前)';
+    echo ' (', human_time_diff($d('U') , strtotime(current_time('mysql', 0))) , '前)';
 }
 function timeago($ptime) {
     $ptime = strtotime($ptime);
     $etime = time() - $ptime;
     if ($etime < 1) return '刚刚';
-    $interval = array(12 * 30 * 24 * 60 * 60 => '年前 (' . date('Y-m-d', $ptime) . ')', 30 * 24 * 60 * 60 => '个月前 (' . date('m-d', $ptime) . ')', 7 * 24 * 60 * 60 => '周前 (' . date('m-d', $ptime) . ')', 24 * 60 * 60 => '天前', 60 * 60 => '小时前', 60 => '分钟前', 1 => '秒前');
+    $interval = array(
+        12 * 30 * 24 * 60 * 60 => '年前 (' . date('Y-m-d', $ptime) . ')',
+        30 * 24 * 60 * 60 => '个月前 (' . date('m-d', $ptime) . ')',
+        7 * 24 * 60 * 60 => '周前 (' . date('m-d', $ptime) . ')',
+        24 * 60 * 60 => '天前',
+        60 * 60 => '小时前',
+        60 => '分钟前',
+        1 => '秒前'
+    );
     foreach ($interval as $secs => $str) {
         $d = $etime / $secs;
         if ($d >= 1) {
@@ -165,16 +175,20 @@ function hot_posts_list($days = 7, $nums = 10) {
 function v5v1_baiping($post_id) {
     $baiduXML = 'weblogUpdates.extendedPing' . get_option('blogname') . ' ' . home_url() . ' ' . get_permalink($post_id) . ' ' . get_feed_link() . ' ';
     $wp_http_obj = new WP_Http();
-    $return = $wp_http_obj->post('http://ping.baidu.com/ping/RPC2', array('body' => $baiduXML, 'headers' => array('Content-Type' => 'text/xml')));
-    if(isset($return['body'])){
-        if(strstr($return['body'], '0')){
-            $noff_log='succeeded!';
+    $return = $wp_http_obj->post('http://ping.baidu.com/ping/RPC2', array(
+        'body' => $baiduXML,
+        'headers' => array(
+            'Content-Type' => 'text/xml'
+        )
+    ));
+    if (isset($return['body'])) {
+        if (strstr($return['body'], '0')) {
+            $noff_log = 'succeeded!';
+        } else {
+            $noff_log = 'failed!';
         }
-        else{
-            $noff_log='failed!';
-        }
-    }else{
-        $noff_log='failed!';
+    } else {
+        $noff_log = 'failed!';
     }
 }
 add_action('publish_post', 'v5v1_baiping');
@@ -191,7 +205,9 @@ function add_next_page_button($mce_buttons) {
     return $mce_buttons;
 }
 function e_secret($atts, $content = null) { //输入密码查看
-    extract(shortcode_atts(array('key' => null), $atts));
+    extract(shortcode_atts(array(
+        'key' => null
+    ) , $atts));
     if (isset($_POST['e_secret_key']) && $_POST['e_secret_key'] == $key) {
         return '<div class="e-secret">' . $content . '</div>';
     } else {
@@ -219,7 +235,10 @@ remove_action('template_redirect', 'wp_shortlink_header', 11, 0);
 add_action('widgets_init', 'my_remove_recent_comments_style');
 function my_remove_recent_comments_style() {
     global $wp_widget_factory;
-    remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
+    remove_action('wp_head', array(
+        $wp_widget_factory->widgets['WP_Widget_Recent_Comments'],
+        'recent_comments_style'
+    ));
 }
 //禁止加载WP自带的jquery.js
 if (!is_admin()) { // 后台不禁止
@@ -335,10 +354,10 @@ function reset_password_message($message, $key) {
     $user_login = $user_data->user_login;
     $msg = __('当前有请求重设如下帐号的密码：') . "\r\n\r\n";
     $msg.= network_site_url() . "\r\n\r\n";
-    $msg.= sprintf(__('用户名：%s'), $user_login) . "\r\n\r\n";
+    $msg.= sprintf(__('用户名：%s') , $user_login) . "\r\n\r\n";
     $msg.= __('若这不是您本人要求的，请忽略本邮件，一切如常。') . "\r\n\r\n";
     $msg.= __('要重置您的密码，请打开下面的链接：') . "\r\n\r\n";
-    $msg.= network_site_url("wp-login.php?action=rp&key=$key&login=" . rawurlencode($user_login), 'login');
+    $msg.= network_site_url("wp-login.php?action=rp&key=$key&login=" . rawurlencode($user_login) , 'login');
     return $msg;
 }
 add_filter('retrieve_password_message', reset_password_message, null, 2);
@@ -618,37 +637,51 @@ function dedewp_comment_add_at($comment_text, $comment = '') {
 add_filter('get_comment_text', 'dedewp_comment_add_at', 20, 2);
 function simple_comment($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment; ?>
-    <li class="comment" id="li-comment-<?php comment_ID(); ?>">
+    <li class="comment" id="li-comment-<?php
+    comment_ID(); ?>">
             <div class="media">
                 <div class="media-left">
-                 <?php if (function_exists('get_avatar') && get_option('show_avatars')) {
+                 <?php
+    if (function_exists('get_avatar') && get_option('show_avatars')) {
         echo get_avatar($comment, 48);
     } ?>
                 </div>
                 <div class="media-body">
-                    <?php printf(__('<span class="author_name">%s</span>'), get_comment_author_link()); ?>
+                    <?php
+    printf(__('<span class="author_name">%s</span>') , get_comment_author_link()); ?>
                     <!-- vip等级 -->
                     <span class="comment_vip">
-                        <?php get_author_class($comment->comment_author_email, $comment->comment_author_url) ?>
+                        <?php
+    get_author_class($comment->comment_author_email, $comment->comment_author_url) ?>
                     </span>
                     <!-- 评论用户系统信息 -->
-                    <?php echo user_agent($comment->comment_agent); ?>
-                    <?php if ($comment->comment_approved == '0'): ?>
+                    <?php
+    echo user_agent($comment->comment_agent); ?>
+                    <?php
+    if ($comment->comment_approved == '0'): ?>
                         <em>评论等待审核...</em><br />
                     <?php
     endif; ?>
-                    <?php comment_text(); ?>
+                    <?php
+    comment_text(); ?>
                 </div>
             </div>
             <div class="comment-metadata">
                 <span class="comment-pub-time">
-                    <?php echo get_comment_time('Y-m-d H:i'); ?>
+                    <?php
+    echo get_comment_time('Y-m-d H:i'); ?>
                 </span>
                 <span class="comment-btn-reply">
-                  <i class="fa fa-reply"></i> <?php comment_reply_link(array_merge($args, array('reply_text' => '回复', 'depth' => $depth, 'null' => $args['max_depth']))) ?> 
+                  <i class="fa fa-reply"></i> <?php
+    comment_reply_link(array_merge($args, array(
+        'reply_text' => '回复',
+        'depth' => $depth,
+        'null' => $args['max_depth']
+    ))) ?> 
                 </span>
             </div>
  
  <?php
 }
+// require_once(TEMPLATEPATH . 'include/xm-api.php');
 ?>
