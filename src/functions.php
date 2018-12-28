@@ -684,4 +684,48 @@ function simple_comment($comment, $args, $depth) {
  <?php
 }
 // require_once(TEMPLATEPATH . 'include/xm-api.php');
+
+// 给回复评论用户进行邮件反馈
+function ludou_comment_mail_notify($comment_id, $comment_status) {
+    // 评论必须经过审核才会发送通知邮件
+    if ($comment_status !== 'approve' && $comment_status !== 1)
+      return;
+    
+    $comment = get_comment($comment_id);
+  
+    if ($comment->comment_parent != '0') {
+      $parent_comment = get_comment($comment->comment_parent);
+  
+      // 邮件接收者email      
+      $to = trim($parent_comment->comment_author_email);
+      
+      // 邮件标题
+      $subject = '您在[' . get_option("blogname") . ']的留言有了新的回复';
+  
+      // 邮件内容，自行修改，支持HTML
+      $message = '<div style="border-right:#666666 1px solid;border-radius:8px;color:#111;font-size:12px;width:702px;    border-bottom:#666666 1px solid;font-family:微软雅黑,arial;margin:10px auto 0px;border-top:#666666 1px solid;border-left:#666666 1px solid"><div class="adM">
+        </div><div style="width:100%;background:#666666;min-height:60px;color:white;border-radius:6px 6px 0 0"><span style="line-height:60px;min-height:60px;margin-left:30px;font-size:12px">您在<a style="color:#00bbff;font-weight:600;text-decoration:none" href="' . get_option('home') . '" target="_blank">' . get_option('blogname') . '</a> 上的留言有回复啦！</span> </div>
+        <div style="margin:0px auto;width:90%">
+        <p>' . trim($parent_comment->comment_author) . ', 您好!</p>
+        <p>您于' . trim($parent_comment->comment_date) . ' 在文章《' . get_the_title($comment->comment_post_ID) . '》上发表的评论: </p>
+        <p style="border-bottom:#ddd 1px solid;border-left:#ddd 1px solid;padding-bottom:20px;background-color:#eee;margin:15px 0px;padding-left:20px;padding-right:20px;border-top:#ddd 1px solid;border-right:#ddd 1px solid;padding-top:20px">' . nl2br($parent_comment->comment_content) . '</p>
+        <p>' . trim($comment->comment_author) . ' 于' . trim($comment->comment_date) . ' 给您的回复如下: </p>
+        <p style="border-bottom:#ddd 1px solid;border-left:#ddd 1px solid;padding-bottom:20px;background-color:#eee;margin:15px 0px;padding-left:20px;padding-right:20px;border-top:#ddd 1px solid;border-right:#ddd 1px solid;padding-top:20px">' . nl2br($comment->comment_content) . '</p>
+        <p>您可以点击 <a style="color:#00bbff;text-decoration:none" href="' . htmlspecialchars(get_comment_link($comment->comment_parent)). '" target="_blank">查看回复的完整內容</a></p>
+        <p>感谢您对 <a style="color:#00bbff;text-decoration:none" href="' . get_option('home') . '" target="_blank">' . get_option('blogname') . '</a> 的关注，如您有任何疑问，欢迎在博客留言，我都会一一解答，么么哒！！！</p><p>(此邮件由系统自动发出，请勿回复。)</p></div></div>';
+  
+      $message_headers = "Content-Type: text/html; charset=\"".get_option('blog_charset')."\"\n";
+      
+      // 不用给不填email的评论者和管理员发提醒邮件
+      if($to != '' && $to != get_bloginfo('admin_email'))
+        @wp_mail($to, $subject, $message, $message_headers);
+    }
+  }
+  
+  
+  // 编辑和管理员的回复直接发送提醒邮件，因为编辑和管理员的评论不需要审核
+  add_action('comment_post', 'ludou_comment_mail_notify', 20, 2);
+  
+  // 普通访客发表的评论，等博主审核后再发送提醒邮件
+  add_action('wp_set_comment_status', 'ludou_comment_mail_notify', 20, 2);
 ?>
