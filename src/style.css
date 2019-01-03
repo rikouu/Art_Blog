@@ -1552,11 +1552,6 @@ i {
     border-bottom: 0;
 }
 
-.continar .inner-box:hover {
-    -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-    border-color: #d6d6d6;
-}
 
 .continar .rssbook {
     text-align: center;
@@ -4382,8 +4377,8 @@ ul.post-categories li:first-child {
 
 .log-text h4,
 .h4 {
-    margin: 15px -15px;
-    padding: 8px 15px;
+    margin: 25px -15px 15px;
+    padding: 6px 15px;
     border-left: 4px solid #39c;
     border-bottom: 1px solid #39c;
     font-size: 16px;
