@@ -625,7 +625,7 @@ function user_agent($ua) {
     } else {
         $browser = '未知浏览器';
     }
-    return "<span class='system'>" . $os . "</span> | <span class='browser'>" . $browser . "</span>";
+    return "<span class='system'>" . $os . "</span>  <span class='browser'>" . $browser . "</span>";
 }
 //自定义评论列表模板
 function dedewp_comment_add_at($comment_text, $comment = '') {
