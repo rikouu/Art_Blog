@@ -470,11 +470,10 @@ img:hover {
     border-top: 1px solid #fff;
     box-sizing: border-box;
     background: #eaebed;
-    background: gradient(linear, left top, left bottom, from(#fff), to(#dedede));
-    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dedede));
-    background: -moz-linear-gradient(top, #fff, #d4d7db);
-    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#d4d7db');
+    background: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#d4d7db));
+    background: -moz-linear-gradient(top,#fff,#d4d7db);
+    box-shadow: 0 4px 4px rgba(0,0,0,.2);
 }
 
 .header_top {
@@ -573,7 +572,7 @@ img:hover {
 
 .header-conter {
     width: 1200px;
-    margin: 18px auto 0;
+    margin: 20px auto 0;
     border-top: 1px solid transparent;
     -webkit-transition: all 1s;
     -o-transition: all 1s;
@@ -773,7 +772,7 @@ img:hover {
     width: 100%;
     height: 4px;
     position: absolute;
-    bottom: -21px;
+    bottom: -19px;
     left: 0;
     background: #1890ff;
     -webkit-transition: all 0.5s;
@@ -1996,7 +1995,7 @@ i {
 
 .widget-title {
     margin-bottom: 8px;
-    border-bottom: 1px solid #e9eaed;
+    border-bottom: 1px solid #f1f1ef;
     position: relative;
 }
 
@@ -6393,11 +6392,6 @@ p.data-l span {
 comments
 */
 
-#comments {
-    padding-bottom: 30px;
-    line-height: 1;
-}
-
 .comments-title {
     position: relative;
     padding: 7px 0;
@@ -6413,7 +6407,9 @@ comments
 }
 
 .commentlist .media {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    padding: 10px 15px;
+    background: #f1f1ef;
 }
 
 .commentlist ol {
@@ -6428,6 +6424,7 @@ comments
     display: table-cell;
     vertical-align: top;
     padding-right: 10px;
+    /* transform: translateX(-23px); */
 }
 
 .comment .media-left img {
@@ -6471,15 +6468,15 @@ comments
     font-size: 14px;
     line-height: 1.5em;
     color: #777;
-    padding: 10px 0;
+    padding: 10px 0 0;
 }
 
 .comment .comment-metadata {
     margin-left: 58px;
     padding: 7px 0;
     position: absolute;
-    top: 1px;
-    right: 0;
+    top: 10px;
+    right: 15px;
     color: #bbb;
     font-size: 12px;
 }
@@ -6509,7 +6506,6 @@ comments
 
 .commentlist li.comment {
     position: relative;
-    border-top: 1px solid #f2f2f2;
 }
 
 #reply-title #cancel-comment-reply-link:hover {
@@ -6590,7 +6586,6 @@ input#submit {
 }
 
 #comments {
-    padding-bottom: 30px;
     line-height: 1;
     font-size: 15px;
     line-height: 1.8em;
@@ -6711,13 +6706,12 @@ label {
     margin-right: 5px;
     padding: 1px 5px;
     border-radius: 3px;
-    background: #9466ff;
-    color: #fff;
+    color: #9466ff;
 }
 
 .comment .media-left img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 /* 评论框end */
