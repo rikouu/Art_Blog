@@ -6718,7 +6718,9 @@ label {
     width: 40px;
     height: 40px;
 }
-
+#commentform{
+    overflow: hidden;
+}
 /* 评论框end */
 
 /* 侧边栏最新留言start */
