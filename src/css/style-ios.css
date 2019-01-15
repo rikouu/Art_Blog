@@ -3592,7 +3592,7 @@ ol.children {
   border-bottom: 1px solid #eee;
   padding-bottom: 0.2rem;
 }
-ol.children:last-of-type{
+.commentlist .comment:last-of-type ol.children:last-of-type{
     border:0;
 }
 ol.commentlist {
