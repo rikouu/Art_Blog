@@ -3562,6 +3562,7 @@ p.reward-p {
 }
 .commentlist .comment {
   overflow: hidden;
+  padding-top:0.2rem;
 }
 .commentlist .comment .media-left img {
   width: 0.72rem;
@@ -3586,12 +3587,16 @@ p.reward-p {
   font-size: 0.28rem;
 }
 ol.children {
-  margin-top: 1.2rem;
-  border-top: 1px solid #eee;
-  padding: .2rem 0;
+  margin-top: 1rem;
+  /* border-top: 1px solid #eee; */
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.2rem;
+}
+ol.children:last-of-type{
+    border:0;
 }
 ol.commentlist {
-  margin: 0.35rem 0 0;
+  margin: 0.2rem 0 0;
 }
 #comments .warning-text{
     font-size: 0.28rem;
