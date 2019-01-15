@@ -6078,11 +6078,15 @@ p.data-l span {
     overflow: visible;
     width: 100%;
     height: 48px;
-    line-height: 18px;
+    line-height: 20px;
     word-wrap: break-word;
     word-break: normal;
     margin-left: 0;
-    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 
 .hot_rticles ul li .hot_text .hot_time {
