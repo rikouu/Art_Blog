@@ -1,7 +1,7 @@
-/* @font-face { 
-  font-family: "SF Pro Text"; 
-  src: url('../font/sf-pro-text_bold.woff2'); 
-}  */
+@font-face {
+    font-family:play;
+    src:url(./font/play_font.ttf)
+}
 
 * {
     margin: 0;
@@ -11,8 +11,7 @@
     box-sizing: border-box;
     color: #666;
     text-decoration: none;
-    font-size: 14px;
-    font-family: 'PingFang SC', '微软雅黑', 'Arial', sans-serif;
+    font:14px play,PingFangSC-Regular,Microsoft Yahei;
     font-weight: normal;
     /* font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif; */
 }
@@ -516,18 +515,14 @@ img:hover {
 
 .search-input {
     float: left;
-    color: #999;
     border: 1px solid #ddd;
-    border-right-color: rgb(221, 221, 221);
-    border-right-style: solid;
-    border-right-width: 1px;
-    width: 90%;
+    width: 94%;
+    height: 40px;
     line-height: 40px;
     padding: 5px 12px;
     border-right: none;
     border-radius: 5px 0 0 5px;
     outline: 0;
-    height: 40px;
     margin: 15px 0;
 }
 
@@ -545,7 +540,7 @@ img:hover {
     border: none;
     background: #1890ff;
     border-radius: 0 5px 5px 0;
-    width: 10%;
+    width: 6%;
     cursor: pointer;
     height: 40px;
     line-height: 40px;
@@ -560,10 +555,6 @@ img:hover {
     background: rgba(255, 255, 255, 0.9);
     -webkit-box-shadow: 0 0 10px #ccc;
     box-shadow: 0 0 10px #ccc;
-}
-
-.header.hover ul li a span {
-    line-height: 28px;
 }
 
 .header.hover .site-search.active {
@@ -793,7 +784,7 @@ img:hover {
     -webkit-transform-origin: center center -14px;
     -ms-transform-origin: center center -14px;
     transform-origin: center center -14px;
-    height: 25px;
+    height: 32px;
     z-index: 2;
 }
 
@@ -807,7 +798,8 @@ img:hover {
     backface-visibility: hidden;
     font-size: 16px;
     display: block;
-    height: 26px;
+    height: 32px;
+    line-height:32px;
     float: left;
 }
 
@@ -1633,14 +1625,20 @@ i {
     border: 1px solid #eaeaea;
 }
 
-.continar-left>.text:hover,
-.continar-left>.text:nth-last-of-type(2):hover {
-    border: 1px solid #1890ff;
-    background: #f8fefd;
-    -webkit-transform: translate3d(0, 0px, 0);
-    transform: translate3d(0, 0px, 0);
+.continar-left>.text:after{
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #1890ff;
+    -webkit-transition: .4s;
+    transition: .4s;
 }
-
+.continar-left>.text:hover, .continar-left>.text:hover:after{
+    width: 100%;
+}
 .text .new-icon {
     display: none;
 }
@@ -1710,7 +1708,8 @@ i {
 }
 
 .text h2 a {
-    font: lighter 18px Menlo, PingFangSC-Regular, Microsoft Yahe;
+    font-size:18px;
+    color:#333;
     -webkit-transition: all 0.35s;
     -o-transition: all 0.35s;
     transition: all 0.35s;
@@ -2156,7 +2155,10 @@ div.com-art ul li {
     position: relative;
     overflow: hidden;
 }
-
+.widget ul li a span{
+    height: 30px;
+    line-height: 30px; 
+}
 .friendship ul li a {
     margin-left: 25px;
 }
@@ -6074,19 +6076,26 @@ p.data-l span {
     position: relative;
 }
 
+/*.p1{ word-break:break-all; width:150px;}/*只对英文起作用，以字母作为换行依据*/     
+/*.p2{ word-wrap:break-word; width:150px;}/*--只对英文起作用，以单词作为换行依据*/     
+/*.p3{white-space:pre-wrap; width:150px;}/*只对中文起作用，强制换行*/     
+/*.p4{white-space:nowrap; width:10px;}/*强制不换行，都起作用*/     
+/*.p5{white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100px;}／/*不换行，超出部分隐藏且以省略号形式出现*/
+
 .hot_rticles ul li .hot_text .hot_title {
     overflow: visible;
     width: 100%;
     height: 48px;
     line-height: 20px;
     word-wrap: break-word;
-    word-break: normal;
+    word-break:break-all;
     margin-left: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    white-space: normal;
 }
 
 .hot_rticles ul li .hot_text .hot_time {

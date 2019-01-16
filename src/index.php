@@ -274,7 +274,7 @@
 						</a>
 					</div>
 					<h3>
-						<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 150,"..."); ?>
+						<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 156,"..."); ?>
 						<!--文章内容-->
 					</h3>
 					<a class="read-more" href="<?php the_permalink(); ?>" target="_blank">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
