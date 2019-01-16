@@ -1,6 +1,7 @@
 @font-face {
+    font-display: swap;
     font-family:play;
-    src:url(./css/play_font.ttf)
+    src:url(./css/play_font.ttf);
 }
 
 * {
