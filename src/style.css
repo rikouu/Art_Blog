@@ -149,7 +149,7 @@ img:hover {
     height: 300px;
     margin: 0 auto;
     cursor: pointer;
-    background-image: url(http://cdn.xuanfengge.com/wp-content/themes/lee3.0/dist/img/banner/1.0bd56759.jpg);
+    background-image: url(./images/banner-1.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
