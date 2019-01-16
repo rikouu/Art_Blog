@@ -12,6 +12,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 	<!-- 强制https -->
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<meta http-equiv="x-dns-prefetch-control" content="on">
+	<link rel="dns-prefetch" href="https://www.weipxiu.com/">
 	<title>唯品秀&nbsp;–&nbsp;前端开发&nbsp;|&nbsp;web前端技术博客</title>
 	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
 
