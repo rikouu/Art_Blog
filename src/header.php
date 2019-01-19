@@ -158,18 +158,18 @@
 									  <audio src="" autoplay="autoplay"></audio>
 									  <p></p>
 									</li>
-									<li detaName="la" class="<?php if ( (is_category('8') || in_category('8')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
+									<li detaName="la" class="<?php if ( in_category('13') && is_category('13') ) { echo 'action'; } ?>">
 									  <a href="javascript:void(0);">
-										  <span data-href="category/message">碎言碎语</span>
-										  <span data-href="category/message">碎言碎语</span>
+										  <span data-href="category/jqzy">别具匠心</span>
+										  <span data-href="category/jqzy">别具匠心</span>
 									  </a>
 									  <audio src="" autoplay="autoplay"></audio>
 									  <p></p>
 									</li>
-									<li detaName="si" class="<?php if ( in_category('13') && is_category('13') ) { echo 'action'; } ?>">
+									<li detaName="si" class="<?php if ( (is_category('8') || in_category('8')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="javascript:void(0);">
-										  <span data-href="category/jqzy">别具匠心</span>
-										  <span data-href="category/jqzy">别具匠心</span>
+										  <span data-href="category/message">碎言碎语</span>
+										  <span data-href="category/message">碎言碎语</span>
 									  </a>
 									  <audio src="" autoplay="autoplay"></audio>
 									  <p></p>
