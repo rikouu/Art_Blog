@@ -225,14 +225,14 @@
 </script>
 
 <!-- 判断用户当前是否登录成功开始 -->
-<?php  if (is_user_logged_in()){            
+<?php  /*if (is_user_logged_in()){            
 	   echo "<script>$('#username a:lt(3)').hide();
      $('#username a:gt(2)').show()</script>";          
 	 }           
 	 else {             
 	   echo "<script>$('#username a:lt(3)').show();
       $('#username a:gt(2)').hide();</script>";           
-	   };  
+	   };*/  
 ?>
 <!-- 判断用户当前是否登录 结束 -->
 
