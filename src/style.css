@@ -436,7 +436,7 @@ img:hover {
     height: 300px;
     margin: 88px auto 0px;
     border-bottom: 1px solid #fff;
-    background: #fff;
+    background: #f5f5f5;
     z-index: 10;
     display: none;
 }
@@ -2372,7 +2372,7 @@ div.com-art ul li {
     background: #f6f6f6 url(images/music.png) no-repeat center -4px;
     position: fixed;
     top: 133px;
-    right: 93px;
+    right: 85px;
     background-size: 35px 72px;
     cursor: pointer;
     z-index: 1000;
