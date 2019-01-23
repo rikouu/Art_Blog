@@ -162,7 +162,7 @@
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-2.1.4.min.js"></script>
 
 <!-- 百度自动推送start -->
-<script>
+<!-- <script>
 (function(){
     var bp = document.createElement('script');
     var curProtocol = window.location.protocol.split(':')[0];
@@ -175,7 +175,7 @@
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
-</script>
+</script> -->
 <!-- 百度自动推送end -->
 
 <!-- 网站运行时间 -->
@@ -225,14 +225,14 @@
 </script>
 
 <!-- 判断用户当前是否登录成功开始 -->
-<?php  if (is_user_logged_in()){            
+<?php  /*if (is_user_logged_in()){            
 	   echo "<script>$('#username a:lt(3)').hide();
      $('#username a:gt(2)').show()</script>";          
 	 }           
 	 else {             
 	   echo "<script>$('#username a:lt(3)').show();
       $('#username a:gt(2)').hide();</script>";           
-	   };  
+	   };*/  
 ?>
 <!-- 判断用户当前是否登录 结束 -->
 

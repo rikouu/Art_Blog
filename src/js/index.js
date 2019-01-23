@@ -1,7 +1,8 @@
 $.noConflict();
 jQuery(function ($) {
-    if (window.location.href == "https://www.weipxiu.com" && window.location.href == "https://www.weipxiu.com/") {
+    if (window.location.href != "https://www.weipxiu.com" && window.location.href != "https://www.weipxiu.com/") {
         // $(".continar-right .aside .video-js").remove();
+        $("body > .continar").css("margin-top","88px");
     }
 
     //点击图片放大全屏start
