@@ -1684,8 +1684,9 @@ div.com-art ul li {
 }
 
 .continar-left div.key-w .single_lable {
-  display: table;
   height: 0.55rem;
+  line-height: 0.55rem;
+  float: left;
 }
 
 .continar-left p.l {
@@ -1735,7 +1736,7 @@ div.com-art ul li {
 }
 
 div.key-w {
-  margin: 0.2rem 0 0.5rem;
+  margin: 0.2rem 0 0.9rem;
   font-size: 14px;
   padding-top: 0.25rem;
   clear: both;
@@ -1750,8 +1751,8 @@ div.key-w {
   background: #f1f1f1;
   margin: 0 5px;
   border-radius: 3px;
-  display: inline-block;
   background: #1890ff;
+  float: left;
 }
 
 div.key-w a:hover {
@@ -2085,8 +2086,8 @@ p.text-post > span {
 
 p.text-post a {
   font-size: 0.3rem;
-  float: right;
-  width: calc(100% - 60px);
+  float: left;
+  width: calc(100% - 65px);
 }
 
 .ds-comments-info {
@@ -3540,6 +3541,8 @@ p.reward-p {
   height: 2rem;
   margin: 0.2rem auto 0;
   padding: 0.1rem;
+  background-color: transparent;
+  box-shadow: none;
 }
 .post_content .commentform-info input {
   width: 100%;

@@ -2053,12 +2053,14 @@ i {
     -webkit-transition: 0.35s;
     -o-transition: 0.35s;
     transition: 0.35s;
+    border: 1px solid #eee;
 }
-
-.friendship ul li:hover {
-    width: 45%;
+.friendship ul li i.iconfont{
+    left:5px;
 }
-
+.friendship ul li:nth-last-of-type(2n){
+	border-left:0
+}
 .daily-title {
     position: relative;
     padding-left: 12px;
