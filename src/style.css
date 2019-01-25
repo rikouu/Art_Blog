@@ -1991,8 +1991,6 @@ i {
 }
 
 .daily-list > p {
-  margin-bottom: 7px;
-  border-bottom: 1px solid #eee;
   line-height: 27px;
   padding: 0px 15px 10px 15px;
 }
@@ -2030,7 +2028,6 @@ i {
 }
 
 .daily-list ul {
-  padding: 2px 15px;
   overflow: hidden;
 }
 
@@ -2063,13 +2060,15 @@ i {
   transition: 0.35s;
   border: 1px solid #eee;
   margin-bottom: -1px;
-  padding: 1px 0;
+  border-left: 0;
+  padding: 1px 0 1px 10px;
 }
 .friendship ul li i.iconfont {
   left: 5px;
 }
+
 .friendship ul li:nth-of-type(2n) {
-  border-left: 0;
+  border-right: 0;
 }
 .daily-title {
   position: relative;
@@ -2152,7 +2151,7 @@ div.com-art ul li {
   display: inline-block;
   position: absolute;
   top: 6px;
-  left: 0;
+  left: 10px;
   text-align: center;
   font-size: 14px;
 }
@@ -4942,7 +4941,7 @@ ul.post-categories li:first-child {
   -webkit-animation: fade-in 1.2s;
   font-size: 12px;
 }
-
+#web-tj ul{padding:0 15px}
 #web-tj ul li {
   float: left;
   line-height: 26px;
