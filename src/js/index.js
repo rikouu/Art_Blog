@@ -154,7 +154,9 @@ jQuery(function ($) {
 
     // 跳动的Logo start
     $("#Logo").hover(function () {
-            $("#dj li").css("animation", "move .5s alternate");
+            $("#dj li").css("WebkitAnimation", "move 0.5s ease 0s 1 alternate none running");
+            $("#dj li").css("animation", "move 0.5s ease 0s 1 alternate none running");
+
         },
         function () {
             $('#dj li').attr("style", "");

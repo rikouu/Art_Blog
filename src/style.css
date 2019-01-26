@@ -1352,20 +1352,20 @@ i {
 
 #Logo ul li:nth-child(1) {
   background: url(images/logo_02.png);
-  -webkit-animation: move 0.2s 0.1s infinite alternate;
-  animation: move 0.2s 0.1s infinite alternate;
+  -webkit-animation: move 0.2s 4.1s infinite alternate;
+  animation: move 0.2s 5.1s infinite alternate;
 }
 
 #Logo ul li:nth-child(2) {
   background: url(images/logo_03.png);
-  -webkit-animation: move 0.2s 0.2s infinite alternate;
-  animation: move 0.2s 0.2s infinite alternate;
+  -webkit-animation: move 0.2s 4.2s infinite alternate;
+  animation: move 0.2s 5.2s infinite alternate;
 }
 
 #Logo ul li:nth-child(3) {
   background: url(images/logo_04.png);
-  -webkit-animation: move 0.2s 0.3s infinite alternate;
-  animation: move 0.2s 0.3s infinite alternate;
+  -webkit-animation: move 0.2s 4.3s infinite alternate;
+  animation: move 0.2s 5.3s infinite alternate;
 }
 
 /*#Logo:hover #dj li {
@@ -1853,8 +1853,6 @@ i {
 .continar-right .aside {
   background: #fff;
   margin-bottom: 20px;
-  -webkit-box-shadow: 0 1px 2px #c5c5c5;
-  box-shadow: 0 1px 2px #c5c5c5;
   border: 1px solid #eaeaea;
   border-radius: 4px;
   padding: 0 15px 10px 15px;
@@ -1865,8 +1863,8 @@ i {
 }
 
 .continar-right .aside:hover {
-  -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  /* -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); */
 }
 
 .continar-right .aside h3 {
@@ -1961,8 +1959,6 @@ i {
 .widget {
   background: #fff;
   margin-bottom: 20px;
-  -webkit-box-shadow: 0 1px 2px #c5c5c5;
-  box-shadow: 0 1px 2px #c5c5c5;
   border: 1px solid #eaeaea;
   border-radius: 4px;
   -webkit-transition: all 0.35s;
@@ -1979,10 +1975,6 @@ i {
   padding: 5px 9px;
 }
 
-.widget:hover {
-  -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-}
 
 .daily-list {
   font-size: 15px;
@@ -1992,7 +1984,7 @@ i {
 
 .daily-list > p {
   line-height: 27px;
-  padding: 0px 15px 10px 15px;
+  padding: 0px 15px 8px 15px;
 }
 
 .daily-list > p:last-child {
@@ -2028,6 +2020,7 @@ i {
 }
 
 .daily-list ul {
+  padding:2px 15px;
   overflow: hidden;
 }
 
@@ -2052,7 +2045,9 @@ i {
   text-overflow: ellipsis;
   width: 100%;
 }
-
+.friendship ul {
+    padding:0
+}
 .friendship ul li {
   width: 50%;
   -webkit-transition: 0.35s;
@@ -2193,8 +2188,6 @@ div.com-art ul li {
   margin-bottom: 15px;
   background-color: #fff;
   border-radius: 4px;
-  -webkit-box-shadow: 0 1px 2px #c5c5c5;
-  box-shadow: 0 1px 2px #c5c5c5;
   border: 1px solid #eaeaea;
   overflow: hidden;
   -webkit-transition: all 0.35s;
@@ -2229,11 +2222,6 @@ div.com-art ul li {
 .items a:hover {
   color: #fff;
   background: #1890ff;
-}
-
-.classif:hover {
-  -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .pagination {
@@ -2312,7 +2300,8 @@ div.com-art ul li {
   top: -20px;
   left: 0;
   background: #ccc;
-  background: linear-gradient(to right top, #fcfcfa, #f1f1ef);
+  background: -webkit-linear-gradient(#f1f1ef, #FBFBF9);
+  background: linear-gradient(#f1f1ef, #FBFBF9);
 }
 
 .container {
@@ -4941,7 +4930,6 @@ ul.post-categories li:first-child {
   -webkit-animation: fade-in 1.2s;
   font-size: 12px;
 }
-#web-tj ul{padding:0 15px}
 #web-tj ul li {
   float: left;
   line-height: 26px;
