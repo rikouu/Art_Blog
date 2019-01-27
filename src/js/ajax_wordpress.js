@@ -8,7 +8,7 @@ $(function () {
     var ajaxhome = 'https://www.weipxiu.com/';
     var ajaxcontent = 'ajax_centent';
     var ajaxsearch_class = 'searchform';
-    var ajaxignore_string = new String('#, /?cat=, /wp-, .pdf, .zip, .rar, /goto, .html');
+    var ajaxignore_string = new String('#, /?cat=, /wp-, .pdf, .zip, .rar, /goto, .html, category');
     var ajaxignore = ajaxignore_string.split(', ');
     //var ajaxloading_code = 'loading';
     var ajaxloading_error_code = 'error';

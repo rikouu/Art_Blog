@@ -469,10 +469,9 @@ img:hover {
   height: 100%;
   border-top: 1px solid #fff;
   box-sizing: border-box;
-  background: #eaebed;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#d4d7db');
   background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#d4d7db));
   background: -moz-linear-gradient(top, #fff, #d4d7db);
+  background: linear-gradient(#fff, #d4d7db);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -2205,7 +2204,7 @@ div.com-art ul li {
   color: #999;
   background-color: #f6f6f6;
   float: left;
-  width: 32.67%;
+  width: 100.61px;
   margin: 0 1% 1% 0;
   padding: 0 8px;
   font-size: 12px;

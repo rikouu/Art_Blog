@@ -22,8 +22,7 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"><!--强制https-->
     <meta http-equiv="x-dns-prefetch-control" content="on">
 	<link rel="dns-prefetch" href="https://www.weipxiu.com/">
-    <title>
-    <?php the_title(); ?>&nbsp;|&nbsp;关注WEB前端开发技术&nbsp;-&nbsp;唯品秀博客</title>
+    <title><?php the_title(); ?>&nbsp;-&nbsp;唯品秀&nbsp;-&nbsp;前端开发&nbsp;|&nbsp;web前端技术博客</title>
     <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="<?php bloginfo('template_url'); ?>/css/style-ios.css">

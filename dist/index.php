@@ -98,7 +98,7 @@
 							<i class="light"></i>
 						</a>
 					</div>
-					<a href="https://www.weipxiu.com/404" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display"
+					<a href="https://www.weipxiu.com/404.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display"
 					 target="_blank">
 						<div class="carousel_small_str txt_bg01">
 							<h3 class="img_txt_title">404</h3>
