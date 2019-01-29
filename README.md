@@ -2,7 +2,7 @@
 
 # https://www.weipxiu.com
 
-> 一款基于jquery2.1.4开发的wordpress主题2.0版
+> 一款基于jquery2.1.4+js+H5/CSS3开发的wordpress主题2.0版
 
 > 主题介绍：https://www.weipxiu.com/?cat=10
 
@@ -38,7 +38,7 @@
 
 > 1、wordpress主题制作有特别要求，例如主题根目录必须存在header.php、index.php、footer.php、style.css，否则是不认，无法加载的。因此不用觉得某些文件摆放不合理，存在必定有意义
 
-> 2、为了更佳浏览效果，该主题对IE10及其以下浏览器作了屏蔽跳转
+> 2、为了最佳浏览效果，该主题对IE9及其以下浏览器作了屏蔽跳转
 
 > 3、基于css文件作了根据终端分割，所以你会看到主题根目录下有三个css文件，有利有弊，不做过多评论
 
