@@ -7,10 +7,13 @@
 	<!-- <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/video.js/video.min.js"></script> -->
 	<!-- 判断低版本IE -->
 	<script>
-		 if ((navigator.userAgent.indexOf('MSIE') >= 0) 
-			&& (navigator.userAgent.indexOf('Opera') < 0)){
-			window.location.href="<?php bloginfo('template_url'); ?>/reminder.php";/*判断IE5-10*/
-		 }
+		//  if ((navigator.userAgent.indexOf('MSIE') >= 0) 
+		// 	&& (navigator.userAgent.indexOf('Opera') < 0)){
+		// 	window.location.href="<?php bloginfo('template_url'); ?>/reminder.php";/*判断IE5-10*/
+		//  }
+		 if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<10){
+			window.location.href="<?php bloginfo('template_url'); ?>/reminder.php";/*判断<IE9*/
+    }
     </script>
 	<!-- IE禁止页面快捷保存，导致盗窃 -->
 	<noscript><iframe src=*></iframe></noscript>
