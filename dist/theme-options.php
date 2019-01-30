@@ -6,7 +6,7 @@ function themeoptions_admin_menu() {
 if ( isset($_POST['update_themeoptions']) && $_POST['update_themeoptions'] == 'true' ) themeoptions_update();
 function themeoptions_page() {
   // 获取提交的数据
-  $a_options = get_option('xm_vue_options');
+  $a_options = get_option('weipxiu_options');
   //加载上传图片的js(wp自带)
   wp_enqueue_script('thickbox');
   //加载css(wp自带)
@@ -18,9 +18,9 @@ function themeoptions_page() {
     <ul class="nav-wrap clearfix">
       <li class="nav-list on">基本</li>
       <li class="nav-list">SEO</li>
-      <li class="nav-list">图片</li>
-      <li class="nav-list">社交</li>
-      <li class="nav-list">自定义代码</li>
+      <li class="nav-list">图片(暂不支持)</li>
+      <li class="nav-list">社交(暂不支持)</li>
+      <!-- <li class="nav-list">自定义代码</li> -->
     </ul>
     <form method="post" action="">
       <input type="hidden" name="update_themeoptions" value="true">
@@ -46,7 +46,7 @@ function themeoptions_page() {
           </div>
         </div>
         <div class="row clearfix">
-          <label class="fl left-wrap">是否开启文字头像：</label>
+          <label class="fl left-wrap">首页电子邮件订阅：</label>
           <div class="fr right-wrap">
             <label for="text-pic-on">开</label>
             <input
@@ -66,9 +66,10 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
-          <label for="domain" class="fl left-wrap">站点前端域名：</label>
+          <label for="domain" class="fl left-wrap">站点域名：</label>
           <div class="fr right-wrap">
 						<input
+              placeholder="例如https://www.weipxiu.com，结尾不要带/"
 							type="text"
 							class="url-inp"
 							name="domain"
@@ -367,7 +368,7 @@ function themeoptions_page() {
         </div>
       </div>
       <!-- 内容五 自定义代码 -->
-      <div class="content-wrap content5">
+      <!-- <div class="content-wrap content5">
         <div class="row clearfix">
           <label class="fl left-wrap" for="login-css">后台登录页面css（不需要style标签）：</label>
           <div class="fr right-wrap">
@@ -380,7 +381,7 @@ function themeoptions_page() {
             <textarea id="details-css" name="details-css" rows="8" cols="100"><?php echo $a_options['details_css']; ?></textarea>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="row btn-wrap">
         <input type="submit" class="submit-btn" name="bcn-admin-options" value="保存更改">
       </div>
@@ -435,7 +436,7 @@ function themeoptions_page() {
 				)
 			)
     );
-    update_option('xm_vue_options', stripslashes_deep($options));
+    update_option('weipxiu_options', stripslashes_deep($options));
 	}
 	add_action('admin_menu', 'themeoptions_admin_menu');
 ?>

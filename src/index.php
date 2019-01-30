@@ -5,8 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="baidu-site-verification" content="cNP7vhhXuw" />
 	<meta name="Author" content="李俊" />
-	<meta name="description" content="唯品秀个人博客，关注Web前端开发技术，移动前端开发，前端资讯，同时分享前端资源和工具等，支持普通用户注册登录会员分享前端技术经验，期待你的参与！" />
-	<meta name="keywords" content="唯品秀，唯品秀个人博客,web前端博客，网页制作，唯品会博客，新浪博客,腾讯博客，HTML5/CSS3，Javascript，Vue.js，Angular.js，node.js" />
+	<meta name="description" content="<?php echo get_option('weipxiu_options')['description']; ?>" />
+	<meta name="keywords" content="<?php echo get_option('weipxiu_options')['keywords']; ?>" />
 	<meta name="format-detection" content="telephone=no" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
@@ -220,16 +220,22 @@
 			</aside>
 			<!-- 博客介绍结束 -->
 			<!-- 邮件订阅start -->
-			<div class="inner-box">
-				<div class="rssbook">
-					<h3 class="info">您也可以通过电子邮件订阅每日的更新，不定时为您推送优质文章</h3>
-					<p>我们不会公开您的邮箱，您可以随时取消订阅</p>
-					<p><?php the_field('bannerUrl_1'); ?></p>
-					<div class="mailInput">
-						<?php echo wpm_form(1); ?>
+			<?php 
+			if (get_option('weipxiu_options')['text_pic'] == 'on'){
+			?>
+				<div class="inner-box">
+					<div class="rssbook">
+						<h3 class="info">您也可以通过电子邮件订阅每日的更新，不定时为您推送优质文章</h3>
+						<p>我们不会公开您的邮箱，您可以随时取消订阅</p>
+						<p><?php the_field('bannerUrl_1'); ?></p>
+						<div class="mailInput">
+							<?php echo wpm_form(1); ?>
+						</div>
 					</div>
 				</div>
-			</div>
+			<?php
+				}
+			?>
 			<!-- 邮件订阅end -->
 			<!-- 文章start -->
 			<!-- <?php /*$posts = query_posts($query_string . '&orderby=date&showposts=12'); ?>

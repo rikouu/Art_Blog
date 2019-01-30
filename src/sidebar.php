@@ -11,8 +11,9 @@
     <!-- <img src="<?php bloginfo('template_url'); ?>/images/s1.png" width="328" height="185" alt="" style="display: block;width:100%;margin-top:10px;background-size: 330px 185px;"> -->
     <div class="textwidget">
         <p class="clearfix">
-            唯品秀博客: weipxiu.com，一个关注Web前端开发技术、关注用户体验、坚持更多原创实战教程的个人网站，
-            愿景：成为宇宙中最具有代表性的前端博客，期待您的参与,<a rel="nofollow" target="_blank" href="/?cat=10">了解更多...</a>
+            <?php 
+                echo get_option('weipxiu_options')['sidebar_notice'];
+            ?>
         </p>
         <ul class="social">
             <ul class="social">

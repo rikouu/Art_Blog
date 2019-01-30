@@ -6,7 +6,7 @@ function themeoptions_admin_menu() {
 if ( isset($_POST['update_themeoptions']) && $_POST['update_themeoptions'] == 'true' ) themeoptions_update();
 function themeoptions_page() {
   // 获取提交的数据
-  $a_options = get_option('xm_vue_options');
+  $a_options = get_option('weipxiu_options');
   //加载上传图片的js(wp自带)
   wp_enqueue_script('thickbox');
   //加载css(wp自带)
@@ -435,7 +435,7 @@ function themeoptions_page() {
 				)
 			)
     );
-    update_option('xm_vue_options', stripslashes_deep($options));
+    update_option('weipxiu_options', stripslashes_deep($options));
 	}
 	add_action('admin_menu', 'themeoptions_admin_menu');
 ?>

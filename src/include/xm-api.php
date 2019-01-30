@@ -40,21 +40,21 @@ function add_get_blog_info ()
     $newComment[$i] -> title = get_the_title($newComment[$i] -> comment_post_ID);
   }
   $array = array(
-    'baseUrl' => get_option('xm_vue_options')['domain'],
-    'isTextThumbnail' => get_option('xm_vue_options')['text_pic'],
-    'detailsCss' => get_option('xm_vue_options')['details_css'],
+    'baseUrl' => get_option('weipxiu_options')['domain'],
+    'isTextThumbnail' => get_option('weipxiu_options')['text_pic'],
+    'detailsCss' => get_option('weipxiu_options')['details_css'],
     'adminAjax' => admin_url('admin-ajax.php'),
-    'templeteUrl' => get_option('xm_vue_options')['domain'] . '/wp-content/themes/' . get_option('template'),
+    'templeteUrl' => get_option('weipxiu_options')['domain'] . '/wp-content/themes/' . get_option('template'),
     'contentUrl' => '/wp-content',
     'blogName' => get_bloginfo('name'),
     'blogDescription' => get_bloginfo('description'),
-    'rewardText' => get_option('xm_vue_options')['reward_text'],
-    'alipay' => get_option('xm_vue_options')['alipay'],
-    'wechatpay' => get_option('xm_vue_options')['wechatpay'],
+    'rewardText' => get_option('weipxiu_options')['reward_text'],
+    'alipay' => get_option('weipxiu_options')['alipay'],
+    'wechatpay' => get_option('weipxiu_options')['wechatpay'],
     'adminPic' => get_the_author_meta('simple_local_avatar', 1),
-    'setExtend' => get_option('xm_vue_options'),
-    'banner' => get_option('xm_vue_options')['banner'],
-    'logo' => get_option('xm_vue_options')['logo'],
+    'setExtend' => get_option('weipxiu_options'),
+    'banner' => get_option('weipxiu_options')['banner'],
+    'logo' => get_option('weipxiu_options')['logo'],
     'tagCloud' => get_tags(array('orderby' => 'count', 'order' => 'DESC')),
     'getAllCountArticle' => wp_count_posts() -> publish,
     'getAllCountCat' => wp_count_terms('category'),
@@ -62,8 +62,8 @@ function add_get_blog_info ()
     'getAllCountPage' => wp_count_posts('page') -> publish,
     'getAllCountComment' => $wpdb -> get_var("SELECT COUNT(*) FROM $wpdb->comments"),
     'lastUpDate' => $last,
-    'getSidebarCount' => get_option('xm_vue_options')['aside_count'],
-    'link' => get_option('xm_vue_options')['link'],
+    'getSidebarCount' => get_option('weipxiu_options')['aside_count'],
+    'link' => get_option('weipxiu_options')['link'],
     'newArticle' => $wpdb -> get_results("SELECT ID,post_title FROM $wpdb->posts where post_status='publish' and post_type='post' ORDER BY ID DESC LIMIT 0 , 10"),
     'newComment' => $newComment
   );
@@ -296,7 +296,7 @@ function get_author_class ($comment_author_email)
 {
   global $wpdb;
   $adminEmail = get_bloginfo('admin_email');
-  $styleClass = get_option('xm_vue_options')['vip_style'];
+  $styleClass = get_option('weipxiu_options')['vip_style'];
   $author_count = count($wpdb -> get_results("SELECT comment_ID as author_count FROM $wpdb->comments WHERE comment_author_email = '$comment_author_email'"));
   if ($comment_author_email == $adminEmail) {
     return array('style' => $styleClass, 'level' => 'vip7', 'admin' => true, 'title' => '博主');
