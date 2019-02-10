@@ -10,7 +10,7 @@
 	<meta http-equiv="x-dns-prefetch-control" content="on">
 	<link rel="dns-prefetch" href="https://www.weipxiu.com/">
 	<title>唯品秀个人博客&nbsp;|&nbsp;关注WEB前端开发技术_关注用户体验</title>
-	<link rel="shortcut icon" type="image/x-icon" href="https://www.weipxiu.com/wp-content/themes/boke/favicon.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
 	<style>
 		@font-face { 
 		  font-family: "SF Pro Text"; 
@@ -31,7 +31,7 @@
 		width:100%;
 		height:100%;
 		background:url("images/xbj.gif");
-		background:url("https://www.weipxiu.com/wp-content/themes/boke/images/body.png");
+		background:url("<?php bloginfo('template_url'); ?>/images/body.png");
 		background-repeat:repeat;
 		background-attachment:scroll;
 		background-clip:border-box;

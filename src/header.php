@@ -54,7 +54,7 @@
 		 </div>
 		 <!--移动端头部end-->
 		 <div class="header">
-		 		<div style="height:2px;background: #29d; animation: hue 20s infinite linear;overflow: hidden; width:100%;">
+		 		<div style="height:2px;background:url(<?php bloginfo('template_url'); ?>/images/header_bj.gif); animation: hue 20s infinite linear;overflow: hidden; width:100%;">
 				</div>
 		 		<!-- <div class="header_top">
 			 		<div class="header-list">

@@ -38,7 +38,7 @@
                        </m> <span class="verify_1"></span></a> 
                      </div> 
                      <div class="head_avatar_a">
-                      <p>Admin<i class="img-icon icon_male"></i><span title="等级：45级" style="vertical-align: 0px;" class="lv lv45"></span> <a href="/author/0?info=vip#user_menu" title="VIP 6" class="vip_aa"><img src="https://www.weipxiu.com/wp-content/themes/boke/images/vip9.png" class="vip_ico vip6" /></a></p>
+                      <p>Admin<i class="img-icon icon_male"></i><span title="等级：45级" style="vertical-align: 0px;" class="lv lv45"></span> <a href="/author/0?info=vip#user_menu" title="VIP 6" class="vip_aa"><img src="<?php bloginfo('template_url'); ?>/images/vip9.png" class="vip_ico vip6" /></a></p>
                      </div> 
                      <div class="head_avatar_b">
                         <p> 管理员 </p>
@@ -122,7 +122,7 @@
                     唯品秀个人博客，是我首次创建的个人博客，主要用于记录学习前端学习、工作笔记、心得的地方，抒发自己情感的地方，在今后的岁月里会慢慢来打磨并持续更新维护。
                 </p>
                 <p class="px">
-                    此网站后台采用WordPress，前端模块完全自主开发(自主开发不代表不参考，如有雷同纯属巧合。。。)，运用大量js+css3运动，整体页面华丽的同时也会暗藏bug，尽管本人多次测试，但难免在众多设备或不同人不同见解下任有所不足之处，如有好的意见欢迎给我留言，博客会适当改进，慢慢改版。最后感谢大家的关注，尤其谢谢<a href="https://www.weipxiu.com/wp-content/themes/boke/thanks.php">各位</a>提供的帮助！
+                    此网站后台采用WordPress，前端模块完全自主开发(自主开发不代表不参考，如有雷同纯属巧合。。。)，运用大量js+css3运动，整体页面华丽的同时也会暗藏bug，尽管本人多次测试，但难免在众多设备或不同人不同见解下任有所不足之处，如有好的意见欢迎给我留言，博客会适当改进，慢慢改版。最后感谢大家的关注，尤其谢谢<a href="<?php bloginfo('template_url'); ?>/thanks.php">各位</a>提供的帮助！
                 </p>
                 <p class="px">
                     也有人说，你花那么多时间去自己开发和维护这么一个小小个人博客网站有多大意义？这种网站只要有1-2年前端经验的就可以去完成，开发完了又开源出来供大家免费使用，
@@ -132,7 +132,7 @@
                     也是一件有趣的事情。
                 </p>
                 <!-- <p class="px">
-                    最后感谢大家的关注，尤其谢谢<a href="https://www.weipxiu.com/wp-content/themes/boke/thanks.php">各位</a>提供的帮助！
+                    最后感谢大家的关注，尤其谢谢<a href="<?php bloginfo('template_url'); ?>/thanks.php">各位</a>提供的帮助！
                 </p>
                 <p class="px">
                     网址:<a href="https://www.weipxiu.com" target="_blank">www.weipxiu.com</a>
