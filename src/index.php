@@ -247,6 +247,10 @@
 			?>
 
 			<div class="text">
+				<!-- <div class="mod-category__article-time">
+					<span>2018/10</span>
+					<span>23&nbsp;&nbsp;周二</span>
+				</div> -->
 				<div class="img-left">
 					<a class="read-more" href="<?php the_permalink(); ?>" target="_blank">
 						<?php
