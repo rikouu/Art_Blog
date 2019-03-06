@@ -3701,7 +3701,7 @@ div.jy p {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    margin: 50px 0 15px;
+    margin: 50px 0;
     text-align: -moz-center;
     text-align: center;
 }
