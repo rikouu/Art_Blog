@@ -1,4 +1,15 @@
 <?php
+//首页缓存控制
+function Cache_Control(){
+	if(is_home()){
+		header('Cache-Control: max-age=3600');
+	}
+	if(is_single()){
+		header('Cache-Control: max-age=36000');
+	}
+}
+add_action( 'wp', 'Cache_Control' );
+
 if (is_admin()) require ('include/xm-theme-options.php');
 
 //注册菜单
