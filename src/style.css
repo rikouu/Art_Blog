@@ -1882,11 +1882,6 @@ i {
     border-bottom: 0;
 }
 
-.continar-right .aside:hover {
-    /* -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); */
-}
-
 .continar-right .aside h3 {
     font-size: 15px;
     color: #fff;
@@ -6769,9 +6764,6 @@ label {
     overflow: hidden;
     padding: 5px 0px 5px 11px;
     line-height: 15px;
-}
-#primary-sidebar ul li span{
-  /* padding-left:5px */
 }
 #primary-sidebar ul:after,
 .widget ul:before {
