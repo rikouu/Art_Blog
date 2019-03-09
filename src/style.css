@@ -5110,15 +5110,11 @@ ul.post-categories li:first-child {
 /*banner动画end*/
 
 /*首页弹窗开始*/
-
-.gradient {
+#curriculum {
     background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffe7e2));
     background: -o-linear-gradient(top, #ffffff, #ffe7e2);
     background: linear-gradient(top, #ffffff, #ffe7e2);
     background: -webkit-linear-gradient(top, #ffffff, #ffe7e2);
-}
-
-#curriculum {
     width: 400px;
     height: 48px;
     z-index: 999;
@@ -6160,6 +6156,7 @@ p.data-l span {
     margin-bottom: 5px;
     float: left;
     left: 0;
+    transform: rotate(0deg);
 }
 
 .mod-index__feature .img_list_3pic {
