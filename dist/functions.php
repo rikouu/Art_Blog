@@ -10,6 +10,7 @@ function Cache_Control(){
 }
 add_action( 'wp', 'Cache_Control' );
 
+// 引入模板主题设置文件
 if (is_admin()) require ('include/xm-theme-options.php');
 
 //注册菜单
@@ -91,6 +92,7 @@ function setPostViews($postID) {
     }
 }
 add_filter('show_admin_bar', '__return_false'); //去掉默认顶端导航条
+
 //时间显示方式‘xx以前’
 function time_ago($type = 'commennt', $day = 7) {
     $d = $type == 'post' ? 'get_post_time' : 'get_comment_time';
