@@ -1747,7 +1747,13 @@ i {
 .text h2 a:hover {
     color: #1890ff;
 }
-
+.con_info {
+    color: #888888;
+    border: 1px solid #F3F3F3;
+    padding: 10px;
+    margin: 10px auto 0;
+    background: none repeat 0 0 #F6F6F6;
+}
 .text em {
     position: absolute;
     right: 15px;

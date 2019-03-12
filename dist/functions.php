@@ -263,7 +263,7 @@ if (!is_admin()) { // 后台不禁止
 }
 wp_deregister_script('l10n');
 add_action('after_wp_tiny_mce', 'add_button_mce');
-function add_button_mce($mce_settings) { //扩充发表文章编辑器的导航标签
+function add_button_mce($mce_settings) { //扩展发表文章编辑器的导航标签
     
 ?>
 <script type="text/javascript">
@@ -272,6 +272,7 @@ function add_button_mce($mce_settings) { //扩充发表文章编辑器的导航�
     QTags.addButton( 'p', 'p', "<p>", "</p>" );
     QTags.addButton( 'li', 'li', "<li>", "</li>" );
     QTags.addButton( 'span', 'span', "\n<span>", "</span>" );
+    QTags.addButton( 'preface', 'preface', "\n<p class='con_info'>", "</p>" );
     QTags.addButton( 'h1', 'h1', "\n<h1>", "</h1>" );
     QTags.addButton( 'h4', 'h4', "\n<h4>", "</h4>" );
     QTags.addButton( 'h5', 'h5', "\n<h5>", "</h5>" );
