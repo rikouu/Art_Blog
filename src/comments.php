@@ -9,7 +9,7 @@ if ( post_password_required() )
     <?php paginate_comments_links(array('prev_next'=>true)); ?>
     </nav>
     <?php if(comments_open()) : ?>
-        <div id="respond" class="respond" role="form">
+        <div class="respond" role="form">
             <h2 id="reply-title" class="comments-title"><?php comment_form_title( '', '回复给 %s' ); ?> 
                 <small>
                     <?php cancel_comment_reply_link(); ?>

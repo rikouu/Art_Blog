@@ -2643,10 +2643,6 @@ div.com-art ul li {
     text-decoration: underline;
 }
 
-.continar-left p.text-post-top {
-    margin: 5px 0;
-}
-
 .continar-left p.l {
     font-size: 14px;
     line-height: 36px;
@@ -2673,7 +2669,7 @@ div.com-art ul li {
 }
 
 .continar-left div.key-w {
-    padding-top: 25px;
+    padding:25px 0 10px;
     border-top: 1px solid #f1f1ef;
 }
 
@@ -6268,7 +6264,7 @@ p.data-l span {
     position: absolute;
     height: 85px;
     width: 110px;
-    background-image: url(https://www.weipxiu.com/wp-content/themes/boke/images/block.c41dc5e3.png);
+    background-image: url(https://www.weipxiu.com/wp-content/themes/boke/images/min_nav_bg.png);
     background-repeat: no-repeat;
     top: 0;
     left: 0;

@@ -187,7 +187,7 @@
                         <?php the_tags('','',''); ?>
                     </div>
                     <p class="text-post text-post-top">
-                        <?php if (get_previous_post()) { previous_post_link('<span>上一篇：</span>%link');} else {echo "没有了，已经是最后文章";} ?>
+                        <?php if (get_previous_post()) { previous_post_link('<span  id="respond">上一篇：</span>%link');} else {echo "没有了，已经是最后文章";} ?>
                     </p>
                     <p class="text-post">
                         <?php if (get_next_post()) { next_post_link('<span>下一篇：</span>%link');} else {echo "下一篇：没有了，已经是最新文章";} ?>

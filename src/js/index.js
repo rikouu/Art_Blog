@@ -4,6 +4,12 @@ jQuery(function ($) {
         // $(".continar-right .aside .video-js").remove();
         $("body > .continar").css("margin-top","88px");
     }
+    // 评论区域样式兼容
+    setTimeout(function(){
+        if($("#reply-title a").is(":hidden")){
+            $("#reply-title").hide();
+        }
+    })
     //点击图片放大全屏start
     var runPrefixMethod = function (element, method) {
         var usablePrefixMethod;
