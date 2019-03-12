@@ -30,7 +30,7 @@
 	</script>
 
 	<!-- 雪花start -->
-	<div id="snowMask"></div>
+	<!-- <div id="snowMask"></div> -->
 	<!-- 雪花end -->
 
 	<!-- 头部start -->
