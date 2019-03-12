@@ -6413,14 +6413,6 @@ p.data-l span {
 comments
 */
 
-.comments-title {
-    position: relative;
-    padding: 7px 0;
-    font-size: 18px;
-    color: #666;
-    border-bottom: 1px solid #f1f1f1;
-}
-
 .commentlist {
     list-style: none;
     margin: 10px 0 0;
@@ -6459,7 +6451,7 @@ comments
 
 .comment .media-body .author_name {
     margin-bottom: 5px;
-    font-size: 16px;
+    font-size: 14px;
     color: #777;
 }
 
@@ -6615,7 +6607,7 @@ input#submit {
 
 .comments-title {
     position: relative;
-    padding-bottom: 2px;
+    padding: 7px 0;
     font-size: 16px;
     color: #666;
     border-bottom: 1px solid #f1f1f1;

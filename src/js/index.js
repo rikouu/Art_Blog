@@ -4,7 +4,6 @@ jQuery(function ($) {
         // $(".continar-right .aside .video-js").remove();
         $("body > .continar").css("margin-top","88px");
     }
-
     //点击图片放大全屏start
     var runPrefixMethod = function (element, method) {
         var usablePrefixMethod;
