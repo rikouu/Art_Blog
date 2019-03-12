@@ -71,12 +71,16 @@
                             <?php the_title(); ?>
                         </h2>
                         <p class="data-l">
-                        <span><i class="iconfont icon-shijian1"></i>&nbsp;<?php the_time('Y年m月d日') ?></span>
-                            <span>作者:
-                                <?php the_author(); ?>
+                        <span>
+                            <i class="iconfont icon-shijian"></i>
+                                <?php the_time('Y年m月d日') ?>
                             </span>
                             <span>
-                                <i class="iconfont icon-liulan"></i>
+                            <i class="iconfont icon-zuozhe"></i>
+                                作者：<?php the_author(); ?>
+                            </span>
+                            <span>
+                                <i class="iconfont icon-kanguo"></i>
                                 <?php echo getPostViews(get_the_ID()); ?>次浏览</span>
                             <span>
                                 <!-- <a href="<?php the_permalink(); ?> ">
