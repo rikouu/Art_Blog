@@ -6604,16 +6604,11 @@ input#submit {
 .comments-title {
     position: relative;
     padding: 7px 0;
-    font-size: 16px;
     color: #666;
     border-bottom: 1px solid #f1f1f1;
     margin: 15px 0;
     text-align: center;
     background: #f5f5f5;
-}
-
-.commentCount {
-    font-size: 16px;
 }
 
 .warning-text {
