@@ -268,17 +268,17 @@ function add_button_mce($mce_settings) { //扩展发表文章编辑器的导航�
 ?>
 <script type="text/javascript">
     QTags.addButton( '注意', '注意', "<span class='beCareful'>", "</span>" );
-    QTags.addButton( 'a', 'a', "<a href=''>", "</a>" );
+    QTags.addButton( '加密内容', '加密内容', "[secret key='123']", "[/secret]" );
+    QTags.addButton( '前言', '前言', "<p class='con_info'>", "</p>" );
+    QTags.addButton( '超链接', '超链接', "<a href=''>", "</a>" );
+    QTags.addButton( '代码块', '代码块', "[cc lang='php']", "[/cc]" );
     QTags.addButton( 'p', 'p', "<p>", "</p>" );
     QTags.addButton( 'li', 'li', "<li>", "</li>" );
-    QTags.addButton( 'span', 'span', "\n<span>", "</span>" );
-    QTags.addButton( 'preface', 'preface', "\n<p class='con_info'>", "</p>" );
-    QTags.addButton( 'h1', 'h1', "\n<h1>", "</h1>" );
-    QTags.addButton( 'h4', 'h4', "\n<h4>", "</h4>" );
-    QTags.addButton( 'h5', 'h5', "\n<h5>", "</h5>" );
-    QTags.addButton( 'cc', 'cc', "\n[cc lang='php']", "[/cc]" );
-    QTags.addButton( 'secret', 'secret', "\n[secret key='123']", "[/secret]" );
-    QTags.addButton( 'embed', 'embed', "\n[embed]\n", "\n[/embed]" );
+    QTags.addButton( 'span', 'span', "<span>", "</span>" );
+    QTags.addButton( 'h1', 'h1', "<h1>", "</h1>" );
+    QTags.addButton( 'h4', 'h4', "<h4>", "</h4>" );
+    QTags.addButton( 'h5', 'h5', "<h5>", "</h5>" );
+    QTags.addButton( 'embed', 'embed', "[embed]", "[/embed]" );
 </script>
 <?php
 }
