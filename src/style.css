@@ -1748,7 +1748,9 @@ i {
     color: #1890ff;
 }
 .con_info {
-    background: none repeat 0 0 #F6F6F6;
+    background: #F6F6F6;
+    padding: 10px 15px;
+    border-radius: 4px;
 }
 .text em {
     position: absolute;
