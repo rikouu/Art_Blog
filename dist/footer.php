@@ -117,7 +117,7 @@
                     <div class="qqSmall">
                       <a target="_blank" href="https://amos.alicdn.com/getcid.aw?spm=a1z10.1-c.0.0.LyS6rO&v=3&groupid=0&s=1&charset=utf-8&uid=可爱天使5202012&site=cntaobao&groupid=0&s=1&fromid=cntaobao可爱天使5202012"
                         style="position: relative; overflow: hidden;">
-                        <img border="0" src="<?php bloginfo('template_url'); ?>/images/lixian_ww.gif" alt="点击这里给我发消息" style="vertical-align:middle;">
+                        <img src="<?php bloginfo('template_url'); ?>/images/lixian_ww.gif" alt="点击这里给我发消息" style="vertical-align:middle;">
                         <span class="image-overlay overlay-type-extern" style="display: none;">
                           <span class="image-overlay-inside"></span>
                         </span>
@@ -136,7 +136,6 @@
                       <a class="qq-kefu-qrCode" id="qq-kefu-qrCode" href="javascript:;"></a>
                       <a class="qq-kefu-backUp-2" id="qq-kefu-backUp" href="javascript:;"></a>
                       <div class="qqkefu-qrcode-box" pos="2">
-                        <!-- <img width="150" height="100" src="https://pan.baidu.com/share/qrcode?w=150&amp;h=150&amp;url=https://5usujian.com"> -->
                       </div>
                     </div>
                   </td>

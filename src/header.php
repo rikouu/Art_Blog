@@ -56,52 +56,6 @@
 		 <div class="header">
 		 		<div style="height:2px;background:url(<?php bloginfo('template_url'); ?>/images/header_bj.gif); animation: hue 20s infinite linear;overflow: hidden; width:100%;">
 				</div>
-		 		<!-- <div class="header_top">
-			 		<div class="header-list">
-			 			 <div id="username" style="margin:0 auto">
-				                <a href="https://www.weipxiu.com" style="padding-left: 3px;">喵，欢迎光临</a>
-					          	<a href="https://www.weipxiu.com/wp-login.php"><i class="fa fa-sign-in" style="display: inline-block;"></i>请登录</a>
-					          	<a href="https://www.weipxiu.com/wp-login.php?action=register"><i class="fa fa-user" style="display: inline-block;"></i>免费注册</a>
-					          	<a href="https://www.weipxiu.com/wp-admin/" target='_blank' style="padding-left: 3px;">
-					          		<?php  if (is_user_logged_in()){
-						          		$current_user = wp_get_current_user();
-						          		echo '欢迎您， ' . $current_user->display_name;
-						          		}
-					          	  	?>
-					          	</a>
-					          	<!-- <a href="https://www.weipxiu.com/wp-admin/" style="display: none; color:#fff" target="_blank"><i class="iconfont" style="color:#fff">&#xe654;</i>会员中心 
-					          	</a>
-			              </div>
-			              <div class="topbar">
-							  <div class="notice">
-									<ul>
-										<li><i class="fa fa-volume-up"></i>温馨提示：唯品秀个人博客2016/11/16正式上线了！</li>
-										<li><i class="fa fa-volume-up"></i>博客不定时更新、修复bug，若无法正常访问浏览，请稍后再试</li>
-										<li><i class="fa fa-volume-up"></i>欢迎各位前端伙伴注册登录会员，共同分享前端技巧</li>
-										<li><i class="fa fa-volume-up"></i>2018/09/18日最近更新：全站支持HTTPS，更安全、更放心</li>
-									</ul>
-							  </div>
-                              <ul class="last-ul">
-                              	  <li class="github">
-                              	  		<a href="https://github.com/weipxiu/weipxiu.github.io" target="_blank" title="Github @weipxiu">
-											<i class="iconfont icon-icongithub"></i>
-                              	  		</a>
-                              	  </li>
-                                  <li><a href="/?cat=29">前端工具箱</a></li>
-								  <li><a href="/?cat=10" target="_blank">联系我们</a></li>
-								  <li>
-								  	<a href="http://www.qmaile.com/" target="_blank">
-								  		Vip视频
-								  	</a>
-								  	<!-- <a href="https://www.weipxiu.com/sly.html" target="_blank">
-								  		S-Baby
-								  	</a> 
-								  </li>
-								  <li><a href="<?php bloginfo('template_url'); ?>/thanks.php" target="_blank">特别鸣谢</a></li>
-							  </ul>
-						  </div>
-					  </div>
-		 		</div>  -->
 		 		<div class="header-body">
 			 	    <div class="header-conter">
 						  <div class="nav">
@@ -113,7 +67,7 @@
 						          	  <li></li>
 						          </ul>
 						      </a>
-	                          <div class="nav-left"></div>
+	                <div class="nav-left"></div>
 						      <div class="brand">
 								  <p>关注前端开发</p>
 								  <p>HTML5、CSS3、Javascript</p>
@@ -201,7 +155,6 @@
 									<a href="/?cat=14">Js前端框架</a>
 									<a href="/?cat=22">Node.js基础</a>
 									<li><a href="/?cat=29">前端工具箱</a></li>
-									<!-- <li><a href="/?cat=10" target="_blank">联系我们</a></li>
 									<li>
 										<a href="http://www.qmaile.com/" target="_blank">
 											Vip视频
@@ -210,18 +163,18 @@
 							  </div>
 							  <div class="nav-min nav-min-1">
 									<a href="https://www.weipxiu.com/works/grjl/index.html" target="_blank">炫酷个人简历</a>
-							        <a href="https://www.weipxiu.com/works/h5-7_vip/index.html" target="_blank">H5响应式</a>
-									<a href="https://www.weipxiu.com/works/yunquna/index.html" target="_blank">运去哪官网</a>
 									<a href="https://www.weipxiu.com/works/shangcheng/index.html" target="_blank">节日礼品商城</a>
-							        <a href="http://www.songhengnet.com" target="_blank">嵩恒网络官网</a>
-								  	<!-- <a href="https://www.weipxiu.com/works/beautiful/index.html" target="_blank">美丽说-首页</a> -->
+							    <a href="https://www.weipxiu.com/works/h5-7_vip/index.html" target="_blank">H5响应式</a>
+									<a href="https://www.weipxiu.com/works/yunquna/index.html" target="_blank">运去哪官网</a>
+									<a href="http://www.songhengnet.com" target="_blank">嵩恒网络官网</a>
+								  <!-- <a href="https://www.weipxiu.com/works/beautiful/index.html" target="_blank">美丽说-首页</a> -->
 									<a href="https://www.weipxiu.com/works/weiyun/index.html" target="_blank">微云桌面应用</a>
-								  	<!-- <a href="https://www.weipxiu.com/works/hnlyw/index.html" target="_blank">湖南海外旅游网</a> -->
-								  	<!-- <a href="https://www.weipxiu.com/works/music/index.html" target="_blank">音乐播放器</a> -->
-								  	<a href="https://www.weipxiu.com/works/caiquan/index.html" target="_blank">游戏-猜拳</a>
-								  	<!-- <a href="https://www.weipxiu.com/works/feiji/index.html" target="_blank">游戏-打飞机</a> -->
-								  	<a href="https://github.com/weipxiu" target="_blank">更多作品案例</a>
-								  	<!-- <a href="https://www.weipxiu.com/works/txz/index.html" target="_blank">游戏-推箱子</a> -->
+								  <!-- <a href="https://www.weipxiu.com/works/hnlyw/index.html" target="_blank">湖南海外旅游网</a> -->
+								  <!-- <a href="https://www.weipxiu.com/works/music/index.html" target="_blank">音乐播放器</a> -->
+								  <a href="https://www.weipxiu.com/works/caiquan/index.html" target="_blank">游戏-猜拳</a>
+								  <a href="https://www.weipxiu.com/works/feiji/index.html" target="_blank">游戏-打飞机</a>
+								  <a href="https://github.com/weipxiu" target="_blank">更多作品案例</a>
+								  <!-- <a href="https://www.weipxiu.com/works/txz/index.html" target="_blank">游戏-推箱子</a> -->
 							  </div>
 							  <!-- 搜索按钮开始 -->
 							  <div class="navto-search">
