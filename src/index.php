@@ -337,6 +337,10 @@
 				</h2> -->
 				<?php endif; ?>
 				<?php wp_pagenavi(); ?>
+				<!-- <div>
+						不借助插件进行分页，懒得写样式了，可以根据需要自己整整
+						?php if (function_exists('pagenavi')) { pagenavi(); } ?
+				</div> -->
 				<!--分页插件调用-->
 		</div>
 		<!-- 左侧区域结束 -->
@@ -354,11 +358,6 @@
 	<?php wp_footer(); ?>
 	<!-- 底部调用end -->
 
-
-	<h1 style="position: fixed; left:-999px;top:-999px">
-		<a href="https://www.weipxiu.com"><img src="<?php bloginfo('template_url'); ?>/images/web.png" width="121" height="75"
-			 alt="唯品秀个人博客"></a>
-	</h1>
 	<!-- 首页弹窗start -->
 	<div id="curriculum" class="gradient">
 		<h2>
