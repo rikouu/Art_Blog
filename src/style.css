@@ -3704,7 +3704,7 @@ div.jy p {
     text-decoration: none;
     background-color: #ddd;
     color: #666;
-    padding: 4px 11px;
+    padding: 46px 10px;
     margin: 0 2px;
     border-radius: 2px;
     font-size: 12px;
@@ -3712,7 +3712,6 @@ div.jy p {
 
 span.extend {
     margin: 0 2px;
-    padding: 4px 10px;
     color: #666;
     border-radius: 2px;
     color: #999999;
@@ -3733,7 +3732,7 @@ span.extend {
 .wp-pagenavi span.current {
     background-color: #1890ff;
     text-decoration: none;
-    padding: 4px 11px;
+    padding: 6px 10px;
     margin: 00;
     border: 0;
     color: #fff;
