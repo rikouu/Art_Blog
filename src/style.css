@@ -2322,7 +2322,7 @@ div.com-art ul li {
     width: 100%;
     height: 20px;
     position: absolute;
-    top: -20px;
+    top: -10px;
     left: 0;
     background: #ccc;
     background: -webkit-linear-gradient(#f1f1ef, #FBFBF9);
@@ -3704,7 +3704,7 @@ div.jy p {
     text-decoration: none;
     background-color: #ddd;
     color: #666;
-    padding: 46px 10px;
+    padding: 6px 10px;
     margin: 0 2px;
     border-radius: 2px;
     font-size: 12px;
