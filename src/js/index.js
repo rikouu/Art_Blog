@@ -94,7 +94,6 @@ jQuery(function ($) {
         });
 
     // 针对畅言傻逼作transform兼容
-    $(".continar-left").css("transform", "none");
     var mBenu = document.getElementById('menu');
     document.oncontextmenu = function (ev) {
         var ev = ev || event;
