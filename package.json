@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp pro",
-    "dev": "gulp dev"
+    "build": "gulp",
+    "dev": "gulp"
   },
   "author": "李俊",
   "license": "ISC",
