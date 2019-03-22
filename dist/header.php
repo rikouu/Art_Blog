@@ -159,7 +159,7 @@
 										<a href="http://www.qmaile.com/" target="_blank">
 											Vip视频
 										</a>
-									</li> -->
+									</li>
 							  </div>
 							  <div class="nav-min nav-min-1">
 									<a href="https://www.weipxiu.com/works/grjl/index.html" target="_blank">炫酷个人简历</a>

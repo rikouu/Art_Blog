@@ -3543,6 +3543,8 @@ p.reward-p {
   padding: 0.1rem;
   background-color: transparent;
   box-shadow: none;
+  -webkit-appearance: none;
+  outline: none;
 }
 .post_content .commentform-info input {
   width: 100%;
