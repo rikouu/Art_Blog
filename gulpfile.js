@@ -68,8 +68,8 @@ gulp.task("minCss", function () {
 
     gulp.src(["src/css/*", "!src/css/*.css", "!src/style.css"]).pipe(gulp.dest("dist/css"))
 
+    //为了主题增加版本号等信息，style.css不进行压缩，避免删除了注释
     gulp.src("src/style.css")
-    .pipe(gulp_minify_css())
     .pipe(gulp.dest("dist"))
 });
 

@@ -90,7 +90,7 @@
 									  <p></p>
 									</li>
 									<li detaName="mi" class="front 
-									  <?php if ( in_category(array('3', '5', '6', '14', '22')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
+									  <?php if ( in_category(array('3', '5', '6', '14', '22','29')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="javascript:void(0);">
 										  <span>前端开发<i class="fa fa-angle-down"></i></span>
 										  <span>前端开发<i class="fa fa-angle-down"></i></span>
@@ -152,14 +152,13 @@
 								  	<a href="/?cat=3">DIV+CSS</a>
 								  	<a href="/?cat=5">Javascript</a>
 								  	<a href="/?cat=6">HTML5+CSS3</a>
-									<a href="/?cat=14">Js前端框架</a>
-									<a href="/?cat=22">Node.js基础</a>
-									<li><a href="/?cat=29">前端工具箱</a></li>
-									<li>
+										<a href="/?cat=14">Js前端框架</a>
+										<a href="/?cat=22">Node.js基础</a>
+										<a href="/?cat=29">前端工具箱</a>
+										<!-- <a href="/?cat=348">授人以渔</a> -->
 										<a href="http://www.qmaile.com/" target="_blank">
-											Vip视频
+											Vip视频解析
 										</a>
-									</li>
 							  </div>
 							  <div class="nav-min nav-min-1">
 									<a href="https://www.weipxiu.com/works/grjl/index.html" target="_blank">炫酷个人简历</a>
