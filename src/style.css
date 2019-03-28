@@ -2072,27 +2072,34 @@ i {
     width: 100%;
 }
 
-.friendship ul {
-    padding: 0
+.friendship .daily-list ul {
+    padding: 0 15px;
 }
 
-.friendship ul li {
-    width: 50%;
-    -webkit-transition: 0.35s;
-    -o-transition: 0.35s;
-    transition: 0.35s;
-    border: 1px solid #eee;
-    margin-bottom: -1px;
-    border-left: 0;
-    padding: 1px 0 1px 10px;
+.friendship .daily-list ul li {
+    line-height: 24px;
+    border: 1px solid #ccc;
+    margin: 0 0 10px 0;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    animation-delay: 0.1s;
+    float: left;
+    margin: 0 1% 10px 0;
+    padding: 3px;
+    width: auto;
 }
-
-.friendship ul li i.iconfont {
-    left: 5px;
+.friendship .daily-list ul li a{
+    margin-left:0;
+    display: inline;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+    height: 24px;
+    line-height: 24px;
 }
-
-.friendship ul li:nth-of-type(2n) {
-    border-right: 0;
+.friendship .daily-list ul li i.iconfont {
+    display: none;
 }
 
 .daily-title {
