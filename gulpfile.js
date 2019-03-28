@@ -10,6 +10,11 @@ const rev = require('gulp-rev');//给静态文件资源添加hash值防缓存
 
 const browserSync = require('browser-sync'); //热更新模块
 
+// 环境变量
+const env = process.env.NODE_ENV
+
+let target = env === 'production' ? './dist' : './pre'
+
 /*
 gulp.task -- 定义任务
 gulp.src -- 找到需要执行任务的文件
@@ -68,8 +73,8 @@ gulp.task("minCss", function () {
 
     gulp.src(["src/css/*", "!src/css/*.css", "!src/style.css"]).pipe(gulp.dest("dist/css"))
 
-    //为了主题增加版本号等信息，style.css不进行压缩，避免删除了注释
     gulp.src("src/style.css")
+    .pipe(gulp_minify_css())
     .pipe(gulp.dest("dist"))
 });
 
