@@ -1,6 +1,6 @@
 {
-  "name": "weipxiu-blog",
-  "version": "1.0.0",
+  "name": "art_blog",
+  "version": "2.0.1",
   "description": "一款基于jquery2.1.4开发的wordpress主题2.0版",
   "main": "index.js",
   "scripts": {
