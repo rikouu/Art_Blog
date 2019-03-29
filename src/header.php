@@ -89,7 +89,7 @@
 									  <p></p>
 									</li>
 									<li detaName="mi" class="front 
-									  <?php if ( in_category(array('3', '5', '6', '14', '22','29')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
+									  <?php if ( in_category(array('3', '5', '14', '22','29')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="javascript:void(0);">
 										  <span>前端开发<i class="fa fa-angle-down"></i></span>
 										  <span>前端开发<i class="fa fa-angle-down"></i></span>
@@ -148,9 +148,8 @@
 								    </li>
 							  </ul>
 							  <div class="nav-min">
-								  	<a href="/?cat=3">DIV+CSS</a>
+								  	<a href="/?cat=3">HTML+CSS3</a>
 								  	<a href="/?cat=5">Javascript</a>
-								  	<a href="/?cat=6">HTML5+CSS3</a>
 										<a href="/?cat=14">Js前端框架</a>
 										<a href="/?cat=22">Node.js基础</a>
 										<a href="/?cat=29">前端工具箱</a>
