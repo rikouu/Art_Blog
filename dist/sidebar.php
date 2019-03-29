@@ -144,7 +144,7 @@
         <a href="https://github.com/stephentian/33-js-concepts">Js33个概念</a>
         <a href="https://github.com/Tencent/vConsole">vConsole</a>
         <a href="https://github.com/wendux/DSBridge-IOS">DSBridge</a>
-        <a href="https://github.com/rachmanzz/vue-inview">DOM进屏</a>
+        <a href="https://github.com/rachmanzz/vue-inview">DOM元素进屏</a>
         <a href="http://www.shareinstall.net/">shareinstall</a>
         <a href="https://getman.cn//">Http接口测试</a>
     </div>
