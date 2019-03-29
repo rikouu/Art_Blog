@@ -250,11 +250,11 @@ $(function () {
                 alert("爷，现在是年轻人的时代，您就暂且休息去吧~~");
             }
             
-            //初始化加载需要先缓冲到15%+才会播放，避免高清视频卡顿
-            delSetInterval = setInterval( function() {
+            //初始化加载需要先缓冲到50%+才会播放，避免高清视频卡顿
+            /*delSetInterval = setInterval( function() {
                 howMuchIsDownloaded = myPlayer.bufferedPercent() //返回当前百分比缓冲0-1
-                //console.log(howMuchIsDownloaded*100 + '%')
-                if ( howMuchIsDownloaded > 0.15 ) {
+                console.log('当前视频缓冲至：',howMuchIsDownloaded*100 + '%')
+                if ( howMuchIsDownloaded > 0.5 ) {
                     clearInterval( delSetInterval )
                     myPlayer.play();
                 }
@@ -266,8 +266,8 @@ $(function () {
                 myPlayer.play();
                 setTimeout(function () {
                     myPlayer.pause();
-                }, 2000);
-            });
+                }, 1000);
+            });*/
             //视频播放end
 
             // 桌面提醒功能
