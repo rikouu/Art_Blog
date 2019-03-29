@@ -146,6 +146,7 @@
         <a href="https://github.com/wendux/DSBridge-IOS">DSBridge</a>
         <a href="https://github.com/rachmanzz/vue-inview">DOM进屏</a>
         <a href="http://www.shareinstall.net/">shareinstall</a>
+        <a href="https://getman.cn//">Http接口测试</a>
     </div>
 </div>
 <!-- 技术分类end -->
