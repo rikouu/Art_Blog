@@ -209,48 +209,46 @@ $(function () {
             //给首页增加默认高亮
             $(".nav ul.music-nav li:eq(0)").addClass("action");
 
-            /*//视频播放start
+            //视频播放start
             var delSetInterval = null; //定时器
-            var ISvideo = false; //当前是否全屏
+            //var ISvideo = false; //当前是否全屏
             var myPlayer = videojs( 'my-video' );
             var howMuchIsDownloaded = 0; //初始化缓冲百分比
             var eleFull = document.querySelector( "#my-video" ); //视频对象
 
             //视频全屏方法
-            (function () {
-                var runPrefixMethod = function (element, method) {
-                    var usablePrefixMethod;
-                    ["webkit", "moz", "ms", "o", ""].forEach(function (prefix) {
-                        if (usablePrefixMethod) return;
-                        if (prefix === "") {
-                            // 无前缀，方法首字母小写
-                            method = method.slice(0, 1).toLowerCase() + method.slice(1);
+            var runPrefixMethod = function (element, method) {
+                var usablePrefixMethod;
+                ["webkit", "moz", "ms", "o", ""].forEach(function (prefix) {
+                    if (usablePrefixMethod) return;
+                    if (prefix === "") {
+                        // 无前缀，方法首字母小写
+                        method = method.slice(0, 1).toLowerCase() + method.slice(1);
 
+                    }
+                    var typePrefixMethod = typeof element[prefix + method];
+                    if (typePrefixMethod + "" !== "undefined") {
+                        if (typePrefixMethod === "function") {
+                            usablePrefixMethod = element[prefix + method]();
+                        } else {
+                            usablePrefixMethod = element[prefix + method];
                         }
-                        var typePrefixMethod = typeof element[prefix + method];
-                        if (typePrefixMethod + "" !== "undefined") {
-                            if (typePrefixMethod === "function") {
-                                usablePrefixMethod = element[prefix + method]();
-                            } else {
-                                usablePrefixMethod = element[prefix + method];
-                            }
-                        }
-                    });
-                    return usablePrefixMethod;
-                };
-                if (typeof window.screenX === "number") {
-                    eleFull.addEventListener("dblclick", function () {
-                        if (runPrefixMethod(document, "FullScreen") || runPrefixMethod(document, "IsFullScreen")) {
-                            runPrefixMethod(document, "CancelFullScreen");
-                            this.title = this.title.replace("退出", "");
-                        } else if (runPrefixMethod(this, "RequestFullScreen")) {
-                            this.title = this.title.replace("点击", "点击退出");
-                        }
-                    });
-                } else {
-                    alert("爷，现在是年轻人的时代，您就暂且休息去吧~~");
-                }
-            })();
+                    }
+                });
+                return usablePrefixMethod;
+            };
+            if (typeof window.screenX === "number") {
+                eleFull.addEventListener("dblclick", function () {
+                    if (runPrefixMethod(document, "FullScreen") || runPrefixMethod(document, "IsFullScreen")) {
+                        runPrefixMethod(document, "CancelFullScreen");
+                        this.title = this.title.replace("退出", "");
+                    } else if (runPrefixMethod(this, "RequestFullScreen")) {
+                        this.title = this.title.replace("点击", "点击退出");
+                    }
+                });
+            } else {
+                alert("爷，现在是年轻人的时代，您就暂且休息去吧~~");
+            }
             
             //初始化加载需要先缓冲到15%+才会播放，避免高清视频卡顿
             delSetInterval = setInterval( function() {
@@ -270,7 +268,7 @@ $(function () {
                     myPlayer.pause();
                 }, 2000);
             });
-            //视频播放end*/
+            //视频播放end
 
             // 桌面提醒功能
             var set_desktop = function () {
