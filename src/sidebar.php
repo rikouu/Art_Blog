@@ -120,27 +120,32 @@
 <div class="classif">
     <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-leimupinleifenleileibie"></i>文章分类</a></h3>
     <div class="items">
-        <a href="https://www.weipxiu.com/?cat=3">HTML/CSS (<?php echo wt_get_category_count(3); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=6">HTML5 (<?php echo wt_get_category_count(6); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=6">CSS3详解 (<?php echo wt_get_category_count(6); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=3">H5/CSS3 (<?php echo wt_get_category_count(3); ?>)</a>
         <a href="https://www.weipxiu.com/?cat=5">Js基础 (<?php echo wt_get_category_count(5); ?>)</a>
         <a href="https://www.weipxiu.com/?cat=5">jQuery (<?php echo wt_get_category_count(5); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=14">Vue.js (<?php echo wt_get_category_count(14); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=14">Angular (<?php echo wt_get_category_count(14); ?>)</a>
+        <a href="https://www.weipxiu.com/?cat=14">Js框架 (<?php echo wt_get_category_count(14); ?>)</a>
         <a href="https://www.weipxiu.com/?cat=22">Node.js (<?php echo wt_get_category_count(22); ?>)</a>
         <a href="https://www.weipxiu.com/?cat=13">前端技巧 ((<?php echo wt_get_category_count(13); ?>))</a>
         <a href="https://www.weipxiu.com/?cat=14">前端资源 (<?php echo wt_get_category_count(14); ?>)</a>
         <a href="https://www.weipxiu.com/?cat=29">前端工具 (<?php echo wt_get_category_count(29); ?>)</a>
         <a href="https://www.weipxiu.com/?cat=2">CMS系统 (<?php echo wt_get_category_count(2); ?>)</a>
-        <a href="javascript:void(0);">Webpack (43)</a>
-        <a href="javascript:void(0);">W3c标准 (16)</a>
-        <a href="https://www.weipxiu.com/?cat=1">网站公告 (99)</a>
-        <a href="javascript:void(0);">作品欣赏 (10)</a>
-        <a href="javascript:void(0);">网页设计 (10)</a>
-        <a href="javascript:void(0);">UI设计 (10)</a>
-        <a href="javascript:void(0);">站长必备 (27)</a>
-        <a href="https://github.com/weipxiu">Github(3)</a>
-        <a href="javascript:void(0);">WEB兼容 (17)</a>
+        <a href="https://www.weipxiu.com/?cat=1">本站公告</a>
+        <a href="https://cdnnext.console.aliyun.com/refresh/record">阿里CDN</a>
+        <a href="https://www.bootcdn.cn/">CDN大全</a>
+        <a href="https://github.com/weipxiu">博主Github</a>
+        <a href="https://tongji.baidu.com/web/homepage/index">百度统计</a>
+        <a href="https://ziyuan.baidu.com/linksubmit/index">百度收录</a>
+        <a href="http://tool.chinaz.com/KeyWords/">关键词排名</a>
+        <a href="http://caibaojian.com/30-seconds-of-css/#sibling-fade">经典css片段</a>
+        <a href="http://momentjs.cn/">时间戳格式化</a>
+        <a href="https://github.com/shengxinjing/programmer-job-blacklist">黑厂名单</a>
+        <a href="https://docs.qq.com/sheet/DdkZzbElOT0VrV0dD?ADUIN=937018802&ADSESSION=1539913469&ADTAG=CLIENT.QQ.5587_.0&ADPUBNO=26847&ADUIN=343049466&ADSESSION=1539911391&ADTAG=CLIENT.QQ.5593_.0&ADPUBNO=26858&tab=BB08J2">武汉黑厂</a>
+        <a href="https://996.icu/#/zh">996.ICU火了</a>
+        <a href="https://github.com/stephentian/33-js-concepts">Js33个概念</a>
+        <a href="https://github.com/Tencent/vConsole">vConsole</a>
+        <a href="https://github.com/wendux/DSBridge-IOS">DSBridge</a>
+        <a href="https://github.com/rachmanzz/vue-inview">DOM进屏</a>
+        <a href="http://www.shareinstall.net/">shareinstall</a>
     </div>
 </div>
 <!-- 技术分类end -->
