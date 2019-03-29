@@ -150,7 +150,6 @@
 </div>
 
 <!-- 在线客服结束 -->
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-2.1.4.min.js"></script>
 
 <!-- 百度自动推送start -->
 <!-- <script>
@@ -169,9 +168,24 @@
 </script> -->
 <!-- 百度自动推送end -->
 
-<!-- 网站运行时间 -->
+<!-- 判断用户当前是否登录成功开始 -->
+<?php  /*if (is_user_logged_in()){            
+	   echo "<script>$('#username a:lt(3)').hide();
+     $('#username a:gt(2)').show()</script>";          
+	 }           
+	 else {             
+	   echo "<script>$('#username a:lt(3)').show();
+      $('#username a:gt(2)').hide();</script>";           
+	   };*/  
+?>
+<!-- 判断用户当前是否登录 结束 -->
+
+<!-- <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-1" count="99" src="<?php bloginfo('template_url'); ?>/js/canvas-nest.min.js"></script> -->
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/main_min.js"></script>
 <script>
-  function secondToDate(second) {
+  $(function(){
+    function secondToDate(second) {
     if (!second) {
       return 0;
     }
@@ -197,9 +211,7 @@
     }
     return time;
   }
-</script>
 
-<script type="text/javascript" language="javascript">
   function setTime() {
     // 博客创建时间秒数，时间格式中，月比较特殊，是从0开始的，所以想要显示5月，得写4才行，如下
     var create_time = Math.round(new Date(Date.UTC(2016, 10, 16, 0, 0, 0))
@@ -213,24 +225,9 @@
     document.getElementById("htmer_time").innerHTML = currentTimeHtml;
   }
   setInterval(setTime, 1000);
-</script>
+  // 网站运行时间end
 
-<!-- 判断用户当前是否登录成功开始 -->
-<?php  /*if (is_user_logged_in()){            
-	   echo "<script>$('#username a:lt(3)').hide();
-     $('#username a:gt(2)').show()</script>";          
-	 }           
-	 else {             
-	   echo "<script>$('#username a:lt(3)').show();
-      $('#username a:gt(2)').hide();</script>";           
-	   };*/  
-?>
-<!-- 判断用户当前是否登录 结束 -->
-
-<!-- <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-1" count="99" src="<?php bloginfo('template_url'); ?>/js/canvas-nest.min.js"></script> -->
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/ajax_wordpress.js"></script>
-<script defer="defer">
-  if ($(document).width() >= 1200) {
+    if ($(document).width() >= 1200) {
     // 文字琴弦效果start
     (function ($) {
       $.extend($.easing, {
@@ -357,4 +354,5 @@
     });
     //文字琴弦效果end
   }
+  })
 </script>

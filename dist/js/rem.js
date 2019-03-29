@@ -1,1 +1,0 @@
-"use strict";function defaultfont(){var t=100*$(window).width()/750;70<=t&&(t=70),$("html").css({fontSize:t+"px",transtion:"0.35s"})}setTimeout(function(){defaultfont()},100);var w_height=$(window).width();$(window).resize(function(){$(window).width()!=w_height&&setTimeout(function(){defaultfont()},100)});

@@ -89,15 +89,12 @@
 │  │  ajax_wordpress.js    //用于分页ajaxs刷新
 │  │  canvas-nest.min.js 
 │  │  date.js  //时光机数据
-│  │  hovertreewelcome.js
 │  │  index.js    //整个网站的js全局
 │  │  javascript.js  //只针对首页的js文件
 │  │  jquery-2.1.4.min.js
-│  │  main.js
 │  │  rem.js
 │  │  swiper.min.js  //移动端的swiper轮播插件
 │  │  xfg_banner.js
-│  │  zui.min.js
 │  │  
 │  ├─video.js 
 │  │      video.min.js

@@ -156,7 +156,6 @@
     <?php get_footer() ?>
     <?php wp_footer(); ?>
 </body>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/index.js"></script>
 <script>
     $( function() {
         $( "#wpuf-avatar-pickfiles" ).parents( ".continar" ).css( {

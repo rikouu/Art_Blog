@@ -410,7 +410,6 @@
 </body>
 
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/xfg_banner/banner-effect.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/javascript.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/swiper.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/index_min.js"></script>
 
 </html>

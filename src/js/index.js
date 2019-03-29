@@ -1,555 +1,406 @@
-$.noConflict();
-jQuery(function ($) {
-    if (window.location.href != "https://www.weipxiu.com" && window.location.href != "https://www.weipxiu.com/") {
-        // $(".continar-right .aside .video-js").remove();
-        $("body > .continar").css("margin-top","88px");
-    }
-    // 评论区域样式兼容
-    setTimeout(function(){
-        if($("#reply-title a").is(":hidden")){
-            $("#reply-title").hide();
-        }
-    })
-    //点击图片放大全屏start
-    var runPrefixMethod = function (element, method) {
-        var usablePrefixMethod;
-        ["webkit", "moz", "ms", "o", ""].forEach(function (prefix) {
-            if (usablePrefixMethod) return;
-            if (prefix === "") {
-                // 无前缀，方法首字母小写
-                method = method.slice(0, 1).toLowerCase() + method.slice(1);
-            }
-
-            var typePrefixMethod = typeof element[prefix + method];
-
-            if (typePrefixMethod + "" !== "undefined") {
-                if (typePrefixMethod === "function") {
-                    usablePrefixMethod = element[prefix + method]();
-                } else {
-                    usablePrefixMethod = element[prefix + method];
-                }
-            }
-        });
-
-        return usablePrefixMethod;
-    };
-    if (typeof window.screenX === "number") {
-        var eleFull = document.querySelectorAll(".log-text img");
-        for (var i = 0; i < eleFull.length; i++)
-            eleFull[i].addEventListener("click", function () {
-                if (runPrefixMethod(document, "FullScreen") || runPrefixMethod(document, "IsFullScreen")) {
-                    runPrefixMethod(document, "CancelFullScreen");
-                    this.title = this.title.replace("退出", "");
-                } else if (runPrefixMethod(this, "RequestFullScreen")) {
-                    this.title = this.title.replace("点击", "点击退出");
-                }
-            });
-    } else {
-        alert("爷，现在都什么时代了，你还在用这么土的浏览器~~");
-    }
-    //点击图片放大全屏end
-
-
-    // PC端导航通过点击跳转
-    $(".nav ul.music-nav li:not(.mod-header_music-icon,.front,.works)").click(function () {
-        var $href = $(this).find("span").eq(0).attr("data-href");
-        if ($href != '/') {
-            location.href = "http://www.weipxiu.com/" + $href;
-        } else {
-            location.href = "http://www.weipxiu.com/";
-        }
-    })
-
-    //给友情链接列表增加iconfont
-    $("ul.friendsChain li a").before("<i class='iconfont'>&#xe64a;</i>");
-
-    // 文章详情页点赞
-    setInterval(function () {
-        $(".page-reward .page-reward-btn .tooltip-item font,.page-reward .page-reward-btn .tooltip-item a").toggleClass("s_show");
-    }, 2000)
-    //点赞
-    $.fn.postLike = function () {
-        if ($(this).hasClass('done')) {
-            return false;
-        } else {
-            $(this).addClass('done');
-            var id = $(this).data("id"),
-                action = $(this).data('action'),
-                rateHolder = $(this).children('.count');
-            var ajax_data = {
-                action: "bigfa_like",
-                um_id: id,
-                um_action: action
-            };
-            $.post("/wp-admin/admin-ajax.php", ajax_data,
-                function (data) {
-                    $(rateHolder).html(data);
-                });
-            return false;
-        }
-    };
-    $(document).on("click", ".favorite",
-        function () {
-            $(this).postLike();
-        });
-
-    // 针对畅言傻逼作transform兼容
-    var mBenu = document.getElementById('menu');
-    document.oncontextmenu = function (ev) {
-        var ev = ev || event;
-        mBenu.style.display = 'block';
-        mBenu.style.left = ev.pageX - 85 + 'px';
-        mBenu.style.top = ev.pageY - 24 + 'px';
-        return false
-    }
-    document.onclick = function () {
-        mBenu.style.display = 'none'
-    }
-    /*document.onkeydown = function(ev) {
-        var ev = ev || event;
-        if (ev.keyCode == 123) {
-            return false
-        }
-        if (ev.ctrlKey == true && ev.keyCode == 83) {
-            return false
-        }
-    }*/
-    var searchShow = true;
-    $(".navto-search a").click(function () {
-        $(".site-search.active.pc").stop(true, true).slideToggle(150, function () {
-            if ($(this).is(":visible") && $(".nav ul.music-nav li>p").css("opacity") == 1) {
-                //$('.mod-header_music-icon').trigger("click");
-            } else if ($(this).is(":hidden") && $(".nav ul.music-nav li>p").css("opacity") == 0) {
-                //$('.mod-header_music-icon').trigger("click");
-            } else if ($(".nav ul.music-nav li>p").css("opacity") == 0) {
-                return false;
-            }
-        });
-        if (searchShow) {
-            $('.header').css('z-index', '11');
-            searchShow = false;
-        } else {
-            $('.header').css('z-index', '10');
-            searchShow = true;
-        }
-        $(this).find("i").toggleClass("fa-search");
-        $(this).find("i").toggleClass("fa-remove");
-    });
-
-    // 背景音乐start
-    var off = true;
-    $(".control").click(function () {
-        if (off) {
-            $("#music").get(0).play()
-        } else {
-            $("#music").get(0).pause()
-        }
-        $(this).toggleClass("hover");
-        off = !off
-    });
-
-    //判断当前页面是否存在背景音乐播放器，如果存在的话将声音大小调制到50%
-    if (document.getElementById("music")) {
-        document.getElementById("music").volume = 0.5;
-    }
-    // 背景音乐end
-
-    $(".header").addClass("Top");
-
-    // 跳动的Logo start
-    $("#Logo").hover(function () {
-            $("#dj li").css("WebkitAnimation", "move 0.5s ease 0s 1 alternate none running");
-            $("#dj li").css("animation", "move 0.5s ease 0s 1 alternate none running");
-
-        },
-        function () {
-            $('#dj li').attr("style", "");
-        });
-    // 跳动的Logo end
-
-    // 根据缓存状态初始化音乐
-    if (localStorage.getItem("off_y") != 1) {
-        $(".mod-header_music-icon").removeClass("hover").attr("title", "钢琴音效NO");
-        $(".nav ul.music-nav li > p").css("opacity", "0");
-        localStorage.setItem("off_y", 0);
-    } else {
-        $(".mod-header_music-icon").addClass("hover").attr("title", "钢琴音效OFF");
-        $(".nav ul.music-nav li > p").css("opacity", "1");
-        localStorage.setItem("off_y", 1);
-    }
-
-    // 跳动音符start
-    $(".mod-header_music-icon").click(function () {
-        clearInterval(navMinHideSetTime); //清除鼠标离开li时候的定时器
-        if (localStorage.getItem("off_y") != 1) {
-            $(this).addClass("hover");
-            $(this).attr("title", "钢琴音效OFF");
-            $(".nav ul.music-nav li > p").css("opacity", "1");
-            localStorage.setItem("off_y", 1);
-        } else {
-            $(this).removeClass("hover");
-            $(".nav ul.music-nav li > p").css("opacity", "0");
-            $(this).attr("title", "钢琴音效NO");
-            localStorage.setItem("off_y", 0);
-        }
-    });
-    // 跳动音符end
-
-    //钢琴导航start
-    var $index = null;
-    var musicObj = null;
-    var navMinHideSetTime = null;
-    var musicDown = $(".nav ul.music-nav li:not(.mod-header_music-icon)");
-    $(".nav ul.music-nav li:not(.mod-header_music-icon)").hover(function (event) {
-            $(this).parents(".header").css("z-index", "11"); //默认下方轮播层级高于头部
-            $index = $(this).index();
-            var deta = $(this).attr("detaName");
-            musicObj = $(".nav ul.music-nav li:not(.mod-header_music-icon)").eq($index).find('audio');
-            if (localStorage.getItem("off_y") == 1) {
-                $(this).addClass("active");
-                musicObj.get(0).src = "https://www.weipxiu.com/wp-content/themes/boke/music/" + deta + ".mp3";
-            } else {
-                musicObj.get(0).src = "";
-            }
-            event.stopPropagation();
-        },
-        function () {
-            clearInterval(navMinHideSetTime);
-            navMinHideSetTime = setInterval(function () { //不断检测鼠标移开后下拉二级菜单是否完好影藏
-                if (searchShow && $(".nav-min").eq(0).css("opacity") == 0 && $(".nav-min").eq(1).css("opacity") == 0) {
-                    $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
-                    clearInterval(navMinHideSetTime);
-                }
-            }, 1000)
-            $(this).removeClass("active");
-        });
-
-    function musicdown(number) {
-        var objLi = $(".nav ul.music-nav li");
-        var parameter = objLi.eq(number).attr("detaName");
-        objLi.eq(number).find('audio').get(0).src = "https://www.weipxiu.com/wp-content/themes/boke/music/" + parameter + ".mp3";
-        if (number !== 8) {
-            objLi.eq(number).addClass("active")
-        }
-    }
-
-    $(document).keydown(function (event) {
-        if (localStorage.getItem("off_y") == 1) {
-            //a65 s83 d68 f70 g71 h72 j74 k75 l76
-            if (event.keyCode == 65) {
-                musicdown(0)
-            } else if (event.keyCode == 83) {
-                musicdown(1)
-            } else if (event.keyCode == 68) {
-                musicdown(2)
-            } else if (event.keyCode == 70) {
-                musicdown(3)
-            } else if (event.keyCode == 71) {
-                musicdown(4)
-            } else if (event.keyCode == 72) {
-                musicdown(5)
-            } else if (event.keyCode == 74) {
-                musicdown(6)
-            } else if (event.keyCode == 75) {
-                musicdown(7)
-            } else if (event.keyCode == 76) {
-                musicdown(8)
-            }
-        }
-    });
-    $(document).keyup(function () {
-        setTimeout(function () {
-            musicDown.removeClass("active")
-        }, 150);
-    });
-    //钢琴导航end
-
-    //PC二级菜单start
-    var time = null;
-    $(".front").hover(function (event) {
-        clearTimeout(time);
-        $(".header-conter .nav-min").eq(0).css({
-            "opacity": "1",
-            "visibility": "visible",
-            "top": "49px"
-        });
-        $(".header-conter .nav-min").eq(1).css({
-            "opacity": "0",
-            "visibility": "hidden",
-            "top": "70px"
-        });
-        event.stopPropagation();
-    }, function () {
-        clearTimeout(time);
-        time = setTimeout(function () {
-            $(".header-conter .nav-min").css({
-                "opacity": "0",
-                "visibility": "hidden",
-                "top": "70px"
-            });
-        }, 0);
-
-    });
-    $(".works").hover(function (event) {
-        clearTimeout(time);
-        $(".header-conter .nav-min").eq(1).css({
-            "opacity": "1",
-            "visibility": "visible",
-            "top": "49px"
-        });
-        $(".header-conter .nav-min").eq(0).css({
-            "opacity": "0",
-            "visibility": "hidden",
-            "top": "70px"
-        });
-        event.stopPropagation();
-    }, function () {
-        clearTimeout(time);
-        time = setTimeout(function () {
-            $(".header-conter .nav-min").css({
-                "opacity": "0",
-                "visibility": "hidden",
-                "top": "70px"
-            });
-        }, 0);
-    });
-    //PC二级菜单end
-
-    $(".aircraft").click(function () {
-        $('body,html').animate({
-                scrollTop: 0
-            },
-            800);
-        $(this).animate({
-                "bottom": "500px",
-                "opacity": "0"
-            },
-            1000,
-            function () {
-                setTimeout(function () {
-                        $(".aircraft").css({
-                            "bottom": "50px",
-                            "opacity": "1"
-                        })
-                    },
-                    500)
-            })
-    });
-    $("#wuyousujian-kefuDv").hover(function () {
-            $("#wuyousujian-kefuDv").stop().animate({
-                "right": "-100px"
-            }, 500)
-        },
-        function () {
-            $("#wuyousujian-kefuDv").stop().animate({
-                "right": "-196px"
-            }, 500)
-        });
-    $(document).scroll(function () {
-        var scrollTop = $(document).scrollTop();
-        if (scrollTop > 500) {
-            $(".aircraft").css({
-                "display": "block",
-                "opacity": "1"
-            })
-        } else {
-            $(".aircraft").css({
-                "display": "none",
-                "opacity": "0"
-            })
-        }
-        if (scrollTop <= 0) {
-            $(".header").addClass("Top")
-            $(".header").removeClass("hover")
-        } else {
-            $(".header").removeClass("Top")
-            $(".header").addClass("hover")
-        }
-        //var se = document.documentElement.clientHeight;
-    });
-    $(".continar .continar-left-top > span").each(function () {
-        var maxwidth = 115;
-        if ($(this).text().length > maxwidth) {
-            $(this).text($(this).text().substring(0, maxwidth));
-            $(this).html($(this).html() + "...")
-        }
-    });
-    var obtn = true;
-    $(".btn_menu,.cover").on("touchmove", function (event) {
-        event.preventDefault();
-    })
-    $(".btn_menu,.cover").on("touchstart", myFunction);
-
-    function myFunction() {
-        $(".os-herder").get(0).classList.toggle("btn");
-        $(".cover").toggle();
-        if (obtn) {
-            $(".continar,.os-headertop").css({
-                "transform": "translateX(160px)"
-            })
-        } else {
-            $(".continar,.os-headertop").css({
-                "transform": "translateX(0)"
-            })
-        }
-        if ($(".site-search").is(":visible")) {
-            $(".os-headertop .site-search").slideToggle(100);
-            $(".xis").find("i").toggleClass("fa-search");
-            $(".xis").find("i").toggleClass("fa-remove")
-        }
-        obtn = !obtn
-    }
-
-    //移动端禁止侧边导航上下滚动start
-    $(".os-herder,.site-search").on("touchmove", function (event) {
-        //event.stopPropagation();
-        event.preventDefault();
-    });
-    //移动端禁止侧边导航上下滚动end
-
-    //禁止ios11自带浏览器缩放功能start
-    document.addEventListener('touchstart', function (event) {
-        if (event.touches.length > 1) {
-            event.preventDefault();
-        }
-    })
-    var lastTouchEnd = 0;
-    document.addEventListener('touchend', function (event) {
-        var now = (new Date()).getTime();
-        if (now - lastTouchEnd <= 300) {
-            event.preventDefault();
-        }
-        lastTouchEnd = now;
-    }, false)
-    //禁止ios11自带浏览器缩放功能end
-
-    //移动端头部下拉搜索start
-    $(".xis").on("touchstart", function () {
-        $(".os-headertop .site-search").slideToggle(100);
-        $(this).find("i").toggleClass("fa-search");
-        $(this).find("i").toggleClass("fa-remove")
-    });
-    //移动端头部下拉搜索end
-
-    if ($("html,body").width() < 960) {
-        $(".nav-s1 > a").html("给我留言");
-        $(".log-text").css("width", "100%")
-    }
-    //.mouseover ul li em序列号
-    for (var i = 0; i <= $(".mouseover ul li").length; i++) {
-        $(".mouseover ul li").eq(i).find("em").html(i + 1)
-    }
-    $(".text:lt(3) .new-icon").show();
-    $(".clearfix img").hide();
-
-    // 移动端二级菜单导航start
-    $("ul.slide-left li").on("touchstart", function () {
-        $(this).find(".slide_slect").stop().slideToggle();
-        $(this).find(".iconfont_click").toggleClass("icon-xiajiantou");
-        $(this).find(".iconfont_click").toggleClass("icon-shangjiantou");
-    })
-    // 移动端二级菜单导航end
-
-    //留言板手风琴start
-    $(".accordion .accordion_center ul li").hover(function () {
-        $(this).stop().animate({
-            "width": "340px"
-        }).siblings("li").stop().animate({
-            "width": "166px"
-        });
-        $(this).find(".slide-item").stop().fadeOut();
-        $(this).find(".mask").stop(true, true).fadeIn();
-        $(".accordion_center ul li .slide-item .iconfont").css("animation", "arrow_move1 1s .5s infinite alternate");
-        //上：暂停首页iconfont动画
-        return false;
-    }, function () {
-        $(this).find(".slide-item").fadeIn();
-        $(this).find(".mask").stop(true, false).fadeOut(); //鼠标离开过后，动画暂停，切不需要完成
-    });
-
-    $(".accordion .accordion_center").mouseleave(function () {
-        $(".accordion .accordion_center ul li").stop().animate({
-            "width": "200px"
-        });
-        $(".accordion .accordion_center ul li").find(".slide-item").fadeIn();
-        $(".accordion .accordion_center ul li").find(".mask").fadeOut();
-        $(".accordion_center ul li .slide-item .iconfont").css("animation", "arrow_move 1s .5s infinite alternate");
-        //上：开启首页iconfont动画，修复因为鼠标放上li上去导致动画停止后的bug
-    });
-    //留言板手风琴end
-
+$(function () {
+    //网站预加载运动start
     if ($(document).width() >= 1200) {
-        //点击页面出现爱心
-        ! function (e, t, a) {
-            function r() {
-                for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--,
-                    s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e]
-                    .y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale +
-                    ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
-                requestAnimationFrame(r)
-            }
+        if (window.location.href == "https://www.weipxiu.com" || window.location.href == "https://www.weipxiu.com/") {
+            $("#js_banner").show();
+            $("body > .continar").css("margin-top","15px");
+            //首页公告开始
+            setInterval(function () {
+                $(".notice").show();
+                $(".notice ul").stop(true, true).animate({
+                    "top": "-20px"
+                }, function () {
+                    var node = $(".notice ul li:eq(0)").remove();
+                    $(".notice ul").append(node);
+                    $(".notice ul").css("top", "0");
+                });
+            }, 5000);
 
-            function n() {
-                var t = "function" == typeof e.onclick && e.onclick;
-                e.onclick = function (e) {
-                    t && t(), o(e)
+            //IE浏览器屏蔽部分动效start
+            $(".mod-index__feature .img_list_6pic a").removeClass("word_display");
+            if (!!window.ActiveXObject || "ActiveXObject" in window) {
+                console.log("当前浏览器IE内核，部分效果不可展现！")
+            } else {
+                //首页轮播下sd导航start
+                $(".mod-index__feature .img_list_6pic a").mouseenter(function () {
+                    $(this).addClass("word_display")
+                });
+                $(".mod-index__feature .img_list_6pic a").mouseleave(function () {
+                    $(this).removeClass("word_display");
+                });
+                //首页轮播下sd导航end
+
+                // 首页弹窗开始
+                setTimeout(function () {
+                    var oBox = document.getElementById("curriculum");
+                    var oUl = oBox.getElementsByTagName("ul")[0];
+                    var oContact = oBox.getElementsByClassName("contact")[0];
+                    var oClos = oBox.getElementsByClassName("close")[0];
+                    var aLi = oUl.children;
+                    var oBack = oContact.getElementsByTagName("a")[0];
+                    oBox.style.opacity = 1;
+                    oBox.addEventListener("transitionEnd", end, false);
+                    oBox.addEventListener("webkitTransitionEnd", end, false);
+                    //oUl.style.transition=".5s 600ms linear";
+                    function end() {
+                        this.removeEventListener("transitionEnd", end, false);
+                        this.removeEventListener("webkitTransitionEnd", end, false);
+                        oUl.style.top = 0;
+                        oBox.style.height = "230px";
+                        oBox.style.top = "0px";
+                        for (var i = 0; i < aLi.length; i++) {
+                            aLi[i].style.transition = "0.5s " + (300 + i * 200) + "ms";
+                            aLi[i].style.opacity = 1;
+                            aLi[i].style.transform = "rotateX(0deg)";
+                            aLi[i].style.WebkitTransform = "rotateX(0deg)";
+                            aLi[i].off = true;
+                            aLi[i].index = i;
+                            aLi[i].onmouseover = over;
+                            aLi[i].onmouseout = function () {
+                                if (this.off) {
+                                    this.style.transform = "rotateY(0deg)";
+                                    this.style.WebkitTransform = "rotateY(0deg)";
+                                }
+                            };
+                            aLi[i].onclick = fnClick;
+                        }
+                    }
+
+                    function over(ev) {
+                        if (this.off) {
+                            var iX = ev.clientX - getLeft(this);
+                            this.style.transition = "0.5s";
+                            if (iX > this.offsetWidth / 2) {
+                                this.style.transform = "rotateY(30deg)";
+                                this.style.WebkitTransform = "rotateY(30deg)";
+                            } else {
+                                this.style.transform = "rotateY(-30deg)";
+                                this.style.WebkitTransform = "rotateY(-30deg)";
+                            }
+                        }
+                    }
+
+                    function getLeft(obj) {
+                        var iLeft = 0;
+                        while (obj) {
+                            iLeft += obj.offsetLeft;
+                            obj = obj.offsetParent;
+                        }
+                        return iLeft
+                    }
+
+                    function fnClick(ev) {
+                        var iX = ev.clientX - getLeft(this);
+                        var iDeg = iX > this.offsetWidth / 2 ? -180 : 180;
+                        var iMax = 0;
+                        var iNow = 0;
+                        oContact.style.display = "block";
+                        for (var i = 0; i < aLi.length; i++) {
+                            if (iMax < Math.abs(i - this.index)) {
+                                iMax = Math.abs(i - this.index);
+                                iNow = i;
+                            }
+                            aLi[i].off = false;
+                            aLi[i].style.transition = "0.5s " + Math.abs(i - this.index) * 100 + "ms cubic-bezier(0.115, -0.195, 0.255, -0.280)";
+                            aLi[i].style.transform = "rotateY(" + iDeg + "deg)";
+                            aLi[i].style.WebkitTransform = "rotateY(" + iDeg + "deg)";
+                            aLi[i].style.opacity = 0.1;
+                        }
+                        aLi[iNow].addEventListener("transitionEnd", end, false);
+                        aLi[iNow].addEventListener("webkitTransitionEnd", end, false);
+
+                        function end() {
+                            this.removeEventListener("transitionEnd", end, false);
+                            this.removeEventListener("webkitTransitionEnd", end, false);
+                            oContact.style.opacity = 1;
+                        }
+                    }
+                    oBack.onclick = function () {
+                        oContact.style.opacity = 0;
+                        oContact.addEventListener("transitionEnd", end, false);
+                        oContact.addEventListener("webkitTransitionEnd", end, false);
+
+                        function end() {
+                            this.removeEventListener("transitionEnd", end, false);
+                            this.removeEventListener("webkitTransitionEnd", end, false);
+                            for (var i = 0; i < aLi.length; i++) {
+                                aLi[i].off = true;
+                                aLi[i].style.transition = "0.5s " + (aLi.length - i - 1) * 100 + "ms";
+                                aLi[i].style.transform = "rotateY(0deg)";
+                                aLi[i].style.WebkitTransform = "rotateY(0deg)";
+                                aLi[i].style.opacity = 1;
+                            }
+                        }
+                    };
+
+                    function Clos() {
+                        oBox.style.transition = ".8s height,0.4s opacity .2s";
+                        oBox.style.height = "40px";
+                        oBox.style.opacity = 0;
+                        setTimeout(function () {
+                            $("#curriculum").remove();
+                        }, 1000)
+                    };
+                    oClos.onclick = function () {
+                        Clos();
+                    }
+                    setTimeout(function () {
+                        Clos()
+                    }, 8000);
+                    document.onkeydown = function (e) {
+                        if (!e) e = window.event;
+                        if ((e.keyCode || e.which) == 13) {
+                            Clos();
+                        };
+                    }
+                }, 2500);
+                // 首页弹窗结束
+            }
+            //IE浏览器屏蔽部分动效end
+
+            //轩枫博客start
+            //turnEffect（翻转）boomEffect（爆炸）pageEffect（翻页）skewEffect（扭曲）cubeEffect（立方体）
+            var flippingMode = ['turnEffect', 'boomEffect', 'skewEffect'];
+            var randomNum = Math.floor(Math.random() * 3);
+            var banner = new Banner({
+                banner: '#banner_img',
+                index: 0,
+                autoplay: 8000,
+                width: 1200,
+                height: 300,
+                images: [{
+                        url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-1.jpg',
+                        link: 'https://www.weipxiu.com/?cat=29'
+                    }, {
+                        url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-2.jpg',
+                        link: 'https://www.weipxiu.com/'
+                    }, {
+                        url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-3.jpg',
+                        link: 'javascript:;'
+                    }, {
+                        url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-4.jpg',
+                        link: 'javascript:;'
+                    }, {
+                        url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-5.jpg',
+                        link: 'https://www.weipxiu.com/?cat=6'
+                    },
+                    {
+                        url: 'https://www.weipxiu.com/wp-content/themes/boke/images/banner-6.jpg',
+                        link: 'https://www.weipxiu.com/?p=1313'
+                    }
+                ],
+
+                preloadImages: true, // 预加载所有图片
+
+                // 分页及控制
+                pagination: '.js_banner_nav', // 分页dom
+                paginationClick: true, // 分页是否可点击
+                prevButton: '.js_banner_prev', // 下一张dom
+                nextButton: '.js_banner_next', // 上一张dom
+                Effects: {
+                    //turnEffect（翻转）boomEffect（爆炸）pageEffect（翻页）skewEffect（扭曲）cubeEffect（立方体）
+                    'prev': 'turnEffect',
+                    'next': 'boomEffect',
+                    'navi': 'pageEffect'
+                },
+            });
+            //轩枫博客end
+
+            //给首页增加默认高亮
+            $(".nav ul.music-nav li:eq(0)").addClass("action");
+
+            /*//视频播放start
+            var delSetInterval = null; //定时器
+            var ISvideo = false; //当前是否全屏
+            var myPlayer = videojs( 'my-video' );
+            var howMuchIsDownloaded = 0; //初始化缓冲百分比
+            var eleFull = document.querySelector( "#my-video" ); //视频对象
+
+            //视频全屏方法
+            (function () {
+                var runPrefixMethod = function (element, method) {
+                    var usablePrefixMethod;
+                    ["webkit", "moz", "ms", "o", ""].forEach(function (prefix) {
+                        if (usablePrefixMethod) return;
+                        if (prefix === "") {
+                            // 无前缀，方法首字母小写
+                            method = method.slice(0, 1).toLowerCase() + method.slice(1);
+
+                        }
+                        var typePrefixMethod = typeof element[prefix + method];
+                        if (typePrefixMethod + "" !== "undefined") {
+                            if (typePrefixMethod === "function") {
+                                usablePrefixMethod = element[prefix + method]();
+                            } else {
+                                usablePrefixMethod = element[prefix + method];
+                            }
+                        }
+                    });
+                    return usablePrefixMethod;
+                };
+                if (typeof window.screenX === "number") {
+                    eleFull.addEventListener("dblclick", function () {
+                        if (runPrefixMethod(document, "FullScreen") || runPrefixMethod(document, "IsFullScreen")) {
+                            runPrefixMethod(document, "CancelFullScreen");
+                            this.title = this.title.replace("退出", "");
+                        } else if (runPrefixMethod(this, "RequestFullScreen")) {
+                            this.title = this.title.replace("点击", "点击退出");
+                        }
+                    });
+                } else {
+                    alert("爷，现在是年轻人的时代，您就暂且休息去吧~~");
                 }
-            }
-
-            function o(e) {
-                var a = t.createElement("div");
-                a.className = "heart", s.push({
-                    el: a,
-                    x: e.clientX - 5,
-                    y: e.clientY - 5,
-                    scale: 1,
-                    alpha: 1,
-                    color: c()
-                }), t.body.appendChild(a)
-            }
-
-            function i(e) {
-                var a = t.createElement("style");
-                a.type = "text/css";
-                try {
-                    a.appendChild(t.createTextNode(e))
-                } catch (t) {
-                    a.styleSheet.cssText = e
+            })();
+            
+            //初始化加载需要先缓冲到15%+才会播放，避免高清视频卡顿
+            delSetInterval = setInterval( function() {
+                howMuchIsDownloaded = myPlayer.bufferedPercent() //返回当前百分比缓冲0-1
+                //console.log(howMuchIsDownloaded*100 + '%')
+                if ( howMuchIsDownloaded > 0.15 ) {
+                    clearInterval( delSetInterval )
+                    myPlayer.play();
                 }
-                t.getElementsByTagName("head")[0].appendChild(a)
-            }
+            }, 1500 )
 
-            function c() {
-                return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) +
-                    ")"
-            }
+            //当视频播放完成后，重新加载渲染，随时准备第二次重播
+            myPlayer.on("ended", function () {
+                //alert("视频已播放完成");
+                myPlayer.play();
+                setTimeout(function () {
+                    myPlayer.pause();
+                }, 2000);
+            });
+            //视频播放end*/
 
-            var s = [];
-            e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame ||
-                e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
-                    setTimeout(e, 1e3 / 60)
-                }, i(
-                    ".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"
-                ), n(), r()
-        }(window, document);
+            // 桌面提醒功能
+            var set_desktop = function () {
+                if (window.Notification) {
+                    // var button = document.getElementById('button'), text = document.getElementById('text');
+
+                    var popNotice = function () {
+                        if (Notification.permission == "granted") {
+                            var notification = new Notification("官方提示：", {
+                                body: '欢迎点击加入"WEB前端薪资吐槽群"互相学习、交流！',
+                                icon: 'https://www.weipxiu.com/wp-content/themes/boke/images/tishi.png'
+                            })
+
+                            notification.onclick = function () {
+                                window.open("https://jq.qq.com/?_wv=1027&k=4BemYKg")
+                                notification.close();
+                            }
+                        }
+                    }
+
+                    var desktop = function () {
+                        if (Notification.permission == "granted") {
+                            popNotice();
+                        } else if (Notification.permission != "denied") {
+                            Notification.requestPermission(function (permission) {
+                                popNotice();
+                            })
+                        }
+                    }
+                    desktop();
+                } // else {
+                //     alert('浏览器不支持Notification');    
+                // }
+            }
+            //set_desktop();
+            setTimeout(function () {
+                set_desktop();
+            }, 5000);
+            // 桌面提醒功能
+
+            // setTimeout(function(){
+            // 	var swiper = new Swiper('.swiper-container', {
+            // 	    pagination: '.swiper-pagination',//是否出现小圆点
+            // 	    nextButton: '.swiper-button-next',//上一张
+            // 	    prevButton: '.swiper-button-prev',//下一张
+            // 	    slidesPerView: 1,//每一屏幕排几张图片
+            // 	    effect: 'slide',//轮播方式，左右切换
+            // 	    paginationClickable: true,//小圆点是否可点击
+            // 	    spaceBetween: 0,//图片间距
+            // 	    autoplay: 4500,//自动轮播时间
+            // 	    speed:350,//切换一张所需要的时间
+            // 	    keyboardControl : true,//键盘左右按钮切换
+            // 	    mousewheelControl : false,//鼠标滚轮切换
+            // 	    autoplayDisableOnInteraction : false,//表示用户操作swiper之后，是否禁止autoplay。默认为 true：停止。false是播放
+            // 	    loop: true//循环
+            // 	});
+            // },3000);
+
+            // console.log---start
+            if (window.console && window.console.log) {
+                setTimeout(function () {
+                    console.log("\n %c 唯品秀个人博客 %c  © Jun Li  https://weipxiu.com \n",
+                        "color:#FFFFFB;background:#1890ff;padding:5px 0;border-radius:.5rem 0 0 .5rem;",
+                        "color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;"
+                    );
+                }, 1500);
+            }
+            // console.log---end
+
+            $("#hide").show();
+            $("html,body").css({
+                "overflow-y": "visible"
+            });
+            $(".buffer").fadeOut();
+            $(".buffer .bar").hide();
+
+            //首页头部导航动画加载
+            $(".header.Top").css("WebkitAnimation-duration", ".7s");
+            $(".header.Top").css("MsAnimation-duration", ".7s");
+            $(".header.Top").css("animation -duration", ".7s");
+
+            //开场背景音乐
+            //$("#music").get(0).play();
+            setTimeout(function () {
+                $("#vedio").animate({
+                    "bottom": "0"
+                }, 1000);
+                $(".hide").animate({
+                    "bottom": "193px"
+                }, 1000);
+            }, 3500);
+        } else {
+            $(".c-860,.index-box,.hide,#curriculum,#js_banner").remove(); //去掉轮播、视频、邮件订阅
+        }
     } else {
-        // 移动端固定导航fixed-bug
-        setTimeout(function(){
-            var objec = $('.footer').detach();
-            $("body > .continar").append(objec);
-            $(".footer").css({"display": "block",});
-        },1500)
+        //排除PC端执行下列代码
+        //去掉首页列表第一篇文章，避免同今日焦点栏目顶替文章重合
+        $(".continar-left > .text:nth-of-type(3)").remove();
+        //swiper核心三要素：依赖swiper.js、swiper.css，外面父亲盒子高度
+        var swiper1 = new Swiper('.swiper-container1', {
+            pagination: '.swiper-pagination', //是否出现小圆点
+            //nextButton: '.swiper-button-next',//上一张
+            //prevButton: '.swiper-button-prev',//下一张
+            slidesPerView: 1, //每一屏幕排几张图片
+            effect: 'slide', //轮播方式，左右切换
+            paginationClickable: true, //小圆点是否可点击
+            spaceBetween: 0, //图片间距
+            autoplay: 4500, //自动轮播时间
+            speed: 500, //切换一张所需要的时间
+            // keyboardControl: true, //键盘左右按钮切换
+            // mousewheelControl: false, //鼠标滚轮切换
+            autoplayDisableOnInteraction: false, //表示用户操作swiper之后，是否禁止autoplay。默认为 true：停止。false是播放
+            loop: true //循环
+        });
+        //navigator.vibrate([1000, 500, 1000]);
+        //手机震动功能，里面是数组-震动时间，第二个为间隔时间
     }
+    //网站预加载运动end
 
     // 当窗口改变时候start
     $(window).resize(function() {
         if($(document).width() >= 1200){
-            // 当从移动端点开了侧边栏，然后改编窗口到pc端，关闭偏移
-            $(".continar,.os-headertop").css({
-                "transform": "translateX(0)"
-            })
+            if (window.location.href == "https://www.weipxiu.com" || window.location.href == "https://www.weipxiu.com/") {
+                $("#js_banner").show();
+                $("body > .continar").css("margin-top","15px");
+            }
+        }else{
+
         }
     });
     // 当窗口改变时候end
 
-});
+})

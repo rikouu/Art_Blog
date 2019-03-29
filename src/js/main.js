@@ -1,355 +1,553 @@
-; (function (window) {
-    
-                var ctx,
-                    hue,
-                    logo,
-                    form,
-                    buffer,
-                    target = {},
-                    tendrils = [],
-                    settings = {};
-    
-                settings.debug = true;
-                settings.friction = 0.5;
-                settings.trails = 20;
-                settings.size = 50;
-                settings.dampening = 0.25;
-                settings.tension = 0.98;
-    
-                Math.TWO_PI = Math.PI * 2;
-    
-                // ========================================================================================
-                // Oscillator 何问起
-                // ----------------------------------------------------------------------------------------
-    
-                function Oscillator(options) {
-                    this.init(options || {});
+$(function(){
+    if (window.location.href != "https://www.weipxiu.com" && window.location.href != "https://www.weipxiu.com/") {
+        // $(".continar-right .aside .video-js").remove();
+        $("body > .continar").css("margin-top","88px");
+    }
+    // 评论区域样式兼容
+    setTimeout(function(){
+        if($("#reply-title a").is(":hidden")){
+            $("#reply-title").hide();
+        }
+    })
+    //点击图片放大全屏start
+    var runPrefixMethod = function (element, method) {
+        var usablePrefixMethod;
+        ["webkit", "moz", "ms", "o", ""].forEach(function (prefix) {
+            if (usablePrefixMethod) return;
+            if (prefix === "") {
+                // 无前缀，方法首字母小写
+                method = method.slice(0, 1).toLowerCase() + method.slice(1);
+            }
+
+            var typePrefixMethod = typeof element[prefix + method];
+
+            if (typePrefixMethod + "" !== "undefined") {
+                if (typePrefixMethod === "function") {
+                    usablePrefixMethod = element[prefix + method]();
+                } else {
+                    usablePrefixMethod = element[prefix + method];
                 }
-    
-                Oscillator.prototype = (function () {
-    
-                    var value = 0;
-    
-                    return {
-    
-                        init: function (options) {
-                            this.phase = options.phase || 0;
-                            this.offset = options.offset || 0;
-                            this.frequency = options.frequency || 0.001;
-                            this.amplitude = options.amplitude || 1;
-                        },
-    
-                        update: function () {
-                            this.phase += this.frequency;
-                            value = this.offset + Math.sin(this.phase) * this.amplitude;
-                            return value;
-                        },
-    
-                        value: function () {
-                            return value;
-                        }
-                    };
-    
-                })();
-    
-                // ========================================================================================
-                // Tendril hovertree.com
-                // ----------------------------------------------------------------------------------------
-    
-                function Tendril(options) {
-                    this.init(options || {});
+            }
+        });
+
+        return usablePrefixMethod;
+    };
+    if (typeof window.screenX === "number") {
+        var eleFull = document.querySelectorAll(".log-text img");
+        for (var i = 0; i < eleFull.length; i++)
+            eleFull[i].addEventListener("click", function () {
+                if (runPrefixMethod(document, "FullScreen") || runPrefixMethod(document, "IsFullScreen")) {
+                    runPrefixMethod(document, "CancelFullScreen");
+                    this.title = this.title.replace("退出", "");
+                } else if (runPrefixMethod(this, "RequestFullScreen")) {
+                    this.title = this.title.replace("点击", "点击退出");
                 }
-    
-                Tendril.prototype = (function () {
-    
-                    function Node() {
-                        this.x = 0;
-                        this.y = 0;
-                        this.vy = 0;
-                        this.vx = 0;
-                    }
-    
-                    return {
-    
-                        init: function (options) {
-    
-                            this.spring = options.spring + (Math.random() * 0.1) - 0.05;
-                            this.friction = settings.friction + (Math.random() * 0.01) - 0.005;
-                            this.nodes = [];
-    
-                            for (var i = 0, node; i < settings.size; i++) {
-    
-                                node = new Node();
-                                node.x = target.x;
-                                node.y = target.y;
-    
-                                this.nodes.push(node);
-                            }
-                        },
-    
-                        update: function () {
-    
-                            var spring = this.spring,
-                                node = this.nodes[0];
-    
-                            node.vx += (target.x - node.x) * spring;
-                            node.vy += (target.y - node.y) * spring;
-    
-                            for (var prev, i = 0, n = this.nodes.length; i < n; i++) {
-    
-                                node = this.nodes[i];
-    
-                                if (i > 0) {
-    
-                                    prev = this.nodes[i - 1];
-    
-                                    node.vx += (prev.x - node.x) * spring;
-                                    node.vy += (prev.y - node.y) * spring;
-                                    node.vx += prev.vx * settings.dampening;
-                                    node.vy += prev.vy * settings.dampening;
-                                }
-    
-                                node.vx *= this.friction;
-                                node.vy *= this.friction;
-                                node.x += node.vx;
-                                node.y += node.vy;
-    
-                                spring *= settings.tension;
-                            }
-                        },
-    
-                        draw: function () {
-    
-                            var x = this.nodes[0].x,
-                                y = this.nodes[0].y,
-                                a, b;
-    
-                            ctx.beginPath();
-                            ctx.moveTo(x, y);
-    
-                            for (var i = 1, n = this.nodes.length - 2; i < n; i++) {
-    
-                                a = this.nodes[i];
-                                b = this.nodes[i + 1];
-                                x = (a.x + b.x) * 0.5;
-                                y = (a.y + b.y) * 0.5;
-    
-                                ctx.quadraticCurveTo(a.x, a.y, x, y);
-                            }
-    
-                            a = this.nodes[i];
-                            b = this.nodes[i + 1];
-    
-                            ctx.quadraticCurveTo(a.x, a.y, b.x, b.y);
-                            ctx.stroke();
-                            ctx.closePath();
-                        }
-                    };
-    
-                })();
-    
-                // ----------------------------------------------------------------------------------------
-    
-                function init(event) {
-    
-                    document.removeEventListener('mousemove', init);
-                    document.removeEventListener('touchstart', init);
-    
-                    document.addEventListener('mousemove', mousemove);
-                    document.addEventListener('touchmove', mousemove);
-                    document.addEventListener('touchstart', touchstart);
-    
-                    mousemove(event);
-                    reset();
-                    loop();
+            });
+    } else {
+        alert("爷，现在都什么时代了，你还在用这么土的浏览器~~");
+    }
+    //点击图片放大全屏end
+
+
+    // PC端导航通过点击跳转
+    $(".nav ul.music-nav li:not(.mod-header_music-icon,.front,.works)").click(function () {
+        var $href = $(this).find("span").eq(0).attr("data-href");
+        if ($href != '/') {
+            location.href = "http://www.weipxiu.com/" + $href;
+        } else {
+            location.href = "http://www.weipxiu.com/";
+        }
+    })
+
+    //给友情链接列表增加iconfont
+    $("ul.friendsChain li a").before("<i class='iconfont'>&#xe64a;</i>");
+
+    // 文章详情页点赞
+    setInterval(function () {
+        $(".page-reward .page-reward-btn .tooltip-item font,.page-reward .page-reward-btn .tooltip-item a").toggleClass("s_show");
+    }, 2000)
+    //点赞
+    $.fn.postLike = function () {
+        if ($(this).hasClass('done')) {
+            return false;
+        } else {
+            $(this).addClass('done');
+            var id = $(this).data("id"),
+                action = $(this).data('action'),
+                rateHolder = $(this).children('.count');
+            var ajax_data = {
+                action: "bigfa_like",
+                um_id: id,
+                um_action: action
+            };
+            $.post("/wp-admin/admin-ajax.php", ajax_data,
+                function (data) {
+                    $(rateHolder).html(data);
+                });
+            return false;
+        }
+    };
+    $(document).on("click", ".favorite",
+        function () {
+            $(this).postLike();
+        });
+
+    // 针对畅言傻逼作transform兼容
+    var mBenu = document.getElementById('menu');
+    document.oncontextmenu = function (ev) {
+        var ev = ev || event;
+        mBenu.style.display = 'block';
+        mBenu.style.left = ev.pageX - 85 + 'px';
+        mBenu.style.top = ev.pageY - 24 + 'px';
+        return false
+    }
+    document.onclick = function () {
+        mBenu.style.display = 'none'
+    }
+    /*document.onkeydown = function(ev) {
+        var ev = ev || event;
+        if (ev.keyCode == 123) {
+            return false
+        }
+        if (ev.ctrlKey == true && ev.keyCode == 83) {
+            return false
+        }
+    }*/
+    var searchShow = true;
+    $(".navto-search a").click(function () {
+        $(".site-search.active.pc").stop(true, true).slideToggle(150, function () {
+            if ($(this).is(":visible") && $(".nav ul.music-nav li>p").css("opacity") == 1) {
+                //$('.mod-header_music-icon').trigger("click");
+            } else if ($(this).is(":hidden") && $(".nav ul.music-nav li>p").css("opacity") == 0) {
+                //$('.mod-header_music-icon').trigger("click");
+            } else if ($(".nav ul.music-nav li>p").css("opacity") == 0) {
+                return false;
+            }
+        });
+        if (searchShow) {
+            $('.header').css('z-index', '11');
+            searchShow = false;
+        } else {
+            $('.header').css('z-index', '10');
+            searchShow = true;
+        }
+        $(this).find("i").toggleClass("fa-search");
+        $(this).find("i").toggleClass("fa-remove");
+    });
+
+    // 背景音乐start
+    var off = true;
+    $(".control").click(function () {
+        if (off) {
+            $("#music").get(0).play()
+        } else {
+            $("#music").get(0).pause()
+        }
+        $(this).toggleClass("hover");
+        off = !off
+    });
+
+    //判断当前页面是否存在背景音乐播放器，如果存在的话将声音大小调制到50%
+    if (document.getElementById("music")) {
+        document.getElementById("music").volume = 0.5;
+    }
+    // 背景音乐end
+
+    $(".header").addClass("Top");
+
+    // 跳动的Logo start
+    $("#Logo").hover(function () {
+            $("#dj li").css("WebkitAnimation", "move 0.5s ease 0s 1 alternate none running");
+            $("#dj li").css("animation", "move 0.5s ease 0s 1 alternate none running");
+
+        },
+        function () {
+            $('#dj li').attr("style", "");
+        });
+    // 跳动的Logo end
+
+    // 根据缓存状态初始化音乐
+    if (localStorage.getItem("off_y") != 1) {
+        $(".mod-header_music-icon").removeClass("hover").attr("title", "钢琴音效NO");
+        $(".nav ul.music-nav li > p").css("opacity", "0");
+        localStorage.setItem("off_y", 0);
+    } else {
+        $(".mod-header_music-icon").addClass("hover").attr("title", "钢琴音效OFF");
+        $(".nav ul.music-nav li > p").css("opacity", "1");
+        localStorage.setItem("off_y", 1);
+    }
+
+    // 跳动音符start
+    $(".mod-header_music-icon").click(function () {
+        clearInterval(navMinHideSetTime); //清除鼠标离开li时候的定时器
+        if (localStorage.getItem("off_y") != 1) {
+            $(this).addClass("hover");
+            $(this).attr("title", "钢琴音效OFF");
+            $(".nav ul.music-nav li > p").css("opacity", "1");
+            localStorage.setItem("off_y", 1);
+        } else {
+            $(this).removeClass("hover");
+            $(".nav ul.music-nav li > p").css("opacity", "0");
+            $(this).attr("title", "钢琴音效NO");
+            localStorage.setItem("off_y", 0);
+        }
+    });
+    // 跳动音符end
+
+    //钢琴导航start
+    var $index = null;
+    var musicObj = null;
+    var navMinHideSetTime = null;
+    var musicDown = $(".nav ul.music-nav li:not(.mod-header_music-icon)");
+    $(".nav ul.music-nav li:not(.mod-header_music-icon)").hover(function (event) {
+            $(this).parents(".header").css("z-index", "11"); //默认下方轮播层级高于头部
+            $index = $(this).index();
+            var deta = $(this).attr("detaName");
+            musicObj = $(".nav ul.music-nav li:not(.mod-header_music-icon)").eq($index).find('audio');
+            if (localStorage.getItem("off_y") == 1) {
+                $(this).addClass("active");
+                musicObj.get(0).src = "https://www.weipxiu.com/wp-content/themes/boke/music/" + deta + ".mp3";
+            } else {
+                musicObj.get(0).src = "";
+            }
+            event.stopPropagation();
+        },
+        function () {
+            clearInterval(navMinHideSetTime);
+            navMinHideSetTime = setInterval(function () { //不断检测鼠标移开后下拉二级菜单是否完好影藏
+                if (searchShow && $(".nav-min").eq(0).css("opacity") == 0 && $(".nav-min").eq(1).css("opacity") == 0) {
+                    $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
+                    clearInterval(navMinHideSetTime);
                 }
-    
-                function reset() {
-    
-                    tendrils = [];
-    
-                    for (var i = 0; i < settings.trails; i++) {
-    
-                        tendrils.push(new Tendril({
-                            spring: 0.45 + 0.025 * (i / settings.trails)
-                        }));
-                    }
+            }, 1000)
+            $(this).removeClass("active");
+        });
+
+    function musicdown(number) {
+        var objLi = $(".nav ul.music-nav li");
+        var parameter = objLi.eq(number).attr("detaName");
+        objLi.eq(number).find('audio').get(0).src = "https://www.weipxiu.com/wp-content/themes/boke/music/" + parameter + ".mp3";
+        if (number !== 8) {
+            objLi.eq(number).addClass("active")
+        }
+    }
+
+    $(document).keydown(function (event) {
+        if (localStorage.getItem("off_y") == 1) {
+            //a65 s83 d68 f70 g71 h72 j74 k75 l76
+            if (event.keyCode == 65) {
+                musicdown(0)
+            } else if (event.keyCode == 83) {
+                musicdown(1)
+            } else if (event.keyCode == 68) {
+                musicdown(2)
+            } else if (event.keyCode == 70) {
+                musicdown(3)
+            } else if (event.keyCode == 71) {
+                musicdown(4)
+            } else if (event.keyCode == 72) {
+                musicdown(5)
+            } else if (event.keyCode == 74) {
+                musicdown(6)
+            } else if (event.keyCode == 75) {
+                musicdown(7)
+            } else if (event.keyCode == 76) {
+                musicdown(8)
+            }
+        }
+    });
+    $(document).keyup(function () {
+        setTimeout(function () {
+            musicDown.removeClass("active")
+        }, 150);
+    });
+    //钢琴导航end
+
+    //PC二级菜单start
+    var time = null;
+    $(".front").hover(function (event) {
+        clearTimeout(time);
+        $(".header-conter .nav-min").eq(0).css({
+            "opacity": "1",
+            "visibility": "visible",
+            "top": "49px"
+        });
+        $(".header-conter .nav-min").eq(1).css({
+            "opacity": "0",
+            "visibility": "hidden",
+            "top": "70px"
+        });
+        event.stopPropagation();
+    }, function () {
+        clearTimeout(time);
+        time = setTimeout(function () {
+            $(".header-conter .nav-min").css({
+                "opacity": "0",
+                "visibility": "hidden",
+                "top": "70px"
+            });
+        }, 0);
+
+    });
+    $(".works").hover(function (event) {
+        clearTimeout(time);
+        $(".header-conter .nav-min").eq(1).css({
+            "opacity": "1",
+            "visibility": "visible",
+            "top": "49px"
+        });
+        $(".header-conter .nav-min").eq(0).css({
+            "opacity": "0",
+            "visibility": "hidden",
+            "top": "70px"
+        });
+        event.stopPropagation();
+    }, function () {
+        clearTimeout(time);
+        time = setTimeout(function () {
+            $(".header-conter .nav-min").css({
+                "opacity": "0",
+                "visibility": "hidden",
+                "top": "70px"
+            });
+        }, 0);
+    });
+    //PC二级菜单end
+
+    $(".aircraft").click(function () {
+        $('body,html').animate({
+                scrollTop: 0
+            },
+            800);
+        $(this).animate({
+                "bottom": "500px",
+                "opacity": "0"
+            },
+            1000,
+            function () {
+                setTimeout(function () {
+                        $(".aircraft").css({
+                            "bottom": "50px",
+                            "opacity": "1"
+                        })
+                    },
+                    500)
+            })
+    });
+    $("#wuyousujian-kefuDv").hover(function () {
+            $("#wuyousujian-kefuDv").stop().animate({
+                "right": "-100px"
+            }, 500)
+        },
+        function () {
+            $("#wuyousujian-kefuDv").stop().animate({
+                "right": "-196px"
+            }, 500)
+        });
+    $(document).scroll(function () {
+        var scrollTop = $(document).scrollTop();
+        if (scrollTop > 500) {
+            $(".aircraft").css({
+                "display": "block",
+                "opacity": "1"
+            })
+        } else {
+            $(".aircraft").css({
+                "display": "none",
+                "opacity": "0"
+            })
+        }
+        if (scrollTop <= 0) {
+            $(".header").addClass("Top")
+            $(".header").removeClass("hover")
+        } else {
+            $(".header").removeClass("Top")
+            $(".header").addClass("hover")
+        }
+        //var se = document.documentElement.clientHeight;
+    });
+    $(".continar .continar-left-top > span").each(function () {
+        var maxwidth = 115;
+        if ($(this).text().length > maxwidth) {
+            $(this).text($(this).text().substring(0, maxwidth));
+            $(this).html($(this).html() + "...")
+        }
+    });
+    var obtn = true;
+    $(".btn_menu,.cover").on("touchmove", function (event) {
+        event.preventDefault();
+    })
+    $(".btn_menu,.cover").on("touchstart", myFunction);
+
+    function myFunction() {
+        $(".os-herder").get(0).classList.toggle("btn");
+        $(".cover").toggle();
+        if (obtn) {
+            $(".continar,.os-headertop").css({
+                "transform": "translateX(160px)"
+            })
+        } else {
+            $(".continar,.os-headertop").css({
+                "transform": "translateX(0)"
+            })
+        }
+        if ($(".site-search").is(":visible")) {
+            $(".os-headertop .site-search").slideToggle(100);
+            $(".xis").find("i").toggleClass("fa-search");
+            $(".xis").find("i").toggleClass("fa-remove")
+        }
+        obtn = !obtn
+    }
+
+    //移动端禁止侧边导航上下滚动start
+    $(".os-herder,.site-search").on("touchmove", function (event) {
+        //event.stopPropagation();
+        event.preventDefault();
+    });
+    //移动端禁止侧边导航上下滚动end
+
+    //禁止ios11自带浏览器缩放功能start
+    document.addEventListener('touchstart', function (event) {
+        if (event.touches.length > 1) {
+            event.preventDefault();
+        }
+    })
+    var lastTouchEnd = 0;
+    document.addEventListener('touchend', function (event) {
+        var now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+        }
+        lastTouchEnd = now;
+    }, false)
+    //禁止ios11自带浏览器缩放功能end
+
+    //移动端头部下拉搜索start
+    $(".xis").on("touchstart", function () {
+        $(".os-headertop .site-search").slideToggle(100);
+        $(this).find("i").toggleClass("fa-search");
+        $(this).find("i").toggleClass("fa-remove")
+    });
+    //移动端头部下拉搜索end
+
+    if ($("html,body").width() < 960) {
+        $(".nav-s1 > a").html("给我留言");
+        $(".log-text").css("width", "100%")
+    }
+    //.mouseover ul li em序列号
+    for (var i = 0; i <= $(".mouseover ul li").length; i++) {
+        $(".mouseover ul li").eq(i).find("em").html(i + 1)
+    }
+    $(".text:lt(3) .new-icon").show();
+    $(".clearfix img").hide();
+
+    // 移动端二级菜单导航start
+    $("ul.slide-left li").on("touchstart", function () {
+        $(this).find(".slide_slect").stop().slideToggle();
+        $(this).find(".iconfont_click").toggleClass("icon-xiajiantou");
+        $(this).find(".iconfont_click").toggleClass("icon-shangjiantou");
+    })
+    // 移动端二级菜单导航end
+
+    //留言板手风琴start
+    $(".accordion .accordion_center ul li").hover(function () {
+        $(this).stop().animate({
+            "width": "340px"
+        }).siblings("li").stop().animate({
+            "width": "166px"
+        });
+        $(this).find(".slide-item").stop().fadeOut();
+        $(this).find(".mask").stop(true, true).fadeIn();
+        $(".accordion_center ul li .slide-item .iconfont").css("animation", "arrow_move1 1s .5s infinite alternate");
+        //上：暂停首页iconfont动画
+        return false;
+    }, function () {
+        $(this).find(".slide-item").fadeIn();
+        $(this).find(".mask").stop(true, false).fadeOut(); //鼠标离开过后，动画暂停，切不需要完成
+    });
+
+    $(".accordion .accordion_center").mouseleave(function () {
+        $(".accordion .accordion_center ul li").stop().animate({
+            "width": "200px"
+        });
+        $(".accordion .accordion_center ul li").find(".slide-item").fadeIn();
+        $(".accordion .accordion_center ul li").find(".mask").fadeOut();
+        $(".accordion_center ul li .slide-item .iconfont").css("animation", "arrow_move 1s .5s infinite alternate");
+        //上：开启首页iconfont动画，修复因为鼠标放上li上去导致动画停止后的bug
+    });
+    //留言板手风琴end
+
+    if ($(document).width() >= 1200) {
+        //点击页面出现爱心
+        ! function (e, t, a) {
+            function r() {
+                for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--,
+                    s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e]
+                    .y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale +
+                    ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
+                requestAnimationFrame(r)
+            }
+
+            function n() {
+                var t = "function" == typeof e.onclick && e.onclick;
+                e.onclick = function (e) {
+                    t && t(), o(e)
                 }
-    
-                function loop() {
-    
-                    if (!ctx.running) return;
-    
-                    ctx.globalCompositeOperation = 'source-over';
-                    ctx.fillStyle = 'rgba(8,5,16,0.4)';
-                    ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-                    ctx.globalCompositeOperation = 'lighter';
-                    ctx.strokeStyle = 'hsla(' + Math.round(hue.update()) + ',90%,50%,0.25)';
-                    ctx.lineWidth = 1;
-    
-                    if (ctx.frame % 60 == 0) {
-                        console.log(hue.update(), Math.round(hue.update()), hue.phase, hue.offset, hue.frequency, hue.amplitude);
-                    }
-    
-                    for (var i = 0, tendril; i < settings.trails; i++) {
-                        tendril = tendrils[i];
-                        tendril.update();
-                        tendril.draw();
-                    }
-    
-                    ctx.frame++;
-                    ctx.stats.update();
-                    requestAnimFrame(loop);
+            }
+
+            function o(e) {
+                var a = t.createElement("div");
+                a.className = "heart", s.push({
+                    el: a,
+                    x: e.clientX - 5,
+                    y: e.clientY - 5,
+                    scale: 1,
+                    alpha: 1,
+                    color: c()
+                }), t.body.appendChild(a)
+            }
+
+            function i(e) {
+                var a = t.createElement("style");
+                a.type = "text/css";
+                try {
+                    a.appendChild(t.createTextNode(e))
+                } catch (t) {
+                    a.styleSheet.cssText = e
                 }
-    
-                function resize() {
-                    ctx.canvas.width = window.innerWidth;
-                    ctx.canvas.height = window.innerHeight;
-                }
-    
-                function start() {
-                    if (!ctx.running) {
-                        ctx.running = true;
-                        loop();
-                    }
-                }
-    
-                function stop() {
-                    ctx.running = false;
-                }
-    
-                function mousemove(event) {
-                    if (event.touches) {
-                        target.x = event.touches[0].pageX;
-                        target.y = event.touches[0].pageY;
-                    } else {
-                        target.x = event.clientX
-                        target.y = event.clientY;
-                    }
-                    event.preventDefault();
-                }
-    
-                function touchstart(event) {
-                    if (event.touches.length == 1) {
-                        target.x = event.touches[0].pageX;
-                        target.y = event.touches[0].pageY;
-                    }
-                }
-    
-                function keyup(event) {
-    
-                    switch (event.keyCode) {
-                        case 32:
-                            save();
-                            break;
-                        default:
-                            // console.log(event.keyCode); hovertree.com
-                    }
-                }
-    
-                function letters(id) {
-    
-                    var el = document.getElementById(id),
-                        letters = el.innerHTML.replace('&amp;', '&').split(''),
-                        heading = '';
-    
-                    for (var i = 0, n = letters.length, letter; i < n; i++) {
-                        letter = letters[i].replace('&', '&amp');
-                        heading += letter.trim() ? '<span class="letter-' + i + '">' + letter + '</span>' : '&nbsp;';
-                    }
-    
-                    el.innerHTML = heading;
-                    setTimeout(function () {
-                        el.className = 'transition-in';
-                    }, (Math.random() * 500) + 500);
-                }
-    
-                function save() {
-    
-                    if (!buffer) {
-    
-                        buffer = document.createElement('canvas');
-                        buffer.width = screen.availWidth;
-                        buffer.height = screen.availHeight;
-                        buffer.ctx = buffer.getContext('2d');
-    
-                        form = document.createElement('form');
-                        form.method = 'post';
-                        form.input = document.createElement('input');
-                        form.input.type = 'hidden';
-                        form.input.name = 'data';
-                        form.appendChild(form.input);
-    
-                        document.body.appendChild(form);
-                    }
-    
-                    buffer.ctx.fillStyle = 'rgba(8,5,16)';
-                    buffer.ctx.fillRect(0, 0, buffer.width, buffer.height);
-    
-                    buffer.ctx.drawImage(canvas,
-                        Math.round(buffer.width / 2 - canvas.width / 2),
-                        Math.round(buffer.height / 2 - canvas.height / 2)
-                    );
-    
-                    buffer.ctx.drawImage(logo,
-                        Math.round(buffer.width / 2 - logo.width / 4),
-                        Math.round(buffer.height / 2 - logo.height / 4),
-                        logo.width / 2,
-                        logo.height / 2
-                    );
-    
-                    window.open(buffer.toDataURL(), 'wallpaper', 'top=0,left=0,width=' + buffer.width + ',height=' + buffer.height);
-    
-                    // form.input.value = buffer.toDataURL().substr(22);
-                    // form.submit(); hovertree.com
-                }
-    
-                window.requestAnimFrame = (function () {
-                    return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function (fn) { window.setTimeout(fn, 1000 / 60) };
-                })();
-    
-                window.onload = function () {
-    
-                    ctx = document.getElementById('canvas').getContext('2d');
-                    ctx.stats = new Stats();
-                    ctx.running = true;
-                    ctx.frame = 1;
-    
-                   
-    
-                    hue = new Oscillator({
-                        phase: Math.random() * Math.TWO_PI,
-                        amplitude: 85,
-                        frequency: 0.0015,
-                        offset: 285
-                    });
-    
-                 
-    
-                    document.addEventListener('mousemove', init);
-                    document.addEventListener('touchstart', init);
-                    document.body.addEventListener('orientationchange', resize);
-                    window.addEventListener('resize', resize);
-                    window.addEventListener('keyup', keyup);
-                    window.addEventListener('focus', start);
-                    window.addEventListener('blur', stop);
-    
-                    resize();
-    
-                    if (window.DEBUG) {
-    
-                        var gui = new dat.GUI();
-    
-                        // gui.add(settings, 'debug');
-                        settings.gui.add(settings, 'trails', 1, 30).onChange(reset);
-                        settings.gui.add(settings, 'size', 25, 75).onFinishChange(reset);
-                        settings.gui.add(settings, 'friction', 0.45, 0.55).onFinishChange(reset);
-                        settings.gui.add(settings, 'dampening', 0.01, 0.4).onFinishChange(reset);
-                        settings.gui.add(settings, 'tension', 0.95, 0.999).onFinishChange(reset);
-    
-                        document.body.appendChild(ctx.stats.domElement);
-                    }
-                };
-    
-            })(window);
-    
+                t.getElementsByTagName("head")[0].appendChild(a)
+            }
+
+            function c() {
+                return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) +
+                    ")"
+            }
+
+            var s = [];
+            e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame ||
+                e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
+                    setTimeout(e, 1e3 / 60)
+                }, i(
+                    ".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"
+                ), n(), r()
+        }(window, document);
+    } else {
+        // 移动端固定导航fixed-bug
+        setTimeout(function(){
+            var objec = $('.footer').detach();
+            $("body > .continar").append(objec);
+            $(".footer").css({"display": "block",});
+        },1500)
+    }
+
+    // 当窗口改变时候start
+    $(window).resize(function() {
+        if($(document).width() >= 1200){
+            // 当从移动端点开了侧边栏，然后改编窗口到pc端，关闭偏移
+            $(".continar,.os-headertop").css({
+                "transform": "translateX(0)"
+            })
+        }
+    });
+    // 当窗口改变时候end
+})
