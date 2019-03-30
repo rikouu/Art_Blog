@@ -266,7 +266,7 @@ $(function () {
                 myPlayer.play();
                 setTimeout(function () {
                     myPlayer.pause();
-                }, 1000);
+                }, 500);
             });
             //视频播放end
 
