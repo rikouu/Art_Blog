@@ -1,6 +1,6 @@
 <div class="aside">
     <h3>博客简介</h3>
-    <video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload width="308" height="173"
+    <video id="my-video" preload="none" class="video-js vjs-default-skin vjs-big-play-centered" controls preload width="308" height="173"
         style="margin-top:0" poster="<?php bloginfo('template_url'); ?>/images/video_bg.png" width="308" height="173"
         data-setup="{}">
         <source src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/video" type="video/mp4">

@@ -225,7 +225,7 @@ $(function(){
     function musicdown(number) {
         var objLi = $(".nav ul.music-nav li");
         var parameter = objLi.eq(number).attr("detaName");
-        objLi.eq(number).find('audio').get(0).src = "http://lijun2017.oss-cn-shanghai.aliyuncs.com/music/" + parameter + ".mp3";
+        objLi.eq(number).find('audio').get(0).src = "https://lijun2017.oss-cn-shanghai.aliyuncs.com/music/" + parameter + ".mp3";
         if (number !== 8) {
             objLi.eq(number).addClass("active")
         }

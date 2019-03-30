@@ -169,23 +169,23 @@ $(function () {
                 width: 1200,
                 height: 300,
                 images: [{
-                        url: 'http://lijun2017.oss-cn-shanghai.aliyuncs.com/pc_banner/banner-1.jpg',
+                        url: 'https://lijun2017.oss-cn-shanghai.aliyuncs.com/pc_banner/banner-1.jpg',
                         link: 'https://www.weipxiu.com/?cat=29'
                     }, {
-                        url: 'http://lijun2017.oss-cn-shanghai.aliyuncs.com/pc_banner/banner-2.jpg',
+                        url: 'https://lijun2017.oss-cn-shanghai.aliyuncs.com/pc_banner/banner-2.jpg',
                         link: 'https://www.weipxiu.com/'
                     }, {
-                        url: 'http://lijun2017.oss-cn-shanghai.aliyuncs.com/pc_banner/banner-3.jpg',
+                        url: 'https://lijun2017.oss-cn-shanghai.aliyuncs.com/pc_banner/banner-3.jpg',
                         link: 'javascript:;'
                     }, {
-                        url: 'http://lijun2017.oss-cn-shanghai.aliyuncs.com/pc_banner/banner-4.jpg',
+                        url: 'https://lijun2017.oss-cn-shanghai.aliyuncs.com/pc_banner/banner-4.jpg',
                         link: 'javascript:;'
                     }, {
-                        url: 'http://lijun2017.oss-cn-shanghai.aliyuncs.com/pc_banner/banner-5.jpg',
+                        url: 'https://lijun2017.oss-cn-shanghai.aliyuncs.com/pc_banner/banner-5.jpg',
                         link: 'https://www.weipxiu.com/?cat=6'
                     },
                     {
-                        url: 'http://lijun2017.oss-cn-shanghai.aliyuncs.com/pc_banner/banner-6.jpg',
+                        url: 'https://lijun2017.oss-cn-shanghai.aliyuncs.com/pc_banner/banner-6.jpg',
                         link: 'https://www.weipxiu.com/?p=1313'
                     }
                 ],

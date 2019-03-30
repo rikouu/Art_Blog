@@ -154,7 +154,7 @@
 										<a href="/?cat=22">Node.js基础</a>
 										<a href="/?cat=29">前端工具箱</a>
 										<!-- <a href="/?cat=348">授人以渔</a> -->
-										<a href="http://www.qmaile.com/" target="_blank">
+										<a href="http://v.laod.cn/" target="_blank">
 											Vip视频解析
 										</a>
 							  </div>
