@@ -181,7 +181,7 @@
 <!-- 判断用户当前是否登录 结束 -->
 
 <!-- <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-1" count="99" src="<?php bloginfo('template_url'); ?>/js/canvas-nest.min.js"></script> -->
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/main_min.js"></script>
 <script>
   $(function(){
