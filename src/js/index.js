@@ -259,7 +259,7 @@ $(function () {
                     myPlayer.play();
                 }
             }, 1500 )
-
+            */
             //当视频播放完成后，重新加载渲染，随时准备第二次重播
             myPlayer.on("ended", function () {
                 //alert("视频已播放完成");
@@ -267,7 +267,7 @@ $(function () {
                 setTimeout(function () {
                     myPlayer.pause();
                 }, 1000);
-            });*/
+            });
             //视频播放end
 
             // 桌面提醒功能
