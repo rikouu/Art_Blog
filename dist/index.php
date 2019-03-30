@@ -33,7 +33,7 @@
 					<div class="mod-banner__snow_1"></div>
 					<div class="mod-banner__snow_2"></div>
 				</div> -->
-		<a href="https://www.weipxiu.com" target="_blank" class="mod-banner__img banner_1" id="banner_img" style="background: url(&quot;<?php bloginfo('template_url'); ?>/images/banner-3.jpg&quot;) center center no-repeat;"></a>
+		<a href="https://www.weipxiu.com" target="_blank" class="mod-banner__img banner_1" id="banner_img" style="background: url(&quot;https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/banner-3.jpg&quot;) center center no-repeat;"></a>
 		<div class="mod-banner__navi">
 			<div class="js_banner_nav mod-banner_nav"></div>
 			<span class="mod-banner__nav-dot"><canvas id="dotCanvas"></canvas></span>
@@ -89,7 +89,7 @@
 				<div class="img_list_6pic ui-clearfix">
 					<div class="img_box">
 						<a href="https://www.weipxiu.com/1212.html" target="_blank">
-							<img src="<?php bloginfo('template_url'); ?>/images/01.503c5483.jpg" width="280" height="180" class="ui-d-b">
+							<img src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/01.503c5483.jpg" width="280" height="180" class="ui-d-b">
 							<div class="img_bg"></div>
 							<div class="img_txt">
 								<p class="img_title">有些话不一定要说出来 | 但一定要记录在某个地方</p>
@@ -104,14 +104,14 @@
 							<h3 class="img_txt_title">404</h3>
 							<p class="img_p">路<br>在何方</p>
 						</div>
-						<img class="carousel_small_pic" width="110" height="85" src="<?php bloginfo('template_url'); ?>/images/02.1999dad7.jpg">
+						<img class="carousel_small_pic" width="110" height="85" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/02.1999dad7.jpg">
 					</a>
 					<a href="https://www.weipxiu.com/817.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
 						<div class="carousel_small_str txt_bg02">
 							<h3 class="img_txt_title">绘画板</h3>
 							<p class="img_p">描绘<br>在故事里的风景</p>
 						</div>
-						<img class="carousel_small_pic" width="110" height="85" src="<?php bloginfo('template_url'); ?>/images/03.79b87140.jpg">
+						<img class="carousel_small_pic" width="110" height="85" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/03.79b87140.jpg">
 					</a>
 					<a href="https://www.weipxiu.com/802.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_long word_display"
 					 target="_blank">
@@ -119,7 +119,7 @@
 							<h3 class="img_txt_title">千里共良宵</h3>
 							<p class="img_p">岁月<br>在电波中流淌</p>
 						</div>
-						<img class="carousel_small_pic" src="<?php bloginfo('template_url'); ?>/images/04.106fc8c0.jpg" width="160"
+						<img class="carousel_small_pic" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/04.106fc8c0.jpg" width="160"
 						 height="85">
 					</a>
 					<a href="https://www.weipxiu.com/2075.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display"
@@ -128,14 +128,14 @@
 							<h3 class="img_txt_title">忙碌</h3>
 							<p class="img_p">在喧闹<br>又孤独的城市</p>
 						</div>
-						<img class="carousel_small_pic" width="110" height="85" src="<?php bloginfo('template_url'); ?>/images/05.0357cd0d.jpg">
+						<img class="carousel_small_pic" width="110" height="85" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/05.0357cd0d.jpg">
 					</a>
 					<a href="https://www.weipxiu.com/category/timemachine" target="_blank" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_long">
 						<div class="carousel_small_str txt_bg04">
 							<h3 class="img_txt_title">MV</h3>
 							<p class="img_p">时光<br>在画面里穿梭</p>
 						</div>
-						<img class="carousel_small_pic" src="<?php bloginfo('template_url'); ?>/images/06.50599bb3.jpg" width="160"
+						<img class="carousel_small_pic" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/06.50599bb3.jpg" width="160"
 						 height="85">
 					</a>
 					<a href="javascript:;" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display" target="_blank">
@@ -143,21 +143,21 @@
 							<h3 class="img_txt_title">Music</h3>
 							<p class="img_p">心情<br>在音乐中释放</p>
 						</div>
-						<img class="carousel_small_pic" width="110" height="85" src="<?php bloginfo('template_url'); ?>/images/07.2f43931e.jpg">
+						<img class="carousel_small_pic" width="110" height="85" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/07.2f43931e.jpg">
 					</a>
 					<a href="https://www.weipxiu.com/913.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
 						<div class="carousel_small_str txt_bg06">
 							<h3 class="img_txt_title">情人节</h3>
 							<p class="img_p">一个单身<br>程序员的史诗</p>
 						</div>
-						<img class="carousel_small_pic" width="110" height="85" src="<?php bloginfo('template_url'); ?>/images/08.daacfa0c.jpg">
+						<img class="carousel_small_pic" width="110" height="85" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/08.daacfa0c.jpg">
 					</a>
 					<a href="javascript:;" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
 						<div class="carousel_small_str txt_bg06">
 							<h3 class="img_txt_title">直男癌</h3>
 							<p class="img_p">花花世界<br>谁在鄙视直男癌</p>
 						</div>
-						<img class="carousel_small_pic" width="110" height="85" src="<?php bloginfo('template_url'); ?>/images/09.1f0f38a3.jpg">
+						<img class="carousel_small_pic" width="110" height="85" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/09.1f0f38a3.jpg">
 					</a>
 				</div>
 			</div>
@@ -180,7 +180,7 @@
 					<a href="<?php the_permalink(); ?>" target="_blank">
 						<span>【今日焦点】</span>
 						<?php the_title(); ?>
-						<img src="<?php bloginfo('template_url'); ?>/images/new.gif" width="26" height="14" alt="24小时内最新">
+						<img src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/new.gif" width="26" height="14" alt="24小时内最新">
 					</a>
 				</h1>
 				<span>
