@@ -75,9 +75,9 @@
 			<!--移动端轮播start-->
 			<div class="swiper-container1">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide" style="background:url('<?php bloginfo('template_url'); ?>/images/banner1.png') no-repeat center top; background-size:100% 100%"></div>
-					<div class="swiper-slide" style="background:url('<?php bloginfo('template_url'); ?>/images/banner2.png') no-repeat center top; background-size:100% 100%"></div>
-					<div class="swiper-slide" style="background:url('<?php bloginfo('template_url'); ?>/images/banner3.png') no-repeat center top; background-size:100% 100%"></div>
+					<div class="swiper-slide" style="background:url('http://lijun2017.oss-cn-shanghai.aliyuncs.com/mobile_banner/banner1.png') no-repeat center top; background-size:100% 100%"></div>
+					<div class="swiper-slide" style="background:url('http://lijun2017.oss-cn-shanghai.aliyuncs.com/mobile_banner/banner2.png') no-repeat center top; background-size:100% 100%"></div>
+					<div class="swiper-slide" style="background:url('http://lijun2017.oss-cn-shanghai.aliyuncs.com/mobile_banner/banner1.png') no-repeat center top; background-size:100% 100%"></div>
 				</div>
 				<div class="swiper-pagination"></div>
 			</div>
@@ -358,7 +358,7 @@
 	<?php wp_footer(); ?>
 	<!-- 底部调用end -->
 
-	<!-- 首页弹窗start -->
+	<!-- 首页弹窗start 
 	<div id="curriculum" class="gradient">
 		<h2>
 			<strong>重要通知</strong>
@@ -401,11 +401,11 @@
 			<a href="javascript:;">返回</a>
 		</div>
 	</div>
-	<!-- 首页弹窗end -->
+	首页弹窗end -->
 
 	<!-- 首页背景音乐开始 -->
-	<audio src="<?php bloginfo('template_url'); ?>/music/2595207170.mp3" loop="loop" preload="none" id="music"></audio>
-	<div class="control"></div>
+	<!-- <audio src="php bloginfo('template_url'); ?>/music/2595207170.mp3" loop="loop" preload="none" id="music"></audio>
+	<div class="control"></div> -->
 	<!-- 首页背景音乐结束 -->
 </body>
 
