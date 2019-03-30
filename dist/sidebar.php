@@ -136,16 +136,16 @@
         <a href="https://tongji.baidu.com/web/homepage/index">百度统计</a>
         <a href="https://ziyuan.baidu.com/linksubmit/index">百度收录</a>
         <a href="http://tool.chinaz.com/KeyWords/">关键词排名</a>
-        <a href="http://caibaojian.com/30-seconds-of-css/#sibling-fade">经典css片段</a>
+        <a href="http://caibaojian.com/30-seconds-of-css/#sibling-fade">经典Css片段</a>
         <a href="http://momentjs.cn/">时间戳格式化</a>
-        <a href="https://github.com/shengxinjing/programmer-job-blacklist">黑厂名单</a>
-        <a href="https://docs.qq.com/sheet/DdkZzbElOT0VrV0dD?ADUIN=937018802&ADSESSION=1539913469&ADTAG=CLIENT.QQ.5587_.0&ADPUBNO=26847&ADUIN=343049466&ADSESSION=1539911391&ADTAG=CLIENT.QQ.5593_.0&ADPUBNO=26858&tab=BB08J2">武汉黑厂</a>
-        <a href="https://996.icu/#/zh">996.ICU火了</a>
+        <a href="https://github.com/shengxinjing/programmer-job-blacklist">全国黑企名单</a>
+        <a href="https://docs.qq.com/sheet/DdkZzbElOT0VrV0dD?ADUIN=937018802&ADSESSION=1539913469&ADTAG=CLIENT.QQ.5587_.0&ADPUBNO=26847&ADUIN=343049466&ADSESSION=1539911391&ADTAG=CLIENT.QQ.5593_.0&ADPUBNO=26858&tab=BB08J2">武汉黑企名单</a>
+        <a href="https://996.icu/">996.ICU火了</a>
         <a href="https://github.com/stephentian/33-js-concepts">Js33个概念</a>
         <a href="https://github.com/Tencent/vConsole">vConsole</a>
         <a href="https://github.com/wendux/DSBridge-IOS">DSBridge</a>
         <a href="https://github.com/rachmanzz/vue-inview">DOM元素进屏</a>
-        <a href="http://www.shareinstall.net/">shareinstall</a>
+        <a href="http://www.shareinstall.net/">Shareinstall</a>
         <a href="https://getman.cn//">Http接口测试</a>
     </div>
 </div>
@@ -164,7 +164,7 @@
         <h3 class="widget-title">
             <a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>精彩评论</a>
         </h3>
-        <!-- 代码1：放在页面需要展示的位置  -->
+        代码1：放在页面需要展示的位置  -->
         <!-- 如果您配置过sourceid，建议在div标签中配置sourceid、cid(分类id)，没有请忽略  -->
         <!-- <div id="cyReping" role="cylabs" data-use="reping"></div> -->
         <!-- 代码2：用来读取评论框配置，此代码需放置在代码1之后。 -->
@@ -256,12 +256,6 @@
             </li>
             <li>最近更新：
                 <?php $last = $wpdb->get_results("SELECT MAX(post_modified) AS MAX_m FROM $wpdb->posts WHERE (post_type = 'post' OR post_type = 'page') AND (post_status = 'publish' OR post_status = 'private')");$last = date('Y年n月j日', strtotime($last[0]->MAX_m));echo $last; ?>
-            </li>
-            <li>
-                <!-- 如若喜欢本站，欢迎收藏 -->
-                <!-- 订阅本站：<a href="<?php /*bloginfo('rss2_url'); */?>" title="RSS订阅本站" style="display:inline;margin-left:0;line-height: normal;">
-                    <font class="iconfont icon-1" style="color:#666; font-size:16px;"></font>
-                </a> -->
             </li>
         </ul>
     </div>
