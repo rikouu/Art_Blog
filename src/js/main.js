@@ -49,14 +49,14 @@ $(function(){
 
 
     // PC端导航通过点击跳转
-    $(".nav ul.music-nav li:not(.mod-header_music-icon,.front,.works)").click(function () {
-        var $href = $(this).find("span").eq(0).attr("data-href");
-        if ($href != '/') {
-            location.href = "http://www.weipxiu.com/" + $href;
-        } else {
-            location.href = "http://www.weipxiu.com/";
-        }
-    })
+    // $(".nav ul.music-nav li:not(.mod-header_music-icon,.front,.works)").click(function () {
+    //     var $href = $(this).find("span").eq(0).attr("data-href");
+    //     if ($href != '/') {
+    //         location.href = "http://www.weipxiu.com/" + $href;
+    //     } else {
+    //         location.href = "http://www.weipxiu.com/";
+    //     }
+    // })
 
     //给友情链接列表增加iconfont
     $("ul.friendsChain li a").before("<i class='iconfont'>&#xe64a;</i>");

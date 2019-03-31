@@ -73,7 +73,7 @@
 							  </div>
 							  <ul class="music-nav">
 							  		<li detaName="do" class="<?php if ( (is_category('9') || in_category('9')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-									  <a href="javascript:void(0);">
+									  <a href="https://www.weipxiu.com/">
 										  <span data-href="/">首页</span>
 										  <span data-href="/">首页</span>
 									  </a>
@@ -81,7 +81,7 @@
 									  <p></p>
 									</li>
 									<li detaName="re" class="<?php if ( (is_category('2') || in_category('2')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-									  <a href="javascript:void(0);">
+									  <a href="https://www.weipxiu.com/category/mood">
 										  <span data-href="category/mood">心情小镇</span>
 										  <span data-href="category/mood">心情小镇</span>
 									  </a>
@@ -98,7 +98,7 @@
 									  <p></p>
 									</li>
 									<li detaName="fa" class="<?php if ( (is_category('1') || in_category('1')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-									  <a href="javascript:void(0);">
+									  <a href="https://www.weipxiu.com/category/timemachine">
 										  <span data-href="category/timemachine">时光机</span>
 										  <span data-href="category/timemachine">时光机</span>
 									  </a>
@@ -115,7 +115,7 @@
 									  <p></p>
 									</li>
 									<li detaName="la" class="<?php if ( in_category('13') && is_category('13') ) { echo 'action'; } ?>">
-									  <a href="javascript:void(0);">
+									  <a href="https://www.weipxiu.com/category/jqzy">
 										  <span data-href="category/jqzy">别具匠心</span>
 										  <span data-href="category/jqzy">别具匠心</span>
 									  </a>
@@ -123,7 +123,7 @@
 									  <p></p>
 									</li>
 									<li detaName="si" class="<?php if ( (is_category('8') || in_category('8')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-									  <a href="javascript:void(0);">
+									  <a href="https://www.weipxiu.com/category/message">
 										  <span data-href="category/message">碎言碎语</span>
 										  <span data-href="category/message">碎言碎语</span>
 									  </a>
@@ -131,7 +131,7 @@
 									  <p></p>
 									</li>
 									<li detaName="dd" class="<?php if ( (is_category('10') || in_category('10')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-									  <a href="javascript:void(0);">
+									  <a href="https://www.weipxiu.com/category/about">
 										  <span data-href="category/about">关于博客</span>
 										  <span data-href="category/about">关于博客</span>
 									  </a>

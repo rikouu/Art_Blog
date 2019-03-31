@@ -2918,36 +2918,6 @@ p.data-l>span a {
     color: #666;
 }
 
-.codecolorer-container table {
-    width: 100%;
-    background-color: #272822;
-}
-
-.codecolorer-container table td.line-numbers div {
-    color: #839496;
-    background-color: #073642;
-    border-right-color: #001b26;
-    padding: 7px 0 3px 0;
-    text-align: center;
-    width: 30px;
-}
-
-td.line-numbers {
-    width: 20px;
-}
-
-.codecolorer {
-    color: #66d9ef;
-    padding: 5px 0 1px 5px;
-    border-left: 1px solid #001b26;
-    color: #839496;
-    background-color: #002b36;
-}
-
-.codecolorer-container * {
-    font: 13px/1.4em Monaco, Lucida Console, monospace;
-}
-
 .continar-left .log-text {
     padding-top: 8px;
 }
@@ -3757,159 +3727,6 @@ span.extend {
 }
 .screen-reader-text {
     display: none !important;
-}
-
-.kw1,
-.kw2,
-.me1,
-.sy1 {
-    color: #859900;
-}
-
-.sy0 {
-    color: #f92659;
-}
-
-.br0 {
-    color: #fb1f5d;
-}
-
-.nu0 {
-    color: #ae81ff;
-}
-
-.co1,
-.co2,
-.me2,
-.nu19,
-.re0 {
-    color: #586e75;
-}
-
-@font-face {
-    font-family: iconfont;
-    src: url(https://at.alicdn.com/t/font_xozvftf5qlpzxgvi.eot?t=1484057152574);
-    src: url(https://at.alicdn.com/t/font_xozvftf5qlpzxgvi.eot?t=1484057152574#iefix) format('embedded-opentype'), url(https://at.alicdn.com/t/font_xozvftf5qlpzxgvi.woff?t=1484057152574) format('woff'), url(https://at.alicdn.com/t/font_xozvftf5qlpzxgvi.ttf?t=1484057152574) format('truetype'), url(https://at.alicdn.com/t/font_xozvftf5qlpzxgvi.svg?t=1484057152574#iconfont) format('svg');
-}
-
-.iconfont {
-    font-family: iconfont !important;
-    font-size: 16px;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-remen:before {
-    content: '\e622';
-}
-
-.icon-biaoqian:before {
-    content: '\e658';
-}
-
-.icon-zhuce:before {
-    content: '\e7cd';
-}
-
-.icon-close:before {
-    content: '\e616';
-}
-
-.icon-denglu:before {
-    content: '\e630';
-}
-
-.icon-biaoqian1:before {
-    content: '\e62a';
-}
-
-.icon-guanbi1:before {
-    content: '\e613';
-}
-
-.icon-pinglun:before {
-    content: '\e628';
-}
-
-.icon-wordpress:before {
-    content: '\e758';
-}
-
-.icon-html5:before {
-    content: '\e70f';
-}
-
-.icon-huiyuan:before {
-    content: '\e62f';
-}
-
-.icon-youqinglianjie1:before {
-    content: '\e694';
-}
-
-.icon-login:before {
-    content: '\e611';
-}
-
-.icon-sousuo:before {
-    content: '\e600';
-}
-
-.icon-huojian-copy:before {
-    content: '\e601';
-}
-
-.icon-iconfontmessage:before {
-    content: '\e60e';
-}
-
-.icon-lianjie:before {
-    content: '\e64a';
-}
-
-.icon-boke:before {
-    content: '\e604';
-}
-
-.icon-youqinglianjie:before {
-    content: '\e614';
-}
-
-.icon-huiyuan1:before {
-    content: '\e654';
-}
-
-.icon-xinqing:before {
-    content: '\e660';
-}
-
-.icon-lisimoshicaidandaohang:before {
-    content: '\e602';
-}
-
-.icon-guanyuwomen:before {
-    content: '\e603';
-}
-
-.icon-6huiyuanzhongxin:before {
-    content: '\e624';
-}
-
-.icon-shouyeshouye:before {
-    content: '\e632';
-}
-
-.icon-tags:before {
-    content: '\e757';
-}
-
-.icon-aixin:before {
-    content: '\e719';
-}
-
-.icon-youqinglianjie2:before {
-    content: '\e67f';
 }
 
 .wpuf-attachment-list img {
@@ -6802,7 +6619,7 @@ label {
     float: left;
     width: 36px;
     height: 36px;
-    border-radius: 50%;
+    border-radius: 4px;
     vertical-align: middle;
     margin-left: -10px;
     margin-right: 10px;
