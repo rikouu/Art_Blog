@@ -7,11 +7,11 @@ Author:李俊
 AuthorURI:https://github.com/weipxiu
 Tags:web前端，移动端，响应式，HTML5，CSS3
 */
-@font-face {
+/* @font-face {
     font-display: swap;
     font-family: play;
     src: url(./css/play_font.ttf);
-}
+} */
 
 * {
     margin: 0;
@@ -21,7 +21,8 @@ Tags:web前端，移动端，响应式，HTML5，CSS3
     box-sizing: border-box;
     color: #666;
     text-decoration: none;
-    font: 14px play, PingFangSC-Regular, Microsoft Yahei;
+    /* font: 14px play, PingFangSC-Regular, Microsoft Yahei; */
+    font: 14px Montserrat,Microsoft Yahei;
     font-weight: normal;
     /* font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif; */
 }
