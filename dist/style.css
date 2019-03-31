@@ -1681,8 +1681,6 @@ i {
 }
 
 .text img {
-    width: 220px;
-    height: 150px;
     border: 0;
     float: left;
     max-width: 100%;

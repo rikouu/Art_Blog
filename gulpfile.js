@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const htmlmin = require('gulp-htmlmin');//压缩html
 const imagemin = require('gulp-imagemin'); //引入图片压缩模块
 const scriptmin = require('gulp-uglify'); //引入js压缩模块
 const gulpless = require('gulp-less'); //引入less转换模块
@@ -29,7 +30,21 @@ gulp.watch -- 观察文件是否发生改变
 gulp.task("copyHtml", function () {
     //pipe后面对应的地址就是将前面路径文件拷贝复制到哪里去
     console.log('\n正在打包编译中，请稍后......................\n');
-    return gulp.src(["src/**", "!src/js/*", "!src/css/*", "!src/style.css"]).pipe(gulp.dest("dist"))
+    return gulp.src(["src/**", "!src/*.html", "!src/js/*", "!src/css/*", "!src/style.css"]).pipe(gulp.dest("dist"))
+});
+
+//压缩html
+gulp.task('miniHtml', () => {
+  return gulp.src(['src/*.html'])
+    .pipe(htmlmin({ 
+        collapseWhitespace: true, // 折叠html节点间的空白
+        minifyCSS: true, // 压缩css
+        minifyJS: true, // 压缩js
+        removeComments: true, // 去除注释
+        removeEmptyAttributes: true, // 去除空属性
+        removeRedundantAttributes: true // 去除与默认属性一致的属性值
+     }))
+    .pipe(gulp.dest('dist'));
 });
 
 //图片压缩
@@ -167,7 +182,7 @@ gulp.task("Watch", function () {
 
 //如果直接执行 gulp 那么就是运行任务名称为‘default’的任务,后面数组代表所需要执行的任务列表
 //"imageMin"不加入，否则实在太慢，图片压缩还是单独处理吧
-gulp.task('default', ["copyHtml", "jsConcat", "minCss"], function () {
+gulp.task('default', ["copyHtml", "miniHtml", "jsConcat", "minCss"], function () {
     setTimeout(()=>{
         console.log('\n恭喜你，编译打包已完成，所有文件在/dist文件夹！！！');
     },1000)
