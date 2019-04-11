@@ -8,6 +8,7 @@ const concat = require('gulp-concat'); //引入合并代码模块
 const babel = require('gulp-babel'); //引入ES6转ES5模块
 const autoprefixer = require('gulp-autoprefixer'); //增加浏览器前缀
 const rev = require('gulp-rev');//给静态文件资源添加hash值防缓存
+var preprocess = require("gulp-preprocess"); //区分html,js环境变量
 
 const browserSync = require('browser-sync'); //热更新模块
 
@@ -15,7 +16,7 @@ const browserSync = require('browser-sync'); //热更新模块
 const env = process.env.NODE_ENV
 
 let target = env === 'production' ? './dist' : './pre'
-console.log('当前环境',target)
+console.log('当前环境：'+env+'对应打包地址：'+target)
 
 /*
 gulp.task -- 定义任务
@@ -37,8 +38,14 @@ gulp.task("copyHtml", function () {
 //压缩html
 gulp.task('miniHtml', () => {
   return gulp.src(['src/*.html'])
+    .pipe(preprocess({
+        context: {
+        // 此处可接受来自调用命令的 NODE_ENV 参数，默认为 development 开发测试环境
+        NODE_ENV: process.env.NODE_ENV || 'development',
+        },
+    }))
     .pipe(htmlmin({ 
-        collapseWhitespace: true, // 折叠html节点间的空白
+        collapseWhitespace: false, // 折叠html节点间的空白
         minifyCSS: true, // 压缩css
         minifyJS: true, // 压缩js
         removeComments: true, // 去除注释

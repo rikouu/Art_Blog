@@ -8,9 +8,15 @@
 	<meta name="format-detection" content="telephone=no"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
 	<meta http-equiv="x-dns-prefetch-control" content="on">
+	<link rel="shortcut icon" type="image/x-icon" href="https://www.weipxiu.com/wp-content/themes/boke/favicon.ico" />
 	<link rel="dns-prefetch" href="https://www.weipxiu.com/">
 	<title>唯品秀个人博客&nbsp;|&nbsp;关注WEB前端开发技术_关注用户体验</title>
-	<!-- <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" /> -->
+	<!-- @if NODE_ENV='production' -->
+  <script src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/js/jquery-2.1.4.min.js"></script> 
+	<!-- @endif -->
+	<!-- @if NODE_ENV!='production' -->
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!-- @endif -->
 	<style>
 		/* @font-face { 
 		  font-family: "SF Pro Text"; 
@@ -84,8 +90,10 @@
 	</style>
 </head>
 	<body>
-	    <h1>特别鸣谢</h1>
-	    <div class="contaner">
+			<!-- @if NODE_ENV='production' -->
+			<h1>特别鸣谢</h1>
+			<!-- @endif -->
+			<div class="contaner">
 	         <em> —— 有些话不一定要说出来，但一定要记录在某个地方！</em>
 	    	 <h2>Ⅰ、潭州教育学院-玄武老师：</h2>
              <p>

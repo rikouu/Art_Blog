@@ -11,7 +11,7 @@
 ``` bash
 # 步骤
 
-1、本项目采用gulp自动化构建，可通过git克隆到本地，然后运行npm install安装依赖，接着运行gulp即可压缩打包整个项目，如不需要
+1、本项目采用gulp自动化构建，可通过git克隆到本地，然后运行npm install安装依赖，接着运行npm run build即可压缩打包整个项目，如不需要
    打包压缩代码等一系列工具功能可直接下载即可，然后找到项目文件的src目录，里面即是项目主题源码
 
 2、将主题文件放在：/htdocs/wp-content/themes/目录下
@@ -116,6 +116,5 @@
 >不完全统计
 
 > 爱前端  https//www.huanggr.cn/
-> 博学老头  https://www.boxuelaotou.com/ -->
 
 
