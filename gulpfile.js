@@ -15,6 +15,7 @@ const browserSync = require('browser-sync'); //热更新模块
 const env = process.env.NODE_ENV
 
 let target = env === 'production' ? './dist' : './pre'
+console.log('当前环境',target)
 
 /*
 gulp.task -- 定义任务
@@ -30,7 +31,7 @@ gulp.watch -- 观察文件是否发生改变
 gulp.task("copyHtml", function () {
     //pipe后面对应的地址就是将前面路径文件拷贝复制到哪里去
     console.log('\n正在打包编译中，请稍后......................\n');
-    return gulp.src(["src/**", "!src/*.html", "!src/js/*", "!src/css/*", "!src/style.css"]).pipe(gulp.dest("dist"))
+    return gulp.src(["src/**", "!src/*.html", "!src/js/*", "!src/css/*", "!src/style.css"]).pipe(gulp.dest(target))
 });
 
 //压缩html
@@ -44,7 +45,7 @@ gulp.task('miniHtml', () => {
         removeEmptyAttributes: true, // 去除空属性
         removeRedundantAttributes: true // 去除与默认属性一致的属性值
      }))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest(target));
 });
 
 //图片压缩
@@ -71,7 +72,7 @@ gulp.task("imageMin", function () {
                 ]
             })
         ]))
-        .pipe(gulp.dest('dist/images'))
+        .pipe(gulp.dest(target+'/images'))
 })
 
 // 转行压缩css
@@ -84,12 +85,12 @@ gulp.task("minCss", function () {
             cascade: false
         }))
         .pipe(gulp_minify_css())
-        .pipe(gulp.dest("dist/css"))
+        .pipe(gulp.dest(target+"/css"))
 
-    gulp.src(["src/css/*.woff2", "src/css/*.ttf"]).pipe(gulp.dest("dist/css"))
+    gulp.src(["src/css/*.woff2", "src/css/*.ttf"]).pipe(gulp.dest(target+"/css"))
 
     return gulp.src("src/style.css")
-           .pipe(gulp.dest("dist"))
+           .pipe(gulp.dest(target))
 });
 
 //ES6转换转ES5(babel-v7版本)
@@ -99,7 +100,7 @@ gulp.task("minCss", function () {
 //             presets: ['@babel/env']
 //         }))
 //         .pipe(scriptmin()) //转换后进行压缩
-//         .pipe(gulp.dest('dist/js'))
+//         .pipe(gulp.dest(target+'/js'))
 //     }
 // );
 
@@ -115,11 +116,11 @@ gulp.task("jsConcat", function () {
         .pipe(scriptmin()) //转换后进行压缩
         .pipe(concat("main_min.js"))
         .pipe(scriptmin()) //在合并的时候压缩js
-        .pipe(gulp.dest("dist/js"))
+        .pipe(gulp.dest(target+"/js"))
     
     //特例
     gulp.src(["src/js/date.js","src/js/jquery-2.1.4.min.js"])
-        .pipe(gulp.dest("dist/js"))
+        .pipe(gulp.dest(target+"/js"))
     
     //首页
     return gulp.src(["src/js/index.js","src/js/swiper.min.js"])
@@ -129,7 +130,7 @@ gulp.task("jsConcat", function () {
         .pipe(scriptmin()) //转换后进行压缩
         .pipe(concat("index_min.js"))
         .pipe(scriptmin()) //在合并的时候压缩js
-        .pipe(gulp.dest("dist/js"))
+        .pipe(gulp.dest(target+"/js"))
 })
 
 //初始化browserSync
@@ -184,6 +185,6 @@ gulp.task("Watch", function () {
 //"imageMin"不加入，否则实在太慢，图片压缩还是单独处理吧
 gulp.task('default', ["copyHtml", "miniHtml", "jsConcat", "minCss"], function () {
     setTimeout(()=>{
-        console.log('\n恭喜你，编译打包已完成，所有文件在/dist文件夹！！！');
+        console.log('\n恭喜你，编译打包已完成，所有文件在'+target+'文件夹！！！');
     },1000)
 });

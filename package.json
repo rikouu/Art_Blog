@@ -4,9 +4,11 @@
   "description": "一款基于jquery2.1.4开发的wordpress主题2.0版",
   "main": "index.js",
   "scripts": {
+    "dev": "cross-env NODE_ENV=development gulp",
+    "build": "cross-env NODE_ENV=production gulp",
+    "pre": "cross-env NODE_ENV=preproduction gulp",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp",
-    "dev": "gulp"
+    "debug": "cross-env NODE_ENV=development node --inspect-brk ./gulpfile.js"
   },
   "author": "李俊",
   "license": "ISC",
@@ -21,6 +23,7 @@
     "clone": "^2.1.2",
     "color-convert": "^1.9.3",
     "color-name": "^1.1.4",
+    "cross-env": "^5.2.0",
     "escape-string-regexp": "^1.0.5",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.0.0",
