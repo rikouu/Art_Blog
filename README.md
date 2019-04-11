@@ -11,14 +11,14 @@
 ``` bash
 # 步骤
 
-1、本项目采用gulp自动化构建，可通过git克隆到本地，然后运行npm install安装依赖，接着运行npm run build即可压缩打包整个项目，如不需要
-   打包压缩代码等一系列工具功能可直接下载即可，然后找到项目文件的src目录，里面即是项目主题源码
+1、本项目采用gulp自动化构建，可通过git克隆到本地，然后运行npm install安装依赖，接着运行npm run build即可压缩打包整个项目，
+如不需要打包压缩代码等一系列工具功能可直接下载即可，然后找到项目文件的src目录，里面即是项目主题源码
 
 2、将主题文件放在：/htdocs/wp-content/themes/目录下
 
 3、在wordpress后台安装WP-PageNavi插件
 
-<del>4、删除首页中的邮箱订阅代码(新版默认已去掉，需要借助插件配置才可以使用的，当然，你也可以折腾，插件名称：WordPress Mailer)</del>
+4、删除首页中的邮箱订阅代码(当前新版默认已去掉，需要借助插件配置才可以使用的，当然，你也可以折腾，插件名称：WordPress Mailer)
 
 5、全局替换所有链接为https://www.weipxiu.com地址，设置为自己的域名地址
 
@@ -34,7 +34,7 @@
 ```
 <img src="https://raw.githubusercontent.com/weipxiu/weipxiu/master/src/images/zhiwei.png">
 
-## 备注说明
+## 特别说明
 
 > 1、wordpress主题制作有特别要求，例如主题根目录必须存在header.php、index.php、footer.php、style.css，否则是不认，无法加载的。因此不用觉得某些文件摆放不合理，存在必定有意义
 
