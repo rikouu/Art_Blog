@@ -754,13 +754,11 @@ img {
 
 .continar .continar-left-top {
   width: 100%;
-  height: 2.2rem;
-  border: 1px solid #eaeaea;
-  padding: 16px 0.26rem;
+  height: 1.9rem;
+  padding: 0.2rem 0.26rem;
   overflow: hidden;
   background-color: #fff;
-  margin-bottom: 0.1rem;
-  border-radius: 0.08rem;
+  margin-bottom: 0.2rem;
   transition: all 0.35s;
 }
 
@@ -839,8 +837,7 @@ img {
 .continar .inner-box {
   background: #fff;
   padding: 0.26rem;
-  margin-bottom: 10px;
-  border: 1px solid #e6e6e6;
+  margin-bottom: 0.2rem;
   border-radius: 4px;
   transition: all 0.35s;
 }
@@ -907,14 +904,6 @@ img {
   overflow: hidden;
   position: relative;
   transition: all 0.35s;
-}
-
-.text .img-left img {
-  max-width: 4.5rem;
-  border: 0;
-  float: none;
-  display: block;
-  margin: 0 auto;
 }
 
 .text .text_right {
@@ -1014,22 +1003,6 @@ ul.post-categories li:first-child {
   border-right-width: 0;
 }
 
-.entry-meta {
-  margin-bottom: 10px;
-  color: #a5a5a5;
-  font-size: 0.24rem;
-  overflow: hidden;
-  width: 5.1rem;
-  margin: 0 auto 0.2rem;
-  text-align: center;
-}
-
-.entry-meta a {
-  color: #a5a5a5;
-  font-size: 0.24rem;
-}
-
-.entry-meta .space,
 .sep,
 .space {
   padding: 0 0.2rem;
@@ -1053,9 +1026,21 @@ ul.post-categories li:first-child {
   overflow: hidden;
   width: 100%;
 }
-
-.text .text_right .read-more {
+.text .img-left img,.entry-meta,.continar-left p.l,.text .text_right .read-more {
   display: none;
+}
+.entry-meta + img{
+    max-width: 2rem;
+    max-height: 1.2rem;
+    float: left;
+}
+.text h3{
+  width: calc(100% - 2.2rem);
+  float: right;
+  -webkit-line-clamp: 3;
+}
+.text .text_right>h2{
+  text-align: left;
 }
 
 /*右侧区域开始*/
@@ -1072,8 +1057,6 @@ ul.post-categories li:first-child {
 aside {
   background: #fff;
   margin-bottom: 0.2rem;
-  border: 1px solid #e6e6e6;
-  border-radius: 4px;
   padding: 0.26rem;
   color: #666;
   transition: all 0.35s;
@@ -1163,10 +1146,7 @@ p.clearfix a {
 
 .widget {
   background: #fff;
-  margin-bottom: 0.4rem;
-  box-shadow: 0px 0.02rem 0.04rem #c5c5c5;
-  border: 1px solid #eaeaea;
-  border-radius: 0.08rem;
+  margin-bottom: 0.2rem;
   padding: 0.26rem 0.3rem 0.06rem 0.3rem;
   transition: all 0.35s;
   border-bottom: 0;
@@ -1301,6 +1281,30 @@ div.com-art ul li {
   margin-left: 0.5rem;
 }
 
+.friendship .daily-list ul li {
+  line-height: 24px;
+  border: 1px solid #eee;
+  margin: 0 0 10px 0;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  animation-delay: 0.1s;
+  float: left;
+  margin: 0 1% 10px 0;
+  padding: 2px 7px;
+  width: auto;
+}
+.friendship .daily-list ul li a{
+  margin-left:0;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  line-height: 24px;
+}
+.friendship .daily-list ul li i.iconfont {
+  display: none;
+}
+
 .widget ul li:nth-child(1) em {
   background: #fd8c84;
 }
@@ -1322,8 +1326,6 @@ div.com-art ul li {
   position: relative;
   margin-bottom: 0.3rem;
   background-color: #fff;
-  border-radius: 0.08rem;
-  border: 1px solid #eaeaea;
   overflow: hidden;
   transition: all 0.35s;
 }
@@ -1448,7 +1450,7 @@ div.com-art ul li {
 
 .container p,
 .container span {
-  margin: 5px 0;
+  margin: 5px 0 3px;
   font-size: 0.24rem;
   color: #999;
   line-height: 18px;
@@ -1688,52 +1690,6 @@ div.com-art ul li {
   float: left;
 }
 
-.continar-left p.l {
-  font-size: 0.28rem;
-  margin: 0 auto;
-  height: 0.5rem;
-  overflow: hidden;
-  width: 100%;
-}
-
-.continar-left p.l > span {
-  color: #666;
-  width: 33.33%;
-  font-size: 0.26rem;
-  text-align: center;
-  display: block;
-  float: left;
-  line-height: 0.42rem;
-}
-
-.continar-left p.l > span a {
-  font-size: 0.26rem;
-  color: #666;
-}
-
-.continar-left p.l > span span {
-  color: #666;
-  font-size: 0.26rem;
-}
-
-.continar-left p.l > span:nth-of-type(1) {
-  width: 40%;
-  text-align: left;
-}
-
-.continar-left p.l > span:nth-of-type(2) {
-  width: 26%;
-}
-
-.continar-left p.l > span:nth-of-type(3) {
-  width: 30%;
-  text-align: right;
-}
-
-.continar-left p.l > span:nth-of-type(4) {
-  display: none;
-}
-
 div.key-w {
   margin: 0.2rem 0 0.9rem;
   font-size: 14px;
@@ -1784,18 +1740,6 @@ div.key-w a:nth-of-type(3):hover {
 
 .continar-left > h2 {
   color: #666;
-}
-
-.continar-left p.l span:nth-child(3) a {
-  padding-left: 0px;
-  display: inline-block;
-  text-align: center;
-  padding-right: 0;
-}
-
-.continar-left p.l span i {
-  color: #666;
-  font-size: 0.26rem;
 }
 
 .continar-left p a {
@@ -3423,6 +3367,9 @@ p.reward-p {
   padding: 0.15rem 0;
   border-bottom: 1px solid #eee;
 }
+.tuts_comments_user_avatars li:last-of-type{
+  border:none;
+}
 .tuts_comments_user_avatars img {
   width: 0.72rem;
   height: 0.72rem;
@@ -3612,21 +3559,4 @@ ol.commentlist {
 
 .codecolorer, .codecolorer *, .codecolorer-container, .codecolorer-container *{
   font:0.3rem/.5rem Monaco, Lucida Console, monospace!important
-}
-
-.text .img-left img,.entry-meta,.continar-left p.l{
-  display: none;
-}
-.entry-meta + img{
-    max-width: 2rem;
-    max-height: 1.2rem;
-    float: left;
-}
-.text h3{
-  width: calc(100% - 2.2rem);
-  float: right;
-  -webkit-line-clamp: 3;
-}
-.text .text_right>h2{
-  text-align: left;
 }

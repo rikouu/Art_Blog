@@ -847,8 +847,8 @@ ul.post-categories li:first-child {
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 }
-.text .text_right .read-more {
-	display:none;
+.text .img-left img,.entry-meta,.continar-left p.l,.text .text_right .read-more {
+  display: none;
 }
 /*右侧区域开始*/
 .continar-right {
@@ -1042,7 +1042,7 @@ div.com-art ul li {
 	font-style:normal;
 	display:inline-block;
 	position:absolute;
-	top:0.12rem;
+	top:0.02rem;
 	left:0;
 	text-align:center;
 	font-weight:normal;

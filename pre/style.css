@@ -2093,10 +2093,8 @@ i {
 .friendship .daily-list ul li a{
     margin-left:0;
     display: inline;
-    line-height: normal;
     margin: 0;
     padding: 0;
-    height: 24px;
     line-height: 24px;
 }
 .friendship .daily-list ul li i.iconfont {

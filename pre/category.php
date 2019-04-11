@@ -66,6 +66,12 @@
 								<span></span>
 							</a>
 						</div>
+						<?php
+								if ( has_post_thumbnail() )
+									the_post_thumbnail();
+								else
+									echo '<img src="https://www.weipxiu.com/wp-content/uploads/2017/04/default-220x150.png" alt="" />';
+						?>
 						<h3>
 							<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 156,"..."); ?>
 							<!--文章内容-->
