@@ -464,9 +464,9 @@ img:hover {
     margin-bottom: 20px;
     opacity: 1;
     z-index: 10;
-    -webkit-transition: all 0.8s;
-    -o-transition: all 0.8s;
-    transition: all 0.8s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
     background: #fff;
     /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#d4d7db');
     background: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#d4d7db));
@@ -575,9 +575,9 @@ img:hover {
     width: 1200px;
     margin: 20px auto 0;
     border-top: 1px solid transparent;
-    -webkit-transition: all 1s;
-    -o-transition: all 1s;
-    transition: all 1s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .header.hover .nav ul.music-nav li.active p {
@@ -864,9 +864,10 @@ img:hover {
 }
 
 .nav ul.music-nav li:hover a {
-    -webkit-transform: rotateX(-90deg);
-    -ms-transform: rotateX(-90deg);
-    transform: rotateX(-90deg);
+    -webkit-transform: rotateX(-89deg);
+    -ms-transform: rotateX(-89deg);
+    transform: rotateX(-89deg);
+    margin-top: 2px;
 }
 
 .nav ul li a span:nth-of-type(2) {
@@ -1827,8 +1828,8 @@ i {
 }
 
 .text h3 {
-    line-height: 26px;
-    height: 49px;
+    line-height: 24px;
+    height: 48px;
     margin-bottom: 16px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -2883,7 +2884,7 @@ div.nav-s a {
 }
 
 h2.title {
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
     line-height: 40px;
     color: #555;
@@ -2946,8 +2947,8 @@ p.data-l>span a {
 
 .log-text p {
     font-size: 14px;
-    line-height: 30px;
-    margin: 15px auto;
+    line-height: 28px;
+    margin: 10px auto;
     text-indent: 2em;
     color: #666;
 }
@@ -4231,7 +4232,7 @@ ul.post-categories li:first-child {
 
 .log-text h4,
 .h4 {
-    margin: 25px -15px 15px;
+    margin: 10px -15px;
     padding: 6px 15px;
     border-left: 4px solid #39c;
     border-bottom: 1px solid #39c;
@@ -4241,9 +4242,8 @@ ul.post-categories li:first-child {
 }
 
 .log-text h5 {
-    padding: 10px 0 10px;
+    padding: 10px 0;
     font-size: 16px;
-    color: #555;
     border-bottom: 1px dashed #ccc;
 }
 

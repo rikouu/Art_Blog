@@ -2,7 +2,7 @@
 	* {
 	margin:0;
 	padding:0;
-	font-family:"Microsoft YaHei",arial,simsun,sans-serif;
+	font-family:"Microsoft YaHei";
 	list-style:none;
 	box-sizing:border-box;
 	color:#444;
@@ -2886,3 +2886,7 @@ span.post-like,.img-left span ul li a {
 }
 
 /* ajax loading动画end */
+
+.codecolorer, .codecolorer *, .codecolorer-container, .codecolorer-container *{
+  font:0.3rem/.5rem Monaco, Lucida Console, monospace!important
+}
