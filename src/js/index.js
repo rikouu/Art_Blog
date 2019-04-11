@@ -324,6 +324,8 @@ $(function () {
     }
     //网站预加载运动end
 
+    // 给首页增加菜单导航高亮
+    $('.nav ul.music-nav li').eq(0).addClass('action')
     // 当窗口改变时候start
     $(window).resize(function() {
         if($(document).width() >= 1200){

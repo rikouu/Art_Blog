@@ -894,7 +894,6 @@ img:hover {
 }
 
 .nav ul li:hover a span {
-    color: #444;
     -webkit-transition: all 0.35s;
     -o-transition: all 0.35s;
     transition: all 0.35s;
