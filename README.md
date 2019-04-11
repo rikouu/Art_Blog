@@ -18,7 +18,7 @@
 
 3、在wordpress后台安装WP-PageNavi插件
 
-~~4、删除首页index.php中的邮箱订阅php代码(新版默认已去掉，需要借助插件配置才可以使用的，当然，你也可以折腾，插件名称：WordPress Mailer)~~
+<del>4、删除首页中的邮箱订阅代码(新版默认已去掉，需要借助插件配置才可以使用的，当然，你也可以折腾，插件名称：WordPress Mailer)</del>
 
 5、全局替换所有链接为https://www.weipxiu.com地址，设置为自己的域名地址
 
