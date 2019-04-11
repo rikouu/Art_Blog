@@ -81,7 +81,7 @@
 									  <p></p>
 									</li>
 									<li detaName="re" class="<?php if ( (is_category('2') || in_category('2')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-									  <a href="https://www.weipxiu.com/category/mood">
+									  <a href="/?cat=2">
 										  <span data-href="category/mood">心情小镇</span>
 										  <span data-href="category/mood">心情小镇</span>
 									  </a>
@@ -98,7 +98,7 @@
 									  <p></p>
 									</li>
 									<li detaName="fa" class="<?php if ( (is_category('1') || in_category('1')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-									  <a href="https://www.weipxiu.com/category/timemachine">
+									  <a href="/?cat=1">
 										  <span data-href="category/timemachine">时光机</span>
 										  <span data-href="category/timemachine">时光机</span>
 									  </a>
@@ -115,7 +115,7 @@
 									  <p></p>
 									</li>
 									<li detaName="la" class="<?php if ( in_category('13') && is_category('13') ) { echo 'action'; } ?>">
-									  <a href="https://www.weipxiu.com/category/jqzy">
+									  <a href="/?cat=13">
 										  <span data-href="category/jqzy">别具匠心</span>
 										  <span data-href="category/jqzy">别具匠心</span>
 									  </a>
@@ -123,7 +123,7 @@
 									  <p></p>
 									</li>
 									<li detaName="si" class="<?php if ( (is_category('8') || in_category('8')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-									  <a href="https://www.weipxiu.com/category/message">
+									  <a href="/?cat=8">
 										  <span data-href="category/message">碎言碎语</span>
 										  <span data-href="category/message">碎言碎语</span>
 									  </a>
@@ -131,7 +131,7 @@
 									  <p></p>
 									</li>
 									<li detaName="dd" class="<?php if ( (is_category('10') || in_category('10')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-									  <a href="https://www.weipxiu.com/category/about">
+									  <a href="/?cat=10">
 										  <span data-href="category/about">关于博客</span>
 										  <span data-href="category/about">关于博客</span>
 									  </a>
