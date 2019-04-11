@@ -18,7 +18,7 @@
 
 3、在wordpress后台安装WP-PageNavi插件
 
-4、删除首页index.php中的邮箱订阅php代码(需要借助插件配置才可以使用的，当然，你也可以折腾，插件名称：WordPress Mailer)
+~~4、删除首页index.php中的邮箱订阅php代码(新版默认已去掉，需要借助插件配置才可以使用的，当然，你也可以折腾，插件名称：WordPress Mailer)~~
 
 5、全局替换所有链接为https://www.weipxiu.com地址，设置为自己的域名地址
 
@@ -79,7 +79,7 @@
 │      style-ios.css    //针对手机端样式
 │      style-ipd.css    //针对ipd平板样式
 │      swiper.min.css   //移动端轮播swiper样式
-│      video-js.css 
+│      video-js.css    //视频插件样式
 │      
 ├─font-awesome-4.7.0    //国外比较有名的icon图标库
 │          
@@ -87,14 +87,14 @@
 │      
 ├─js
 │  │  ajax_wordpress.js    //用于分页ajaxs刷新
-│  │  canvas-nest.min.js 
+│  │  canvas-nest.min.js //canvas背景图插件
 │  │  date.js  //时光机数据
 │  │  index.js    //整个网站的js全局
 │  │  javascript.js  //只针对首页的js文件
-│  │  jquery-2.1.4.min.js
+│  │  jquery-2.1.4.min.js 
 │  │  rem.js
 │  │  swiper.min.js  //移动端的swiper轮播插件
-│  │  xfg_banner.js
+│  │  xfg_banner.js //pc端banner
 │  │  
 │  ├─video.js 
 │  │      video.min.js
