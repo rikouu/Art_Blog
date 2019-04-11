@@ -94,7 +94,6 @@
 │  │  jquery-2.1.4.min.js 
 │  │  rem.js
 │  │  swiper.min.js  //移动端的swiper轮播插件
-│  │  xfg_banner.js //pc端banner
 │  │  
 │  ├─video.js 
 │  │      video.min.js
