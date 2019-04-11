@@ -9,7 +9,6 @@
   color: #444;
   font-size: 14px;
   text-decoration: none;
-  font-weight: lighter;
   /*-webkit-touch-callout: none;长时间按住页面出现闪退,
 	如果启用，那么图片默认长按存储到相册功能被禁止*/
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
@@ -27,7 +26,7 @@ h3,
 h4,
 h5,
 h6 {
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: none;
   /*旋转屏幕时，字体大小调整的问题*/
 }
 
@@ -124,7 +123,7 @@ img {
 
 #mobil {
   min-height: 175px;
-  height: 5rem;
+  height: 4.5rem;
   width: 100%;
   position: relative;
   display: block !important;
@@ -1352,9 +1351,9 @@ div.com-art ul li {
   width: 31.3333%;
   margin: 0 1% 1% 1%;
   padding: 0 8px;
-  font-size: 12px;
-  height: 29px;
-  line-height: 29px;
+  font-size: 0.24rem;
+  height: 0.56rem;
+  line-height: 0.56rem;
   overflow: hidden;
   transition: all 0.35s;
 }
@@ -3592,7 +3591,7 @@ p.reward-p {
   font-size: 0.28rem;
 }
 ol.children {
-  margin-top: 1rem;
+  margin-top: 0.6rem;
   /* border-top: 1px solid #eee; */
   border-bottom: 1px solid #eee;
   padding-bottom: 0.2rem;
@@ -3606,8 +3605,28 @@ ol.commentlist {
 #comments .warning-text{
     font-size: 0.28rem;
 }
+.media{
+  overflow: hidden;
+}
 /* 文章评论框end */
 
 .codecolorer, .codecolorer *, .codecolorer-container, .codecolorer-container *{
   font:0.3rem/.5rem Monaco, Lucida Console, monospace!important
+}
+
+.text .img-left img,.entry-meta,.continar-left p.l{
+  display: none;
+}
+.entry-meta + img{
+    max-width: 2rem;
+    max-height: 1.2rem;
+    float: left;
+}
+.text h3{
+  width: calc(100% - 2.2rem);
+  float: right;
+  -webkit-line-clamp: 3;
+}
+.text .text_right>h2{
+  text-align: left;
 }

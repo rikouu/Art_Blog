@@ -1814,7 +1814,9 @@ i {
     font-size: 12px;
     overflow: hidden;
 }
-
+.entry-meta + img{
+    display: none;
+}
 .entry-meta a {
     font-size: 12px;
 }

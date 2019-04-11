@@ -8,12 +8,11 @@
 	color:#444;
 	font-size:14px;
 	text-decoration:none;
-	font-weight: lighter;
 	/*touch-callout: none;长时间按住页面出现闪退,
 	如果启用，那么图片默认长按存储到相册功能被禁止*/
 }
 html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
-  text-size-adjust:100%;/*旋转屏幕时，字体大小调整的问题*/
+  text-size-adjust:none;/*旋转屏幕时，字体大小调整的问题*/
 }
 em,i {
 	font-style:normal;
@@ -71,7 +70,7 @@ img {
 }
 #mobil {
 	min-height:175px;
-	height:8rem;
+	height:7rem;
 	width:100%;
 	position:relative;
 	display:block !important;
@@ -703,12 +702,12 @@ img {
 .text {
 	background: #fff;
     height: auto;
-    padding: 0.26rem;
+    padding: 0 0.26rem;
     margin-bottom: 10px;
     overflow: hidden;
     position: relative;
     transition: all 0.35s;
-	width: calc((100% - 10px)/2);
+		width: calc((100% - 10px)/2);
     float: left;
 }
 .text:nth-of-type(2n+1){
@@ -816,6 +815,9 @@ ul.post-categories li:first-child {
 	width:5.1rem;
 	margin:0 auto 0.2rem;
 }
+.entry-meta + img{
+	display: none;
+}
 .entry-meta a {
 	color:#a5a5a5;
 	font-size:0.24rem
@@ -826,9 +828,9 @@ ul.post-categories li:first-child {
 	font-style:normal;
 }
 .text h3 {
-	line-height:0.42rem;
-	margin-bottom:0.2rem;
-	color:#666;
+	height:1.2rem;
+	line-height:0.4rem;
+	margin-bottom:0.28rem;
 	font-size:0.26rem;
 	font-weight:normal;
 	display:flex;
@@ -1322,6 +1324,9 @@ to {
 }
 #ds-recent-comments li.ds-comment .ds-thread-title a {
 	color:#1890ff;
+}
+.media{
+  overflow: hidden;
 }
 /*评论模块结束*/
 
@@ -2890,3 +2895,5 @@ span.post-like,.img-left span ul li a {
 .codecolorer, .codecolorer *, .codecolorer-container, .codecolorer-container *{
   font:0.3rem/.5rem Monaco, Lucida Console, monospace!important
 }
+
+
