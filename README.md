@@ -16,7 +16,7 @@
 
 2、将主题文件放在：/htdocs/wp-content/themes/目录下
 
-3、在wordpress后台安装WP-PageNavi插件
+3、在wordpress后台安装WP-PageNavi(分页)、Advanced Custom Fields(高级自定义字段)插件
 
 4、删除首页中的邮箱订阅代码(当前新版默认已隐藏，需要借助插件配置且进入后台主题设置启动才可以使用的，当然，你也可以折腾，
 插件名称：WordPress Mailer)

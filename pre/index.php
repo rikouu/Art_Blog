@@ -273,7 +273,7 @@
 						<i class="space">•</i>
 						<a href="#">
 							<?php if( get_field('original') ): ?>
-							<!-- <? /*php the_field('original'); */?> -->
+							<!-- <? /*php the_field('original'); */?> //直接打印输出字段的值-->
 							<?php echo "原创"; ?>
 							<?php else: ?>
 							<?php echo "转载"; ?>
