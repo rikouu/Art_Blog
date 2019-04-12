@@ -194,26 +194,26 @@
 				<h3>博客介绍</h3>
 				<div class="textwidget">
 					<p class="clearfix">
-						前端博客: weipxiu.com，我们关注Web前端开发技术，移动前端开发，前端资讯，同时分享前端资源和工具等，期待你的参与,<a rel="nofollow" target="_blank" href="/?cat=10">了解更多..</a>
+						前端博客: <?php get_option('weipxiu_options')['domain']; ?>，我们关注Web前端开发技术，移动前端开发，前端资讯，同时分享前端资源和工具等，期待你的参与,<a rel="nofollow" target="_blank" href="/?cat=10">了解更多..</a>
 					</p>
 					<ul class="social">
 						<li class="weibo">
 							<a href="https://wpa.qq.com/msgrd?v=3&uin=343049466&site=qq&menu=yes"
-							 target="_blank" class="top-tip" title="加QQ为好友"><i class="iconfont icon-qq"></i>QQ</a>
+							 target="_blank" class="top-tip" title="加QQ为好友"><i class="iconfont icon-qq"></i>会话</a>
 						</li>
 						<li class="qq">
 							<a target="_blank" href="https://jq.qq.com/?_wv=1027&k=4BemYKg" rel="nofollow" class="top-tip" title="加入web前端QQ群"><i
 								 class="iconfont icon-qqqun"></i>Q群</a>
-						</li>
-						<li class="feed">
-							<a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=343049466&site=qq&menu=yes" rel="nofollow" class="top-tip" title="QQ临时会话"><i
-								 class="iconfont icon-qq"></i>会话</a>
 						</li>
 						<li class="email">
 							<a href="mailto:343049466@qq.com.com" target="_blank" rel="nofollow" class="top-tip" title="给我发送qq邮件"><i class="iconfont icon-youxiang"></i>邮件</a>
 						</li>
 						<li class="weixin">
 							<a href="javascript:;" target="_blank" rel="nofollow" class="top-tip" title="关注微信"><i class="iconfont icon-weixin"></i>微信</a>
+						</li>
+						<li class="feed">
+							<a target="_blank" href="https://github.com/weipxiu" rel="nofollow" class="top-tip" title="Github"><i
+								 class="iconfont icon-qq"></i>Github</a>
 						</li>
 					</ul>
 				</div>

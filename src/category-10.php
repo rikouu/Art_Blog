@@ -32,7 +32,7 @@
                    <div class="head_user"> 
                     <div class="head_user_a"> 
                      <div class="head_avatar"> 
-                      <a href="/author/1?info=home"> 
+                      <a href="javascript:;"> 
                        <m class="head_user_avatar_aa"> 
                              <img src="https://avatars3.githubusercontent.com/u/24957370?s=460&v=4" class="avatar" width="160" height="160" />
                        </m> <span class="verify_1"></span></a> 
@@ -135,10 +135,6 @@
                 <!-- <p class="px">
                     最后感谢大家的关注，尤其谢谢<a href="<?php bloginfo('template_url'); ?>/thanks.php">各位</a>提供的帮助！
                 </p>
-                <p class="px">
-                    网址:<a href="<?php echo home_url(); ?>" target="_blank">www.weipxiu.com</a>
-                    <a href="https://wanwang.aliyun.com/domain/" rel="nofollow" target="_blank">购买域名</a>
-                </p> -->
                 <!-- <p class="px">
                     服务器：阿里云服务器
                     <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DWoG1gOGHloYcQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAhhTilfuDb7gmOBYHCj3evBOAbTbYw7EPlvF2q5tuT9EvoVXXVCKRFy3TeD3oX5%2B6TDVuRn8ddiDsEVVC24eqozcHtRpEUy6RHVyxRO0gvF4QxJtmCgOmCLXl8Q7TEjBF%2BX11FSyvDCnQiv%2BJKjlPObGDmntuH4VtA%3D%3D" rel="nofollow" target="_blank">购买服务器</a>
