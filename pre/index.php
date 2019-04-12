@@ -13,7 +13,7 @@
 	<!-- 强制https -->
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 	<meta http-equiv="x-dns-prefetch-control" content="on">
-	<link rel="dns-prefetch" href="https://www.weipxiu.com/">
+	<link rel="dns-prefetch" href="<?php echo home_url(); ?>">
 	<title>唯品秀&nbsp;–&nbsp;前端开发&nbsp;|&nbsp;web前端技术博客</title>
 	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
 
@@ -33,7 +33,7 @@
 					<div class="mod-banner__snow_1"></div>
 					<div class="mod-banner__snow_2"></div>
 				</div> -->
-		<a href="https://www.weipxiu.com" target="_blank" class="mod-banner__img banner_1" id="banner_img" style="background: url(&quot;https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/banner-3.jpg&quot;) center center no-repeat;"></a>
+		<a href="<?php echo home_url(); ?>" target="_blank" class="mod-banner__img banner_1" id="banner_img" style="background: url(&quot;https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/banner-3.jpg&quot;) center center no-repeat;"></a>
 		<div class="mod-banner__navi">
 			<div class="js_banner_nav mod-banner_nav"></div>
 			<span class="mod-banner__nav-dot"><canvas id="dotCanvas"></canvas></span>
@@ -88,7 +88,7 @@
 			<div class="mod-index__feature" style="display: none">
 				<div class="img_list_6pic ui-clearfix">
 					<div class="img_box">
-						<a href="https://www.weipxiu.com/1212.html" target="_blank">
+						<a href="/1212.html" target="_blank">
 							<img src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/01.503c5483.jpg" width="280" height="180" class="ui-d-b">
 							<div class="img_bg"></div>
 							<div class="img_txt">
@@ -98,7 +98,7 @@
 							<i class="light"></i>
 						</a>
 					</div>
-					<a href="https://www.weipxiu.com/404.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display"
+					<a href="/404.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display"
 					 target="_blank">
 						<div class="carousel_small_str txt_bg01">
 							<h3 class="img_txt_title">404</h3>
@@ -106,14 +106,14 @@
 						</div>
 						<img class="carousel_small_pic" width="110" height="85" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/02.1999dad7.jpg">
 					</a>
-					<a href="https://www.weipxiu.com/817.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
+					<a href="/817.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
 						<div class="carousel_small_str txt_bg02">
 							<h3 class="img_txt_title">绘画板</h3>
 							<p class="img_p">描绘<br>在故事里的风景</p>
 						</div>
 						<img class="carousel_small_pic" width="110" height="85" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/03.79b87140.jpg">
 					</a>
-					<a href="https://www.weipxiu.com/802.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_long word_display"
+					<a href="/802.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_long word_display"
 					 target="_blank">
 						<div class="carousel_small_str txt_bg03">
 							<h3 class="img_txt_title">千里共良宵</h3>
@@ -122,7 +122,7 @@
 						<img class="carousel_small_pic" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/04.106fc8c0.jpg" width="160"
 						 height="85">
 					</a>
-					<a href="https://www.weipxiu.com/2075.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display"
+					<a href="/2075.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display"
 					 target="_blank">
 						<div class="carousel_small_str txt_bg02">
 							<h3 class="img_txt_title">忙碌</h3>
@@ -130,7 +130,7 @@
 						</div>
 						<img class="carousel_small_pic" width="110" height="85" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/05.0357cd0d.jpg">
 					</a>
-					<a href="https://www.weipxiu.com/category/timemachine" target="_blank" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_long">
+					<a href="/category/timemachine" target="_blank" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_long">
 						<div class="carousel_small_str txt_bg04">
 							<h3 class="img_txt_title">MV</h3>
 							<p class="img_p">时光<br>在画面里穿梭</p>
@@ -145,7 +145,7 @@
 						</div>
 						<img class="carousel_small_pic" width="110" height="85" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/07.2f43931e.jpg">
 					</a>
-					<a href="https://www.weipxiu.com/913.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
+					<a href="/913.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
 						<div class="carousel_small_str txt_bg06">
 							<h3 class="img_txt_title">情人节</h3>
 							<p class="img_p">一个单身<br>程序员的史诗</p>
@@ -213,7 +213,7 @@
 							<a href="mailto:343049466@qq.com.com" target="_blank" rel="nofollow" class="top-tip" title="给我发送qq邮件"><i class="iconfont icon-youxiang"></i>邮件</a>
 						</li>
 						<li class="weixin">
-							<a href="https://www.weipxiu.com/feed" target="_blank" rel="nofollow" class="top-tip" title="关注微信"><i class="iconfont icon-weixin"></i>微信</a>
+							<a href="/feed" target="_blank" rel="nofollow" class="top-tip" title="关注微信"><i class="iconfont icon-weixin"></i>微信</a>
 						</li>
 					</ul>
 				</div>
@@ -257,7 +257,7 @@
 							if ( has_post_thumbnail() )
 								the_post_thumbnail();
 							else
-								echo '<img src="https://www.weipxiu.com/wp-content/uploads/2017/04/default-220x150.png" alt="" />';
+								echo '<img src="/wp-content/uploads/2017/04/default-220x150.png" alt="" />';
 						?>
 					</a>
 				</div>
@@ -269,7 +269,7 @@
 							<?php the_title(); ?></a>
 					</h2>
 					<div class="entry-meta">
-						<a href="https://www.weipxiu.com">唯品秀</a>
+						<a href="<?php echo home_url(); ?>">唯品秀</a>
 						<i class="space">•</i>
 						<a href="#">
 							<?php if( get_field('original') ): ?>
@@ -289,10 +289,10 @@
 							if ( has_post_thumbnail() )
 								the_post_thumbnail();
 							else
-								echo '<img src="https://www.weipxiu.com/wp-content/uploads/2017/04/default-220x150.png" alt="" />';
+								echo '<img src="/wp-content/uploads/2017/04/default-220x150.png" alt="" />';
 					?>
 					<h3>
-						<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 156,"..."); ?>
+						<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200,"..."); ?>
 						<!--文章内容-->
 					</h3>
 					<a class="read-more" href="<?php the_permalink(); ?>" target="_blank">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
@@ -337,7 +337,7 @@
 				<!--竖条-->
 			</div>
 			<?php endwhile; else : ?>
-				<?php header("Location: https://www.weipxiu.com/404.html");exit; ?> 
+				<?php header("Location: /404.html");exit; ?> 
 				<!-- <h2 id="redirect">
 					<?php _e('404'); ?>
 				</h2> -->

@@ -33,7 +33,7 @@
                             class="iconfont icon-youxiang"></i>邮件</a>
                 </li>
                 <li class="weixin">
-                    <a href="https://www.weipxiu.com/feed" target="_blank" rel="nofollow" class="top-tip" title="关注微信"><i
+                    <a href="/feed" target="_blank" rel="nofollow" class="top-tip" title="关注微信"><i
                             class="iconfont icon-weixin"></i>微信</a>
                 </li>
             </ul>
@@ -70,7 +70,7 @@
                         if ( has_post_thumbnail() )
                             the_post_thumbnail();
                         else
-                            echo '<img src="https://www.weipxiu.com/wp-content/uploads/2017/04/default-220x150.png" alt="" />';
+                            echo '<img src="/wp-content/uploads/2017/04/default-220x150.png" alt="" />';
                     ?>
                 </a>
                 <!-- <em></em> -->
@@ -120,16 +120,16 @@
 <div class="classif">
     <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-leimupinleifenleileibie"></i>文章分类</a></h3>
     <div class="items">
-        <a href="https://www.weipxiu.com/?cat=3">H5/CSS3 (<?php echo wt_get_category_count(3); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=5">Js基础 (<?php echo wt_get_category_count(5); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=5">jQuery (<?php echo wt_get_category_count(5); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=14">Js框架 (<?php echo wt_get_category_count(14); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=22">Node.js (<?php echo wt_get_category_count(22); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=13">前端技巧 ((<?php echo wt_get_category_count(13); ?>))</a>
-        <a href="https://www.weipxiu.com/?cat=14">前端资源 (<?php echo wt_get_category_count(14); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=29">前端工具 (<?php echo wt_get_category_count(29); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=2">CMS系统 (<?php echo wt_get_category_count(2); ?>)</a>
-        <a href="https://www.weipxiu.com/?cat=1">本站公告</a>
+        <a href="/?cat=3">H5/CSS3 (<?php echo wt_get_category_count(3); ?>)</a>
+        <a href="/?cat=5">Js基础 (<?php echo wt_get_category_count(5); ?>)</a>
+        <a href="/?cat=5">jQuery (<?php echo wt_get_category_count(5); ?>)</a>
+        <a href="/?cat=14">Js框架 (<?php echo wt_get_category_count(14); ?>)</a>
+        <a href="/?cat=22">Node.js (<?php echo wt_get_category_count(22); ?>)</a>
+        <a href="/?cat=13">前端技巧 ((<?php echo wt_get_category_count(13); ?>))</a>
+        <a href="/?cat=14">前端资源 (<?php echo wt_get_category_count(14); ?>)</a>
+        <a href="/?cat=29">前端工具 (<?php echo wt_get_category_count(29); ?>)</a>
+        <a href="/?cat=2">CMS系统 (<?php echo wt_get_category_count(2); ?>)</a>
+        <a href="/?cat=1">本站公告</a>
         <a href="https://cdnnext.console.aliyun.com/refresh/record">阿里CDN</a>
         <a href="https://www.bootcdn.cn/">CDN大全</a>
         <a href="https://github.com/weipxiu">博主Github</a>

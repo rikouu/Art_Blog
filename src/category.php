@@ -12,7 +12,7 @@
 	<!-- 强制https -->
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 	<meta http-equiv="x-dns-prefetch-control" content="on">
-	<link rel="dns-prefetch" href="https://www.weipxiu.com/">
+	<link rel="dns-prefetch" href="<?php echo home_url(); ?>">
 	<title><?php the_title(); ?>&nbsp;|&nbsp;关注WEB前端开发技术&nbsp;-&nbsp;唯品秀博客</title>
 	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -42,7 +42,7 @@
 						    if ( has_post_thumbnail() )
 						        the_post_thumbnail();
 						    else
-						        echo '<img src="https://www.weipxiu.com/wp-content/uploads/2017/04/default-220x150.png" alt="" />';
+						        echo '<img src="/wp-content/uploads/2017/04/default-220x150.png" alt="" />';
 						?>
 						</a>
 					</div>
@@ -57,7 +57,7 @@
 							</a>
 						</h2>
 						<div class="entry-meta">
-							<a href="https://www.weipxiu.com">唯品秀</a>
+							<a href="<?php echo home_url(); ?>">唯品秀</a>
 							<i class="space">•</i>
 							<a href="#">前端开发资讯</a>
 							<i class="space">•</i>
@@ -70,10 +70,10 @@
 								if ( has_post_thumbnail() )
 									the_post_thumbnail();
 								else
-									echo '<img src="https://www.weipxiu.com/wp-content/uploads/2017/04/default-220x150.png" alt="" />';
+									echo '<img src="/wp-content/uploads/2017/04/default-220x150.png" alt="" />';
 						?>
 						<h3>
-							<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 156,"..."); ?>
+							<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200,"..."); ?>
 							<!--文章内容-->
 						</h3>
 						<a class="read-more" href="<?php the_permalink(); ?>" target="_blank">阅读全文
@@ -121,7 +121,7 @@
 					<!--竖条-->
 				</div>
 				<?php endwhile; else : ?>
-				<?php header("Location: https://www.weipxiu.com/404.html");exit; ?> 
+				<?php header("Location: /404.html");exit; ?> 
 				<!-- <h2 id="redirect">
 					<?php _e('404'); ?>
 				</h2> -->

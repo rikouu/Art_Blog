@@ -230,6 +230,19 @@
     if ($(document).width() >= 1200) {
     // 文字琴弦效果start
     (function ($) {
+      // 换算字符串长度所占字符
+      String.prototype.gblen = function() {    
+          var len = 0;    
+          for (var i=0; i<this.length; i++) {    
+              if (this.charCodeAt(i)>127 || this.charCodeAt(i)==94) {    
+                  len += 2;    
+              } else {    
+                  len ++;    
+              }    
+          }    
+          return len;    
+      } 
+      // end
       $.extend($.easing, {
         easeOutElastic: function (x, t, b, c, d) {
           var s = 1.70158;
@@ -263,7 +276,22 @@
       };
 
       function fillSpan($ele) {
-        var baseContent = $ele.text().trim().length < 25?$ele.text().trim():$ele.text().trim().slice(0,25) + '...';
+        //通过字符换算，尽可能让所有列长度一致
+        var baseContent = ''; //初始化字符串 
+        var strLengh = 0; //初始化截取位数
+        if($ele.text().trim().gblen() < 38){
+          baseContent = $ele.text().trim();
+        }else{
+          for(var k=0;k < 38;k++){
+            if(baseContent.gblen() < 38){
+              baseContent = $ele.text().trim().slice(0,strLengh) + '...';
+              //console.log(baseContent,baseContent.gblen())
+            }else{
+              break;
+            }
+            strLengh ++;
+          }
+        }
 
         var content = '';
         for (var i = 0, len = baseContent.length; i < len; i++) {

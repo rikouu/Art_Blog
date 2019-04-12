@@ -10,7 +10,7 @@
     <!-- 强制https -->
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta http-equiv="x-dns-prefetch-control" content="on">
-	  <link rel="dns-prefetch" href="https://www.weipxiu.com/">
+	  <link rel="dns-prefetch" href="<?php echo home_url(); ?>">
     <title>关于&留言 - 唯品秀 – 前端开发 | web前端技术博客</title>
     <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
 	  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/font-awesome-4.7.0/css/font-awesome.min.css">

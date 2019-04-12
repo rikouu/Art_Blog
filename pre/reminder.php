@@ -38,6 +38,6 @@ a{color:#930;text-decoration:none;border-bottom:1px dotted #930; }
 	<a href="https://www.apple.com/safari" target="_blank"><img alt="safari" src="images/safari.png"></a>
 	<a href="https://www.opera.com/zh-cn" target="_blank"><img alt="safari" src="images/opera.png"></a>
 </p>
-<h4>Copyright © 2016-2018 <a href="https://www.weipxiu.com">WEIPXIU.COM</a> · 版权所有 鄂ICP备 16001853号-1</h4>
+<h4>Copyright © 2016-2019 <a href="/">WEIPXIU.COM</a> · 版权所有</h4>
 </body>
 </html>

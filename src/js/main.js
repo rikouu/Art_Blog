@@ -1,5 +1,6 @@
 $(function(){
-    if (window.location.href != "https://www.weipxiu.com" && window.location.href != "https://www.weipxiu.com/") {
+    var domain_name = window.location.origin;
+    if (window.location.href != domain_name && window.location.href != domain_name+'/') {
         $("body > .continar").css("margin-top","88px");
     }
     // 评论区域样式兼容
@@ -205,7 +206,7 @@ $(function(){
             musicObj = $(".nav ul.music-nav li:not(.mod-header_music-icon)").eq($index).find('audio');
             if (localStorage.getItem("off_y") == 1) {
                 $(this).addClass("active");
-                musicObj.get(0).src = "https://www.weipxiu.com/wp-content/themes/boke/music/" + deta + ".mp3";
+                musicObj.get(0).src = "/wp-content/themes/boke/music/" + deta + ".mp3";
             } else {
                 musicObj.get(0).src = "";
             }

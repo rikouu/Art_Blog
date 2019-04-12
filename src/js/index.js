@@ -1,7 +1,8 @@
 $(function () {
+    var domain_name = window.location.origin;
     //网站预加载运动start
     if ($(document).width() >= 1200) {
-        if (window.location.href == "https://www.weipxiu.com" || window.location.href == "https://www.weipxiu.com/") {
+        if (window.location.href == domain_name || window.location.href == domain_name+'/') {
             $("#js_banner").show();
             $("body > .continar").css("margin-top","15px");
             //首页公告开始
@@ -170,10 +171,10 @@ $(function () {
                 height: 300,
                 images: [{
                         url: 'https://lijun2017.oss-cn-shanghai.aliyuncs.com/pc_banner/banner-1.jpg',
-                        link: 'https://www.weipxiu.com/?cat=29'
+                        link: '/?cat=29'
                     }, {
                         url: 'https://lijun2017.oss-cn-shanghai.aliyuncs.com/pc_banner/banner-2.jpg',
-                        link: 'https://www.weipxiu.com/'
+                        link: '/'
                     }, {
                         url: 'https://lijun2017.oss-cn-shanghai.aliyuncs.com/pc_banner/banner-3.jpg',
                         link: 'javascript:;'
@@ -182,11 +183,11 @@ $(function () {
                         link: 'javascript:;'
                     }, {
                         url: 'https://lijun2017.oss-cn-shanghai.aliyuncs.com/pc_banner/banner-5.jpg',
-                        link: 'https://www.weipxiu.com/?cat=6'
+                        link: '/?cat=6'
                     },
                     {
                         url: 'https://lijun2017.oss-cn-shanghai.aliyuncs.com/pc_banner/banner-6.jpg',
-                        link: 'https://www.weipxiu.com/?p=1313'
+                        link: '/?p=1313'
                     }
                 ],
 
@@ -215,7 +216,7 @@ $(function () {
                         if (Notification.permission == "granted") {
                             var notification = new Notification("官方提示：", {
                                 body: '欢迎点击加入"WEB前端薪资吐槽群"互相学习、交流！',
-                                icon: 'https://www.weipxiu.com/wp-content/themes/boke/images/tishi.png'
+                                icon: '/wp-content/themes/boke/images/tishi.png'
                             })
 
                             notification.onclick = function () {
@@ -329,7 +330,7 @@ $(function () {
     // 当窗口改变时候start
     $(window).resize(function() {
         if($(document).width() >= 1200){
-            if (window.location.href == "https://www.weipxiu.com" || window.location.href == "https://www.weipxiu.com/") {
+            if (window.location.href == domain_name || window.location.href == domain_name+'/') {
                 $("#js_banner").show();
                 $("body > .continar").css("margin-top","15px");
             }

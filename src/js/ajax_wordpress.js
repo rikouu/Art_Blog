@@ -5,7 +5,8 @@ $(function () {
     // 第四行 ajaxignore_string 是忽略使用ajax加载的链接，比如说feed源等等
     // 第六行 ajaxloading_code 加载时显示的内容，可以设定动画
     // 第七行 ajaxloading_error_code 加载失败时显示的内容，可以设定动画
-    var ajaxhome = 'https://www.weipxiu.com/';
+    var domain_name = window.location.origin;
+    var ajaxhome = domain_name+'/';
     var ajaxcontent = 'ajax_centent';
     var ajaxsearch_class = 'searchform';
     var ajaxignore_string = new String('#, /?cat=, /wp-, .pdf, .zip, .rar, /goto, .html');
@@ -167,7 +168,7 @@ $(function () {
     }
     function ajaxcheck_ignore(url) {
         for (var i in ajaxignore) {
-            if (url.indexOf(ajaxignore[i]) >= 0 || url == ajaxhome || url == 'https://www.weipxiu.com') {
+            if (url.indexOf(ajaxignore[i]) >= 0 || url == ajaxhome || url == domain_name) {
                 return false;
             }
         }

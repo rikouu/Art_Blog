@@ -69,7 +69,7 @@ function themeoptions_page() {
           <label for="domain" class="fl left-wrap">站点域名：</label>
           <div class="fr right-wrap">
 						<input
-              placeholder="例如https://www.weipxiu.com，结尾不要带/"
+              placeholder="例如<?php echo home_url(); ?>，结尾不要带/"
 							type="text"
 							class="url-inp"
 							name="domain"
