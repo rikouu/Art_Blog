@@ -913,13 +913,13 @@ img {
 
 .text .text_right > h2 {
   word-wrap: break-word;
-  height: 0.88rem;
-  line-height: 0.88rem;
+  height: 0.7rem;
+  line-height: 0.7rem;
   display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  text-align: center;
+  text-align: left;
 }
 
 ul.post-categories li {
@@ -1038,9 +1038,6 @@ ul.post-categories li:first-child {
   width: calc(100% - 2.2rem);
   float: right;
   -webkit-line-clamp: 3;
-}
-.text .text_right>h2{
-  text-align: left;
 }
 
 /*右侧区域开始*/

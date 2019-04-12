@@ -33,7 +33,7 @@
                             class="iconfont icon-youxiang"></i>邮件</a>
                 </li>
                 <li class="weixin">
-                    <a href="/feed" target="_blank" rel="nofollow" class="top-tip" title="关注微信"><i
+                    <a href="javascript:;" target="_blank" rel="nofollow" class="top-tip" title="关注微信"><i
                             class="iconfont icon-weixin"></i>微信</a>
                 </li>
             </ul>

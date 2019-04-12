@@ -198,7 +198,7 @@
 					</p>
 					<ul class="social">
 						<li class="weibo">
-							<a href="https://shang.qq.com/email/stop/email_stop.html?qq=343049466&sig=a1c657365db7e82805ea4b2351081fc3ebcde159f8ae49b1&tttt=1"
+							<a href="https://wpa.qq.com/msgrd?v=3&uin=343049466&site=qq&menu=yes"
 							 target="_blank" class="top-tip" title="加QQ为好友"><i class="iconfont icon-qq"></i>QQ</a>
 						</li>
 						<li class="qq">
@@ -206,14 +206,14 @@
 								 class="iconfont icon-qqqun"></i>Q群</a>
 						</li>
 						<li class="feed">
-							<a target="_blank" href="tencent://message/?uin=343049466&Site=qq&Menu=yes" rel="nofollow" class="top-tip" title="QQ临时会话"><i
+							<a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=343049466&site=qq&menu=yes" rel="nofollow" class="top-tip" title="QQ临时会话"><i
 								 class="iconfont icon-qq"></i>会话</a>
 						</li>
 						<li class="email">
 							<a href="mailto:343049466@qq.com.com" target="_blank" rel="nofollow" class="top-tip" title="给我发送qq邮件"><i class="iconfont icon-youxiang"></i>邮件</a>
 						</li>
 						<li class="weixin">
-							<a href="/feed" target="_blank" rel="nofollow" class="top-tip" title="关注微信"><i class="iconfont icon-weixin"></i>微信</a>
+							<a href="javascript:;" target="_blank" rel="nofollow" class="top-tip" title="关注微信"><i class="iconfont icon-weixin"></i>微信</a>
 						</li>
 					</ul>
 				</div>
