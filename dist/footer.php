@@ -58,7 +58,7 @@
       <tbody>
         <tr>
           <td id="navLog">
-            <img src="<?php bloginfo('template_url'); ?>/images/open_im.png" id="imgNav">
+            <img src="<?php bloginfo('template_url'); ?>/images/open_im.png" width="40" height="133" id="imgNav">
           </td>
           <td>
             <table id="__01" width="105" class="customer-list" style="min-width:105px" border="0" cellpadding="0" cellspacing="0">
@@ -83,7 +83,7 @@
                     <p class="wangwang-names" style="margin-bottom:7px">&nbsp;QQ在线交流</p>
                     <div class="qqSmall">
                       <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=343049466&site=qq&menu=yes">
-                        <img border="0" width="77" height="22" src="<?php bloginfo('template_url'); ?>/images/zaixian_qq.gif" alt="点击这里给我发消息" title="点击这里给我发消息"
+                        <img border="0" width="77" height="22" src="<?php bloginfo('template_url'); ?>/images/zaixian_qq.gif" width="77" height="22" alt="点击这里给我发消息" title="点击这里给我发消息"
                         />
                       </a>
                     </div>
@@ -104,7 +104,7 @@
                     <div class="qqSmall">
                       <a target="_blank" href="https://amos.alicdn.com/getcid.aw?spm=a1z10.1-c.0.0.LyS6rO&v=3&groupid=0&s=1&charset=utf-8&uid=可爱天使5202012&site=cntaobao&groupid=0&s=1&fromid=cntaobao可爱天使5202012"
                         style="position: relative; overflow: hidden;">
-                        <img border="0" src="<?php bloginfo('template_url'); ?>/images/zaixian_ww.gif" alt="点击这里给我发消息" style="vertical-align:middle;">
+                        <img border="0" src="<?php bloginfo('template_url'); ?>/images/zaixian_ww.gif" alt="点击这里给我发消息" width="77" height="19" style="vertical-align:middle;">
                         <span class="image-overlay overlay-type-extern" style="display: none;">
                           <span class="image-overlay-inside"></span>
                         </span>
@@ -117,7 +117,7 @@
                     <div class="qqSmall">
                       <a target="_blank" href="https://amos.alicdn.com/getcid.aw?spm=a1z10.1-c.0.0.LyS6rO&v=3&groupid=0&s=1&charset=utf-8&uid=可爱天使5202012&site=cntaobao&groupid=0&s=1&fromid=cntaobao可爱天使5202012"
                         style="position: relative; overflow: hidden;">
-                        <img src="<?php bloginfo('template_url'); ?>/images/lixian_ww.gif" alt="点击这里给我发消息" style="vertical-align:middle;">
+                        <img src="<?php bloginfo('template_url'); ?>/images/lixian_ww.gif" alt="点击这里给我发消息" width="77" height="18" style="vertical-align:middle;">
                         <span class="image-overlay overlay-type-extern" style="display: none;">
                           <span class="image-overlay-inside"></span>
                         </span>
@@ -181,7 +181,7 @@
 <!-- 判断用户当前是否登录 结束 -->
 
 <!-- <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-1" count="99" src="<?php bloginfo('template_url'); ?>/js/canvas-nest.min.js"></script> -->
-<script type="text/javascript" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/main_min.js"></script>
 <script>
   $(function(){
