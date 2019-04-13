@@ -3077,12 +3077,14 @@ div.btn {
   left: 0;
   z-index: 100;
   transition: all 0.25s;
-  pointer-events: none;
+  line-height: 1rem;
 }
 
 .os-headertop .weipxiu_nav {
   color: #fff;
   font-size: 0.44rem;
+  line-height: 1rem;
+  display: inline-block;
 }
 
 .btn_menu {
@@ -3095,7 +3097,7 @@ div.btn {
   background-image: url(../images/mobileicon.png);
   background-repeat: no-repeat;
   background-size: 9.4rem 5.6rem;
-  background-position: -8.5rem -1.72rem;
+  background-position: -8.5rem -1.73rem;
   pointer-events: auto;
 }
 
