@@ -1323,7 +1323,7 @@ div.com-art ul li {
 .classif {
   clear: both;
   position: relative;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
   background-color: #fff;
   overflow: hidden;
   transition: all 0.35s;
@@ -3064,8 +3064,8 @@ div.btn {
 .os-headertop {
   width: 100%;
   min-width: 320px;
-  min-height: 40px;
   height: 1rem;
+  line-height: 1rem;
   font-size: 0.44rem;
   background: url(../images/top_bg2.png) no-repeat;
   background-size: 100% 100%;
@@ -3478,7 +3478,11 @@ p.reward-p {
   background: #eee;
   border-radius: 0.08rem;
   margin: 0.3rem auto 0.1rem;
-  padding: 0.1rem 0;
+  padding: 0.1rem;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .post_content .form-control {
   width: 100%;
