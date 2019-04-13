@@ -75,9 +75,9 @@
 			<!--移动端轮播start-->
 			<div class="swiper-container1">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide" style="background:url('https://lijun2017.oss-cn-shanghai.aliyuncs.com/mobile_banner/banner1.png') no-repeat center top; background-size:100% 100%"></div>
-					<div class="swiper-slide" style="background:url('https://lijun2017.oss-cn-shanghai.aliyuncs.com/mobile_banner/banner2.png') no-repeat center top; background-size:100% 100%"></div>
-					<div class="swiper-slide" style="background:url('https://lijun2017.oss-cn-shanghai.aliyuncs.com/mobile_banner/banner1.png') no-repeat center top; background-size:100% 100%"></div>
+					<div class="swiper-slide" style="background:url('<?php bloginfo('template_url'); ?>/images/banner1.png') no-repeat center top; background-size:100% 100%"></div>
+					<div class="swiper-slide" style="background:url('<?php bloginfo('template_url'); ?>/images/banner2.png') no-repeat center top; background-size:100% 100%"></div>
+					<div class="swiper-slide" style="background:url('<?php bloginfo('template_url'); ?>/images/banner3.png') no-repeat center top; background-size:100% 100%"></div>
 				</div>
 				<div class="swiper-pagination"></div>
 			</div>
