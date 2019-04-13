@@ -42,7 +42,7 @@
 						    if ( has_post_thumbnail() )
 						        the_post_thumbnail();
 						    else
-						        echo '<img src="/wp-content/uploads/2017/04/default-220x150.png" alt="" />';
+						        echo '<img src="/wp-content/uploads/2017/04/default-220x150.png" width="220" height="140" alt="唯品秀前端个人博客" />';
 						?>
 						</a>
 					</div>
@@ -70,13 +70,13 @@
 								if ( has_post_thumbnail() )
 									the_post_thumbnail();
 								else
-									echo '<img src="/wp-content/uploads/2017/04/default-220x150.png" alt="" />';
+									echo '<img src="/wp-content/uploads/2019/03/jsonp.png" alt="唯品秀前端个人博客" />';
 						?>
 						<h3>
 							<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200,"..."); ?>
 							<!--文章内容-->
 						</h3>
-						<a class="read-more" href="<?php the_permalink(); ?>" target="_blank">阅读全文
+						<a class="read-more read_url" href="<?php the_permalink(); ?>" target="_blank">阅读全文
 							<i class="fa fa-chevron-circle-right"></i>
 						</a>
 						<p class="l">

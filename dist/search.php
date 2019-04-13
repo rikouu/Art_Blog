@@ -85,72 +85,90 @@
                 <?php while ( have_posts() ) : the_post(); ?>
 
                 <div class="text">
+                    <!-- <div class="mod-category__article-time">
+                        <span>2018/10</span>
+                        <span>23&nbsp;&nbsp;周二</span>
+                    </div> -->
                     <div class="img-left">
-                        <?php
-					    if ( has_post_thumbnail() )
-					        the_post_thumbnail();
-					    else
-					        echo '<img src="/wp-content/uploads/2017/04/default-220x150.png" alt="" />';
-					?>
+                        <a class="read-more" href="<?php the_permalink(); ?>" target="_blank">
+                            <?php
+                                if ( has_post_thumbnail() )
+                                    the_post_thumbnail();
+                                else
+                                    echo '<img src="/wp-content/uploads/2017/04/default-220x150.png" width="220" height="140" alt="唯品秀前端个人博客" />';
+                            ?>
+                        </a>
                     </div>
                     <div class="text_right">
                         <h2>
-                            <span><?php the_category() ?><i></i></span>
-                            <a href="<?php the_permalink(); ?>" target="_blank">
-                                <?php the_title(); ?>
-                            </a>
+                            <span>
+                                <?php the_category() ?><i></i></span>
+                            <a href="<?php the_permalink(); ?>" target="_blank" title="<?php the_title(); ?>">
+                                <?php the_title(); ?></a>
                         </h2>
                         <div class="entry-meta">
                             <a href="<?php echo home_url(); ?>">唯品秀</a>
                             <i class="space">•</i>
-                            <a href="#">前端开发资讯</a>
+                            <a href="#">
+                                <?php if( get_field('original') ): ?>
+                                <!-- <? /*php the_field('original'); */?> //直接打印输出字段的值-->
+                                <?php echo "原创"; ?>
+                                <?php else: ?>
+                                <?php echo "转载"; ?>
+                                <?php endif; ?>
+                            </a>
                             <i class="space">•</i>
                             <?php the_author(); ?>
                             <a href="#" class="comments-number">
-	    	 	 	         <span></span>
-	    	 	 	     </a>
+                                <span></span>
+                            </a>
                         </div>
+                        <?php
+                                if ( has_post_thumbnail() )
+                                    the_post_thumbnail();
+                                else
+                                    echo '<img src="/wp-content/uploads/2019/03/jsonp.png" alt="唯品秀前端个人博客" />';
+                        ?>
                         <h3>
-                            <?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 150,"..."); ?>
+                            <?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200,"..."); ?>
                             <!--文章内容-->
                         </h3>
-                        <a class="read-more" href="<?php the_permalink(); ?>" target="_blank">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+                        <a class="read-more read_url" href="<?php the_permalink(); ?>" target="_blank">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
                         <p class="l">
                             <!-- <span>
-							<a href="<?php the_permalink(); ?> ">
-								<i class="fa fa-calendar">&nbsp;</i><?php echo '发表于 '.timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); ?>
-							</a>
-						</span> -->
-                            <span><i class="fa fa-clock-o">&nbsp;</i><?php echo '发表于 '.timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); ?>
-						</span>
+                                <a href="<?php /*the_permalink(); */?> ">
+                                    <i class="fa fa-calendar">&nbsp;</i><?php /*echo '发表于 '.timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); */?>
+                                </a>
+                            </span> -->
+                            <span><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;
+                                <?php the_time('Y年m月d日') ?></span>
                             <span>
-							<a href="<?php the_permalink(); ?> ">
-								<i class="fa fa-eye"></i>&nbsp;<?php echo getPostViews(get_the_ID()); ?>℃</span>
-                            </a>
+                                <a href="<?php the_permalink(); ?> ">
+                                    <i class="iconfont icon-liulan"></i>&nbsp;
+                                    <?php echo getPostViews(get_the_ID()); ?>℃
+                                </a>
+                            </span>
                             <span class="comm">
-							<a href="<?php the_permalink(); ?> ">
-								<i class="fa fa-commenting-o"></i>
-								<span id = "url::<?php the_permalink(); ?>" class = "cy_cmt_count" ></span>
-                            <script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cyt2b1NqT">
-                            </script>
-                            条评论
-                            </a>
+                                <a href="<?php the_permalink(); ?> ">
+                                    <i class="iconfont icon-pinglun2"></i>
+                                    <?php echo number_format_i18n( get_comments_number() );?> 条评论
+                                </a>
                             </span>
                             <span class="post-like">
-							<a href="javascript:;" style="color: #f78585" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if(isset($_COOKIE['bigfa_ding_'.$post->ID])) echo ' done';?>">
-								<i class="fa fa-thumbs-o-up" style="color: #f78585"></i>	  
-								<span class="count">   
-					        		<?php if( get_post_meta($post->ID,'bigfa_ding',true) ){            
-						                    echo get_post_meta($post->ID,'bigfa_ding',true);
-						                 } else {
-						                    echo '0';
-						             }?>
-					            </span>喜欢
-                            </a>
+                                <a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if(isset($_COOKIE['bigfa_ding_'.$post->ID])) echo ' done';?>">
+                                    <i class="fa fa-thumbs-o-up"></i>
+                                    <span class="count">
+                                        <?php if( get_post_meta($post->ID,'bigfa_ding',true) ){            
+                                                echo get_post_meta($post->ID,'bigfa_ding',true);
+                                                } else {
+                                                echo '0';
+                                            }?>
+                                    </span>喜欢
+                                </a>
                             </span>
                             <span class="r"></span>
                         </p>
-                        <em><a href="">0</a></em>
+                        <?php if( is_sticky() ) echo '<em><a href="">顶</a></em>'; ?>
                         <!-- <span class="new-icon">NEW</span> -->
                     </div>
                     <!-- <font class="s_bar"></font> -->

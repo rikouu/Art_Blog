@@ -4,7 +4,7 @@ $(function () {
     if ($(document).width() >= 1200) {
         if (window.location.href == domain_name || window.location.href == domain_name+'/') {
             $("#js_banner").show();
-            $("body > .continar").css("margin-top","15px");
+            $("body > .continar").css("margin-top","10px");
             //首页公告开始
             setInterval(function () {
                 $(".notice").show();
@@ -332,7 +332,7 @@ $(function () {
         if($(document).width() >= 1200){
             if (window.location.href == domain_name || window.location.href == domain_name+'/') {
                 $("#js_banner").show();
-                $("body > .continar").css("margin-top","15px");
+                $("body > .continar").css("margin-top","10px");
             }
         }else{
 

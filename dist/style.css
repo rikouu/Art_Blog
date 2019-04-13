@@ -1455,21 +1455,17 @@ i {
 }
 
 .continar .continar-left {
-    width: 840px;
+    width: 850px;
     float: left;
 }
 
 .continar .continar-left-top {
     width: 100%;
     height: 120px;
-    -webkit-box-shadow: 0 1px 2px #c5c5c5;
-    box-shadow: 0 1px 2px #c5c5c5;
-    border: 1px solid #eaeaea;
     padding: 15px 20px;
     overflow: hidden;
     background-color: #fff;
-    margin-bottom: 15px;
-    border-radius: 4px;
+    border-radius: 4px 4px 0 0;
     -webkit-transition: all 0.35s;
     -o-transition: all 0.35s;
     transition: all 0.35s;
@@ -1535,16 +1531,21 @@ i {
     line-height: 25px;
     color: #666;
     font-size: 14px;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .continar .inner-box {
     background: #fff;
-    padding: 15px 15px 10px 15px;
-    margin-bottom: 20px;
-    -webkit-box-shadow: 0 1px 2px #c5c5c5;
-    box-shadow: 0 1px 2px #c5c5c5;
-    border: 1px solid #eaeaea;
-    border-radius: 4px;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-top: 1px solid #eaeaea;
+    border-radius: 0 0 4px 4px;
     -webkit-transition: all 0.35s;
     -o-transition: all 0.35s;
     transition: all 0.35s;
@@ -1562,26 +1563,30 @@ i {
 }
 
 .continar .rssbook>p {
-    margin-top: 16px;
+    margin: 10px auto;
 }
-
+.continar .rssbook>p:last-of-type{
+    margin-top:-7px;
+}
+.continar .rssbook>p:empty{
+    display: none;
+}
 .continar p.wpm_thankyou {
     color: #ed145b;
 }
 
 .rssbook h3 {
     font-size: 16px;
-    margin-bottom: 3px;
 }
 
 .rssbook p {
     font-size: 12px;
-    margin: 5px auto 10px;
+    margin: 0 auto;
     line-height: 24px;
 }
 
 .rssbook form {
-    margin: 10px auto;
+    margin: 0 auto;
     display: block;
 }
 
@@ -1613,10 +1618,11 @@ i {
 
 .continar-left>.text {
     background: #fff;
-    height: 195px;
+    height: 173px;
     padding: 15px;
+    margin-bottom:10px;
+    border-radius: 4px;
     position: relative;
-    border: 1px solid #eaeaea;
     -webkit-transition: all 0.35s;
     -o-transition: all 0.35s;
     transition: all 0.35s;
@@ -1682,6 +1688,7 @@ i {
 }
 
 .text img {
+    width:220px;
     border: 0;
     float: left;
     max-width: 100%;
@@ -1700,7 +1707,7 @@ i {
 
 .text .text_right {
     float: right;
-    width: calc(100% - 245px);
+    width: calc(100% - 235px);
 }
 
 .text_right h2 span:nth-child(1) {
@@ -1735,8 +1742,8 @@ i {
 }
 
 .text h2 {
-    margin-bottom: 10px;
-    padding-top: 6px;
+    margin-bottom: 5px;
+    padding-top:2px;
     width: 500px;
     overflow: hidden;
     white-space: nowrap;
@@ -1810,7 +1817,7 @@ i {
 }
 
 .entry-meta {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-size: 12px;
     overflow: hidden;
 }
@@ -1832,7 +1839,6 @@ i {
 .text h3 {
     line-height: 24px;
     height: 48px;
-    margin-bottom: 16px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -1849,21 +1855,28 @@ i {
     transition: all 0.25s;
     text-align: center;
     padding: 0 12px;
-    line-height: 30px;
+    line-height: 24px;
     font-size: 12px;
     position: absolute;
-    bottom: 13px;
-    right: 0px;
+    bottom: 11px;
+    right: 0;
     font-family: 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
 }
-
+.text_right .read_url{
+    right:15px;
+    padding:0;
+}
 .img-left .read-more {
-    height: 150px;
+    height: 100%;
+    width:100%;
     padding: 0;
     top: 0;
     bottom: auto;
 }
-
+.img-left .read-more img{
+    height: 100%;
+    width:100%;
+}
 .read-more i {
     font-size: 12px;
     padding-left: 3px;
@@ -1884,7 +1897,7 @@ i {
 
 .continar-right .aside {
     background: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border: 1px solid #eaeaea;
     border-radius: 4px;
     padding: 0 15px 10px 15px;
@@ -1985,7 +1998,7 @@ i {
 
 .widget {
     background: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border: 1px solid #eaeaea;
     border-radius: 4px;
     -webkit-transition: all 0.35s;
@@ -2222,7 +2235,7 @@ div.com-art ul li {
 .classif {
     clear: both;
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     background-color: #fff;
     border-radius: 4px;
     border: 1px solid #eaeaea;
@@ -2664,7 +2677,7 @@ div.com-art ul li {
 .continar-left p.l {
     font-size: 14px;
     line-height: 36px;
-    margin: 0 10px 8px 20px;
+    margin: 0 0px 3px 10px;
     position: absolute;
     left: 233px;
     bottom: 3px;
@@ -2677,7 +2690,9 @@ div.com-art ul li {
 .continar-left div.key-w {
     font-size: 12px;
 }
-
+.continar-left p.l i.fa-calendar{
+    transform: translateY(-1px);
+}
 .continar-left p.l>span {
     margin: 0 8px;
 }
@@ -4191,10 +4206,9 @@ ul.post-categories li:first-child {
 
 .img-left {
     width: 220px;
-    height: 150px;
+    height: 140px;
     border: 0;
     float: left;
-    margin-top: 6px;
     position: relative;
     overflow: hidden;
 }
@@ -5980,7 +5994,6 @@ p.data-l span {
 .mod-index__feature .img_list_6pic {
     overflow: visible;
     width: 100%;
-    margin-bottom: 5px;
     float: left;
     left: 0;
     transform: rotate(0deg);
@@ -6004,6 +6017,7 @@ p.data-l span {
     float: left;
     position: relative;
     overflow: hidden;
+    margin-right:2px;
 }
 
 .mod-index__feature .img_box a:hover {
@@ -6079,7 +6093,7 @@ p.data-l span {
     width: 110px;
     float: left;
     display: block;
-    margin: 0 0 10px 10px;
+    margin: 0 0 10px 12px;
     position: relative;
     color: #fff;
     font-family: STHeiti, Microsoft Yahei, 微软雅黑, Arial, sans-serif;
@@ -6105,6 +6119,7 @@ p.data-l span {
     position: absolute;
     top: 0;
     left: 0;
+    width:100%;
 }
 
 .mod-index__feature .word_display {

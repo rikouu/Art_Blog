@@ -27,7 +27,7 @@ if (function_exists('register_sidebar')) register_sidebar(array(
 
 //注册特色图像
 add_theme_support('post-thumbnails');
-set_post_thumbnail_size(220, 150, true); // 图片宽度与高度
+set_post_thumbnail_size(220, 140, true); // 图片宽度与高度
 
 ?>
 <?php //控制分页页面，每个页面所显示的文章数量
