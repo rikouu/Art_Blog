@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="<?php bloginfo('template_url'); ?>/css/style-ios.css">
     <link rel="stylesheet" type="text/css" media="screen and (min-width:768px) and (max-width:1199px)" href="<?php bloginfo('template_url'); ?>/css/style-ipd.css">
     <link rel="stylesheet" type="text/css" media="screen and (min-width:1200px)" href="<?php bloginfo('template_url'); ?>/style.css">
-    <link rel="stylesheet" href="https://at.alicdn.com/t/font_typ5xhkfpnetrzfr.css">
+    <!-- <link rel="stylesheet" href="https://at.alicdn.com/t/font_typ5xhkfpnetrzfr.css"> -->
 	  <?php wp_head(); ?>
 </head>
     <body>

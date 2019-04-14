@@ -7,7 +7,7 @@
   list-style: none;
   box-sizing: border-box;
   color: #444;
-  font-size: 14px;
+  font-size: 0.28rem;
   text-decoration: none;
   /*-webkit-touch-callout: none;长时间按住页面出现闪退,
 	如果启用，那么图片默认长按存储到相册功能被禁止*/
@@ -1147,7 +1147,7 @@ p.clearfix a {
 .widget {
   background: #fff;
   margin-bottom: 0.2rem;
-  padding: 0.26rem 0.3rem 0.06rem 0.3rem;
+  padding: 0.26rem 0.3rem 0.08rem 0.3rem;
   transition: all 0.35s;
   border-bottom: 0;
   overflow: hidden;
@@ -1175,11 +1175,10 @@ p.clearfix a {
 }
 
 .daily-list > p {
-  color: #444;
   font-weight: normal;
   font-size: 14px;
   border-bottom: 1px solid #eee;
-  padding-bottom: 0.2rem;
+  padding-bottom: 0.1rem;
   margin-bottom: 0.2rem;
   line-height: 0.52rem;
 }
@@ -1684,22 +1683,18 @@ div.com-art ul li {
 }
 
 .continar-left div.key-w .single_lable {
-  height: 0.55rem;
-  line-height: 0.55rem;
-  float: left;
+  height: .8rem;
+  line-height: .8rem;
+  width:100%;
 }
 
 div.key-w {
-  margin: 0.2rem 0 0.9rem;
-  font-size: 14px;
-  padding-top: 0.25rem;
-  clear: both;
+  margin: 0rem 0 .85rem;
 }
 
 .continar-left div.key-w a {
   text-indent: 0;
-  font-size: 14px;
-  line-height: 17px;
+  line-height: 34rem;
   color: #fff;
   padding: 5px 0.3rem;
   background: #f1f1f1;
@@ -1976,7 +1971,6 @@ td.line-numbers {
 }
 
 .log-text * {
-  font-size: 0.3rem;
   line-height: 0.5rem;
   word-wrap: break-word;
 }
@@ -1984,7 +1978,12 @@ td.line-numbers {
 .log-text p {
   text-indent: 2em;
 }
-
+.log-text p.copy{
+  line-height: .4rem;
+  font-size: 0.24rem;
+  text-indent: 0;
+  margin-bottom: .15rem;
+}
 .continar-left .log-text a {
   color: #1890ff;
 }
@@ -2023,11 +2022,9 @@ p.text-post {
 
 p.text-post > span {
   float: left;
-  font-size: 0.3rem;
 }
 
 p.text-post a {
-  font-size: 0.3rem;
   float: left;
   width: calc(100% - 65px);
 }
@@ -3159,9 +3156,6 @@ canvas,
 
 #web-tj ul li {
   float: left;
-  line-height: 0.5rem;
-  font-size: 0.24rem;
-  width: auto;
   font-weight: normal;
   width: 50%;
   overflow: hidden;
@@ -3245,7 +3239,7 @@ canvas,
 }
 
 p.reward-p {
-  font-size: 0.32rem;
+  font-size: 0.3rem;
   margin: 0.25rem 0;
   text-indent: 0;
 }
@@ -3475,7 +3469,6 @@ p.reward-p {
 
 /* 文章评论框start */
 .post_content h3.comments-title {
-  font-size: 0.3rem;
   text-align: center;
   background: #eee;
   border-radius: 0.08rem;

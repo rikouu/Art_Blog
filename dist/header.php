@@ -1,5 +1,4 @@
-	<!-- 上面老版本，不维护 -->
-	<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_385244_ubyvf20n0zp.css">
+	<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_385244_zgpjum9ool.css">
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/video-js.css">
 
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/video.js/video.min.js"></script>

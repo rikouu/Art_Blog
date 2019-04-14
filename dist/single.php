@@ -188,7 +188,7 @@
                     <!--文章打赏结束-->
                     <div class="key-w">
                         <div class="single_lable">
-                            <i class="iconfont" style="padding-right:3px">&#xe757;</i>标签：</div>
+                            <i class="iconfont icon-biaoqian" style="padding-right:3px"></i>标签：</div>
                         <?php the_tags('','',''); ?>
                     </div>
                     <p class="text-post text-post-top">
