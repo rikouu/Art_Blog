@@ -8,8 +8,8 @@
 		// 	&& (navigator.userAgent.indexOf('Opera') < 0)){
 		// 	window.location.href="<?php bloginfo('template_url'); ?>/reminder.php";/*判断IE5-10*/
 		//  }
-		 if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<10){
-			window.location.href="<?php bloginfo('template_url'); ?>/reminder.php";/*判断<IE9*/
+		 if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<9){
+			window.location.href="<?php bloginfo('template_url'); ?>/reminder.php";/*判断<IE9,此方法也可以判断<IE10*/
     }
     </script>
 	<!-- IE禁止页面快捷保存，导致盗窃 -->
