@@ -1,10 +1,8 @@
 # 唯品秀博客 - Wordpress主题
+> 一款基于jquery2.1.4+js+H5/CSS3开发的wordpress主题v2.0版，主题介绍：https://www.weipxiu.com/?cat=10
 
-# https://www.weipxiu.com
-
-> 一款基于jquery2.1.4+js+H5/CSS3开发的wordpress主题v2.0版
-
-> 主题介绍：https://www.weipxiu.com/?cat=10
+## 后台主题设置预览
+![avatar](https://raw.githubusercontent.com/weipxiu/weipxiu/master/src/images/wp-theme-options.png)
 
 ## 使用方式
 
@@ -29,9 +27,6 @@
 
 ```
 ![avatar](https://raw.githubusercontent.com/weipxiu/weipxiu/master/src/images/zhiwei.png)
-
-## 后台主题设置预览
-![avatar](https://raw.githubusercontent.com/weipxiu/weipxiu/master/src/images/wp-theme-options.png)
 
 ## 特别说明
 
