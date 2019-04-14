@@ -449,6 +449,7 @@ img:hover {
     background: #f5f5f5;
     z-index: 10;
     display: none;
+    display: block\9;
 }
 
 #mobil {
