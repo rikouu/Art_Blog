@@ -21,7 +21,7 @@
 
 5、进入后台-外观-唯品秀主题设置，设置站点域名地址、公告、底部等信息
 
-6、文字枯燥还是不知道说的啥意思？亲自录制的教程视频：链接：https://pan.baidu.com/s/19wibJjeagvLRFOuUV2GvEQ 密码：6u6c
+6、文档枯燥还是不知道说的啥？教程视频链接：https://pan.baidu.com/s/19wibJjeagvLRFOuUV2GvEQ 密码：6u6c
 
 7、如果喜欢，请多多打赏。
 
