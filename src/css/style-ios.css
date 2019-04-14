@@ -3067,7 +3067,7 @@ div.btn {
 
 .os-headertop .weipxiu_nav {
   color: #fff;
-  font-size: 0.44rem;
+  font-size: 0.4rem;
   line-height: 1rem;
   display: inline-block;
 }
@@ -3081,8 +3081,8 @@ div.btn {
   z-index: 3;
   background-image: url(../images/mobileicon.png);
   background-repeat: no-repeat;
-  background-size: 9.4rem 5.6rem;
-  background-position: -8.5rem -1.73rem;
+  background-size: 9rem 5rem;
+  background-position: -8.1rem -1.5rem;
   pointer-events: auto;
 }
 
@@ -3106,7 +3106,7 @@ div.btn {
 .xis i {
   line-height: 1rem;
   text-align: center;
-  font-size: 0.4rem;
+  font-size: 0.36rem;
   color: #fff;
   font-weight: normal;
 }
