@@ -1,4 +1,4 @@
-## 唯品秀博客 - Wordpress主题
+# 唯品秀博客 - Wordpress主题
 一款基于Js+jquery2.1.4+H5/CSS3开发，遵循黄金分割定律，把控每个元素每一个像素差的wordpress主题v2.0版，[主题介绍](https://www.weipxiu.com/?cat=10)
 
 ### 后台主题设置预览
