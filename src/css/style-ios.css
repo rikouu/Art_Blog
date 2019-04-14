@@ -903,7 +903,7 @@ img {
 .text {
   background: #fff;
   height: auto;
-  padding: 0 0.26rem;
+  padding: 0 0.26rem 0.175rem;
   margin-bottom: 0.2rem;
   overflow: hidden;
   position: relative;
@@ -1015,8 +1015,8 @@ ul.post-categories li:first-child {
 }
 
 .text h3 {
-  line-height: 0.42rem;
-  margin-bottom: 0.2rem;
+  line-height: 0.38rem;
+  margin-bottom: 0.1rem;
   color: #666;
   font-size: 0.26rem;
   font-weight: normal;
@@ -1030,8 +1030,28 @@ ul.post-categories li:first-child {
   overflow: hidden;
   width: 100%;
 }
-.text .img-left img,.entry-meta,.continar-left p.l,.text .text_right .read-more {
+.text .img-left img,.entry-meta,.text .text_right .read-more {
   display: none;
+}
+.continar-left p.l>span a{
+  display: block;
+  height: 100%
+}
+.continar-left p.l{
+  width: calc(100% - 2.2rem);
+  float: right;
+  font-size: 0.24rem;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.continar-left p.l span,.continar-left p.l a{
+  font-size: 0.24rem;
+  color: #999!important;
+}
+.continar-left p.l .iconfont,.continar-left p.l .fa{
+display: none
 }
 .entry-meta + img{
     max-width: 2rem;
@@ -1041,7 +1061,7 @@ ul.post-categories li:first-child {
 .text h3{
   width: calc(100% - 2.2rem);
   float: right;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
 }
 
 /*右侧区域开始*/
@@ -1725,11 +1745,8 @@ div.key-w a:nth-of-type(3):hover {
 }
 
 .continar-left p a {
-  padding-left: 0px;
-  padding-right: 0;
-  color: #ed145b;
-  padding: 0 0.1rem 0 0;
-  font-size: 0.28rem;
+  font-size: 0.24rem!important;
+  color:#999;
 }
 
 .continar-left .text-post p a {
@@ -3129,7 +3146,6 @@ div.btn {
   display: none;
 }
 
-span.post-like,
 .img-left span ul li a {
   display: none;
 }

@@ -2696,7 +2696,9 @@ div.com-art ul li {
 .continar-left p.l>span {
     margin: 0 8px;
 }
-
+.continar-left p.l .fa-calendar,.continar-left p.l .iconfont{
+    margin-right:4px;
+}
 .continar-left p.l * {
     color: #666;
 }

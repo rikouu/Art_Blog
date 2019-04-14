@@ -91,31 +91,26 @@
 								<i class="fa fa-calendar">&nbsp;</i><?php echo '发表于 '.timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); ?>
 							</a>
 						</span> -->
-						<span><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;<?php the_time('Y年m月d日') ?></span>
+						<span><i class="fa fa-calendar" aria-hidden="true"></i><?php the_time('Y年m月d日') ?></span>
 						<span>
-							<a href="<?php the_permalink(); ?> ">
-								<i class="iconfont icon-liulan"></i>&nbsp;<?php echo getPostViews(get_the_ID()); ?>℃
+							<a href="<?php the_permalink(); ?> "><i class="iconfont icon-liulan"></i><?php echo getPostViews(get_the_ID()); ?>℃
 							</a>
 						</span>
 						<span class="comm">
 							<a href="<?php the_permalink(); ?> ">
 								<i class="iconfont icon-pinglun2"></i>
-								<span id = "url::<?php the_permalink(); ?>" class = "cy_cmt_count" ></span>
-								<script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cyt2b1NqT">
-								</script>
-								条评论
+								<span id = "url::<?php the_permalink(); ?>" class = "cy_cmt_count" ></span><script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cyt2b1NqT">
+								</script>条评论
 							</a>
 						</span>
 						<span class="post-like">
 							<a href="javascript:;" style="data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if(isset($_COOKIE['bigfa_ding_'.$post->ID])) echo ' done';?>">
 								<i class="fa fa-thumbs-o-up"></i>	  
 								<span class="count">   
-					        		<?php if( get_post_meta($post->ID,'bigfa_ding',true) ){            
+					        		<?php if( get_post_meta($post->ID,'bigfa_ding',true) ){
 						                    echo get_post_meta($post->ID,'bigfa_ding',true);
-						                 } else {
-						                    echo '0';
-						             }?>
-					            </span>喜欢   
+						                 } else {echo '0';
+						          }?></span>喜欢   
 						    </a>   
     					</span>
 						<span class="r"></span>
