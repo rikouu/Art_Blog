@@ -70,7 +70,10 @@
                 </tr>
                 <tr>
                   <td>
-                    <div class="telNo" id="txtTelNo">&nbsp;173****7240</div>
+                    <div class="telNo" id="txtTelNo">&nbsp;<?php 
+                      echo get_option('weipxiu_options')['phone-number'];
+                      ?>
+                    </div>
                   </td>
                 </tr>
                 <tr>
@@ -82,7 +85,9 @@
                   <td>
                     <p class="wangwang-names" style="margin-bottom:7px">&nbsp;QQ在线交流</p>
                     <div class="qqSmall">
-                      <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=343049466&site=qq&menu=yes">
+                      <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=<?php 
+                      echo get_option('weipxiu_options')['QQ-number'];
+                      ?>&site=qq&menu=yes">
                         <img border="0" width="77" height="22" src="<?php bloginfo('template_url'); ?>/images/zaixian_qq.gif" width="77" height="22" alt="点击这里给我发消息" title="点击这里给我发消息"
                         />
                       </a>
@@ -92,7 +97,9 @@
                 <tr>
                   <td>
                     <div class="qqSmall">
-                      <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=343049466&site=qq&menu=yes">
+                      <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=<?php 
+                      echo get_option('weipxiu_options')['QQ-number'];
+                      ?>&site=qq&menu=yes">
                         <img border="0" src="<?php bloginfo('template_url'); ?>/images/zaixian_qq.gif" alt="点击这里给我发消息" title="点击这里给我发消息" />
                       </a>
                     </div>

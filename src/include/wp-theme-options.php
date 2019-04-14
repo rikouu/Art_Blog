@@ -19,7 +19,7 @@ function themeoptions_page() {
       <li class="nav-list on">基本</li>
       <li class="nav-list">SEO</li>
       <li class="nav-list">图片(暂不支持)</li>
-      <li class="nav-list">社交(暂不支持)</li>
+      <li class="nav-list">社交</li>
       <!-- <li class="nav-list">自定义代码</li> -->
     </ul>
     <form method="post" action="">
@@ -132,18 +132,6 @@ function themeoptions_page() {
       </div>
 			<!-- 内容三 图片设置 -->
       <div class="content-wrap content3">
-				<div class="row clearfix">
-          <label class="fl left-wrap">评论区vip等级样式：</label>
-          <div class="fr right-wrap">
-            <label for="vip-style-1" class="vip-style" style="display: inline-block; width: 15px; height: 15px; background: url(<?php bloginfo('template_url'); ?>/static/images/vip.png) -147px -70px;"></label>
-            <input
-              type="radio"
-              id="vip-style-1"
-              name="vip-style"
-              value="vip-style-1" <?php if($a_options['vip_style'] == 'vip-style-1' || $a_options['vip_style'] == '') echo 'checked'; ?>
-            >
-          </div>
-        </div>
 				<div class="row">
           <div class="margin-top-15 clearfix">
             <label class="fl left-wrap" for="">后台登录logo：</label>
@@ -319,6 +307,56 @@ function themeoptions_page() {
       </div>
       <!-- 内容四 社交 -->
       <div class="content-wrap content4">
+        <div class="row clearfix">
+          <label for="QQ-number" class="fl left-wrap">QQ账号：</label>
+          <div class="fr right-wrap">
+						<input
+							type="text"
+							class="url-inp"
+							name="QQ-number"
+							id="QQ-number"
+							value="<?php echo $a_options['QQ-number']; ?>"
+						>
+          </div>
+        </div>
+
+        <div class="row clearfix">
+          <label for="phone-number" class="fl left-wrap">手机号码：</label>
+          <div class="fr right-wrap">
+						<input
+							type="text"
+							class="url-inp"
+							name="phone-number"
+							id="phone-number"
+							value="<?php echo $a_options['phone-number']; ?>"
+						>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="margin-top-15 clearfix">
+            <label class="fl left-wrap" for="">微信账号二维码：</label>
+            <div class="fr right-wrap">
+              <input
+                type="text"
+                class="url-inp"
+                name="weChat-number"
+                id="weChat-number"
+                value="<?php echo $a_options['weChat-number']; ?>"
+              >
+              <input type="button" name="img-upload" value="选择文件">
+            </div>
+          </div>
+          <div class="margin-top-15 clearfix">
+            <div class="fl left-wrap">
+              微信二维码预览：
+            </div>
+            <div class="fr right-wrap">
+              <img src="<?php echo $a_options['weChat-number']; ?>" class="preview-img" style="max-width: 100px;" alt="">
+            </div>
+          </div>
+        </div>
+
 				<div class="row clearfix">
           <label for="reward-text" class="fl left-wrap">打赏欢迎语：</label>
           <div class="fr right-wrap">
@@ -382,12 +420,12 @@ function themeoptions_page() {
           </div>
         </div>
 
-        <div class="row clearfix">
+        <!-- <div class="row clearfix">
           <label class="fl left-wrap" for="link">友情链接：</label>
           <div class="fr right-wrap">
             <textarea id="link" name="link" rows="15" cols="100"><?php echo $a_options['link']; ?></textarea>
           </div>
-        </div>
+        </div> -->
       </div>
       <!-- 内容五 自定义代码 -->
       <!-- <div class="content-wrap content5">
@@ -430,7 +468,9 @@ function themeoptions_page() {
       'keywords' => $_POST['keywords'],
       'description' => $_POST['description'],
       'link' => $_POST['link'],
-      'vip_style' => $_POST['vip-style'],
+      'QQ-number' => $_POST['QQ-number'],
+      'weChat-number' => $_POST['weChat-number'],
+      'phone-number' => $_POST['phone-number'],
       'reward_text' => $_POST['reward-text'],
       'alipay' => $_POST['alipay'],
       'wechatpay' => $_POST['wechatpay'],

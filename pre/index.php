@@ -212,7 +212,7 @@
 								 class="iconfont icon-qqqun"></i>Q群</a>
 						</li>
 						<li class="email">
-							<a href="mailto:343049466@qq.com.com" target="_blank" rel="nofollow" class="top-tip" title="给我发送qq邮件"><i class="iconfont icon-youxiang"></i>邮件</a>
+							<a href="mailto:<?php echo get_option('weipxiu_options')['QQ-number'];?>@qq.com.com" target="_blank" rel="nofollow" class="top-tip" title="给我发送qq邮件"><i class="iconfont icon-youxiang"></i>邮件</a>
 						</li>
 						<li class="weixin">
 							<a href="javascript:;" target="_blank" rel="nofollow" class="top-tip" title="关注微信"><i class="iconfont icon-weixin"></i>微信</a>
@@ -408,8 +408,10 @@
 		</ul>
 		<div class="contact">
 			<h3>✎﹏ℳ๓ั如履✾薄冰</h3>
-			<h4>QQ : 343049466</h4>
-			<h4>手机：<span>173xxxx7240</span></h4>
+			<h4>QQ : <?php echo get_option('weipxiu_options')['QQ-number'];?></h4>
+			<h4>手机：<span><?php 
+        echo get_option('weipxiu_options')['footer_copyright'];
+				?></span></h4>
 			<a href="javascript:;">返回</a>
 		</div>
 	</div>

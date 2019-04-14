@@ -25,11 +25,11 @@
                         title="加入web前端QQ群"><i class="iconfont icon-qqqun"></i>Q群</a>
                 </li>
                 <li class="feed">
-                    <a target="_blank" href="tencent://message/?uin=343049466&Site=qq&Menu=yes" rel="nofollow" class="top-tip"
+                    <a target="_blank" href="tencent://message/?uin=<?php echo get_option('weipxiu_options')['QQ-number'];?>&Site=qq&Menu=yes" rel="nofollow" class="top-tip"
                         title="QQ临时会话"><i class="iconfont icon-qq"></i>会话</a>
                 </li>
                 <li class="email">
-                    <a href="mailto:343049466@qq.com.com" target="_blank" rel="nofollow" class="top-tip" title="给我发送qq邮件"><i
+                    <a href="mailto:<?php echo get_option('weipxiu_options')['QQ-number'];?>@qq.com.com" target="_blank" rel="nofollow" class="top-tip" title="给我发送qq邮件"><i
                             class="iconfont icon-youxiang"></i>邮件</a>
                 </li>
                 <li class="weixin">
