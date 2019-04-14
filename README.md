@@ -1,10 +1,10 @@
-# 【前言】唯品秀博客 - Wordpress主题
+##唯品秀博客 - Wordpress主题
 一款基于Js+jquery2.1.4+H5/CSS3开发，遵循黄金分割定律，把控每个元素每一个像素差的wordpress主题v2.0版，[主题介绍](https://www.weipxiu.com/?cat=10)
 
-## 后台主题设置预览
+### 后台主题设置预览
 ![avatar](https://raw.githubusercontent.com/weipxiu/weipxiu/master/src/images/wp-theme-options.png)
 
-## 使用方式
+### 使用方式
 
 ``` bash
 # 步骤
@@ -29,7 +29,7 @@
 ```
 ![avatar](https://raw.githubusercontent.com/weipxiu/weipxiu/master/src/images/zhiwei.png)
 
-## 后记
+### 彩蛋
 
 > 1、wordpress主题制作有特别要求，例如主题根目录必须存在header.php、index.php、footer.php、style.css，否则是不认，无法加载的。因此不用觉得某些文件摆放不合理，存在必定有意义
 
@@ -42,7 +42,7 @@
 > 4、源码开放供大家使用并修改，但在使用过程中底部请保留"唯品秀"版权说明，
   即：在footer.php源码中请不要去掉：<p>本站主题由<a href="https://www.weipxiu.com/" class="highlight">WEIPXIU.COM</a>免费提供</p>
 
-## 项目文件说明
+### 项目文件说明
 ``` bash
 │  category-1.php    //穿梭机
 │  category-10.php   //关于博客
