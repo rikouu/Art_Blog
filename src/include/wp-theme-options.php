@@ -14,7 +14,7 @@ function themeoptions_page() {
 ?>
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/include/css/set.css">
   <div class="wrap">
-    <h2>主题设置</h2>
+    <h2>唯品秀主题设置</h2>
     <ul class="nav-wrap clearfix">
       <li class="nav-list on">基本</li>
       <li class="nav-list">SEO</li>
@@ -26,6 +26,20 @@ function themeoptions_page() {
       <input type="hidden" name="update_themeoptions" value="true">
       <!-- 内容一 基本 -->
       <div class="content-wrap content1">
+        <div class="row clearfix">
+            <label for="domain" class="fl left-wrap">站点域名：</label>
+            <div class="fr right-wrap">
+              <input
+                placeholder="例如<?php echo home_url(); ?>，结尾不要带/"
+                type="text"
+                class="url-inp"
+                name="domain"
+                id="domain"
+                value="<?php echo $a_options['domain']; ?>"
+              >
+          </div>
+        </div>
+
         <div class="row clearfix">
           <label class="fl left-wrap">侧边栏统计功能：</label>
           <div class="fr right-wrap">
@@ -62,47 +76,55 @@ function themeoptions_page() {
               name="text-pic"
               value="off" <?php if($a_options['text_pic'] == 'off' || $a_options['text_pic'] == '') echo 'checked'; ?>
             >
+            <span class="warn">*开启之前必须确保已安装WordPress Mailer插件，并已配置好</span>
           </div>
         </div>
 
         <div class="row clearfix">
-          <label for="domain" class="fl left-wrap">站点域名：</label>
+          <label class="fl left-wrap">开启https：</label>
           <div class="fr right-wrap">
-						<input
-              placeholder="例如<?php echo home_url(); ?>，结尾不要带/"
-							type="text"
-							class="url-inp"
-							name="domain"
-							id="domain"
-							value="<?php echo $a_options['domain']; ?>"
-						>
+            <label for="switch-https-on">开</label>
+            <input
+              type="radio"
+              id="tswitch-https-on"
+              name="switch_https"
+              value="on" <?php if($a_options['switch_https'] == 'on') echo 'checked'; ?>
+            >
+            <label for="switch-https-off">关</label>
+            <input
+              type="radio"
+              id="switch-https-off"
+              name="switch_https"
+              value="off" <?php if($a_options['switch_https'] == 'off' || $a_options['switch_https'] == '') echo 'checked'; ?>
+            >
+            <span class="warn">*开启后所有资源强制以https方式加载，必须确保网站支持https</span>
           </div>
         </div>
 
         <div class="row clearfix">
           <label for="sidebar-notice" class="fl left-wrap">侧边栏公告：</label>
           <div class="fr right-wrap">
-            <textarea id="sidebar-notice" name="sidebar-notice" rows="15" cols="100"><?php echo $a_options['sidebar_notice']; ?></textarea>
+            <textarea id="sidebar-notice" name="sidebar-notice" rows="5" cols="100"><?php echo $a_options['sidebar_notice']; ?></textarea>
           </div>
         </div>
 
         <div class="row clearfix">
-          <label for="footer-copyright" class="fl left-wrap">底部版权文字：</label>
+          <label for="footer-copyright" class="fl left-wrap">底部版权信息：</label>
           <div class="fr right-wrap">
-            <textarea id="footer-copyright" name="footer-copyright" rows="15" cols="100"><?php echo $a_options['footer_copyright']; ?></textarea>
+            <textarea id="footer-copyright" name="footer-copyright" rows="8" cols="100"><?php echo $a_options['footer_copyright']; ?></textarea>
           </div>
         </div>
       </div>
       <!-- 内容二 SEO -->
       <div class="content-wrap content2">
         <div class="row clearfix">
-          <label for="keywords" class="fl left-wrap">首页关键词(keywords)：</label>
+          <label for="keywords" class="fl left-wrap">首页关键词(keyword)</label>
           <div class="fr right-wrap">
             <textarea id="keywords" name="keywords" rows="8" cols="100"><?php echo $a_options['keywords'] ?></textarea>
           </div>
         </div>
         <div class="row clearfix">
-          <label for="description class=" fl left-wrap"">首页描述(description)：</label>
+          <label for="description class=" fl left-wrap"">首页描述(describe)</label>
           <div class="fr right-wrap">
             <textarea id="description" name="description" rows="8" cols="100"><?php echo $a_options['description'] ?></textarea>
           </div>
@@ -396,6 +418,7 @@ function themeoptions_page() {
       'update_themeoptions' => 'true',
       'login_logo' => $_POST['login-logo'],
       'aside_count' => $_POST['aside-count'],
+      'switch_https' => $_POST['switch_https'],
       'text_pic' => $_POST['text-pic'],
       'logo' => $_POST['logo'],
       'thumbnail' => $_POST['thumbnail-img'],

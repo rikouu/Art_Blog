@@ -10,7 +10,13 @@
 	<meta name="format-detection" content="telephone=no" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
 	<!-- 强制https -->
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<?php 
+			if (get_option('switch_https')['text_pic'] == 'on'){
+			?>
+					<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+			<?php
+			}
+	?>
 	<meta http-equiv="x-dns-prefetch-control" content="on">
 	<link rel="dns-prefetch" href="<?php echo home_url(); ?>">
 	<title><?php the_title(); ?>&nbsp;|&nbsp;关注WEB前端开发技术&nbsp;-&nbsp;唯品秀博客</title>

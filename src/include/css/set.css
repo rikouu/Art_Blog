@@ -5,7 +5,9 @@
 .fr {
   float: right;
 }
-
+.left-wrap{
+  cursor: default;
+}
 .clearfix:after {
   content: "";
   display: block;
@@ -25,7 +27,9 @@
 input, textarea {
   vertical-align: middle;
 }
-
+textarea{
+  padding:5px;
+}
 .url-inp {
   width: 60%;
 }
@@ -35,19 +39,21 @@ input, textarea {
 
 .nav-wrap {
   border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
 }
 
 .nav-wrap .nav-list {
   float: left;
   margin: 0 10px 0 0;
-  padding: 10px 20px;
-  background: #008dd5;
+  padding: 8px 20px;
+  border-radius: 2px;
+  background: #409eff;
   color: #fff;
   cursor: pointer;
 }
 
 .nav-wrap .nav-list.on {
-  background: #50baf1;
+  background: #67c23a;
 }
 
 
@@ -62,18 +68,19 @@ input, textarea {
 }
 
 .row {
-  margin-bottom: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   border-bottom: 1px dashed #ccc;
+  line-height: 26px;
+  margin: 5px 0;
 }
 
 .row .left-wrap {
-  width: 10%;
+  width: 125px;
   text-align: right;
 }
 
 .row .right-wrap {
-  width: 88%;
+  width: calc(100% - 135px);
 }
 
 .row .right-wrap input[type="text"] {
@@ -86,12 +93,22 @@ input, textarea {
 
 .submit-btn {
   display: block;
-  width: 200px;
-  height: 50px;
-  margin-top: 20px;
+  width: 150px;
+  height: 40px;
   border: 0;
   outline: 0;
-  background: #008dd5;
   color: #fff;
+  background: #67c23a;
   cursor: pointer;
+  border-radius: 4px;
+  margin: 30px 0 0;
+}
+.warn{
+  color: #e6a23c;
+}
+.danger{
+  color: #f56c6c;
+}
+input[type=checkbox], input[type=radio]{
+  margin-top:0
 }

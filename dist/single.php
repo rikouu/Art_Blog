@@ -19,7 +19,14 @@
     <meta name="keywords" content="<?php echo $keywords; ?>" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"><!--强制https-->
+    <!--强制https-->
+    <?php 
+			if (get_option('switch_https')['text_pic'] == 'on'){
+			?>
+					<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+			<?php
+			}
+	?>
     <meta http-equiv="x-dns-prefetch-control" content="on">
 	<link rel="dns-prefetch" href="<?php echo home_url(); ?>">
     <title><?php the_title(); ?>&nbsp;-&nbsp;唯品秀&nbsp;-&nbsp;前端开发&nbsp;|&nbsp;web前端技术博客</title>

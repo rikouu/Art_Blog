@@ -2716,12 +2716,12 @@ div.com-art ul li {
 
 .continar-left div.key-w a {
     display: inline-block;
-    padding: 2px 0.17rem;
-    margin: 0 0.06rem;
+    padding: 0px 7px;
+    margin: 0 4px 4px 0;
     color: #fff;
     background-color: #1890ff;
     opacity: 0.85;
-    line-height: 0.44rem;
+    line-height: 22px;
 }
 
 .continar-left>h2 {

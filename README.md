@@ -2,7 +2,7 @@
 
 # https://www.weipxiu.com
 
-> 一款基于jquery2.1.4+js+H5/CSS3开发的wordpress主题2.0版
+> 一款基于jquery2.1.4+js+H5/CSS3开发的wordpress主题v2.0版
 
 > 主题介绍：https://www.weipxiu.com/?cat=10
 
@@ -18,22 +18,20 @@
 
 3、在wordpress后台安装WP-PageNavi(分页)、Advanced Custom Fields(高级自定义字段)插件
 
-4、删除首页中的邮箱订阅代码(当前新版默认已隐藏，需要借助插件配置且进入后台主题设置启动才可以使用的，当然，你也可以折腾，
-插件名称：WordPress Mailer)
-
-5、进入后台-外观-唯品秀主题设置，设置为自己的域名地址等信息
-
-6、如果你的网站设置了https头，那么你应该将主题文件php模板页所有链接http改为https，否则可能报错找不到文件
-
-7、在wordpress后台新建分类目录，新建后将鼠标放在分类名称上，在浏览器左下角出现链接，其中有个id=xx，
+4、在wordpress后台新建分类目录，新建后将鼠标放在分类名称上，在浏览器左下角出现链接，其中有个id=xx，
 将这个id对应的值设置替换给主题文件里的category-x的x，重新上传修改过名字的文件，如有其它问题，欢迎打扰
 
-8、文字枯燥还是不知道说的啥意思？亲自录制的教程视频：链接：https://pan.baidu.com/s/19wibJjeagvLRFOuUV2GvEQ 密码：6u6c
+5、进入后台-外观-唯品秀主题设置，设置站点域名地址、公告、底部等信息
 
-9、如果喜欢，请多多打赏。
+6、文字枯燥还是不知道说的啥意思？亲自录制的教程视频：链接：https://pan.baidu.com/s/19wibJjeagvLRFOuUV2GvEQ 密码：6u6c
+
+7、如果喜欢，请多多打赏。
 
 ```
-<img src="https://raw.githubusercontent.com/weipxiu/weipxiu/master/src/images/zhiwei.png">
+![avatar](https://raw.githubusercontent.com/weipxiu/weipxiu/master/src/images/zhiwei.png)
+
+## 后台主题设置预览
+![avatar](https://raw.githubusercontent.com/weipxiu/weipxiu/master/src/images/wp-theme-options.png)
 
 ## 特别说明
 
