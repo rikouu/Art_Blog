@@ -819,7 +819,7 @@ img {
   margin: 0.15rem 0 0.2rem;
   line-height: 0.5rem;
   color: #666;
-  font-size: 0.3rem;
+  font-size: 0.28rem;
   line-height: 0.42rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -836,7 +836,7 @@ img {
 
 .continar .inner-box {
   background: #fff;
-  padding: 0.26rem;
+  padding: 0.20rem;
   margin-bottom: 0.2rem;
   border-radius: 4px;
   transition: all 0.35s;
@@ -844,6 +844,7 @@ img {
 
 .continar .rssbook {
   text-align: center;
+  margin-bottom: 0.05rem;
 }
 
 .continar .rssbook p {
@@ -858,9 +859,9 @@ img {
 }
 
 .rssbook p {
-  font-size: 0.29rem !important;
-  margin: 5px auto 10px;
-  line-height: 24px;
+  font-size: 0.28rem !important;
+  margin: 0.1rem auto 10px;
+  line-height: 0.48rem;
   color: #666;
 }
 
@@ -1657,8 +1658,6 @@ div.com-art ul li {
 
 .continar-left p {
   font-size: 0.36rem;
-  line-height: 0.6rem;
-  margin: 0.15rem 0;
 }
 
 .continar-left .textwidget > p {
@@ -1683,7 +1682,7 @@ div.key-w {
 
 .continar-left div.key-w a {
   text-indent: 0;
-  line-height: 34rem;
+  line-height: 0.34rem;
   color: #fff;
   padding: 5px 0.3rem;
   background: #f1f1f1;
