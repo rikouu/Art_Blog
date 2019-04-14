@@ -1,5 +1,5 @@
 $(function(){
-    var domain_name = window.location.origin;
+    var domain_name = window.location.protocol+"//"+window.location.host;
     if (window.location.href != domain_name && window.location.href != domain_name+'/') {
         $("body > .continar").css("margin-top","88px");
     }

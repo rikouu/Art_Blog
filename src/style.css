@@ -449,7 +449,6 @@ img:hover {
     background: #f5f5f5;
     z-index: 10;
     display: none;
-    display: block\9;
 }
 
 #mobil {
@@ -6186,7 +6185,9 @@ p.data-l span {
 .mod-index__feature .img_list_6pic .word_display .carousel_small_str {
     display: block;
 }
-
+.mod-index__feature .img_list_6pic .word_display .carousel_small_pic {
+    display: none\9;
+}
 .mod-index__feature .img_list_6pic .carousel_pic_wrap {
     perspective: 10000px;
     transform-style: preserve-3d;
