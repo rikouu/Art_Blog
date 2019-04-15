@@ -3,17 +3,19 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Microsoft YaHei';
+  font-family: sans-serif;
   list-style: none;
   box-sizing: border-box;
-  color: #444;
-  font-size: 0.28rem;
+  color: #555;
+  font-size: 0.24rem;
   text-decoration: none;
   /*-webkit-touch-callout: none;长时间按住页面出现闪退,
 	如果启用，那么图片默认长按存储到相册功能被禁止*/
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
-
+a{
+  color: #5e5e5e;
+}
 html,
 body,
 form,
@@ -1015,9 +1017,11 @@ ul.post-categories li:first-child {
 }
 
 .text h3 {
+  width: calc(100% - 2.2rem);
+  float: right;
   line-height: 0.38rem;
-  margin-bottom: 0.1rem;
-  color: #666;
+  margin-bottom: 0.17rem;
+  color: #999;
   font-size: 0.26rem;
   font-weight: normal;
   display: -webkit-box;
@@ -1028,7 +1032,6 @@ ul.post-categories li:first-child {
   line-clamp: 2;
   box-orient: vertical;
   overflow: hidden;
-  width: 100%;
 }
 .text .img-left img,.entry-meta,.text .text_right .read-more {
   display: none;
@@ -1039,16 +1042,17 @@ ul.post-categories li:first-child {
 }
 .continar-left p.l{
   width: calc(100% - 2.2rem);
+  height: 0.32rem;
+  line-height: 0.32rem;
   float: right;
-  font-size: 0.24rem;
   display: -webkit-flex;
   display: flex;
   -webkit-justify-content: space-between;
   justify-content: space-between;
 }
 .continar-left p.l span,.continar-left p.l a{
-  font-size: 0.24rem;
-  color: #999!important;
+  font-size: 0.2rem;
+  color: #d0d0d0!important;
 }
 .continar-left p.l .iconfont,.continar-left p.l .fa{
 display: none
@@ -1058,12 +1062,6 @@ display: none
     max-height: 1.2rem;
     float: left;
 }
-.text h3{
-  width: calc(100% - 2.2rem);
-  float: right;
-  -webkit-line-clamp: 2;
-}
-
 /*右侧区域开始*/
 
 .continar-right {
@@ -1100,7 +1098,7 @@ p.clearfix {
 
 p.clearfix a {
   color: #1890ff;
-  font-size: 0.3rem !important;
+  font-size: 0.28rem;
 }
 
 .social {
@@ -1186,11 +1184,12 @@ p.clearfix a {
 
 .daily-list > p {
   font-weight: normal;
-  font-size: 14px;
+  font-size: 0.28rem;
   border-bottom: 1px solid #eee;
-  padding-bottom: 0.1rem;
-  margin-bottom: 0.2rem;
-  line-height: 0.52rem;
+  padding-bottom: .12rem;
+  margin-bottom: .2rem;
+  line-height: .56rem;
+  color: #5e5e5e;
 }
 
 .widget ul li {
@@ -1283,6 +1282,7 @@ div.com-art ul li {
   overflow: hidden;
   text-overflow: ellipsis;
   position: relative;
+  color: #5e5e5e;
 }
 
 .friendship ul li a {
@@ -1295,11 +1295,11 @@ div.com-art ul li {
   margin: 0 0 10px 0;
   padding: 5px;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 0.08rem;
   animation-delay: 0.1s;
   float: left;
   margin: 0 1% 10px 0;
-  padding: 2px 7px;
+  padding: 0.04rem 0.14rem;
   width: auto;
 }
 .friendship .daily-list ul li a{
@@ -1744,11 +1744,6 @@ div.key-w a:nth-of-type(3):hover {
   color: #666;
 }
 
-.continar-left p a {
-  font-size: 0.24rem!important;
-  color:#999;
-}
-
 .continar-left .text-post p a {
   font-size: 0.36rem;
 }
@@ -1910,7 +1905,6 @@ div.nav-s a {
 h2.title {
   font-size: 0.36rem;
   font-weight: bold;
-  font-family: '微软雅黑';
   text-align: center;
   line-height: 0.7rem;
   margin-top: 0.2rem;
@@ -2395,7 +2389,6 @@ div.jy p {
 #ds-thread #ds-reset .ds-textarea-wrapper textarea,
 #ds-thread #ds-reset .ds-textarea-wrapper .ds-hidden-text {
   display: block;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 20px;
   border: none;
@@ -2447,7 +2440,6 @@ div.jy p {
 }
 
 #ds-thread #ds-reset .ds-post-button {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   position: absolute;
   right: 0;
   top: 0;
@@ -2598,7 +2590,6 @@ div.jy p {
 #ds-thread #ds-reset .ds-textarea-wrapper textarea,
 #ds-thread #ds-reset .ds-textarea-wrapper .ds-hidden-text {
   display: block;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 20px;
   border: none;
@@ -3163,6 +3154,7 @@ canvas,
   font-weight: normal;
   width: 50%;
   overflow: hidden;
+  margin-bottom:0.04rem;
 }
 
 .widget-title a i {
@@ -3382,6 +3374,7 @@ p.reward-p {
   float: right;
   width: calc(100% - 0.92rem);
   line-height: 0.4rem;
+  color: #5e5e5e;
 }
 /* 侧边栏留言评论start */
 /* ajax loading动画start */

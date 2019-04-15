@@ -308,29 +308,26 @@
 								<i class="fa fa-calendar">&nbsp;</i><?php /*echo '发表于 '.timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); */?>
 							</a>
 						</span> -->
-						<span><i class="fa fa-calendar" aria-hidden="true"></i>
-							<?php the_time('Y年m月d日') ?></span>
+						<span><i class="fa fa-calendar" aria-hidden="true"></i><?php the_time('Y年m月d日') ?></span>
 						<span>
 							<a href="<?php the_permalink(); ?> ">
 								<i class="iconfont icon-liulan"></i><?php echo getPostViews(get_the_ID()); ?>℃
 							</a>
 						</span>
 						<span class="comm">
-							<a href="<?php the_permalink(); ?> ">
-								<i class="iconfont icon-pinglun2"></i><?php echo number_format_i18n( get_comments_number() );?>条评论
+							<a href="<?php the_permalink(); ?> "><i class="iconfont icon-pinglun2"></i><?php echo number_format_i18n( get_comments_number() );?>条评论
 							</a>
 						</span>
 						<span class="post-like">
-							<a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if(isset($_COOKIE['bigfa_ding_'.$post->ID])) echo ' done';?>">
-								<i class="fa fa-thumbs-o-up"></i>
-								<span class="count">
-									<?php if( get_post_meta($post->ID,'bigfa_ding',true) ){            echo get_post_meta($post->ID,'bigfa_ding',true);
-											} else {
-											echo '0';
-										}?>
-								</span>喜欢
-							</a>
-						</span>
+							<a href="javascript:;" style="data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if(isset($_COOKIE['bigfa_ding_'.$post->ID])) echo ' done';?>">
+								<i class="fa fa-thumbs-o-up"></i>	  
+								<span class="count">   
+					        		<?php if( get_post_meta($post->ID,'bigfa_ding',true) ){
+						                    echo get_post_meta($post->ID,'bigfa_ding',true);
+						                 } else {echo '0';
+						          }?></span>喜欢   
+						    </a>   
+    				</span>
 						<span class="r"></span>
 					</p>
 					<?php if( is_sticky() ) echo '<em><a href="">顶</a></em>'; ?>

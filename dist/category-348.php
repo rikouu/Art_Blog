@@ -97,23 +97,19 @@
 							</a>
 						</span>
 						<span class="comm">
-							<a href="<?php the_permalink(); ?> ">
-								<i class="iconfont icon-pinglun2"></i>
-								<span id = "url::<?php the_permalink(); ?>" class = "cy_cmt_count" ></span><script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cyt2b1NqT">
-								</script>条评论
+							<a href="<?php the_permalink(); ?> "><i class="iconfont icon-pinglun2"></i><?php echo number_format_i18n( get_comments_number() );?>条评论
 							</a>
 						</span>
 						<span class="post-like">
 							<a href="javascript:;" style="data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if(isset($_COOKIE['bigfa_ding_'.$post->ID])) echo ' done';?>">
 								<i class="fa fa-thumbs-o-up"></i>	  
 								<span class="count">   
-					        		<?php if( get_post_meta($post->ID,'bigfa_ding',true) ){      
+					        		<?php if( get_post_meta($post->ID,'bigfa_ding',true) ){
 						                    echo get_post_meta($post->ID,'bigfa_ding',true);
-						                 } else {
-						                    echo '0';
+						                 } else {echo '0';
 						          }?></span>喜欢   
 						    </a>   
-    					</span>
+    				</span>
 						<span class="r"></span>
 					 </p>
 						<?php if( is_sticky() ) echo '<em><a href="">顶</a></em>'; ?>
