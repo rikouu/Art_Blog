@@ -12,13 +12,11 @@
 1、本项目采用gulp自动化构建，可通过git克隆到本地，然后运行npm install安装依赖，接着运行npm run build即可压缩打包整个项目
 到dist文件夹，如不需要打包压缩代码等一系列工具功能可直接下载即可，然后找到项目文件的dist目录，里面即是已打包好的主题源码
 
-2、将主题文件放在：/htdocs/wp-content/themes/目录下
+2、将dist文件名命名为'boke',然后将整个文件夹上传到线上：/htdocs/wp-content/themes/目录下，然后启用主题
 
-3、在wordpress后台安装WP-PageNavi(分页)、Advanced Custom Fields(高级自定义字段)插件
+3、在wordpress后台安装WP-PageNavi(分页)、Advanced Custom Fields(高级自定义字段)插件，否则页面会显示报错
 
-4、在wordpress后台-分类目录，新建后将鼠标放在分类名称上，在浏览器左下角出现链接，其中有个tag_ID=xx，将这个id对应的数值设
-置替换给主题文件里的category-x的x，在header.php文件中找到导航菜单is_category方法，修改对应的id值即可在切换导航时候高
-亮
+4、在wordpress后台-分类目录，新建后将鼠标放在分类名称上，在浏览器左下角出现链接，其中有个tag_ID=xx，将这个id对应的数值设置替换给主题文件里的category-x的x，在header.php文件中找到导航菜单is_category方法，修改对应的id值即可在切换导航时候高亮
 
 5、开始启用唯品秀Art_Blog主题，然后到后台>外观>唯品秀主题设置，设置站点域名地址（必须的）、公告、底部等信息
 
