@@ -38,7 +38,7 @@ body{background-image:-webkit-linear-gradient(180deg, #FFFEF9, #EED6CC);backgrou
 #messageList .text{margin:0 30px;background:#f7ebe6;line-height:26px;padding:10px;  height:auto;text-indent:2em; border:0}
 #messageList .content{height: 38px;background: #fff; border-radius: 4px 4px 0 0;box-shadow: 0 6px 10px -6px rgba(0,0,0,0.1);
 padding-top: 3px;color: #585858;line-height: 34px;font-size: 14px;text-align:center;text-indent: 0;}
-#messageList .reply{ -webkit-transform-origin:center -5px; -webkit-transform:rotateX(-180deg);opacity:1;transition:.6s cubic-bezier(0.280, 0.695, 0.580, 1.450); border: 1px solid #fff;box-shadow: 0 3px 7px rgba(0,0,0,0.1);}
+#messageList .reply{ -webkit-transform-origin:center -5px; -webkit-transform:rotateX(-180deg);opacity:0;transition:.6s cubic-bezier(0.280, 0.695, 0.580, 1.450); border: 1px solid #fff;box-shadow: 0 3px 7px rgba(0,0,0,0.1);}
 .text{opacity: 1}
 </style>
 </head>
@@ -68,6 +68,12 @@ padding-top: 3px;color: #585858;line-height: 34px;font-size: 14px;text-align:cen
 <script>
 var iPage=8;
 var iNow=0;
+//IE浏览器兼容
+if (!!window.ActiveXObject || "ActiveXObject" in window){
+		setInterval(function(){
+			$('#messageList .reply').css('opacity','1')
+		}, 1000);
+}
 createFoot();
 function createFoot()
 {
