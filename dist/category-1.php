@@ -23,9 +23,8 @@
 <link rel="stylesheet" type="text/css" media="screen and (min-width:1200px)" href="<?php bloginfo('template_url'); ?>/style.css">
 <?php wp_head(); ?>
 <style>
-body{background-image:-webkit-linear-gradient(180deg, #FFFEF9, #EED6CC);
-    background-image:linear-gradient(180deg,#FFFEF9,#EED6CC);}
-#message{width:1000px;margin:130px auto 80px;overflow:hidden;padding:0 50px;}
+body{background-image:-webkit-linear-gradient(180deg, #FFFEF9, #EED6CC);background-image:linear-gradient(180deg,#FFFEF9,#EED6CC);}
+#message{width:1000px;margin:110px auto 70px;overflow:hidden;padding:0 50px;}
 #header{ height:48px;background:#fff; border-radius:5px; line-height:48px; font-size:16px; font-weight:bold; text-align:center; box-shadow:0 5px 7px rgba(0,0,0,0.2); color:#ed145b;}
 #footer{ height:30px;background:#fff;box-shadow:0 5px 7px rgba(0,0,0,0.2); border-radius:5px; line-height:30px; text-align:center; position:relative;z-index:10; margin-top:40px}
 #footer a,#footer p{ display:inline-block;}
@@ -37,19 +36,9 @@ body{background-image:-webkit-linear-gradient(180deg, #FFFEF9, #EED6CC);
 #messageList .pic{width:60px;height:60px;border:5px solid #fff;border-radius:50%; position:absolute;left:-100px;top:0;background:url(https://avatars3.githubusercontent.com/u/24957370?s=460&v=4) center no-repeat; box-shadow:inset 0 2px 5px rgba(0,0,0,0.2),0 5px 7px rgba(0,0,0,0.2); background-size:60px 60px}
 #messageList .ico{ width:12px;height:12px;background:#f7ebe6;border:3px solid #fff;border-radius:50%;box-shadow:inset 0 2px 5px rgba(0,0,0,0.2),0 5px 7px rgba(0,0,0,0.2); position:absolute;left:-6px;top:23px;}
 #messageList .text{margin:0 30px;background:#f7ebe6;line-height:26px;padding:10px;  height:auto;text-indent:2em; border:0}
-#messageList .content{    
-	height: 38px;
-    background: #fff;
-    border-radius: 4px 4px 0 0;
-    box-shadow: 0 6px 10px -6px rgba(0,0,0,0.1);
-    padding-top: 3px;
-    color: #585858;
-    line-height: 34px;
-    font-size: 14px;
-	text-align:center;
-	text-indent: 0;}
-#messageList .reply{ -webkit-transform-origin:center -5px; -webkit-transform:rotateX(-180deg);opacity:0;transition:.6s cubic-bezier(0.280, 0.695, 0.580, 1.450); border: 1px solid #fff;
-    box-shadow: 0 3px 7px rgba(0,0,0,0.1);}
+#messageList .content{height: 38px;background: #fff; border-radius: 4px 4px 0 0;box-shadow: 0 6px 10px -6px rgba(0,0,0,0.1);
+padding-top: 3px;color: #585858;line-height: 34px;font-size: 14px;text-align:center;text-indent: 0;}
+#messageList .reply{ -webkit-transform-origin:center -5px; -webkit-transform:rotateX(-180deg);opacity:1;transition:.6s cubic-bezier(0.280, 0.695, 0.580, 1.450); border: 1px solid #fff;box-shadow: 0 3px 7px rgba(0,0,0,0.1);}
 .text{opacity: 1}
 </style>
 </head>
@@ -70,8 +59,11 @@ body{background-image:-webkit-linear-gradient(180deg, #FFFEF9, #EED6CC);
     </ul>
     <footer id="footer">
     	<!--<a href="javascript:;">首页</a><a href="javascript:;" >上一页</a><p><a href="javascript:;" class="active">1</a><a href="javascript:;">2</a><a href="javascript:;">3</a></p><a href="javascript:;">下一页</a><a href="javascript:;">末页</a>-->
-	</footer>
+		</footer>
 </div>
+<!-- 底部引用区域开始 -->
+<?php get_footer()?>
+<!-- 底部引用区域结束 -->
 <script src="<?php bloginfo('template_url'); ?>/js/date.js"></script>
 <script>
 var iPage=8;
@@ -279,8 +271,5 @@ function getTop(obj)
 	return iTop;
 }
 </script>
-<!-- 底部引用区域开始 -->
-    <?php get_footer()?>
-<!-- 底部引用区域结束 -->
 </body>
 </html>
