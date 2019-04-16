@@ -1650,6 +1650,8 @@ div.com-art ul li {
 .continar-left .px {
   text-indent: 2em;
   font-size: 0.28rem;
+  line-height: .6rem;
+  margin-bottom: .2rem;
 }
 
 .continar-left ul li.index {
@@ -1718,10 +1720,6 @@ div.key-w a:hover {
 
 div.key-w a:nth-of-type(1) {
   background: #5cb85c;
-}
-
-div.key-w a:nth-of-type(2) {
-  /* background: #d9534f; */
 }
 
 div.key-w a:nth-of-type(3) {

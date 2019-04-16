@@ -4,23 +4,32 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="baidu-site-verification" content="cNP7vhhXuw" />
-	<meta name="Author" content="李俊" />
+	<meta name="Author" content="" />
 	<meta name="description" content="<?php echo get_option('weipxiu_options')['description']; ?>" />
 	<meta name="keywords" content="<?php echo get_option('weipxiu_options')['keywords']; ?>" />
 	<meta name="format-detection" content="telephone=no" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 	<!-- 强制https -->
-	<?php 
-			if (get_option('switch_https')['text_pic'] == 'on'){
-			?>
-					<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-			<?php
-			}
-	?>
+	<?php
+	if (get_option('switch_https')['text_pic'] == 'on') {
+		?>
+		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<?php
+}
+?>
 	<meta http-equiv="x-dns-prefetch-control" content="on">
 	<link rel="dns-prefetch" href="<?php echo home_url(); ?>">
-	<title>唯品秀&nbsp;–&nbsp;前端开发&nbsp;|&nbsp;web前端技术博客</title>
+	<title>
+		<?php
+		$name = single_tag_title('', false);
+		if ($name) {
+			echo $name . "&nbsp;–&nbsp;唯品秀&nbsp;–&nbsp;前端开发&nbsp;|&nbsp;web前端技术博客";
+		} else {
+			echo "唯品秀&nbsp;–&nbsp;前端开发&nbsp;|&nbsp;web前端技术博客";
+		}
+		?>
+	</title>
 	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
 
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -33,12 +42,8 @@
 </head>
 
 <body>
-	<?php get_header();?>
+	<?php get_header(); ?>
 	<section class="mod-banner" id="js_banner">
-		<!-- <div class="mod-banner__snow_theme">
-					<div class="mod-banner__snow_1"></div>
-					<div class="mod-banner__snow_2"></div>
-				</div> -->
 		<a href="<?php echo home_url(); ?>" target="_blank" class="mod-banner__img banner_1" id="banner_img" style="background: url(&quot;https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/banner-3.jpg&quot;) center center no-repeat;"></a>
 		<div class="mod-banner__navi">
 			<div class="js_banner_nav mod-banner_nav"></div>
@@ -55,25 +60,6 @@
 			</span>
 		</div>
 	</section>
-
-	<!-- 导航start -->
-	<!--<div class="index-box">
-			<div class="index-main path-banner">
-				<a href="" target="_blank" class="path-banner_1">
-					<img src="<?php /*bloginfo('template_url'); */?>/images/path_1.png" alt="WEB前端开发，最前沿的前端视频">
-				</a>
-				<a href="" target="_blank" class="path-banner_1">
-					<img src="<?php /*bloginfo('template_url'); */?>/images/path_2.png" alt="文章主题插件，最全最完整的持续更新">
-				</a>
-				<a href="" target="_blank" class="path-banner_1">
-					<img src="<?php /*bloginfo('template_url'); */?>/images/path_3.png" alt="原创实战经验，最流行的WEB前端教程">
-				</a>
-				<a href="" target="_blank" class="path-banner_1">
-					<img src="<?php /*bloginfo('template_url'); */?>/images/path_4.png" alt="资源交流社区，一个社区一个温暖的家">
-				</a>
-			</div>
-		</div> -->
-	<!-- 导航end -->
 
 	<!-- 正文区域start -->
 	<div class="continar">
@@ -104,8 +90,7 @@
 							<i class="light"></i>
 						</a>
 					</div>
-					<a href="/404.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display"
-					 target="_blank">
+					<a href="/404.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display" target="_blank">
 						<div class="carousel_small_str txt_bg01">
 							<h3 class="img_txt_title">404</h3>
 							<p class="img_p">路<br>在何方</p>
@@ -119,17 +104,14 @@
 						</div>
 						<img class="carousel_small_pic" width="110" height="85" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/03.79b87140.jpg">
 					</a>
-					<a href="/802.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_long word_display"
-					 target="_blank">
+					<a href="/802.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_long word_display" target="_blank">
 						<div class="carousel_small_str txt_bg03">
 							<h3 class="img_txt_title">千里共良宵</h3>
 							<p class="img_p">岁月<br>在电波中流淌</p>
 						</div>
-						<img class="carousel_small_pic" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/04.106fc8c0.jpg" width="160"
-						 height="85">
+						<img class="carousel_small_pic" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/04.106fc8c0.jpg" width="160" height="85">
 					</a>
-					<a href="/2075.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display"
-					 target="_blank">
+					<a href="/2075.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display" target="_blank">
 						<div class="carousel_small_str txt_bg02">
 							<h3 class="img_txt_title">忙碌</h3>
 							<p class="img_p">在喧闹<br>又孤独的城市</p>
@@ -141,8 +123,7 @@
 							<h3 class="img_txt_title">MV</h3>
 							<p class="img_p">时光<br>在画面里穿梭</p>
 						</div>
-						<img class="carousel_small_pic" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/06.50599bb3.jpg" width="160"
-						 height="85">
+						<img class="carousel_small_pic" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/06.50599bb3.jpg" width="160" height="85">
 					</a>
 					<a href="javascript:;" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display" target="_blank">
 						<div class="carousel_small_str txt_bg05">
@@ -170,30 +151,32 @@
 			<!-- PC正文3d导航end -->
 
 			<div class="continar-left-top">
-				<?php 
-					$args = array( 
-						'post_password' => '',
-						'post_status' => 'publish', // 只选公开的文章.
-						//'post__not_in' => array($post->ID),//排除当前文章
-						//'caller_get_posts' => 1, // 排除置頂文章.
-						//'orderby' => 'rand', // 依評論數排序.
-						'posts_per_page' => 1 // 设置调用条数
-					); 
-					$query_posts = new WP_Query(); 
-					$query_posts->query($args); 
-					while( $query_posts->have_posts() ) { $query_posts->the_post(); ?>
-				<h1>
-					<a href="<?php the_permalink(); ?>" target="_blank">
-						<span>【今日焦点】</span>
-						<?php the_title(); ?>
-						<img src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/new.gif" width="26" height="14" alt="24小时内最新">
-					</a>
-				</h1>
-				<span>
-					<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 250,"..."); ?>
-					<!--文章内容简介-->
-				</span>
-				<?php } wp_reset_query();?>
+				<?php
+				$args = array(
+					'post_password' => '',
+					'post_status' => 'publish', // 只选公开的文章.
+					//'post__not_in' => array($post->ID),//排除当前文章
+					//'caller_get_posts' => 1, // 排除置頂文章.
+					//'orderby' => 'rand', // 依評論數排序.
+					'posts_per_page' => 1 // 设置调用条数
+				);
+				$query_posts = new WP_Query();
+				$query_posts->query($args);
+				while ($query_posts->have_posts()) {
+					$query_posts->the_post(); ?>
+					<h1>
+						<a href="<?php the_permalink(); ?>" target="_blank">
+							<span>【今日焦点】</span>
+							<?php the_title(); ?>
+							<img src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/new.gif" width="26" height="14" alt="24小时内最新">
+						</a>
+					</h1>
+					<span>
+						<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 250, "..."); ?>
+						<!--文章内容简介-->
+					</span>
+				<?php }
+			wp_reset_query(); ?>
 			</div>
 			<!-- 博客介绍开始 -->
 			<aside class="blog">
@@ -204,31 +187,28 @@
 					</p>
 					<ul class="social">
 						<li class="weibo">
-							<a href="https://wpa.qq.com/msgrd?v=3&uin=343049466&site=qq&menu=yes"
-							 target="_blank" class="top-tip" title="加QQ为好友"><i class="iconfont icon-qq"></i>会话</a>
+							<a href="https://wpa.qq.com/msgrd?v=3&uin=343049466&site=qq&menu=yes" target="_blank" class="top-tip" title="加QQ为好友"><i class="iconfont icon-qq"></i>会话</a>
 						</li>
 						<li class="qq">
-							<a target="_blank" href="https://jq.qq.com/?_wv=1027&k=4BemYKg" rel="nofollow" class="top-tip" title="加入web前端QQ群"><i
-								 class="iconfont icon-qqqun"></i>Q群</a>
+							<a target="_blank" href="https://jq.qq.com/?_wv=1027&k=4BemYKg" rel="nofollow" class="top-tip" title="加入web前端QQ群"><i class="iconfont icon-qqqun"></i>Q群</a>
 						</li>
 						<li class="email">
-							<a href="mailto:<?php echo get_option('weipxiu_options')['QQ-number'];?>@qq.com.com" target="_blank" rel="nofollow" class="top-tip" title="给我发送qq邮件"><i class="iconfont icon-youxiang"></i>邮件</a>
+							<a href="mailto:<?php echo get_option('weipxiu_options')['QQ-number']; ?>@qq.com.com" target="_blank" rel="nofollow" class="top-tip" title="给我发送qq邮件"><i class="iconfont icon-youxiang"></i>邮件</a>
 						</li>
 						<li class="weixin">
 							<a href="javascript:;" target="_blank" rel="nofollow" class="top-tip" title="关注微信"><i class="iconfont icon-weixin"></i>微信</a>
 						</li>
 						<li class="feed">
-							<a target="_blank" href="https://github.com/weipxiu" rel="nofollow" class="top-tip" title="Github"><i
-								 class="iconfont icon-qq"></i>Github</a>
+							<a target="_blank" href="https://github.com/weipxiu" rel="nofollow" class="top-tip" title="Github"><i class="iconfont icon-qq"></i>Github</a>
 						</li>
 					</ul>
 				</div>
 			</aside>
 			<!-- 博客介绍结束 -->
 			<!-- 邮件订阅start -->
-			<?php 
-			if (get_option('weipxiu_options')['text_pic'] == 'on'){
-			?>
+			<?php
+			if (get_option('weipxiu_options')['text_pic'] == 'on') {
+				?>
 				<div class="inner-box">
 					<div class="rssbook">
 						<h3 class="info">您也可以通过电子邮件订阅每日的更新，不定时为您推送优质文章</h3>
@@ -240,107 +220,108 @@
 					</div>
 				</div>
 			<?php
-				}
-			?>
+		}
+		?>
 			<!-- 邮件订阅end -->
+
 			<!-- 文章start -->
+			<!-- 单独强制限制首页渲染多页渲染多少列表数据 -->
 			<!-- <?php /*$posts = query_posts($query_string . '&orderby=date&showposts=12'); ?>
 			<?php
 			if(have_posts()): while(have_posts()):the_post();*/
-			?> -->
+						?> -->
 			<?php
-			if(have_posts()): while(have_posts()):the_post();
-			?>
+			if (have_posts()) : while (have_posts()) : the_post();
+					?>
 
-			<div class="text">
-				<!-- <div class="mod-category__article-time">
-					<span>2018/10</span>
-					<span>23&nbsp;&nbsp;周二</span>
-				</div> -->
-				<div class="img-left">
-					<a class="read-more" href="<?php the_permalink(); ?>" target="_blank">
-						<?php
-							if ( has_post_thumbnail() )
-								the_post_thumbnail();
-							else
-								echo '<img src="/wp-content/uploads/2017/04/default-220x150.png" width="220" height="140" alt="唯品秀前端个人博客" />';
-						?>
-					</a>
-				</div>
-				<div class="text_right">
-					<h2>
-						<span>
-							<?php the_category() ?><i></i></span>
-						<a href="<?php the_permalink(); ?>" target="_blank" title="<?php the_title(); ?>">
-							<?php the_title(); ?></a>
-					</h2>
-					<div class="entry-meta">
-						<a href="<?php echo home_url(); ?>">唯品秀</a>
-						<i class="space">•</i>
-						<a href="#">
-							<?php if( get_field('original') ): ?>
-							<!-- <? /*php the_field('original'); */?> //直接打印输出字段的值-->
-							<?php echo "原创"; ?>
-							<?php else: ?>
-							<?php echo "转载"; ?>
-							<?php endif; ?>
-						</a>
-						<i class="space">•</i>
-						<?php the_author(); ?>
-						<a href="#" class="comments-number">
-							<span></span>
-						</a>
-					</div>
-					<?php
-							if ( has_post_thumbnail() )
+					<div class="text">
+						<div class="img-left">
+							<a class="read-more" href="<?php the_permalink(); ?>" target="_blank">
+								<?php
+								if (has_post_thumbnail())
+									the_post_thumbnail();
+								else
+									echo '<img src="/wp-content/uploads/2017/04/default-220x150.png" width="220" height="140" alt="唯品秀前端个人博客" />';
+								?>
+							</a>
+						</div>
+						<div class="text_right">
+							<h2>
+								<span>
+									<?php the_category() ?><i></i></span>
+								<a href="<?php the_permalink(); ?>" target="_blank" title="<?php the_title(); ?>">
+									<?php the_title(); ?></a>
+							</h2>
+							<div class="entry-meta">
+								<a href="<?php echo home_url(); ?>">唯品秀</a>
+								<i class="space">•</i>
+								<a href="#">
+									<?php if (get_field('original')) : ?>
+										<!-- <? /*php the_field('original'); */?> //直接打印输出字段的值-->
+										<?php echo "原创"; ?>
+									<?php else : ?>
+										<?php echo "转载"; ?>
+									<?php endif; ?>
+								</a>
+								<i class="space">•</i>
+								<?php the_author(); ?>
+								<a href="#" class="comments-number">
+									<span></span>
+								</a>
+							</div>
+							<?php
+							if (has_post_thumbnail())
 								the_post_thumbnail();
 							else
 								echo '<img src="/wp-content/uploads/2019/03/jsonp.png" alt="唯品秀前端个人博客" />';
-					?>
-					<h3>
-						<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200,"..."); ?>
-						<!--文章内容-->
-					</h3>
-					<a class="read-more read_url" href="<?php the_permalink(); ?>" target="_blank">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-					<p class="l">
-						<!-- <span>
-							<a href="<?php /*the_permalink(); */?> ">
-								<i class="fa fa-calendar">&nbsp;</i><?php /*echo '发表于 '.timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); */?>
-							</a>
-						</span> -->
-						<span><i class="fa fa-calendar" aria-hidden="true"></i><?php the_time('Y年m月d日') ?></span>
-						<span>
-							<a href="<?php the_permalink(); ?> ">
-								<i class="iconfont icon-liulan"></i><?php echo getPostViews(get_the_ID()); ?>℃
-							</a>
-						</span>
-						<span class="comm">
-							<a href="<?php the_permalink(); ?> "><i class="iconfont icon-pinglun2"></i><?php echo number_format_i18n( get_comments_number() );?>条评论
-							</a>
-						</span>
-						<span class="post-like">
-							<a href="javascript:;" style="data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if(isset($_COOKIE['bigfa_ding_'.$post->ID])) echo ' done';?>">
-								<i class="fa fa-thumbs-o-up"></i>	  
-								<span class="count">   
-					        		<?php if( get_post_meta($post->ID,'bigfa_ding',true) ){
-						                    echo get_post_meta($post->ID,'bigfa_ding',true);
-						                 } else {echo '0';
-						          }?></span>喜欢   
-						    </a>   
-    				</span>
-						<span class="r"></span>
-					</p>
-					<?php if( is_sticky() ) echo '<em><a href="">顶</a></em>'; ?>
-					<!-- <span class="new-icon">NEW</span> -->
-				</div>
-				<!-- <font class="s_bar"></font> -->
-				<!--竖条-->
-			</div>
-			<?php endwhile; else : ?>
-				<?php header("Location: /404.html");exit; ?> 
+							?>
+							<h3>
+								<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200, "..."); ?>
+								<!--文章内容-->
+							</h3>
+							<a class="read-more read_url" href="<?php the_permalink(); ?>" target="_blank">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+							<p class="l">
+								<!-- <span>
+											<a href="<?php /*the_permalink(); */?> ">
+												<i class="fa fa-calendar">&nbsp;</i><?php /*echo '发表于 '.timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); */?>
+											</a>
+										</span> -->
+								<span><i class="fa fa-calendar" aria-hidden="true"></i><?php the_time('Y年m月d日') ?></span>
+								<span>
+									<a href="<?php the_permalink(); ?> ">
+										<i class="iconfont icon-liulan"></i><?php echo getPostViews(get_the_ID()); ?>℃
+									</a>
+								</span>
+								<span class="comm">
+									<a href="<?php the_permalink(); ?> "><i class="iconfont icon-pinglun2"></i><?php echo number_format_i18n(get_comments_number()); ?>条评论
+									</a>
+								</span>
+								<span class="post-like">
+									<a href="javascript:;" style="data-action=" ding" data-id="<?php the_ID(); ?>" class="favorite<?php if (isset($_COOKIE['bigfa_ding_' . $post->ID])) echo ' done'; ?>">
+										<i class="fa fa-thumbs-o-up"></i>
+										<span class="count">
+											<?php if (get_post_meta($post->ID, 'bigfa_ding', true)) {
+												echo get_post_meta($post->ID, 'bigfa_ding', true);
+											} else {
+												echo '0';
+											} ?></span>喜欢
+									</a>
+								</span>
+								<span class="r"></span>
+							</p>
+							<?php if (is_sticky()) echo '<em><a href="">顶</a></em>'; ?>
+							<!-- <span class="new-icon">NEW</span> -->
+						</div>
+						<!-- <font class="s_bar"></font> -->
+						<!--竖条-->
+					</div>
+				<?php endwhile;
+				else : ?>
+				<?php header("Location: /404.html");
+				exit; ?>
 				<!-- <h2 id="redirect">
-					<?php _e('404'); ?>
-				</h2> -->
+							<?php _e('404'); ?>
+						</h2> -->
 				<?php endif; ?>
 				<?php wp_pagenavi(); ?>
 				<!-- <div>
@@ -353,14 +334,14 @@
 
 		<!-- 右侧区域开始 -->
 		<div class="continar-right">
-			<?php get_sidebar( $name ); ?>
+			<?php get_sidebar($name); ?>
 		</div>
 		<!-- 右侧区域结束 -->
 	</div>
 	<!-- 正文区域end -->
 
 	<!-- 底部调用start -->
-	<?php get_footer()?>
+	<?php get_footer() ?>
 	<?php wp_footer(); ?>
 	<!-- 底部调用end -->
 
@@ -402,10 +383,10 @@
 		</ul>
 		<div class="contact">
 			<h3>✎﹏ℳ๓ั如履✾薄冰</h3>
-			<h4>QQ : <?php echo get_option('weipxiu_options')['QQ-number'];?></h4>
-			<h4>手机：<span><?php 
-        echo get_option('weipxiu_options')['footer_copyright'];
-				?></span></h4>
+			<h4>QQ : <?php echo get_option('weipxiu_options')['QQ-number']; ?></h4>
+			<h4>手机：<span><?php
+										echo get_option('weipxiu_options')['footer_copyright'];
+										?></span></h4>
 			<a href="javascript:;">返回</a>
 		</div>
 	</div>

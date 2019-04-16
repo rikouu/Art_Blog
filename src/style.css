@@ -3,7 +3,7 @@ ThemeName:唯品秀博客主题
 ThemeURI:https://github.com/weipxiu/weipxiu
 Description:一款基于jquery2.1.4+js+H5/CSS3开发的wordpress主题
 Version:2.0
-Author:李俊
+Author:唯品秀前端个人博客
 AuthorURI:https://github.com/weipxiu
 Tags:web前端，移动端，响应式，HTML5，CSS3
 */
@@ -96,6 +96,7 @@ img {
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
+    border:0;
 }
 
 img:hover {
@@ -331,34 +332,6 @@ img:hover {
     width: 56px;
 }
 
-.mod-banner__snow_theme {
-    width: 100%;
-    margin: 0 auto;
-    position: absolute;
-    top: -14px;
-    left: 0;
-    height: 40px;
-    z-index: 999;
-}
-
-.mod-banner__snow_theme .mod-banner__snow_1 {
-    width: 440px;
-    height: 40px;
-    position: absolute;
-    top: 0;
-    right: 50%;
-    margin-right: 58px;
-}
-
-.mod-banner__snow_theme .mod-banner__snow_2 {
-    width: 150px;
-    height: 40px;
-    position: absolute;
-    top: 3px;
-    left: 50%;
-    margin-left: 346px;
-}
-
 /* 轩枫轮播end */
 
 @-webkit-keyframes hue {
@@ -483,6 +456,7 @@ img:hover {
     background: -moz-linear-gradient(top, #fff, #d4d7db);
     background: linear-gradient(#fff, #d4d7db);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    box-shadow:none\9;
 }
 
 .header_top {
@@ -1405,49 +1379,7 @@ i {
     cursor: pointer;
 }
 
-.index-box {
-    width: 100%;
-    height: 120px;
-    background: #fff;
-    margin-bottom: 20px;
-}
-
-.index-main {
-    width: 1200px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.path-banner>a {
-    float: left;
-    width: 300px;
-    height: 120px;
-    overflow: hidden;
-    -webkit-transition: 0.3s all;
-    -o-transition: 0.3s all;
-    transition: 0.3s all;
-}
-
-.path-banner img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-.index-main img {
-    max-width: 100%;
-    height: auto;
-    margin-top: -15px;
-}
-
-.path-banner>a:hover {
-    margin-top: -4px;
-    box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.5);
-    -webkit-box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.5);
-    -moz-box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.5);
-}
-
+/* 主题内容区域start */
 .continar {
     width: 1200px;
     min-height: 500px;
@@ -1634,34 +1566,6 @@ i {
     transform: translate3d(0, 0px, 0);
 }
 
-.continar-left>.text .mod-category__article-time {
-    position: absolute;
-    top: 20px;
-    left: -50px;
-    width: 70px;
-    height: 45px;
-    background: #e5e5e5;
-    filter: alpha(opacity=80);
-    background: hsla(0, 0%, 80%, .4);
-}
-.continar-left>.text .mod-category__article-time span{
-  float: left;
-  font-size: 12px;
-  line-height: 22px;
-  color: #666;
-  text-indent: 10px;
-}
-.mod-category__article-time:after {
-  content: "";
-  position: absolute;
-  top: 45px;
-  left: 0;
-  border-color: transparent #bbb transparent transparent;
-  border-style: solid;
-  border-width: 0 50px 20px 0;
-  height: 0;
-  width: 0;
-}
 .continar-left>.text:nth-last-of-type(2) {
     border: 1px solid #eaeaea;
 }
@@ -6187,9 +6091,6 @@ p.data-l span {
 .mod-index__feature .img_list_6pic .word_display .carousel_small_str {
     display: block;
 }
-.mod-index__feature .img_list_6pic .word_display .carousel_small_pic {
-    display: none\9;
-}
 .mod-index__feature .img_list_6pic .carousel_pic_wrap {
     perspective: 10000px;
     transform-style: preserve-3d;
@@ -6771,3 +6672,8 @@ label {
 }
 
 /* ajax loading动画end */
+
+/* 针对IE9做兼容处理 */
+.nav ul li a span:nth-of-type(2),.mod-index__feature .img_list_6pic .word_display .carousel_small_pic,.footer:after {
+    display: none\9;
+}

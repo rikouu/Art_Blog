@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta content="IE=11.0000" http-equiv="X-UA-Compatible">
-<meta name="Author" content="李俊" />
+<meta name="Author" content="" />
 <meta name="description" content="唯品秀个人博客，关注Web前端开发技术，移动前端开发，前端资讯，同时分享前端资源和工具等，期待你的参与" />
 <meta name="keywords" content="个人博客,唯品秀个人博客,个人博客网站,唯品秀，web前端博客，网页制作，博客，HTML5/CSS3，Javascript" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">

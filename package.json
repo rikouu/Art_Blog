@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "debug": "cross-env NODE_ENV=development node --inspect-brk ./gulpfile.js"
   },
-  "author": "李俊",
+  "author": "唯品秀前端个人博客",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.1.2",
