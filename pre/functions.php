@@ -1,28 +1,10 @@
 <?php
-//首页缓存控制
-function Cache_Control(){
-	if(is_home()){
-		header('Cache-Control: max-age=3600');
-	}
-	if(is_single()){
-		header('Cache-Control: max-age=36000');
-	}
-}
-add_action( 'wp', 'Cache_Control' );
-
 // 引入模板主题设置文件
 if (is_admin()) require ('include/wp-theme-options.php');
 
 //注册菜单
 register_nav_menus(array(
     'MainNav' => '主导航',
-));
-
-if (function_exists('register_sidebar')) register_sidebar(array(
-    'before_widget' => '<div class="sidebox">    ',
-    'after_widget' => '</div>',
-    'before_title' => '<h2>',
-    'after_title' => '</h2>',
 ));
 
 //注册特色图像
@@ -67,7 +49,8 @@ set_post_thumbnail_size(220, 140, true); // 图片宽度与高度
 //}
 /* -- END Mini Pagenavi v1.0------------------------------------- */
 ?>
-<?php //文章分类统计
+<?php 
+//文章分类统计
 function wt_get_category_count($input = '') {
     global $wpdb;
     if ($input == '') {
@@ -207,28 +190,7 @@ function hot_posts_list($days = 7, $nums = 10) {
     }
     echo $output;
 }
-//百度收录
-function v5v1_baiping($post_id) {
-    $baiduXML = 'weblogUpdates.extendedPing' . get_option('blogname') . ' ' . home_url() . ' ' . get_permalink($post_id) . ' ' . get_feed_link() . ' ';
-    $wp_http_obj = new WP_Http();
-    $return = $wp_http_obj->post('http://ping.baidu.com/ping/RPC2', array(
-        'body' => $baiduXML,
-        'headers' => array(
-            'Content-Type' => 'text/xml'
-        )
-    ));
-    if (isset($return['body'])) {
-        if (strstr($return['body'], '0')) {
-            $noff_log = 'succeeded!';
-        } else {
-            $noff_log = 'failed!';
-        }
-    } else {
-        $noff_log = 'failed!';
-    }
-}
-add_action('publish_post', 'v5v1_baiping');
-//百度收录end
+
 //在 WordPress 编辑器添加“下一页”按钮
 add_filter('mce_buttons', 'add_next_page_button');
 function add_next_page_button($mce_buttons) {
@@ -263,7 +225,7 @@ remove_action('publish_future_post', 'check_and_publish_future_post', 10, 1);
 remove_action('wp_head', 'noindex', 1);
 remove_action('wp_head', 'wp_print_styles', 8); //载入css
 remove_action('wp_head', 'wp_print_head_scripts', 9);
-remove_action('wp_head', 'wp_generator'); //移除WordPress版本
+//remove_action('wp_head', 'wp_generator'); //移除WordPress版本
 remove_action('wp_head', 'rel_canonical');
 remove_action('wp_footer', 'wp_print_footer_scripts');
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
@@ -287,22 +249,21 @@ if (!is_admin()) { // 后台不禁止
 wp_deregister_script('l10n');
 add_action('after_wp_tiny_mce', 'add_button_mce');
 function add_button_mce($mce_settings) { //扩展发表文章编辑器的导航标签
-    
 ?>
-<script type="text/javascript">
-    QTags.addButton( '注意', '注意', "<span class='beCareful'>", "</span>" );
-    QTags.addButton( '加密内容', '加密内容', "[secret key='123']", "[/secret]" );
-    QTags.addButton( '前言', '前言', "<p class='con_info'>", "</p>" );
-    QTags.addButton( '超链接', '超链接', "<a href=''>", "</a>" );
-    QTags.addButton( '代码块', '代码块', "[cc lang='php']", "[/cc]" );
-    QTags.addButton( 'p', 'p', "<p>", "</p>" );
-    QTags.addButton( 'li', 'li', "<li>", "</li>" );
-    QTags.addButton( 'span', 'span', "<span>", "</span>" );
-    QTags.addButton( 'h1', 'h1', "<h1>", "</h1>" );
-    QTags.addButton( 'h4', 'h4', "<h4>", "</h4>" );
-    QTags.addButton( 'h5', 'h5', "<h5>", "</h5>" );
-    QTags.addButton( 'embed', 'embed', "[embed]", "[/embed]" );
-</script>
+    <script type="text/javascript">
+        QTags.addButton( '注意', '注意', "<span class='beCareful'>", "</span>" );
+        QTags.addButton( '加密内容', '加密内容', "[secret key='123']", "[/secret]" );
+        QTags.addButton( '前言', '前言', "<p class='con_info'>", "</p>" );
+        QTags.addButton( '超链接', '超链接', "<a href=''>", "</a>" );
+        QTags.addButton( '代码块', '代码块', "[cc lang='php']", "[/cc]" );
+        QTags.addButton( 'p', 'p', "<p>", "</p>" );
+        QTags.addButton( 'li', 'li', "<li>", "</li>" );
+        QTags.addButton( 'span', 'span', "<span>", "</span>" );
+        QTags.addButton( 'h1', 'h1', "<h1>", "</h1>" );
+        QTags.addButton( 'h4', 'h4', "<h4>", "</h4>" );
+        QTags.addButton( 'h5', 'h5', "<h5>", "</h5>" );
+        QTags.addButton( 'embed', 'embed', "[embed]", "[/embed]" );
+    </script>
 <?php
 }
 // 彩色静态标签云 Color Tag Cloud
@@ -317,56 +278,7 @@ function add_button_mce($mce_settings) { //扩展发表文章编辑器的导航�
 //   $text = preg_replace($pattern, "style=\"color:#{$color};$2;\"", $text);
 //   return "<a $text>";
 // }
-// add_filter('wp_tag_cloud', 'colorCloud', 1);
-// 搜索结果关键词高亮显示
-// function lee_set_query() {
-//   $query  = attribute_escape(get_search_query());
-//   if(strlen($query) > 0){
-//     echo '
-//       <script type="text/javascript">
-//         var lee_query  = "'.$query.'";
-//       </script>
-//     ';
-//   }
-// }
-// function lee_init_jquery() {
-//  wp_enqueue_script('jquery');
-// }
-// add_action('init', 'lee_init_jquery');
-// add_action('wp_print_scripts', 'lee_set_query');
-// 文章外部链接加上nofollow
-// add_filter( 'the_content', 'cn_nf_url_parse');
-// function cn_nf_url_parse( $content ) {
-//   $regexp = "<a\s[^>]*href=(\"??)([^\" >]*?)\\1[^>]*>";
-//   if(preg_match_all("/$regexp/siU", $content, $matches, PREG_SET_ORDER)) {
-//     if( !empty($matches) ) {
-//       $srcUrl = get_option('siteurl');
-//       for ($i=0; $i < count($matches); $i++)
-//       {
-//         $tag = $matches[$i][0];
-//         $tag2 = $matches[$i][0];
-//         $url = $matches[$i][0];
-//         $noFollow = '';
-//         $pattern = '/target\s*=\s*"\s*_blank\s*"/';
-//         preg_match($pattern, $tag2, $match, PREG_OFFSET_CAPTURE);
-//         if( count($match) < 1 )
-//           $noFollow .= ' target="_blank" ';
-//         $pattern = '/rel\s*=\s*"\s*[n|d]ofollow\s*"/';
-//         preg_match($pattern, $tag2, $match, PREG_OFFSET_CAPTURE);
-//         if( count($match) < 1 )
-//           $noFollow .= ' rel="nofollow" ';
-//         $pos = strpos($url,$srcUrl);
-//         if ($pos === false) {
-//           $tag = rtrim ($tag,'>');
-//           $tag .= $noFollow.'>';
-//           $content = str_replace($tag2,$tag,$content);
-//         }
-//       }
-//     }
-//   }
-//   $content = str_replace(']]>', ']]>', $content);
-//   return $content;
-// }
+
 // 自定义登录界面
 function custom_login() {
     echo '<link rel="stylesheet" type="text/css" href="/style-login.4205e3e2.css" />';
@@ -758,8 +670,7 @@ function ludou_comment_mail_notify($comment_id, $comment_status) {
         @wp_mail($to, $subject, $message, $message_headers);
     }
   }
-  
-  
+   
   // 编辑和管理员的回复直接发送提醒邮件，因为编辑和管理员的评论不需要审核
   add_action('comment_post', 'ludou_comment_mail_notify', 20, 2);
   
