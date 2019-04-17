@@ -6,9 +6,6 @@
 
 ### 使用方式
 
-``` bash
-# 步骤
-
 - 本项目采用gulp自动化构建，可通过git克隆到本地，然后运行`npm install`安装依赖，接着运行npm run build即可压缩打包整个项目
 到`dist`文件夹，如不需要打包压缩代码等一系列工具功能可直接下载即可，然后找到项目文件的dist目录，里面即是已打包好的主题源码
 
@@ -25,7 +22,6 @@
 
 - 如果喜欢，请多多打赏。
 
-```
 ![avatar](https://raw.githubusercontent.com/weipxiu/weipxiu/master/src/images/zhiwei.png)
 
 ### 彩蛋
