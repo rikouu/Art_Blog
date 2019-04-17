@@ -4,7 +4,7 @@
 ### 后台主题设置预览
 ![avatar](https://raw.githubusercontent.com/weipxiu/weipxiu/master/src/images/wp-theme-options.png)
 
-### 使用方式
+### 如何使用
 
 - 本项目采用gulp自动化构建，可通过git克隆到本地，然后运行`npm install`安装依赖，接着运行npm run build即可压缩打包整个项目
 到`dist`文件夹，如不需要打包压缩代码等一系列工具功能可直接下载即可，然后找到项目文件的dist目录，里面即是已打包好的主题源码
@@ -18,13 +18,13 @@
 
 - 开始启用唯品秀Art_Blog主题，然后到后台>外观>唯品秀主题设置，设置站点域名地址（必须的）、公告、底部等信息
 
-- 文档枯燥还是不知道说的啥？`[教程视频链接](https://pan.baidu.com/s/19wibJjeagvLRFOuUV2GvEQ)`，`密码：6u6c`
+- 文档枯燥还是不知道说的啥？[教程视频链接](https://pan.baidu.com/s/19wibJjeagvLRFOuUV2GvEQ)，`密码：6u6c`
 
 - 如果喜欢，请多多打赏。
 
 ![avatar](https://raw.githubusercontent.com/weipxiu/weipxiu/master/src/images/zhiwei.png)
 
-### 彩蛋
+### 碎言碎语
 
 > 1、wordpress主题制作有特别要求，例如主题根目录必须存在header.php、index.php、footer.php、style.css，否则是不认，无法加载的。
 因此不用觉得某些文件摆放不合理，存在必定有意义
