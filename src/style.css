@@ -1990,6 +1990,7 @@ i {
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     width: 100%;
+    border-bottom: 1px dashed #e9eaed;
 }
 
 .friendship .daily-list ul {
@@ -1998,7 +1999,7 @@ i {
 
 .friendship .daily-list ul li {
     line-height: 24px;
-    border: 1px solid #ccc;
+    border: 1px solid #e9eaed;
     margin: 0 0 10px 0;
     padding: 5px;
     text-align: center;
@@ -4699,6 +4700,7 @@ ul.post-categories li:first-child {
     line-height: 26px;
     font-size: 12px;
     width: 50%;
+    border-bottom: 0;
 }
 
 #web-tj ul li:hover {
@@ -5807,7 +5809,6 @@ p.data-l span {
 .hot_rticles ul li {
     padding: 10px 0;
     margin-bottom: 0;
-    border-bottom: solid 1px #eee;
 }
 
 .hot_rticles ul li:last-of-type {
@@ -6514,6 +6515,7 @@ label {
   overflow: hidden;
   text-overflow: ellipsis;
   padding-top: 4px;
+  border-bottom: 1px dashed #e9eaed;
 }
 #primary-sidebar ul li:last-of-type a {
     border-bottom: none;
