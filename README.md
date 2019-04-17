@@ -10,7 +10,7 @@
   到`dist`文件夹，如不需要打包压缩代码等一系列工具功能可直接下载即可，然后找到项目文件的dist目录，里面即是已打包好的主题源码
 
 - 运行环境条件：在wordpress后台安装WP-PageNavi(分页)、Advanced Custom Fields(高级自定义字段)插件，wordpress版本≥4.7，
-  ≥5.3 服务器php版本 ≤php7.x，否则启用主题后页面会报错
+  ＞5.2服务器php版本＜php7.x，否则启用主题后页面会报错
 
 - 将dist文件名命名为`boke`,然后将整个文件夹上传到线上：`/htdocs/wp-content/themes/`目录下，然后启用主题
 
