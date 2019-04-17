@@ -360,37 +360,9 @@ add_filter('wp_default_editor', create_function('', 'return "html";'));
 //add_filter('pre_site_transient_update_core',create_function('$a', "return null;")); // 关闭核心提示
 //add_filter('pre_site_transient_update_plugins',create_function('$a', "return null;")); // 关闭插件提示
 //add_filter('pre_site_transient_update_themes',create_function('$a', "return null;")); // 关闭主题提示
-remove_action('admin_init', '_maybe_update_core'); // 禁止 WordPress 检查更新
+//remove_action('admin_init', '_maybe_update_core');  禁止 WordPress 检查更新
 //remove_action('admin_init', '_maybe_update_plugins'); // 禁止 WordPress 更新插件
 //remove_action('admin_init', '_maybe_update_themes');  // 禁止 WordPress 更新主题
-//防止CC攻击
-session_start(); //开启session
-$timestamp = time();
-$ll_nowtime = $timestamp;
-
-//判断session是否存在 如果存在从session取值，如果不存在进行初始化赋值
-if ($_SESSION) {
-    $ll_lasttime = $_SESSION['ll_lasttime'];
-    $ll_times = $_SESSION['ll_times'] + 1;
-    $_SESSION['ll_times'] = $ll_times;
-} else {
-    $ll_lasttime = $ll_nowtime;
-    $ll_times = 1;
-    $_SESSION['ll_times'] = $ll_times;
-    $_SESSION['ll_lasttime'] = $ll_lasttime;
-}
-
-//现在时间-开始登录时间 来进行判断 如果登录频繁 跳转 否则对session进行赋值
-if (($ll_nowtime - $ll_lasttime) < 3) {
-    if ($ll_times >= 5) {
-        header("location:https://127.0.0.1"); //可以换成其他链接，比如站内的404错误显示页面(千万不要用动态页面)
-        exit;
-    }
-} else {
-    $ll_times = 0;
-    $_SESSION['ll_lasttime'] = $ll_nowtime;
-    $_SESSION['ll_times'] = $ll_times;
-}
 
 //恢复wordpress删除的友情链接功能
 add_filter('pre_option_link_manager_enabled', '__return_true');

@@ -16,7 +16,8 @@
 
 3、在wordpress后台安装WP-PageNavi(分页)、Advanced Custom Fields(高级自定义字段)插件，否则页面会显示报错
 
-4、在wordpress后台-分类目录，新建后将鼠标放在分类名称上，在浏览器左下角出现链接，其中有个tag_ID=xx，将这个id对应的数值设置替换给主题文件里的category-x的x，在header.php文件中找到导航菜单is_category方法，修改对应的id值即可在切换导航时候高亮
+4、在wordpress后台-分类目录，新建后将鼠标放在分类名称上，在浏览器左下角出现链接，其中有个tag_ID=xx，将这个id对应的数值设置
+替换给主题文件里的category-x的x，在header.php文件中找到导航菜单is_category方法，修改对应的id值即可在切换导航时候高亮
 
 5、开始启用唯品秀Art_Blog主题，然后到后台>外观>唯品秀主题设置，设置站点域名地址（必须的）、公告、底部等信息
 
@@ -29,7 +30,8 @@
 
 ### 彩蛋
 
-> 1、wordpress主题制作有特别要求，例如主题根目录必须存在header.php、index.php、footer.php、style.css，否则是不认，无法加载的。因此不用觉得某些文件摆放不合理，存在必定有意义
+> 1、wordpress主题制作有特别要求，例如主题根目录必须存在header.php、index.php、footer.php、style.css，否则是不认，无法加载的。
+因此不用觉得某些文件摆放不合理，存在必定有意义
 
 > 2、为了最佳浏览效果，该主题对≤IE8作了屏蔽跳转，≥IE9版本可能无法完整展示CSS3效果，但会尽量兼容
 到不影响阅读
@@ -37,8 +39,8 @@
 > 3、基于css文件作了根据终端分割，所以你会看到主题目录dist>css文件夹中有style-ios.css、style-ipd.css
 两个文件，没错，三端样式完全独立，不重用，有利有弊，不做过多评论
 
-> 4、源码开放供大家使用并修改，但在使用过程中底部请保留"唯品秀"版权说明，
-  即：在footer.php源码中请不要去掉：<p>本站主题由<a href="https://www.weipxiu.com/" class="highlight">WEIPXIU.COM</a>免费提供</p>
+> 4、源码开放供大家使用并修改，但在使用过程中底部请保留"唯品秀"版权说明，即：在footer.php源码中请不要去掉：
+<p>本站主题由<a href="https://www.weipxiu.com/" class="highlight">WEIPXIU.COM</a>免费提供</p>
 
 ### 项目文件说明
 ``` bash
