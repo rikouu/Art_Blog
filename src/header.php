@@ -34,7 +34,7 @@
 		<!-- 移动端头部start -->
 		 <div class="os-headertop">
 			<div class="btn_menu"></div>
-			<a href="<?php echo home_url(); ?>" class="weipxiu_nav">唯品秀博客</a>
+			<a href="/" class="weipxiu_nav">唯品秀博客</a>
 			<div class="xis">
 				<i class="fa fa-search"></i>
 			</div>
@@ -50,6 +50,7 @@
 			</div>
 		 </div>
 		 <!--移动端头部end-->
+
 		 <div class="header">
 		 		<div style="height:2px;background:url(<?php bloginfo('template_url'); ?>/images/header_bj.gif); animation: hue 20s infinite linear;overflow: hidden; width:100%;">
 				</div>
@@ -71,7 +72,7 @@
 							  </div>
 							  <ul class="music-nav">
 							  		<li detaName="do" class="<?php if ( (is_category('9') || in_category('9')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-									  <a href="<?php echo home_url(); ?>">
+									  <a href="/">
 										  <span>首页</span>
 										  <span>首页</span>
 									  </a>
@@ -79,7 +80,7 @@
 									  <p></p>
 									</li>
 									<li detaName="re" class="<?php if ( (is_category('2') || in_category('2')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-									  <a href="/?cat=2">
+									  <a href="/category/mood">
 										  <span>心情小镇</span>
 										  <span>心情小镇</span>
 									  </a>
@@ -96,7 +97,7 @@
 									  <p></p>
 									</li>
 									<li detaName="fa" class="<?php if ( (is_category('1') || in_category('1')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-									  <a href="/?cat=1">
+									  <a href="/category/timemachine">
 										  <span>时光机</span>
 										  <span>时光机</span>
 									  </a>
@@ -113,7 +114,7 @@
 									  <p></p>
 									</li>
 									<li detaName="la" class="<?php if ( in_category('13') && is_category('13') ) { echo 'action'; } ?>">
-									  <a href="/?cat=13">
+									  <a href="/category/jqzy">
 										  <span>别具匠心</span>
 										  <span>别具匠心</span>
 									  </a>
@@ -121,7 +122,7 @@
 									  <p></p>
 									</li>
 									<li detaName="si" class="<?php if ( (is_category('8') || in_category('8')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-									  <a href="/?cat=8">
+									  <a href="/category/message">
 										  <span>碎言碎语</span>
 										  <span>碎言碎语</span>
 									  </a>
@@ -129,7 +130,7 @@
 									  <p></p>
 									</li>
 									<li detaName="dd" class="<?php if ( (is_category('10') || in_category('10')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-									  <a href="/?cat=10">
+									  <a href="/category/about">
 										  <span>关于博客</span>
 										  <span>关于博客</span>
 									  </a>
@@ -146,11 +147,11 @@
 								    </li>
 							  </ul>
 							  <div class="nav-min">
-								  	<a href="/?cat=3">HTML+CSS3</a>
-								  	<a href="/?cat=5">Javascript</a>
-										<a href="/?cat=14">Js前端框架</a>
-										<a href="/?cat=22">Node.js基础</a>
-										<a href="/?cat=29">前端工具箱</a>
+								  	<a href="/category/frontend/htmlcss">HTML+CSS3</a>
+								  	<a href="/category/frontend/javascript">Javascript</a>
+										<a href="/category/frontend/js-frame">Js前端框架</a>
+										<a href="/category/frontend/node-js">Node.js基础</a>
+										<a href="/category/frontend/holdall">前端工具箱</a>
 										<!-- <a href="/?cat=348">授人以渔</a> -->
 										<a href="http://v.laod.cn/" target="_blank">
 											Vip视频解析
@@ -200,18 +201,17 @@
         	 <li>
         		 <a href="javascript:void(0);" class="frontEnd"><i class="iconfont">&#xe64b;</i>前端开发<i class="iconfont iconfont_click icon-xiajiantou"></i></a>
         		 <div class="slide_slect">
-        			 <a href="/?cat=3"><i class="iconfont">&#xe68c;</i>HTML/CSS</a>
-		        	 <a href="/?cat=5"><i class="iconfont">&#xe898;</i>Javascript</a>
-		        	 <a href="/?cat=3"><i class="iconfont">&#xe693;</i>H5/CSS3</a>
-		        	 <a href="/?cat=14"><i class="iconfont">&#xe89a;</i>Js框架</a>
-		        	 <a href="/?cat=29"><i class="iconfont">&#xe6ad;</i>前端工具箱</a>
+        			 <a href="/category/frontend/htmlcss"><i class="iconfont">&#xe68c;</i>HTML/CSS</a>
+		        	 <a href="/category/frontend/javascript"><i class="iconfont">&#xe898;</i>Javascript</a>
+		        	 <a href="/category/frontend/js-frame"><i class="iconfont">&#xe89a;</i>Js框架</a>
+		        	 <a href="/category/frontend/holdall"><i class="iconfont">&#xe6ad;</i>前端工具箱</a>
 		        	 <a href="/works/h5-7_vip/index.html"><i class="iconfont">&#xe757;</i>作品案例</a>
         		 </div>
         	 </li>
-        	 <li><a href="/?cat=13"><i class="iconfont">&#xe617;</i>别具匠心</a></li>
-        	 <li><a href="/?cat=2"><i class="iconfont">&#xe617;</i>心情小镇</a></li>
-        	 <li><a href="/?cat=8"><i class="iconfont">&#xe60e;</i>碎言碎语</a></li>
-        	 <li><a href="/?cat=10"><i class="iconfont">&#xe603;</i>关于博客</a></li>
+        	 <li><a href="/category/jqzy"><i class="iconfont">&#xe617;</i>别具匠心</a></li>
+        	 <li><a href="/category/mood"><i class="iconfont">&#xe617;</i>心情小镇</a></li>
+        	 <li><a href="/category/message"><i class="iconfont">&#xe60e;</i>碎言碎语</a></li>
+        	 <li><a href="/category/about"><i class="iconfont">&#xe603;</i>关于博客</a></li>
 			 		 <li><a href="/wp-login.php"><i class="iconfont">&#xe630;</i>用户登录</a></li>
          </ul>
     </div>

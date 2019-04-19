@@ -145,8 +145,8 @@
     <!-- 手风琴end -->
     
     <!-- 正文区域start -->
-    <div class="continar" style="margin-top:0">
-         <div class="continar-left" id="details" style="border-top:1px solid transparent">
+    <div class="continar" style="transform:translateY(-45px)">
+         <div class="continar-left" id="details">
               <div class="nav-s1">
                     <a href="#">
                           给我留言

@@ -9,7 +9,7 @@ $(function () {
     var ajaxhome = domain_name+'/';
     var ajaxcontent = 'ajax_centent';
     var ajaxsearch_class = 'searchform';
-    var ajaxignore_string = new String('#, /?cat=, /wp-, .pdf, .zip, .rar, /goto, .html, .htm,, baidu.com, .xml');
+    var ajaxignore_string = new String('/page/');
     var ajaxignore = ajaxignore_string.split(', ');
     //var ajaxloading_code = 'loading';
     var ajaxloading_error_code = 'error';
@@ -168,11 +168,12 @@ $(function () {
     }
     function ajaxcheck_ignore(url) {
         for (var i in ajaxignore) {
-            if (url.indexOf(ajaxignore[i]) >= 0 || url == ajaxhome || url == domain_name) {
+            if (url.indexOf(ajaxignore[i]) >= 0) {
+                return true;
+            }else{
                 return false;
             }
         }
-        return true;
     }
 
     function ajaxreload_code() {

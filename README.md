@@ -17,6 +17,8 @@
 - 在wordpress后台-分类目录，新建后将鼠标放在分类名称上，在浏览器左下角出现链接，其中有个`tag_ID=xx`，将这个id对应的数值设置
   替换给主题文件里的`category-x的x`，在header.php文件中找到导航菜单`is_category`方法，修改对应的id值即可在切换导航时候高亮
 
+- header.php文件中导航链接/category/xxx，结尾'xxx'字段就是你新建分类时候设置的别名，例如：/category/about，这样就可以跳转了
+
 - 开始启用唯品秀Art_Blog主题，然后到后台>外观>唯品秀主题设置，设置站点域名地址（必须的）、公告、底部等信息
 
 - 文档枯燥还是不知道说的啥？[教程视频链接](https://pan.baidu.com/s/19wibJjeagvLRFOuUV2GvEQ)，`密码：6u6c`
