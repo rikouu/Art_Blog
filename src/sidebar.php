@@ -177,6 +177,7 @@
             <a href="javascript:()"><i class="iconfont icon-pinglun3"></i>精彩评论</a>
         </h3>
         <ul class="uk-list uk-padding-small tuts_comments_user_avatars">
+            <!-- 下面评论头像获取get_avatar(get_comment_author_email(), 50) -->
             <?php
             global $wpdb;
             $my_email = get_bloginfo ('admin_email');
@@ -185,7 +186,7 @@
             $output = $pre_HTML;
             foreach ($comments as $comment) { $com_excerpt = strip_tags($comment->com_excerpt); $excerpt_len = mb_strlen($com_excerpt, 'utf-8');
                 if ($excerpt_len > 46) $com_excerpt = mb_substr($com_excerpt, 0, 46, 'utf-8').'...';
-                $output .= "\n<li>".get_avatar(get_comment_author_email(), 50).strip_tags($comment->comment_author) . "<span>（" . timeago($comment->comment_date_gmt) . "）</span>" . "<p>". $com_excerpt ."</p>" . "<a href=\"" . get_permalink($comment->ID) ."#comment-" . $comment->comment_ID . "\" title=\"查看 " .$comment->post_title . "\">评：".$comment->post_title ."</a></li>";}
+                $output .= "\n<li>". '<img src=https://api.uomg.com/api/rand.avatar?format=images?'.rand(1,50).'>' .strip_tags($comment->comment_author) . "<span>（" . timeago($comment->comment_date_gmt) . "）</span>" . "<p>". $com_excerpt ."</p>" . "<a href=\"" . get_permalink($comment->ID) ."#comment-" . $comment->comment_ID . "\" title=\"查看 " .$comment->post_title . "\">评：".$comment->post_title ."</a></li>";}
             $output .= $post_HTML;
             $output = convert_smilies($output);
             echo $output;
