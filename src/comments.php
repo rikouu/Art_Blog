@@ -21,15 +21,15 @@ if ( post_password_required() )
                 <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" class="commentform" id="commentform">
                     <?php if ( $user_ID ) : ?>
                         <p class="warning-text" style="margin-bottom:10px">以<a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>身份登录&nbsp;|&nbsp;<a class="link-logout" href="<?php echo wp_logout_url(get_permalink()); ?>">注销 &raquo;</a></p>
-                        <textarea class="form-control" rows="3" id="comment" onkeydown="if(event.ctrlKey&&event.keyCode==13){document.getElementById('submit').click();return false};" placeholder="有些话不一定要说出来，但一定要记录在某个地方..." class="form-control" tabindex="1" name="comment"></textarea>
+                        <textarea class="form-control" rows="3" id="comment" onkeydown="if(event.ctrlKey&&event.keyCode==13){document.getElementById('submit').click();return false};" placeholder="请填写正确QQ邮箱，否则您的留言可能会被删除！" class="form-control" tabindex="1" name="comment"></textarea>
                     <?php else : ?>
-                        <textarea class="form-control" rows="3" id="comment" onkeydown="if(event.ctrlKey&&event.keyCode==13){document.getElementById('submit').click();return false};" placeholder="有些话不一定要说出来，但一定要记录在某个地方..." tabindex="1" name="comment"></textarea>
+                        <textarea class="form-control" rows="3" id="comment" onkeydown="if(event.ctrlKey&&event.keyCode==13){document.getElementById('submit').click();return false};" placeholder="请填写正确QQ邮箱，否则您的留言可能会被删除！" tabindex="1" name="comment"></textarea>
                         <div class="commentform-info">
                             <label id="author_name" for="author">
                                 <input class="form-control" id="author" type="text" tabindex="2" value="<?php echo $comment_author; ?>" name="author" placeholder="昵称[必填]" required>
                             </label>
                             <label id="author_email" for="email">
-                                <input class="form-control" id="email" type="text" tabindex="3" value="<?php echo $comment_author_email; ?>" name="email" placeholder="邮箱[必填]" required>
+                                <input class="form-control" id="email" type="text" tabindex="3" value="<?php echo $comment_author_email; ?>" name="email" placeholder="QQ邮箱[必填]" required>
                             </label>
                             <label id="author_website" for="url">
                                 <input class="form-control" id="url" type="text" tabindex="4" value="<?php echo $comment_author_url; ?>" name="url" placeholder="网址(选填)">

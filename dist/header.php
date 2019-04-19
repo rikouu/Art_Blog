@@ -57,7 +57,7 @@
 		 		<div class="header-body">
 			 	    <div class="header-conter">
 						  <div class="nav">
-						      <a href="<?php echo home_url(); ?>" class="t-logo" id="Logo">
+						      <a href="/" class="t-logo" id="Logo">
 						          <span class="logo"></span>
 						          <ul id="dj">
 						          	  <li></li>
