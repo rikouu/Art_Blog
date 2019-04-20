@@ -11,7 +11,7 @@
 
 - 将dist文件名命名为`Art_Blog`,然后将整个文件夹上传到线上：`/htdocs/wp-content/themes/`目录下，然后启用主题
 
-- 运行环境条件：在wordpress后台安装WP-PageNavi(分页)、Advanced Custom Fields(高级自定义字段)插件，wordpress版本≥4.7，
+- 运行环境条件：在wordpress后台安装WP-PageNavi(分页)、Advanced Custom Fields(高级自定义字段)插件，wordPress版本≥4.7，
   ≥5.3服务器php版本≤php7.3，否则前台会报错，[阿里云虚拟主机升级php7.x报错处理](https://www.weipxiu.com/2909.html)
 
 - 在wordpress后台-分类目录，新建后将鼠标放在分类名称上，在浏览器左下角出现链接，其中有个`tag_ID=xx`，将这个id对应的数值设置
