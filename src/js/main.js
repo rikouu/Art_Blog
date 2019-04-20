@@ -195,7 +195,7 @@ $(function(){
             musicObj = $(".nav ul.music-nav li:not(.mod-header_music-icon)").eq($index).find('audio');
             if (localStorage.getItem("off_y") == 1) {
                 $(this).addClass("active");
-                musicObj.get(0).src = "/wp-content/themes/boke/music/" + deta + ".mp3";
+                musicObj.get(0).src = "/wp-content/themes/Art_Blog/music/" + deta + ".mp3";
             } else {
                 musicObj.get(0).src = "";
             }
