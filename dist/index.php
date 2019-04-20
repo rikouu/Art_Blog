@@ -297,7 +297,7 @@
 									</a>
 								</span>
 								<span class="post-like">
-									<a href="javascript:;" style="data-action=" ding" data-id="<?php the_ID(); ?>" class="favorite<?php if (isset($_COOKIE['bigfa_ding_' . $post->ID])) echo ' done'; ?>">
+									<a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if (isset($_COOKIE['bigfa_ding_' . $post->ID])) echo ' done'; ?>">
 										<i class="fa fa-thumbs-o-up"></i>
 										<span class="count">
 											<?php if (get_post_meta($post->ID, 'bigfa_ding', true)) {
