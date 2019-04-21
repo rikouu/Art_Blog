@@ -138,42 +138,42 @@ gulp.task("jsConcat", function () {
 })
 
 //初始化browserSync
-browserSync.init({
-    server: {
-        baseDir: './src'
-    },
-    middleware: function (req, res, next) {
-        let str = '';
-        let pathname = require('url').parse(req.url).pathname;
-        if (pathname.match(/\.css/)) {
-            str = scssSolve(pathname);
-            if (str) {
-                res.end(str);
-            }
-        }
-        if (pathname.match(/\.js/)) {
-            str = jsSolve(pathname);
-            if (str) {
-                res.end(str);
-            }
-        }
-        next();
-    }
-});
+// browserSync.init({
+//     server: {
+//         baseDir: './src'
+//     },
+//     middleware: function (req, res, next) {
+//         let str = '';
+//         let pathname = require('url').parse(req.url).pathname;
+//         if (pathname.match(/\.css/)) {
+//             str = scssSolve(pathname);
+//             if (str) {
+//                 res.end(str);
+//             }
+//         }
+//         if (pathname.match(/\.js/)) {
+//             str = jsSolve(pathname);
+//             if (str) {
+//                 res.end(str);
+//             }
+//         }
+//         next();
+//     }
+// });
 
-gulp.watch('src/*.html').on('change', function () {
-    browserSync.reload('*.html');
-});
-gulp.watch('src/*.php').on('change', function () {
-    browserSync.reload('*.php');
-});
-gulp.watch('src/css/**/*.scss').on('change', function () {
-    browserSync.reload('*.css');
-});
-gulp.watch('src/js/**/*.js').on('change', function () {
-    browserSync.reload('*.js');
-});
-browserSync.reload();
+// gulp.watch('src/*.html').on('change', function () {
+//     browserSync.reload('*.html');
+// });
+// gulp.watch('src/*.php').on('change', function () {
+//     browserSync.reload('*.php');
+// });
+// gulp.watch('src/css/**/*.scss').on('change', function () {
+//     browserSync.reload('*.css');
+// });
+// gulp.watch('src/js/**/*.js').on('change', function () {
+//     browserSync.reload('*.js');
+// });
+// browserSync.reload();
 
 
 //监听文件是否发生改变
