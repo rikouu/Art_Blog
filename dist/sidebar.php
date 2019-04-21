@@ -199,7 +199,7 @@
 <!-- 友情链接start -->
 <div class="widget friendship">
     <div class="daily-list">
-        <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-pengyouwang"></i>风云英雄</a></h3>
+        <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-pengyouwang"></i>友情链接</a></h3>
         <p>他们同样是一群网虫，却不是每天泡在网上游走在淘宝和网游之间、刷着本来就快要透支的信用卡。他们或许没有踏出国门一步，但同学却不局限在一国一校，而是遍及全球！
         </p>
         <ul class="friendsChain">

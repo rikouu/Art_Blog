@@ -17,7 +17,6 @@
 	?>
     <title><?php the_title(); ?>&nbsp;|&nbsp;关注WEB前端开发技术&nbsp;-&nbsp;唯品秀博客</title>
     <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="<?php bloginfo('template_url'); ?>/css/style-ios.css">
     <link rel="stylesheet" type="text/css" media="screen and (min-width:768px) and (max-width:1199px)" href="<?php bloginfo('template_url'); ?>/css/style-ipd.css">
     <link rel="stylesheet" type="text/css" media="screen and (min-width:1200px)" href="<?php bloginfo('template_url'); ?>/style.css">
@@ -140,14 +139,14 @@
                             <?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200,"..."); ?>
                             <!--文章内容-->
                         </h3>
-                        <a class="read-more read_url" href="<?php the_permalink(); ?>" target="_blank">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+                        <a class="read-more read_url" href="<?php the_permalink(); ?>" target="_blank">阅读全文<i class="iconfont icon-jiantou-you-cuxiantiao-fill"></i></a>
                         <p class="l">
                             <!-- <span>
                                 <a href="<?php /*the_permalink(); */?> ">
-                                    <i class="fa fa-calendar">&nbsp;</i><?php /*echo '发表于 '.timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); */?>
+                                    <i class="">&nbsp;</i><?php /*echo '发表于 '.timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); */?>
                                 </a>
                             </span> -->
-                            <span><i class="fa fa-calendar" aria-hidden="true"></i><?php the_time('Y年m月d日') ?></span>
+                            <span><i class="iconfont icon-rili1" aria-hidden="true"></i><?php the_time('Y年m月d日') ?></span>
                                 <a href="<?php the_permalink(); ?> ">
                                     <i class="iconfont icon-liulan"></i><?php echo getPostViews(get_the_ID()); ?>℃
                                 </a>
@@ -157,14 +156,9 @@
                                 </a>
                             </span>
                             <span class="post-like">
-                                    <a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if(isset($_COOKIE['bigfa_ding_'.$post->ID])) echo ' done';?>">
-                                        <i class="fa fa-thumbs-o-up"></i>	  
-                                        <span class="count">   
-                                            <?php if( get_post_meta($post->ID,'bigfa_ding',true) ){
-                                                    echo get_post_meta($post->ID,'bigfa_ding',true);
-                                                } else {echo '0';
-                                        }?></span>喜欢   
-                                    </a>   
+                                <a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if (isset($_COOKIE['bigfa_ding_' . $post->ID])) echo ' done'; ?>"><i class="iconfont icon-damuzhi"></i><span class="count"><?php if (get_post_meta($post->ID, 'bigfa_ding', true)) {echo get_post_meta($post->ID, 'bigfa_ding', true);} else {echo '0';
+                                } ?></span>喜欢
+                                </a>
                             </span>
                             <span class="r"></span>
                         </p>

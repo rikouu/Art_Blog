@@ -1,6 +1,5 @@
-	<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_385244_zgpjum9ool.css">
+	<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_385244_bpalgt5da2u.css">
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/video-js.css">
-
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/video.js/video.min.js"></script>
 	<!-- 判断低版本IE -->
 	<script>
@@ -36,14 +35,14 @@
 			<div class="btn_menu"></div>
 			<a href="/" class="weipxiu_nav">唯品秀博客</a>
 			<div class="xis">
-				<i class="fa fa-search"></i>
+				<i class="iconfont icon-sousuo"></i>
 			</div>
 			<div class="site-search active">
 				<div class="container">
 					<form role="search" method="get" id="searchform" class="site-search-form" action="<?php echo home_url(); ?>/">
 						<input class="search-input" name="s" id="s" value="" placeholder="输入关键字搜索" type="text" />
 						<button class="search-btn" type="submit" id="searchsubmit">
-							<i class="fa fa-search"></i>
+							<i class="iconfont icon-sousuo"></i>
 						</button>
 					</form>
 				</div>
@@ -90,8 +89,8 @@
 									<li detaName="mi" class="front 
 									  <?php if ( in_category(array('3', '5', '14', '22','29')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="javascript:void(0);">
-										  <span>前端开发<i class="fa fa-angle-down"></i></span>
-										  <span>前端开发<i class="fa fa-angle-down"></i></span>
+										  <span>前端开发<i class="iconfont icon-jiantou"></i></span>
+										  <span>前端开发<i class="iconfont icon-jiantou"></i></span>
 									  </a>
 									  <audio src="" autoplay="autoplay"></audio>
 									  <p></p>
@@ -107,8 +106,8 @@
 									</li>
 									<li detaName="sol" class="works <?php if ( (is_category('-1') || in_category('-1')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="javascript:void(0);">
-										  <span>作品欣赏<i class="fa fa-angle-down"></i></span>
-										  <span>作品欣赏<i class="fa fa-angle-down"></i></span>
+										  <span>作品欣赏<i class="iconfont icon-jiantou"></i></span>
+										  <span>作品欣赏<i class="iconfont icon-jiantou"></i></span>
 									  </a>
 									  <audio src="" autoplay="autoplay"></audio>
 									  <p></p>
@@ -147,11 +146,11 @@
 								    </li>
 							  </ul>
 							  <div class="nav-min">
-								  	<a href="/category/frontend/htmlcss">HTML+CSS3</a>
-								  	<a href="/category/frontend/javascript">Javascript</a>
-										<a href="/category/frontend/js-frame">Js前端框架</a>
-										<a href="/category/frontend/node-js">Node.js基础</a>
-										<a href="/category/frontend/holdall">前端工具箱</a>
+								  	<a href="/category/frontend/htmlcss" class="<?php if ( in_category('3') && is_category('3') ) { echo 'action'; } ?>">HTML+CSS3</a>
+								  	<a href="/category/frontend/javascript"class="<?php if ( in_category('5') && is_category('5') ) { echo 'action'; } ?>">Javascript</a>
+										<a href="/category/frontend/js-frame"class="<?php if ( in_category('14') && is_category('14') ) { echo 'action'; } ?>">Js前端框架</a>
+										<a href="/category/frontend/node-js"class="<?php if ( in_category('22') && is_category('22') ) { echo 'action'; } ?>">Node.js基础</a>
+										<a href="/category/frontend/holdall"class="<?php if ( in_category('29') && is_category('29') ) { echo 'action'; } ?>">前端工具箱</a>
 										<!-- <a href="/?cat=348">授人以渔</a> -->
 										<a href="http://v.laod.cn/" target="_blank">
 											Vip视频解析
@@ -175,7 +174,7 @@
 							  <!-- 搜索按钮开始 -->
 							  <div class="navto-search">
 								  <a href="javascript:;" class="search-show active">
-								      <i class="fa fa-search"></i>
+								      <i class="iconfont icon-sousuo"></i>
 								  </a>
 							  </div>
 							  <!-- 搜索按钮结束 -->
@@ -187,7 +186,7 @@
 					<div class="container">
 						<form role="search" method="get" id="searchform" class="site-search-form" action="<?php echo home_url(); ?>/">
 							<input class="search-input" name="s" id="s" type="text" value="" placeholder="输入关键字搜索">
-							<button class="search-btn" type="submit" id="searchsubmit"><i class="fa fa-search"></i></button>
+							<button class="search-btn" type="submit" id="searchsubmit"><i class="iconfont icon-sousuo"></i></button>
 						</form>
 					</div>
 				</div>

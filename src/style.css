@@ -510,7 +510,7 @@ img:hover {
     margin: 15px 0;
 }
 
-.search-btn .fa {
+.search-btn .iconfont {
     font-size: 16px;
     width: 16px;
     color: #fff;
@@ -909,7 +909,9 @@ img:hover {
     visibility: hidden;
     border-top: 3px solid #1890ff;
 }
-
+.nav .nav-min a.action{
+    color: #1890ff;
+}
 .nav .nav-min:hover {
     opacity: 1 !important;
     top: 49px !important;
@@ -1388,7 +1390,9 @@ i {
     min-height: 500px;
     margin: 96px auto 50px;
 }
-
+.deviation{
+    margin-top: 43px!important;
+}
 .continar .continar-left {
     width: 850px;
     float: left;
@@ -2598,14 +2602,14 @@ div.com-art ul li {
 .continar-left div.key-w {
     font-size: 12px;
 }
-.continar-left p.l i.fa-calendar{
-    transform: translateY(-1px);
+.continar-left p.l .icon-rili1{
+    font-size: 13px;
 }
 .continar-left p.l>span {
     margin: 0 8px;
 }
-.continar-left p.l .fa-calendar,.continar-left p.l .iconfont{
-    margin-right:4px;
+.continar-left p.l .iconfont{
+    margin-right:3px;
 }
 .continar-left p.l * {
     color: #666;

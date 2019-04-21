@@ -189,7 +189,7 @@ img {
   pointer-events: auto;
 }
 
-.search-btn .fa {
+.search-btn .iconfont {
   font-size: 16px;
   width: 16px;
   color: #fff;
@@ -2991,7 +2991,7 @@ iframe {
 .os-herder {
   width: 160px;
   height: 100%;
-  background: url(../images/bg.png) no-repeat right;
+  background: #251d28;
   background-size: 100% 100%;
   padding: 0 15px;
   position: fixed;
@@ -3058,7 +3058,7 @@ div.btn {
   height: 1rem;
   line-height: 1rem;
   font-size: 0.44rem;
-  background: url(../images/top_bg2.png) no-repeat;
+  background: #251d28;
   background-size: 100% 100%;
   line-height: 1rem;
   color: #fff;

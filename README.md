@@ -74,9 +74,7 @@
 │      style-ios.css    //针对手机端样式
 │      style-ipd.css    //针对ipd平板样式
 │      swiper.min.css   //移动端轮播swiper样式
-│      video-js.css    //视频插件样式
-│      
-├─font-awesome-4.7.0    //国外比较有名的icon图标库
+│      video-js.css    //视频插件样式     
 │          
 ├─images    //图片资源
 │      

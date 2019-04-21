@@ -31,7 +31,6 @@
 	<link rel="dns-prefetch" href="<?php echo home_url(); ?>">
     <title><?php the_title(); ?>&nbsp;-&nbsp;唯品秀&nbsp;-&nbsp;前端开发&nbsp;|&nbsp;web前端技术博客</title>
     <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="<?php bloginfo('template_url'); ?>/css/style-ios.css">
     <link rel="stylesheet" type="text/css" media="screen and (min-width:768px) and (max-width:1199px)" href="<?php bloginfo('template_url'); ?>/css/style-ipd.css">
     <link rel="stylesheet" type="text/css" media="screen and (min-width:1200px)" href="<?php bloginfo('template_url'); ?>/style.css">
@@ -116,7 +115,7 @@
                         <div class="post-actions">
                             <span class="post-like action action-like">
                                 <a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if(isset($_COOKIE['bigfa_ding_'.$post->ID])) echo ' done';?>">
-                                    <i class="fa fa-thumbs-o-up"></i>赞(	  
+                                    <i class="iconfont icon-damuzhi"></i>赞(	  
                                     <span class="count">   
                                         <?php if( get_post_meta($post->ID,'bigfa_ding',true) ){            
                                                 echo get_post_meta($post->ID,'bigfa_ding',true);
@@ -157,7 +156,7 @@
                                     <span class="tooltip-item">
                                         <font class="s_show">赏</font>
                                         <a href="javascript:;" style="color: #f78585" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if(isset($_COOKIE['bigfa_ding_'.$post->ID])) echo ' done';?>">
-                                            <i class="fa fa-thumbs-o-up" style="color: #fff"></i>
+                                            <i class="iconfont icon-damuzhi" style="color: #fff"></i>
                                             <span class="tog_show">
                                                 <?php if( get_post_meta($post->ID,'bigfa_ding',true) ){            
                                                         echo get_post_meta($post->ID,'bigfa_ding',true);
