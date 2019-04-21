@@ -32,7 +32,7 @@ gulp.watch -- 观察文件是否发生改变
 gulp.task("copyHtml", function () {
     //pipe后面对应的地址就是将前面路径文件拷贝复制到哪里去
     console.log('\n正在打包编译中，请稍后......................\n');
-    return gulp.src(["src/**", "!src/*.html", "!src/js/*", "!src/css/*", "!src/style.css"]).pipe(gulp.dest(target))
+    return gulp.src(["src/**", "!src/*.html", "!src/js/*", "!src/css/*"]).pipe(gulp.dest(target))
 });
 
 //压缩html
@@ -53,6 +53,21 @@ gulp.task('miniHtml', () => {
         removeRedundantAttributes: true // 去除与默认属性一致的属性值
      }))
     .pipe(gulp.dest(target));
+});
+
+// 转行压缩css
+gulp.task("minCss", function () {
+    gulp.src("src/css/*.css")
+        //.pipe(rev())//添加hash值防缓存
+        //.pipe(gulpless())
+        .pipe(autoprefixer({ //增加浏览器前缀
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(gulp_minify_css())
+        .pipe(gulp.dest(target+"/css"))
+
+    return gulp.src(["src/css/*.woff2", "src/css/*.ttf"]).pipe(gulp.dest(target+"/css"))
 });
 
 //图片压缩
@@ -81,24 +96,6 @@ gulp.task("imageMin", function () {
         ]))
         .pipe(gulp.dest(target+'/images'))
 })
-
-// 转行压缩css
-gulp.task("minCss", function () {
-    gulp.src("src/css/*.css")
-        //.pipe(rev())//添加hash值防缓存
-        //.pipe(gulpless())
-        .pipe(autoprefixer({ //增加浏览器前缀
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-        .pipe(gulp_minify_css())
-        .pipe(gulp.dest(target+"/css"))
-
-    gulp.src(["src/css/*.woff2", "src/css/*.ttf"]).pipe(gulp.dest(target+"/css"))
-
-    return gulp.src("src/style.css")
-           .pipe(gulp.dest(target))
-});
 
 //ES6转换转ES5(babel-v7版本)
 // gulp.task('babel', () =>{
@@ -141,56 +138,56 @@ gulp.task("jsConcat", function () {
 })
 
 //初始化browserSync
-// browserSync.init({
-//     server: {
-//         baseDir: './src'
-//     },
-//     middleware: function (req, res, next) {
-//         let str = '';
-//         let pathname = require('url').parse(req.url).pathname;
-//         if (pathname.match(/\.css/)) {
-//             str = scssSolve(pathname);
-//             if (str) {
-//                 res.end(str);
-//             }
-//         }
-//         if (pathname.match(/\.js/)) {
-//             str = jsSolve(pathname);
-//             if (str) {
-//                 res.end(str);
-//             }
-//         }
-//         next();
-//     }
-// });
+browserSync.init({
+    server: {
+        baseDir: './src'
+    },
+    middleware: function (req, res, next) {
+        let str = '';
+        let pathname = require('url').parse(req.url).pathname;
+        if (pathname.match(/\.css/)) {
+            str = scssSolve(pathname);
+            if (str) {
+                res.end(str);
+            }
+        }
+        if (pathname.match(/\.js/)) {
+            str = jsSolve(pathname);
+            if (str) {
+                res.end(str);
+            }
+        }
+        next();
+    }
+});
 
-// gulp.watch('src/*.html').on('change', function () {
-//     browserSync.reload('*.html');
-// });
-// gulp.watch('src/*.php').on('change', function () {
-//     browserSync.reload('*.php');
-// });
-// gulp.watch('src/css/**/*.scss').on('change', function () {
-//     browserSync.reload('*.css');
-// });
-// gulp.watch('src/js/**/*.js').on('change', function () {
-//     browserSync.reload('*.js');
-// });
-// browserSync.reload();
+gulp.watch('src/*.html').on('change', function () {
+    browserSync.reload('*.html');
+});
+gulp.watch('src/*.php').on('change', function () {
+    browserSync.reload('*.php');
+});
+gulp.watch('src/css/**/*.scss').on('change', function () {
+    browserSync.reload('*.css');
+});
+gulp.watch('src/js/**/*.js').on('change', function () {
+    browserSync.reload('*.js');
+});
+browserSync.reload();
 
 
 //监听文件是否发生改变
 gulp.task("Watch", function () {
-    gulp.watch("src/*.html", ["copyHtml"]);
+    gulp.watch(["src/**", "!src/*.html", "!src/js/*", "!src/css/*", "src/style.css"], ["copyHtml"]);
+    gulp.watch(['src/*.html'], ["miniHtml"]);
     gulp.watch("src/css/*.css", ["minCss"]);
-    gulp.watch("src/js/*.js", ["babel"]);
-    //gulp.watch("src/images/*", ["imageMin"]);
+    gulp.watch(["src/js/main.js","src/js/ajax_wordpress.js"], ["jsConcat"]);
 })
 
 
 //如果直接执行 gulp 那么就是运行任务名称为‘default’的任务,后面数组代表所需要执行的任务列表
 //"imageMin"不加入，否则实在太慢，图片压缩还是单独处理吧
-gulp.task('default', ["copyHtml", "miniHtml", "jsConcat", "minCss"], function () {
+gulp.task('default', ["copyHtml", "miniHtml", "minCss", "jsConcat", "Watch"], function () {
     setTimeout(()=>{
         console.log('\n恭喜你，编译打包已完成，所有文件在'+target+'文件夹！！！');
     },1000)

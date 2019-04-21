@@ -528,10 +528,12 @@ function simple_comment($comment, $args, $depth) {
     comment_ID(); ?>">
             <div class="media">
                 <div class="media-left">
-                 <?php
-    if (function_exists('get_avatar') && get_option('show_avatars')) {
-        echo get_avatar($comment, 48);
-    } ?>
+                <?php
+                    if (function_exists('get_avatar') && get_option('show_avatars')) {
+                        echo get_avatar($comment, 48);
+                    }
+                ?>
+                <!-- <img src="<img src=https://q.qlogo.cn/headimg_dl?bs=qq&dst_uin=&src_uin=qq.feixue.me&fid=blog&spec=100>" alt=""> -->
                 </div>
                 <div class="media-body">
                     <?php
