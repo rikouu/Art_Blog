@@ -1,4 +1,4 @@
-	<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_385244_bpalgt5da2u.css">
+	<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_385244_1kovimkx4ch.css">
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/video-js.css">
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/video.js/video.min.js"></script>
 	<!-- 判断低版本IE -->
@@ -197,7 +197,7 @@
     <div class="os-herder btn">
          <ul class="slide-left">
         	 <li><a href="<?php echo home_url(); ?>"><i class="iconfont">&#xe632;</i>首页</a></li>
-        	 <li>
+        	 <li data-implement='element'>
         		 <a href="javascript:void(0);" class="frontEnd"><i class="iconfont">&#xe64b;</i>前端开发<i class="iconfont iconfont_click icon-xiajiantou"></i></a>
         		 <div class="slide_slect">
         			 <a href="/category/frontend/htmlcss"><i class="iconfont">&#xe68c;</i>HTML/CSS</a>
@@ -207,9 +207,9 @@
 		        	 <a href="/works/h5-7_vip/index.html"><i class="iconfont">&#xe757;</i>作品案例</a>
         		 </div>
         	 </li>
-        	 <li><a href="/category/jqzy"><i class="iconfont">&#xe617;</i>别具匠心</a></li>
-        	 <li><a href="/category/mood"><i class="iconfont">&#xe617;</i>心情小镇</a></li>
-        	 <li><a href="/category/message"><i class="iconfont">&#xe60e;</i>碎言碎语</a></li>
+        	 <li><a href="/category/jqzy"><i class="iconfont">&#xe75c;</i>别具匠心</a></li>
+        	 <li><a href="/category/mood"><i class="iconfont">&#xe668;</i>心情小镇</a></li>
+        	 <li><a href="/category/message"><i class="iconfont">&#xe69f;</i>碎言碎语</a></li>
         	 <li><a href="/category/about"><i class="iconfont">&#xe603;</i>关于博客</a></li>
 			 		 <li><a href="/wp-login.php"><i class="iconfont">&#xe630;</i>用户登录</a></li>
          </ul>

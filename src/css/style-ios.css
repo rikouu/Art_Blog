@@ -839,7 +839,6 @@ img {
 .continar .inner-box {
   background: #fff;
   padding: 0.20rem;
-  margin-bottom: 0.2rem;
   border-radius: 4px;
   transition: all 0.35s;
 }
@@ -902,7 +901,7 @@ img {
 
 /*邮件订阅end*/
 
-.text {
+.continar-left .text {
   background: #fff;
   height: auto;
   padding: 0 0.26rem 0.175rem;
@@ -911,13 +910,15 @@ img {
   position: relative;
   transition: all 0.35s;
 }
-
-.text .text_right {
+.continar-left .text:nth-of-type(1){
+  margin-top:0.2rem;
+}
+.continar-left .text .text_right {
   float: none;
   width: 100%;
 }
 
-.text .text_right > h2 {
+.continar-left .text .text_right > h2 {
   word-wrap: break-word;
   height: 0.7rem;
   line-height: 0.7rem;
@@ -3011,7 +3012,6 @@ div.btn {
 }
 
 .os-herder ul.slide-left li {
-  padding: 0.18rem 0;
   width: 100%;
   text-indent: 5px;
   font-size: 14px;
@@ -3028,16 +3028,18 @@ div.btn {
   width: 100%;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.8);
+  padding: .18rem 0;
 }
-
+.os-herder ul.slide-left li a.frontEnd{
+  pointer-events: none;
+}
 .os-herder ul.slide-left li .slide_slect {
   display: none;
+  padding-bottom: 0.15rem;
   /* height: 5.3rem; */
-  margin-top: 0.18rem;
 }
 
 .os-herder ul.slide-left li .slide_slect a {
-  padding: 0.15rem 0;
   border-top: 1px dashed rgba(255, 255, 255, 0.2);
 }
 

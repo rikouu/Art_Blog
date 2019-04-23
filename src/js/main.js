@@ -431,10 +431,13 @@ $(function(){
     $(".clearfix img").hide();
 
     // 移动端二级菜单导航start
-    $("ul.slide-left li").on("touchstart", function () {
-        $(this).find(".slide_slect").stop().slideToggle();
-        $(this).find(".iconfont_click").toggleClass("icon-xiajiantou");
-        $(this).find(".iconfont_click").toggleClass("icon-shangjiantou");
+    $("ul.slide-left li").on("touchstart", function (e) {
+        console.log(e.target.dataset.implement)
+        if(e.target.dataset.implement == 'element'){
+            $(this).find(".slide_slect").stop().slideToggle();
+            $(this).find(".iconfont_click").toggleClass("icon-xiajiantou");
+            $(this).find(".iconfont_click").toggleClass("icon-shangjiantou");
+        }
     })
     // 移动端二级菜单导航end
 
