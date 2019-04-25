@@ -2001,8 +2001,8 @@ i {
 }
 
 .friendship .daily-list ul li {
-    line-height: 24px;
-    border: 1px solid #e9eaed;
+    line-height: 26px;
+    height: 27px;
     margin: 0 0 10px 0;
     padding: 5px;
     text-align: center;
@@ -2010,15 +2010,21 @@ i {
     animation-delay: 0.1s;
     float: left;
     margin: 0 1% 10px 0;
-    padding: 2px 6px;
+    padding: 0px 6px;
     width: auto;
+    border-bottom:0;
 }
 .friendship .daily-list ul li a{
     margin-left:0;
     display: inline;
     margin: 0;
     padding: 0;
-    line-height: 24px;
+    line-height: 100%;
+    color: #fff;
+    font-size: 12px;
+}
+.friendship .daily-list ul li a:hover{
+    text-decoration: none;
 }
 .friendship .daily-list ul li i.iconfont {
     display: none;
@@ -2054,7 +2060,6 @@ i {
     overflow: hidden;
 }
 
-.widget ul li:hover a,
 .widget ul li:hover h3,
 .widget ul li:hover span {
     color: #1890ff;
@@ -6681,6 +6686,33 @@ label {
     background: #193b48;
 }
 /* ajax loading动画end */
+
+/* 随机背景颜色start */
+.continar-right .color-1{
+    background:#f3a683
+}
+.continar-right .color-2{
+    background:#778beb
+}
+.continar-right .color-3{
+    background:#e77f67
+}
+.continar-right .color-4{
+    background:#f5cd79
+}
+.continar-right .color-5{
+    background:#0fb9b1
+}
+.continar-right .color-6{
+    background:#f8a5c2
+}
+.continar-right .color-7{
+    background:#596275
+}
+.continar-right .color-8{
+    background:#20bf6b
+}
+/* 随机背景颜色end */
 
 /* 针对IE9做兼容处理 */
 .nav ul li a span:nth-of-type(2),.mod-index__feature .img_list_6pic .word_display .carousel_small_pic,.footer:after {

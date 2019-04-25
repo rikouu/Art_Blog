@@ -606,6 +606,14 @@ $(function(){
                 myPlayer.pause();
             }, 500);
         });
+
+        //随机数背景图片
+        function randomColor(option){
+            for(var i=0; i<option.length; i++){
+                option.eq(i).addClass('color-'+ (parseInt(Math.random()*8,10)+1))
+            }
+        }
+        randomColor($('.friendship .daily-list ul li'))
     }
     //视频播放end
 })
