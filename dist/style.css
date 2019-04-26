@@ -27,31 +27,6 @@ Tags:web前端，移动端，响应式，HTML5，CSS3
     /* font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif; */
 }
 
-::-moz-selection {
-    background: #9c0;
-    color: #fff;
-}
-
-::selection {
-    background: #9c0;
-    color: #fff;
-}
-
-::-webkit-selection {
-    background: #9c0;
-    color: #fff;
-}
-
-::-moz-selection {
-    background: #9c0;
-    color: #fff;
-}
-
-em,
-i {
-    font-style: normal;
-}
-
 html {
     width: 100%;
 }
@@ -101,6 +76,31 @@ img {
 
 img:hover {
     opacity: 0.9;
+}
+
+::-moz-selection {
+    background: #9c0;
+    color: #fff;
+}
+
+::selection {
+    background: #9c0;
+    color: #fff;
+}
+
+::-webkit-selection {
+    background: #9c0;
+    color: #fff;
+}
+
+::-moz-selection {
+    background: #9c0;
+    color: #fff;
+}
+
+em,
+i {
+    font-style: normal;
 }
 
 /*swiper轮播start*/
@@ -893,7 +893,7 @@ img:hover {
 
 .nav .nav-min {
     position: absolute;
-    left: 606px;
+    left: 601px;
     top: 70px;
     z-index: 3;
     -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.03);
@@ -1054,17 +1054,15 @@ i {
     left: 775px;
     top: 38px;
 }
-
+.nav .nav-min-1 {
+    left: 775px;
+}
 .header.hover .header-conter {
     margin-top: 7px;
 }
 
 .header.hover .nav ul.music-nav li>p {
     bottom: -5px;
-}
-
-.nav .nav-min-1 {
-    left: 778px;
 }
 
 .header .nav-min a {

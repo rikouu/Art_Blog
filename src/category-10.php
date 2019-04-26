@@ -39,7 +39,7 @@
                      <div class="head_avatar"> 
                       <a href="javascript:;"> 
                        <m class="head_user_avatar_aa"> 
-                             <img src="https://avatars3.githubusercontent.com/u/24957370?s=460&v=4" class="avatar" width="160" height="160" />
+                             <img src="<?php bloginfo('template_url'); ?>/images/head_portrait.jpg" class="avatar" width="160" height="160" />
                        </m> <span class="verify_1"></span></a> 
                      </div> 
                      <div class="head_avatar_a">
