@@ -5887,13 +5887,13 @@ p.data-l span {
 
 /* 针对傻逼畅言广告屏蔽start */
 
-/* #feedAv,
+#feedAv,
 #pop_ad,
 #MZAD_POP_PLACEHOLDER {
     margin-top: -200px !important;
     transform: scale(0);
     display: none !important;
-} */
+}
 
 /* 针对傻逼畅言广告屏蔽end */
 
