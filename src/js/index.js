@@ -331,6 +331,9 @@ $(function () {
         $('.nav ul.music-nav li').eq(0).addClass('action')
     }
 
+    //修改邮件订阅表单类型
+    $(".wpm_form .wpm_email input").attr("type","email")
+
     // 当窗口改变时候start
     $(window).resize(function() {
         if($(document).width() >= 1200){
