@@ -688,7 +688,7 @@ i {
     position: relative;
     top: 1px;
     border-left: 1px solid #bbb;
-    margin-left: 158px;
+    margin-left: 151px;
     height: 30px;
 }
 
@@ -1280,7 +1280,7 @@ i {
 }
 
 #Logo {
-    width: 145px;
+    width: 135px;
     height: 60px;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
@@ -1288,10 +1288,14 @@ i {
     display: block;
     position: absolute;
     left: 0;
-    top: -10px;
+    top: -14px;
     overflow: hidden;
+    /* background: url(https://www.weipxiu.com/wp-content/themes/Art_Blog/images/weipxiu_logo_1.png) no-repeat center center; */
 }
-
+#Logo > img{
+    width:100%;
+    margin-top:7px;
+}
 @-webkit-keyframes searchLights {
     0% {
         left: -100px;
@@ -1325,7 +1329,7 @@ i {
     background-size: 350px 175px;
 }
 
-#Logo ul {
+/*#Logo ul {
     padding-top: 12px;
 }
 
@@ -1353,7 +1357,7 @@ i {
     animation: move 0.2s 5.3s infinite alternate;
 }
 
-/*#Logo:hover #dj li {
+#Logo:hover #dj li {
 	-webkit-animation-play-state:paused;
 	animation-play-state:paused
 }
