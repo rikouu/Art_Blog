@@ -79,7 +79,7 @@
 				<div class="img_list_6pic ui-clearfix">
 					<div class="img_box">
 						<a href="/1212.html" target="_blank">
-							<img src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/01.503c5483.jpg" width="280" height="180" class="ui-d-b">
+							<img src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/01.503c5483.jpg" width="280" height="180" alt="唯品秀前端技术博客" class="ui-d-b">
 							<div class="img_bg"></div>
 							<div class="img_txt">
 								<p class="img_title">有些话不一定要说出来 | 但一定要记录在某个地方</p>
@@ -93,56 +93,56 @@
 							<h3 class="img_txt_title">404</h3>
 							<p class="img_p">路<br>在何方</p>
 						</div>
-						<img class="carousel_small_pic" width="110" height="85" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/02.1999dad7.jpg">
+						<img class="carousel_small_pic" width="110" height="85" alt="唯品秀前端技术博客" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/02.1999dad7.jpg">
 					</a>
 					<a href="/817.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
 						<div class="carousel_small_str txt_bg02">
 							<h3 class="img_txt_title">绘画板</h3>
 							<p class="img_p">描绘<br>在故事里的风景</p>
 						</div>
-						<img class="carousel_small_pic" width="110" height="85" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/03.79b87140.jpg">
+						<img class="carousel_small_pic" width="110" height="85" alt="唯品秀前端技术博客" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/03.79b87140.jpg">
 					</a>
 					<a href="/802.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_long word_display" target="_blank">
 						<div class="carousel_small_str txt_bg03">
 							<h3 class="img_txt_title">千里共良宵</h3>
 							<p class="img_p">岁月<br>在电波中流淌</p>
 						</div>
-						<img class="carousel_small_pic" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/04.106fc8c0.jpg" width="160" height="85">
+						<img class="carousel_small_pic" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/04.106fc8c0.jpg" width="160" height="85" alt="唯品秀前端技术博客">
 					</a>
 					<a href="/2075.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display" target="_blank">
 						<div class="carousel_small_str txt_bg02">
 							<h3 class="img_txt_title">忙碌</h3>
 							<p class="img_p">在喧闹<br>又孤独的城市</p>
 						</div>
-						<img class="carousel_small_pic" width="110" height="85" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/05.0357cd0d.jpg">
+						<img class="carousel_small_pic" width="110" height="85" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/05.0357cd0d.jpg" alt="唯品秀前端技术博客">
 					</a>
 					<a href="/category/timemachine" target="_blank" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_long">
 						<div class="carousel_small_str txt_bg04">
 							<h3 class="img_txt_title">MV</h3>
 							<p class="img_p">时光<br>在画面里穿梭</p>
 						</div>
-						<img class="carousel_small_pic" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/06.50599bb3.jpg" width="160" height="85">
+						<img class="carousel_small_pic" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/06.50599bb3.jpg" width="160" height="85" alt="唯品秀前端技术博客">
 					</a>
 					<a href="javascript:;" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display" target="_blank">
 						<div class="carousel_small_str txt_bg05">
 							<h3 class="img_txt_title">Music</h3>
 							<p class="img_p">心情<br>在音乐中释放</p>
 						</div>
-						<img class="carousel_small_pic" width="110" height="85" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/07.2f43931e.jpg">
+						<img class="carousel_small_pic" width="110" height="85" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/07.2f43931e.jpg" alt="唯品秀前端技术博客">
 					</a>
 					<a href="/913.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
 						<div class="carousel_small_str txt_bg06">
 							<h3 class="img_txt_title">情人节</h3>
 							<p class="img_p">一个单身<br>程序员的史诗</p>
 						</div>
-						<img class="carousel_small_pic" width="110" height="85" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/08.daacfa0c.jpg">
+						<img class="carousel_small_pic" width="110" height="85" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/08.daacfa0c.jpg" alt="唯品秀前端技术博客">
 					</a>
 					<a href="javascript:;" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
 						<div class="carousel_small_str txt_bg06">
 							<h3 class="img_txt_title">直男癌</h3>
 							<p class="img_p">花花世界<br>谁在鄙视直男癌</p>
 						</div>
-						<img class="carousel_small_pic" width="110" height="85" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/09.1f0f38a3.jpg">
+						<img class="carousel_small_pic" width="110" height="85" src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/09.1f0f38a3.jpg" alt="唯品秀前端技术博客">
 					</a>
 				</div>
 			</div>
@@ -166,7 +166,7 @@
 						<a href="<?php the_permalink(); ?>" target="_blank">
 							<span>【今日焦点】</span>
 							<?php the_title(); ?>
-							<img src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/new.gif" width="26" height="14" alt="24小时内最新">
+							<img src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/images/new.gif" width="26" height="14" alt="24小时内最新" alt="唯品秀前端技术博客">
 						</a>
 					</h1>
 					<span>
@@ -239,7 +239,7 @@
 								if (has_post_thumbnail())
 									the_post_thumbnail();
 								else
-									echo '<img src="/wp-content/uploads/2017/04/default-220x150.png" width="220" height="140" alt="唯品秀前端个人博客" />';
+									echo '<img src="/wp-content/uploads/2017/04/default-220x150.png" width="220" height="140" alt="唯品秀前端技术博客" />';
 								?>
 							</a>
 						</div>
@@ -271,7 +271,7 @@
 							if (has_post_thumbnail())
 								the_post_thumbnail();
 							else
-								echo '<img src="/wp-content/uploads/2019/03/jsonp.png" alt="唯品秀前端个人博客" />';
+								echo '<img src="/wp-content/uploads/2019/03/jsonp.png" alt="唯品秀前端技术博客" />';
 							?>
 							<h3>
 								<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200, "..."); ?>

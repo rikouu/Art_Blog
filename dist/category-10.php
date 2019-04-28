@@ -39,11 +39,11 @@
                      <div class="head_avatar"> 
                       <a href="javascript:;"> 
                        <m class="head_user_avatar_aa"> 
-                             <img src="<?php bloginfo('template_url'); ?>/images/head_portrait.jpg" class="avatar" width="160" height="160" />
+                             <img src="<?php bloginfo('template_url'); ?>/images/head_portrait.jpg" class="avatar" width="160" height="160" alt="唯品秀前端技术博客" />
                        </m> <span class="verify_1"></span></a> 
                      </div> 
                      <div class="head_avatar_a">
-                      <p>Admin<i class="img-icon icon_male"></i><span title="等级：45级" style="vertical-align: 0px;" class="lv lv45"></span> <a href="/author/0?info=vip#user_menu" title="VIP 6" class="vip_aa"><img src="<?php bloginfo('template_url'); ?>/images/vip9.png" class="vip_ico vip6" /></a></p>
+                      <p>Admin<i class="img-icon icon_male"></i><span title="等级：45级" style="vertical-align: 0px;" class="lv lv45"></span> <a href="/author/0?info=vip#user_menu" title="VIP 6" class="vip_aa"><img src="<?php bloginfo('template_url'); ?>/images/vip9.png" class="vip_ico vip6" alt="唯品秀前端技术博客" /></a></p>
                      </div> 
                      <div class="head_avatar_b">
                         <p> 管理员 </p>
@@ -66,7 +66,7 @@
              <ul class="clearfix">
                     <!-- <li class="photo limit_w">
                         <a href="#" title="李俊">
-                            <img src="<?php bloginfo('template_url'); ?>/images/IMG_0028.JPG" width="150" alt="李俊" title="李俊">
+                            <img src="<?php bloginfo('template_url'); ?>/images/IMG_0028.JPG" width="150" alt="唯品秀前端技术博客" title="李俊">
                         </a>
                     </li> -->
                     <li class="limit_w"><span>姓名：李俊</span><span>名族：大汉</span></li>
