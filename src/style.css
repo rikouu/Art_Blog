@@ -1997,11 +1997,12 @@ i {
     width: 100%;
     border-bottom: 1px dashed #e9eaed;
 }
-
-.friendship .daily-list ul {
-    padding: 0 15px;
+.widget ul li:last-of-type{
+    border-bottom: none;
 }
-
+.friendship .daily-list ul {
+    padding: 0 15px 4px;
+}
 .friendship .daily-list ul li {
     line-height: 26px;
     height: 27px;
