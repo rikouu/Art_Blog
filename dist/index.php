@@ -60,7 +60,7 @@
 	</section>
 
 	<!-- 正文区域start -->
-	<div class="continar">
+	<section class="continar">
 		<div id="mobil">
 			<!--移动端轮播start-->
 			<div class="swiper-container1">
@@ -147,7 +147,7 @@
 			</div>
 			<!-- PC正文3d导航end -->
 
-			<div class="continar-left-top">
+			<aside class="continar-left-top">
 				<?php
 				$args = array(
 					'post_password' => '',
@@ -174,7 +174,7 @@
 					</span>
 				<?php }
 			wp_reset_query(); ?>
-			</div>
+			</aside>
 			<!-- 博客介绍开始 -->
 			<aside class="blog">
 				<h3>博客介绍</h3>
@@ -231,7 +231,7 @@
 			if (have_posts()) : while (have_posts()) : the_post();
 					?>
 
-					<div class="text">
+					<article class="text">
 						<div class="img-left">
 							<a class="read-more" href="<?php the_permalink(); ?>" target="_blank">
 								<?php
@@ -305,7 +305,7 @@
 						</div>
 						<!-- <font class="s_bar"></font> -->
 						<!--竖条-->
-					</div>
+					</article>
 				<?php endwhile;
 				else : ?>
 				<?php header("Location: /404.html");
@@ -324,11 +324,11 @@
 		<!-- 左侧区域结束 -->
 
 		<!-- 右侧区域开始 -->
-		<div class="continar-right">
+		<section class="continar-right">
 			<?php get_sidebar($name); ?>
-		</div>
+		</section>
 		<!-- 右侧区域结束 -->
-	</div>
+	</section>
 	<!-- 正文区域end -->
 
 	<!-- 底部调用start -->

@@ -47,15 +47,15 @@
 					</form>
 				</div>
 			</div>
-		 </div>
+	</div>
 		 <!--移动端头部end-->
 
-		 <div class="header">
+		 <header class="header">
 		 		<div style="height:2px;background:url(<?php bloginfo('template_url'); ?>/images/header_bj.gif); animation: hue 20s infinite linear;overflow: hidden; width:100%;">
 				</div>
 		 		<div class="header-body">
 			 	    <div class="header-conter">
-						  <div class="nav">
+						  <nav class="nav">
 						      <a href="/" class="t-logo" id="Logo">
 											<img src="https://www.weipxiu.com/wp-content/themes/Art_Blog/images/weipxiu_logo_1.png">
 						      </a>
@@ -173,8 +173,8 @@
 								  </a>
 							  </div>
 							  <!-- 搜索按钮结束 -->
-						  </div>
-					</div>
+							</nav>
+						</div>
 				</div>
 				<!-- 搜索区域开始 -->
 				<div class="site-search active pc">
@@ -186,7 +186,7 @@
 					</div>
 				</div>
 				<!-- 搜索区域结束 -->
-		 </div>
+		 </header>
     <!-- 头部end -->
     <!-- 移动端渣渣侧边栏导航开始 -->
     <div class="os-herder btn">

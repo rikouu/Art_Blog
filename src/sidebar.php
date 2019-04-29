@@ -78,7 +78,7 @@
                     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="hot_title">
                         <?php the_title(); ?>
                     </a>
-                    <span class="hot_time"><?php the_time('Y年m月d日') ?></span>
+                    <time class="hot_time"><?php the_time('Y年m月d日') ?></time>
                 </div>
             </li>
             <?php } wp_reset_query();?>

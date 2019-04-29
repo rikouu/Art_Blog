@@ -1,11 +1,11 @@
 <!-- 底部区域开始 -->
-<div class="footer">
+<footer class="footer">
   <div class="container">
     <?php 
         echo get_option('weipxiu_options')['footer_copyright'];
       ?>
   </div>
-</div>
+</footer>
 <!-- 底部区域结束 -->
 
 <!-- 底部半透明遮盖层 -->
