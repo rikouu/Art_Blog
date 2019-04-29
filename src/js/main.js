@@ -124,36 +124,7 @@ $(function(){
         $(this).find("i").toggleClass("fa-remove");
     });
 
-    // 背景音乐start
-    var off = true;
-    $(".control").click(function () {
-        if (off) {
-            $("#music").get(0).play()
-        } else {
-            $("#music").get(0).pause()
-        }
-        $(this).toggleClass("hover");
-        off = !off
-    });
-
-    //判断当前页面是否存在背景音乐播放器，如果存在的话将声音大小调制到50%
-    if (document.getElementById("music")) {
-        document.getElementById("music").volume = 0.5;
-    }
-    // 背景音乐end
-
     $(".header").addClass("Top");
-
-    // 跳动的Logo start
-    $("#Logo").hover(function () {
-            $("#dj li").css("WebkitAnimation", "move 0.5s ease 0s 1 alternate none running");
-            $("#dj li").css("animation", "move 0.5s ease 0s 1 alternate none running");
-
-        },
-        function () {
-            $('#dj li').attr("style", "");
-        });
-    // 跳动的Logo end
 
     // 根据缓存状态初始化音乐
     if (localStorage.getItem("off_y") != 1) {

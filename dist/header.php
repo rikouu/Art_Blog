@@ -57,12 +57,6 @@
 			 	    <div class="header-conter">
 						  <div class="nav">
 						      <a href="/" class="t-logo" id="Logo">
-						          <!-- <span class="logo"></span>
-						          <ul id="dj">
-						          	  <li></li>
-						          	  <li></li>
-						          	  <li></li>
-											</ul> -->
 											<img src="https://www.weipxiu.com/wp-content/themes/Art_Blog/images/weipxiu_logo_1.png">
 						      </a>
 	                <div class="nav-left"></div>

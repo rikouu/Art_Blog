@@ -1290,7 +1290,6 @@ i {
     left: 0;
     top: -14px;
     overflow: hidden;
-    /* background: url(https://www.weipxiu.com/wp-content/themes/Art_Blog/images/weipxiu_logo_1.png) no-repeat center center; */
 }
 #Logo > img{
     width:100%;
@@ -1328,40 +1327,6 @@ i {
     background-position: -10px -2px;
     background-size: 350px 175px;
 }
-
-/*#Logo ul {
-    padding-top: 12px;
-}
-
-#Logo ul li {
-    float: left;
-    width: 32px;
-    height: 32px;
-}
-
-#Logo ul li:nth-child(1) {
-    background: url(images/logo_02.png);
-    -webkit-animation: move 0.2s 4.1s infinite alternate;
-    animation: move 0.2s 5.1s infinite alternate;
-}
-
-#Logo ul li:nth-child(2) {
-    background: url(images/logo_03.png);
-    -webkit-animation: move 0.2s 4.2s infinite alternate;
-    animation: move 0.2s 5.2s infinite alternate;
-}
-
-#Logo ul li:nth-child(3) {
-    background: url(images/logo_04.png);
-    -webkit-animation: move 0.2s 4.3s infinite alternate;
-    animation: move 0.2s 5.3s infinite alternate;
-}
-
-#Logo:hover #dj li {
-	-webkit-animation-play-state:paused;
-	animation-play-state:paused
-}
-*/
 
 .aircraft {
     position: fixed;
@@ -5986,11 +5951,6 @@ p.data-l span {
     font-size: 12px;
 }
 
-.mod-index__feature .img_info {
-    line-height: 16px;
-    margin-top: 5px;
-}
-
 .mod-index__feature .img_txt .img_title {
     font-size: 12px;
     padding-top: 8px;
@@ -6001,11 +5961,6 @@ p.data-l span {
 .mod-index__feature .img_title a,
 .mod-index__feature .img_title a:hover {
     color: #fff;
-}
-
-.mod-index__feature .img_info a,
-.mod-index__feature .img_info a:hover {
-    color: #b3b3b3;
 }
 
 .mod-index__feature .small_pic_wrap {

@@ -83,7 +83,6 @@
 							<div class="img_bg"></div>
 							<div class="img_txt">
 								<p class="img_title">有些话不一定要说出来 | 但一定要记录在某个地方</p>
-								<!--<p class="img_info">.</p>-->
 							</div>
 							<i class="light"></i>
 						</a>
@@ -384,10 +383,6 @@
 	</div>
 	首页弹窗end -->
 
-	<!-- 首页背景音乐开始 -->
-	<!-- <audio src="php bloginfo('template_url'); ?>/music/2595207170.mp3" loop="loop" preload="none" id="music"></audio>
-	<div class="control"></div> -->
-	<!-- 首页背景音乐结束 -->
 </body>
 
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/xfg_banner/banner-effect.js"></script>
