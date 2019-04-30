@@ -171,23 +171,23 @@ $(function () {
                 width: 1200,
                 height: 300,
                 images: [{
-                        url: 'https://lijun2017.oss-cn-shanghai.aliyuncs.com/pc_banner/banner-1.jpg',
+                        url: '/wp-content/themes/Art_Blog/images/banner-1.jpg',
                         link: '/?cat=29'
                     }, {
-                        url: 'https://lijun2017.oss-cn-shanghai.aliyuncs.com/pc_banner/banner-2.jpg',
+                        url: '/wp-content/themes/Art_Blog/images/banner-2.jpg',
                         link: '/'
                     }, {
-                        url: 'https://lijun2017.oss-cn-shanghai.aliyuncs.com/pc_banner/banner-3.jpg',
+                        url: '/wp-content/themes/Art_Blog/images/banner-3.jpg',
                         link: 'javascript:;'
                     }, {
-                        url: 'https://lijun2017.oss-cn-shanghai.aliyuncs.com/pc_banner/banner-4.jpg',
+                        url: '/wp-content/themes/Art_Blog/images/banner-4.jpg',
                         link: 'javascript:;'
                     }, {
-                        url: 'https://lijun2017.oss-cn-shanghai.aliyuncs.com/pc_banner/banner-5.jpg',
+                        url: '/wp-content/themes/Art_Blog/images/banner-5.jpg',
                         link: '/?cat=6'
                     },
                     {
-                        url: 'https://lijun2017.oss-cn-shanghai.aliyuncs.com/pc_banner/banner-6.jpg',
+                        url: '/wp-content/themes/Art_Blog/images/banner-6.jpg',
                         link: '/?p=1313'
                     }
                 ],
