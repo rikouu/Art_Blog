@@ -16,8 +16,8 @@
 		?>
 		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 	<?php
-}
-?>
+		}
+	?>
 	<meta http-equiv="x-dns-prefetch-control" content="on">
 	<link rel="dns-prefetch" href="<?php echo home_url(); ?>">
 	<title>
