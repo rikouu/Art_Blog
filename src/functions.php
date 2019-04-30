@@ -348,6 +348,7 @@ function wheatv_breadcrumbs() {
         echo '';
     }
 }
+
 //取消内容转义
 remove_filter('the_content', 'wptexturize');
 //取消摘要转义
@@ -362,7 +363,32 @@ add_filter('wp_default_editor', create_function('', 'return "html";'));
 //add_filter('pre_site_transient_update_themes',create_function('$a', "return null;")); // 关闭主题提示
 //remove_action('admin_init', '_maybe_update_core');  禁止 WordPress 检查更新
 //remove_action('admin_init', '_maybe_update_plugins'); // 禁止 WordPress 更新插件
-//remove_action('admin_init', '_maybe_update_themes');  // 禁止 WordPress 更新主题
+remove_action('admin_init', '_maybe_update_themes');  // 禁止 WordPress 更新主题
+
+//禁用REST API功能代码
+add_filter('rest_enabled', '__return_false');
+add_filter('rest_jsonp_enabled', '__return_false');
+
+//移除wp-json链接的代码
+remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
+remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
+
+// WordPress Emoji Delete
+remove_action( 'admin_print_scripts' , 'print_emoji_detection_script');
+remove_action( 'admin_print_styles' , 'print_emoji_styles');
+remove_action( 'wp_head' , 'print_emoji_detection_script', 7);
+remove_action( 'wp_print_styles' , 'print_emoji_styles');
+remove_filter( 'the_content_feed' , 'wp_staticize_emoji');
+remove_filter( 'comment_text_rss' , 'wp_staticize_emoji');
+remove_filter( 'wp_mail' , 'wp_staticize_emoji_for_email');
+add_filter( 'emoji_svg_url', create_function( '', 'return false;' ) );//禁用emoji预解析
+
+remove_action('wp_head', 'rsd_link'); //removes EditURI/RSD (Really Simple Discovery) link.
+remove_action('wp_head', 'wlwmanifest_link'); //removes wlwmanifest (Windows Live Writer) link.
+remove_action('wp_head', 'wp_generator'); //removes meta name generator.
+remove_action('wp_head', 'wp_shortlink_wp_head'); //removes shortlink.
+remove_action( 'wp_head', 'feed_links', 2 ); //removes feed links.
+remove_action('wp_head', 'feed_links_extra', 3 );  //removes comments feed.
 
 //恢复wordpress删除的友情链接功能
 add_filter('pre_option_link_manager_enabled', '__return_true');
