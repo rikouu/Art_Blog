@@ -36,13 +36,6 @@
     <link rel="stylesheet" type="text/css" media="screen and (min-width:1200px)" href="<?php bloginfo('template_url'); ?>/style.css">
     <link rel="stylesheet" href="/wp-content/plugins/codecolorer/codecolorer.css?ver=0.9.16">
     <style>
-        body {
-            -moz-user-select: text;
-            -webkit-user-select: text;
-            -ms-user-select: text;
-            user-select: text;
-            background: #f1f1ef;
-        }
         .continar-left {
             border-radius: 5px;
             background: #fff;
