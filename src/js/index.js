@@ -216,7 +216,7 @@ $(function () {
                     var popNotice = function () {
                         if (Notification.permission == "granted") {
                             var notification = new Notification("官方提示：", {
-                                body: '欢迎点击加入"WEB前端薪资吐槽群"互相学习、交流！',
+                                body: '欢迎点击加入"Vue.js3.0技术栈"互相学习、交流！',
                                 icon: '/wp-content/themes/Art_Blog/images/tishi.png'
                             })
 
@@ -244,7 +244,7 @@ $(function () {
             //set_desktop();
             setTimeout(function () {
                 set_desktop();
-            }, 5000);
+            }, 3000);
             // 桌面提醒功能
 
             // setTimeout(function(){
