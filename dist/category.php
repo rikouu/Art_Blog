@@ -64,12 +64,9 @@
 						<div class="entry-meta">
 							<a href="<?php echo home_url(); ?>">唯品秀</a>
 							<i class="space">•</i>
-							<a href="#">前端开发资讯</a>
+							<a href="javascript:;">前端开发资讯</a>
 							<i class="space">•</i>
 							<?php the_author(); ?>
-							<a href="#" class="comments-number">
-								<span></span>
-							</a>
 						</div>
 						<?php
 								if ( has_post_thumbnail() )
