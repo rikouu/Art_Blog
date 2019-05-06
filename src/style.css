@@ -1460,9 +1460,6 @@ i {
 .continar .rssbook>p {
     margin: 10px auto;
 }
-.continar .rssbook>p:last-of-type{
-    margin-top:-7px;
-}
 .continar .rssbook>p:empty{
     display: none;
 }
