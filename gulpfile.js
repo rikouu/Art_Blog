@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const clean = require('gulp-clean');//清空目录下资源
 const htmlmin = require('gulp-htmlmin');//压缩html
 const imagemin = require('gulp-imagemin'); //引入图片压缩模块
 const scriptmin = require('gulp-uglify'); //引入js压缩模块
@@ -8,7 +9,8 @@ const concat = require('gulp-concat'); //引入合并代码模块
 const babel = require('gulp-babel'); //引入ES6转ES5模块
 const autoprefixer = require('gulp-autoprefixer'); //增加浏览器前缀
 const rev = require('gulp-rev');//给静态文件资源添加hash值防缓存
-var preprocess = require("gulp-preprocess"); //区分html,js环境变量
+const preprocess = require("gulp-preprocess"); //区分html,js环境变量
+const runSequence = require('run-sequence'); //流程控制，控制任务执行顺序
 
 const browserSync = require('browser-sync'); //热更新模块
 
@@ -28,11 +30,22 @@ gulp.watch -- 观察文件是否发生改变
 执行任务 gulp + 任务名称 + 回车
 */
 
+//清空dist目录
+gulp.task("clean", function () {
+    console.log('清空/'+target+'目录下的资源')
+   return gulp.src(target+'/*', {
+        read: false
+    })
+     .pipe(clean({
+        force: true
+    }));
+})
+
 // 拷贝文件
 gulp.task("copyHtml", function () {
     //pipe后面对应的地址就是将前面路径文件拷贝复制到哪里去
     console.log('\n正在打包编译中，请稍后......................\n');
-    return gulp.src(["src/**", "!src/*.html", "!src/js/*", "!src/css/*"]).pipe(gulp.dest(target))
+    return gulp.src(["src/**", "!src/*.html", "!src/*.css", "!src/js/*", "!src/css/*"]).pipe(gulp.dest(target))
 });
 
 //压缩html
@@ -67,8 +80,24 @@ gulp.task("minCss", function () {
         .pipe(gulp_minify_css())
         .pipe(gulp.dest(target+"/css"))
 
+    //style.css压缩合
+    gulp.src("src/style.css")
+    .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+    }))
+    .pipe(gulp_minify_css())    
+    .pipe(gulp.dest(target))
+
     return gulp.src(["src/css/*.woff2", "src/css/*.ttf"]).pipe(gulp.dest(target+"/css"))
 });
+
+//style.css追加版本号
+gulp.task("themesVer", function () {
+    return gulp.src(["src/ver.css",target+"/style.css"])
+    .pipe(concat("style.css"))
+    .pipe(gulp.dest(target))
+})
 
 //图片压缩
 //安装模块 npm install --save-dev gulp-imagemin
@@ -178,17 +207,18 @@ gulp.task("jsConcat", function () {
 
 //监听文件是否发生改变
 gulp.task("Watch", function () {
-    gulp.watch(["src/**", "!src/*.html", "!src/js/*", "!src/css/*", "src/style.css"], ["copyHtml"]);
+    gulp.watch(["src/**", "!src/*.html", "!src/js/*", "!src/**.css"], ["copyHtml"]);
     gulp.watch(['src/*.html'], ["miniHtml"]);
-    gulp.watch("src/css/*.css", ["minCss"]);
+    gulp.watch(["src/**.css"], ["minCss"]);
+    gulp.watch([target+"/**.css"], ["themesVer"]);
     gulp.watch(["src/js/main.js","src/js/ajax_wordpress.js"], ["jsConcat"]);
 })
 
 
 //如果直接执行 gulp 那么就是运行任务名称为‘default’的任务,后面数组代表所需要执行的任务列表
 //"imageMin"不加入，否则实在太慢，图片压缩还是单独处理吧
-gulp.task('default', ["copyHtml", "miniHtml", "minCss", "jsConcat", "Watch"], function () {
-    setTimeout(()=>{
+gulp.task('default',function(){
+    runSequence("clean", "copyHtml", "miniHtml", "minCss", "themesVer", "jsConcat", "Watch",function(){
         console.log('\n恭喜你，编译打包已完成，所有文件在'+target+'文件夹！！！');
-    },1000)
+    })
 });

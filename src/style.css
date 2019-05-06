@@ -1,12 +1,3 @@
-/*
-Theme Name:Art_Blog
-ThemeURI:https://github.com/weipxiu/weipxiu
-Description:一款基于jquery2.1.4+js+H5/CSS3开发的wordpress主题，主题更新下载地址https://github.com/weipxiu/weipxiu
-Version:2.0.2
-Author:唯品秀前端技术博客
-AuthorURI:https://github.com/weipxiu
-Tags:web前端，移动端，响应式，HTML5，CSS3
-*/
 /* @font-face {
     font-display: swap;
     font-family: play;
@@ -17,7 +8,6 @@ Tags:web前端，移动端，响应式，HTML5，CSS3
     margin: 0;
     padding: 0;
     list-style: none;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     color: #666;
     text-decoration: none;
@@ -4564,7 +4554,6 @@ ul.post-categories li:first-child {
     text-align: center;
     background: url(images/QR_Code.png) center no-repeat;
     float: left;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -4579,7 +4568,6 @@ ul.post-categories li:first-child {
     text-align: center;
     background: url(images/QR_Code.png) center no-repeat;
     float: left;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -4594,7 +4582,6 @@ ul.post-categories li:first-child {
     position: absolute;
     top: 0;
     display: none;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
@@ -4625,7 +4612,6 @@ ul.post-categories li:first-child {
     display: inline-block;
     height: 38px;
     line-height: 38px;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     vertical-align: middle;
     outline: none;
@@ -4729,13 +4715,7 @@ ul.post-categories li:first-child {
     left: 0;
     right: 0;
     z-index: 2;
-    background: -webkit-gradient( linear, left top, left bottom, color-stop(0, hsla(0, 0%, 100%, 0)), color-stop(33%, hsla(0, 0%, 100%, 0.33)), color-stop(66%, hsla(0, 0%, 100%, 0.73)), color-stop(91%, #fff));
-    background: -webkit-linear-gradient( top, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0.33) 33%, hsla(0, 0%, 100%, 0.73) 66%, #fff 91%);
-    background: -webkit-linear-gradient( top, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0.73) 33%, hsla(0, 0%, 100%, 0.73) 66%, #fff 91%);
-    background: -webkit-gradient( linear, left top, left bottom, from(hsla(0, 0%, 100%, 0)), color-stop(33%, hsla(0, 0%, 100%, 0.73)), color-stop(66%, hsla(0, 0%, 100%, 0.73)), color-stop(91%, #fff));
-    background: -o-linear-gradient( top, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0.73) 33%, hsla(0, 0%, 100%, 0.73) 66%, #fff 91%);
-    background: linear-gradient( top, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0.73) 33%, hsla(0, 0%, 100%, 0.73) 66%, #fff 91%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
+    background: linear-gradient(hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 1));
 }
 
 /*banner动画start*/
@@ -5336,7 +5316,6 @@ Inherited from div.head_avatar_c .head_avatar_c {
     width: 200px;
     height: 500px;
     overflow: hidden;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left;
     position: relative;
@@ -5717,7 +5696,6 @@ code {
     background: -moz-linear-gradient(top, #fff, #f5f5f5);
     background-repeat: repeat-x;
     border: 1px solid #ddd;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-size: 12px;
     -webkit-border-top-left-radius: 3px;
