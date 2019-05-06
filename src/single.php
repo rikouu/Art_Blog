@@ -77,7 +77,7 @@
                             </span>
                             <span>
                             <i class="iconfont icon-zuozhe"></i>
-                                作者：<?php the_author(); ?>
+                                唯品秀
                             </span>
                             <span>
                                 <i class="iconfont icon-kanguo"></i>
