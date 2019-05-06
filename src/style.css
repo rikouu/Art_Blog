@@ -1560,7 +1560,6 @@ i {
     -moz-transition-duration: 0.5s;
     -webkit-transition-duration: 0.5s;
     -o-transition-duration: 0.5s;
-    border-radius: 2px;
 }
 
 .text .img-left img:hover {
@@ -4083,6 +4082,7 @@ ul.post-categories li:first-child {
     float: left;
     position: relative;
     overflow: hidden;
+    border-radius: 2px;
 }
 
 .img-left span {
@@ -5771,6 +5771,7 @@ p.data-l span {
     height: 65px;
     float: left;
     margin-left: 0;
+    border-radius: 2px;
 }
 
 .hot_rticles ul li .hot_text {
