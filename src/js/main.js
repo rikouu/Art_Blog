@@ -226,25 +226,16 @@ $(function(){
     var time = null;
     $(".nav ul.music-nav li").hover(function (event) {
         clearTimeout(time);
+        $(".nav ul.music-nav li .nav-min").css({
+            "opacity": "0",
+            "visibility": "hidden",
+            "top": "70px"
+        });
         $(this).find('.nav-min').css({
             "opacity": "1",
             "visibility": "visible",
             "top": "49px"
-        }).parent().siblings('li').find('.nav-min').css({
-            "opacity": "0",
-            "visibility": "hidden",
-            "top": "70px"
-        });
-        // $(".header-conter .nav-min").eq(0).css({
-        //     "opacity": "1",
-        //     "visibility": "visible",
-        //     "top": "49px"
-        // });
-        // $(".header-conter .nav-min").eq(1).css({
-        //     "opacity": "0",
-        //     "visibility": "hidden",
-        //     "top": "70px"
-        // });
+        })
         event.stopPropagation();
     }, function () {
         clearTimeout(time);
@@ -254,31 +245,8 @@ $(function(){
                 "visibility": "hidden",
                 "top": "70px"
             });
-        }, 0);
+        },300);
 
-    });
-    $(".works").hover(function (event) {
-        clearTimeout(time);
-        $(".header-conter .nav-min").eq(1).css({
-            "opacity": "1",
-            "visibility": "visible",
-            "top": "49px"
-        });
-        $(".header-conter .nav-min").eq(0).css({
-            "opacity": "0",
-            "visibility": "hidden",
-            "top": "70px"
-        });
-        event.stopPropagation();
-    }, function () {
-        clearTimeout(time);
-        time = setTimeout(function () {
-            $(".header-conter .nav-min").css({
-                "opacity": "0",
-                "visibility": "hidden",
-                "top": "70px"
-            });
-        }, 0);
     });
     //PC二级菜单end
 

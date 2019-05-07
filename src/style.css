@@ -1055,6 +1055,7 @@ i {
     border-bottom: 1px solid #eee;
     color: #444;
     transform: rotateX(0deg)!important;
+    margin-top:0!important;
 }
 
 .header .nav-min a:last-child {
