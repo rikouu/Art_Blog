@@ -81,14 +81,25 @@
 									  <audio src="" autoplay="autoplay"></audio>
 									  <p></p>
 									</li>
-									<li class="front 
+									<li class=" 
 									  <?php if ( in_category(array('3', '5', '14', '22','29')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="javascript:void(0);">
 										  <span>前端开发<i class="iconfont icon-jiantou"></i></span>
 										  <span>前端开发<i class="iconfont icon-jiantou"></i></span>
 									  </a>
 									  <audio src="" autoplay="autoplay"></audio>
-									  <p></p>
+										<p></p>
+										<div class="nav-min">
+												<a href="/category/frontend/htmlcss" class="<?php if ( in_category('3') && is_category('3') ) { echo 'action'; } ?>">HTML+CSS3</a>
+												<a href="/category/frontend/javascript"class="<?php if ( in_category('5') && is_category('5') ) { echo 'action'; } ?>">Javascript</a>
+												<a href="/category/frontend/js-frame"class="<?php if ( in_category('14') && is_category('14') ) { echo 'action'; } ?>">Js前端框架</a>
+												<a href="/category/frontend/node-js"class="<?php if ( in_category('22') && is_category('22') ) { echo 'action'; } ?>">Node.js基础</a>
+												<a href="/category/frontend/holdall"class="<?php if ( in_category('29') && is_category('29') ) { echo 'action'; } ?>">前端工具箱</a>
+												<!-- <a href="/?cat=348">授人以渔</a> -->
+												<a href="http://v.laod.cn/" target="_blank">
+													Vip视频解析
+												</a>
+										</div>
 									</li>
 									<li class="<?php if ( (is_category('1') || in_category('1')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="/category/timemachine">
@@ -99,13 +110,28 @@
 									  <!-- <img src="<?php bloginfo('template_url'); ?>/images/new.png" alt="" class="new"> -->
 									  <p></p>
 									</li>
-									<li class="works <?php if ( (is_category('-1') || in_category('-1')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
+									<li class="<?php if ( (is_category('-1') || in_category('-1')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="javascript:void(0);">
 										  <span>作品欣赏<i class="iconfont icon-jiantou"></i></span>
 										  <span>作品欣赏<i class="iconfont icon-jiantou"></i></span>
 									  </a>
 									  <audio src="" autoplay="autoplay"></audio>
-									  <p></p>
+										<p></p>
+										<div class="nav-min">
+											<a href="/works/grjl/index.html" target="_blank">炫酷个人简历</a>
+											<a href="/works/shangcheng/index.html" target="_blank">节日礼品商城</a>
+											<a href="/works/h5-7_vip/index.html" target="_blank">H5响应式</a>
+											<a href="/works/yunquna/index.html" target="_blank">运去哪官网</a>
+											<a href="http://www.songhengnet.com" target="_blank">嵩恒网络官网</a>
+											<!-- <a href="/works/beautiful/index.html" target="_blank">美丽说-首页</a> -->
+											<a href="/works/weiyun/index.html" target="_blank">微云桌面应用</a>
+											<!-- <a href="/works/hnlyw/index.html" target="_blank">湖南海外旅游网</a> -->
+											<!-- <a href="/works/music/index.html" target="_blank">音乐播放器</a> -->
+											<a href="/works/caiquan/index.html" target="_blank">游戏-猜拳</a>
+											<a href="/works/feiji/index.html" target="_blank">游戏-打飞机</a>
+											<a href="https://github.com/weipxiu" target="_blank">更多作品案例</a>
+											<!-- <a href="/works/txz/index.html" target="_blank">游戏-推箱子</a> -->
+										</div>
 									</li>
 									<li class="<?php if ( in_category('13') && is_category('13') ) { echo 'action'; } ?>">
 									  <a href="/category/jqzy">
@@ -140,32 +166,6 @@
 									  	<i></i>
 								    </li>
 							  </ul>
-							  <div class="nav-min">
-								  	<a href="/category/frontend/htmlcss" class="<?php if ( in_category('3') && is_category('3') ) { echo 'action'; } ?>">HTML+CSS3</a>
-								  	<a href="/category/frontend/javascript"class="<?php if ( in_category('5') && is_category('5') ) { echo 'action'; } ?>">Javascript</a>
-										<a href="/category/frontend/js-frame"class="<?php if ( in_category('14') && is_category('14') ) { echo 'action'; } ?>">Js前端框架</a>
-										<a href="/category/frontend/node-js"class="<?php if ( in_category('22') && is_category('22') ) { echo 'action'; } ?>">Node.js基础</a>
-										<a href="/category/frontend/holdall"class="<?php if ( in_category('29') && is_category('29') ) { echo 'action'; } ?>">前端工具箱</a>
-										<!-- <a href="/?cat=348">授人以渔</a> -->
-										<a href="http://v.laod.cn/" target="_blank">
-											Vip视频解析
-										</a>
-							  </div>
-							  <div class="nav-min nav-min-1">
-									<a href="/works/grjl/index.html" target="_blank">炫酷个人简历</a>
-									<a href="/works/shangcheng/index.html" target="_blank">节日礼品商城</a>
-							    <a href="/works/h5-7_vip/index.html" target="_blank">H5响应式</a>
-									<a href="/works/yunquna/index.html" target="_blank">运去哪官网</a>
-									<a href="http://www.songhengnet.com" target="_blank">嵩恒网络官网</a>
-								  <!-- <a href="/works/beautiful/index.html" target="_blank">美丽说-首页</a> -->
-									<a href="/works/weiyun/index.html" target="_blank">微云桌面应用</a>
-								  <!-- <a href="/works/hnlyw/index.html" target="_blank">湖南海外旅游网</a> -->
-								  <!-- <a href="/works/music/index.html" target="_blank">音乐播放器</a> -->
-								  <a href="/works/caiquan/index.html" target="_blank">游戏-猜拳</a>
-								  <a href="/works/feiji/index.html" target="_blank">游戏-打飞机</a>
-								  <a href="https://github.com/weipxiu" target="_blank">更多作品案例</a>
-								  <!-- <a href="/works/txz/index.html" target="_blank">游戏-推箱子</a> -->
-							  </div>
 							  <!-- 搜索按钮开始 -->
 							  <div class="navto-search">
 								  <a href="javascript:;" class="search-show active">

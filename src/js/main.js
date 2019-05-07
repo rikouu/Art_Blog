@@ -224,18 +224,27 @@ $(function(){
 
     //PC二级菜单start
     var time = null;
-    $(".front").hover(function (event) {
+    $(".nav ul.music-nav li").hover(function (event) {
         clearTimeout(time);
-        $(".header-conter .nav-min").eq(0).css({
+        $(this).find('.nav-min').css({
             "opacity": "1",
             "visibility": "visible",
             "top": "49px"
-        });
-        $(".header-conter .nav-min").eq(1).css({
+        }).parent().siblings('li').find('.nav-min').css({
             "opacity": "0",
             "visibility": "hidden",
             "top": "70px"
         });
+        // $(".header-conter .nav-min").eq(0).css({
+        //     "opacity": "1",
+        //     "visibility": "visible",
+        //     "top": "49px"
+        // });
+        // $(".header-conter .nav-min").eq(1).css({
+        //     "opacity": "0",
+        //     "visibility": "hidden",
+        //     "top": "70px"
+        // });
         event.stopPropagation();
     }, function () {
         clearTimeout(time);
