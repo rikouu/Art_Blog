@@ -883,7 +883,8 @@ i {
 
 .nav .nav-min {
     position: absolute;
-    left: 0;
+    width: 100px;
+    left: calc(50% - 50px);
     top: 70px;
     z-index: 3;
     -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.03);
