@@ -3,7 +3,8 @@
   <div class="container">
     <?php 
         echo get_option('weipxiu_options')['footer_copyright'];
-      ?>
+    ?>本站主题由 <a href="https://www.weipxiu.com/" class="highlight">WEIPXIU.COM</a>
+    提供 <a href="https://github.com/weipxiu/Art_Blog" class="highlight">主题源码</a></p>
   </div>
 </footer>
 <!-- 底部区域结束 -->

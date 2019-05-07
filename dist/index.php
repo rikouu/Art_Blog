@@ -79,7 +79,7 @@
 				<div class="img_list_6pic ui-clearfix">
 					<div class="img_box">
 						<a href="/1212.html" target="_blank">
-							<img src="<?php bloginfo('template_url'); ?>/images/01.503c5483.jpg" width="280" height="180" alt="<?php echo get_bloginfo('name'); ?>" class="ui-d-b">
+							<img src="<?php bloginfo('template_url'); ?>/images/record.jpg" width="280" height="180" alt="<?php echo get_bloginfo('name'); ?>" class="ui-d-b">
 							<div class="img_bg"></div>
 							<div class="img_txt">
 								<p class="img_title">有些话不一定要说出来 | 但一定要记录在某个地方</p>
@@ -92,56 +92,56 @@
 							<h3 class="img_txt_title">404</h3>
 							<p class="img_p">路<br>在何方</p>
 						</div>
-						<img class="carousel_small_pic" width="110" height="85" alt="<?php echo get_bloginfo('name'); ?>" src="<?php bloginfo('template_url'); ?>/images/02.1999dad7.jpg">
+						<img class="carousel_small_pic" width="110" height="85" alt="<?php echo get_bloginfo('name'); ?>" src="<?php bloginfo('template_url'); ?>/images/404.jpg">
 					</a>
 					<a href="/817.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
 						<div class="carousel_small_str txt_bg02">
 							<h3 class="img_txt_title">绘画板</h3>
 							<p class="img_p">描绘<br>在故事里的风景</p>
 						</div>
-						<img class="carousel_small_pic" width="110" height="85" alt="<?php echo get_bloginfo('name'); ?>" src="<?php bloginfo('template_url'); ?>/images/03.79b87140.jpg">
+						<img class="carousel_small_pic" width="110" height="85" alt="<?php echo get_bloginfo('name'); ?>" src="<?php bloginfo('template_url'); ?>/images/painting.jpg">
 					</a>
 					<a href="/802.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_long word_display" target="_blank">
 						<div class="carousel_small_str txt_bg03">
 							<h3 class="img_txt_title">千里共良宵</h3>
 							<p class="img_p">岁月<br>在电波中流淌</p>
 						</div>
-						<img class="carousel_small_pic" src="<?php bloginfo('template_url'); ?>/images/04.106fc8c0.jpg" width="160" height="85" alt="<?php echo get_bloginfo('name'); ?>">
+						<img class="carousel_small_pic" src="<?php bloginfo('template_url'); ?>/images/happy_night.jpg" width="160" height="85" alt="<?php echo get_bloginfo('name'); ?>">
 					</a>
 					<a href="/2075.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display" target="_blank">
 						<div class="carousel_small_str txt_bg02">
 							<h3 class="img_txt_title">忙碌</h3>
 							<p class="img_p">在喧闹<br>又孤独的城市</p>
 						</div>
-						<img class="carousel_small_pic" width="110" height="85" src="<?php bloginfo('template_url'); ?>/images/05.0357cd0d.jpg" alt="<?php echo get_bloginfo('name'); ?>">
+						<img class="carousel_small_pic" width="110" height="85" src="<?php bloginfo('template_url'); ?>/images/be_busy.jpg" alt="<?php echo get_bloginfo('name'); ?>">
 					</a>
 					<a href="/category/timemachine" target="_blank" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_long">
 						<div class="carousel_small_str txt_bg04">
 							<h3 class="img_txt_title">MV</h3>
 							<p class="img_p">时光<br>在画面里穿梭</p>
 						</div>
-						<img class="carousel_small_pic" src="<?php bloginfo('template_url'); ?>/images/06.50599bb3.jpg" width="160" height="85" alt="<?php echo get_bloginfo('name'); ?>">
+						<img class="carousel_small_pic" src="<?php bloginfo('template_url'); ?>/images/time.jpg" width="160" height="85" alt="<?php echo get_bloginfo('name'); ?>">
 					</a>
 					<a href="javascript:;" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display" target="_blank">
 						<div class="carousel_small_str txt_bg05">
 							<h3 class="img_txt_title">Music</h3>
 							<p class="img_p">心情<br>在音乐中释放</p>
 						</div>
-						<img class="carousel_small_pic" width="110" height="85" src="<?php bloginfo('template_url'); ?>/images/07.2f43931e.jpg" alt="<?php echo get_bloginfo('name'); ?>">
+						<img class="carousel_small_pic" width="110" height="85" src="<?php bloginfo('template_url'); ?>/images/mood_music.jpg" alt="<?php echo get_bloginfo('name'); ?>">
 					</a>
 					<a href="/913.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
 						<div class="carousel_small_str txt_bg06">
 							<h3 class="img_txt_title">情人节</h3>
 							<p class="img_p">一个单身<br>程序员的史诗</p>
 						</div>
-						<img class="carousel_small_pic" width="110" height="85" src="<?php bloginfo('template_url'); ?>/images/08.daacfa0c.jpg" alt="<?php echo get_bloginfo('name'); ?>">
+						<img class="carousel_small_pic" width="110" height="85" src="<?php bloginfo('template_url'); ?>/images/valentine_day.jpg" alt="<?php echo get_bloginfo('name'); ?>">
 					</a>
 					<a href="javascript:;" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
 						<div class="carousel_small_str txt_bg06">
 							<h3 class="img_txt_title">直男癌</h3>
 							<p class="img_p">花花世界<br>谁在鄙视直男癌</p>
 						</div>
-						<img class="carousel_small_pic" width="110" height="85" src="<?php bloginfo('template_url'); ?>/images/09.1f0f38a3.jpg" alt="<?php echo get_bloginfo('name'); ?>">
+						<img class="carousel_small_pic" width="110" height="85" src="<?php bloginfo('template_url'); ?>/images/straight_man.jpg" alt="<?php echo get_bloginfo('name'); ?>">
 					</a>
 				</div>
 			</div>
@@ -237,7 +237,7 @@
 								if (has_post_thumbnail())
 									the_post_thumbnail();
 								else
-									echo '<img src="/wp-content/uploads/2017/04/default-220x150.png" width="220" height="140" alt="" />';
+									echo '<img src="./images/default.png" width="220" height="140" alt="" />';
 								?>
 							</a>
 						</div>

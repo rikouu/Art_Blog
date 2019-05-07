@@ -101,7 +101,7 @@
                                 if ( has_post_thumbnail() )
                                     the_post_thumbnail();
                                 else
-                                    echo '<img src="/wp-content/uploads/2017/04/default-220x150.png" width="220" height="140" alt="" />';
+                                    echo '<img src="./images/default.png" width="220" height="140" alt="" />';
                             ?>
                         </a>
                     </div>
