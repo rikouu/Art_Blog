@@ -237,7 +237,7 @@
 								if (has_post_thumbnail())
 									the_post_thumbnail();
 								else
-									echo '<img src="./images/default.png" width="220" height="140" alt="" />';
+									echo '<img src="/wp-content/themes/Art_Blog/images/default.png" width="220" height="140" alt="" />';
 								?>
 							</a>
 						</div>
