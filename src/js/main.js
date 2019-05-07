@@ -162,11 +162,10 @@ $(function(){
     $(".nav ul.music-nav li:not(.mod-header_music-icon)").hover(function (event) {
             $(this).parents(".header").css("z-index", "11"); //默认下方轮播层级高于头部
             $index = $(this).index();
-            var deta = $(this).attr("detaName");
             musicObj = $(".nav ul.music-nav li:not(.mod-header_music-icon)").eq($index).find('audio');
             if (localStorage.getItem("off_y") == 1) {
                 $(this).addClass("active");
-                musicObj.get(0).src = "/wp-content/themes/Art_Blog/music/" + deta + ".mp3";
+                musicObj.get(0).src = "/wp-content/themes/Art_Blog/music/nav_" + parseInt($index+1) + ".mp3";
             } else {
                 musicObj.get(0).src = "";
             }

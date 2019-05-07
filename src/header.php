@@ -65,7 +65,7 @@
 								  <p>HTML5、CSS3、Javascript</p>
 							  </div>
 							  <ul class="music-nav">
-							  		<li detaName="do" class="<?php if ( (is_category('9') || in_category('9')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
+							  		<li class="<?php if ( (is_category('9') || in_category('9')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="/">
 										  <span>首页</span>
 										  <span>首页</span>
@@ -73,7 +73,7 @@
 									  <audio src="" autoplay="autoplay"></audio>
 									  <p></p>
 									</li>
-									<li detaName="re" class="<?php if ( (is_category('2') || in_category('2')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
+									<li class="<?php if ( (is_category('2') || in_category('2')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="/category/mood">
 										  <span>心情小镇</span>
 										  <span>心情小镇</span>
@@ -81,7 +81,7 @@
 									  <audio src="" autoplay="autoplay"></audio>
 									  <p></p>
 									</li>
-									<li detaName="mi" class="front 
+									<li class="front 
 									  <?php if ( in_category(array('3', '5', '14', '22','29')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="javascript:void(0);">
 										  <span>前端开发<i class="iconfont icon-jiantou"></i></span>
@@ -90,7 +90,7 @@
 									  <audio src="" autoplay="autoplay"></audio>
 									  <p></p>
 									</li>
-									<li detaName="fa" class="<?php if ( (is_category('1') || in_category('1')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
+									<li class="<?php if ( (is_category('1') || in_category('1')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="/category/timemachine">
 										  <span>时光机</span>
 										  <span>时光机</span>
@@ -99,7 +99,7 @@
 									  <!-- <img src="<?php bloginfo('template_url'); ?>/images/new.png" alt="" class="new"> -->
 									  <p></p>
 									</li>
-									<li detaName="sol" class="works <?php if ( (is_category('-1') || in_category('-1')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
+									<li class="works <?php if ( (is_category('-1') || in_category('-1')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="javascript:void(0);">
 										  <span>作品欣赏<i class="iconfont icon-jiantou"></i></span>
 										  <span>作品欣赏<i class="iconfont icon-jiantou"></i></span>
@@ -107,7 +107,7 @@
 									  <audio src="" autoplay="autoplay"></audio>
 									  <p></p>
 									</li>
-									<li detaName="la" class="<?php if ( in_category('13') && is_category('13') ) { echo 'action'; } ?>">
+									<li class="<?php if ( in_category('13') && is_category('13') ) { echo 'action'; } ?>">
 									  <a href="/category/jqzy">
 										  <span>别具匠心</span>
 										  <span>别具匠心</span>
@@ -115,7 +115,7 @@
 									  <audio src="" autoplay="autoplay"></audio>
 									  <p></p>
 									</li>
-									<li detaName="si" class="<?php if ( (is_category('8') || in_category('8')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
+									<li class="<?php if ( (is_category('8') || in_category('8')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="/category/message">
 										  <span>碎言碎语</span>
 										  <span>碎言碎语</span>
@@ -123,7 +123,7 @@
 									  <audio src="" autoplay="autoplay"></audio>
 									  <p></p>
 									</li>
-									<li detaName="dd" class="<?php if ( (is_category('10') || in_category('10')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
+									<li class="<?php if ( (is_category('10') || in_category('10')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
 									  <a href="/category/about">
 										  <span>关于博客</span>
 										  <span>关于博客</span>
@@ -131,7 +131,7 @@
 									  <audio src=""  autoplay="autoplay"></audio>
 									  <p></p>
 									</li>
-									<li detaName="ddd" class="js_piano_nav_icon mod-header_music-icon" title="钢琴节奏">
+									<li class="js_piano_nav_icon mod-header_music-icon" title="钢琴节奏">
 									<audio src=""  autoplay="autoplay"></audio>
 									  	<i></i>
 									  	<i></i>
