@@ -68,7 +68,7 @@ gulp.task('miniHtml', () => {
     .pipe(gulp.dest(target));
 });
 
-// 转行压缩css
+// 压缩css
 gulp.task("minCss", function () {
     gulp.src("src/css/*.css")
         //.pipe(rev())//添加hash值防缓存
@@ -80,7 +80,7 @@ gulp.task("minCss", function () {
         .pipe(gulp_minify_css())
         .pipe(gulp.dest(target+"/css"))
 
-    //style.css压缩合
+    //style.css压缩
     gulp.src("src/style.css")
     .pipe(autoprefixer({
         browsers: ['last 2 versions'],
@@ -92,7 +92,7 @@ gulp.task("minCss", function () {
     return gulp.src(["src/css/*.woff2", "src/css/*.ttf"]).pipe(gulp.dest(target+"/css"))
 });
 
-//style.css追加版本号
+//压缩完的style.css追加版本号
 gulp.task("themesVer", function () {
     return gulp.src(["src/ver.css",target+"/style.css"])
     .pipe(concat("style.css"))
