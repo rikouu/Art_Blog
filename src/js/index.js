@@ -268,7 +268,7 @@ $(function () {
             // console.log---start
             if (window.console && window.console.log) {
                 setTimeout(function () {
-                    console.log("\n %c 当前主题由唯品秀前端技术博客提供 %c  © Jun Li  "+domain_name+" \n",
+                    console.log("\n %c 当前主题由唯品秀前端技术博客提供 %c  © Jun Li  https://www.weipxiu.com  \n",
                         "color:#FFFFFB;background:#1890ff;padding:5px 0;border-radius:.5rem 0 0 .5rem;",
                         "color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;"
                     );
