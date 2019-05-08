@@ -125,7 +125,7 @@
                                 if ( has_post_thumbnail() )
                                     the_post_thumbnail();
                                 else
-                                    echo '<img src="/wp-content/uploads/2019/03/jsonp.png" alt="" />';
+                                    echo '<img src="/wp-content/themes/Art_Blog/images/default.png" alt="" />';
                         ?>
                         <h3>
                             <?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200,"..."); ?>
