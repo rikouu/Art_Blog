@@ -230,7 +230,7 @@
     currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天' +
       currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4] +
       '秒';
-    document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+    $('#htmer_time').html(currentTimeHtml)
   }
   setInterval(setTime, 1000);
   // 网站运行时间end
