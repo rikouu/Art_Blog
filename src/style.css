@@ -3588,12 +3588,12 @@ span.extend {
 }
 
 .wp-pagenavi a:hover,
-.wp-pagenavi span.current:hover {
+.wp-pagenavi a.current:hover {
     color: #fff;
     background-color: #1890ff;
 }
 
-.wp-pagenavi span.current {
+.wp-pagenavi a.current {
     background-color: #1890ff;
     text-decoration: none;
     padding: 6px 10px;

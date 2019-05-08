@@ -171,8 +171,7 @@
 
                 <?php endif; ?>
 
-                <?php wp_pagenavi(); ?>
-                <!--分页插件调用-->
+                <?php lingfeng_pagenavi();?><!-- 分页调用 -->
         </div>
         <!-- 左侧区域结束 -->
     </div>

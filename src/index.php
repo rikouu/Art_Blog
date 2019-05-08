@@ -303,12 +303,7 @@
 							<?php _e('404'); ?>
 						</h2> -->
 				<?php endif; ?>
-				<?php wp_pagenavi(); ?>
-				<!-- <div>
-						不借助插件进行分页，懒得写样式了，可以根据需要自己整整
-						?php if (function_exists('pagenavi')) { pagenavi(); } ?
-				</div> -->
-				<!--分页插件调用-->
+				<?php lingfeng_pagenavi();?><!-- 分页调用 -->
 		</div>
 		<!-- 左侧区域结束 -->
 
