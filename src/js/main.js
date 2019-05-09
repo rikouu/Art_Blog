@@ -375,7 +375,6 @@ $(function(){
         $(".mouseover ul li").eq(i).find("em").html(i + 1)
     }
     $(".text:lt(3) .new-icon").show();
-    $(".clearfix img").hide();
 
     // 移动端二级菜单导航start
     $("ul.slide-left li").on("touchstart", function (e) {

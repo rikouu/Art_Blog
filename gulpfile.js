@@ -142,7 +142,7 @@ gulp.task("imageMin", function () {
 //安装 npm i gulp-concat --save-dev
 gulp.task("jsConcat", function () {
     //公共
-     gulp.src(["src/js/main.js","src/js/ajax_wordpress.js"])
+     gulp.src(["src/js/rem.js","src/js/main.js","src/js/ajax_wordpress.js"])
         .pipe(babel({
             presets: ['@babel/env']
         }))

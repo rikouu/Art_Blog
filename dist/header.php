@@ -129,7 +129,6 @@
 											<!-- <a href="/works/music/index.html" target="_blank">音乐播放器</a> -->
 											<a href="/works/caiquan/index.html" target="_blank">游戏-猜拳</a>
 											<a href="/works/feiji/index.html" target="_blank">游戏-打飞机</a>
-											<a href="https://github.com/weipxiu" target="_blank">更多作品案例</a>
 											<!-- <a href="/works/txz/index.html" target="_blank">游戏-推箱子</a> -->
 										</div>
 									</li>
