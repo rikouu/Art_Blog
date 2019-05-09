@@ -102,7 +102,7 @@
 										</div>
 									</li>
 									<li class="<?php if ( (is_category('1') || in_category('1')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-									  <a href="/category/timemachine">
+									  <a href="/category/time">
 										  <span>时光机</span>
 										  <span>时光机</span>
 									  </a>

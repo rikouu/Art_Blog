@@ -9,16 +9,18 @@
 - 本项目采用gulp自动化构建，可通过git克隆到本地，然后运行`npm install`安装依赖，接着运行npm run build即可压缩打包整个项目
   到`dist`文件夹，如不需要打包压缩代码等一系列工具功能可直接下载即可，然后找到项目文件的dist目录，里面即是已打包好的主题源码
 
+- 运行环境条件：wordPress版本≥4.6，≥5.3服务器php版本≤php7.3，如果出现报错，请切换php版本试试，[阿里云虚拟主机升级php7.x报错处理](https://www.weipxiu.com/2909.html)
+
 - 将dist文件名命名为`Art_Blog`,然后将整个文件夹上传到线上：`/htdocs/wp-content/themes/`目录下，然后启用主题
 
-- 运行环境条件：wordPress版本≥4.6，≥5.3服务器php版本≤php7.3，如果出现报错，请切换php试试，[阿里云虚拟主机升级php7.x报错处理](https://www.weipxiu.com/2909.html)
-
-- 在wordpress后台-分类目录，新建后将鼠标放在分类名称上，在浏览器左下角出现链接，其中有个`tag_ID=xx`，将这个id对应的数值设置
-  替换给主题文件里的`category-x的x`，在header.php文件中找到导航菜单`is_category`方法，修改对应的id值即可在切换导航时候高亮
-
-- header.php文件中导航链接/category/xxx，结尾'xxx'字段就是你新建分类时候设置的别名，例如：/category/about，这样就可以跳转了
-
 - 开始启用唯品秀Art_Blog主题，然后到后台>外观>唯品秀主题设置，设置站点域名地址（必须的）、公告、底部等信息
+
+- 在wordpress后台-分类目录并设置分类别名，将这个别名设置替换给主题文件里的`category-x的x`，这样就知道菜单跳转到时候渲染哪个模板；
+  然后将鼠标放在分类名称上，在浏览器左下角出现链接，其中有个`tag_ID=xx`，在header.php文件中找到导航菜单`is_category`方法，修改
+  对应的id值即可在切换导航时候高亮
+
+- header.php文件中导航链接`/category/xxx`，结尾`xxx`字段就是你新建分类时候设置的别名，例如：你设置了`关于博客`的分类，别名设置
+  为`about`，那么跳转a标签链接应该是`/category/about`，其中`/category/`是固定的
 
 - 文档枯燥还是不知道说的啥？[教程视频链接](https://pan.baidu.com/s/19wibJjeagvLRFOuUV2GvEQ)，`密码：6u6c`
 
