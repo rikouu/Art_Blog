@@ -5,7 +5,7 @@
   font-family: 'Microsoft YaHei';
   list-style: none;
   box-sizing: border-box;
-  color: #444;
+  color: #555;
   font-size: 0.28rem;
   text-decoration: none;
   /*touch-callout: none;长时间按住页面出现闪退,
@@ -739,41 +739,43 @@ img {
 .text {
   background: #fff;
   height: auto;
-  padding: 0 0.26rem;
-  margin-bottom: 10px;
   overflow: hidden;
   position: relative;
   transition: all 0.35s;
-  width: calc((100% - 10px) / 2);
+  width: calc(25% - 20px);
   float: left;
-}
-.text:nth-of-type(2n + 1) {
-  margin-left: 10px;
+  margin: 10px;
 }
 .text .img-left img {
-  width: 4.5rem;
-  height: 3rem;
+  width: 100%;
+  height: 1.75rem;
   border: 0;
   float: none;
   display: block;
-  margin: 0.28rem auto 0;
+  margin: 0 auto;
 }
 .text .text_right {
   float: none;
   width: 100%;
-}
-.text .text_right > h2 {
-  word-wrap: break-word;
-  display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 ul.post-categories li {
   display: none;
 }
 ul.post-categories li:first-child {
   display: block;
+}
+.text .text_right>h2 {
+  /* word-wrap: break-word; */
+  display: block;
+  /* overflow: hidden; */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  height: 0.9rem;
+  word-break: break-all;
+  word-wrap: break-word;
+  padding: 5px;
 }
 .text_right h2 span:nth-child(1) {
   color: #fff;
@@ -784,6 +786,7 @@ ul.post-categories li:first-child {
   position: relative;
   top: 0;
   margin-right: 6px;
+  display: none;
 }
 .text_right h2 span:nth-child(1) i {
   position: absolute;
@@ -802,17 +805,15 @@ ul.post-categories li:first-child {
   color: #fff;
   font-size: 0.24rem;
   font-weight: normal;
-  display: block;
+  display: none;
 }
-.text h2 {
-  margin-bottom: 10px;
-  padding-top: 14px;
+article.text:nth-of-type(1) {
+  display: none;
 }
 .text h2 a {
-  font-size: 0.32rem;
+  font-size: 0.24rem;
   font-weight: normal;
   color: #444;
-  transition: all 0.35s;
 }
 .text em {
   position: absolute;
@@ -885,17 +886,10 @@ ul.post-categories li:first-child {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-}
-.entry-meta,
-.continar-left p.l {
   display: none;
 }
-.text .img-left img {
-  display: block;
-  margin: 0 auto;
-}
-.text .img-left {
-  padding-top: 0.2rem;
+.entry-meta {
+  display: none;
 }
 /*右侧区域开始*/
 .continar-right {
@@ -1016,7 +1010,7 @@ p.clearfix a {
 .daily-list > p {
   color: #444;
   font-weight: normal;
-  font-size: 0.28rem;
+  font-size: 0.26rem;
   border-bottom: 1px solid #eee;
   padding-bottom: 0.2rem;
   margin-bottom: 0.2rem;
@@ -1152,7 +1146,7 @@ div.com-art ul li {
   width: 31.3333%;
   margin: 0 1% 1%;
   padding: 0 8px;
-  font-size: 0.28rem;
+  font-size: 0.26rem;
   height: 0.6rem;
   line-height: 0.6rem;
   overflow: hidden;
@@ -1440,7 +1434,7 @@ div.com-art ul li {
   font-size: 12px;
 }
 .continar-left p.l {
-  font-size: 0.28rem;
+  font-size: 0.26rem;
   margin: 0 auto;
   height: 0.5rem;
   overflow: hidden;
@@ -1453,7 +1447,9 @@ div.com-art ul li {
   text-align: center;
   display: block;
   float: left;
-  line-height: 0.42rem;
+  line-height: auto;
+  display: normal;
+  padding-bottom: 0.1rem;
 }
 .continar-left p.l > span a {
   font-size: 0.26rem;
@@ -1464,8 +1460,10 @@ div.com-art ul li {
   font-size: 0.26rem;
 }
 .continar-left p.l > span:nth-of-type(1) {
-  width: 40%;
+  width: 100%;
   text-align: left;
+  font-size: 12px;
+  text-indent: 5px;
 }
 .continar-left p.l > span:nth-of-type(2) {
   width: 27%;
@@ -1527,6 +1525,7 @@ div.key-w a:nth-of-type(3):hover {
 .continar-left p.l span i {
   color: #666;
   font-size: 0.26rem;
+  display: none;
 }
 .continar-left p a {
   padding-left: 0px;

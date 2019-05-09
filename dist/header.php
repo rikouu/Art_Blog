@@ -119,6 +119,7 @@
 										<p></p>
 										<div class="nav-min">
 											<a href="/works/grjl/index.html" target="_blank">炫酷个人简历</a>
+											<a href="/works/nicetheme/index.html" target="_blank">艺术气息</a>
 											<a href="/works/shangcheng/index.html" target="_blank">节日礼品商城</a>
 											<a href="/works/h5-7_vip/index.html" target="_blank">H5响应式</a>
 											<a href="/works/yunquna/index.html" target="_blank">运去哪官网</a>

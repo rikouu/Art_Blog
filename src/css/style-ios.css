@@ -969,7 +969,9 @@ ul.post-categories li:first-child {
   font-weight: normal;
   display: block;
 }
-
+article.text:nth-of-type(1) {
+  display: none;
+}
 .text h2 a {
   font-size: 0.32rem;
   font-weight: normal;
