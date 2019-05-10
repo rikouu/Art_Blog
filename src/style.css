@@ -2822,6 +2822,8 @@ p.data-l>span a {
 
 .codecolorer-container * {
     text-indent: 0;
+    font:14px Montserrat,Microsoft Yahei!important;
+    line-height: normal!important;
 }
 
 .log-text p {

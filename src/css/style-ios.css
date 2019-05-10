@@ -1023,7 +1023,6 @@ article.text:nth-of-type(1) {
   width: calc(100% - 2.2rem);
   float: right;
   line-height: 0.38rem;
-  margin-bottom: 0.17rem;
   color: #999;
   font-size: 0.26rem;
   font-weight: normal;
