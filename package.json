@@ -43,6 +43,7 @@
     "run-sequence": "^2.2.1"
   },
   "dependencies": {
-    "gulp-htmlmin": "^5.0.1"
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-plumber": "^1.2.1"
   }
 }

@@ -11,6 +11,7 @@ const autoprefixer = require('gulp-autoprefixer'); //增加浏览器前缀
 const rev = require('gulp-rev');//给静态文件资源添加hash值防缓存
 const preprocess = require("gulp-preprocess"); //区分html,js环境变量
 const runSequence = require('run-sequence'); //流程控制，控制任务执行顺序
+const plumber = require('gulp-plumber'); //阻止报错暂停
 
 const browserSync = require('browser-sync'); //热更新模块
 
@@ -143,6 +144,7 @@ gulp.task("imageMin", function () {
 gulp.task("jsConcat", function () {
     //公共
      gulp.src(["src/js/rem.js","src/js/main.js","src/js/ajax_wordpress.js"])
+        .pipe(plumber())
         .pipe(babel({
             presets: ['@babel/env']
         }))
