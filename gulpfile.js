@@ -173,6 +173,7 @@ gulp.task("jsConcat", function () {
 //     server: {
 //         baseDir: './src'
 //     },
+//     prot:1234,
 //     middleware: function (req, res, next) {
 //         let str = '';
 //         let pathname = require('url').parse(req.url).pathname;
