@@ -158,24 +158,6 @@
 </div>
 
 <!-- 在线客服结束 -->
-
-<!-- 百度自动推送start -->
-<!-- <script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script> -->
-<!-- 百度自动推送end -->
-
 <!-- 判断用户当前是否登录成功开始 -->
 <?php  /*if (is_user_logged_in()){            
 	   echo "<script>$('#username a:lt(3)').hide();

@@ -358,8 +358,8 @@
 		</ul>
 		<div class="contact">
 			<h3>✎﹏ℳ๓ั如履✾薄冰</h3>
-			<h4>QQ : <?php echo get_option('weipxiu_options')['QQ-number']; ?></h4>
-			<h4>手机：<span><?php
+			<h4>QQ : <php echo get_option('weipxiu_options')['QQ-number']; ?></h4>
+			<h4>手机：<span><php
 										echo get_option('weipxiu_options')['footer_copyright'];
 										?></span></h4>
 			<a href="javascript:;">返回</a>
