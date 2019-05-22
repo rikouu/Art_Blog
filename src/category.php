@@ -61,13 +61,6 @@
 								<?php the_title(); ?>
 							</a>
 						</h2>
-						<div class="entry-meta">
-							<a href="<?php echo home_url(); ?>">唯品秀</a>
-							<i class="space">•</i>
-							<a href="javascript:;">前端开发资讯</a>
-							<i class="space">•</i>
-							<?php the_author(); ?>
-						</div>
 						<?php
 								if ( has_post_thumbnail() )
 									the_post_thumbnail();
@@ -87,7 +80,7 @@
 								<i class="">&nbsp;</i><?php echo '发表于 '.timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); ?>
 							</a>
 						</span> -->
-						<span><i class="iconfont icon-rili1" aria-hidden="true"></i><?php the_time('Y年m月d日') ?></span>
+						<span><i class="iconfont icon-shijian" aria-hidden="true"></i><?php the_time('Y年m月d日') ?></span>
 						<span>
 							<a href="<?php the_permalink(); ?> "><i class="iconfont icon-liulan"></i><?php echo getPostViews(get_the_ID()); ?>℃
 							</a>
@@ -97,7 +90,7 @@
 							</a>
 						</span>
 						<span class="post-like">
-							<a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if (isset($_COOKIE['bigfa_ding_' . $post->ID])) echo ' done'; ?>"><i class="iconfont icon-damuzhi"></i><span class="count"><?php if (get_post_meta($post->ID, 'bigfa_ding', true)) {echo get_post_meta($post->ID, 'bigfa_ding', true);} else {echo '0';
+							<a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if (isset($_COOKIE['bigfa_ding_' . $post->ID])) echo ' done'; ?>"><i class="iconfont icon-damuzhi1"></i><span class="count"><?php if (get_post_meta($post->ID, 'bigfa_ding', true)) {echo get_post_meta($post->ID, 'bigfa_ding', true);} else {echo '0';
 							} ?></span>喜欢
 							</a>
 						</span>

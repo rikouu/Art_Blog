@@ -108,7 +108,7 @@
                         <div class="post-actions">
                             <span class="post-like action action-like">
                                 <a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if(isset($_COOKIE['bigfa_ding_'.$post->ID])) echo ' done';?>">
-                                    <i class="iconfont icon-damuzhi"></i>赞(	  
+                                    <i class="iconfont icon-damuzhi1"></i>赞(	  
                                     <span class="count">   
                                         <?php if( get_post_meta($post->ID,'bigfa_ding',true) ){            
                                                 echo get_post_meta($post->ID,'bigfa_ding',true);
@@ -149,7 +149,7 @@
                                     <span class="tooltip-item">
                                         <font class="s_show">赏</font>
                                         <a href="javascript:;" style="color: #f78585" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if(isset($_COOKIE['bigfa_ding_'.$post->ID])) echo ' done';?>">
-                                            <i class="iconfont icon-damuzhi" style="color: #fff"></i>
+                                            <i class="iconfont icon-damuzhi1" style="color: #fff"></i>
                                             <span class="tog_show">
                                                 <?php if( get_post_meta($post->ID,'bigfa_ding',true) ){            
                                                         echo get_post_meta($post->ID,'bigfa_ding',true);

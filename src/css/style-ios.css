@@ -1035,7 +1035,7 @@ article.text:nth-of-type(1) {
   box-orient: vertical;
   overflow: hidden;
 }
-.text .img-left img,.entry-meta,.text .text_right .read-more {
+.text .img-left img,.text .text_right .read-more {
   display: none;
 }
 .continar-left p.l>span a{
@@ -1059,7 +1059,7 @@ article.text:nth-of-type(1) {
 .continar-left p.l .iconfont,.continar-left p.l .fa{
 display: none
 }
-.entry-meta + img{
+.text_right>h2 + img{
     max-width: 2rem;
     max-height: 1.2rem;
     float: left;

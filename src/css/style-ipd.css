@@ -845,22 +845,11 @@ article.text:nth-of-type(1) {
   border-left: 8px solid #1890ff;
   border-right-width: 0;
 }
-.entry-meta {
-  margin-bottom: 10px;
-  color: #a5a5a5;
-  font-size: 0.24rem;
-  overflow: hidden;
-  width: 5.1rem;
-  margin: 0 auto 0.2rem;
-}
-.entry-meta + img {
+
+.text_right>h2 + img {
   display: none;
 }
-.entry-meta a {
-  color: #a5a5a5;
-  font-size: 0.24rem;
-}
-.entry-meta .space,
+.space,
 .sep,
 .space {
   padding: 0 0.2rem;
@@ -888,9 +877,7 @@ article.text:nth-of-type(1) {
   -webkit-box-orient: vertical;
   display: none;
 }
-.entry-meta {
-  display: none;
-}
+
 /*右侧区域开始*/
 .continar-right {
   width: 100%;

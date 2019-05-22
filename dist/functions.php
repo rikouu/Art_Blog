@@ -243,8 +243,8 @@ function add_button_mce($mce_settings) {
         QTags.addButton( '注意', '注意', "<span class='beCareful'>", "</span>" );
         QTags.addButton( '加密内容', '加密内容', "[secret key='123']", "[/secret]" );
         QTags.addButton( '前言', '前言', "<p class='con_info'>", "</p>" );
-        QTags.addButton( '超链接', '超链接', "<a href=''>", "</a>" );
-        QTags.addButton( '代码块', '代码块', "[cc lang='php']", "[/cc]" );
+        QTags.addButton( 'a', 'a', "<a href=''>", "</a>" );
+        QTags.addButton( '[cc]', '[cc]', "[cc lang='php']", "[/cc]" );
         QTags.addButton( 'p', 'p', "<p>", "</p>" );
         QTags.addButton( 'li', 'li', "<li>", "</li>" );
         QTags.addButton( 'span', 'span', "<span>", "</span>" );

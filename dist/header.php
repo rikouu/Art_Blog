@@ -1,4 +1,4 @@
-	<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_385244_1kovimkx4ch.css">
+	<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_385244_958ft8r09co.css">
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/video-js.css">
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/video.js/video.min.js"></script>
 	<!-- 判断低版本IE -->
@@ -11,8 +11,6 @@
 			window.location.href="<?php bloginfo('template_url'); ?>/reminder.php";/*判断<IE9,此方法也可以判断<IE10*/
     }
     </script>
-	<!-- IE禁止页面快捷保存，导致盗窃 -->
-	<!-- <noscript><iframe src=*></iframe></noscript> -->
 	
 	<!-- 百度统计 -->
 	<script>
