@@ -6473,6 +6473,7 @@ label {
 }
 #primary-sidebar ul li img + span{
     font-size:12px;
+    color: #aaa;
 }
 .text-muted {
     color: #777;
