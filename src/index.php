@@ -169,7 +169,7 @@
 						</a>
 					</h1>
 					<span>
-						<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 250, "..."); ?>
+						<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 255, "..."); ?>
 						<!--文章内容简介-->
 					</span>
 				<?php }
@@ -255,7 +255,7 @@
 								echo '<img src="/wp-content/themes/Art_Blog/images/default.png" alt="" />';
 							?>
 							<h3>
-								<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200, "..."); ?>
+								<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 190, "..."); ?>
 								<!--文章内容-->
 							</h3>
 							<a class="read-more read_url" href="<?php the_permalink(); ?>" target="_blank">阅读全文<i class="iconfont icon-jiantou-you-cuxiantiao-fill"></i></a>

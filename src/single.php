@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="Author" content='<?php echo the_author(); ?>' />
-    <meta name="description" content="<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200,"
+    <meta name="description" content="<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 190,"
         ... "); ?>" />
     <?php 
 		   $keywords = get_post_meta($post->ID, "keywords", true);
