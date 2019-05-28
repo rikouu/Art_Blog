@@ -442,11 +442,11 @@ i {
     height: 100%;
     border-top: 1px solid #fff;
     box-sizing: border-box;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#d4d7db');
     background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#d4d7db));
     background: -moz-linear-gradient(top, #fff, #d4d7db);
     background: linear-gradient(#fff, #d4d7db);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-    box-shadow:none\9;
 }
 
 .header_top {
@@ -1519,9 +1519,6 @@ i {
     transition: all 0.2s linear;
     -webkit-transform: translate3d(0, 0px, 0);
     transform: translate3d(0, 0px, 0);
-}
-article.text:nth-of-type(1) {
-    display: none;
 }
 .continar-left>.text:nth-last-of-type(2) {
     border: 1px solid #eaeaea;
