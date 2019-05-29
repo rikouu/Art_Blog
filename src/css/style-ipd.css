@@ -2552,9 +2552,6 @@ iframe {
   height: 80px;
   display: none;
 }
-.c-860 {
-  height: auto !important;
-}
 .bdshare-slide-button-box {
   display: none;
 }
@@ -2798,9 +2795,7 @@ canvas,
 #player > span.cover {
   display: block;
 }
-#curriculu,
-.index-box,
-#curriculum {
+#curriculu {
   display: none;
 }
 #cyHotusers .hotusers-header {

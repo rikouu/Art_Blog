@@ -31,132 +31,6 @@ $(function () {
                     $(this).removeClass("word_display");
                 });
                 //首页轮播下sd导航end
-
-                // 首页弹窗开始
-                // setTimeout(function () {
-                //     var oBox = document.getElementById("curriculum");
-                //     var oUl = oBox.getElementsByTagName("ul")[0];
-                //     var oContact = oBox.getElementsByClassName("contact")[0];
-                //     var oClos = oBox.getElementsByClassName("close")[0];
-                //     var aLi = oUl.children;
-                //     var oBack = oContact.getElementsByTagName("a")[0];
-                //     oBox.style.opacity = 1;
-                //     oBox.addEventListener("transitionEnd", end, false);
-                //     oBox.addEventListener("webkitTransitionEnd", end, false);
-                //     //oUl.style.transition=".5s 600ms linear";
-                //     function end() {
-                //         this.removeEventListener("transitionEnd", end, false);
-                //         this.removeEventListener("webkitTransitionEnd", end, false);
-                //         oUl.style.top = 0;
-                //         oBox.style.height = "230px";
-                //         oBox.style.top = "0px";
-                //         for (var i = 0; i < aLi.length; i++) {
-                //             aLi[i].style.transition = "0.5s " + (300 + i * 200) + "ms";
-                //             aLi[i].style.opacity = 1;
-                //             aLi[i].style.transform = "rotateX(0deg)";
-                //             aLi[i].style.WebkitTransform = "rotateX(0deg)";
-                //             aLi[i].off = true;
-                //             aLi[i].index = i;
-                //             aLi[i].onmouseover = over;
-                //             aLi[i].onmouseout = function () {
-                //                 if (this.off) {
-                //                     this.style.transform = "rotateY(0deg)";
-                //                     this.style.WebkitTransform = "rotateY(0deg)";
-                //                 }
-                //             };
-                //             aLi[i].onclick = fnClick;
-                //         }
-                //     }
-
-                //     function over(ev) {
-                //         if (this.off) {
-                //             var iX = ev.clientX - getLeft(this);
-                //             this.style.transition = "0.5s";
-                //             if (iX > this.offsetWidth / 2) {
-                //                 this.style.transform = "rotateY(30deg)";
-                //                 this.style.WebkitTransform = "rotateY(30deg)";
-                //             } else {
-                //                 this.style.transform = "rotateY(-30deg)";
-                //                 this.style.WebkitTransform = "rotateY(-30deg)";
-                //             }
-                //         }
-                //     }
-
-                //     function getLeft(obj) {
-                //         var iLeft = 0;
-                //         while (obj) {
-                //             iLeft += obj.offsetLeft;
-                //             obj = obj.offsetParent;
-                //         }
-                //         return iLeft
-                //     }
-
-                //     function fnClick(ev) {
-                //         var iX = ev.clientX - getLeft(this);
-                //         var iDeg = iX > this.offsetWidth / 2 ? -180 : 180;
-                //         var iMax = 0;
-                //         var iNow = 0;
-                //         oContact.style.display = "block";
-                //         for (var i = 0; i < aLi.length; i++) {
-                //             if (iMax < Math.abs(i - this.index)) {
-                //                 iMax = Math.abs(i - this.index);
-                //                 iNow = i;
-                //             }
-                //             aLi[i].off = false;
-                //             aLi[i].style.transition = "0.5s " + Math.abs(i - this.index) * 100 + "ms cubic-bezier(0.115, -0.195, 0.255, -0.280)";
-                //             aLi[i].style.transform = "rotateY(" + iDeg + "deg)";
-                //             aLi[i].style.WebkitTransform = "rotateY(" + iDeg + "deg)";
-                //             aLi[i].style.opacity = 0.1;
-                //         }
-                //         aLi[iNow].addEventListener("transitionEnd", end, false);
-                //         aLi[iNow].addEventListener("webkitTransitionEnd", end, false);
-
-                //         function end() {
-                //             this.removeEventListener("transitionEnd", end, false);
-                //             this.removeEventListener("webkitTransitionEnd", end, false);
-                //             oContact.style.opacity = 1;
-                //         }
-                //     }
-                //     oBack.onclick = function () {
-                //         oContact.style.opacity = 0;
-                //         oContact.addEventListener("transitionEnd", end, false);
-                //         oContact.addEventListener("webkitTransitionEnd", end, false);
-
-                //         function end() {
-                //             this.removeEventListener("transitionEnd", end, false);
-                //             this.removeEventListener("webkitTransitionEnd", end, false);
-                //             for (var i = 0; i < aLi.length; i++) {
-                //                 aLi[i].off = true;
-                //                 aLi[i].style.transition = "0.5s " + (aLi.length - i - 1) * 100 + "ms";
-                //                 aLi[i].style.transform = "rotateY(0deg)";
-                //                 aLi[i].style.WebkitTransform = "rotateY(0deg)";
-                //                 aLi[i].style.opacity = 1;
-                //             }
-                //         }
-                //     };
-
-                //     function Clos() {
-                //         oBox.style.transition = ".8s height,0.4s opacity .2s";
-                //         oBox.style.height = "40px";
-                //         oBox.style.opacity = 0;
-                //         setTimeout(function () {
-                //             $("#curriculum").remove();
-                //         }, 1000)
-                //     };
-                //     oClos.onclick = function () {
-                //         Clos();
-                //     }
-                //     setTimeout(function () {
-                //         Clos()
-                //     }, 8000);
-                //     document.onkeydown = function (e) {
-                //         if (!e) e = window.event;
-                //         if ((e.keyCode || e.which) == 13) {
-                //             Clos();
-                //         };
-                //     }
-                // }, 2500);
-                // 首页弹窗结束
             }
             //IE浏览器屏蔽部分动效end
 
@@ -299,7 +173,7 @@ $(function () {
                 }, 1000);
             }, 3500);
         } else {
-            $(".c-860,.index-box,.hide,#curriculum,#js_banner").remove(); //去掉轮播、视频、邮件订阅
+            $(".hide,#js_banner").remove(); //去掉轮播、视频、邮件订阅
         }
     } else {
         //排除PC端执行下列代码

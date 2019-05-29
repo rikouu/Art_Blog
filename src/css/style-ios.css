@@ -2956,9 +2956,6 @@ iframe {
   display: none;
 }
 
-.c-860 {
-  height: auto !important;
-}
 
 .bdshare-slide-button-box {
   display: none;
@@ -3265,9 +3262,7 @@ p.reward-p {
   display: block;
 }
 
-#curriculu,
-.index-box,
-#curriculum {
+#curriculu {
   display: none;
 }
 

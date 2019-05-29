@@ -1,14 +1,59 @@
-$(function(){
-    var domain_name = window.location.protocol+"//"+window.location.host;
-    if (window.location.href != domain_name && window.location.href != domain_name+'/') {
-        $("body > .continar").css("margin-top","88px");
+$(function () {
+    var domain_name = window.location.protocol + "//" + window.location.host;
+    if (window.location.href != domain_name && window.location.href != domain_name + '/') {
+        $("body > .continar").css("margin-top", "88px");
     }
-    // 评论区域样式兼容
-    setTimeout(function(){
-        if($("#reply-title a").is(":hidden")){
+
+    // 文章详情页底部评论区域样式兼容
+    setTimeout(function () {
+        if ($("#reply-title a").is(":hidden")) {
             $("#reply-title").hide();
         }
     })
+
+    //网站运行时间start
+    function secondToDate(second) {
+        if (!second) {
+            return 0;
+        }
+        var time = new Array(0, 0, 0, 0, 0);
+        if (second >= 365 * 24 * 3600) {
+            time[0] = parseInt(second / (365 * 24 * 3600));
+            second %= 365 * 24 * 3600;
+        }
+        if (second >= 24 * 3600) {
+            time[1] = parseInt(second / (24 * 3600));
+            second %= 24 * 3600;
+        }
+        if (second >= 3600) {
+            time[2] = parseInt(second / 3600);
+            second %= 3600;
+        }
+        if (second >= 60) {
+            time[3] = parseInt(second / 60);
+            second %= 60;
+        }
+        if (second > 0) {
+            time[4] = second;
+        }
+        return time;
+    }
+
+    function setTime() {
+        // 博客创建时间秒数，时间格式中，月比较特殊，是从0开始的，所以想要显示5月，得写4才行，如下
+        var create_time = Math.round(new Date(Date.UTC(2016, 10, 16, 0, 0, 0))
+            .getTime() / 1000);
+        // 当前时间秒数,增加时区的差异
+        var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
+        var currentTime = secondToDate((timestamp - create_time));
+        var currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天' +
+            currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4] +
+            '秒';
+        $('#htmer_time').html(currentTimeHtml)
+    }
+    setInterval(setTime, 1000);
+    // 网站运行时间end
+
     //点击图片放大全屏start
     var runPrefixMethod = function (element, method) {
         var usablePrefixMethod;
@@ -160,17 +205,17 @@ $(function(){
     var navMinHideSetTime = null;
     var musicDown = $(".nav ul.music-nav li:not(.mod-header_music-icon)");
     $(".nav ul.music-nav li:not(.mod-header_music-icon)").hover(function (event) {
-            $(this).parents(".header").css("z-index", "11"); //默认下方轮播层级高于头部
-            $index = $(this).index();
-            musicObj = $(".nav ul.music-nav li:not(.mod-header_music-icon)").eq($index).find('audio');
-            if (localStorage.getItem("off_y") == 1) {
-                $(this).addClass("active");
-                musicObj.get(0).src = "/wp-content/themes/Art_Blog/music/nav_" + parseInt($index+1) + ".mp3";
-            } else {
-                musicObj.get(0).src = "";
-            }
-            event.stopPropagation();
-        },
+        $(this).parents(".header").css("z-index", "11"); //默认下方轮播层级高于头部
+        $index = $(this).index();
+        musicObj = $(".nav ul.music-nav li:not(.mod-header_music-icon)").eq($index).find('audio');
+        if (localStorage.getItem("off_y") == 1) {
+            $(this).addClass("active");
+            musicObj.get(0).src = "/wp-content/themes/Art_Blog/music/nav_" + parseInt($index + 1) + ".mp3";
+        } else {
+            musicObj.get(0).src = "";
+        }
+        event.stopPropagation();
+    },
         function () {
             clearInterval(navMinHideSetTime);
             navMinHideSetTime = setInterval(function () { //不断检测鼠标移开后下拉二级菜单是否完好影藏
@@ -245,36 +290,36 @@ $(function(){
                 "visibility": "hidden",
                 "top": "70px"
             });
-        },300);
+        }, 300);
 
     });
     //PC二级菜单end
 
     $(".aircraft").click(function () {
         $('body,html').animate({
-                scrollTop: 0
-            },
+            scrollTop: 0
+        },
             800);
         $(this).animate({
-                "bottom": "500px",
-                "opacity": "0"
-            },
+            "bottom": "500px",
+            "opacity": "0"
+        },
             1000,
             function () {
                 setTimeout(function () {
-                        $(".aircraft").css({
-                            "bottom": "50px",
-                            "opacity": "1"
-                        })
-                    },
+                    $(".aircraft").css({
+                        "bottom": "50px",
+                        "opacity": "1"
+                    })
+                },
                     500)
             })
     });
     $("#wuyousujian-kefuDv").hover(function () {
-            $("#wuyousujian-kefuDv").stop().animate({
-                "right": "-100px"
-            }, 500)
-        },
+        $("#wuyousujian-kefuDv").stop().animate({
+            "right": "-100px"
+        }, 500)
+    },
         function () {
             $("#wuyousujian-kefuDv").stop().animate({
                 "right": "-196px"
@@ -379,7 +424,7 @@ $(function(){
     // 移动端二级菜单导航start
     $("ul.slide-left li").on("touchstart", function (e) {
         console.log(e.target.dataset.implement)
-        if(e.target.dataset.implement == 'element'){
+        if (e.target.dataset.implement == 'element') {
             $(this).find(".slide_slect").stop().slideToggle();
             $(this).find(".iconfont_click").toggleClass("icon-xiajiantou");
             $(this).find(".iconfont_click").toggleClass("icon-shangjiantou");
@@ -417,25 +462,25 @@ $(function(){
 
     if ($(document).width() >= 1200) {
         //点击页面出现爱心
-        if (!!window.ActiveXObject || "ActiveXObject" in window){
+        if (!!window.ActiveXObject || "ActiveXObject" in window) {
             console.log("天啦，偶买噶，你竟然还在用IE？")
-         }else{
+        } else {
             ! function (e, t, a) {
                 function r() {
-                    for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--,
+                    for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y-- ,
                         s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e]
-                        .y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale +
+                            .y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale +
                         ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
                     requestAnimationFrame(r)
                 }
-    
+
                 function n() {
                     var t = "function" == typeof e.onclick && e.onclick;
                     e.onclick = function (e) {
                         t && t(), o(e)
                     }
                 }
-    
+
                 function o(e) {
                     var a = t.createElement("div");
                     a.className = "heart", s.push({
@@ -447,7 +492,7 @@ $(function(){
                         color: c()
                     }), t.body.appendChild(a)
                 }
-    
+
                 function i(e) {
                     var a = t.createElement("style");
                     a.type = "text/css";
@@ -458,11 +503,11 @@ $(function(){
                     }
                     t.getElementsByTagName("head")[0].appendChild(a)
                 }
-    
+
                 function c() {
-                    return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) +")"
+                    return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
                 }
-    
+
                 var s = [];
                 e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame ||
                     e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
@@ -472,18 +517,172 @@ $(function(){
                     ), n(), r()
             }(window, document);
         }
+
+        //文字琴弦效果
+        (function ($) {
+            // 换算字符串长度所占字符
+            String.prototype.gblen = function () {
+                var len = 0;
+                for (var i = 0; i < this.length; i++) {
+                    if (this.charCodeAt(i) > 127 || this.charCodeAt(i) == 94) {
+                        len += 2;
+                    } else {
+                        len++;
+                    }
+                }
+                return len;
+            }
+            // end
+            $.extend($.easing, {
+                easeOutElastic: function (x, t, b, c, d) {
+                    var s = 1.70158;
+                    var p = 0;
+                    var a = c;
+                    if (t == 0) return b;
+                    if ((t /= d) == 1) return b + c;
+                    if (!p) p = d * .3;
+                    if (a < Math.abs(c)) {
+                        a = c;
+                        var s = p / 4;
+                    } else var s = p / (2 * Math.PI) * Math.asin(c / a);
+                    return a * Math.pow(2, -10 * t) * Math.sin((t * d - s) * (2 * Math.PI) / p) + c + b;
+                }
+            });
+
+            $.fn.qin = function (options) {
+                var defaults = {
+                    offset: 22, // 最大偏移量
+                    duration: 500, // 晃动时间
+                    recline: 0.1 // 每像素偏移量
+                };
+
+                var opt = $.extend({}, defaults, options);
+
+                return this.each(function () {
+                    var $ele = $(this);
+                    fillSpan($ele);
+                    stringAnimate($ele, opt);
+                });
+            };
+
+            function fillSpan($ele) {
+                //通过字符换算，尽可能让所有列长度一致
+                var baseContent = ''; //初始化字符串 
+                var strLengh = 0; //初始化截取位数
+                if ($ele.text().trim().gblen() < 38) {
+                    baseContent = $ele.text().trim();
+                } else {
+                    for (var k = 0; k < 38; k++) {
+                        if (baseContent.gblen() < 38) {
+                            baseContent = $ele.text().trim().slice(0, strLengh) + '...';
+                            //console.log(baseContent,baseContent.gblen())
+                        } else {
+                            break;
+                        }
+                        strLengh++;
+                    }
+                }
+
+                var content = '';
+                for (var i = 0, len = baseContent.length; i < len; i++) {
+                    content += '<span>' + baseContent.substr(i, 1) + '</span>'
+                }
+                $ele.html(content);
+                var positionArr = []; //存放原始位置
+                $ele.children('span').each(function () {
+                    var $span = $(this);
+                    var position = $span.position();
+                    positionArr.push(position);
+                    $span.css({
+                        top: 0 + "px",
+                        left: position.left + "px"
+                    });
+                    setTimeout(function () {
+                        $span.css("position", "absolute");
+                    }, 0);
+                });
+                $ele.data("stringPosition", positionArr);
+            }
+
+            function stringAnimate($ele, opt) {
+                var positionArr = $ele.data("stringPosition"); // 原始位置 
+
+                var startX = 0; // 初始x轴位置
+                var startY = 0; // 初始y轴位置 
+
+                $ele.mouseenter(function (ex) {
+
+                    var offset = $ele.offset();
+
+                    startX = ex.pageX - offset.left; // 鼠标在容器内 x 坐标
+                    startY = ex.pageY - offset.top; // 鼠标在容器内 y 坐标
+                });
+
+                $ele.mousemove(function (ex) {
+                    var offset = $ele.offset();
+
+                    var xPos = ex.pageX - offset.left; // 鼠标在容器内 x 坐标
+                    var yPos = ex.pageY - offset.top; // 鼠标在容器内 y 坐标
+
+                    var offsetY = yPos - startY; // Y轴移动距离
+
+                    if (Math.abs(offsetY) > opt.offset) { // 如果偏移超过最大值
+                        return;
+                    }
+
+                    var ifDown = offsetY > 0; // 是否是向下移动
+
+                    $ele.children("span").each(function (index) {
+                        var $span = $(this); // 当前span
+                        var position = positionArr[index]; // 当前原始position
+                        var reclineNum = Math.abs(xPos - position.left) * opt.recline; // Y 轴移动距离，基于原始位置
+                        reclineNum *= ifDown ? 1 : (-1); // 基于向下为正方向
+
+                        var resultY = position.top + offsetY - reclineNum;
+
+                        if (ifDown && resultY < position.top) {
+                            resultY = position.top;
+                        } else if (!ifDown && resultY > position.top) {
+                            resultY = position.top;
+                        }
+
+                        $span.css({
+                            top: resultY + "px"
+                        });
+
+                    });
+                });
+                $ele.mouseleave(function () {
+                    $ele.children("span").each(function (index) {
+                        $(this).stop(true, false).animate({
+                            top: 0 + "px" //源代码：top: positionArr[index].top + "px"
+                        }, {
+                                duration: opt.duration,
+                                easing: "easeOutElastic"
+                            });
+                    });
+                });
+            };
+
+        })(jQuery);
+        $(".mouseover ul li a").qin({
+            offset: 20, // default , 最大偏移量
+            duration: 500, // default , 晃动时间
+            recline: 0.1 // default , 每像素偏移量，越小“琴弦绷的越紧”
+        });
+        //文字琴弦效果end
     } else {
         // 移动端固定导航fixed-bug
-        setTimeout(function(){
+        setTimeout(function () {
             var objec = $('.footer').detach();
             $("body > .continar").append(objec);
-            $(".footer").css({"display": "block",});
-        },1500)
+            $(".footer").css({ "display": "block", });
+        }, 1500)
     }
 
     // 当窗口改变时候start
-    $(window).resize(function() {
-        if($(document).width() >= 1200){
+    $(window).resize(function () {
+        if ($(document).width() >= 1200) {
             // 当从移动端点开了侧边栏，然后改编窗口到pc端，关闭偏移
             $(".continar,.os-headertop").css({
                 "transform": "translateX(0)"
@@ -493,12 +692,12 @@ $(function(){
     // 当窗口改变时候end
 
     //视频播放start
-    if($('#my-video').length){
+    if ($('#my-video').length) {
         var delSetInterval = null; //定时器
         //var ISvideo = false; //当前是否全屏
-        var myPlayer = videojs( 'my-video' );
+        var myPlayer = videojs('my-video');
         var howMuchIsDownloaded = 0; //初始化缓冲百分比
-        var eleFull = document.querySelector( "#my-video" ); //视频对象
+        var eleFull = document.querySelector("#my-video"); //视频对象
 
         //视频全屏方法
         var runPrefixMethod = function (element, method) {
@@ -533,7 +732,7 @@ $(function(){
         } else {
             alert("爷，现在是年轻人的时代，您就暂且休息去吧~~");
         }
-        
+
         //初始化加载需要先缓冲到50%+才会播放，避免高清视频卡顿
         /*delSetInterval = setInterval( function() {
             howMuchIsDownloaded = myPlayer.bufferedPercent() //返回当前百分比缓冲0-1
@@ -554,9 +753,9 @@ $(function(){
         });
 
         //随机数背景图片
-        function randomColor(option){
-            for(var i=0; i<option.length; i++){
-                option.eq(i).addClass('color-'+ (parseInt(Math.random()*8,10)+1))
+        function randomColor(option) {
+            for (var i = 0; i < option.length; i++) {
+                option.eq(i).addClass('color-' + (parseInt(Math.random() * 8, 10) + 1))
             }
         }
         randomColor($('.friendship .daily-list ul li'))
