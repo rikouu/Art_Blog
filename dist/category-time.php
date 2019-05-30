@@ -1,26 +1,8 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="Author" content="" />
-<meta name="description" content="<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 190,"..."); ?>" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
-<!-- 强制https -->
-<?php 
-			if (get_option('switch_https')['text_pic'] == 'on'){
-			?>
-					<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-			<?php
-			}
-	?>
-<meta http-equiv="x-dns-prefetch-control" content="on">
-<link rel="dns-prefetch" href="<?php echo home_url(); ?>">
 <title>不忘初心&nbsp;-&nbsp;方得始终&nbsp;|&nbsp;唯品秀博客</title>
-<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
-<link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="<?php bloginfo('template_url'); ?>/css/style-ios.css">
-<link rel="stylesheet" type="text/css" media="screen and (min-width:768px) and (max-width:1199px)" href="<?php bloginfo('template_url'); ?>/css/style-ipd.css">
-<link rel="stylesheet" type="text/css" media="screen and (min-width:1200px)" href="<?php bloginfo('template_url'); ?>/style.css">
-<?php wp_head(); ?>
+<?php require ('common.php'); ?>
 <style>
 body{background-image:-webkit-linear-gradient(180deg, #FFFEF9, #EED6CC);background-image:linear-gradient(180deg,#FFFEF9,#EED6CC);}
 a{color: #1890ff;text-decoration: none;}
@@ -45,7 +27,7 @@ padding-top: 3px;color: #585858;line-height: 34px;font-size: 14px;text-align:cen
 </head>
 <body>
 <!--头部文件引用开始-->
-	<?php get_header();?>
+	<?php get_header(); ?>
 <!--头部文件引用结束-->
 <div id="message">
     <ul id="messageList">

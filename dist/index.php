@@ -2,24 +2,6 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="baidu-site-verification" content="cNP7vhhXuw" />
-	<meta name="Author" content="" />
-	<meta name="description" content="<?php echo get_option('weipxiu_options')['description']; ?>" />
-	<meta name="keywords" content="<?php echo get_option('weipxiu_options')['keywords']; ?>" />
-	<meta name="format-detection" content="telephone=no" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-	<!-- 强制https -->
-	<?php
-	if (get_option('switch_https')['text_pic'] == 'on') {
-		?>
-		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-	<?php
-		}
-	?>
-	<meta http-equiv="x-dns-prefetch-control" content="on">
-	<link rel="dns-prefetch" href="<?php echo home_url(); ?>">
 	<title>
 		<?php
 		$name = single_tag_title('', false);
@@ -30,13 +12,8 @@
 		}
 		?>
 	</title>
-	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
-	<link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="<?php bloginfo('template_url'); ?>/css/style-ios.css">
-	<link rel="stylesheet" type="text/css" media="screen and (min-width:768px) and (max-width:1199px)" href="<?php bloginfo('template_url'); ?>/css/style-ipd.css">
-	<link rel="stylesheet" type="text/css" media="screen and (min-width:1200px)" href="<?php bloginfo('template_url'); ?>/style.css">
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/swiper.min.css">
-
-	<?php wp_head(); ?>
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/swiper.min.css">
+	<?php require ('common.php'); ?>
 </head>
 
 <body>
@@ -312,54 +289,6 @@
 	<?php get_footer() ?>
 	<?php wp_footer(); ?>
 	<!-- 底部调用end -->
-
-	<!-- 首页弹窗start 
-	<div id="curriculum" class="gradient">
-		<h2>
-			<strong>重要通知</strong>
-			<a class="close" href="javascript:;" title="关闭 - close"></a>
-		</h2>
-		<ul>
-			<li>
-				<p>
-					<strong>主题开源</strong>
-					<span>本博客主题已正式开源了</span>
-					<em>2018-02-20</em>
-				</p>
-			</li>
-			<li>
-				<p>
-					<strong>免费授权</strong>
-					<span>永久不盈利原则免费授权</span>
-					<em>2018-02-20</em>
-				</p>
-			</li>
-			<li>
-				<p>
-					<strong>免费更新</strong>
-					<span>项目不定期维护更新优化</span>
-					<em>2018-02-20</em>
-				</p>
-			</li>
-			<li>
-				<p>
-					<strong>欢迎使用</strong>
-					<span>欢迎Github克隆下载使用</span>
-					<em>2018-02-20</em>
-				</p>
-			</li>
-		</ul>
-		<div class="contact">
-			<h3>✎﹏ℳ๓ั如履✾薄冰</h3>
-			<h4>QQ : <php echo get_option('weipxiu_options')['QQ-number']; ?></h4>
-			<h4>手机：<span><php
-										echo get_option('weipxiu_options')['footer_copyright'];
-										?></span></h4>
-			<a href="javascript:;">返回</a>
-		</div>
-	</div>
-	首页弹窗end -->
-
 </body>
 
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/xfg_banner/banner-effect.js"></script>

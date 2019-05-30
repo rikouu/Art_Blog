@@ -2,38 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="Author" content='<?php echo the_author(); ?>' />
-    <meta name="description" content="<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 190,"
-        ... "); ?>" />
     <?php 
-		   $keywords = get_post_meta($post->ID, "keywords", true);
-		   if($keywords == '') {
-		      $tags = wp_get_post_tags($post->ID);    
-		      foreach ($tags as $tag ) {        
-		         $keywords = $keywords . $tag->name . ", ";    
-		      }
-		      $keywords = rtrim($keywords, ', ');
-		   }
-	?>
-    <meta name="keywords" content="<?php echo $keywords; ?>" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <!--强制https-->
-    <?php 
-			if (get_option('switch_https')['text_pic'] == 'on'){
-			?>
-					<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-			<?php
-			}
-	?>
-    <meta http-equiv="x-dns-prefetch-control" content="on">
-	<link rel="dns-prefetch" href="<?php echo home_url(); ?>">
-    <title><?php the_title(); ?>&nbsp;-&nbsp;唯品秀&nbsp;-&nbsp;前端开发&nbsp;|&nbsp;web前端技术博客</title>
-    <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
-    <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="<?php bloginfo('template_url'); ?>/css/style-ios.css">
-    <link rel="stylesheet" type="text/css" media="screen and (min-width:768px) and (max-width:1199px)" href="<?php bloginfo('template_url'); ?>/css/style-ipd.css">
-    <link rel="stylesheet" type="text/css" media="screen and (min-width:1200px)" href="<?php bloginfo('template_url'); ?>/style.css">
+        $keywords = get_post_meta($post->ID, "keywords", true);
+        if($keywords == '') {
+            $tags = wp_get_post_tags($post->ID);    
+            foreach ($tags as $tag ) {        
+                $keywords = $keywords . $tag->name . ", ";    
+            }
+            $keywords = rtrim($keywords, ', ');
+        }
+    ?>
+    <?php require ('common.php'); ?>
     <link rel="stylesheet" href="/wp-content/plugins/codecolorer/codecolorer.css?ver=0.9.16">
     <style>
         .continar-left {
