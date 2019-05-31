@@ -295,26 +295,35 @@ $(function () {
     });
     //PC二级菜单end
 
+    // 飞机
     $(".aircraft").click(function () {
         $('body,html').animate({
             scrollTop: 0
-        },
-            800);
+        },1500);
         $(this).animate({
-            "bottom": "500px",
-            "opacity": "0"
-        },
-            1000,
-            function () {
-                setTimeout(function () {
-                    $(".aircraft").css({
-                        "bottom": "50px",
-                        "opacity": "1"
-                    })
-                },
-                    500)
-            })
-    });
+            "bottom": "0",
+            "opacity": "1"
+        },500,
+        function(){
+            setTimeout(function(){
+                $(".aircraft").animate({
+                    "top": "0",
+                    "bottom": "auto",
+                    "opacity": "0"
+                },900,function(){
+                    setTimeout(function () {
+                        $(".aircraft").css({
+                            "bottom": "50px",
+                            "top":"auto",
+                            "opacity": "1"
+                        })
+                    },500)
+                })
+            },100)
+        })
+    })
+
+    //客服
     $("#wuyousujian-kefuDv").hover(function () {
         $("#wuyousujian-kefuDv").stop().animate({
             "right": "-100px"
