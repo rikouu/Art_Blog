@@ -2,18 +2,18 @@
 <html lang="en">
 
 <head>
-	<title>
-		<?php
-		$name = single_tag_title('', false);
-		if ($name) {
-			echo $name . "&nbsp;–&nbsp;唯品秀&nbsp;–&nbsp;前端开发&nbsp;|&nbsp;web前端技术博客";
-		} else {
-			echo "唯品秀&nbsp;–&nbsp;前端开发&nbsp;|&nbsp;web前端技术博客";
-		}
-		?>
-	</title>
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/swiper.min.css">
-	<?php require ('common.php'); ?>
+<title>
+	<?php
+	$name = single_tag_title('', false);
+	if ($name) {
+		echo $name . "&nbsp;–&nbsp;唯品秀&nbsp;–&nbsp;前端开发&nbsp;|&nbsp;web前端技术博客";
+	} else {
+		echo "唯品秀&nbsp;-&nbsp;前端开发技术博客&nbsp;|&nbsp;关注于最前沿的web前端技术个人网站";
+	}
+	?>
+</title>
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/swiper.min.css">
+<?php require ('common.php'); ?>
 </head>
 
 <body>

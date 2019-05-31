@@ -3,18 +3,16 @@
 <meta charset="UTF-8">
 <meta name="baidu-site-verification" content="cNP7vhhXuw" />
 <meta name="Author" content="唯品秀前端技术博客" />
-
+<?php if (is_single()){ ?>
+<title><?php the_title(); ?>&nbsp;-&nbsp;唯品秀&nbsp;-&nbsp;前端开发&nbsp;|&nbsp;web前端技术博客</title>
+<?php } ?>
+<meta name="keywords" content="<?php echo get_option('weipxiu_options')['keywords']; ?>" />
 <?php if (is_home()){ ?>
-		<meta name="description" content="<?php echo get_option('weipxiu_options')['description']; ?>" />
+<meta name="description" content="<?php echo get_option('weipxiu_options')['description']; ?>" />
 <?php }else{?>
-		<meta name="description" content="<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 190,"..."); ?>" />
+<meta name="description" content="<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 190,"..."); ?>" />
 <?php }?>
 
-<?php if (is_single()){ ?>
-	<title><?php the_title(); ?>&nbsp;-&nbsp;唯品秀&nbsp;-&nbsp;前端开发&nbsp;|&nbsp;web前端技术博客</title>
-<?php } ?>
-
-<meta name="keywords" content="<?php echo get_option('weipxiu_options')['keywords']; ?>" />
 <meta name="format-detection" content="telephone=no"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
@@ -37,14 +35,14 @@
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/video.js/video.min.js"></script>
 <!-- 判断低版本IE -->
 <script>
-	//  if ((navigator.userAgent.indexOf('MSIE') >= 0) 
-	// 	&& (navigator.userAgent.indexOf('Opera') < 0)){
-	// 	window.location.href="<php bloginfo('template_url'); ?>/reminder.php";/*判断IE5-10*/
-	//  }
+	 /*if ((navigator.userAgent.indexOf('MSIE') >= 0) 
+		&& (navigator.userAgent.indexOf('Opera') < 0)){
+		window.location.href="<php bloginfo('template_url'); ?>/reminder.php";//判断IE5-10
+	 }*/
 		if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<9){
 		window.location.href="<?php bloginfo('template_url'); ?>/reminder.php";/*判断<IE9,此方法也可以判断<IE10*/
 	}
-	</script>
+</script>
 
 <!-- 百度统计 -->
 <script>
