@@ -299,11 +299,11 @@ $(function () {
     $(".aircraft").click(function () {
         $('body,html').animate({
             scrollTop: 0
-        },1500);
+        },1200);
         $(this).animate({
             "bottom": "0",
             "opacity": "1"
-        },500,
+        },200,
         function(){
             setTimeout(function(){
                 $(".aircraft").animate({
