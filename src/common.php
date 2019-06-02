@@ -4,7 +4,7 @@
 <meta name="baidu-site-verification" content="cNP7vhhXuw" />
 <meta name="Author" content="唯品秀前端技术博客" />
 <?php if (is_single()){ ?>
-<title><?php the_title(); ?>&nbsp;-&nbsp;唯品秀&nbsp;-&nbsp;前端开发&nbsp;|&nbsp;web前端技术博客</title>
+<title><?php the_title(); ?>&nbsp;-&nbsp;<?php echo get_bloginfo('description'); ?></title>
 <?php } ?>
 <meta name="keywords" content="<?php echo get_option('weipxiu_options')['keywords']; ?>" />
 <?php if (is_home()){ ?>

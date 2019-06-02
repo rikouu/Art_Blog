@@ -5,6 +5,10 @@ var date=[
 		reply:"网站PC端不再主动性提供登录登录注册快捷按钮，如需注册，用户可通过移动端访问网站——至左侧边栏——登录/注册，当然，你也可直接访问"+"<a href="+window.location.protocol+"//"+window.location.host+"/wp-login.php>"+"登录注册</a>"
 	},
 	{
+		message:"2019 - 06 - 02",
+		reply:"根据网站后台配置设置自己的标题，因为使用主题的过程中，请配置好自己的主标题和副标题"
+	},
+	{
 		message:"2019 - 05 - 29",
 		reply:"简化footer.php文件结构，将js文件转移到公共main.js文件"
 	},

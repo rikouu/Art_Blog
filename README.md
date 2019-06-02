@@ -13,7 +13,7 @@
 
 - 将dist文件名命名为`Art_Blog`,然后将整个文件夹上传到线上：`/htdocs/wp-content/themes/`目录下，然后启用主题
 
-- 开始启用唯品秀Art_Blog主题，然后到后台>外观>唯品秀主题设置，设置站点域名地址（必须的）、公告、底部等信息
+- 开始启用唯品秀Art_Blog主题，在设置>常规中设置自己网站标题、副标题、邮箱等信息，然后到后台>外观>唯品秀主题设置，设置站点域名地址（必须的）、公告、底部等信息
 
 - 在wordpress后台-分类目录并设置分类别名，将这个别名设置替换给主题文件里的`category-x的x`，这样就知道菜单跳转到时候渲染哪个模板；
   然后将鼠标放在分类名称上，在浏览器左下角出现链接，其中有个`tag_ID=xx`，在header.php文件中找到导航菜单`is_category`方法，修改
@@ -111,5 +111,6 @@
 > 爱前端  https//www.huanggr.cn
 > guohui6 http://www.guohui6.com
 > 吾爱网赚 http://5iwz.vip
+> http://www.cyxlove.cn
 
 

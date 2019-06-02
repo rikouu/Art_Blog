@@ -83,10 +83,7 @@
 					<!--竖条-->
 				</div>
 				<?php endwhile; else : ?>
-				<?php header("Location: /404.html");exit; ?> 
-				<!-- <h2 id="redirect">
-					<?php _e('404'); ?>
-				</h2> -->
+				<?php header("Location: ".bloginfo('template_url')."/404.php");exit; ?> 
 				<?php endif; ?>
 				<?php lingfeng_pagenavi();?><!-- 分页调用 -->
 

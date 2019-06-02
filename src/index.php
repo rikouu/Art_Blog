@@ -6,9 +6,9 @@
 	<?php
 	$name = single_tag_title('', false);
 	if ($name) {
-		echo $name . "&nbsp;–&nbsp;唯品秀&nbsp;–&nbsp;前端开发&nbsp;|&nbsp;web前端技术博客";
+		echo $name . "&nbsp;-&nbsp;" . get_bloginfo('description');;
 	} else {
-		echo "唯品秀&nbsp;-&nbsp;前端开发技术博客&nbsp;|&nbsp;关注于最前沿的web前端技术个人网站";
+		echo get_bloginfo('name');
 	}
 	?>
 </title>
@@ -64,7 +64,7 @@
 							<i class="light"></i>
 						</a>
 					</div>
-					<a href="/404.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display" target="_blank">
+					<a href="<?php bloginfo('template_url'); ?>/404.php" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display" target="_blank">
 						<div class="carousel_small_str txt_bg01">
 							<h3 class="img_txt_title">404</h3>
 							<p class="img_p">路<br>在何方</p>
@@ -267,8 +267,7 @@
 					</article>
 				<?php endwhile;
 				else : ?>
-				<?php header("Location: /404.html");
-				exit; ?>
+				<?php header("Location: ".bloginfo('template_url')."/404.php");exit; ?>
 				<!-- <h2 id="redirect">
 							<?php _e('404'); ?>
 						</h2> -->

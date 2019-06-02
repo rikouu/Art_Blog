@@ -6,17 +6,6 @@ $(function () {
         if (window.location.href == domain_name || window.location.href == domain_name+'/') {
             $("#js_banner").show();
             $("body > .continar").css("margin-top","10px");
-            //首页公告开始
-            setInterval(function () {
-                $(".notice").show();
-                $(".notice ul").stop(true, true).animate({
-                    "top": "-20px"
-                }, function () {
-                    var node = $(".notice ul li:eq(0)").remove();
-                    $(".notice ul").append(node);
-                    $(".notice ul").css("top", "0");
-                });
-            }, 5000);
 
             //IE浏览器屏蔽部分动效start
             $(".mod-index__feature .img_list_6pic a").removeClass("word_display");
