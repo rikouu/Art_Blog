@@ -297,20 +297,20 @@ $(function () {
 
     // 飞机
     $(".aircraft").click(function () {
-        $('body,html').animate({
-            scrollTop: 0
-        },1200);
         $(this).animate({
             "bottom": "0",
             "opacity": "1"
-        },200,
+        },100,
         function(){
             setTimeout(function(){
+                $('body,html').animate({
+                    scrollTop: 0
+                },1200);
                 $(".aircraft").animate({
                     "top": "0",
                     "bottom": "auto",
                     "opacity": "0"
-                },900,function(){
+                },700,function(){
                     setTimeout(function () {
                         $(".aircraft").css({
                             "bottom": "50px",
@@ -319,7 +319,7 @@ $(function () {
                         })
                     },500)
                 })
-            },100)
+            },300)
         })
     })
 
