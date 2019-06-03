@@ -2,7 +2,14 @@
 <html lang="en" >
 
 <head>
-	<title><?php the_title(); ?>&nbsp;|&nbsp;关注WEB前端开发技术&nbsp;-&nbsp;唯品秀博客</title>
+	<title>
+		<?php if(have_posts()):?>
+			<?php the_title(); ?>
+		<?php else: ?>
+		Sorry,抱歉当前分类暂无文章！
+		<?php endif; ?>
+		&nbsp;|&nbsp;关注WEB前端开发技术&nbsp;-&nbsp;唯品秀博客
+	</title>
 	<?php require ('common.php'); ?>
 
 </head>
