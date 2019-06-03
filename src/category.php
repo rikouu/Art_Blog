@@ -19,7 +19,6 @@
 			<?php
 			if(have_posts()): while(have_posts()):the_post();
 			?>
-
 				<div class="text">
 					<div class="img-left">
 						<a class="read-more" href="<?php the_permalink(); ?>" target="_blank">
@@ -83,7 +82,7 @@
 					<!--竖条-->
 				</div>
 				<?php endwhile; else : ?>
-				<?php header("Location: ".bloginfo('template_url')."/404.php");exit; ?> 
+					<img src="<?php bloginfo('template_url'); ?>/images/article_404.jpg" alt="当前分类没有文章" class="article_not">
 				<?php endif; ?>
 				<?php lingfeng_pagenavi();?><!-- 分页调用 -->
 
@@ -91,9 +90,11 @@
 		<!-- 左侧区域结束 -->
 
 		<!-- 右侧区域开始 -->
-		<div class="continar-right">
-			<?php get_sidebar( $name ); ?>
-		</div>
+		<?php if(have_posts()):?>
+			<div class="continar-right">
+				<?php get_sidebar( $name ); ?>
+			</div>
+		<?php endif; ?>
 		<!-- 右侧区域结束 -->
 	</div>
 	<!-- 正文区域end -->

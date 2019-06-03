@@ -11,6 +11,11 @@ $(function () {
         }
     })
 
+    //文章分类没有资源时候404提示
+    if(!$(".continar-left>.text").length){
+        $("body").css("background","#fff")
+    }
+
     //网站运行时间start
     function secondToDate(second) {
         if (!second) {

@@ -267,7 +267,7 @@
 					</article>
 				<?php endwhile;
 				else : ?>
-				<?php header("Location: ".bloginfo('template_url')."/404.php");exit; ?>
+				<p>对不起啊，你的女朋友好像没找到！</p>
 				<!-- <h2 id="redirect">
 							<?php _e('404'); ?>
 						</h2> -->
