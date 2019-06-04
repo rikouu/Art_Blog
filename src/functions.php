@@ -10,6 +10,21 @@ register_nav_menus(array(
 //注册特色图像
 add_theme_support('post-thumbnails');
 set_post_thumbnail_size(220, 140, true); // 图片宽度与高度
+
+// 获取文章第一张缩略图 
+function catch_that_image() {
+	global $post;
+	$first_img = '';
+	ob_start();
+	ob_end_clean();
+	$output = preg_match_all('/<img*.+src=[\'"]([^\'"]+)[\'"].*>/iU', wp_unslash($post->post_content), $matches);
+	if(empty($output)){ 
+        $first_img = "/wp-content/themes/Art_Blog/images/default.png";
+	}else {
+		$first_img = $matches [1][0];
+	}
+	return $first_img;
+}  
 ?>
 <?php //控制分页页面，每个页面所显示的文章数量
 // function custom_posts_per_page($query){

@@ -64,11 +64,8 @@
             </script>
 
             <?php//这里是搜索功能 ?>
-
                 <?php if ( have_posts() ) : ?>
-
                 <?php while ( have_posts() ) : the_post(); ?>
-
                 <div class="text">
                     <!-- <div class="mod-category__article-time">
                         <span>2018/10</span>
@@ -77,10 +74,10 @@
                     <div class="img-left">
                         <a class="read-more" href="<?php the_permalink(); ?>" target="_blank">
                             <?php
-                                if ( has_post_thumbnail() )
+                                if (has_post_thumbnail())
                                     the_post_thumbnail();
                                 else
-                                    echo '<img src="/wp-content/themes/Art_Blog/images/default.png" width="220" height="140" alt="" />';
+                                    echo "<img src=". catch_that_image() . ">";
                             ?>
                         </a>
                     </div>
@@ -92,10 +89,10 @@
                                 <?php the_title(); ?></a>
                         </h2>
                         <?php
-                                if ( has_post_thumbnail() )
-                                    the_post_thumbnail();
-                                else
-                                    echo '<img src="/wp-content/themes/Art_Blog/images/default.png" alt="" />';
+                            if (has_post_thumbnail())
+                                the_post_thumbnail();
+                            else
+                                echo "<img src=". catch_that_image() . ">";
                         ?>
                         <h3>
                             <?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 190,"..."); ?>
