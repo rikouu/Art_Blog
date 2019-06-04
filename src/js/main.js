@@ -690,7 +690,7 @@ $(function () {
         setTimeout(function () {
             var objec = $('.footer').detach();
             $("body > .continar").append(objec);
-            $(".footer").css({ "display": "block", });
+            $(".footer").css({ "display": "block" });
         }, 1500)
     }
 
