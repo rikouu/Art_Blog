@@ -4,6 +4,7 @@
 <title>不忘初心&nbsp;-&nbsp;方得始终&nbsp;|&nbsp;唯品秀前端技术博客</title>
 <?php require ('common.php'); ?>
 <style>
+html{height:auto;}
 body{background-image:-webkit-linear-gradient(180deg, #FFFEF9, #EED6CC);background-image:linear-gradient(180deg,#FFFEF9,#EED6CC);}
 a{color: #1890ff;text-decoration: none;}
 a:hover{text-decoration: underline;}
