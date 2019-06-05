@@ -708,6 +708,7 @@ i {
 }
 .nav ul .sub-menu{
     visibility: hidden;
+    position: absolute;
 }
 .nav ul .sub-menu li{
     float: none;
@@ -862,12 +863,10 @@ i {
     transform: rotateX(90deg);
     -ms-transform: rotateX(90deg);
 }
-
-.nav ul li.action a span {
+.nav ul li.action > a span,#nav_list li.current-category-ancestor > a span, #nav_list li.current-menu-ancestorm > a span, #nav_list li.current-menu-parent > a span, #nav_list li.current-category-parentt > a span,#nav_list li.current-menu-item a{
     color: #1890ff;
 }
-
-.nav ul li.action a span i {
+.nav ul li.action i,.nav ul li.current-category-ancestor i {
     color: #1890ff;
 }
 

@@ -456,7 +456,7 @@ $(function () {
 
     // 移动端二级菜单导航start
     $("ul.slide-left li").on("touchstart", function (e) {
-        console.log(e.target.dataset.implement)
+        //console.log(e.target.dataset.implement)
         if (e.target.dataset.implement == 'element') {
             $(this).find(".slide_slect").stop().slideToggle();
             $(this).find(".iconfont_click").toggleClass("icon-xiajiantou");

@@ -18,7 +18,7 @@ function themeoptions_page() {
     <ul class="nav-wrap clearfix">
       <li class="nav-list on">基本</li>
       <li class="nav-list">SEO</li>
-      <li class="nav-list">图片(暂不支持)</li>
+      <li class="nav-list">图片</li>
       <li class="nav-list">社交</li>
       <!-- <li class="nav-list">自定义代码</li> -->
     </ul>
@@ -132,9 +132,34 @@ function themeoptions_page() {
       </div>
 			<!-- 内容三 图片设置 -->
       <div class="content-wrap content3">
+        <div class="row">
+          <div class="margin-top-15 clearfix">
+            <label class="fl left-wrap" for="">前台Logo：</label>
+            <div class="fr right-wrap">
+              <input
+                type="text"
+                class="url-inp"
+                name="logo"
+                id="logo"
+                value="<?php echo $a_options['logo']; ?>"
+              >
+              <input type="button" name="img-upload" value="选择文件">
+            </div>
+          </div>
+          <div class="margin-top-15 clearfix">
+            <div class="fl left-wrap">
+              前台Logo预览：
+            </div>
+            <div class="fr right-wrap">
+              <img src="<?php echo $a_options['logo']; ?>" class="preview-img" style="max-width: 100px;" alt="">
+              <span class="warn" style="display:block">*前台Logo最佳尺寸135*45</span>
+            </div>
+          </div>
+        </div>
+
 				<div class="row">
           <div class="margin-top-15 clearfix">
-            <label class="fl left-wrap" for="">后台登录logo：</label>
+            <label class="fl left-wrap" for="">后台登录Logo：</label>
             <div class="fr right-wrap">
               <input
                 type="text"
@@ -152,30 +177,6 @@ function themeoptions_page() {
             </div>
             <div class="fr right-wrap">
               <img src="<?php echo $a_options['login_logo']; ?>" class="preview-img" style="max-width: 100px;" alt="">
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="margin-top-15 clearfix">
-            <label class="fl left-wrap" for="">导航logo：</label>
-            <div class="fr right-wrap">
-              <input
-                type="text"
-                class="url-inp"
-                name="logo"
-                id="logo"
-                value="<?php echo $a_options['logo']; ?>"
-              >
-              <input type="button" name="img-upload" value="选择文件">
-            </div>
-          </div>
-          <div class="margin-top-15 clearfix">
-            <div class="fl left-wrap">
-              导航logo预览：
-            </div>
-            <div class="fr right-wrap">
-              <img src="<?php echo $a_options['logo']; ?>" class="preview-img" style="max-width: 100px;" alt="">
             </div>
           </div>
         </div>

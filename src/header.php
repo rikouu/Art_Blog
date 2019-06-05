@@ -26,7 +26,7 @@
 		<div class="header-conter">
 			<nav class="nav">
 					<a href="/" class="t-logo" id="Logo">
-							<img src="https://www.weipxiu.com/wp-content/themes/Art_Blog/images/weipxiu_logo_1.png">
+							<img src="<?php echo get_option('weipxiu_options')['logo']; ?>">
 					</a>
 					<div class="nav-left"></div>
 					<div class="brand">
@@ -42,7 +42,7 @@
 						//'container_class' => 'nav',//ul父节点class值
 						//'container_id'  => '',  //ul父节点id值
 						'menu_class'   => 'music-nav',   //ul节点class值
-						'menu_id'   => '',  //ul节点id值
+						'menu_id'   => 'nav_list',  //ul节点id值
 						'echo'  => true,//是否输出菜单，默认为true
 						'fallback_cb' => 'wp_page_menu',  //菜单不存在时，返回默认菜单，设为false则不返回
 						'before' => '', //链接前文本
