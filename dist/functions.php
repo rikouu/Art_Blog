@@ -292,6 +292,7 @@ function add_button_mce($mce_settings) {
     <script type="text/javascript">
         QTags.addButton( '注意', '注意', "<span class='beCareful'>", "</span>" );
         QTags.addButton( '加密内容', '加密内容', "[secret key='123']", "[/secret]" );
+        QTags.addButton( '视频', '视频', "[embed]", "[/embed]" );
         QTags.addButton( '前言', '前言', "<p class='con_info'>", "</p>" );
         QTags.addButton( 'a', 'a', "<a href=''>", "</a>" );
         QTags.addButton( '[cc]', '[cc]', "[cc lang='php']", "[/cc]" );
@@ -301,7 +302,6 @@ function add_button_mce($mce_settings) {
         QTags.addButton( 'h1', 'h1', "<h1>", "</h1>" );
         QTags.addButton( 'h4', 'h4', "<h4>", "</h4>" );
         QTags.addButton( 'h5', 'h5', "<h5>", "</h5>" );
-        QTags.addButton( 'embed', 'embed', "[embed]", "[/embed]" );
     </script>
 <?php
 }

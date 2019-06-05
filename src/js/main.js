@@ -26,8 +26,6 @@ $(function () {
     //追加音乐开关
     var dom_node = "<li class='js_piano_nav_icon mod-header_music-icon' title='钢琴节奏'>"+"<audio src='' autoplay='autoplay'></audio>"+"<i></i><i></i><i></i><i></i><i></i></li>"
     $(".header .music-nav").append(dom_node);
-
-    console.log('导航改造完成！')
     //通过js改造导航栏DOM结构end
 
     // 文章详情页底部评论区域样式兼容
