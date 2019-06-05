@@ -115,5 +115,10 @@
 	<?php get_footer()?>
 	<!-- 底部引用区域结束 -->
 </body>
-
+<script>
+//文章分类没有资源时候404提示
+if(!$(".continar-left>.text").length){
+		$("body").css("background","#fff")
+}
+</script>
 </html>
