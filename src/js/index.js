@@ -189,11 +189,6 @@ $(function () {
     }
     //网站预加载运动end
 
-    // 给首页增加菜单导航高亮
-    if(window.location.href.indexOf('/tag/') == '-1'){
-        $('.nav ul.music-nav li').eq(0).addClass('action')
-    }
-
     //修改邮件订阅表单类型
     $(".wpm_form .wpm_email input").attr("type","email")
 
