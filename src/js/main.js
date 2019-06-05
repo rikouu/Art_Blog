@@ -4,6 +4,32 @@ $(function () {
         $("body > .continar").css("margin-top", "88px");
     }
 
+    // 通过js改造导航栏DOM结构start
+    var node_list = $(".header .music-nav").children('li');
+    for(var i=0; i<node_list.length; i++){
+        var text = node_list.eq(i).children('a').text();
+        node_list.eq(i).children('a').text('');
+        node_list.eq(i).children('a').append("<span>"+ text +"</span>");
+        node_list.eq(i).children('a').append("<span>"+ text +"</span>");
+
+        //高亮
+        if(node_list.eq(i).hasClass('current-menu-item')){
+            node_list.eq(i).addClass('action');
+        }
+    }
+    //追加音乐标签
+    node_list.append("<audio src='' autoplay='autoplay'></audio>"+"<p style='opacity: 0'></p>");
+    //追加icon
+    $(".nav ul .sub-menu").siblings('a').find('span').append("<i class='iconfont icon-jiantou'></i>");
+    //追加二级菜单父级class
+    $(".sub-menu").addClass('nav-min')
+    //追加音乐开关
+    var dom_node = "<li class='js_piano_nav_icon mod-header_music-icon' title='钢琴节奏'>"+"<audio src='' autoplay='autoplay'></audio>"+"<i></i><i></i><i></i><i></i><i></i></li>"
+    $(".header .music-nav").append(dom_node);
+
+    console.log('导航改造完成！')
+    //通过js改造导航栏DOM结构end
+
     // 文章详情页底部评论区域样式兼容
     setTimeout(function () {
         if ($("#reply-title a").is(":hidden")) {
@@ -208,11 +234,11 @@ $(function () {
     var $index = null;
     var musicObj = null;
     var navMinHideSetTime = null;
-    var musicDown = $(".nav ul.music-nav li:not(.mod-header_music-icon)");
-    $(".nav ul.music-nav li:not(.mod-header_music-icon)").hover(function (event) {
+    var musicDown = $(".nav ul.music-nav > li:not(.mod-header_music-icon)");
+    $(".nav ul.music-nav > li:not(.mod-header_music-icon)").hover(function (event) {
         $(this).parents(".header").css("z-index", "11"); //默认下方轮播层级高于头部
         $index = $(this).index();
-        musicObj = $(".nav ul.music-nav li:not(.mod-header_music-icon)").eq($index).find('audio');
+        musicObj = $(".nav ul.music-nav > li:not(.mod-header_music-icon)").eq($index).find('audio');
         if (localStorage.getItem("off_y") == 1) {
             $(this).addClass("active");
             musicObj.get(0).src = "/wp-content/themes/Art_Blog/music/nav_" + parseInt($index + 1) + ".mp3";
@@ -233,7 +259,7 @@ $(function () {
         });
 
     function musicdown(number) {
-        var objLi = $(".nav ul.music-nav li");
+        var objLi = $(".nav ul.music-nav > li");
         var parameter = objLi.eq(number).attr("detaName");
         objLi.eq(number).find('audio').get(0).src = "/wp-content/themes/Art_Blog/music/" + parameter + ".mp3";
         if (number !== 8) {

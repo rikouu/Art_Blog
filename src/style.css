@@ -706,11 +706,24 @@ i {
     float: right;
     height: 100%;
 }
-
+.nav ul .sub-menu{
+    visibility: hidden;
+}
+.nav ul .sub-menu li{
+    float: none;
+    height:40px;
+    box-sizing: content-box;
+    display: block;
+    background: rgba(255,255,255,.9);
+}
+.nav ul .sub-menu li a{
+    height:40px;
+    line-height: 40px;
+}
 .nav ul.music-nav {
     margin-right: 70px;
 }
-
+.nav ul.music-nav > li>a{font-size: 16px;}
 .nav ul li {
     float: left;
     height: 100%;
@@ -886,6 +899,7 @@ i {
 .nav .nav-min {
     position: absolute;
     width: 100px;
+    height:auto;
     left: calc(50% - 50px);
     top: 70px;
     z-index: 3;
@@ -1051,9 +1065,9 @@ i {
 }
 
 .header .nav-min a {
+    line-height: 32px;
     display: block;
     text-align: center;
-    padding: 10px 10px;
     font-size: 13px;
     border-bottom: 1px solid #eee;
     color: #444;
@@ -1061,7 +1075,7 @@ i {
     margin-top:0!important;
 }
 
-.header .nav-min a:last-child {
+.header .nav-min > a:last-child {
     border: 0;
 }
 

@@ -33,108 +33,27 @@
 					<p>关注前端开发</p>
 					<p>HTML5、CSS3、Javascript</p>
 				</div>
-				<ul class="music-nav">
-						<li class="<?php if ( (is_category('9') || in_category('9')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-						<a href="/">
-							<span>首页</span>
-							<span>首页</span>
-						</a>
-						<audio src="" autoplay="autoplay"></audio>
-						<p></p>
-					</li>
-					<li class="<?php if ( (is_category('2') || in_category('2')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-						<a href="/category/mood">
-							<span>心情小镇</span>
-							<span>心情小镇</span>
-						</a>
-						<audio src="" autoplay="autoplay"></audio>
-						<p></p>
-					</li>
-					<li class=" 
-						<?php if ( in_category(array('3', '5', '14', '22','29')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-						<a href="javascript:void(0);">
-							<span>前端开发<i class="iconfont icon-jiantou"></i></span>
-							<span>前端开发<i class="iconfont icon-jiantou"></i></span>
-						</a>
-						<audio src="" autoplay="autoplay"></audio>
-						<p></p>
-						<div class="nav-min">
-								<a href="/category/frontend/htmlcss" class="<?php if ( in_category('3') && is_category('3') ) { echo 'action'; } ?>">HTML+CSS3</a>
-								<a href="/category/frontend/javascript"class="<?php if ( in_category('5') && is_category('5') ) { echo 'action'; } ?>">Javascript</a>
-								<a href="/category/frontend/js-frame"class="<?php if ( in_category('14') && is_category('14') ) { echo 'action'; } ?>">Js前端框架</a>
-								<a href="/category/frontend/node-js"class="<?php if ( in_category('22') && is_category('22') ) { echo 'action'; } ?>">Node.js基础</a>
-								<a href="/category/frontend/holdall"class="<?php if ( in_category('29') && is_category('29') ) { echo 'action'; } ?>">前端工具箱</a>
-								<!-- <a href="/?cat=348">授人以渔</a> -->
-								<a href="http://v.laod.cn/" target="_blank">
-									Vip视频解析
-								</a>
-						</div>
-					</li>
-					<li class="<?php if ( (is_category('1') || in_category('1')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-						<a href="/category/time">
-							<span>时光机</span>
-							<span>时光机</span>
-						</a>
-						<audio src="" autoplay="autoplay"></audio>
-						<!-- <img src="<?php bloginfo('template_url'); ?>/images/new.png" alt="" class="new"> -->
-						<p></p>
-					</li>
-					<li class="<?php if ( (is_category('-1') || in_category('-1')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-						<a href="javascript:void(0);">
-							<span>作品欣赏<i class="iconfont icon-jiantou"></i></span>
-							<span>作品欣赏<i class="iconfont icon-jiantou"></i></span>
-						</a>
-						<audio src="" autoplay="autoplay"></audio>
-						<p></p>
-						<div class="nav-min">
-							<a href="/works/grjl/index.html" target="_blank">炫酷个人简历</a>
-							<a href="/works/nicetheme/index.html" target="_blank">唯美艺术主题</a>
-							<a href="/works/shangcheng/index.html" target="_blank">节日礼品商城</a>
-							<a href="/works/h5-7_vip/index.html" target="_blank">H5响应式</a>
-							<a href="/works/yunquna/index.html" target="_blank">运去哪官网</a>
-							<a href="http://www.songhengnet.com" target="_blank">嵩恒网络官网</a>
-							<!-- <a href="/works/beautiful/index.html" target="_blank">美丽说-首页</a> -->
-							<a href="/works/weiyun/index.html" target="_blank">微云桌面应用</a>
-							<!-- <a href="/works/hnlyw/index.html" target="_blank">湖南海外旅游网</a> -->
-							<!-- <a href="/works/music/index.html" target="_blank">音乐播放器</a> -->
-							<a href="/works/caiquan/index.html" target="_blank">游戏-猜拳</a>
-							<a href="/works/feiji/index.html" target="_blank">游戏-打飞机</a>
-							<!-- <a href="/works/txz/index.html" target="_blank">游戏-推箱子</a> -->
-						</div>
-					</li>
-					<li class="<?php if ( in_category('13') && is_category('13') ) { echo 'action'; } ?>">
-						<a href="/category/jqzy">
-							<span>别具匠心</span>
-							<span>别具匠心</span>
-						</a>
-						<audio src="" autoplay="autoplay"></audio>
-						<p></p>
-					</li>
-					<li class="<?php if ( (is_category('8') || in_category('8')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-						<a href="/category/message">
-							<span>碎言碎语</span>
-							<span>碎言碎语</span>
-						</a>
-						<audio src="" autoplay="autoplay"></audio>
-						<p></p>
-					</li>
-					<li class="<?php if ( (is_category('10') || in_category('10')) && !is_page() && !is_home() ) { echo 'action'; } ?>">
-						<a href="/category/about">
-							<span>关于博客</span>
-							<span>关于博客</span>
-						</a>
-						<audio src=""  autoplay="autoplay"></audio>
-						<p></p>
-					</li>
-					<li class="js_piano_nav_icon mod-header_music-icon" title="钢琴节奏">
-					<audio src=""  autoplay="autoplay"></audio>
-							<i></i>
-							<i></i>
-							<i></i>
-							<i></i>
-							<i></i>
-						</li>
-				</ul>
+				<?php 
+					// 列出顶部导航菜单，只列出一级菜单
+					wp_nav_menu( array( 
+						'theme_location'  => '',//导航别名
+						'menu'   => '', //期望显示的菜单
+						'container'  => '',  //容器标签
+						//'container_class' => 'nav',//ul父节点class值
+						//'container_id'  => '',  //ul父节点id值
+						'menu_class'   => 'music-nav',   //ul节点class值
+						'menu_id'   => '',  //ul节点id值
+						'echo'  => true,//是否输出菜单，默认为true
+						'fallback_cb' => 'wp_page_menu',  //菜单不存在时，返回默认菜单，设为false则不返回
+						'before' => '', //链接前文本
+						'after'  => '', //链接后文本
+						'link_before'  => '',   //链接文本前
+						'link_after'  => '',//链接文本后
+						'items_wrap'  => '<ul id="%1$s" class="%2$s">%3$s</ul>',   //如何包装列表
+						'depth' => 0   //菜单深度，默认0
+						//'walker' => new Header_Menu_Walker()  //自定义walker
+					) );
+				?>
 				<!-- 搜索按钮开始 -->
 				<div class="navto-search">
 					<a href="javascript:;" class="search-show active">
