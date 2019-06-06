@@ -1353,7 +1353,6 @@ i {
 /* 主题内容区域start */
 .continar {
     width: 1200px;
-    height: calc(100% - 280px);
     margin: 96px auto 50px;
 }
 .deviation{

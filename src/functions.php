@@ -7,6 +7,15 @@ register_nav_menus(array(
     'MainNav' => '主导航',
 ));
 
+//注册小工具
+if ( function_exists('register_sidebar') )
+register_sidebar(array(
+    'before_widget' => '<div class="sidebox">    ',
+    'after_widget' => '</div>',
+    'before_title' => '<h2>',
+    'after_title' => '</h2>',
+));
+
 //注册特色图像
 add_theme_support('post-thumbnails');
 set_post_thumbnail_size(220, 140, true); // 图片宽度与高度

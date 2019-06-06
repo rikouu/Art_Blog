@@ -4,6 +4,12 @@ $(function () {
         $("body > .continar").css("margin-top", "88px");
     }
 
+    //文章分类没有资源时候404提示
+    if($(".continar-left .article_not").length > 0){
+        $("body").css({"background":"#fff"});
+		$("body > .continar").css({"height": "calc(100% - 280px)"});
+    }
+
     // 通过js改造导航栏DOM结构start
     var node_list = $(".header .music-nav").children('li');
     for(var i=0; i<node_list.length; i++){
