@@ -56,7 +56,7 @@
                             </span>
                             <span>
                             <i class="iconfont icon-zuozhe"></i>
-                                唯品秀
+                            <?php the_author_nickname(); ?>
                             </span>
                             <span>
                                 <i class="iconfont icon-kanguo"></i>

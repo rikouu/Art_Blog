@@ -159,24 +159,25 @@ function themeoptions_page() {
 
 				<div class="row">
           <div class="margin-top-15 clearfix">
-            <label class="fl left-wrap" for="">后台登录Logo：</label>
+            <label class="fl left-wrap" for="">浏览器标签Logo：</label>
             <div class="fr right-wrap">
               <input
                 type="text"
                 class="url-inp"
-                name="login-logo"
-                id="login-logo"
-                value="<?php echo $a_options['login_logo']; ?>"
+                name="label-logo"
+                id="label-logo"
+                value="<?php echo $a_options['labellogo']; ?>"
               >
               <input type="button" name="img-upload" value="选择文件">
             </div>
           </div>
           <div class="margin-top-15 clearfix">
             <div class="fl left-wrap">
-              后台登录图标预览：
+              标签图标预览：
             </div>
             <div class="fr right-wrap">
-              <img src="<?php echo $a_options['login_logo']; ?>" class="preview-img" style="max-width: 100px;" alt="">
+              <img src="<?php echo $a_options['label_logo']; ?>" class="preview-img" style="max-width: 100px;" alt="">
+              <span class="warn" style="display:block">*浏览器标签图标最佳尺寸16*16或32*32</span>
             </div>
           </div>
         </div>
@@ -455,7 +456,7 @@ function themeoptions_page() {
 		// 数据提交
     $options = array(
       'update_themeoptions' => 'true',
-      'login_logo' => $_POST['login-logo'],
+      'label_logo' => $_POST['label-logo'],
       'aside_count' => $_POST['aside-count'],
       'switch_https' => $_POST['switch_https'],
       'text_pic' => $_POST['text-pic'],

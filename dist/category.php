@@ -8,7 +8,7 @@
 		<?php else: ?>
 		Sorry,当前分类暂无文章！
 		<?php endif; ?>
-		&nbsp;|&nbsp;关注WEB前端开发技术&nbsp;-&nbsp;唯品秀博客
+		&nbsp;|&nbsp;<?php echo get_bloginfo('description'); ?>
 	</title>
 	<?php require ('common.php'); ?>
 

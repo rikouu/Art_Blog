@@ -2,7 +2,7 @@
 <!-- 移动端头部start -->
 	<div class="os-headertop">
 		<div class="btn_menu"></div>
-		<a href="/" class="weipxiu_nav">唯品秀博客</a>
+		<a href="/" class="weipxiu_nav"><?php echo get_bloginfo('description'); ?></a>
 		<div class="xis">
 			<i class="iconfont icon-sousuo"></i>
 		</div>

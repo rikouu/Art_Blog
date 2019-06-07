@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>我的博客我做主&nbsp;-&nbsp;了解唯品秀从这里开始&nbsp;|&nbsp;唯品秀博客</title>
+    <title>我的博客我做主&nbsp;-&nbsp;了解唯品秀从这里开始&nbsp;|&nbsp;<?php echo get_bloginfo('description'); ?></title>
     <?php require ('common.php'); ?>
 </head>
     <body>

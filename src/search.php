@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title><?php the_title(); ?>&nbsp;|&nbsp;关注WEB前端开发技术&nbsp;-&nbsp;唯品秀博客</title>
+    <title><?php the_title(); ?>&nbsp;|&nbsp;<?php echo get_bloginfo('description'); ?></title>
     <?php require ('common.php'); ?>
     <style>
         .bdcs-container .bdcs-search {
