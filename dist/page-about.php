@@ -1,3 +1,8 @@
+<?php   
+/*
+Template Name: 关于博客  
+*/  
+?>  
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,3 +1,8 @@
+<?php   
+/*
+Template Name: 给我留言  
+*/  
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

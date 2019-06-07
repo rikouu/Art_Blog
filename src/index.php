@@ -64,7 +64,7 @@
 							<i class="light"></i>
 						</a>
 					</div>
-					<a href="<?php bloginfo('template_url'); ?>/404.php" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display" target="_blank">
+					<a href="/404" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display" target="_blank">
 						<div class="carousel_small_str txt_bg01">
 							<h3 class="img_txt_title">404</h3>
 							<p class="img_p">路<br>在何方</p>
@@ -286,7 +286,6 @@
 
 	<!-- 底部调用start -->
 	<?php get_footer() ?>
-	<?php wp_footer(); ?>
 	<!-- 底部调用end -->
 </body>
 

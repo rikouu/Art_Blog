@@ -1,3 +1,8 @@
+<?php   
+/*
+Template Name: 时光机  
+*/  
+?>  
 <!doctype html>
 <html>
 <head>
