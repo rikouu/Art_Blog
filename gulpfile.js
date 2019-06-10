@@ -143,7 +143,7 @@ gulp.task("imageMin", function () {
 //安装 npm i gulp-concat --save-dev
 gulp.task("jsConcat", function () {
     //公共
-     gulp.src(["src/js/rem.js","src/js/main.js","src/js/ajax_wordpress.js"])
+     gulp.src(["src/js/main.js","src/js/ajax_wordpress.js"])
         .pipe(plumber())
         .pipe(babel({
             presets: ['@babel/env']
@@ -154,7 +154,7 @@ gulp.task("jsConcat", function () {
         .pipe(gulp.dest(target+"/js"))
     
     //特例
-    gulp.src(["src/js/date.js","src/js/jquery-2.1.4.min.js"])
+    gulp.src(["src/js/rem.js","src/js/date.js","src/js/jquery-2.1.4.min.js"])
         .pipe(gulp.dest(target+"/js"))
     
     //首页

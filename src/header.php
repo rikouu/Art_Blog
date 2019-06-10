@@ -93,8 +93,8 @@
 		</li>
 		<li><a href="/category/jqzy"><i class="iconfont">&#xe75c;</i>别具匠心</a></li>
 		<li><a href="/category/mood"><i class="iconfont">&#xe668;</i>心情小镇</a></li>
-		<li><a href="/category/message"><i class="iconfont">&#xe69f;</i>碎言碎语</a></li>
-		<li><a href="/category/about"><i class="iconfont">&#xe603;</i>关于博客</a></li>
+		<li><a href="/message"><i class="iconfont">&#xe69f;</i>碎言碎语</a></li>
+		<li><a href="/about"><i class="iconfont">&#xe603;</i>关于博客</a></li>
 		<li><a href="/wp-login.php"><i class="iconfont">&#xe630;</i>用户登录</a></li>
 	</ul>
 </div>

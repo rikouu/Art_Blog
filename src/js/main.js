@@ -7,7 +7,6 @@ $(function () {
     //文章分类没有资源时候404提示
     if($(".continar-left .article_not").length > 0){
         $("body").css({"background":"#fff"});
-		$("body > .continar").css({"height": "calc(100% - 280px)"});
     }
 
     // 通过js改造导航栏DOM结构start
@@ -498,6 +497,10 @@ $(function () {
     //留言板手风琴end
 
     if ($(document).width() >= 1200) {
+        //文章分类没有资源时候404提示
+        if($(".continar-left .article_not").length > 0){
+            $("body > .continar").css({"height": "calc(100% - 280px)"});
+        }
         //点击页面出现爱心
         if (!!window.ActiveXObject || "ActiveXObject" in window) {
             console.log("天啦，偶买噶，你竟然还在用IE？")
@@ -714,7 +717,7 @@ $(function () {
             var objec = $('.footer').detach();
             $("body > .continar").append(objec);
             $(".footer").css({ "display": "block" });
-        }, 1500)
+        }, 500)
     }
 
     // 当窗口改变时候start

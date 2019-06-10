@@ -1,4 +1,4 @@
-﻿function defaultfont() {
+function defaultfont() {
     var sw = $(window).width();
     var pw = 750;
     var f = 100 * sw / pw;

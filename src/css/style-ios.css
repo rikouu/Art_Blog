@@ -1059,6 +1059,7 @@ ul.post-categories li:first-child {
   display: flex;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  margin-top:0.19rem;
 }
 .continar-left p.l span,.continar-left p.l a{
   font-size: 0.2rem;
@@ -1293,6 +1294,7 @@ div.com-art ul li {
   text-overflow: ellipsis;
   position: relative;
   color: #5e5e5e;
+  font-size: 0.24rem;
 }
 
 .friendship ul li a {
@@ -1934,7 +1936,7 @@ p.data-l {
 p.data-l > span {
   margin: 0px 0.05rem;
   color: #666;
-  font-size: 12px;
+  font-size: 0.24rem;
 }
 
 p.data-l > span:last-child {
@@ -1943,7 +1945,7 @@ p.data-l > span:last-child {
 
 p.data-l > span i {
   color: #666;
-  font-size: 12px;
+  font-size: 0.24rem;
 }
 
 .codecolorer-container table {
@@ -2020,20 +2022,24 @@ p.text-post {
   width: 100%;
   line-height: 0.36rem;
   color: #666;
-  font-size: 0.3rem;
+  font-size: 0.26rem;
 }
-
+p.text-post-top{
+  margin-bottom:0.1rem;
+}
 p.text-post {
   overflow: hidden;
 }
 
 p.text-post > span {
   float: left;
+  font-size:0.26rem;
 }
 
 p.text-post a {
   float: left;
   width: calc(100% - 65px);
+  font-size:0.26rem;
 }
 
 .ds-comments-info {

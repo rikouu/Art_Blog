@@ -33,6 +33,9 @@
 <link rel="stylesheet" type="text/css" media="screen and (min-width:768px) and (max-width:1199px)" href="<?php bloginfo('template_url'); ?>/css/style-ipd.css">
 <link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_385244_958ft8r09co.css">
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/video-js.css">
+
+<script src="<?php bloginfo('template_url'); ?>/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/rem.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/video.js/video.min.js"></script>
 <!-- 判断低版本IE -->
 <script>

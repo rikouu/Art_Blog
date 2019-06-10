@@ -159,7 +159,6 @@
 <!-- 在线客服结束 -->
 
 <!-- <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-1" count="99" src="/js/canvas-nest.min.js"></script> -->
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/main_min.js"></script>
 
 <!-- 调用wordpress核心函数 -->

@@ -8,6 +8,7 @@
 	<title>很抱歉,未能找到你的女朋友&nbsp;-&nbsp;<?php echo get_bloginfo('description'); ?></title>
 	<meta name="Keywords" content="404、未找到内容">
 	<meta name="description" content="抱歉，当前访问的内容不存在！">
+	<script src="<?php bloginfo('template_url'); ?>/js/jquery-2.1.4.min.js"></script>
 	<style type="text/css">
 		* {
 			margin: 0px;
@@ -72,7 +73,6 @@
 		</p>
 		<div>
 </body>
-<script src="<?php bloginfo('template_url'); ?>/js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript">
 	var num = 5;
 	var clearTime = null;
