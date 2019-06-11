@@ -166,7 +166,7 @@ function themeoptions_page() {
                 class="url-inp"
                 name="label-logo"
                 id="label-logo"
-                value="<?php echo $a_options['labellogo']; ?>"
+                value="<?php echo $a_options['label_logo']; ?>"
               >
               <input type="button" name="img-upload" value="选择文件">
             </div>
