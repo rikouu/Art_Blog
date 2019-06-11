@@ -1455,22 +1455,22 @@ div.com-art ul li {
   width: 100%;
 }
 
-.container {
+.footer .container {
   position: relative;
   margin: 0 auto;
   max-width: 1200px;
   padding: 0;
 }
 
-.container a {
+.footer .container a {
   font-size: 0.24rem;
   color: #999;
   transition: 0.35s;
 }
 
-.container p,
-.container span {
-  margin: 5px 0 3px;
+.footer .container p,
+.footer .container span {
+  margin: 4px 0 5px;
   font-size: 0.24rem;
   color: #999;
   line-height: 18px;
@@ -3200,6 +3200,7 @@ canvas,
   font-size: 0.3rem;
   border-bottom: 1px dashed #ccc;
   padding: 0.1rem 0;
+  margin-bottom: 0.2rem;
 }
 
 .log-text h4:nth-of-type(5n + 1) {
@@ -3501,7 +3502,6 @@ p.reward-p {
   width: 100%;
   border: 1px solid #eee;
   margin: 0.1rem auto;
-  font-size: 0.3rem;
   padding: 0.32rem;
   height: 0.5rem;
   border-radius: .08rem;

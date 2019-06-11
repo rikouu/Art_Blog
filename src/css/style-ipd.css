@@ -605,7 +605,6 @@ img {
   transform: translateX(0px);
   -ms-transform: translateX(0px);
   float: none;
-  margin-top: 0.24rem !important;
 }
 .article_not{
   position: fixed;
@@ -891,7 +890,7 @@ ul.post-categories li:first-child {
   height: auto;
   float: none;
   margin-bottom: 0px;
-  margin-top: 0.6rem;
+  margin-top: 0.3rem;
   transform: translateX(0px);
   -ms-transform: translateX(0px);
 }
@@ -974,7 +973,7 @@ p.clearfix a {
 /*热门文章开始*/
 .widget {
   background: #fff;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
   box-shadow: 0px 0.02rem 0.04rem #c5c5c5;
   border: 1px solid #eaeaea;
   border-radius: 0.08rem;
@@ -1211,19 +1210,19 @@ div.com-art ul li {
   overflow: hidden;
   width: 100%;
 }
-.container {
+.footer .container {
   position: relative;
   margin: 0 auto;
   max-width: 1200px;
-  padding: 0.3rem 0;
+  padding: 0.1rem 0;
 }
-.container a {
-  font-size: 12px;
+.footer .container a {
   color: #999;
+  font-size: 0.26rem;
   transition: 0.35s;
 }
-.container p,
-.container span {
+.footer .container p,
+.footer .container span {
   margin: 0 0 5px;
   font-size: 0.26rem;
   color: #999;
@@ -1412,20 +1411,17 @@ div.com-art ul li {
   height: 0;
 }
 .continar-left p {
-  font-size: 0.36rem;
   line-height: 0.6rem;
-  margin-bottom: 0.15rem;
 }
 .continar-left .textwidget > p {
   line-height: 0.5rem;
   color: #666;
 }
-.continar-left div.key-w,
-.continar-left p.text-post {
-  text-indent: 0;
+.continar-left div.key-w{
+  margin-bottom: 0.5rem;
 }
-.continar-left p.text-post-top {
-  font-size: 12px;
+.continar-left p.text-post {
+  margin: 0.3rem 0;
 }
 .continar-left p.l {
   font-size: 0.26rem;
@@ -1669,7 +1665,7 @@ h2.title {
   font-family: '微软雅黑';
   text-align: center;
   line-height: 0.7rem;
-  margin-top: 0.2rem;
+  margin: 0.2rem auto 0.1rem;
   color: #333;
   display: block;
   white-space: nowrap;
@@ -1682,13 +1678,12 @@ p.data-l {
   line-height: 30px;
   text-align: center;
   margin: 0 auto;
-  padding-bottom: 40px;
+  padding-bottom: 0.7rem;
   border-bottom: 1px dashed #bbb;
 }
 p.data-l > span {
   margin: 0px 5px;
   color: #666;
-  font-size: 12px;
 }
 p.data-l span span {
   margin: 0;
@@ -1696,11 +1691,9 @@ p.data-l span span {
 }
 p.data-l span a {
   color: #666;
-  font-size: 12px;
 }
 p.data-l > span i {
   color: #999;
-  font-size: 12px;
 }
 .codecolorer-container table {
   width: 100%;
@@ -1728,7 +1721,6 @@ td.line-numbers {
   font: 12px/20px 'courier new';
 }
 .log-text * {
-  font-size: 15px;
   line-height: 25px;
   text-indent: 2em;
 }
@@ -1741,10 +1733,6 @@ td.line-numbers {
 }
 .codecolorer-container * {
   text-indent: 0;
-}
-.log-text p {
-  font-size: 14px;
-  line-height: 26px;
 }
 .log-text img {
   display: block;
@@ -2738,8 +2726,8 @@ canvas,
   height: 0.9rem;
   line-height: 0.9rem;
   background: #fbfbfb;
-  font-size: 0.34rem;
-  text-indent: 1.5em;
+  font-size: 0.32rem;
+  text-indent: 0.5em;
   display: block;
   white-space: nowrap;
   overflow: hidden;
@@ -2760,6 +2748,14 @@ canvas,
 .log-text h4:nth-of-type(5n + 4) {
   border-left: 4px solid #69bcf3;
   border-bottom: 1px solid #69bcf3;
+}
+.continar-left .log-text h5 {
+  text-indent: 0;
+  font-weight: normal;
+  font-size: 0.3rem;
+  border-bottom: 1px dashed #ccc;
+  padding: 0rem 0 0.2rem;
+  margin-bottom: 0.2rem;
 }
 .log-text ul li {
   text-indent: 0;
@@ -2792,7 +2788,6 @@ canvas,
 .reward-box-item,
 .reward-box .reward-box-item:nth-child(2) {
   display: inline-block;
-  margin: 0 1rem;
 }
 .reward-box {
   text-align: center;
@@ -2983,9 +2978,96 @@ canvas,
 
 /* ajax loading动画end */
 
+/* 文章评论框start */
+.post_content h3.comments-title {
+  text-align: center;
+  background: #eee;
+  border-radius: 0.08rem;
+  margin: 0.5rem auto 0.1rem;
+  padding: 0.1rem;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.post_content .form-control {
+  width: 100%;
+  border: 1px solid #eee;
+  height: 2rem;
+  margin: 0.2rem auto 0;
+  padding: 0.1rem;
+  background-color: transparent;
+  box-shadow: none;
+  -webkit-appearance: none;
+  outline: none;
+}
+.post_content .commentform-info input {
+  width: 100%;
+  border: 1px solid #eee;
+  margin: 0.1rem auto;
+  padding: 0.32rem;
+  height: 0.5rem;
+  border-radius: .08rem;
+}
+.post_content #submit {
+  background: #1890ff;
+  border-radius: 0.08rem;
+  color: #fff;
+  width: 100%;
+  border: 1px solid #eee;
+  margin: 0.1rem auto;
+  font-size: 0.3rem;
+  padding: 0.14rem;
+}
+.commentlist .comment {
+  overflow: hidden;
+  padding-top:0.2rem;
+}
+.commentlist .comment .media-left img {
+  width: 0.72rem;
+  height: 0.72rem;
+  border-radius: 100%;
+  float: left;
+  margin-right: 0.2rem;
+}
+.commentlist .comment .media-body p {
+  margin-top: 0.1rem;
+  float: right;
+  width: calc(100% - 0.92rem);
+  line-height: 0.4rem;
+  font-size: 0.28rem;
+  margin-bottom: 0;
+}
+.commentlist .comment .comment-metadata {
+  margin-top: 0.1rem;
+  float: right;
+  width: calc(100% - 0.92rem);
+  line-height: 0.4rem;
+  font-size: 0.28rem;
+}
+ol.children {
+  margin-top: 0.6rem;
+  /* border-top: 1px solid #eee; */
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.2rem;
+}
+.commentlist .comment:last-of-type ol.children:last-of-type{
+    border:0;
+}
+ol.commentlist {
+  margin: 0.2rem 0 0;
+}
+#comments .warning-text{
+    font-size: 0.28rem;
+}
+.media{
+  overflow: hidden;
+}
+/* 文章评论框end */
+
 .codecolorer,
 .codecolorer *,
 .codecolorer-container,
 .codecolorer-container * {
-  font: 0.3rem/0.5rem Monaco, Lucida Console, monospace !important;
+  font: 0.28rem/0.45rem Monaco, Lucida Console, monospace !important;
 }
