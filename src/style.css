@@ -154,7 +154,6 @@ i {
     height: 300px;
     margin: 0 auto;
     cursor: pointer;
-    background-image: url(./images/banner-1.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
