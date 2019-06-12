@@ -19,7 +19,7 @@
 <body>
 	<?php get_header(); ?>
 	<section class="mod-banner" id="js_banner">
-		<a href="<?php echo home_url(); ?>" target="_blank" class="mod-banner__img banner_1" id="banner_img" style="background: url(&quot;/wp-content/themes/Art_Blog/images/banner-3.jpg&quot;) center center no-repeat;"></a>
+		<a href="<?php echo home_url(); ?>" target="_blank" class="mod-banner__img banner_1" id="banner_img" style="background: url(background:https://weipxiu-1259402181.cos.ap-shanghai.myqcloud.com/images/banner-3.jpg) center center no-repeat;"></a>
 		<div class="mod-banner__navi">
 			<div class="js_banner_nav mod-banner_nav"></div>
 			<span class="mod-banner__nav-dot"><canvas id="dotCanvas"></canvas></span>
@@ -42,9 +42,9 @@
 			<!--移动端轮播start-->
 			<div class="swiper-container1">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide" style="https://weipxiu-1259402181.cos.ap-shanghai.myqcloud.com/images/banner3.png') no-repeat center top; background-size:100% 100%"></div>
-					<div class="swiper-slide" style="https://weipxiu-1259402181.cos.ap-shanghai.myqcloud.com/images/banner2.png') no-repeat center top; background-size:100% 100%"></div>
-					<div class="swiper-slide" style="https://weipxiu-1259402181.cos.ap-shanghai.myqcloud.com/images/banner1.png') no-repeat center top; background-size:100% 100%"></div>
+					<div class="swiper-slide" style="background:url('https://weipxiu-1259402181.cos.ap-shanghai.myqcloud.com/images/banner3.png') no-repeat center top; background-size:100% 100%"></div>
+					<div class="swiper-slide" style="background:url('https://weipxiu-1259402181.cos.ap-shanghai.myqcloud.com/images/banner2.png') no-repeat center top; background-size:100% 100%"></div>
+					<div class="swiper-slide" style="background:url('https://weipxiu-1259402181.cos.ap-shanghai.myqcloud.com/images/banner1.png') no-repeat center top; background-size:100% 100%"></div>
 				</div>
 				<div class="swiper-pagination"></div>
 			</div>
