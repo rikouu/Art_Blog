@@ -1925,12 +1925,10 @@ h2.title {
 
 p.data-l {
   width: 100%;
-  height: 30px;
-  line-height: 30px;
   text-align: center;
   margin: 0 auto;
-  padding-bottom: 40px;
   border-bottom: 1px dashed #bbb;
+  padding-bottom: 0.25rem;
 }
 
 p.data-l > span {
@@ -1939,7 +1937,7 @@ p.data-l > span {
   font-size: 0.24rem;
 }
 
-p.data-l > span:last-child {
+p.data-l > span.recommend{
   display: none;
 }
 

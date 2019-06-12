@@ -1685,6 +1685,9 @@ p.data-l > span {
   margin: 0px 5px;
   color: #666;
 }
+p.data-l > span.recommend{
+  display: none;
+}
 p.data-l span span {
   margin: 0;
   font-size: 12px;

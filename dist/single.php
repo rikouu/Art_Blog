@@ -50,26 +50,33 @@
                             <?php the_title(); ?>
                         </h2>
                         <p class="data-l">
-                        <span>
-                            <i class="iconfont icon-shijian"></i>
-                                <?php the_time('Y年m月d日') ?>
+                            <span>
+                                <?php echo the_time('Y-m-d')?>
                             </span>
                             <span>
-                            <i class="iconfont icon-zuozhe"></i>
-                            <?php the_author_nickname(); ?>
+                                分类：<?php
+                                    $category = get_the_category();
+                                    echo $category[0]->cat_name;
+                                ?>
                             </span>
                             <span>
-                                <i class="iconfont icon-kanguo"></i>
-                                <?php echo getPostViews(get_the_ID()); ?>次浏览</span>
+                                作者：<?php the_author_nickname(); ?>
+                            </span>
                             <span>
-                                <!-- <a href="<?php the_permalink(); ?> ">
+                                阅读（<?php echo getPostViews(get_the_ID()); ?>）
+                            </span>
+                            <span class="recommend">
+                                <?php baidu_record(); ?>
+                            </span>
+                            <!--<span>
+                                 <a href="<?php the_permalink(); ?> ">
                                     <i class="iconfont icon-pinglun2"></i>
                                     <span id="url::<?php the_permalink(); ?>" class="cy_cmt_count"></span>
                                     <script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cyt2b1NqT">
                                     </script>
                                     条评论
-                                </a> -->
-                            </span>
+                                </a> 
+                            </span>-->
                         </p>
                     </div>
 
