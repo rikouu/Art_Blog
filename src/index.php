@@ -42,9 +42,9 @@
 			<!--移动端轮播start-->
 			<div class="swiper-container1">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide" style="background:url('<?php bloginfo('template_url'); ?>/images/banner1.png') no-repeat center top; background-size:100% 100%"></div>
-					<div class="swiper-slide" style="background:url('<?php bloginfo('template_url'); ?>/images/banner2.png') no-repeat center top; background-size:100% 100%"></div>
-					<div class="swiper-slide" style="background:url('<?php bloginfo('template_url'); ?>/images/banner3.png') no-repeat center top; background-size:100% 100%"></div>
+					<div class="swiper-slide" style="https://weipxiu-1259402181.cos.ap-shanghai.myqcloud.com/images/banner3.png') no-repeat center top; background-size:100% 100%"></div>
+					<div class="swiper-slide" style="https://weipxiu-1259402181.cos.ap-shanghai.myqcloud.com/images/banner2.png') no-repeat center top; background-size:100% 100%"></div>
+					<div class="swiper-slide" style="https://weipxiu-1259402181.cos.ap-shanghai.myqcloud.com/images/banner1.png') no-repeat center top; background-size:100% 100%"></div>
 				</div>
 				<div class="swiper-pagination"></div>
 			</div>

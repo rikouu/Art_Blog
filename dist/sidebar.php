@@ -3,7 +3,7 @@
     <video id="my-video" preload="none" class="video-js vjs-default-skin vjs-big-play-centered" controls preload width="308" height="173"
         style="margin-top:0" poster="<?php bloginfo('template_url'); ?>/images/video_bg.png" width="308" height="173"
         data-setup="{}">
-        <source src="https://lijun2017.oss-cn-shanghai.aliyuncs.com/music/2018.mp4" type="video/mp4">
+        <source src="https://weipxiu-1259402181.cos.ap-shanghai.myqcloud.com/music/2018.mp4" type="video/mp4">
         </source>
         <p class="vjs-no-js"> 要查看此视频，请启用JavaScript，并考虑升级到Web浏览器版本。 <a href="https://videojs.com/html5-video-support/"
                 target="_blank">supports HTML5 video</a> </p>
