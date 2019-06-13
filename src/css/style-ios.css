@@ -1980,6 +1980,7 @@ td.line-numbers {
 .log-text * {
   line-height: 0.5rem;
   word-wrap: break-word;
+  font-size: 0.28rem;
 }
 
 .log-text p {

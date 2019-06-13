@@ -157,7 +157,7 @@
 				<h3>博客介绍</h3>
 				<div class="textwidget">
 					<p class="clearfix">
-						前端博客: <?php echo get_option('weipxiu_options')['domain']; ?>，我们关注Web前端开发技术，移动前端开发，前端资讯，同时分享前端资源和工具等，期待你的参与,<a rel="nofollow" target="_blank" href="/?cat=10">了解更多..</a>
+						前端博客: <?php echo get_option('weipxiu_options')['domain']; ?>，我们关注Web前端开发技术，移动前端开发，前端资讯，同时分享前端资源和工具等，期待你的参与，<a rel="nofollow" target="_blank" href="/about">了解更多..</a>
 					</p>
 					<ul class="social">
 						<li class="weibo">
