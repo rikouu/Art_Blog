@@ -51,7 +51,7 @@
     <div class="continar">
 
         <div class="continar-left" id="details" style="border:0; padding:0; float:none; margin:0 auto; background: transparent;">
-            <script type="text/javascript">
+            <!-- <script type="text/javascript">
                 ( function() {
                     document.write( unescape( '%3Cdiv id="bdcs"%3E%3C/div%3E' ) );
                     var bdcs = document.createElement( 'script' );
@@ -61,7 +61,7 @@
                     var s = document.getElementsByTagName( 'script' )[ 0 ];
                     s.parentNode.insertBefore( bdcs, s );
                 } )();
-            </script>
+            </script> -->
 
             <?php//这里是搜索功能 ?>
                 <?php if ( have_posts() ) : ?>
