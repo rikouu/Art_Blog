@@ -12,6 +12,8 @@
 	}
 	?>
 </title>
+<!-- Avoid duplicate inclusion in search engines -->
+<link rel="canonical" href="https://www.weipxiu.com/" />
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/swiper.min.css">
 <?php require ('common.php'); ?>
 </head>
