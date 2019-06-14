@@ -14,19 +14,6 @@
     ?>
     <?php require ('common.php'); ?>
     <link rel="stylesheet" href="/wp-content/plugins/codecolorer/codecolorer.css?ver=0.9.16">
-    <style>
-        .continar-left {
-            border-radius: 5px;
-            background: #fff;
-            padding: 15px;
-            border: 1px solid #e6e6e6;
-        }
-        @media screen and (min-width:980px) {
-            .continar-left {
-                margin-top: 50px;
-            }
-        }
-    </style>
 </head>
     <body>
         <!--头部文件引用开始-->
@@ -38,7 +25,7 @@
             <?php
 		  if (have_posts()) : while (have_posts()) : the_post();setPostViews(get_the_ID());
 		 ?>
-                <div class="continar-left" id="ajax_centent">
+                <div class="continar-left single" id="ajax_centent">
                     <!-- 面包屑导航 -->
                     <div class="mod-crumbs">
                         <span class="mod-breadcrumb">

@@ -36,7 +36,6 @@
 
 <script src="<?php bloginfo('template_url'); ?>/js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/rem.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/video.js/video.min.js"></script>
 <!-- 判断低版本IE -->
 <script>
 	 /*if ((navigator.userAgent.indexOf('MSIE') >= 0) 

@@ -760,7 +760,10 @@ img {
   margin: auto;
   max-width: 100%;
 }
-
+.continar .single{
+    background: #fff;
+    padding: 0.3rem;
+}
 .continar .continar-left .mod-crumbs {
   display: none;
 }
@@ -1917,7 +1920,6 @@ h2.title {
   font-weight: bold;
   text-align: center;
   line-height: 0.7rem;
-  margin-top: 0.2rem;
   color: #333;
   display: block;
   text-align: center;

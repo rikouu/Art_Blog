@@ -606,6 +606,11 @@ img {
   -ms-transform: translateX(0px);
   float: none;
 }
+.continar .single{
+  background: #fff;
+  padding: 0.3rem;
+  border: 1px solid #e6e6e6;
+}
 .article_not{
   position: fixed;
   top: 0;
