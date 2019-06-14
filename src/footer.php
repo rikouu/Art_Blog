@@ -159,6 +159,7 @@
 <!-- 在线客服结束 -->
 
 <!-- <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-1" count="99" src="/js/canvas-nest.min.js"></script> -->
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.lazyload.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/video.js/video.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/main_min.js"></script>
 

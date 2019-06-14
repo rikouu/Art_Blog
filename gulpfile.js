@@ -154,7 +154,7 @@ gulp.task("jsConcat", function () {
         .pipe(gulp.dest(target+"/js"))
     
     //特例
-    gulp.src(["src/js/rem.js","src/js/date.js","src/js/jquery-2.1.4.min.js"])
+    gulp.src(["src/js/rem.js","src/js/date.js","src/js/jquery-2.1.4.min.js","src/js/jquery.lazyload.js"])
         .pipe(gulp.dest(target+"/js"))
     
     //首页

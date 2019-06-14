@@ -31,7 +31,7 @@
 						<a class="read-more" href="<?php the_permalink(); ?>" target="_blank">
 							<?php
 								if (has_post_thumbnail())
-									the_post_thumbnail();
+									echo _get_post_thumbnail();
 								else
 									echo "<img src=". catch_that_image() . ">";
 							?>
@@ -49,7 +49,7 @@
 						</h2>
 						<?php
 							if (has_post_thumbnail())
-								the_post_thumbnail();
+								echo _get_post_thumbnail();
 							else
 								echo "<img src=". catch_that_image() . ">";
 						?>

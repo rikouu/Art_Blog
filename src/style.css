@@ -1359,13 +1359,13 @@ i {
 .continar .continar-left {
     width: 850px;
     float: left;
-    border-radius: 4px;
-    background: #fff;
 }
 .continar .single{
     padding: 15px;
     border: 1px solid #e6e6e6;
     margin-top:50px;
+    border-radius: 4px;
+    background: #fff;
 }
 .continar .continar-left-top {
     width: 100%;
@@ -1538,10 +1538,6 @@ i {
     -webkit-transform: translate3d(0, 0px, 0);
     transform: translate3d(0, 0px, 0);
 }
-.continar-left>.text:nth-last-of-type(2) {
-    border: 1px solid #eaeaea;
-}
-
 .continar-left>.text:after {
     content: '';
     position: absolute;
@@ -2560,9 +2556,6 @@ div.com-art ul li {
 .continar-left p.l i,
 .continar-left p.l span,
 .continar-left p.l>span a,
-.continar-left div.key-w {
-    font-size: 12px;
-}
 .continar-left p.l .icon-shijian{
     font-size: 13px;
 }
@@ -2577,8 +2570,11 @@ div.com-art ul li {
 }
 
 .continar-left div.key-w {
-    padding:25px 0 10px;
-    border-top: 1px solid #f1f1ef;
+    padding: 0px 0 30px;
+    margin-bottom:15px;
+    border-bottom: 1px solid #f1f1ef;
+    font-size: 12px;
+    text-align: center;
 }
 
 .continar-left div.key-w .single_lable {
@@ -2592,11 +2588,11 @@ div.com-art ul li {
 .continar-left div.key-w a {
     display: inline-block;
     padding: 0px 7px;
-    margin: 0 4px 4px 0;
+    margin-bottom: 4px;
     color: #fff;
-    background-color: #1890ff;
     opacity: 0.85;
     line-height: 22px;
+    font-size: smaller;
 }
 
 .continar-left>h2 {
@@ -2870,6 +2866,7 @@ p.data-l span.recommend a:hover{
 
 .continar-left .log-text .copy {
     margin-top: 25px;
+    opacity: 0.8;
 }
 
 p.text-post {
@@ -2937,11 +2934,11 @@ p.text-post {
 }
 
 div.key-w a {
-    background: #1890ff;
+    background: #45B6F7;
     color: #fff;
     margin: 0 5px;
     padding: 2px 8px;
-    border-radius: 2px;
+    border-radius: 4px;
     -webkit-transition: all 0.1s;
     -o-transition: all 0.1s;
     transition: all 0.1s;
@@ -5450,8 +5447,7 @@ code {
 
 .post-actions {
     text-align: center;
-    padding: 15px 0;
-    margin: 25px 0;
+    margin: 30px 0 25px;
     clear: both;
 }
 
@@ -5471,9 +5467,18 @@ code {
 .post-actions .action.action-like {
     background-color: #1890ff;
 }
+.post-actions .action.action-like a .iconfont {
+    display: inline-block;
+    margin-right: 3px;
+    font-size:12px;
+}
 
 .continar-left .log-text .post-actions a {
     text-decoration: none;
+}
+
+.continar-left .log-text .post-actions a .iconfont{
+    font-size: 12px;
 }
 
 .post-actions .action .fa {
@@ -5490,25 +5495,18 @@ code {
 .post-actions .action {
     display: inline-block;
     opacity: 0.8;
-    padding: 6px 12px;
-    height: 20px;
-    line-height: 20px;
-    border-radius: 2px;
+    padding: 6px 15px;
+    height: 21px;
+    border-radius: 15px;
     color: #fff;
     font-size: 14px;
     margin: 0 7px;
     box-sizing: content-box;
+    transition: opacity 0.5s;
 }
 
 .post-actions .action.action-rewards {
-    background-color: #f7b10d;
-}
-
-.post-actions .action .fa {
-    font-size: 14px;
-    position: relative;
-    top: 1px;
-    margin-right: 2px;
+    background-color: #ec6149;
 }
 
 .post-actions .action:hover {

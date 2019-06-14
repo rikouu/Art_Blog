@@ -39,7 +39,7 @@
 	</section>
 
 	<!-- 正文区域start -->
-	<section class="continar">
+	<section class="continar" id="lazycontainer">
 		<div id="mobil">
 			<!--移动端轮播start-->
 			<div class="swiper-container1">
@@ -214,7 +214,7 @@
 							<a class="read-more" href="<?php the_permalink(); ?>" target="_blank">
 								<?php
 									if (has_post_thumbnail())
-										the_post_thumbnail();
+										echo _get_post_thumbnail();
 									else
 										echo "<img src=". catch_that_image() . ">";
 								?>
@@ -228,10 +228,10 @@
 									<?php the_title(); ?></a>
 							</h2>
 							<?php
-								if (has_post_thumbnail())
-									the_post_thumbnail();
-								else
-									echo "<img src=". catch_that_image() . ">";
+									if (has_post_thumbnail())
+										echo _get_post_thumbnail();
+									else
+										echo "<img src=". catch_that_image() . ">";
 							?>
 							<h3>
 								<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 190, "..."); ?>

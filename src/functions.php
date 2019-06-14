@@ -18,7 +18,6 @@ register_sidebar(array(
 
 //注册特色图像
 add_theme_support('post-thumbnails');
-set_post_thumbnail_size(220, 140, true); // 图片宽度与高度
 
 // 获取文章第一张缩略图 
 function catch_that_image() {
@@ -34,6 +33,26 @@ function catch_that_image() {
 	}
 	return $first_img;
 }  
+//重写特色图像
+function _get_post_thumbnail($size = 'thumbnail', $class = 'thumb') {
+	global $post;
+	$r_src = '';
+	if (has_post_thumbnail()) {
+        $domsxe = get_the_post_thumbnail();
+        preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $domsxe, $strResult, PREG_PATTERN_ORDER);  
+        $images = $strResult[1];
+        foreach($images as $src){
+        	$r_src = $src;
+            break;
+        }
+	}
+	if( $r_src ){
+    	return sprintf('<img data-original="%s" alt="" class="Lazy_load">', $r_src, $post->post_title.'-'.get_bloginfo('name'));
+    }else{
+    	//return catch_that_image()
+    }
+}
+set_post_thumbnail_size(220, 140, true); // 图片宽度与高度
 ?>
 <?php //控制分页页面，每个页面所显示的文章数量
 // function custom_posts_per_page($query){

@@ -1054,7 +1054,7 @@ ul.post-categories li:first-child {
   height: 100%
 }
 .continar-left p.l{
-  width: calc(100% - 2.2rem);
+  width: calc(100% - 2rem);
   height: 0.32rem;
   line-height: 0.32rem;
   float: right;
@@ -1072,7 +1072,7 @@ ul.post-categories li:first-child {
 display: none
 }
 .text_right>h2 + img{
-    max-width: 2rem;
+    max-width: 1.8rem;
     max-height: 1.2rem;
     float: left;
 }

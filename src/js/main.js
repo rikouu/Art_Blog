@@ -4,6 +4,12 @@ $(function () {
         $("body > .continar").css("margin-top", "88px");
     }
 
+    //特色图片懒加载
+    $("img.Lazy_load").lazyload({
+        placeholder:"/wp-content/themes/Art_Blog/images/Lazy_load.png",
+        effect:"fadeIn"  
+    });
+
     //文章分类没有资源时候404提示
     if($(".continar-left .article_not").length > 0){
         $("body").css({"background":"#fff"});
@@ -718,6 +724,12 @@ $(function () {
             $("body > .continar").append(objec);
             $(".footer").css({ "display": "block" });
         }, 500)
+
+        //特色图片懒加载，移动端需要设置滚动事件
+        $("img.Lazy_load").lazyload({
+            placeholder:"/wp-content/themes/Art_Blog/images/Lazy_load.png",
+            container: $("body > .continar")  
+        });
     }
 
     // 当窗口改变时候start

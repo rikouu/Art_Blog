@@ -81,18 +81,16 @@
                         <div class="post-actions">
                             <span class="post-like action action-like">
                                 <a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if(isset($_COOKIE['bigfa_ding_'.$post->ID])) echo ' done';?>">
-                                    <i class="iconfont icon-damuzhi1"></i>赞(	  
-                                    <span class="count">   
+                                    <i class="iconfont icon-damuzhi1"></i>赞(<span class="count">   
                                         <?php if( get_post_meta($post->ID,'bigfa_ding',true) ){            
                                                 echo get_post_meta($post->ID,'bigfa_ding',true);
                                             } else {
                                                 echo '0';
-                                        }?>
-                                    </span>)  
+                                        }?></span>)  
                                 </a>   
                             </span>
                             <a href="javascript:;" class="action action-rewards" data-event="rewards">
-                                <i class="fa fa-jpy"></i> 打赏
+                                <i class="iconfont icon-jiage1"></i> 打赏
                                 <span class="tooltip-content">
                                     <span class="tooltip-text">
                                         <span class="tooltip-inner">
@@ -160,7 +158,7 @@
                     <!--文章打赏结束-->
                     <div class="key-w">
                         <div class="single_lable">
-                            <i class="iconfont icon-biaoqian" style="padding-right:3px"></i>标签：</div>
+                            <i class="iconfont icon-biaoqian" style="padding-right:7px"></i>标签：</div>
                         <?php the_tags('','',''); ?>
                     </div>
                     <p class="text-post text-post-top">
