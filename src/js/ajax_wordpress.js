@@ -150,6 +150,17 @@ $(function () {
                             jQuery('#' + ajaxcontent).css("position", "");
                             jQuery('#' + ajaxcontent).css("left", "");
                             jQuery('#' + ajaxcontent).fadeTo("slow", 1, function () { });
+                            
+                            //PC端ajax成功后信息流图片懒加载
+                            $("img.Lazy_load").lazyload({
+                                placeholder:"/wp-content/themes/Art_Blog/images/Lazy_load.png",
+                                effect:"fadeIn"  
+                            });
+                            //移动端ajax成功后信息流图片懒加载
+                            $("img.Lazy_load").lazyload({
+                                placeholder:"/wp-content/themes/Art_Blog/images/Lazy_load.png",
+                                container: $("body > .continar")
+                            });
                         },
                         error: function (jqXHR, textStatus, errorThrown) {
                             ajaxisLoad = false;
