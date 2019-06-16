@@ -6,8 +6,7 @@ $(function () {
 
     //特色图片懒加载
     $("img.Lazy_load").lazyload({
-        placeholder:"/wp-content/themes/Art_Blog/images/Lazy_load.png",
-        effect:"fadeIn"  
+        effect:"show"  
     });
 
     //文章分类没有资源时候404提示
@@ -727,7 +726,6 @@ $(function () {
 
         //特色图片懒加载，移动端需要设置滚动事件
         $("img.Lazy_load").lazyload({
-            placeholder:"/wp-content/themes/Art_Blog/images/Lazy_load.png",
             container: $("body > .continar")  
         });
     }

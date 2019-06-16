@@ -153,12 +153,10 @@ $(function () {
                             
                             //PC端ajax成功后信息流图片懒加载
                             $("img.Lazy_load").lazyload({
-                                placeholder:"/wp-content/themes/Art_Blog/images/Lazy_load.png",
-                                effect:"fadeIn"  
+                                effect:"show"  
                             });
                             //移动端ajax成功后信息流图片懒加载
                             $("img.Lazy_load").lazyload({
-                                placeholder:"/wp-content/themes/Art_Blog/images/Lazy_load.png",
                                 container: $("body > .continar")
                             });
                         },

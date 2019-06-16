@@ -94,7 +94,7 @@
 						</div>
 						<img class="carousel_small_pic" width="110" height="85" src="<?php bloginfo('template_url'); ?>/images/be_busy.jpg" alt="<?php echo get_bloginfo('name'); ?>">
 					</a>
-					<a href="/category/timemachine" target="_blank" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_long">
+					<a href="/time-machine" target="_blank" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_long">
 						<div class="carousel_small_str txt_bg04">
 							<h3 class="img_txt_title">MV</h3>
 							<p class="img_p">时光<br>在画面里穿梭</p>

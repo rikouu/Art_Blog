@@ -47,7 +47,7 @@ function _get_post_thumbnail($size = 'thumbnail', $class = 'thumb') {
         }
 	}
 	if( $r_src ){
-    	return sprintf('<img data-original="%s" alt="" class="Lazy_load">', $r_src, $post->post_title.'-'.get_bloginfo('name'));
+    	return sprintf('<img data-original="%s" src="/wp-content/themes/Art_Blog/images/Lazy_load.png" border="0" alt="" class="Lazy_load">', $r_src, $post->post_title.'-'.get_bloginfo('name'));
     }else{
     	//return catch_that_image()
     }
