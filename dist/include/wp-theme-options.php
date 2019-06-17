@@ -152,7 +152,7 @@ function themeoptions_page() {
             </div>
             <div class="fr right-wrap">
               <img src="<?php echo $a_options['logo']; ?>" class="preview-img" style="max-width: 100px;" alt="">
-              <span class="warn" style="display:block">*前台Logo最佳尺寸135*45</span>
+              <span class="warn" style="display:block">*前台Logo最佳尺寸135*45（如若感觉不够清晰，可使用2倍尺寸图片，即270*90）</span>
             </div>
           </div>
         </div>
