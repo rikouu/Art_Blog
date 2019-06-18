@@ -1893,7 +1893,9 @@ i {
 .daily-list>p:last-child {
     padding-left: 15px;
 }
-
+.daily-list>p a{
+    color:#1890ff
+}
 .widget-title {
     margin-bottom: 8px;
     border-bottom: 1px solid #f1f1ef;
@@ -6543,7 +6545,7 @@ label {
 }
 .login_alert_box div {
     color: #fff;
-    font-size: 26px;
+    font-size: 24px;
     line-height: 80px;
     cursor: default;
 }

@@ -41,7 +41,27 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
-          <label class="fl left-wrap">侧边栏统计功能：</label>
+          <label class="fl left-wrap">雪花背景特效：</label>
+          <div class="fr right-wrap">
+            <label for="snow-flake">开</label>
+            <input
+              type="radio"
+              id="snow-flake"
+              name="snow-flake"
+              value="on" <?php if($a_options['snowflake'] == 'on') echo 'checked'; ?>
+            >
+            <label for="aside-count-off">关</label>
+            <input
+              type="radio"
+              id="snow-flake"
+              name="snow-flake"
+              value="off" <?php if($a_options['snowflake'] == 'off' || $a_options['snowflake'] == '') echo 'checked'; ?>
+            >
+          </div>
+        </div>
+
+        <div class="row clearfix">
+          <label class="fl left-wrap">侧边栏站点统计：</label>
           <div class="fr right-wrap">
             <label for="aside-count-on">开</label>
             <input
@@ -59,6 +79,7 @@ function themeoptions_page() {
             >
           </div>
         </div>
+
         <div class="row clearfix">
           <label class="fl left-wrap">首页电子邮件订阅：</label>
           <div class="fr right-wrap">
@@ -177,7 +198,7 @@ function themeoptions_page() {
             </div>
             <div class="fr right-wrap">
               <img src="<?php echo $a_options['label_logo']; ?>" class="preview-img" style="max-width: 100px;" alt="">
-              <span class="warn" style="display:block">*浏览器标签图标最佳尺寸16*16或32*32</span>
+              <span class="warn" style="display:block">*浏览器标签窗口图标，最佳尺寸16*16或32*32</span>
             </div>
           </div>
         </div>
@@ -201,11 +222,12 @@ function themeoptions_page() {
             </div>
             <div class="fr right-wrap">
               <img src="<?php echo $a_options['thumbnail']; ?>" class="preview-img" style="max-width: 100px;" alt="">
+              <span class="warn" style="display:block">*默认信息流缩略图最佳尺寸220*140，展示规则：先取文章中设置的特色图片，如果没有，取文章内容首张图片，再没有将启用当前默认缩略图</span>
             </div>
           </div>
         </div>
 
-        <div class="row">
+        <div class="row" style="display:none">
           <div class="margin-top-15 clearfix">
             <label class="fl left-wrap" for="">banner大图：</label>
             <div class="fr right-wrap">
@@ -255,7 +277,7 @@ function themeoptions_page() {
 				<?php
 					for ($i = 1; $i < 4; $i++) {
 				?>
-					<div class="row">
+					<div class="row" style="display:none">
 	          <div class="margin-top-15 clearfix">
 	            <label class="fl left-wrap" for="">banner<?php echo $i; ?>：</label>
 	            <div class="fr right-wrap">
@@ -426,6 +448,7 @@ function themeoptions_page() {
           <label class="fl left-wrap" for="link">友情链接：</label>
           <div class="fr right-wrap">
             <textarea id="link" name="link" rows="15" cols="100"><?php echo $a_options['link']; ?></textarea>
+            <span class="warn" style="display:block">*每条链接占一行</span>
           </div>
         </div> -->
       </div>
@@ -457,6 +480,7 @@ function themeoptions_page() {
     $options = array(
       'update_themeoptions' => 'true',
       'label_logo' => $_POST['label-logo'],
+      'snowflake' => $_POST['snow-flake'],
       'aside_count' => $_POST['aside-count'],
       'switch_https' => $_POST['switch_https'],
       'text_pic' => $_POST['text-pic'],

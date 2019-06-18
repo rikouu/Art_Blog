@@ -1014,6 +1014,9 @@ p.clearfix a {
   margin-bottom: 0.2rem;
   line-height: 0.4rem;
 }
+.daily-list>p a{
+  color:#1890ff
+}
 .widget ul li {
   line-height: 0.6rem;
   margin-bottom: 0.08rem;

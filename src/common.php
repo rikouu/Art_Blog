@@ -57,7 +57,3 @@
 		s.parentNode.insertBefore(hm, s);
 	})();
 </script>
-
-<!-- 雪花start -->
-<!-- <div id="snowMask"></div> -->
-<!-- 雪花end -->

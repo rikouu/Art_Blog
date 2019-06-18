@@ -184,19 +184,19 @@
 			<!-- 邮件订阅start -->
 			<?php
 			if (get_option('weipxiu_options')['text_pic'] == 'on') {
-				?>
-				<div class="inner-box">
-					<div class="rssbook">
-						<h3 class="info">您也可以通过电子邮件订阅每日的更新，不定时为您推送优质文章</h3>
-						<p>我们不会公开您的邮箱，您可以随时取消订阅</p>
-						<div class="mailInput">
-							<?php echo wpm_form(1); ?>
+					?>
+					<div class="inner-box">
+						<div class="rssbook">
+							<h3 class="info">您也可以通过电子邮件订阅每日的更新，不定时为您推送优质文章</h3>
+							<p>我们不会公开您的邮箱，您可以随时取消订阅</p>
+							<div class="mailInput">
+								<?php echo wpm_form(1); ?>
+							</div>
 						</div>
 					</div>
-				</div>
-			<?php
-		}
-		?>
+				<?php
+			}
+			?>
 			<!-- 邮件订阅end -->
 
 			<!-- 文章start -->

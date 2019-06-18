@@ -1205,7 +1205,9 @@ p.clearfix a {
   line-height: .56rem;
   color: #5e5e5e;
 }
-
+.daily-list>p a{
+  color:#1890ff
+}
 .widget ul li {
   height: 0.6rem;
   line-height: 0.6rem;

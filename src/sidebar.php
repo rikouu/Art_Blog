@@ -18,7 +18,7 @@
         <ul class="social">
             <ul class="social">
                 <li class="weibo">
-                    <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=343049466&site=qq&menu=yes"><i class="iconfont icon-qq"></i>QQ</a>
+                    <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=<?php echo get_option('weipxiu_options')['QQ-number'];?>&site=qq&menu=yes"><i class="iconfont icon-qq"></i>QQ</a>
                 </li>
                 <li class="qq">
                     <a target="_blank" href="https://jq.qq.com/?_wv=1027&k=4BemYKg" rel="nofollow" class="top-tip"
@@ -204,7 +204,7 @@
 <div class="widget friendship">
     <div class="daily-list">
         <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-pengyouwang"></i>友情链接</a></h3>
-        <p>他们同样是一群网虫，却不是每天泡在网上游走在淘宝和网游之间、刷着本来就快要透支的信用卡。他们或许没有踏出国门一步，但同学却不局限在一国一校，而是遍及全球！
+        <p>他们同样是一群网虫，却不是每天泡在网上游走在淘宝和网游之间、刷着本来就快要透支的信用卡。他们或许没有踏出国门一步，但同学却不局限在一国一校，而是遍及全球！<a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=<?php echo get_option('weipxiu_options')['QQ-number'];?>@qq.com" target="_blank">申请交换友链</a>
         </p>
         <ul class="friendsChain">
             <?php wp_list_bookmarks('title_li=&categorize=0'); ?>
@@ -214,54 +214,60 @@
 <!-- 友情链接end -->
 
 <!-- 网站统计start -->
-<div class="widget" id="web-tj">
-    <div class="daily-list">
-        <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-icon"></i>站点统计</a></h3>
-        <ul>
-            <li>文章总数：
-                <?php $count_posts = wp_count_posts(); echo $published_posts = $count_posts->publish; ?> 篇
-            </li>
-            <li>草稿数目：
-                <?php $count_posts = wp_count_posts(); echo $draft_posts = $count_posts->draft; ?> 篇
-            </li>
-            <li>分类数目：
-                <?php echo $count_categories = wp_count_terms('category'); ?> 个
-            </li>
-            <li>页面总数：
-                <!-- <?php $count_pages = wp_count_posts('page'); echo $page_posts = $count_pages->publish; ?> 个 -->
-                21 个
-            </li>
-            <li>评论总数：
-                <?php echo $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->comments");?> 条</li>
-            <li>链接总数：
-                <?php $link = $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->links WHERE link_visible = 'Y'"); echo $link; ?>
-                个
-            </li>
-            <li>标签总数：
-                <?php echo $count_tags = wp_count_terms('post_tag'); ?> 个
-            </li>
-            <li>建站时间：
-                <?php echo floor((time()-strtotime("2016-12-15"))/86400);?> 天
-            </li>
-            <li>注册用户：
-                <?php $users = $wpdb->get_var("SELECT COUNT(ID) FROM $wpdb->users"); echo $users; ?> 人
-            </li>
-            <li>访问总量：
-                <?php
-                    $counterFile = "counter.txt";
-                    $fp = fopen($counterFile,"a+");
-                    $num = fgets($fp,10);
-                    $num += 1;
-                    print ($num+8647865).' 次';
-                    fclose($fp);
-                    $fpp=fopen($counterFile,"w");
-                    fwrite($fpp, $num);
-                    fclose($fpp);
-                ?>
-            </li>
-            <li>最近更新：
-                <?php $last = $wpdb->get_results("SELECT MAX(post_modified) AS MAX_m FROM $wpdb->posts WHERE (post_type = 'post' OR post_type = 'page') AND (post_status = 'publish' OR post_status = 'private')");$last = date('Y年n月j日', strtotime($last[0]->MAX_m));echo $last; ?>
-            </li>
-        </ul>
+<?php
+  if (get_option('weipxiu_options')['aside_count'] == 'on') {
+    ?>
+      <div class="widget" id="web-tj">
+        <div class="daily-list">
+            <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-icon"></i>站点统计</a></h3>
+            <ul>
+                <li>文章总数：
+                    <?php $count_posts = wp_count_posts(); echo $published_posts = $count_posts->publish; ?> 篇
+                </li>
+                <li>草稿数目：
+                    <?php $count_posts = wp_count_posts(); echo $draft_posts = $count_posts->draft; ?> 篇
+                </li>
+                <li>分类数目：
+                    <?php echo $count_categories = wp_count_terms('category'); ?> 个
+                </li>
+                <li>页面总数：
+                    <!-- <?php $count_pages = wp_count_posts('page'); echo $page_posts = $count_pages->publish; ?> 个 -->
+                    21 个
+                </li>
+                <li>评论总数：
+                    <?php echo $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->comments");?> 条</li>
+                <li>链接总数：
+                    <?php $link = $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->links WHERE link_visible = 'Y'"); echo $link; ?>
+                    个
+                </li>
+                <li>标签总数：
+                    <?php echo $count_tags = wp_count_terms('post_tag'); ?> 个
+                </li>
+                <li>建站时间：
+                    <?php echo floor((time()-strtotime("2016-12-15"))/86400);?> 天
+                </li>
+                <li>注册用户：
+                    <?php $users = $wpdb->get_var("SELECT COUNT(ID) FROM $wpdb->users"); echo $users; ?> 人
+                </li>
+                <li>访问总量：
+                    <?php
+                        $counterFile = "counter.txt";
+                        $fp = fopen($counterFile,"a+");
+                        $num = fgets($fp,10);
+                        $num += 1;
+                        print ($num+8647865).' 次';
+                        fclose($fp);
+                        $fpp=fopen($counterFile,"w");
+                        fwrite($fpp, $num);
+                        fclose($fpp);
+                    ?>
+                </li>
+                <li>最近更新：
+                    <?php $last = $wpdb->get_results("SELECT MAX(post_modified) AS MAX_m FROM $wpdb->posts WHERE (post_type = 'post' OR post_type = 'page') AND (post_status = 'publish' OR post_status = 'private')");$last = date('Y年n月j日', strtotime($last[0]->MAX_m));echo $last; ?>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
+    <?php
+  }
+?>

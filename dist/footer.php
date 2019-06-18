@@ -164,7 +164,7 @@
       <i class="iconfont icon-guanbi"></i>
   </div>
     <div class="login_alert_box">
-      <div>注册会员，尽享成百上千套前端开发资源下载，赶紧来注册~
+      <div>注册会员，尽享成百上千套前端开发资源免费下载，赶紧来注册~
             <a href="/wp-login.php" rel="nofollow">会员登录</a>
             <span>或</span>
             <a href="/wp-login.php?action=register" class="register" rel="nofollow">注册会员</a> 
@@ -172,6 +172,16 @@
     </div>
 </div>
 <!-- 底部悬浮窗end -->
+
+<!-- 雪花start -->
+<?php
+  if (get_option('weipxiu_options')['snowflake'] == 'on') {
+    ?>
+      <div id="snowMask"></div>
+    <?php
+  }
+?>
+<!-- 雪花end -->
 
 <!-- <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-1" count="99" src="/js/canvas-nest.min.js"></script> -->
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.lazyload.js"></script>
