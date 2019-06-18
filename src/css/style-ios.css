@@ -3566,3 +3566,7 @@ ol.commentlist {
 .codecolorer, .codecolorer *, .codecolorer-container, .codecolorer-container *{
   font:0.3rem/.5rem Monaco, Lucida Console, monospace!important
 }
+/* 屏蔽底部登录注册悬浮窗 */
+.login_alert{
+  display: none;
+}
