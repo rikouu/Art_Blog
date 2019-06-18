@@ -30,23 +30,23 @@ $(function () {
             width: 1200,
             height: 300,
             images: [{
-                    url: 'https://weipxiu-1259402181.cos.ap-shanghai.myqcloud.com/images/banner-1.jpg',
+                    url: '/wp-content/themes/Art_Blog/images/banner-1.jpg',
                     link: '/?cat=29'
                 }, {
-                    url: 'https://weipxiu-1259402181.cos.ap-shanghai.myqcloud.com/images/banner-2.jpg',
+                    url: '/wp-content/themes/Art_Blog/images/banner-2.jpg',
                     link: '/'
                 }, {
-                    url: 'https://weipxiu-1259402181.cos.ap-shanghai.myqcloud.com/images/banner-3.jpg',
+                    url: '/wp-content/themes/Art_Blog/images/banner-3.jpg',
                     link: 'javascript:;'
                 }, {
-                    url: 'https://weipxiu-1259402181.cos.ap-shanghai.myqcloud.com/images/banner-4.jpg',
+                    url: '/wp-content/themes/Art_Blog/images/banner-4.jpg',
                     link: 'javascript:;'
                 }, {
-                    url: 'https://weipxiu-1259402181.cos.ap-shanghai.myqcloud.com/images/banner-5.jpg',
+                    url: '/wp-content/themes/Art_Blog/images/banner-5.jpg',
                     link: '/?cat=6'
                 },
                 {
-                    url: 'https://weipxiu-1259402181.cos.ap-shanghai.myqcloud.com/images/banner-6.jpg',
+                    url: '/wp-content/themes/Art_Blog/images/banner-6.jpg',
                     link: '/?p=1313'
                 }
             ],
