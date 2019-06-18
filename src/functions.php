@@ -348,24 +348,29 @@ function login_headertitle($title) {
 }
 add_filter('login_headertitle', 'login_headertitle');
 
-// 解决找回密码链接无效问题
-function reset_password_message($message, $key) {
-    if (strpos($_POST['user_login'], '@')) {
-        $user_data = get_user_by('email', trim($_POST['user_login']));
-    } else {
-        $login = trim($_POST['user_login']);
-        $user_data = get_user_by('login', $login);
+//WordPress新用户注册随机数学验证码
+function add_security_question_fields() {
+    //获取两个随机数, 范围0~9
+    $num1=rand(0,9);
+    $num2=rand(0,9);
+    //最终网页中的具体内容
+    echo "<p><label for='math' class='small'>验证码：$num1 + $num2 = ? </label><input type='text' name='sum' class='input' value='' size='25'>"
+    ."<input type='hidden' name='num1' value='$num1'>"
+    ."<input type='hidden' name='num2' value='$num2'></p>";}
+    add_action('register_form','add_security_question_fields');
+    add_action( 'register_post', 'add_security_question_validate', 10, 3 );
+    function add_security_question_validate( $sanitized_user_login, $user_email, $errors) {
+    $sum=$_POST['sum'];//用户提交的计算结果
+    switch($sum){
+        //得到正确的计算结果则直接跳出
+        case $_POST['num1']+$_POST['num2']:break;
+        //未填写结果时的错误讯息
+        case null:wp_die('错误：请输入验证码！');break;
+        //计算错误时的错误讯息
+        default:wp_die('错误：验证码错误,请重试！');
     }
-    $user_login = $user_data->user_login;
-    $msg = __('当前有请求重设如下帐号的密码：') . "\r\n\r\n";
-    $msg.= network_site_url() . "\r\n\r\n";
-    $msg.= sprintf(__('用户名：%s') , $user_login) . "\r\n\r\n";
-    $msg.= __('若这不是您本人要求的，请忽略本邮件，一切如常。') . "\r\n\r\n";
-    $msg.= __('要重置您的密码，请打开下面的链接：') . "\r\n\r\n";
-    $msg.= network_site_url("wp-login.php?action=rp&key=$key&login=" . rawurlencode($user_login) , 'login');
-    return $msg;
 }
-add_filter('retrieve_password_message', reset_password_message, null, 2);
+add_action( 'add_security_question','register_form' );
 
 //添加百度是否收录(php baidu_record())
 function baidu_check($url){
