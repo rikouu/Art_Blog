@@ -344,7 +344,7 @@ function login_headerurl($url) {
 }
 add_filter('login_headerurl', 'login_headerurl');
 function login_headertitle($title) {
-    return __('唯品秀');
+    return __(''); //输出标题，当前去掉了输出空
 }
 add_filter('login_headertitle', 'login_headertitle');
 
