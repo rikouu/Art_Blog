@@ -1031,7 +1031,7 @@ ul.post-categories li:first-child {
 }
 
 .text h3 {
-  width: calc(100% - 2.2rem);
+  width: calc(100% - 2rem);
   float: right;
   line-height: 0.38rem;
   color: #999;
