@@ -1206,7 +1206,8 @@ p.clearfix a {
   color: #5e5e5e;
 }
 .daily-list>p a{
-  color:#1890ff
+  color:#1890ff;
+  font-size:0.28rem;
 }
 .widget ul li {
   height: 0.6rem;

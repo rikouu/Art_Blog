@@ -133,16 +133,16 @@
                                         <span class="tooltip-text">
                                             <span class="tooltip-inner">
                                                 <p class="reward-p">
-                                                    <i class="icon icon-quo-left"></i>谢谢你请我吃鸡腿*^_^*
+                                                    <i class="icon icon-quo-left"></i><?php echo get_option('weipxiu_options')['reward_text'];?>
                                                     <i class="icon icon-quo-right"></i>
                                                 </p>
                                                 <div class="reward-box">
                                                     <div class="reward-box-item">
-                                                        <img class="reward-img" src="<?php bloginfo('template_url'); ?>/images/alipay.png">
+                                                        <img class="reward-img" src="<?php echo get_option('weipxiu_options')['alipay'];?>">
                                                         <span class="reward-type">支付宝</span>
                                                     </div>
                                                     <div class="reward-box-item">
-                                                        <img class="reward-img" src="<?php bloginfo('template_url'); ?>/images/weixin.png">
+                                                        <img class="reward-img" src="<?php echo get_option('weipxiu_options')['wechatpay'];?>">
                                                         <span class="reward-type">微信</span>
                                                     </div>
                                                 </div>
