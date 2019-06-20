@@ -329,7 +329,7 @@ img {
 .nav ul li a span.hover i {
   color: #1890ff;
 }
-/*二级菜单开始*/
+/*二级菜单start*/
 .nav {
   position: relative;
 }
@@ -363,14 +363,14 @@ img {
   color: #000;
   transition: all 0.1s;
 }
-/*二级菜单结束*/
+/*二级菜单end*/
 /*控制导航图标start*/
 .nav ul li span a i {
   display: inline-block;
   margin-left: 3px;
 }
 /*控制导航图标end*/
-/*搜索按钮开始*/
+/*搜索按钮start*/
 .navto-search {
   position: absolute;
   right: 0;
@@ -386,7 +386,7 @@ img {
   font-size: 16px;
   color: #666;
 }
-/*搜索按钮结束*/
+/*搜索按钮end*/
 
 /*跳跃的Logostart*/
 @keyframes Top {
@@ -509,7 +509,7 @@ img {
     -ms-transform: translateY(0px);
     opacity: 1;
   }
-} /*吸顶盒导航开始*/
+} /*吸顶盒导航start*/
 @keyframes box {
   0% {
     opacity: 0;
@@ -529,7 +529,7 @@ img {
     opacity: 1;
     height: 80px;
   }
-} /*吸顶盒导航结束*/
+} /*吸顶盒导航end*/
 
 #Logo {
   width: 140px;
@@ -889,7 +889,7 @@ ul.post-categories li:first-child {
   display: none;
 }
 
-/*右侧区域开始*/
+/*右侧区域start*/
 .continar-right {
   width: 100%;
   height: auto;
@@ -975,7 +975,7 @@ p.clearfix a {
   font-size: 0.36rem;
   color: #fff;
 }
-/*热门文章开始*/
+/*热门文章start*/
 .widget {
   background: #fff;
   margin-bottom: 0.3rem;
@@ -1113,9 +1113,9 @@ div.com-art ul li {
 .widget ul li:nth-child(3) em {
   background: #1890ff;
 }
-/*热门文章结束*/
+/*热门文章end*/
 
-/*技术分类开始*/
+/*技术分类start*/
 .classif {
   clear: both;
   position: relative;
@@ -1154,10 +1154,10 @@ div.com-art ul li {
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
 }
-/*技术分类结束*/
-/*右侧区域结束*/
+/*技术分类end*/
+/*右侧区域end*/
 
-/*底部分页开始*/
+/*底部分页start*/
 .pagination {
   margin-bottom: 20px;
   padding: 20px;
@@ -1197,11 +1197,11 @@ div.com-art ul li {
   background-color: #61b3e6;
   color: #fff;
 }
-/*底部分页结束*/
+/*底部分页end*/
 /*左边区域end*/
 /*正文区域end*/
 
-/*底部区域开始*/
+/*底部区域start*/
 .footer {
   position: relative;
   z-index: 9;
@@ -1237,9 +1237,9 @@ div.com-art ul li {
   line-height: 0.44rem;
   text-align: center;
 }
-/*底部区域结束*/
+/*底部区域end*/
 
-/*自定义右键菜单开始*/
+/*自定义右键菜单start*/
 #menu {
   width: 170px;
   height: 24px;
@@ -1258,9 +1258,9 @@ div.com-art ul li {
 #menu span {
   color: #fff;
 }
-/*自定义右键菜单结束*/
+/*自定义右键菜单end*/
 
-/*背景音乐开始*/
+/*背景音乐start*/
 .control {
   width: 28px;
   height: 28px;
@@ -1288,9 +1288,9 @@ div.com-art ul li {
   to {
     transform: rotate(360deg);
   }
-} /*背景音乐结束*/
+} /*背景音乐end*/
 
-/*评论模块开始*/
+/*评论模块start*/
 #primary-sidebar h3.rounded {
   padding: 10px 0px 10px 17px;
   position: relative;
@@ -1371,11 +1371,11 @@ div.com-art ul li {
 .media {
   overflow: hidden;
 }
-/*评论模块结束*/
+/*评论模块end*/
 
 /*----------------------------------------------------------------------------------------------*/
 
-/*关于我页面开始*/
+/*关于我页面start*/
 .continar-left ul.clearfix li {
   width: 100%;
   line-height: 0.6rem;
@@ -1542,9 +1542,9 @@ ul.bon-1 li {
 ul.bon-1 li:nth-of-type(2) {
   display: block;
 }
-/*关于我页面结束-------------------------------------------------------------------------------------*/
+/*关于我页面end-------------------------------------------------------------------------------------*/
 
-/*详情页开始*/
+/*详情页start*/
 #details {
   border-radius: 0.1rem;
   background: #fff;
@@ -1814,7 +1814,7 @@ div.key-w a {
   margin: 0 5px;
   border-radius: 3px;
 }
-/*评论内容开始*/
+/*评论内容start*/
 .ds-comments-info {
   width: 100%;
   font-size: 13px;
@@ -1905,10 +1905,10 @@ li.ds-post {
 #ds-thread.ds-narrow #ds-reset .ds-post-self {
   padding: 8px 0 !important;
 }
-/*评论内容结束*/
-/*详情页结束---------------------------------------------------------------------------------*/
+/*评论内容end*/
+/*详情页end---------------------------------------------------------------------------------*/
 
-/*留言页面开始*/
+/*留言页面start*/
 .nav-s1 {
   width: 100%;
   margin: 0.5rem 0;
@@ -2364,7 +2364,7 @@ div.jy p {
   height: 13px;
   background-position: 0 -105px;
 }
-/*留言页面结束----------------------------------------------------------------------------------*/
+/*留言页面end----------------------------------------------------------------------------------*/
 
 /*分页样式代码*/
 
@@ -2418,7 +2418,7 @@ div.jy p {
 .screen-reader-text {
   display: none !important;
 }
-/*发表文章插件样式开始*/
+/*发表文章插件样式start*/
 .kw1,
 .kw2,
 .me1,
@@ -2441,9 +2441,9 @@ div.jy p {
 .co1 {
   color: #66d9ef;
 }
-/*发表文章插件样式结束*/
+/*发表文章插件样式end*/
 
-/*阿里图标库开始*/
+/*阿里图标库start*/
 @font-face {
   font-family: 'iconfont';
   src: url('https://at.alicdn.com/t/font_xozvftf5qlpzxgvi.eot?t=1484057152574');
@@ -2545,9 +2545,9 @@ div.jy p {
 .icon-youqinglianjie2:before {
   content: '\e67f';
 }
-/*阿里图标库结束*/
+/*阿里图标库end*/
 
-/*后台上传图片大小位置限制开始*/
+/*后台上传图片大小位置限制start*/
 .wpuf-attachment-list img {
   margin: 15px auto;
 }
@@ -2555,7 +2555,7 @@ ul.wpuf-form li .wpuf-fields .wpuf-help {
   display: block;
   margin-top: 12px;
 }
-/*后台上传图片大小位置限制结束*/
+/*后台上传图片大小位置限制end*/
 
 iframe {
   height: 80px;
@@ -2564,7 +2564,7 @@ iframe {
 .bdshare-slide-button-box {
   display: none;
 }
-/*移动端导航开始*/
+/*移动端导航start*/
 .continar-right aside {
   display: none;
 }
@@ -2686,7 +2686,7 @@ div.btn {
   color: #fff;
   font-weight: normal;
 }
-/*移动端导航结束*/
+/*移动端导航end*/
 .hide,
 #vedio {
   display: none;

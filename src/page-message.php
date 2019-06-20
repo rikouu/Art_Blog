@@ -10,9 +10,9 @@ Template Name: 给我留言
     <?php require ('common.php'); ?>
 </head>
     <body>
-    <!--头部文件引用开始-->
+    <!--头部文件引用start-->
 	<?php get_header();?>
-	<!--头部文件引用结束-->
+	<!--头部文件引用end-->
     
     <!-- 手风琴start -->
     <div class="accordion" style="margin-top:98px;">
@@ -138,7 +138,7 @@ Template Name: 给我留言
               <div class="jy">
                   <p>有些话不一定要说出来，但一定要记录在某个地方！欢迎来到我的博客访问，可以尽情在这里留下您的脚印。。。</p>
               </div>
-              <!-- 留言区域开始 -->
+              <!-- 留言区域start -->
               <!-- 畅言公共JS代码 start (一个网页只需插入一次) -->
               <!--PC和WAP自适应版-->
               <div id="SOHUCS" ></div> 
@@ -150,20 +150,15 @@ Template Name: 给我留言
               if (width < 960) { 
               window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
               <!-- 畅言公共JS代码 end -->
-              <!-- 留言区域结束 -->
+              <!-- 留言区域end -->
          </div>
-         <!-- 左侧区域结束 -->
+         <!-- 左侧区域end -->
     </div>
     <!-- 正文区域end -->
     
-    <!-- 首页背景音乐开始 -->
-    <!-- <audio src="https://other.web.rb01.sycdn.kuwo.cn/resource/n1/64/94/2264457540.mp3" autoplay="autoplay" loop="loop" id="music"></audio>
-    <div class="control hover"></div> -->
-    <!-- 首页背景音乐结束 -->
-    
-	<!-- 底部引用区域开始 -->
+	<!-- 底部引用区域start -->
     <?php get_footer()?>
-    <!-- 底部引用区域结束 -->
+    <!-- 底部引用区域end -->
 
 </body>
 </html>

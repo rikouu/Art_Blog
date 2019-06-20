@@ -32,9 +32,9 @@ padding-top: 3px;color: #585858;line-height: 34px;font-size: 14px;text-align:cen
 </style>
 </head>
 <body>
-<!--头部文件引用开始-->
+<!--头部文件引用start-->
 	<?php get_header(); ?>
-<!--头部文件引用结束-->
+<!--头部文件引用end-->
 <div id="message">
     <ul id="messageList">
     	<!--<li>
@@ -50,9 +50,9 @@ padding-top: 3px;color: #585858;line-height: 34px;font-size: 14px;text-align:cen
     	<!--<a href="javascript:;">首页</a><a href="javascript:;" >上一页</a><p><a href="javascript:;" class="active">1</a><a href="javascript:;">2</a><a href="javascript:;">3</a></p><a href="javascript:;">下一页</a><a href="javascript:;">末页</a>-->
 		</footer>
 </div>
-<!-- 底部引用区域开始 -->
+<!-- 底部引用区域start -->
 <?php get_footer()?>
-<!-- 底部引用区域结束 -->
+<!-- 底部引用区域end -->
 <script src="<?php bloginfo('template_url'); ?>/js/date.js"></script>
 <script>
 var iPage=8;

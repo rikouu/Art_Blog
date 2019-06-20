@@ -15,9 +15,9 @@
 </head>
 
 <body>
-	<!--头部文件引用开始-->
+	<!--头部文件引用start-->
 	<?php get_header();?>
-	<!--头部文件引用结束-->
+	<!--头部文件引用end-->
 
 	<!-- 正文区域start -->
 	<div class="continar">
@@ -94,25 +94,25 @@
 				<?php lingfeng_pagenavi();?><!-- 分页调用 -->
 
 		</div>
-		<!-- 左侧区域结束 -->
+		<!-- 左侧区域end -->
 
-		<!-- 右侧区域开始 -->
+		<!-- 右侧区域start -->
 		<?php if(have_posts()):?>
 			<div class="continar-right">
 				<?php get_sidebar( $name ); ?>
 			</div>
 		<?php endif; ?>
-		<!-- 右侧区域结束 -->
+		<!-- 右侧区域end -->
 	</div>
 	<!-- 正文区域end -->
 
-	<!-- 首页背景音乐开始 -->
+	<!-- 首页背景音乐start -->
 	<!-- <audio src="https://sc1.111ttt.com/2015/1/04/01/97011918297.mp3" autoplay="autoplay" loop="loop" id="music"></audio>
     <div class="control hover"></div> -->
-	<!-- 首页背景音乐结束 -->
+	<!-- 首页背景音乐end -->
 
-	<!-- 底部引用区域开始 -->
+	<!-- 底部引用区域start -->
 	<?php get_footer()?>
-	<!-- 底部引用区域结束 -->
+	<!-- 底部引用区域end -->
 </body>
 </html>

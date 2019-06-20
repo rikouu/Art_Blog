@@ -9,15 +9,15 @@
 - 本项目采用gulp自动化构建，可通过git克隆到本地，然后运行`npm install`安装依赖，接着运行npm run build即可压缩打包整个项目
   到`dist`文件夹，如不需要打包压缩代码等一系列工具功能可直接下载即可，然后找到项目文件的dist目录，里面即是已打包好的主题源码
 
-- 运行环境条件：服务器选用Apache，wordPress版本≥4.6，≥5.3服务器php版本≤php7.1，如果出现报错，请切换php版本试试，[阿里云虚拟主机升级php7.x报错处理](https://www.weipxiu.com/2909.html)
-
 - 将dist文件名命名为`Art_Blog`,然后将整个文件夹上传到线上：`/htdocs/wp-content/themes/`目录下，然后启用主题
 
-- 开始启用唯品秀Art_Blog主题，在设置>常规中设置自己网站标题、副标题、邮箱等信息，然后到后台>外观>唯品秀主题设置，设置站点域名地址（必须的）、公告、底部等信息
+- 运行环境条件：服务器选用Apache，wordPress版本≥4.6，≥5.3服务器php版本≤php7.1，如果出现报错，请切换php版本试试，[阿里云虚拟主机升级php7.x报错处理](https://www.weipxiu.com/2909.html)
+
+- 启用唯品秀Art_Blog主题后，在设置>常规中设置自己网站标题、副标题、邮箱等信息，然后到外观>唯品秀主题设置，设置站点域名地址（必须的）、公告、底部等信息
 
 - 在后台>外观>菜单中管理你的导航栏，移动端侧边导航栏请自行在header.php中手动添加设置（完全傻瓜式）
 
-- 文档枯燥还是不知道说的啥？[教程视频链接](https://pan.baidu.com/s/19wibJjeagvLRFOuUV2GvEQ)，`密码：6u6c`
+- 详细教程地址：[唯品秀前端技术博客主题使用教程](https://www.weipxiu.com/3355.html)文档枯燥还是不知道说的啥？[简洁教程视频链接](https://pan.baidu.com/s/19wibJjeagvLRFOuUV2GvEQ)，`密码：6u6c`
 
 - 如果喜欢，请多多打赏。
 

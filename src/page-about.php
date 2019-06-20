@@ -10,9 +10,9 @@ Template Name: 关于博客
     <?php require ('common.php'); ?>
 </head>
     <body>
-    <!--头部文件引用开始-->
+    <!--头部文件引用start-->
 	<?php get_header();?>
-	<!--头部文件引用结束-->
+	<!--头部文件引用end-->
 
     <!-- 正文区域start -->
     <div class="continar">
@@ -138,12 +138,12 @@ Template Name: 关于博客
                     <li>E-mail：30607580@qq.com</li>   
                 </ul> -->
          </div>
-         <!-- 左侧区域结束 -->
+         <!-- 左侧区域end -->
     </div>
     <!-- 正文区域end -->
     
-	<!-- 底部引用区域开始 -->
+	<!-- 底部引用区域start -->
     <?php get_footer()?>
-    <!-- 底部引用区域结束 -->
+    <!-- 底部引用区域end -->
 </body>
 </html>

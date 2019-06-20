@@ -54,17 +54,17 @@
 						//'walker' => new Header_Menu_Walker()  //自定义walker
 					) );
 				?>
-				<!-- 搜索按钮开始 -->
+				<!-- 搜索按钮start -->
 				<div class="navto-search">
 					<a href="javascript:;" class="search-show active">
 							<i class="iconfont icon-sousuo"></i>
 					</a>
 				</div>
-				<!-- 搜索按钮结束 -->
+				<!-- 搜索按钮end -->
 			</nav>
 		</div>
 	</div>
-	<!-- 搜索区域开始 -->
+	<!-- 搜索区域start -->
 	<div class="site-search active pc">
 		<div class="container">
 			<form role="search" method="get" id="searchform" class="site-search-form" action="<?php echo home_url(); ?>/">
@@ -73,11 +73,11 @@
 			</form>
 		</div>
 	</div>
-	<!-- 搜索区域结束 -->
+	<!-- 搜索区域end -->
 </header>
 <!-- 头部end -->
 
-<!-- 移动端渣渣侧边栏导航开始 -->
+<!-- 移动端侧边栏导航start -->
 <div class="os-herder btn">
 	<ul class="slide-left">
 		<li><a href="<?php echo home_url(); ?>"><i class="iconfont">&#xe632;</i>首页</a></li>
@@ -98,9 +98,9 @@
 		<li><a href="/wp-login.php"><i class="iconfont">&#xe630;</i>用户登录</a></li>
 	</ul>
 </div>
-<!-- 移动端侧边栏导航结束 -->
+<!-- 移动端侧边栏导航end -->
 
-<!-- 移动端遮盖层，防止导航出现页面上下滑动导致bug开始 -->
+<!-- 移动端遮盖层，防止导航出现页面上下滑动导致bug-start -->
 <div class="cover"></div>
-<!-- 移动端遮盖层，防止导航出现页面上下滑动导致bug结束 -->
+<!-- 移动端遮盖层，防止导航出现页面上下滑动导致bug-end -->
 

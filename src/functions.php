@@ -492,7 +492,7 @@ function get_author_class($comment_author_email, $comment_author_url) {
 }
 //获取用户UA信息,包括浏览器和系统等 调用:echo user_agent($comment->comment_agent);
 function user_agent($ua) {
-    //开始解析操作系统
+    //解析操作系统start
     $os = null;
     if (preg_match('/Windows 95/i', $ua) || preg_match('/Win95/', $ua)) {
         $os = "Windows 95";
@@ -565,7 +565,7 @@ function user_agent($ua) {
     } else {
         $os = '未知操作系统';
     }
-    //开始解析浏览器
+    //解析浏览器start
     if (preg_match('#(Camino|Chimera)[ /]([a-zA-Z0-9.]+)#i', $ua, $matches)) {
         $browser = 'Camino ' . $matches[2];
     } elseif (preg_match('#SE 2([a-zA-Z0-9.]+)#i', $ua, $matches)) {

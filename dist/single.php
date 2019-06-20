@@ -16,9 +16,9 @@
     <link rel="stylesheet" href="/wp-content/plugins/codecolorer/codecolorer.css?ver=0.9.16">
 </head>
     <body>
-        <!--头部文件引用开始-->
+        <!--头部文件引用start-->
         <?php get_header();?>
-        <!--头部文件引用结束-->
+        <!--头部文件引用end-->
 
         <!-- 正文区域start -->
         <div class="continar">
@@ -76,13 +76,12 @@
                         </h2>
                         <?php endif; ?>
                         <p class="copy">「两年博客，如果觉得我的文章对您有用，请帮助本站成长」</p>
-                        <!--文章打赏开始-->
+                        <!--文章打赏start-->
                         <!-- PC端start -->
                         <div class="post-actions">
                             <span class="post-like action action-like">
                                 <a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if(isset($_COOKIE['bigfa_ding_'.$post->ID])) echo ' done';?>">
-                                    <i class="iconfont icon-damuzhi1"></i>赞(<span class="count">   
-                                        <?php if( get_post_meta($post->ID,'bigfa_ding',true) ){            
+                                    <i class="iconfont icon-damuzhi1"></i>赞(<span class="count"><?php if( get_post_meta($post->ID,'bigfa_ding',true) ){            
                                                 echo get_post_meta($post->ID,'bigfa_ding',true);
                                             } else {
                                                 echo '0';
@@ -155,7 +154,7 @@
                         </div>
                     </div>
 
-                    <!--文章打赏结束-->
+                    <!--文章打赏end-->
                     <div class="key-w">
                         <div class="single_lable">
                             <i class="iconfont icon-biaoqian" style="padding-right:7px"></i>标签：</div>
@@ -173,21 +172,21 @@
                         <?php comments_template( '', true ); ?>
                     </div>
                 </div>
-                <!-- 左侧区域结束 -->
+                <!-- 左侧区域end -->
 
-                <!-- 右侧区域开始 -->
+                <!-- 右侧区域start -->
 
                 <div class="continar-right">
                     <?php get_sidebar( $name ); ?>
                 </div>
-                <!-- 右侧区域结束 -->
+                <!-- 右侧区域end -->
         </div>
 
         <!-- 正文区域end -->
 
-        <!-- 底部引用区域开始 -->
+        <!-- 底部引用区域start -->
         <?php get_footer()?>
-        <!-- 底部引用区域结束 -->
+        <!-- 底部引用区域end -->
     </body>
 
 </html>

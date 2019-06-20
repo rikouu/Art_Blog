@@ -1,4 +1,4 @@
-<!-- 底部区域开始 -->
+<!-- 底部区域start -->
 <footer class="footer">
   <div class="container">
     <?php 
@@ -7,7 +7,7 @@
     提供 <a href="https://github.com/weipxiu/Art_Blog" class="highlight">主题源码</a></p>
   </div>
 </footer>
-<!-- 底部区域结束 -->
+<!-- 底部区域end -->
 
 <!-- 底部半透明遮盖层 -->
 <div class="footer-banner__navi">
@@ -24,12 +24,12 @@
   </span>
 </div>
 
-<!-- 自定义右键菜单提示开始 -->
+<!-- 自定义右键菜单提示start -->
 <div id="menu">
   别看啦，宝宝好羞涩
   <span>*^_^*</span>
 </div>
-<!-- 自定义右键菜单提示结束 -->
+<!-- 自定义右键菜单提示end -->
 
 <!-- 小飞机start -->
 <div class="aircraft">
@@ -48,7 +48,7 @@
 </div>
 <!--ajax加载loading end-->
 
-<!-- 在线客服开始 -->
+<!-- 在线客服start -->
 <div id="divStayTopright" style="position:fixed;z-index:999999;top:40%;right:0px;height:16px;">
   <div id="wuyousujian-kefuDv" style="right: -196px; position: fixed;">
     <script>
@@ -156,7 +156,7 @@
     </table>
   </div>
 </div>
-<!-- 在线客服结束 -->
+<!-- 在线客服end -->
 
 <!-- 底部悬浮窗start -->
 <div class="login_alert">

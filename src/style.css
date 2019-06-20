@@ -3958,7 +3958,7 @@ ul.wpuf-form li .wpuf-fields .wpuf-help {
     position: absolute;
     z-index: 9999;
     width: 370px;
-    left: 6px;
+    left: 9px;
     top: -330px;
     font-size: 20px;
     line-height: 1.4;
@@ -4164,7 +4164,7 @@ ul.post-categories li:first-child {
     border-bottom: 1px solid #69bcf3;
 }
 
-/*在线客服开始*/
+/*在线客服start*/
 
 #wuyousujian-kefuDv .qqnum {
     text-align: center;
@@ -4596,9 +4596,9 @@ ul.post-categories li:first-child {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 }
 
-/*在线客服结束*/
+/*在线客服end*/
 
-/*文章加密内容开始*/
+/*文章加密内容start*/
 
 .e-secret {
     display: block;
@@ -4647,7 +4647,7 @@ ul.post-categories li:first-child {
     color: #fff;
 }
 
-/*文章加密内容结束*/
+/*文章加密内容end*/
 
 .new-icon {
     background: #1890ff;
@@ -4896,7 +4896,7 @@ ul.post-categories li:first-child {
     background: #f4264d;
 }
 
-/*首页弹窗结束*/
+/*首页弹窗end*/
 
 /*畅言评论*/
 

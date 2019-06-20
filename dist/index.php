@@ -154,7 +154,7 @@
 				<?php }
 			wp_reset_query(); ?>
 			</aside>
-			<!-- 博客介绍开始 -->
+			<!-- 博客介绍start -->
 			<aside class="blog">
 				<h3>博客介绍</h3>
 				<div class="textwidget">
@@ -180,7 +180,7 @@
 					</ul>
 				</div>
 			</aside>
-			<!-- 博客介绍结束 -->
+			<!-- 博客介绍end -->
 			<!-- 邮件订阅start -->
 			<?php
 			if (get_option('weipxiu_options')['text_pic'] == 'on') {
@@ -276,13 +276,13 @@
 				<?php endif; ?>
 				<?php lingfeng_pagenavi();?><!-- 分页调用 -->
 		</div>
-		<!-- 左侧区域结束 -->
+		<!-- 左侧区域end -->
 
-		<!-- 右侧区域开始 -->
+		<!-- 右侧区域start -->
 		<section class="continar-right">
 			<?php get_sidebar($name); ?>
 		</section>
-		<!-- 右侧区域结束 -->
+		<!-- 右侧区域end -->
 	</section>
 	<!-- 正文区域end -->
 
