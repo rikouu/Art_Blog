@@ -17,7 +17,7 @@
 
 - 在后台>外观>菜单中管理你的导航栏，移动端侧边导航栏请自行在header.php中手动添加设置（完全傻瓜式）
 
-- 详细教程地址：[唯品秀前端技术博客主题使用教程](https://www.weipxiu.com/3355.html)文档枯燥还是不知道说的啥？[简洁教程视频链接](https://pan.baidu.com/s/19wibJjeagvLRFOuUV2GvEQ)，`密码：6u6c`
+- 详细教程地址：[唯品秀前端技术博客主题使用教程](https://www.weipxiu.com/3355.html)；文档枯燥还是不知道说的啥？[简洁教程视频链接](https://pan.baidu.com/s/19wibJjeagvLRFOuUV2GvEQ)，`密码：6u6c`
 
 - 如果喜欢，请多多打赏。
 
@@ -106,7 +106,6 @@
 > 爱前端  https//www.huanggr.cn
 > guohui6 http://www.guohui6.com
 > 吾爱网赚 http://5iwz.vip
-> http://www.cyxlove.cn
-> https://www.lgq1.cn
+> 聚贤庄：//https://www.90c.vip/
 
 
