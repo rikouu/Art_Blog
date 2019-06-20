@@ -5585,17 +5585,12 @@ code {
 .mod-breadcrumb i {
     font-size: 12px;
     color: #666;
-    text-indent: 4px;
     font-weight: 400;
     font-style: normal;
 }
 
 .mod-crumbs i {
-    display: inline-block;
-    margin: 0 2px;
     color: #999;
-    font-weight: 700;
-    vertical-align: center;
 }
 
 p.data-l span {

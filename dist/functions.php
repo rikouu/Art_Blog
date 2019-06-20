@@ -397,8 +397,8 @@ function baidu_check($url){
 
 // 面包屑导航注册代码
 function wheatv_breadcrumbs() {
-    $delimiter = '<i>></i>';
-    $name = '首页'; //text for the 'Home' link
+    $delimiter = '<i>&gt;</i>';
+    $name = '当前位置:'; //text for the 'Home' link
     $currentBefore = '';
     $currentAfter = '';
     if (!is_home() && !is_front_page() || is_paged()) {
@@ -406,7 +406,7 @@ function wheatv_breadcrumbs() {
         global $post;
         // $home = get_bloginfo('url');
         $home = get_option('home');
-        echo '<a href="' . $home . '" >' . $name . ' </a>' . $delimiter . ' ';
+        echo '<a href="' . $home . '" >' . $name . ' </a>';
         if (is_category()) {
             global $wp_query;
             $cat_obj = $wp_query->get_queried_object();
