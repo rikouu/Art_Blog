@@ -1922,7 +1922,7 @@ h2.title {
   font-size: 0.36rem;
   font-weight: bold;
   text-align: center;
-  line-height: 0.7rem;
+  line-height: 0.5rem;
   color: #333;
   display: block;
   text-align: center;
@@ -1950,6 +1950,10 @@ p.data-l > span i {
   color: #666;
   font-size: 0.24rem;
 }
+/* 屏蔽代码块左侧序号列表，占空间 */
+.codecolorer-container.solarized-dark table td.line-numbers{
+  display: none!important;
+}
 
 .codecolorer-container table {
   width: 100%;
@@ -1971,7 +1975,6 @@ td.line-numbers {
 .codecolorer {
   color: #66d9ef;
   padding: 5px 0 5px 5px;
-  border-left: 2px solid #7ad03a;
 }
 
 .codecolorer-container {
