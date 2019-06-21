@@ -13,7 +13,7 @@
         }
     ?>
     <?php require ('common.php'); ?>
-    <link rel="stylesheet" href="/wp-content/plugins/codecolorer/codecolorer.css?ver=0.9.16">
+    <link rel="stylesheet" href="/wp-content/themes/Art_Blog/css/codecolorer.css">
 </head>
     <body>
         <!--头部文件引用start-->
