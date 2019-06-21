@@ -159,7 +159,7 @@
 				<h3>博客介绍</h3>
 				<div class="textwidget">
 					<p class="clearfix">
-						前端博客: <?php echo get_option('weipxiu_options')['domain']; ?>，我们关注Web前端开发技术，移动前端开发，前端资讯，同时分享前端资源和工具等，期待你的参与，<a rel="nofollow" target="_blank" href="/about">了解更多..</a>
+						前端博客: <?php echo get_option('weipxiu_options')['domain']; ?>，我们关注Web前端开发技术，移动前端开发，前端资讯，同时分享前端资源和工具等，期待你的参与，<a rel="nofollow" target="_blank" href="/about">了解更多...</a>
 					</p>
 					<ul class="social">
 						<li class="weibo">
@@ -269,10 +269,18 @@
 					</article>
 				<?php endwhile;
 				else : ?>
-				<p>对不起啊，你的女朋友好像没找到！</p>
-				<!-- <h2 id="redirect">
-							<?php _e('404'); ?>
-						</h2> -->
+				<script>
+					layer.alert('抱歉，当前网站没有一篇文章，去后台发布？',{
+						skin: 'layui',
+						title:"提示",
+						closeBtn: 1, //是否展示关闭x按钮
+						anim: 4,
+						btn: ['确认'],
+						yes:function(){
+							location.href="/wp-login.php"
+			      }
+					})
+				</script>
 				<?php endif; ?>
 				<?php lingfeng_pagenavi();?><!-- 分页调用 -->
 		</div>
@@ -285,6 +293,21 @@
 		<!-- 右侧区域end -->
 	</section>
 	<!-- 正文区域end -->
+
+	<!-- 底部悬浮窗start -->
+	<div class="login_alert">
+		<div class="login_alert_close">
+				<i class="iconfont icon-guanbi"></i>
+		</div>
+			<div class="login_alert_box">
+				<div>注册会员，尽享成百上千套前端开发资源免费下载，赶紧来注册~
+							<a href="/wp-login.php" rel="nofollow">会员登录</a>
+							<span>或</span>
+							<a href="/wp-login.php?action=register" class="register" rel="nofollow">注册会员</a> 
+					</div>
+			</div>
+	</div>
+	<!-- 底部悬浮窗end -->
 
 	<!-- 底部调用start -->
 	<?php get_footer() ?>

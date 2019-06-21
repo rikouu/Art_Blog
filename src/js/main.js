@@ -224,11 +224,17 @@ $(function () {
             $(this).attr("title", "钢琴音效OFF");
             $(".nav ul.music-nav li > p").css("opacity", "1");
             localStorage.setItem("off_y", 1);
+            layer.msg('3D导航音乐已开启~', {
+                time: 2000 //2秒关闭（如果不配置，默认是3秒）
+            }, function(){
+                layer.msg('无需鼠标，键盘A-K也可以体验哦~~');
+            }); 
         } else {
             $(this).removeClass("hover");
             $(".nav ul.music-nav li > p").css("opacity", "0");
             $(this).attr("title", "钢琴音效NO");
             localStorage.setItem("off_y", 0);
+            layer.msg('3D导航音乐已关闭，期待您的下次体验！');
         }
     });
     // 跳动音符end
@@ -758,7 +764,19 @@ $(function () {
         var delSetInterval = null; //定时器
         //var ISvideo = false; //当前是否全屏
         var myPlayer = videojs('my-video');
-        var howMuchIsDownloaded = 0; //初始化缓冲百分比
+        
+        //播放失败时候处理
+        var errVideo=document.getElementById('my-video_html5_api');
+        errVideo.onerror = function() {
+            layer.alert('通常是由于视频地址错误引起，请检查！',{
+                skin: 'layui',
+                title:"播放失败",
+                closeBtn: 0,
+                anim: 4 //动画类型
+            })
+        };
+
+        //var howMuchIsDownloaded = 0; //初始化缓冲百分比
         var eleFull = document.querySelector("#my-video"); //视频对象
 
         //视频全屏方法

@@ -89,7 +89,15 @@
 					<!--竖条-->
 				</div>
 				<?php endwhile; else : ?>
-					<img src="<?php bloginfo('template_url'); ?>/images/article_404.jpg" alt="当前分类没有文章" class="article_not">
+				<script>
+					layer.alert('Sorry，当前分类没有一篇文章！',{
+						skin: 'layui',
+						title:"提示",
+						icon: 5,
+						closeBtn: 0,
+						anim: 6 //动画类型
+					})
+				</script>
 				<?php endif; ?>
 				<?php lingfeng_pagenavi();?><!-- 分页调用 -->
 
@@ -105,11 +113,6 @@
 		<!-- 右侧区域end -->
 	</div>
 	<!-- 正文区域end -->
-
-	<!-- 首页背景音乐start -->
-	<!-- <audio src="https://sc1.111ttt.com/2015/1/04/01/97011918297.mp3" autoplay="autoplay" loop="loop" id="music"></audio>
-    <div class="control hover"></div> -->
-	<!-- 首页背景音乐end -->
 
 	<!-- 底部引用区域start -->
 	<?php get_footer()?>

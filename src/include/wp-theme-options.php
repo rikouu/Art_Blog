@@ -97,7 +97,7 @@ function themeoptions_page() {
               name="text-pic"
               value="off" <?php if($a_options['text_pic'] == 'off' || $a_options['text_pic'] == '') echo 'checked'; ?>
             >
-            <span class="warn">*开启之前必须确保已安装WordPress Mailer插件，并已配置好</span>
+            <span class="warn">*开启之前必须确保已安装WP Easy Post Mailer插件，并已配置好</span>
           </div>
         </div>
 

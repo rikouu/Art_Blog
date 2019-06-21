@@ -1354,6 +1354,7 @@ i {
 .continar {
     width: 1200px;
     margin: 96px auto 50px;
+    min-height: calc(100% - 288px);
 }
 .deviation{
     margin-top: 20px!important;
@@ -1371,7 +1372,6 @@ i {
 }
 .continar .continar-left-top {
     width: 100%;
-    height: 120px;
     padding: 15px 20px;
     overflow: hidden;
     background-color: #fff;
@@ -1437,7 +1437,6 @@ i {
     text-indent: 2em;
     height: 50px;
     overflow: hidden;
-    margin-bottom: 20px;
     line-height: 25px;
     color: #666;
     font-size: 14px;
@@ -2639,10 +2638,12 @@ ul.bon-1 li:nth-of-type(2) {
     border: 1px solid #e6e6e6;
     overflow: hidden;
     float: none;
-    margin: 0 auto;
+    margin: 50px auto;
     width: 1000px;
 }
-
+#details > div:nth-of-type(1){
+  margin-bottom:20px;
+}
 div.nav-s {
     width: 820px;
     height: 40px;
@@ -3564,14 +3565,6 @@ div.jy p {
     height: 13px;
     background-position: 0 -105px;
 }
-.article_not{
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto; 
-}
 .wp-pagenavi {
     width: 100%;
     height: 36px;
@@ -4078,13 +4071,6 @@ ul.post-categories li:first-child {
 
 #domo:hover {
     background: #265a88;
-}
-
-.entry-title {
-    text-align: center;
-    background: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
 }
 
 .img-left {
@@ -5573,12 +5559,12 @@ code {
     box-shadow: inset 0 1px 0 #fff;
 }
 
-.mod-crumbs a {
+.mod-breadcrumb a {
     color: #1890ff;
     font-size: 12px;
 }
 
-.mod-crumbs a:hover {
+.mod-breadcrumb a:hover {
     text-decoration: underline;
 }
 
@@ -5589,7 +5575,7 @@ code {
     font-style: normal;
 }
 
-.mod-crumbs i {
+.mod-breadcrumb i {
     color: #999;
 }
 

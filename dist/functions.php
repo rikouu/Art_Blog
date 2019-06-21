@@ -700,7 +700,7 @@ function ludou_comment_mail_notify($comment_id, $comment_status) {
       $message = '<div style="border-right:#666666 1px solid;border-radius:8px;color:#111;font-size:12px;width:702px;    border-bottom:#666666 1px solid;font-family:微软雅黑,arial;margin:10px auto 0px;border-top:#666666 1px solid;border-left:#666666 1px solid"><div class="adM">
         </div><div style="width:100%;background:#666666;min-height:60px;color:white;border-radius:6px 6px 0 0"><span style="line-height:60px;min-height:60px;margin-left:30px;font-size:12px">您在<a style="color:#00bbff;font-weight:600;text-decoration:none" href="' . get_option('home') . '" target="_blank">' . get_option('blogname') . '</a> 上的留言有回复啦！</span> </div>
         <div style="margin:0px auto;width:90%">
-        <p>' . trim($parent_comment->comment_author) . ', 您好!</p>
+        <p>' . trim($parent_comment->comment_author) . ', 您好！</p>
         <p>您于' . trim($parent_comment->comment_date) . ' 在文章《' . get_the_title($comment->comment_post_ID) . '》上发表的评论: </p>
         <p style="border-bottom:#ddd 1px solid;border-left:#ddd 1px solid;padding-bottom:20px;background-color:#eee;margin:15px 0px;padding-left:20px;padding-right:20px;border-top:#ddd 1px solid;border-right:#ddd 1px solid;padding-top:20px">' . nl2br($parent_comment->comment_content) . '</p>
         <p>' . trim($comment->comment_author) . ' 于' . trim($comment->comment_date) . ' 给您的回复如下: </p>

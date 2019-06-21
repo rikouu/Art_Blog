@@ -50,7 +50,7 @@
 
     <div class="continar">
 
-        <div class="continar-left" id="details" style="border:0; padding:0; float:none; margin:0 auto; background: transparent;">
+        <div class="continar-left" id="details" style="border:0; padding:0; float:none;background: transparent;">
             <!-- <script type="text/javascript">
                 ( function() {
                     document.write( unescape( '%3Cdiv id="bdcs"%3E%3C/div%3E' ) );
@@ -62,6 +62,11 @@
                     s.parentNode.insertBefore( bdcs, s );
                 } )();
             </script> -->
+
+            <!-- 面包屑导航 -->
+            <div class="mod-breadcrumb">
+                <?php wheatv_breadcrumbs(); ?>
+            </div>
 
             <?php//这里是搜索功能 ?>
                 <?php if ( have_posts() ) : ?>
@@ -130,15 +135,18 @@
                 </div>
 
                 <?php endwhile; ?>
-
                 <?php else : ?>
-
-                <h1 class="entry-title">
-                    <?php _e( '没有找到您搜索的内容', 'leizi' ); ?>
-                </h1>
-
+                <script>
+                    $(".mod-breadcrumb").hide();
+                    layer.alert('Sorry，当前关键词下未找到相关信息！',{
+                        skin: 'layui',
+                        title:"提示",
+                        icon: 5,
+                        closeBtn: 0,
+                        anim: 3 //动画类型
+                    })
+                </script>
                 <?php endif; ?>
-
                 <?php lingfeng_pagenavi();?><!-- 分页调用 -->
         </div>
         <!-- 左侧区域end -->
