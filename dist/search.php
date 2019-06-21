@@ -142,7 +142,7 @@
                         skin: 'layui',
                         title:"提示",
                         icon: 5,
-                        closeBtn: 0,
+                        closeBtn: 1,
                         anim: 3 //动画类型
                     })
                 </script>

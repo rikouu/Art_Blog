@@ -270,16 +270,18 @@
 				<?php endwhile;
 				else : ?>
 				<script>
-					layer.alert('抱歉，当前网站没有一篇文章，去后台发布？',{
-						skin: 'layui',
-						title:"提示",
-						closeBtn: 1, //是否展示关闭x按钮
-						anim: 4,
-						btn: ['确认'],
-						yes:function(){
-							location.href="/wp-login.php"
-			      }
-					})
+					layer.ready(function(){
+						layer.alert('抱歉，当前网站没有一篇文章，去后台发布？',{
+							skin: 'layui',
+							title:"提示",
+							closeBtn: 1, //是否展示关闭x按钮
+							anim: 4,
+							btn: ['确认'],
+							yes:function(){
+								location.href="/wp-login.php"
+							}
+						})
+					}); 
 				</script>
 				<?php endif; ?>
 				<?php lingfeng_pagenavi();?><!-- 分页调用 -->

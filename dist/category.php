@@ -92,9 +92,8 @@
 				<script>
 					layer.alert('Sorry，当前分类没有一篇文章！',{
 						skin: 'layui',
-						title:"提示",
 						icon: 5,
-						closeBtn: 0,
+						closeBtn: 1,
 						anim: 6 //动画类型
 					})
 				</script>
