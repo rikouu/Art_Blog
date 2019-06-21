@@ -82,15 +82,13 @@ gulp.task("minCss", function () {
         .pipe(gulp.dest(target+"/css"))
 
     //style.css压缩
-    gulp.src("src/style.css")
+    return gulp.src("src/style.css")
     .pipe(autoprefixer({
         browsers: ['last 2 versions'],
         cascade: false
     }))
     .pipe(gulp_minify_css())    
     .pipe(gulp.dest(target))
-
-    return gulp.src(["src/css/*.woff2", "src/css/*.ttf"]).pipe(gulp.dest(target+"/css"))
 });
 
 //压缩完的style.css追加版本号
