@@ -34,7 +34,7 @@ $(function () {
     //追加二级菜单父级class
     $(".sub-menu").addClass('nav-min')
     //追加音乐开关
-    var dom_node = "<li class='js_piano_nav_icon mod-header_music-icon' title='钢琴节奏'>"+"<audio src='' autoplay='autoplay'></audio>"+"<i></i><i></i><i></i><i></i><i></i></li>"
+    var dom_node = "<li class='js_piano_nav_icon mod-header_music-icon'>"+"<audio src='' autoplay='autoplay'></audio>"+"<i></i><i></i><i></i><i></i><i></i></li>"
     $(".header .music-nav").append(dom_node);
     //通过js改造导航栏DOM结构end
 
@@ -207,11 +207,9 @@ $(function () {
 
     // 根据缓存状态初始化音乐
     if (localStorage.getItem("off_y") != 1) {
-        $(".mod-header_music-icon").removeClass("hover").attr("title", "钢琴音效NO");
         $(".nav ul.music-nav li > p").css("opacity", "0");
         localStorage.setItem("off_y", 0);
     } else {
-        $(".mod-header_music-icon").addClass("hover").attr("title", "钢琴音效OFF");
         $(".nav ul.music-nav li > p").css("opacity", "1");
         localStorage.setItem("off_y", 1);
     }
@@ -221,7 +219,6 @@ $(function () {
         clearInterval(navMinHideSetTime); //清除鼠标离开li时候的定时器
         if (localStorage.getItem("off_y") != 1) {
             $(this).addClass("hover");
-            $(this).attr("title", "钢琴音效OFF");
             $(".nav ul.music-nav li > p").css("opacity", "1");
             localStorage.setItem("off_y", 1);
             layer.msg('3D导航音乐已开启~', {
@@ -232,12 +229,29 @@ $(function () {
         } else {
             $(this).removeClass("hover");
             $(".nav ul.music-nav li > p").css("opacity", "0");
-            $(this).attr("title", "钢琴音效NO");
             localStorage.setItem("off_y", 0);
             layer.msg('3D导航音乐已关闭，期待您的下次体验！');
         }
     });
     // 跳动音符end
+
+    //导航音乐title设置start
+    $('.js_piano_nav_icon').mouseenter(function(){
+        if (localStorage.getItem("off_y") != 1) {
+            layer.tips('开启3D导航音乐', '.js_piano_nav_icon', {
+                tips: 3, //3表示下面
+                tipsMore: false,
+                time:2000
+            });
+        }else{
+            layer.tips('关闭3D导航音乐', '.js_piano_nav_icon', {
+                tips: 3,
+                tipsMore: false, 
+                time:2000
+            });
+        }
+    })
+    //导航音乐title设置end
 
     //钢琴导航start
     var $index = null;

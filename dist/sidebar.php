@@ -65,7 +65,7 @@
                   $query_posts->query($args);
                   while( $query_posts->have_posts() ) { $query_posts->the_post(); ?>
             <li>
-                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                <a href="<?php the_permalink(); ?>">
                     <?php
                         if ( has_post_thumbnail() )
                             the_post_thumbnail();
@@ -75,7 +75,7 @@
                 </a>
                 <!-- <em></em> -->
                 <div class="hot_text">
-                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="hot_title">
+                    <a href="<?php the_permalink(); ?>" class="hot_title">
                         <?php the_title(); ?>
                     </a>
                     <time class="hot_time"><?php the_time('Y年m月d日') ?></time>
@@ -106,7 +106,7 @@
               while( $query_posts->have_posts() ) { $query_posts->the_post(); ?>
             <li>
                 <em></em>
-                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                <a href="<?php the_permalink(); ?>">
                     <?php the_title(); ?>
                 </a>
             </li>

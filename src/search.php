@@ -90,7 +90,7 @@
                         <h2>
                             <span>
                                 <?php the_category() ?><i></i></span>
-                            <a href="<?php the_permalink(); ?>" target="_blank" title="<?php the_title(); ?>">
+                            <a href="<?php the_permalink(); ?>" target="_blank">
                                 <?php the_title(); ?></a>
                         </h2>
                         <?php
