@@ -101,7 +101,7 @@
 						</div>
 						<img class="carousel_small_pic" src="<?php bloginfo('template_url'); ?>/images/time.jpg" width="160" height="85" alt="<?php echo get_bloginfo('name'); ?>">
 					</a>
-					<a href="javascript:;" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display" target="_blank">
+					<a href="/609.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display" target="_blank">
 						<div class="carousel_small_str txt_bg05">
 							<h3 class="img_txt_title">Music</h3>
 							<p class="img_p">心情<br>在音乐中释放</p>
@@ -115,7 +115,7 @@
 						</div>
 						<img class="carousel_small_pic" width="110" height="85" src="<?php bloginfo('template_url'); ?>/images/valentine_day.jpg" alt="<?php echo get_bloginfo('name'); ?>">
 					</a>
-					<a href="javascript:;" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
+					<a href="/2166.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
 						<div class="carousel_small_str txt_bg06">
 							<h3 class="img_txt_title">直男癌</h3>
 							<p class="img_p">花花世界<br>谁在鄙视直男癌</p>

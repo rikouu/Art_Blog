@@ -160,18 +160,14 @@ $(function () {
             $(this).postLike();
         });
 
-    // 针对畅言傻逼作transform兼容
+    // 鼠标默认右键功能start
     var mBenu = document.getElementById('menu');
     document.oncontextmenu = function (ev) {
-        var ev = ev || event;
-        mBenu.style.display = 'block';
-        mBenu.style.left = ev.pageX - 85 + 'px';
-        mBenu.style.top = ev.pageY - 24 + 'px';
+        layer.msg('别看啦，宝宝好羞涩*^_^*');
         return false
     }
-    document.onclick = function () {
-        mBenu.style.display = 'none'
-    }
+    //鼠标默认右键功能end
+
     /*document.onkeydown = function(ev) {
         var ev = ev || event;
         if (ev.keyCode == 123) {

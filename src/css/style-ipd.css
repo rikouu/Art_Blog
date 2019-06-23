@@ -1231,57 +1231,6 @@ div.com-art ul li {
 }
 /*底部区域end*/
 
-/*自定义右键菜单start*/
-#menu {
-  width: 170px;
-  height: 24px;
-  line-height: 24px;
-  background: #444;
-  color: #fff;
-  z-index: 10;
-  display: none;
-  font-size: 13px;
-  padding: 0px;
-  position: absolute;
-  text-align: center;
-  border-radius: 1px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-#menu span {
-  color: #fff;
-}
-/*自定义右键菜单end*/
-
-/*背景音乐start*/
-.control {
-  width: 28px;
-  height: 28px;
-  border-radius: 100%;
-  background: #f6f6f6 url(../images/music.png) no-repeat center -4px;
-  position: fixed;
-  top: 1.7rem;
-  right: 0.5rem;
-  background-size: 35px 72px;
-  cursor: pointer;
-  z-index: 99;
-}
-.control.hover {
-  transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  transform: rotate(360deg);
-  -o-transform: rotate(360deg);
-  animation: zq 1.5s infinite linear;
-}
-@keyframes zq {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} /*背景音乐end*/
-
 /*评论模块start*/
 #primary-sidebar h3.rounded {
   padding: 10px 0px 10px 17px;

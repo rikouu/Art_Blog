@@ -24,13 +24,6 @@
   </span>
 </div>
 
-<!-- 自定义右键菜单提示start -->
-<div id="menu">
-  别看啦，宝宝好羞涩
-  <span>*^_^*</span>
-</div>
-<!-- 自定义右键菜单提示end -->
-
 <!-- 小飞机start -->
 <div class="aircraft">
   <font class="iconfont icon-huojian-copy"></font>

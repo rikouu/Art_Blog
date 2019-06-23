@@ -2257,73 +2257,6 @@ div.com-art ul li {
     color: #999;
 }
 
-#menu {
-    width: 170px;
-    height: 24px;
-    line-height: 24px;
-    background: #444;
-    color: #fff;
-    z-index: 10;
-    display: none;
-    font-size: 13px;
-    padding: 0;
-    position: absolute;
-    text-align: center;
-    border-radius: 1px;
-    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-}
-
-#menu span {
-    color: #fff;
-}
-
-.control {
-    width: 28px;
-    height: 28px;
-    border-radius: 100%;
-    background: #f6f6f6 url(images/music.png) no-repeat center -4px;
-    position: fixed;
-    top: 133px;
-    right: 85px;
-    background-size: 35px 72px;
-    cursor: pointer;
-    z-index: 1000;
-}
-
-.control.hover {
-    transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -webkit-animation: zq 1s infinite linear;
-    animation: zq 1.5s infinite linear;
-}
-
-@-webkit-keyframes zq {
-    from {
-        transform: rotate(0);
-        -webkit-transform: rotate(0);
-    }
-    to {
-        transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-@keyframes zq {
-    from {
-        transform: rotate(0);
-        -webkit-transform: rotate(0);
-    }
-    to {
-        transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-    }
-}
-
 .buffer {
     width: 100%;
     height: 100%;
@@ -5528,7 +5461,7 @@ code {
     background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f5f5f5));
     background: -moz-linear-gradient(top, #fff, #f5f5f5);
     background-repeat: repeat-x;
-    border: 1px solid #ddd;
+    border: 1px solid #eee;
     box-sizing: border-box;
     font-size: 12px;
     -webkit-border-top-left-radius: 3px;

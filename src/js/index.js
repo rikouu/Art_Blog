@@ -31,23 +31,23 @@ $(function () {
             height: 300,
             images: [{
                     url: '/wp-content/themes/Art_Blog/images/banner-1.jpg',
-                    link: '/?cat=29'
+                    link: '/category/frontend/holdall'
                 }, {
                     url: '/wp-content/themes/Art_Blog/images/banner-2.jpg',
-                    link: '/'
+                    link: '/3355.html'
                 }, {
                     url: '/wp-content/themes/Art_Blog/images/banner-3.jpg',
-                    link: 'javascript:;'
+                    link: '/1332.html'
                 }, {
                     url: '/wp-content/themes/Art_Blog/images/banner-4.jpg',
-                    link: 'javascript:;'
+                    link: 'https://github.com/weipxiu/Art_Blog'
                 }, {
                     url: '/wp-content/themes/Art_Blog/images/banner-5.jpg',
-                    link: '/?cat=6'
+                    link: '/658.html'
                 },
                 {
                     url: '/wp-content/themes/Art_Blog/images/banner-6.jpg',
-                    link: '/?p=1313'
+                    link: '/1313.html'
                 }
             ],
 
