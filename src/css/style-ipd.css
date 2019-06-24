@@ -889,6 +889,7 @@ ul.post-categories li:first-child {
   margin-top: 0.3rem;
   transform: translateX(0px);
   -ms-transform: translateX(0px);
+  display: none;
 }
 aside {
   background: #fff;

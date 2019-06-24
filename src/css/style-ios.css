@@ -1074,6 +1074,7 @@ display: none
   margin-bottom: 0px;
   transform: translateX(0px);
   -ms-transform: translateX(0px);
+  display: none;
 }
 
 aside {

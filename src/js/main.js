@@ -207,6 +207,7 @@ $(function () {
     if (localStorage.getItem("off_y") != 1) {
         $(".nav ul.music-nav li > p").css("opacity", "0");
         localStorage.setItem("off_y", 0);
+        $(".mod-header_music-icon");
     } else {
         $(".nav ul.music-nav li > p").css("opacity", "1");
         localStorage.setItem("off_y", 1);
