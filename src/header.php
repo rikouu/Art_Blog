@@ -44,7 +44,7 @@
 						'menu_class'   => 'music-nav',   //ul节点class值
 						'menu_id'   => 'nav_list',  //ul节点id值
 						'echo'  => true,//是否输出菜单，默认为true
-						'fallback_cb' => 'wp_page_menu',  //菜单不存在时，返回默认菜单，设为false则不返回
+						'fallback_cb' => 'false',  //'wp_page_menu'菜单不存在时，返回默认菜单，设为false则不返回
 						'before' => '', //链接前文本
 						'after'  => '', //链接后文本
 						'link_before'  => '',   //链接文本前
