@@ -30,9 +30,11 @@ $(function () {
     //追加音乐标签
     node_list.append("<audio src='' autoplay='autoplay'></audio>"+"<p style='opacity: 0'></p>");
     //追加icon
-    $(".nav ul .sub-menu").siblings('a').find('span').append("<i class='iconfont icon-jiantou'></i>");
+    $("#nav_list .sub-menu").siblings('a').find('span').append("<i class='iconfont icon-jiantou'></i>");
+    $(".os-herder .sub-menu").siblings('a').append("<i class='iconfont iconfont_click icon-xiajiantou'></i>");
     //追加二级菜单父级class
-    $(".sub-menu").addClass('nav-min')
+    $(".header .sub-menu").addClass('nav-min');
+    $(".os-herder .sub-menu").addClass('slide_slect');
     //追加音乐开关
     var dom_node = "<li class='js_piano_nav_icon mod-header_music-icon'>"+"<audio src='' autoplay='autoplay'></audio>"+"<i></i><i></i><i></i><i></i><i></i></li>"
     $(".header .music-nav").append(dom_node);
@@ -480,12 +482,15 @@ $(function () {
 
     // 移动端二级菜单导航start
     $("ul.slide-left li").on("touchstart", function (e) {
+        $(this).find(".slide_slect").stop().slideToggle();
+        $(this).find(".iconfont_click").toggleClass("icon-xiajiantou");
+        $(this).find(".iconfont_click").toggleClass("icon-shangjiantou");
         //console.log(e.target.dataset.implement)
-        if (e.target.dataset.implement == 'element') {
-            $(this).find(".slide_slect").stop().slideToggle();
-            $(this).find(".iconfont_click").toggleClass("icon-xiajiantou");
-            $(this).find(".iconfont_click").toggleClass("icon-shangjiantou");
-        }
+        // if (e.target.dataset.implement == 'element') {
+        //     $(this).find(".slide_slect").stop().slideToggle();
+        //     $(this).find(".iconfont_click").toggleClass("icon-xiajiantou");
+        //     $(this).find(".iconfont_click").toggleClass("icon-shangjiantou");
+        // }
     })
     // 移动端二级菜单导航end
 

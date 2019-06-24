@@ -3,8 +3,7 @@
   <div class="container">
     <?php 
         echo get_option('weipxiu_options')['footer_copyright'];
-    ?>本站主题由 <a href="https://www.weipxiu.com/" class="highlight">WEIPXIU.COM</a>
-    免费提供 <a href="https://github.com/weipxiu/Art_Blog" class="highlight">主题源码</a>
+    ?>&nbsp;本站主题由<a href="https://www.weipxiu.com/" class="highlight">WEIPXIU.COM</a>&nbsp;<a href="https://github.com/weipxiu/Art_Blog" target="_blank">免费提供</a>
   </div>
 </footer>
 <!-- 底部区域end -->
@@ -134,7 +133,9 @@
                 <tr>
                   <td>
                     <div class="qq-kefu-fun-box">
-                      <a class="qq-kefu-qrCode" id="qq-kefu-qrCode" href="javascript:;"></a>
+                      <a class="qq-kefu-qrCode" id="qq-kefu-qrCode" href="javascript:;">
+                        <img src="<?php echo get_option('weipxiu_options')['weChat-number'];?>" alt="">
+                      </a>
                       <a class="qq-kefu-backUp-2" id="qq-kefu-backUp" href="javascript:;"></a>
                       <div class="qqkefu-qrcode-box" pos="2">
                       </div>

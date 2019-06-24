@@ -110,4 +110,6 @@
 > http://lin.weblyc.cn/
 > http://xqxgo.com/
 > 小丸子 http://www.minwenyu.com/
+> 非常前端 http://moxiaofei.com/
+> http://www.izhaowang.com/
 
