@@ -334,6 +334,19 @@ function add_button_mce($mce_settings) {
 <?php
 }
 
+//标签显示文章数
+// function Tagno($text) {
+//     $text = preg_replace_callback('|<a (.+?)</a>|i', 'tagnoCallback', $text);
+//     return $text;
+// }
+// function tagnoCallback($matches) {
+//     $text=$matches[1];
+//     preg_match('|title=(.+?)style|i',$text ,$a);
+//     preg_match("/[0-9]+/",$a[1],$a);
+//     return "<a ".$text ."(".$a[0].")</a>";
+// }
+// add_filter('wp_tag_cloud', 'Tagno', 1);
+
 // 自定义登录界面
 function custom_login() {
     echo '<link rel="stylesheet" type="text/css" href="/wp-content/themes/Art_Blog/css/login.css" />';

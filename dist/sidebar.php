@@ -116,9 +116,12 @@
 </div>
 <!-- 随机文章end -->
 
-<!-- 技术分类start -->
+<!-- 热门标签start -->
 <div class="classif">
-    <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-leimupinleifenleileibie"></i>文章分类</a></h3>
+    <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-leimupinleifenleileibie"></i>热门标签</a></h3>
+    <!-- <div class="items">
+        <?php wp_tag_cloud('number=24&orderby=name&order=DESC&smallest=12&largest=12&unit=px'); ?>
+    </div> -->
     <div class="items">
         <a href="/?cat=3">H5/CSS3 (<?php echo wt_get_category_count(3); ?>)</a>
         <a href="/?cat=5">Js基础 (<?php echo wt_get_category_count(5); ?>)</a>
@@ -149,14 +152,7 @@
         <a href="https://getman.cn//">Http接口测试</a>
     </div>
 </div>
-<!-- 技术分类end -->
-
-<!-- <div class="widget Label">
-  <h3 class="widget-title"><a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>标签云</a></h3>
-  <div class="daily-list">
-      <?php /*wp_tag_cloud('smallest=10&largest=14&number=32&order=RAND') */?>
-  </div>
-</div> -->
+<!-- 热门标签end -->
 
 <!-- 评论模块start -->
 <div class="classif" id="primary-sidebar">

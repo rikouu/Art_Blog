@@ -101,9 +101,11 @@ $(function () {
             // }
         }
         //set_desktop();
-        setTimeout(function () {
-            set_desktop();
-        }, 3000);
+        if(domain_name.indexOf('weipxiu.com') != '-1'){
+            setTimeout(function () {
+                set_desktop();
+            }, 3000);
+        }
         // 桌面提醒功能
 
         // setTimeout(function(){
