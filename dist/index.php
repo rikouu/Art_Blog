@@ -44,9 +44,9 @@
 			<!--移动端轮播start-->
 			<div class="swiper-container1">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide" style="background:url('/wp-content/themes/Art_Blog/images/banner3.png') no-repeat center top; background-size:100% 100%"></div>
-					<div class="swiper-slide" style="background:url('/wp-content/themes/Art_Blog/images/banner2.png') no-repeat center top; background-size:100% 100%"></div>
 					<div class="swiper-slide" style="background:url('/wp-content/themes/Art_Blog/images/banner1.png') no-repeat center top; background-size:100% 100%"></div>
+					<div class="swiper-slide" style="background:url('/wp-content/themes/Art_Blog/images/banner2.png') no-repeat center top; background-size:100% 100%"></div>
+					<div class="swiper-slide" style="background:url('/wp-content/themes/Art_Blog/images/banner3.png') no-repeat center top; background-size:100% 100%"></div>
 				</div>
 				<div class="swiper-pagination"></div>
 			</div>
