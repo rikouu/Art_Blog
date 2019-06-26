@@ -1,8 +1,5 @@
 $(function () {
     var domain_name = window.location.protocol + "//" + window.location.host;
-    // if (window.location.href != domain_name && window.location.href != domain_name + '/') {
-    //     $("body > .continar").css("margin-top", "88px");
-    // }
 
     //特色图片懒加载
     $("img.Lazy_load").lazyload({
