@@ -69,6 +69,16 @@ set_post_thumbnail_size(220, 140, true); // 图片宽度与高度
 //     add_action('pre_get_posts','custom_posts_per_page');
 ?>
 <?php 
+//部分内容登录可见
+function login_to_read($atts, $content=null) {
+    extract(shortcode_atts(array("notice" => '
+    <p style="text-align:center;"><span style="color: red;">温馨提示：</span>此处内容需要<a title="登录后可见" href="#respond">登录</a>后才能查看！
+    </p>'), $atts));
+    if ( is_user_logged_in() && !is_null( $content ) && !is_feed() )
+                    return $content;
+            return $notice;
+    }
+    add_shortcode('login_success', 'login_to_read');
 /**
 * 数字分页函数
 * 因为wordpress默认仅仅提供简单分页
@@ -321,6 +331,7 @@ function add_button_mce($mce_settings) {
         QTags.addButton( '注意', '注意', "<span class='beCareful'>", "</span>" );
         QTags.addButton( '加密内容', '加密内容', "[secret key='123']", "[/secret]" );
         QTags.addButton( '视频', '视频', "[embed]", "[/embed]" );
+        QTags.addButton( '登录可见', '登录可见', "[login_success]", "[/login_success]" );
         QTags.addButton( '前言', '前言', "<p class='con_info'>", "</p>" );
         QTags.addButton( 'a', 'a', "<a href=''>", "</a>" );
         QTags.addButton( '[cc]', '[cc]', "[cc lang='php']", "[/cc]" );
