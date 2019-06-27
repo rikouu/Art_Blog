@@ -5,8 +5,9 @@
         data-setup="{}">
         <source src="/wp-content/themes/Art_Blog/music/2018.mp4" type="video/mp4">
         </source>
-        <p class="vjs-no-js"> 要查看此视频，请启用JavaScript，并考虑升级到Web浏览器版本。 <a href="https://videojs.com/html5-video-support/"
-                target="_blank">supports HTML5 video</a> </p>
+        <p class="vjs-no-js"> 要查看此视频，请启用JavaScript，并考虑升级到Web浏览器版本。
+            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
     </video>
     <!-- <img src="<?php bloginfo('template_url'); ?>/screenshot.png" width="308" height="185" alt="" style="display: block;width:100%;margin-top:10px;background-size: 330px 185px;"> -->
     <div class="textwidget">
@@ -78,7 +79,9 @@
                     <a href="<?php the_permalink(); ?>" class="hot_title">
                         <?php the_title(); ?>
                     </a>
-                    <time class="hot_time"><?php the_time('Y年m月d日') ?></time>
+                    <time class="hot_time"><?php the_time('Y年m月d日') ?>
+                        <span>阅读(<?php echo getPostViews(get_the_ID()); ?>)</span>
+                    </time>
                 </div>
             </li>
             <?php } wp_reset_query();?>
