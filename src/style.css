@@ -4012,17 +4012,6 @@ ul.post-categories li:first-child {
   padding: 0 10px;
 }
 
-.text>font.s_bar {
-  display: block;
-  position: absolute;
-  background: #1890ff;
-  top: 22px;
-  left: -1px;
-  width: 5px;
-  height: 25px;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-}
 
 .log-text h4,
 .h4 {

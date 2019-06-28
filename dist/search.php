@@ -47,22 +47,8 @@
     <!--头部文件引用end-->
 
     <!-- 正文区域start -->
-
     <div class="continar">
-
         <div class="continar-left" id="details" style="border:0; padding:0; float:none;background: transparent;">
-            <!-- <script type="text/javascript">
-                ( function() {
-                    document.write( unescape( '%3Cdiv id="bdcs"%3E%3C/div%3E' ) );
-                    var bdcs = document.createElement( 'script' );
-                    bdcs.type = 'text/javascript';
-                    bdcs.async = true;
-                    bdcs.src = 'https://znsv.baidu.com/customer_search/api/js?sid=16243462616234269555' + '&plate_url=' + encodeURIComponent( window.location.href ) + '&t=' + Math.ceil( new Date() / 3600000 );
-                    var s = document.getElementsByTagName( 'script' )[ 0 ];
-                    s.parentNode.insertBefore( bdcs, s );
-                } )();
-            </script> -->
-
             <!-- 面包屑导航 -->
             <div class="mod-breadcrumb">
                 <?php wheatv_breadcrumbs(); ?>
@@ -72,10 +58,6 @@
                 <?php if ( have_posts() ) : ?>
                 <?php while ( have_posts() ) : the_post(); ?>
                 <div class="text">
-                    <!-- <div class="mod-category__article-time">
-                        <span>2018/10</span>
-                        <span>23&nbsp;&nbsp;周二</span>
-                    </div> -->
                     <div class="img-left">
                         <a class="read-more" href="<?php the_permalink(); ?>" target="_blank">
                             <?php
@@ -105,11 +87,6 @@
                         </h3>
                         <a class="read-more read_url" href="<?php the_permalink(); ?>" target="_blank">阅读全文<i class="iconfont icon-jiantou-you-cuxiantiao-fill"></i></a>
                         <p class="l">
-                            <!-- <span>
-                                <a href="<?php /*the_permalink(); */?> ">
-                                    <i class="">&nbsp;</i><?php /*echo '发表于 '.timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); */?>
-                                </a>
-                            </span> -->
                             <span><i class="iconfont icon-shijian" aria-hidden="true"></i><?php the_time('Y年m月d日') ?></span>
                             <span>
                                 <a href="<?php the_permalink(); ?> ">
@@ -130,8 +107,6 @@
                         <?php if( is_sticky() ) echo '<em><a href="">顶</a></em>'; ?>
                         <!-- <span class="new-icon">NEW</span> -->
                     </div>
-                    <!-- <font class="s_bar"></font> -->
-                    <!--竖条-->
                 </div>
 
                 <?php endwhile; ?>
@@ -158,8 +133,4 @@
     <!-- 底部引用区域end -->
 
 </body>
-<script>
-    $( "html" ).css( "overflow", "visible" );
-</script>
-
 </html>

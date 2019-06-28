@@ -264,8 +264,6 @@
 							<?php if (is_sticky()) echo '<em><a href="">顶</a></em>'; ?>
 							<!-- <span class="new-icon">NEW</span> -->
 						</div>
-						<!-- <font class="s_bar"></font> -->
-						<!--竖条-->
 					</article>
 				<?php endwhile;
 				else : ?>
