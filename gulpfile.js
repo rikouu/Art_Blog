@@ -7,7 +7,6 @@ const gulpless = require('gulp-less'); //引入less转换模块
 const gulp_minify_css = require('gulp-minify-css'); //压缩css
 const concat = require('gulp-concat'); //引入合并代码模块
 const babel = require('gulp-babel'); //引入ES6转ES5模块
-const autoprefixer = require('gulp-autoprefixer'); //增加浏览器前缀
 const rev = require('gulp-rev');//给静态文件资源添加hash值防缓存
 const preprocess = require("gulp-preprocess"); //区分html,js环境变量
 const runSequence = require('run-sequence'); //流程控制，控制任务执行顺序
@@ -74,19 +73,11 @@ gulp.task("minCss", function () {
     gulp.src("src/css/*.css")
         //.pipe(rev())//添加hash值防缓存
         //.pipe(gulpless())
-        .pipe(autoprefixer({ //增加浏览器前缀
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
         .pipe(gulp_minify_css())
         .pipe(gulp.dest(target+"/css"))
 
     //style.css压缩
     return gulp.src("src/style.css")
-    .pipe(autoprefixer({
-        browsers: ['last 2 versions'],
-        cascade: false
-    }))
     .pipe(gulp_minify_css())    
     .pipe(gulp.dest(target))
 });
@@ -125,7 +116,7 @@ gulp.task("imageMin", function () {
         .pipe(gulp.dest(target+'/images'))
 })
 
-//ES6转换转ES5(babel-v7版本)
+// ES6转换转ES5(babel-v7版本)
 // gulp.task('babel', () =>{
 //       return  gulp.src('src/js/*.js')
 //         .pipe(babel({

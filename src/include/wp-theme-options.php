@@ -27,16 +27,23 @@ function themeoptions_page() {
       <!-- 内容一 基本 -->
       <div class="content-wrap content1">
         <div class="row clearfix">
-            <label for="domain" class="fl left-wrap">站点域名：</label>
-            <div class="fr right-wrap">
-              <input
-                placeholder="例如<?php echo home_url(); ?>，结尾不要带/"
-                type="text"
-                class="url-inp"
-                name="domain"
-                id="domain"
-                value="<?php echo $a_options['domain']; ?>"
-              >
+          <label class="fl left-wrap">侧边栏热门标签</label>
+          <div class="fr right-wrap">
+            <label for="snow-flake">开</label>
+            <input
+              type="radio"
+              id="popular"
+              name="popular"
+              value="on" <?php if($a_options['popular'] == 'on') echo 'checked'; ?>
+            >
+            <label for="aside-count-off">关</label>
+            <input
+              type="radio"
+              id="popular"
+              name="popular"
+              value="off" <?php if($a_options['popular'] == 'off' || $a_options['popular'] == '') echo 'checked'; ?>
+            >
+            <span class="warn">*开启后可自定义结构（主题sidebar.php中修改）,你应该无需开启</span>
           </div>
         </div>
 
@@ -480,13 +487,13 @@ function themeoptions_page() {
     $options = array(
       'update_themeoptions' => 'true',
       'label_logo' => $_POST['label-logo'],
+      'popular' => $_POST['popular'],
       'snowflake' => $_POST['snow-flake'],
       'aside_count' => $_POST['aside-count'],
       'switch_https' => $_POST['switch_https'],
       'text_pic' => $_POST['text-pic'],
       'logo' => $_POST['logo'],
       'thumbnail' => $_POST['thumbnail-img'],
-      'domain' => $_POST['domain'],
       'sidebar_notice' => $_POST['sidebar-notice'],
       'footer_copyright' => $_POST['footer-copyright'],
       'login_css'  => $_POST['login-css'],

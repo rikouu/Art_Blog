@@ -19,54 +19,6 @@ $(function () {
         }
         //IE浏览器屏蔽部分动效end
 
-        //轩枫博客start
-        //turnEffect（翻转）boomEffect（爆炸）pageEffect（翻页）skewEffect（扭曲）cubeEffect（立方体）
-        var flippingMode = ['turnEffect', 'boomEffect', 'skewEffect'];
-        var randomNum = Math.floor(Math.random() * 3);
-        var banner = new Banner({
-            banner: '#banner_img',
-            index: 0,
-            autoplay: 8000,
-            width: 1200,
-            height: 300,
-            images: [{
-                    url: '/wp-content/themes/Art_Blog/images/banner-1.jpg',
-                    link: '/category/frontend/holdall'
-                }, {
-                    url: '/wp-content/themes/Art_Blog/images/banner-2.jpg',
-                    link: '/3355.html'
-                }, {
-                    url: '/wp-content/themes/Art_Blog/images/banner-3.jpg',
-                    link: '/1332.html'
-                }, {
-                    url: '/wp-content/themes/Art_Blog/images/banner-4.jpg',
-                    link: 'https://github.com/weipxiu/Art_Blog'
-                }, {
-                    url: '/wp-content/themes/Art_Blog/images/banner-5.jpg',
-                    link: '/658.html'
-                },
-                {
-                    url: '/wp-content/themes/Art_Blog/images/banner-6.jpg',
-                    link: '/1313.html'
-                }
-            ],
-
-            preloadImages: true, // 预加载所有图片
-
-            // 分页及控制
-            pagination: '.js_banner_nav', // 分页dom
-            paginationClick: true, // 分页是否可点击
-            prevButton: '.js_banner_prev', // 下一张dom
-            nextButton: '.js_banner_next', // 上一张dom
-            Effects: {
-                //turnEffect（翻转）boomEffect（爆炸）pageEffect（翻页）skewEffect（扭曲）cubeEffect（立方体）
-                'prev': 'turnEffect',
-                'next': 'boomEffect',
-                'navi': 'pageEffect'
-            },
-        });
-        //轩枫博客end
-
         // 桌面提醒功能
         var set_desktop = function () {
             if (window.Notification) {

@@ -530,7 +530,7 @@ i {
 }
 
 .header.hover .nav ul.music-nav li.active p {
-  height: 46px;
+  height: 48px;
 }
 
 .topbar {
@@ -822,7 +822,7 @@ i {
 }
 
 .nav ul.music-nav li.active p {
-  height: 75px;
+  height: 64px;
   border-radius: 0;
 }
 

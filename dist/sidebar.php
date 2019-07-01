@@ -122,38 +122,41 @@
 <!-- 热门标签start -->
 <div class="classif">
     <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-leimupinleifenleileibie"></i>热门标签</a></h3>
-    <!-- <div class="items">
-        <?php wp_tag_cloud('number=24&orderby=name&order=DESC&smallest=12&largest=12&unit=px'); ?>
-    </div> -->
-    <div class="items">
-        <a href="/?cat=3">H5/CSS3 (<?php echo wt_get_category_count(3); ?>)</a>
-        <a href="/?cat=5">Js基础 (<?php echo wt_get_category_count(5); ?>)</a>
-        <a href="/?cat=5">jQuery (<?php echo wt_get_category_count(5); ?>)</a>
-        <a href="/?cat=14">Js框架 (<?php echo wt_get_category_count(14); ?>)</a>
-        <a href="/?cat=22">Node.js (<?php echo wt_get_category_count(22); ?>)</a>
-        <a href="/?cat=13">前端技巧 ((<?php echo wt_get_category_count(13); ?>))</a>
-        <a href="/?cat=14">前端资源 (<?php echo wt_get_category_count(14); ?>)</a>
-        <a href="/?cat=29">前端工具 (<?php echo wt_get_category_count(29); ?>)</a>
-        <a href="/?cat=2">CMS系统 (<?php echo wt_get_category_count(2); ?>)</a>
-        <a href="/?cat=1">本站公告</a>
-        <a href="https://cdnnext.console.aliyun.com/refresh/record">阿里CDN</a>
-        <a href="https://www.bootcdn.cn/">CDN大全</a>
-        <a href="https://github.com/weipxiu">博主Github</a>
-        <a href="https://tongji.baidu.com/web/homepage/index">百度统计</a>
-        <a href="https://ziyuan.baidu.com/linksubmit/index">百度收录</a>
-        <a href="http://tool.chinaz.com/KeyWords/">关键词排名</a>
-        <a href="http://caibaojian.com/30-seconds-of-css/#sibling-fade">经典Css片段</a>
-        <a href="http://momentjs.cn/">时间戳格式化</a>
-        <a href="https://github.com/shengxinjing/programmer-job-blacklist">全国黑企名单</a>
-        <a href="https://docs.qq.com/sheet/DdkZzbElOT0VrV0dD?ADUIN=937018802&ADSESSION=1539913469&ADTAG=CLIENT.QQ.5587_.0&ADPUBNO=26847&ADUIN=343049466&ADSESSION=1539911391&ADTAG=CLIENT.QQ.5593_.0&ADPUBNO=26858&tab=BB08J2">武汉黑企名单</a>
-        <a href="https://996.icu/">996.ICU火了</a>
-        <a href="https://github.com/stephentian/33-js-concepts">Js33个概念</a>
-        <a href="https://github.com/Tencent/vConsole">vConsole</a>
-        <a href="https://github.com/wendux/DSBridge-IOS">DSBridge</a>
-        <a href="https://github.com/rachmanzz/vue-inview">DOM元素进屏</a>
-        <a href="http://www.shareinstall.net/">Shareinstall</a>
-        <a href="https://getman.cn//">Http接口测试</a>
-    </div>
+    <?php if (get_option('weipxiu_options')['popular'] != 'on'){ ?>
+        <div class="items">
+            <?php wp_tag_cloud('number=24&orderby=name&order=DESC&smallest=12&largest=12&unit=px'); ?>
+        </div>
+    <?php }else{?>
+        <div class="items">
+            <a href="/?cat=3">H5/CSS3 (<?php echo wt_get_category_count(3); ?>)</a>
+            <a href="/?cat=5">Js基础 (<?php echo wt_get_category_count(5); ?>)</a>
+            <a href="/?cat=5">jQuery (<?php echo wt_get_category_count(5); ?>)</a>
+            <a href="/?cat=14">Js框架 (<?php echo wt_get_category_count(14); ?>)</a>
+            <a href="/?cat=22">Node.js (<?php echo wt_get_category_count(22); ?>)</a>
+            <a href="/?cat=13">前端技巧 ((<?php echo wt_get_category_count(13); ?>))</a>
+            <a href="/?cat=14">前端资源 (<?php echo wt_get_category_count(14); ?>)</a>
+            <a href="/?cat=29">前端工具 (<?php echo wt_get_category_count(29); ?>)</a>
+            <a href="/?cat=2">CMS系统 (<?php echo wt_get_category_count(2); ?>)</a>
+            <a href="/?cat=1">本站公告</a>
+            <a href="https://cdnnext.console.aliyun.com/refresh/record">阿里CDN</a>
+            <a href="https://www.bootcdn.cn/">CDN大全</a>
+            <a href="https://github.com/weipxiu">博主Github</a>
+            <a href="https://tongji.baidu.com/web/homepage/index">百度统计</a>
+            <a href="https://ziyuan.baidu.com/linksubmit/index">百度收录</a>
+            <a href="http://tool.chinaz.com/KeyWords/">关键词排名</a>
+            <a href="http://caibaojian.com/30-seconds-of-css/#sibling-fade">经典Css片段</a>
+            <a href="http://momentjs.cn/">时间戳格式化</a>
+            <a href="https://github.com/shengxinjing/programmer-job-blacklist">全国黑企名单</a>
+            <a href="https://docs.qq.com/sheet/DdkZzbElOT0VrV0dD?ADUIN=937018802&ADSESSION=1539913469&ADTAG=CLIENT.QQ.5587_.0&ADPUBNO=26847&ADUIN=343049466&ADSESSION=1539911391&ADTAG=CLIENT.QQ.5593_.0&ADPUBNO=26858&tab=BB08J2">武汉黑企名单</a>
+            <a href="https://996.icu/">996.ICU火了</a>
+            <a href="https://github.com/stephentian/33-js-concepts">Js33个概念</a>
+            <a href="https://github.com/Tencent/vConsole">vConsole</a>
+            <a href="https://github.com/wendux/DSBridge-IOS">DSBridge</a>
+            <a href="https://github.com/rachmanzz/vue-inview">DOM元素进屏</a>
+            <a href="http://www.shareinstall.net/">Shareinstall</a>
+            <a href="https://getman.cn//">Http接口测试</a>
+        </div>
+    <?php }?>
 </div>
 <!-- 热门标签end -->
 

@@ -44,9 +44,9 @@
 			<!--移动端轮播start-->
 			<div class="swiper-container1">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide" style="background:url('/wp-content/themes/Art_Blog/images/banner1.png') no-repeat center top; background-size:100% 100%"></div>
-					<div class="swiper-slide" style="background:url('/wp-content/themes/Art_Blog/images/banner2.png') no-repeat center top; background-size:100% 100%"></div>
-					<div class="swiper-slide" style="background:url('/wp-content/themes/Art_Blog/images/banner3.png') no-repeat center top; background-size:100% 100%"></div>
+					<div class="swiper-slide" style="background:url('/wp-content/themes/Art_Blog/images/banner1.png') no-repeat center top; background-size:100% 100%"><a href="https://www.weipxiu.com/"></a></div>
+					<div class="swiper-slide" style="background:url('/wp-content/themes/Art_Blog/images/banner2.png') no-repeat center top; background-size:100% 100%"><a href="https://www.weipxiu.com/"></a></div>
+					<div class="swiper-slide" style="background:url('/wp-content/themes/Art_Blog/images/banner3.png') no-repeat center top; background-size:100% 100%"><a href="https://www.weipxiu.com/"></a></div>
 				</div>
 				<div class="swiper-pagination"></div>
 			</div>
@@ -316,5 +316,52 @@
 
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/xfg_banner/banner-effect.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/index_min.js"></script>
+<script type="text/javascript">
+//turnEffect（翻转）boomEffect（爆炸）pageEffect（翻页）skewEffect（扭曲）cubeEffect（立方体）
+var flippingMode = ['turnEffect', 'boomEffect', 'skewEffect'];
+var randomNum = Math.floor(Math.random() * 3);
+var banner = new Banner({
+		banner: '#banner_img',
+		index: 0,
+		autoplay: 8000,
+		width: 1200,
+		height: 300,
+		images: [{
+						url: '/wp-content/themes/Art_Blog/images/banner-1.jpg',
+						link: '/category/frontend/holdall'
+				}, {
+						url: '/wp-content/themes/Art_Blog/images/banner-2.jpg',
+						link: '/3355.html'
+				}, {
+						url: '/wp-content/themes/Art_Blog/images/banner-3.jpg',
+						link: '/1332.html'
+				}, {
+						url: '/wp-content/themes/Art_Blog/images/banner-4.jpg',
+						link: 'https://github.com/weipxiu/Art_Blog'
+				}, {
+						url: '/wp-content/themes/Art_Blog/images/banner-5.jpg',
+						link: '/658.html'
+				},
+				{
+						url: '/wp-content/themes/Art_Blog/images/banner-6.jpg',
+						link: '/1313.html'
+				}
+		],
 
+		preloadImages: true, // 预加载所有图片
+
+		// 分页及控制
+		pagination: '.js_banner_nav', // 分页dom
+		paginationClick: true, // 分页是否可点击
+		prevButton: '.js_banner_prev', // 下一张dom
+		nextButton: '.js_banner_next', // 上一张dom
+		Effects: {
+				//turnEffect（翻转）boomEffect（爆炸）pageEffect（翻页）skewEffect（扭曲）cubeEffect（立方体）
+				'prev': 'turnEffect',
+				'next': 'boomEffect',
+				'navi': 'pageEffect'
+		},
+});
+//轩枫博客end
+</script>
 </html>
