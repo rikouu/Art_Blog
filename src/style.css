@@ -819,6 +819,7 @@ i {
   z-index: 0;
   opacity: 0;
   display: block !important;
+  pointer-events: none;
 }
 
 .nav ul.music-nav li.active p {
