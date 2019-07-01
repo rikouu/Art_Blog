@@ -26,6 +26,8 @@ $(function () {
     }
     //追加音乐标签
     node_list.append("<audio src='' autoplay='autoplay'></audio>"+"<p style='opacity: 0'></p>");
+    //二级菜单父级禁止跳转
+    $("#nav_list .sub-menu").siblings('a').attr('href','javascript:void(0);');
     //追加icon
     $("#nav_list .sub-menu").siblings('a').find('span').append("<i class='iconfont icon-jiantou'></i>");
     $(".os-herder .sub-menu").siblings('a').append("<i class='iconfont iconfont_click icon-xiajiantou'></i>");
@@ -267,13 +269,7 @@ $(function () {
         event.stopPropagation();
     },
         function () {
-            clearInterval(navMinHideSetTime);
-            navMinHideSetTime = setInterval(function () { //不断检测鼠标移开后下拉二级菜单是否完好影藏
-                if (searchShow && $(".nav-min").eq(0).css("opacity") == 0 && $(".nav-min").eq(1).css("opacity") == 0) {
-                    $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
-                    clearInterval(navMinHideSetTime);
-                }
-            }, 1000)
+            $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
             $(this).removeClass("active");
         });
 
