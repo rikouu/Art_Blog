@@ -214,7 +214,7 @@ $(function () {
 
     // 跳动音符start
     $(".mod-header_music-icon").click(function () {
-        clearInterval(navMinHideSetTime); //清除鼠标离开li时候的定时器
+        //clearInterval(time); //清除鼠标离开li时候的定时器
         if (localStorage.getItem("off_y") != 1) {
             $(this).addClass("hover");
             $(".nav ul.music-nav li > p").css("opacity", "1");
@@ -251,17 +251,33 @@ $(function () {
     })
     //导航音乐title设置end
 
-    //钢琴导航start
+    //PC二级菜单，钢琴导航start
+    var time = null;
     var $index = null;
     var musicObj = null;
-    var navMinHideSetTime = null;
     var musicList = $(".nav ul.music-nav > li:not(.mod-header_music-icon)");
     $(".nav ul.music-nav > li:not(.mod-header_music-icon)").hover(function (event) {
+        clearTimeout(time);
+        $(this).find('.nav-min').css({
+            "opacity": "1",
+            "visibility": "visible",
+            "top": "49px"
+        }).parent('li').siblings('li').children('.nav-min').css({
+            "opacity": "0",
+            "visibility": "hidden",
+            "top": "70px"
+        });
+        $(this).siblings('li').children('.nav-min').css({
+            "opacity": "0",
+            "visibility": "hidden",
+            "top": "70px"
+        });
+
         $(this).parents(".header").css("z-index", "11"); //默认下方轮播层级高于头部
         $index = $(this).index();
         musicObj = $(".nav ul.music-nav > li:not(.mod-header_music-icon)").eq($index).find('audio');
         if (localStorage.getItem("off_y") == 1) {
-            $(this).addClass("active");
+            $(this).addClass("active").siblings('li').removeClass('active');
             musicObj.get(0).src = "/wp-content/themes/Art_Blog/music/nav_" + parseInt($index + 1) + ".mp3";
         } else {
             musicObj.get(0).src = "";
@@ -269,8 +285,16 @@ $(function () {
         event.stopPropagation();
     },
         function () {
-            $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
-            $(this).removeClass("active");
+            clearTimeout(time);
+            time = setTimeout(()=>{
+                $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
+                $(this).removeClass("active");
+                $(".header-conter .nav-min").css({
+                    "opacity": "0",
+                    "visibility": "hidden",
+                    "top": "70px"
+                });
+            }, 500);
         });
 
     function musicdown(number) {
@@ -310,34 +334,6 @@ $(function () {
         }, 150);
     });
     //钢琴导航end
-
-    //PC二级菜单start
-    var time = null;
-    $(".nav ul.music-nav li").hover(function (event) {
-        clearTimeout(time);
-        $(".nav ul.music-nav li .nav-min").css({
-            "opacity": "0",
-            "visibility": "hidden",
-            "top": "70px"
-        });
-        $(this).find('.nav-min').css({
-            "opacity": "1",
-            "visibility": "visible",
-            "top": "49px"
-        })
-        event.stopPropagation();
-    }, function () {
-        clearTimeout(time);
-        time = setTimeout(function () {
-            $(".header-conter .nav-min").css({
-                "opacity": "0",
-                "visibility": "hidden",
-                "top": "70px"
-            });
-        }, 300);
-
-    });
-    //PC二级菜单end
 
     // 飞机
     $(".aircraft").click(function () {
