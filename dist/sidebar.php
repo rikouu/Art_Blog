@@ -15,7 +15,7 @@
             <?php
         }
     ?>
-    <!-- <img src="<?php bloginfo('template_url'); ?>/screenshot.png" width="308" height="185" alt="" style="display: block;width:100%;margin-top:10px;background-size: 330px 185px;"> -->
+    
     <div class="textwidget">
         <p class="clearfix">
             <?php 
