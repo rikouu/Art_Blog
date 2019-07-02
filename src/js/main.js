@@ -764,6 +764,15 @@ $(function () {
     });
     // 当窗口改变时候end
 
+    //友情链接随机数颜色start
+    function randomColor(option) {
+        for (var i = 0; i < option.length; i++) {
+            option.eq(i).addClass('color-' + (parseInt(Math.random() * 8, 10) + 1))
+        }
+    }
+    randomColor($('.friendship .daily-list ul li'))
+    //友情链接随机数颜色end
+
     //视频播放start
     if ($('#my-video').length) {
         var delSetInterval = null; //定时器
@@ -836,14 +845,6 @@ $(function () {
                 myPlayer.pause();
             }, 500);
         });
-
-        //随机数背景图片
-        function randomColor(option) {
-            for (var i = 0; i < option.length; i++) {
-                option.eq(i).addClass('color-' + (parseInt(Math.random() * 8, 10) + 1))
-            }
-        }
-        randomColor($('.friendship .daily-list ul li'))
     }
     //视频播放end
 })
