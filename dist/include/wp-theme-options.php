@@ -27,6 +27,54 @@ function themeoptions_page() {
       <!-- 内容一 基本 -->
       <div class="content-wrap content1">
         <div class="row clearfix">
+          <label class="fl left-wrap">PC轮播图效果：</label>
+          <div class="fr right-wrap">
+            <label for="wheel_banner1">翻转</label>
+            <input
+              type="radio"
+              id="wheel_banner1"
+              name="wheel-banner"
+              value="0" <?php if($a_options['wheel_banner'] == '0') echo 'checked'; ?>
+            >
+            <label for="wheel_banner2">爆炸</label>
+            <input
+              type="radio"
+              id="wheel_banner2"
+              name="wheel-banner"
+              value="1" <?php if($a_options['wheel_banner'] == '1') echo 'checked'; ?>
+            >
+            <label for="wheel_banner3">翻页</label>
+            <input
+              type="radio"
+              id="wheel_banner3"
+              name="wheel-banner"
+              value="2" <?php if($a_options['wheel_banner'] == '2') echo 'checked'; ?>
+            >
+            <label for="wheel_banner4">扭曲</label>
+            <input
+              type="radio"
+              id="wheel_banner4"
+              name="wheel-banner"
+              value="3" <?php if($a_options['wheel_banner'] == '3') echo 'checked'; ?>
+            >
+            <label for="wheel_banner5">立方体</label>
+            <input
+              type="radio"
+              id="wheel_banner5"
+              name="wheel-banner"
+              value="4" <?php if($a_options['wheel_banner'] == '4') echo 'checked'; ?>
+            >
+            <label for="wheel_banner0">随机</label>
+            <input
+              type="radio"
+              id="wheel_banner0"
+              name="wheel-banner"
+              value="-1" <?php if($a_options['wheel_banner'] == '-1' || $a_options['wheel_banner'] == '') echo 'checked'; ?>
+            >
+          </div>
+        </div>
+
+        <div class="row clearfix">
           <label class="fl left-wrap">雪花背景特效：</label>
           <div class="fr right-wrap">
             <label for="snow-flake_on">开</label>
@@ -109,7 +157,7 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
-          <label class="fl left-wrap">博客公告视频</label>
+          <label class="fl left-wrap">侧边栏视频</label>
           <div class="fr right-wrap">
             <label for="video_on">开</label>
             <input
@@ -551,6 +599,7 @@ function themeoptions_page() {
 		// 数据提交
     $options = array(
       'update_themeoptions' => 'true',
+      'wheel_banner' => $_POST['wheel-banner'],
       'label_logo' => $_POST['label-logo'],
       'popular' => $_POST['popular'],
       'snowflake' => $_POST['snow-flake'],

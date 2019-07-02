@@ -120,3 +120,6 @@ input[type=checkbox], input[type=radio]{
 .border_none{
   border-bottom:none;
 }
+input[type=radio]{
+  margin-right: 7px;
+}
