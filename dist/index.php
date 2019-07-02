@@ -358,7 +358,7 @@ var banner = new Banner({
 		Effects: {
 				//turnEffect（翻转）boomEffect（爆炸）pageEffect（翻页）skewEffect（扭曲）cubeEffect（立方体）
 				'prev': 'turnEffect',
-				'next': '<?php echo get_option('weipxiu_options')['wheel_banner']; ?>' == ''?flippingMode[parseInt(Math.random()*(5),10)]:flippingMode[<?php echo get_option('weipxiu_options')['wheel_banner']; ?>],
+				'next': '<?php echo get_option('weipxiu_options')['wheel_banner']; ?>' == ''?flippingMode[parseInt(Math.random()*(5),10)]:flippingMode[<?php echo get_option('weipxiu_options')['wheel_banner']; ?>-1],
 				'navi': 'pageEffect'
 		},
 });
