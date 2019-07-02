@@ -19,4 +19,30 @@ jQuery(function() {
     jQuery(this).addClass('on').siblings().removeClass('on');
     jQuery('.content-wrap').eq(jQuery(this).index()).show().siblings('.content-wrap').hide();
   });
+
+  //判断侧边栏热门标签开关是否打开
+  if(jQuery(".popular_on").is(':checked')){
+    jQuery(".popular_show").css("display",'block');
+  }else{
+    jQuery(".popular_show").css("display",'none');
+  };
+  jQuery(".popular_on").click(function(){
+    jQuery(".popular_show").slideDown();
+  })
+  jQuery(".popular_off").click(function(){
+    jQuery(".popular_show").slideUp();
+  })
+
+  //判断侧边视频开关是否打开
+  if(jQuery(".video_on").is(':checked')){
+    jQuery(".row_content").css("display",'block');
+  }else{
+    jQuery(".row_content").css("display",'none');
+  };
+  jQuery(".video_on").click(function(){
+    jQuery(".row_content").slideDown();
+  })
+  jQuery(".video_off").click(function(){
+    jQuery(".row_content").slideUp();
+  })
 });

@@ -86,6 +86,9 @@ textarea{
 .row .right-wrap input[type="text"] {
   width: 80%;
 }
+.row .fixed-wrap input[type="text"] {
+  width: 565px;
+}
 
 .btn-wrap {
   border: 0;
@@ -105,10 +108,15 @@ textarea{
 }
 .warn{
   color: #e6a23c;
+  transform: translateY(2px);
+  display: inline-block;
 }
 .danger{
   color: #f56c6c;
 }
 input[type=checkbox], input[type=radio]{
   margin-top:0
+}
+.border_none{
+  border-bottom:none;
 }

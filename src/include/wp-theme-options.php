@@ -27,40 +27,19 @@ function themeoptions_page() {
       <!-- 内容一 基本 -->
       <div class="content-wrap content1">
         <div class="row clearfix">
-          <label class="fl left-wrap">侧边栏热门标签</label>
-          <div class="fr right-wrap">
-            <label for="snow-flake">开</label>
-            <input
-              type="radio"
-              id="popular"
-              name="popular"
-              value="on" <?php if($a_options['popular'] == 'on') echo 'checked'; ?>
-            >
-            <label for="aside-count-off">关</label>
-            <input
-              type="radio"
-              id="popular"
-              name="popular"
-              value="off" <?php if($a_options['popular'] == 'off' || $a_options['popular'] == '') echo 'checked'; ?>
-            >
-            <span class="warn">*开启后可自定义结构（主题sidebar.php中修改）,你应该无需开启</span>
-          </div>
-        </div>
-
-        <div class="row clearfix">
           <label class="fl left-wrap">雪花背景特效：</label>
           <div class="fr right-wrap">
-            <label for="snow-flake">开</label>
+            <label for="snow-flake_on">开</label>
             <input
               type="radio"
-              id="snow-flake"
+              id="snow-flake_on"
               name="snow-flake"
               value="on" <?php if($a_options['snowflake'] == 'on') echo 'checked'; ?>
             >
-            <label for="aside-count-off">关</label>
+            <label for="snow-flake_off">关</label>
             <input
               type="radio"
-              id="snow-flake"
+              id="snow-flake_off"
               name="snow-flake"
               value="off" <?php if($a_options['snowflake'] == 'off' || $a_options['snowflake'] == '') echo 'checked'; ?>
             >
@@ -88,7 +67,7 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
-          <label class="fl left-wrap">首页电子邮件订阅：</label>
+          <label class="fl left-wrap">电子邮件订阅：</label>
           <div class="fr right-wrap">
             <label for="text-pic-on">开</label>
             <input
@@ -114,7 +93,7 @@ function themeoptions_page() {
             <label for="switch-https-on">开</label>
             <input
               type="radio"
-              id="tswitch-https-on"
+              id="switch-https-on"
               name="switch_https"
               value="on" <?php if($a_options['switch_https'] == 'on') echo 'checked'; ?>
             >
@@ -130,9 +109,103 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
+          <label class="fl left-wrap">博客公告视频</label>
+          <div class="fr right-wrap">
+            <label for="video_on">开</label>
+            <input
+              class="video_on"
+              type="radio"
+              id="video_on"
+              name="side_video"
+              value="on" <?php if($a_options['side_video'] == 'on') echo 'checked'; ?>
+            >
+            <label for="video_off">关</label>
+            <input
+              class="video_off"
+              type="radio"
+              id="video_off"
+              name="side_video"
+              value="off" <?php if($a_options['side_video'] == 'off' || $a_options['side_video'] == '') echo 'checked'; ?>
+            >
+          </div>
+        </div>
+
+        <div class="row clearfix row_content border_none" style="display:none">
+          <div class="row clearfix border_none" >
+            <label for="video-url" class="fl left-wrap">视频播放地址：</label>
+            <div class="fixed-wrap">
+              <input
+                type="text"
+                class="url-inp"
+                name="video_url"
+                id="video-url"
+                value="<?php echo $a_options['video_url']; ?>"
+              >
+              <span class="warn">*请写入.mp4视频文件地址</span>
+            </div>
+          </div>
+
+          <div class="row clearfix">
+            <div class="margin-top-15 clearfix">
+              <label class="fl left-wrap" for="">视频封面图片：</label>
+              <div class="fixed-wrap">
+                <input
+                  type="text"
+                  class="url-inp"
+                  name="video_cover"
+                  id="video_cover"
+                  value="<?php echo $a_options['video_cover']; ?>"
+                >
+                <input type="button" name="img-upload" value="选择文件">
+              </div>
+            </div>
+            <div class="margin-top-15 clearfix">
+              <div class="fl left-wrap">
+                视频封面图片预览：
+              </div>
+              <div class="fr right-wrap">
+                <img src="<?php echo $a_options['video_cover']; ?>" class="preview-img" style="max-width: 100px;" alt="">
+                <span class="warn" style="display:block">*封面最佳尺寸308*174</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row clearfix">
           <label for="sidebar-notice" class="fl left-wrap">侧边栏公告：</label>
           <div class="fr right-wrap">
             <textarea id="sidebar-notice" name="sidebar-notice" rows="5" cols="100"><?php echo $a_options['sidebar_notice']; ?></textarea>
+          </div>
+        </div>
+
+        <div class="row clearfix">
+          <label class="fl left-wrap">侧边栏热门标签</label>
+          <div class="fr right-wrap">
+            <label for="popular_on">开</label>
+            <input
+              class="popular_on"
+              type="radio"
+              id="popular_on"
+              name="popular"
+              value="on" <?php if($a_options['popular'] == 'on') echo 'checked'; ?>
+            >
+            <label for="popular_off">关</label>
+            <input
+              class="popular_off"
+              type="radio"
+              id="popular_off"
+              name="popular"
+              value="off" <?php if($a_options['popular'] == 'off' || $a_options['popular'] == '') echo 'checked'; ?>
+            >
+            <span class="warn">*开启后可自定义结构，以便于你更好的维护自己收藏的工具链接</span>
+          </div>
+        </div>
+
+        <div class="row clearfix popular_show" style="display:none">
+          <label class="fl left-wrap" for="custom_label">自定义热门标签：</label>
+          <div class="fr right-wrap">
+            <textarea id="custom_label" name="custom_label" rows="8" cols="100" placeholder="例如：<a href='https://www.weipxiu.com'>唯品秀前端技术博客</a>"><?php echo $a_options['custom_label']; ?></textarea>
+            <span class="warn" style="display:block">*每条链接占一行</span>
           </div>
         </div>
 
@@ -450,14 +523,6 @@ function themeoptions_page() {
             </div>
           </div>
         </div>
-
-        <!-- <div class="row clearfix">
-          <label class="fl left-wrap" for="link">友情链接：</label>
-          <div class="fr right-wrap">
-            <textarea id="link" name="link" rows="15" cols="100"><?php echo $a_options['link']; ?></textarea>
-            <span class="warn" style="display:block">*每条链接占一行</span>
-          </div>
-        </div> -->
       </div>
       <!-- 内容五 自定义代码 -->
       <!-- <div class="content-wrap content5">
@@ -491,6 +556,9 @@ function themeoptions_page() {
       'snowflake' => $_POST['snow-flake'],
       'aside_count' => $_POST['aside-count'],
       'switch_https' => $_POST['switch_https'],
+      'side_video' => $_POST['side_video'],
+      'video_url' => $_POST['video_url'],
+      'video_cover' => $_POST['video_cover'],
       'text_pic' => $_POST['text-pic'],
       'logo' => $_POST['logo'],
       'thumbnail' => $_POST['thumbnail-img'],
@@ -500,7 +568,7 @@ function themeoptions_page() {
       'details_css'  => $_POST['details-css'],
       'keywords' => $_POST['keywords'],
       'description' => $_POST['description'],
-      'link' => $_POST['link'],
+      'custom_label' => $_POST['custom_label'],
       'QQ-number' => $_POST['QQ-number'],
       'weChat-number' => $_POST['weChat-number'],
       'phone-number' => $_POST['phone-number'],
