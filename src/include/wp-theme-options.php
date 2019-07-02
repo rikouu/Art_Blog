@@ -34,42 +34,42 @@ function themeoptions_page() {
               type="radio"
               id="wheel_banner1"
               name="wheel-banner"
-              value="0" <?php if($a_options['wheel_banner'] == '0') echo 'checked'; ?>
+              value="1" <?php if($a_options['wheel_banner'] == '1') echo 'checked'; ?>
             >
             <label for="wheel_banner2">爆炸</label>
             <input
               type="radio"
               id="wheel_banner2"
               name="wheel-banner"
-              value="1" <?php if($a_options['wheel_banner'] == '1') echo 'checked'; ?>
+              value="2" <?php if($a_options['wheel_banner'] == '2') echo 'checked'; ?>
             >
             <label for="wheel_banner3">翻页</label>
             <input
               type="radio"
               id="wheel_banner3"
               name="wheel-banner"
-              value="2" <?php if($a_options['wheel_banner'] == '2') echo 'checked'; ?>
+              value="3" <?php if($a_options['wheel_banner'] == '3') echo 'checked'; ?>
             >
             <label for="wheel_banner4">扭曲</label>
             <input
               type="radio"
               id="wheel_banner4"
               name="wheel-banner"
-              value="3" <?php if($a_options['wheel_banner'] == '3') echo 'checked'; ?>
+              value="4" <?php if($a_options['wheel_banner'] == '4') echo 'checked'; ?>
             >
             <label for="wheel_banner5">立方体</label>
             <input
               type="radio"
               id="wheel_banner5"
               name="wheel-banner"
-              value="4" <?php if($a_options['wheel_banner'] == '4') echo 'checked'; ?>
+              value="5" <?php if($a_options['wheel_banner'] == '5') echo 'checked'; ?>
             >
             <label for="wheel_banner0">随机</label>
             <input
               type="radio"
               id="wheel_banner0"
               name="wheel-banner"
-              value="-1" <?php if($a_options['wheel_banner'] == '-1' || $a_options['wheel_banner'] == '') echo 'checked'; ?>
+              value="0" <?php if($a_options['wheel_banner'] == '0' || $a_options['wheel_banner'] == '') echo 'checked'; ?>
             >
           </div>
         </div>
