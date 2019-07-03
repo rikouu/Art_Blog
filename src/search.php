@@ -61,10 +61,7 @@
                     <div class="img-left">
                         <a class="read-more" href="<?php the_permalink(); ?>" target="_blank">
                             <?php
-                                if (has_post_thumbnail())
-                                    the_post_thumbnail();
-                                else
-                                    echo "<img src=". catch_that_image() . ">";
+                                the_post_thumbnail();
                             ?>
                         </a>
                     </div>
@@ -76,10 +73,7 @@
                                 <?php the_title(); ?></a>
                         </h2>
                         <?php
-                            if (has_post_thumbnail())
-                                the_post_thumbnail();
-                            else
-                                echo "<img src=". catch_that_image() . ">";
+                            the_post_thumbnail();
                         ?>
                         <h3>
                             <?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 190,"..."); ?>

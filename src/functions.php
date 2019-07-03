@@ -27,7 +27,7 @@ function catch_that_image() {
 	ob_end_clean();
 	$output = preg_match_all('/<img*.+src=[\'"]([^\'"]+)[\'"].*>/iU', wp_unslash($post->post_content), $matches);
 	if(empty($output)){ 
-        $first_img = "/wp-content/themes/Art_Blog/images/default.png";
+        $first_img =  get_option('weipxiu_options')['thumbnail'];
 	}else {
 		$first_img = $matches [1][0];
 	}

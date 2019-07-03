@@ -15,7 +15,7 @@
             <?php
         }
     ?>
-    
+
     <div class="textwidget">
         <p class="clearfix">
             <?php 
@@ -74,10 +74,7 @@
             <li>
                 <a href="<?php the_permalink(); ?>">
                     <?php
-                        if ( has_post_thumbnail() )
-                            the_post_thumbnail();
-                        else
-                            echo '<img src="/wp-content/themes/Art_Blog/images/default.png" alt="" />';
+                        the_post_thumbnail();
                     ?>
                 </a>
                 <!-- <em></em> -->
