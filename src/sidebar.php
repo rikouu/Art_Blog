@@ -75,7 +75,7 @@
                 <a href="<?php the_permalink(); ?>">
                     <?php
                         if ( has_post_thumbnail() )
-                        echo _get_post_thumbnail();
+                        the_post_thumbnail();
                     else
                         echo "<img src='". catch_that_image()."'"." alt='".get_the_title()."'>";
                     ?>
