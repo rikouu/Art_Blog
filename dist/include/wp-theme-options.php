@@ -75,6 +75,27 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
+          <label class="fl left-wrap">全局友情链接：</label>
+          <div class="fr right-wrap">
+            <label for="friendlinks_on">开</label>
+            <input
+              type="radio"
+              id="friendlinks_on"
+              name="friend-links"
+              value="on" <?php if($a_options['friendlinks'] == 'on') echo 'checked'; ?>
+            >
+            <label for="friendlinks_off">关</label>
+            <input
+              type="radio"
+              id="friendlinks_off"
+              name="friend-links"
+              value="off" <?php if($a_options['friendlinks'] == 'off' || $a_options['friendlinks'] == '') echo 'checked'; ?>
+            >
+            <span class="warn">*默认只在首页侧边栏展示友情链接，开启后所有页面都会展示</span>
+          </div>
+        </div>
+
+        <div class="row clearfix">
           <label class="fl left-wrap">雪花背景特效：</label>
           <div class="fr right-wrap">
             <label for="snow-flake_on">开</label>
@@ -603,6 +624,7 @@ function themeoptions_page() {
       'label_logo' => $_POST['label-logo'],
       'popular' => $_POST['popular'],
       'snowflake' => $_POST['snow-flake'],
+      'friendlinks' => $_POST['friend-links'],
       'aside_count' => $_POST['aside-count'],
       'switch_https' => $_POST['switch_https'],
       'side_video' => $_POST['side_video'],
