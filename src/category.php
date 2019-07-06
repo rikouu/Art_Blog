@@ -3,15 +3,10 @@
 
 <head>
 	<title>
-		<?php if(have_posts()):?>
-			<?php the_title(); ?>
-		<?php else: ?>
-		Sorry,当前分类暂无文章！
-		<?php endif; ?>
-		&nbsp;|&nbsp;<?php echo get_bloginfo('description'); ?>
+		<?php if(have_posts()):?><?php the_title(); ?><?php else: ?>
+		Sorry,当前分类暂无文章！<?php endif; ?>-<?php echo get_bloginfo('description'); ?>
 	</title>
 	<?php require ('common.php'); ?>
-
 </head>
 
 <body>
