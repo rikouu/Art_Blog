@@ -126,6 +126,7 @@
 			</div>
 			<!-- PC正文3d导航end -->
 
+			<!-- 今日焦点start -->
 			<aside class="continar-left-top">
 				<?php
 				$args = array(
@@ -154,6 +155,8 @@
 				<?php }
 			wp_reset_query(); ?>
 			</aside>
+			<!-- 今日焦点end -->
+
 			<!-- 博客介绍start -->
 			<aside class="blog">
 				<h3>博客介绍</h3>
@@ -181,6 +184,7 @@
 				</div>
 			</aside>
 			<!-- 博客介绍end -->
+
 			<!-- 邮件订阅start -->
 			<?php
 			if (get_option('weipxiu_options')['text_pic'] == 'on') {
@@ -205,10 +209,9 @@
 			<?php
 			if(have_posts()): while(have_posts()):the_post();*/
 						?> -->
-			<?php
-			if (have_posts()) : while (have_posts()) : the_post();
-					?>
-
+				<?php
+				if(have_posts()): while(have_posts()):the_post();
+				?>
 					<article class="text">
 						<div class="img-left">
 							<a class="read-more" href="<?php the_permalink(); ?>" target="_blank">
