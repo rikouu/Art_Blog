@@ -115,8 +115,7 @@ $(function () {
         //排除PC端执行下列代码
         //移动端只在首页展示sidebar.php模块
         $(".continar-right").show();
-        //去掉首页列表第一篇文章，避免同今日焦点栏目顶替文章重合
-        $(".continar-left > .text:nth-of-type(3)").remove();
+
         //swiper核心三要素：依赖swiper.js、swiper.css，外面父亲盒子高度
         var swiper1 = new Swiper('.swiper-container1', {
             pagination: '.swiper-pagination', //是否出现小圆点
